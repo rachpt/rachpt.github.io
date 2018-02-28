@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/计算物理课表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -321,7 +321,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2018/02/28/计算物理课表/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -352,14 +352,25 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/" itemprop="commentCount"></span>
+                <a href="/2018/02/28/计算物理课表/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/计算物理课表/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+             <span id="/2018/02/28/计算物理课表/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -383,23 +394,28 @@
       
         
           
-            <p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：</p>
-<p>1，首先确定关闭了防火墙并且80端口没有被占用</p>
-<p>2，修改apache的httpd.conf文件，一共两处：</p>
-<p>第一处</p>
-<p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow<br>Deny from all<br>Satisfy all</p>
-<p>修改为：</p>
-<p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow</p>
-<h2 id="Deny-from-all"><a href="#Deny-from-all" class="headerlink" title="Deny from all"></a>Deny from all</h2><p>Allow from all</p>
-<p>##允许所有访问</p>
-<p>Satisfy all</p>
-<p>第二处</p>
-<h2 id="onlineoffline-tag-don’t-remove"><a href="#onlineoffline-tag-don’t-remove" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p>
-<p>修改成：</p>
-<h2 id="onlineoffline-tag-don’t-remove-1"><a href="#onlineoffline-tag-don’t-remove-1" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow</p>
-<h1 id="Deny-from-all-1"><a href="#Deny-from-all-1" class="headerlink" title="Deny from all"></a>Deny from all</h1><h2 id="Allow-from-127-0-0-1"><a href="#Allow-from-127-0-0-1" class="headerlink" title="Allow from 127.0.0.1"></a>Allow from 127.0.0.1</h2><p>Allow from all</p>
-<p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p>
-<p>order deny,allow<br>deny from none<br>allow from all<br>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>
+            <h2 id="星期二-9—12"><a href="#星期二-9—12" class="headerlink" title="星期二         9—12"></a>星期二         9—12</h2><p>（上机）         </p>
+<ul>
+<li><p>2，4，7，8周       </p>
+</li>
+<li><p><code>南六楼机房</code></p>
+<h2 id="星期二-7—8"><a href="#星期二-7—8" class="headerlink" title="星期二     7—8"></a>星期二     7—8</h2></li>
+<li><p>1-4，6-9周        </p>
+</li>
+<li><p><code>西十二楼 N104</code></p>
+<h2 id="星期四-9—12"><a href="#星期四-9—12" class="headerlink" title="星期四     9—12"></a>星期四     9—12</h2></li>
+<li><p>1-4，6-9周       </p>
+</li>
+<li><p><code>西十二楼 N104</code></p>
+</li>
+</ul>
+<h2 id="材料化学"><a href="#材料化学" class="headerlink" title="材料化学"></a>材料化学</h2><ul>
+<li><p>材料化学12-19（董泽华  C12-S201）[星期二3-4节]</p>
+</li>
+<li><p>材料化学12-19（董泽华  C12-S201） [星期五5-6节] </p>
+<p>​</p>
+</li>
+</ul>
 
           
         
@@ -507,6 +523,17 @@
 
           
           
+             <span id="/2018/02/28/时记/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -581,7 +608,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/微信文章_acrobat笔记/">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/建一个个人网址需要花多少时间于money？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -600,7 +627,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/微信文章_acrobat笔记/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2018/02/28/建一个个人网址需要花多少时间于money？/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -631,14 +658,25 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/28/微信文章_acrobat笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/微信文章_acrobat笔记/" itemprop="commentCount"></span>
+                <a href="/2018/02/28/建一个个人网址需要花多少时间于money？/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/建一个个人网址需要花多少时间于money？/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+             <span id="/2018/02/28/建一个个人网址需要花多少时间于money？/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -662,40 +700,7 @@
       
         
           
-            <h2 id="Acrobat-双页全屏显示"><a href="#Acrobat-双页全屏显示" class="headerlink" title="Acrobat 双页全屏显示"></a>Acrobat 双页全屏显示</h2><p>我有一个大显示器，但是阅读pdf时，Acrobat DC (或者reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？</p>
-<p><img src="assets/wx-acrobat1.png" alt="acrobat1"></p>
-<p>是的，可以。这里以Acrobat DC 为例。</p>
-<blockquote>
-<p><strong>Adobe Acrobat</strong>是由<a href="https://zh.wikipedia.org/wiki/Adobe_Systems" target="_blank" rel="noopener">Adobe Systems</a>所开发的电子文字处理软件集，可用于阅读、编辑、管理和共享<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>格式文档。</p>
-<p>一般包含如下包：</p>
-<ul>
-<li><strong>Adobe Acrobat</strong>，包括专业版和标准版。用于对<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>文件进行编辑、共享和管理，需要购买，而3D版本，除了专业版的功能，另外也支持立体向量图片的转换。</li>
-<li><strong>Acrobat Reader</strong>（2003年至2014年期间，曾使用Adobe Reader作为名称），用于阅读<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>文件，为免费发放。</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>首先，我们需要设置页面显示为双页视图，具体如下图所示。</p>
-<p><img src="assets/wx-acrobat2.png" alt="acrobat2"></p>
-</li>
-</ul>
-<ul>
-<li><p>然后，在 [首选项] - 快捷键[ Ctrl + K ]，或者从下面的位置进入。</p>
-<p><img src="assets/wx-acrobat3.png" alt="acrobat3"></p>
-</li>
-</ul>
-<ul>
-<li><p>接着，在 [首选项] –&gt;(左侧)[ 全屏 ]–&gt;[ 全屏设置 ]–&gt;去掉 &lt;下图红框项&gt; 前面的勾。如下图。</p>
-<p><img src="assets/wx-acrobat4.png" alt="acrobat4"></p>
-</li>
-</ul>
-<ul>
-<li><p>另外，如果你想开启Acrobat 的护眼模式(说白了也就是背景颜色)，可以设置一下 [辅助工具] 里面的 [文档颜色选项]，个人觉得这个不错——电脑管家的推荐色 [ R:  204  G: 232 B: 207 ]。</p>
-<p><img src="assets/wx-acrobat5.png" alt="acrobat5"></p>
-</li>
-<li><p>最后，使用快捷键 [ Ctrl + L ] 进入全屏阅读文档，或者点击 [ 视图 ] –&gt; [ 全屏模式 ] 。</p>
-</li>
-</ul>
-<p><img src="assets/wx-acrobat6.png" alt="acrobat6"></p>
+            <p>几年前，当我还是个电脑盲，在探索各种自定义界面的过程中了解到了博客这种东西</p>
 
           
         
@@ -802,6 +807,17 @@
           
 
           
+          
+             <span id="/2018/02/28/材料化学/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -932,6 +948,17 @@
           
 
           
+          
+             <span id="/2018/02/28/材料物理学/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1087,6 +1114,17 @@
           
 
           
+          
+             <span id="/2018/02/28/材料物理答案/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1276,6 +1314,17 @@
 
           
           
+             <span id="/2018/02/28/测晶面以及压痕/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -1415,6 +1464,17 @@
 
           
           
+             <span id="/2018/02/28/untitled-不同的桌面，有其突出的特点，一看就知道了/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -1545,6 +1605,17 @@
 
           
           
+             <span id="/2018/02/28/linux笔记/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -1621,7 +1692,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/COMSOL 简要笔记/">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/python笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -1640,7 +1711,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/COMSOL 简要笔记/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2018/02/28/python笔记/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1671,14 +1742,25 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/28/COMSOL 简要笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/COMSOL 简要笔记/" itemprop="commentCount"></span>
+                <a href="/2018/02/28/python笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/python笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+             <span id="/2018/02/28/python笔记/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1702,14 +1784,22 @@
       
         
           
-            <h1 id="COMSOL-简要笔记"><a href="#COMSOL-简要笔记" class="headerlink" title="COMSOL 简要笔记"></a>COMSOL 简要笔记</h1><p>COMSOL 简单模拟声子晶体步骤</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>参数设置</p>
-<h2 id="几何"><a href="#几何" class="headerlink" title="几何"></a>几何</h2><p>几何模型</p>
-<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>计算的材料选择</p>
-<h2 id="物理场"><a href="#物理场" class="headerlink" title="物理场"></a>物理场</h2><p>其中 边界条件选择尤为重要</p>
-<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>网格</p>
-<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>后续计算</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>一切完成，导出数据</p>
+            <h1 id="python-笔记"><a href="#python-笔记" class="headerlink" title="python 笔记"></a>python 笔记</h1><ul>
+<li>安装python</li>
+</ul>
+<ul>
+<li>安装 selenium 库</li>
+</ul>
+<blockquote>
+<p> python -m pip install selenium </p>
+</blockquote>
+<ul>
+<li>重要步骤</li>
+</ul>
+<blockquote>
+<p>需要将firefox 与驱动程序（）加进环境变量。</p>
+</blockquote>
+<p>assert 插入调试。</p>
 
           
         
@@ -2408,6 +2498,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz", "vi95fo0Sgs7LiKR9VcmKouba");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
