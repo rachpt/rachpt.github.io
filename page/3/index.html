@@ -249,6 +249,150 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/linux 创建启动图标/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/28/linux 创建启动图标/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T11:12:39+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/28/linux 创建启动图标/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/linux 创建启动图标/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Linux-免安装程序配置"><a href="#Linux-免安装程序配置" class="headerlink" title="Linux 免安装程序配置"></a>Linux 免安装程序配置</h1><p>适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p>
+<h2 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h2><p>这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p>
+<p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop <span class="comment"># 在其中写如如下内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm  #显示的名字</span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh  # 软件路径</span><br><span class="line">Terminal=false</span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png  # 软件图标</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development  # 软件分类</span><br></pre></td></tr></table></figure>
+<p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p>
+<h2 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h2><p>方法一：用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐） </p>
+<p>登录到你的用户（非root），在终端输入：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile   <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure>
+<p>可以在此文件末尾加入PATH的设置如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure>
+<p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。 </p>
+<p>方法二：在系统目录，进行类似操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line"></span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure>
+<p> 在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。 </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/COMSOL 简要笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -386,7 +530,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/ubuntu进入Firefox的方法/">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/Firefox 更新通道切换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -405,7 +549,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/ubuntu进入Firefox的方法/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2018/02/28/Firefox 更新通道切换/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -436,8 +580,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/28/ubuntu进入Firefox的方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/ubuntu进入Firefox的方法/" itemprop="commentCount"></span>
+                <a href="/2018/02/28/Firefox 更新通道切换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/Firefox 更新通道切换/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -467,31 +611,21 @@
       
         
           
-            <p>进入Firefox的方法：</p>
-<ol>
-<li><p>SUPER + A，然后按firefox，回车。这个是在Dash面板中搜索应用程序运行。事实上，只要按fir就能定位到Firefox程序。</p>
-</li>
-<li><p>ALT，然后按firefox，回车。这个相当于在命令行运行一条命令。</p>
-</li>
-<li><p>在终端中按firefox&amp;，回车。这个适用于以终端作为主要操作窗口的用户，使用TAB键还可以自动补全命令（只需输入前几个字母再按TAB键）。&amp;在shell中是后台运行的意思，这样终端就不会被Firefox独占。</p>
-</li>
-</ol>
-<p>CTRL + T: 新建标签页</p>
-<p>CTRL + W: 关闭标签页</p>
-<p>CTRL + SHIFT + T: 重新打开最近关闭的一个标签页</p>
-<p>CTRL + TAB: 切换到下一个标签页</p>
-<p>CTRL + SHIFT + TAB: 切换到上一个标签页</p>
-<p>ALT + [1-8]: 跳到制定标签页</p>
-<p>ALT + 9: 跳到最后一个标签页</p>
-<p>CTRL + L: 跳到地址栏</p>
-<p>ESC: 停止加载当前页面</p>
-<p>CTRL + K: 跳到搜索引擎输入框</p>
-<p>CTRL + F: 在当前页面中搜索</p>
-<p>/: 快速查找。在Linux中很多程序（如VI、Man、Less）都使用/作为搜索的快捷键，并且可使用正则表达式查找。但在Firefox中没有正则表达式搜索的功能。</p>
-<p>CTRL + D: 收藏到书签</p>
-<p>ALT + 左方向键: 后退</p>
-<p>ALT + v: 前进</p>
-<p>CTRL + Q: 退出</p>
+            <h1 id="Firefox-更新通道切换"><a href="#Firefox-更新通道切换" class="headerlink" title="Firefox 更新通道切换"></a>Firefox 更新通道切换</h1><p>用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。</p>
+<blockquote>
+<p><strong>Mozilla Firefox</strong>（简称<strong>Firefox</strong>），中文俗称<strong>火狐</strong>（<a href="https://zh.wikipedia.org/wiki/%E8%AC%80%E6%99%BA%E4%B8%AD%E5%9C%8B" target="_blank" rel="noopener">中国大陆官方</a>有使用但未注册为商标），是一个<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开源</a>的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" target="_blank" rel="noopener">网页浏览器</a>，由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" target="_blank" rel="noopener">Mozilla基金会</a>及其子公司<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">Mozilla公司</a>开发。Firefox支持<a href="https://zh.wikipedia.org/wiki/Windows" target="_blank" rel="noopener">Windows</a>、<a href="https://zh.wikipedia.org/wiki/OS_X" target="_blank" rel="noopener">OS X</a>及<a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux</a>，其移动版支持<a href="https://zh.wikipedia.org/wiki/Android" target="_blank" rel="noopener">Android</a>及<a href="https://zh.wikipedia.org/wiki/Firefox_OS" target="_blank" rel="noopener">Firefox OS</a>，这些版本的Firefox使用<a href="https://zh.wikipedia.org/wiki/Gecko" target="_blank" rel="noopener">Gecko</a>来排版网页，Gecko是一个运行当前与预期之<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96" target="_blank" rel="noopener">网页标准</a>的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">排版引擎</a>，而在2015年发布的<a href="https://zh.wikipedia.org/wiki/Firefox_for_iOS" target="_blank" rel="noopener">Firefox for iOS</a>则非使用Gecko。</p>
+<p>截至2016年1月，Firefox全球<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" target="_blank" rel="noopener">市占率</a>为9％至16%，为全球第二流行的网页浏览器。</p>
+</blockquote>
+<p>按更新频率大致可以这么排：ESR（42周），Release（6周），Beta（约一周），Nightly（每天），ESR是挺好的，但是Fx有个致命的缺点就是当扩展安装较多后，冷启动速度慢的令人发指，至于原因网上很多这方面的科学解释。现在更新的57版对冷启动速度有巨大提升，而插件兼容性方面对我影响不大，于是将所有的esr53.4升级到了57beta版（正式版当时还是56）。<br>由于每次更新fx都会导致lastpass这个插件无法保持自动登录信息，能让fx延迟更新或者不更新吗？是有办法的。</p>
+<p>[64位版Frefox] 默认安装目录 <code>C:\Program Files\Mozilla Firefox\defaults\pref\channel-prefs.js</code> 下使用记事本（notepad）打开，将末尾部分的 <code>beta</code> 改成 <code>esr</code> 即可进入延长支持版本通道，或者<code>release</code> 进入普通发行版通道。如下图。</p>
+<p>最后可以在设置里面禁用Firefox的自动更新。</p>
+<p>文末附上 Firefox的官方FTP下载地址，再也不用担心下到中国版了……</p>
+<p>http ://ftp.mozilla.org/pub/firefox/releases/ （去掉多余的空格）</p>
+<p>我收藏的旧插件集，Fx 57大部分用不了了</p>
+<p>https ://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/</p>
+<hr>
+<p>about:support 打开 配置目录</p>
+<p>将 gmpopenh264.dll，gmpopenh264.info 这两个文件覆盖安装到 \gmp-gmpopenh264\1.6 目录下 ，版本号自己更新（在info文件中）</p>
 
           
         
@@ -973,183 +1107,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/FlexGet PT订阅/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rachpt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rachpt">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/28/FlexGet PT订阅/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T11:12:39+08:00">
-                2018-02-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/02/28/FlexGet PT订阅/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/FlexGet PT订阅/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="使用FlexGet订阅下载"><a href="#使用FlexGet订阅下载" class="headerlink" title="使用FlexGet订阅下载"></a>使用FlexGet订阅下载</h1><p>FlexGet基于Python的一套订阅方案，看到PY就能想到其牛逼。</p>
-<blockquote>
-<p>此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求</p>
-</blockquote>
-<p>FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：<a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a> 。</p>
-<ul>
-<li><p>Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a> </p>
-</li>
-<li><p>按照官网方法 <a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<code>python2</code>  <code>python3</code> 。</p>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -U pip setuptools</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flexget</span><br><span class="line">//有可能需要使用pip3,具体看自己环境</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flexget -V</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>配置FlexGet</p>
-<ul>
-<li><p>任务计划程序（<strong><em>我已经默认大家使用的win</em></strong>）添加任务，如下面两图。</p>
-<p>​</p>
-</li>
-<li><p>使用1分钟即可，不要配置几个任务，因为运行一次大概需要20-40秒，其中操作使用vbs文件，文件如下写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;) </span><br><span class="line"></span><br><span class="line">ws.run &quot;C:\Python35\Scripts\flexget.exe execute&quot;,vbhide</span><br><span class="line">//注意上面的路径， execute参数很重要。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>推荐直接在你的用户目录下新建<code>flexget</code>文件夹，然后将配置文件<code>config.yml</code> (自己建一个txt，改名即可)丢里面。</p>
-</li>
-<li><p><code>config.yml</code> 按照下面的代码填写即可快速设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>说面一下，注意使用空格（<strong><em>不能使用制表符</em></strong>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<code>download:</code> 后面是你的utorrent自动载入种子的目录，<code>content_size:</code> 正如其义，可用于控制种子体积。其它可以参考 <a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</p>
-</li>
-<li><p>UTorrent需要设置自动重文件夹载如torrent文件，如下图。</p>
-<p>​</p>
-</li>
-</ul>
-</li>
-<li><p>一般来说，种子发布后，2-3分钟内可以实现自动下载，而使用utorrent自带的rss刷新时间最少为5分钟，而且无法自定义体积等其它高级筛选。更多可以参考 <a href="https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477" target="_blank" rel="noopener">https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477</a></p>
-</li>
-</ul>
-<hr>
-<p>今天看到公众号又增加了一个粉，于是发篇小笔记 。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/Olex2使用笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1299,7 +1256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/Firefox 更新通道切换/">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/FlexGet PT订阅/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -1318,7 +1275,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/28/Firefox 更新通道切换/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2018/02/28/FlexGet PT订阅/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1349,8 +1306,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/28/Firefox 更新通道切换/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/Firefox 更新通道切换/" itemprop="commentCount"></span>
+                <a href="/2018/02/28/FlexGet PT订阅/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/FlexGet PT订阅/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1380,155 +1337,54 @@
       
         
           
-            <h1 id="Firefox-更新通道切换"><a href="#Firefox-更新通道切换" class="headerlink" title="Firefox 更新通道切换"></a>Firefox 更新通道切换</h1><p>用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。</p>
+            <h1 id="使用FlexGet订阅下载"><a href="#使用FlexGet订阅下载" class="headerlink" title="使用FlexGet订阅下载"></a>使用FlexGet订阅下载</h1><p>FlexGet基于Python的一套订阅方案，看到PY就能想到其牛逼。</p>
 <blockquote>
-<p><strong>Mozilla Firefox</strong>（简称<strong>Firefox</strong>），中文俗称<strong>火狐</strong>（<a href="https://zh.wikipedia.org/wiki/%E8%AC%80%E6%99%BA%E4%B8%AD%E5%9C%8B" target="_blank" rel="noopener">中国大陆官方</a>有使用但未注册为商标），是一个<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开源</a>的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" target="_blank" rel="noopener">网页浏览器</a>，由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" target="_blank" rel="noopener">Mozilla基金会</a>及其子公司<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">Mozilla公司</a>开发。Firefox支持<a href="https://zh.wikipedia.org/wiki/Windows" target="_blank" rel="noopener">Windows</a>、<a href="https://zh.wikipedia.org/wiki/OS_X" target="_blank" rel="noopener">OS X</a>及<a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux</a>，其移动版支持<a href="https://zh.wikipedia.org/wiki/Android" target="_blank" rel="noopener">Android</a>及<a href="https://zh.wikipedia.org/wiki/Firefox_OS" target="_blank" rel="noopener">Firefox OS</a>，这些版本的Firefox使用<a href="https://zh.wikipedia.org/wiki/Gecko" target="_blank" rel="noopener">Gecko</a>来排版网页，Gecko是一个运行当前与预期之<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96" target="_blank" rel="noopener">网页标准</a>的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">排版引擎</a>，而在2015年发布的<a href="https://zh.wikipedia.org/wiki/Firefox_for_iOS" target="_blank" rel="noopener">Firefox for iOS</a>则非使用Gecko。</p>
-<p>截至2016年1月，Firefox全球<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" target="_blank" rel="noopener">市占率</a>为9％至16%，为全球第二流行的网页浏览器。</p>
+<p>此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求</p>
 </blockquote>
-<p>按更新频率大致可以这么排：ESR（42周），Release（6周），Beta（约一周），Nightly（每天），ESR是挺好的，但是Fx有个致命的缺点就是当扩展安装较多后，冷启动速度慢的令人发指，至于原因网上很多这方面的科学解释。现在更新的57版对冷启动速度有巨大提升，而插件兼容性方面对我影响不大，于是将所有的esr53.4升级到了57beta版（正式版当时还是56）。<br>由于每次更新fx都会导致lastpass这个插件无法保持自动登录信息，能让fx延迟更新或者不更新吗？是有办法的。</p>
-<p>[64位版Frefox] 默认安装目录 <code>C:\Program Files\Mozilla Firefox\defaults\pref\channel-prefs.js</code> 下使用记事本（notepad）打开，将末尾部分的 <code>beta</code> 改成 <code>esr</code> 即可进入延长支持版本通道，或者<code>release</code> 进入普通发行版通道。如下图。</p>
-<p>最后可以在设置里面禁用Firefox的自动更新。</p>
-<p>文末附上 Firefox的官方FTP下载地址，再也不用担心下到中国版了……</p>
-<p>http ://ftp.mozilla.org/pub/firefox/releases/ （去掉多余的空格）</p>
-<p>我收藏的旧插件集，Fx 57大部分用不了了</p>
-<p>https ://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/</p>
+<p>FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：<a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a> 。</p>
+<ul>
+<li><p>Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a> </p>
+</li>
+<li><p>按照官网方法 <a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<code>python2</code>  <code>python3</code> 。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -U pip setuptools</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flexget</span><br><span class="line">//有可能需要使用pip3,具体看自己环境</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flexget -V</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</p>
+</li>
+</ul>
 <hr>
-<p>about:support 打开 配置目录</p>
-<p>将 gmpopenh264.dll，gmpopenh264.info 这两个文件覆盖安装到 \gmp-gmpopenh264\1.6 目录下 ，版本号自己更新（在info文件中）</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/newPost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rachpt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rachpt">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/28/newPost/" itemprop="url">newPost</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T10:41:04+08:00">
-                2018-02-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/02/28/newPost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/newPost/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>测试文章</p>
-<p>1</p>
-<p>2</p>
-<p>3</p>
-<p>4</p>
+<ul>
+<li><p>配置FlexGet</p>
+<ul>
+<li><p>任务计划程序（<strong><em>我已经默认大家使用的win</em></strong>）添加任务，如下面两图。</p>
+<p>​</p>
+</li>
+<li><p>使用1分钟即可，不要配置几个任务，因为运行一次大概需要20-40秒，其中操作使用vbs文件，文件如下写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;) </span><br><span class="line"></span><br><span class="line">ws.run &quot;C:\Python35\Scripts\flexget.exe execute&quot;,vbhide</span><br><span class="line">//注意上面的路径， execute参数很重要。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推荐直接在你的用户目录下新建<code>flexget</code>文件夹，然后将配置文件<code>config.yml</code> (自己建一个txt，改名即可)丢里面。</p>
+</li>
+<li><p><code>config.yml</code> 按照下面的代码填写即可快速设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>说面一下，注意使用空格（<strong><em>不能使用制表符</em></strong>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<code>download:</code> 后面是你的utorrent自动载入种子的目录，<code>content_size:</code> 正如其义，可用于控制种子体积。其它可以参考 <a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</p>
+</li>
+<li><p>UTorrent需要设置自动重文件夹载如torrent文件，如下图。</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>一般来说，种子发布后，2-3分钟内可以实现自动下载，而使用utorrent自带的rss刷新时间最少为5分钟，而且无法自定义体积等其它高级筛选。更多可以参考 <a href="https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477" target="_blank" rel="noopener">https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477</a></p>
+</li>
+</ul>
+<hr>
+<p>今天看到公众号又增加了一个粉，于是发篇小笔记 。</p>
 
           
         
@@ -1958,6 +1814,140 @@
 <p>-R    递归列出子目录文件。</p>
 <p>-X    以扩展名排序，同 –sort=extension 。</p>
 <p>-t    以修改时间排序，新的在前面。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.github.io/2018/02/28/newPost/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/28/newPost/" itemprop="url">newPost</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T10:41:04+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/28/newPost/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/28/newPost/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>测试文章</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
 
           
         
