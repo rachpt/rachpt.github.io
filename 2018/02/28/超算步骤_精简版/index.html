@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="rachpt">
 <meta property="og:description" content="结构优化文件准备 cif 文件按 ms_castep 命名（或者其他不带空格简单名字）；  选中全部原子，CASTEP Calculation 设置参数，[Setup] Task: Geometry Optimization , Quality: Ultra-fine , Functional: LDA, CA-PZ , More –&amp;gt; Max.iterations 500 , Optimi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T15:38:06.376Z">
+<meta property="og:updated_time" content="2018-02-28T15:40:39.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MS 超算步骤 精简版">
 <meta name="twitter:description" content="结构优化文件准备 cif 文件按 ms_castep 命名（或者其他不带空格简单名字）；  选中全部原子，CASTEP Calculation 设置参数，[Setup] Task: Geometry Optimization , Quality: Ultra-fine , Functional: LDA, CA-PZ , More –&amp;gt; Max.iterations 500 , Optimi">
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T23:38:06+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T23:40:39+08:00">
                 2018-02-28
               </time>
             
@@ -420,7 +420,7 @@
 <li><p>cif 文件按 <code>ms_castep</code> 命名（或者其他不带空格简单名字）；</p>
 </li>
 <li><p>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More –&gt; Max.iterations <code>500</code> , Optimize cell <code>yes</code> ; [Electronic] More –&gt; Use custom energy cutoff <code>400 or others</code> , k-points –&gt; Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files –&gt; yes ；</p>
-</li>
+<a id="more"></a></li>
 <li><p>在~Files–&gt;Documents–&gt;~CASTEP GeomOpt 复制 <code>~.cell</code> 和 <code>~.param</code> 文件到新文件夹 <code>~GeomOpt</code> 同时复制 <code>RunGeneral.sh &amp; subGeneral</code> 到其中；</p>
 </li>
 <li><p>设置 <code>subGeneral</code> 中 <code>ppn=?</code> 即是计算使用核数；</p>
