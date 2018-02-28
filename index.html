@@ -333,7 +333,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T23:31:14+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T23:38:06+08:00">
                 2018-02-28
               </time>
             
@@ -443,16 +443,24 @@
 <li>打开<code>~.xsd</code> 文件，选送全部原子，<code>CASTEP Analysis</code> –&gt; <code>Structure</code> –&gt;<code>Upadte</code> ；取消原子选中，<code>CASTEP Calculation</code> –&gt;Task <code>Elastic Constants</code> –&gt; <code>Files</code> ，Save。</li>
 <li>根据右侧显示的<code>~.param</code> <code>ms_castep_cij__ii__jj.param</code> 修改<code>subGeneral_cij.cij</code> 中的循环次数，比最大的数大1。</li>
 <li>复制文件到<code>ms_castep_Cij</code> ，所有原 <code>Cij</code>文件夹里面的 <code>~.cel</code> <code>~.param</code> 文件，以及<code>~GeomOpt</code> 里面的  <code>~.usp</code> <code>~.sh</code> ，以及刚才修改的<code>subGeneral_cij.cij</code> 。</li>
-<li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<figure class="highlight plain"><figcaption><span>\ ```  ，`chmod +x subGeneral_cij.cij RunGeneral.sh`  以及 `dos2unix subGeneral_cij.cij RunGeneral.sh` ，`ls` 这两出现绿色（或其他）表示已经转码了，`qsub subGeneral_cij.cij` 提交任务，`qstat` 开始任务。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"># 数据处理部分</span><br><span class="line"></span><br><span class="line">1. 同样，下载除 `~.check` 外的其他文件，覆盖到原本地目录，找到并打开`ma_castep.castep` 文件，也就是总的计算结果。</span><br><span class="line">2. 使用`CASTEP Analysis` --&gt; `Elastic constants` --&gt; `Calculate` 。</span><br><span class="line">3. 右侧生成 `ma_castep Elastic Contants.txt` 文件包含计算得到的弹性常数等信息。</span><br><span class="line">4. 复制其中的`Elastic Stiffness Constants Cij` 矩阵到计算用的matlab程序包data内。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-----</span><br><span class="line"></span><br><span class="line"># 使用 Matlab 进一步计算</span><br><span class="line"></span><br><span class="line">1. 导入数据，`Input.m` 运行[F9] ，`ElasticConst3D.m`  `ElasticConst2D.m`  Plot 画图，`YoungsModulus.m` 计算 Youngs Modulus。</span><br><span class="line">2. 具体见 &gt;  User’s Guide for ElasticConst 。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 关于MS 的一些笔记</span><br><span class="line"></span><br><span class="line">在计算弹性常数之前并不一定要进行几何优化，可以由实验观测到的结构计算出Cij数据。尽管如此，如果我们完成晶胞的几何优化，可以获得更多相容的结果，进而计算与理论基态对应的弹性常数。</span><br><span class="line"></span><br><span class="line">弹性常数的精确度，尤其是切变常数的精确度，主要取决于SCF计算的品质，特别是布里渊区取样和波函数收敛程度的品质。所以我们设置SCF、k点取样和FFT格子的精度为Fine。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CASTEP的弹性常数计算任务的结果以一批.castep输出文件的形式给出。这些文件中的每一个文件都代表确定的晶胞在假设的应变模式和应变振幅下的几何优化运行结果。这些文件的命名约定为：seedname_cij\__m\__n。对于给定的模式来说，m代表当前的应变模式，n代表当前的应变振幅。 CASTEP可以使用这些结果来分析每一个运行计算出来的压力张量，产生一个有关弹性性质的文件。`Modules | CASTEP | Analysis | Elastic constants` ----&gt; `sedname Elastic Constants.txt`。</span><br></pre></td></tr></table></figure></li>
+<li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<code>不要使用空格，括号等符号（涉及到路径转义，比较麻烦）</code>  ，<code>chmod +x subGeneral_cij.cij RunGeneral.sh</code>  以及 <code>dos2unix subGeneral_cij.cij RunGeneral.sh</code> ，<code>ls</code> 这两出现绿色（或其他）表示已经转码了，<code>qsub subGeneral_cij.cij</code> 提交任务，<code>qstat</code> 开始任务。</li>
 </ol>
-<p>此 <code>txt</code> 文档中的信息包括：</p>
-<ul>
-<li>输入的应变和计算出的应力的总结</li>
-<li>每一种应变模式线性拟合和拟合质量的计算结果</li>
-<li>给定对称性下计算出的应力与弹性常数之间的对应</li>
-<li>弹性常数Cij和弹性柔量Sij的表格</li>
-<li>导出量：体积模量和其倒数、压缩系数、杨氏模量、Poisson比、 Lame 常数(用于模拟各向同性介质)<br><code>`</code></li>
-</ul>
+<hr>
+<h1 id="数据处理部分"><a href="#数据处理部分" class="headerlink" title="数据处理部分"></a>数据处理部分</h1><ol>
+<li>同样，下载除 <code>~.check</code> 外的其他文件，覆盖到原本地目录，找到并打开<code>ma_castep.castep</code> 文件，也就是总的计算结果。</li>
+<li>使用<code>CASTEP Analysis</code> –&gt; <code>Elastic constants</code> –&gt; <code>Calculate</code> 。</li>
+<li>右侧生成 <code>ma_castep Elastic Contants.txt</code> 文件包含计算得到的弹性常数等信息。</li>
+<li>复制其中的<code>Elastic Stiffness Constants Cij</code> 矩阵到计算用的matlab程序包data内。</li>
+</ol>
+<hr>
+<h1 id="使用-Matlab-进一步计算"><a href="#使用-Matlab-进一步计算" class="headerlink" title="使用 Matlab 进一步计算"></a>使用 Matlab 进一步计算</h1><ol>
+<li>导入数据，<code>Input.m</code> 运行[F9] ，<code>ElasticConst3D.m</code>  <code>ElasticConst2D.m</code>  Plot 画图，<code>YoungsModulus.m</code> 计算 Youngs Modulus。</li>
+<li>具体见 &gt;  User’s Guide for ElasticConst 。</li>
+</ol>
+<h1 id="关于MS-的一些笔记"><a href="#关于MS-的一些笔记" class="headerlink" title="关于MS 的一些笔记"></a>关于MS 的一些笔记</h1><p>在计算弹性常数之前并不一定要进行几何优化，可以由实验观测到的结构计算出Cij数据。尽管如此，如果我们完成晶胞的几何优化，可以获得更多相容的结果，进而计算与理论基态对应的弹性常数。</p>
+<p>弹性常数的精确度，尤其是切变常数的精确度，主要取决于SCF计算的品质，特别是布里渊区取样和波函数收敛程度的品质。所以我们设置SCF、k点取样和FFT格子的精度为Fine。</p>
+<p>CASTEP的弹性常数计算任务的结果以一批.castep输出文件的形式给出。这些文件中的每一个文件都代表确定的晶胞在假设的应变模式和应变振幅下的几何优化运行结果。这些文件的命名约定为：seedname_cij__m__n。对于给定的模式来说，m代表当前的应变模式，n代表当前的应变振幅。 CASTEP可以使用这些结果来分析每一个运行计算出来的压力张量，产生一个有关弹性性质的文件。<code>Modules | CASTEP | Analysis | Elastic constants</code> —-&gt; <code>sedname Elastic Constants.txt</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">此 `txt` 文档中的信息包括：</span><br><span class="line"></span><br><span class="line">* 输入的应变和计算出的应力的总结</span><br><span class="line">* 每一种应变模式线性拟合和拟合质量的计算结果</span><br><span class="line">* 给定对称性下计算出的应力与弹性常数之间的对应</span><br><span class="line">* 弹性常数Cij和弹性柔量Sij的表格</span><br><span class="line">* 导出量：体积模量和其倒数、压缩系数、杨氏模量、Poisson比、 Lame 常数(用于模拟各向同性介质)</span><br></pre></td></tr></table></figure>
 
           
         
