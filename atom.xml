@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>rachpt</title>
+  <title>rachpt&#39;s Blog</title>
   
   <subtitle>时间总是追不上</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -85,28 +85,6 @@
   
   <entry>
     <title></title>
-    <link href="https://rachpt.github.io/2018/02/28/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://rachpt.github.io/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
-    <published>2018-02-28T03:12:39.741Z</published>
-    <updated>2017-11-01T11:52:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：</p><p>1，首先确定关闭了防火墙并且80端口没有被占用</p><p>2，修改apache的httpd.conf文件，一共两处：</p><p>第一处</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow<br>Deny from all<br>Satisfy all</p><p>修改为：</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow</p><h2 id="Deny-from-all"><a href="#Deny-from-all" class="headerlink" title="Deny from all"></a>Deny from all</h2><p>Allow from all</p><p>##允许所有访问</p><p>Satisfy all</p><p>第二处</p><h2 id="onlineoffline-tag-don’t-remove"><a href="#onlineoffline-tag-don’t-remove" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：</p><h2 id="onlineoffline-tag-don’t-remove-1"><a href="#onlineoffline-tag-don’t-remove-1" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow</p><h1 id="Deny-from-all-1"><a href="#Deny-from-all-1" class="headerlink" title="Deny from all"></a>Deny from all</h1><h2 id="Allow-from-127-0-0-1"><a href="#Allow-from-127-0-0-1" class="headerlink" title="Allow from 127.0.0.1"></a>Allow from 127.0.0.1</h2><p>Allow from all</p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p><p>order deny,allow<br>deny from none<br>allow from all<br>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;/p&gt;
-&lt;p&gt;1，
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://rachpt.github.io/2018/02/28/%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91%E6%97%B6%E9%97%B4%E4%BA%8Emoney%EF%BC%9F/"/>
     <id>https://rachpt.github.io/2018/02/28/建一个个人网址需要花多少时间于money？/</id>
     <published>2018-02-28T03:12:39.741Z</published>
@@ -120,6 +98,28 @@
       
         &lt;p&gt;几年前，当我还是个电脑盲，在探索各种自定义界面的过程中了解到了博客这种东西&lt;/p&gt;
 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://rachpt.github.io/2018/02/28/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://rachpt.github.io/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
+    <published>2018-02-28T03:12:39.741Z</published>
+    <updated>2017-11-01T11:52:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：</p><p>1，首先确定关闭了防火墙并且80端口没有被占用</p><p>2，修改apache的httpd.conf文件，一共两处：</p><p>第一处</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow<br>Deny from all<br>Satisfy all</p><p>修改为：</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow</p><h2 id="Deny-from-all"><a href="#Deny-from-all" class="headerlink" title="Deny from all"></a>Deny from all</h2><p>Allow from all</p><p>##允许所有访问</p><p>Satisfy all</p><p>第二处</p><h2 id="onlineoffline-tag-don’t-remove"><a href="#onlineoffline-tag-don’t-remove" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：</p><h2 id="onlineoffline-tag-don’t-remove-1"><a href="#onlineoffline-tag-don’t-remove-1" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow</p><h1 id="Deny-from-all-1"><a href="#Deny-from-all-1" class="headerlink" title="Deny from all"></a>Deny from all</h1><h2 id="Allow-from-127-0-0-1"><a href="#Allow-from-127-0-0-1" class="headerlink" title="Allow from 127.0.0.1"></a>Allow from 127.0.0.1</h2><p>Allow from all</p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p><p>order deny,allow<br>deny from none<br>allow from all<br>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;/p&gt;
+&lt;p&gt;1，
       
     
     </summary>
