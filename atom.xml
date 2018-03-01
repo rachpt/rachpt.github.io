@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2018-03-01T14:14:12.669Z</updated>
+  <updated>2018-03-01T15:00:41.510Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>声子晶体</title>
+    <link href="https://rachpt.github.io/2018/03/01/%E5%A3%B0%E5%AD%90%E6%99%B6%E4%BD%93-%E5%BA%94%E7%94%A8/"/>
+    <id>https://rachpt.github.io/2018/03/01/声子晶体-应用/</id>
+    <published>2018-03-01T15:00:41.510Z</published>
+    <updated>2018-03-01T15:00:41.510Z</updated>
+    
+    <content type="html"><![CDATA[<p>声功能器件，利用声子晶体缺陷态特征，高能，低功耗声滤波器; 利用负折射特征，高聚焦，低能耗的声学透镜。<br><a id="more"></a><br>声子晶体周期结构 梁板结构设计。</p><p>在点磁场模拟和弹性波场模拟中已经得到广泛应用。</p><p>有限周期与无限周期声子晶体能带结构具体计算。</p><p>基本思想，时间和空间离散化，将偏微分波动方程转化成有限个查分方程，在激励，初始条件，边界条件下得到时域响应，根据时域响应研究波传播的特征。</p><p>空间区域 用特定的网格来划分，取格节点上变量计算，进而导出差分方程一般通式–差分格式。</p><p>特点:<br>广泛试用性 ， m 方程或波动方程出发<br>直接时域计算<br>适合并行计算</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;声功能器件，利用声子晶体缺陷态特征，高能，低功耗声滤波器; 利用负折射特征，高聚焦，低能耗的声学透镜。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://rachpt.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="笔记" scheme="https://rachpt.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>建一个个人网站需要花费多少</title>
@@ -457,32 +479,6 @@
     
     
       <category term="firefox" scheme="https://rachpt.github.io/tags/firefox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>材料物理学笔记</title>
-    <link href="https://rachpt.github.io/2017/11/02/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E5%AD%A6/"/>
-    <id>https://rachpt.github.io/2017/11/02/材料物理学/</id>
-    <published>2017-11-02T01:23:54.000Z</published>
-    <updated>2018-03-01T11:00:14.911Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="老师"><a href="#老师" class="headerlink" title="老师"></a>老师</h1><ul><li>袁松柳</li><li>Email:  <a href="mailto:yuansl@hust.edu.cn" target="_blank" rel="noopener">yuansl@hust.edu.cn</a></li><li>QQ: 1131536120</li></ul><a id="more"></a><h1 id="考试"><a href="#考试" class="headerlink" title="考试"></a>考试</h1><ul><li>平时考察</li></ul><h1 id="教材"><a href="#教材" class="headerlink" title="教材"></a>教材</h1><ul><li>讲义</li></ul><h1 id="序论"><a href="#序论" class="headerlink" title="序论"></a>序论</h1><ul><li>材料学</li><li>物理学</li><li>材料物理学</li></ul><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ul><li><p>金属材料，无机非金属材料，有机高分子材料</p></li><li><p>单晶，多晶，非晶，液晶 材料</p></li><li>结构，功能材料: 力学性质，热电磁光屋里性质，，压电，热电，铁电，光电，声光，磁光等材料</li></ul><h1 id="物理学"><a href="#物理学" class="headerlink" title="物理学"></a>物理学</h1><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>三个层次：微观，宏观，宇观.</p><p>基础的研究意义，潜在的应用前景.</p><p>巨磁电阻效应 : spintronics 自旋电子学.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;老师&quot;&gt;&lt;a href=&quot;#老师&quot; class=&quot;headerlink&quot; title=&quot;老师&quot;&gt;&lt;/a&gt;老师&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;袁松柳&lt;/li&gt;
-&lt;li&gt;Email:  &lt;a href=&quot;mailto:yuansl@hust.edu.cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;yuansl@hust.edu.cn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;QQ: 1131536120&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://rachpt.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://rachpt.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
