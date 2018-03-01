@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2017-11-25T08:53:21.000Z</updated>
+  <updated>2018-03-01T09:49:13.494Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://rachpt.github.io/2018/02/28/linux%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2018/02/28/linux笔记/</id>
-    <published>2018-02-28T03:12:39.733Z</published>
-    <updated>2017-11-25T08:53:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="linux-笔记"><a href="#linux-笔记" class="headerlink" title="linux 笔记"></a>linux 笔记</h1><ul><li>如何计算文件哈希<br><code>md5sum filename</code> 即可,更多:</li></ul><p>命令格式<br>md5sum [OPTION]… [FILE]… </p><p>命令选项<br>-b 或 –binary :把输入文件作为二进制文件看待。<br>-t 或 –text :把输入的文件作为文本文件看待（默认）。<br>-c 或 –check :用来从文件中读取md5信息检查文件的一致性。(不细说了参见info)<br>–status :这个选项和check一起使用,在check的时候，不输出，而是根据返回值表示检查结果。<br>-w 或 –warn :在check的时候，检查输入的md5信息又没有非法的行，如果有则输出相应信息。</p><p>例子<br>生产一个文件的md5值，md5sum filename &gt; filename.md5</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;linux-笔记&quot;&gt;&lt;a href=&quot;#linux-笔记&quot; class=&quot;headerlink&quot; title=&quot;linux 笔记&quot;&gt;&lt;/a&gt;linux 笔记&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;如何计算文件哈希&lt;br&gt;&lt;code&gt;md5sum filename&lt;/code&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>建一个个人网站需要花费多少</title>
@@ -255,6 +233,30 @@
     
     
       <category term="comsol" scheme="https://rachpt.github.io/tags/comsol/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux 笔记</title>
+    <link href="https://rachpt.github.io/2017/12/03/linux%E7%AC%94%E8%AE%B0/"/>
+    <id>https://rachpt.github.io/2017/12/03/linux笔记/</id>
+    <published>2017-12-02T16:00:00.000Z</published>
+    <updated>2018-03-01T10:00:58.953Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>如何计算文件哈希<br><code>md5sum filename</code> 即可,更多:</li></ul><a id="more"></a><ul><li><p>命令格式</p><p>  md5sum [OPTION]… [FILE]… </p><p>  命令选项</p><p>  -b 或 –binary :把输入文件作为二进制文件看待。<br>  -t 或 –text :把输入的文件作为文本文件看待（默认）。<br>  -c 或 –check :用来从文件中读取md5信息检查文件的一致性。(不细说了参见info)<br>  –status :这个选项和check一起使用,在check的时候，不输出，而是根据返回值表示检查结果。<br>  -w 或 –warn :在check的时候，检查输入的md5信息又没有非法的行，如果有则输出相应信息。</p><p>  例子<br>  生产一个文件的md5值，md5sum filename &gt; filename.md5</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;如何计算文件哈希&lt;br&gt;&lt;code&gt;md5sum filename&lt;/code&gt; 即可,更多:&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="https://rachpt.github.io/categories/ubuntu/"/>
+    
+    
+      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
