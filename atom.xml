@@ -85,28 +85,6 @@
   
   <entry>
     <title></title>
-    <link href="https://rachpt.github.io/2018/02/28/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://rachpt.github.io/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
-    <published>2018-02-28T03:12:39.741Z</published>
-    <updated>2017-11-01T11:52:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：</p><p>1，首先确定关闭了防火墙并且80端口没有被占用</p><p>2，修改apache的httpd.conf文件，一共两处：</p><p>第一处</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow<br>Deny from all<br>Satisfy all</p><p>修改为：</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow</p><h2 id="Deny-from-all"><a href="#Deny-from-all" class="headerlink" title="Deny from all"></a>Deny from all</h2><p>Allow from all</p><p>##允许所有访问</p><p>Satisfy all</p><p>第二处</p><h2 id="onlineoffline-tag-don’t-remove"><a href="#onlineoffline-tag-don’t-remove" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：</p><h2 id="onlineoffline-tag-don’t-remove-1"><a href="#onlineoffline-tag-don’t-remove-1" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow</p><h1 id="Deny-from-all-1"><a href="#Deny-from-all-1" class="headerlink" title="Deny from all"></a>Deny from all</h1><h2 id="Allow-from-127-0-0-1"><a href="#Allow-from-127-0-0-1" class="headerlink" title="Allow from 127.0.0.1"></a>Allow from 127.0.0.1</h2><p>Allow from all</p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p><p>order deny,allow<br>deny from none<br>allow from all<br>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;/p&gt;
-&lt;p&gt;1，
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://rachpt.github.io/2018/02/28/%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91%E6%97%B6%E9%97%B4%E4%BA%8Emoney%EF%BC%9F/"/>
     <id>https://rachpt.github.io/2018/02/28/建一个个人网址需要花多少时间于money？/</id>
     <published>2018-02-28T03:12:39.741Z</published>
@@ -120,6 +98,28 @@
       
         &lt;p&gt;几年前，当我还是个电脑盲，在探索各种自定义界面的过程中了解到了博客这种东西&lt;/p&gt;
 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://rachpt.github.io/2018/02/28/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://rachpt.github.io/2018/02/28/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
+    <published>2018-02-28T03:12:39.741Z</published>
+    <updated>2017-11-01T11:52:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：</p><p>1，首先确定关闭了防火墙并且80端口没有被占用</p><p>2，修改apache的httpd.conf文件，一共两处：</p><p>第一处</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow<br>Deny from all<br>Satisfy all</p><p>修改为：</p><p>Options FollowSymLinks<br>AllowOverride None<br>Order deny,allow</p><h2 id="Deny-from-all"><a href="#Deny-from-all" class="headerlink" title="Deny from all"></a>Deny from all</h2><p>Allow from all</p><p>##允许所有访问</p><p>Satisfy all</p><p>第二处</p><h2 id="onlineoffline-tag-don’t-remove"><a href="#onlineoffline-tag-don’t-remove" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：</p><h2 id="onlineoffline-tag-don’t-remove-1"><a href="#onlineoffline-tag-don’t-remove-1" class="headerlink" title="onlineoffline tag - don’t remove"></a>onlineoffline tag - don’t remove</h2><p>Order Deny,Allow</p><h1 id="Deny-from-all-1"><a href="#Deny-from-all-1" class="headerlink" title="Deny from all"></a>Deny from all</h1><h2 id="Allow-from-127-0-0-1"><a href="#Allow-from-127-0-0-1" class="headerlink" title="Allow from 127.0.0.1"></a>Allow from 127.0.0.1</h2><p>Allow from all</p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p><p>order deny,allow<br>deny from none<br>allow from all<br>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;/p&gt;
+&lt;p&gt;1，
       
     
     </summary>
@@ -172,6 +172,27 @@
   
   <entry>
     <title></title>
+    <link href="https://rachpt.github.io/2018/02/28/linux%20%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%A0%87/"/>
+    <id>https://rachpt.github.io/2018/02/28/linux 创建启动图标/</id>
+    <published>2018-02-28T03:12:39.733Z</published>
+    <updated>2017-12-31T15:26:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Linux-免安装程序配置"><a href="#Linux-免安装程序配置" class="headerlink" title="Linux 免安装程序配置"></a>Linux 免安装程序配置</h1><p>适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p><h2 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h2><p>这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p><p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop <span class="comment"># 在其中写如如下内容</span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm  #显示的名字</span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh  # 软件路径</span><br><span class="line">Terminal=false</span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png  # 软件图标</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development  # 软件分类</span><br></pre></td></tr></table></figure><p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p><h2 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h2><p>方法一：用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐） </p><p>登录到你的用户（非root），在终端输入：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile   <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure><p>可以在此文件末尾加入PATH的设置如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure><p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。 </p><p>方法二：在系统目录，进行类似操作。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line"></span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure><p> 在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。 </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Linux-免安装程序配置&quot;&gt;&lt;a href=&quot;#Linux-免安装程序配置&quot; class=&quot;headerlink&quot; title=&quot;Linux 免安装程序配置&quot;&gt;&lt;/a&gt;Linux 免安装程序配置&lt;/h1&gt;&lt;p&gt;适用于基于debian 的 ubuntu ，以及 l
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="https://rachpt.github.io/2018/02/28/linux%E7%AC%94%E8%AE%B0/"/>
     <id>https://rachpt.github.io/2018/02/28/linux笔记/</id>
     <published>2018-02-28T03:12:39.733Z</published>
@@ -185,27 +206,6 @@
       
         &lt;h1 id=&quot;linux-笔记&quot;&gt;&lt;a href=&quot;#linux-笔记&quot; class=&quot;headerlink&quot; title=&quot;linux 笔记&quot;&gt;&lt;/a&gt;linux 笔记&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;如何计算文件哈希&lt;br&gt;&lt;code&gt;md5sum filename&lt;/code&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://rachpt.github.io/2018/02/28/linux%20%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%A0%87/"/>
-    <id>https://rachpt.github.io/2018/02/28/linux 创建启动图标/</id>
-    <published>2018-02-28T03:12:39.733Z</published>
-    <updated>2017-12-31T15:26:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Linux-免安装程序配置"><a href="#Linux-免安装程序配置" class="headerlink" title="Linux 免安装程序配置"></a>Linux 免安装程序配置</h1><p>适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p><h2 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h2><p>这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p><p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop <span class="comment"># 在其中写如如下内容</span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm  #显示的名字</span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh  # 软件路径</span><br><span class="line">Terminal=false</span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png  # 软件图标</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development  # 软件分类</span><br></pre></td></tr></table></figure><p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p><h2 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h2><p>方法一：用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐） </p><p>登录到你的用户（非root），在终端输入：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile   <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure><p>可以在此文件末尾加入PATH的设置如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure><p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。 </p><p>方法二：在系统目录，进行类似操作。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line"></span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure><p> 在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。 </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Linux-免安装程序配置&quot;&gt;&lt;a href=&quot;#Linux-免安装程序配置&quot; class=&quot;headerlink&quot; title=&quot;Linux 免安装程序配置&quot;&gt;&lt;/a&gt;Linux 免安装程序配置&lt;/h1&gt;&lt;p&gt;适用于基于debian 的 ubuntu ，以及 l
       
     
     </summary>
