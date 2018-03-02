@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="今天遇到MS cij计算失败，提示初始电池的电子最小化失败。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-02T03:05:11.901Z">
+<meta property="og:updated_time" content="2018-03-02T03:07:11.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAterials Studio 迭代次数设置">
 <meta name="twitter:description" content="今天遇到MS cij计算失败，提示初始电池的电子最小化失败。">
@@ -367,7 +367,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T11:05:11+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T11:07:11+08:00">
                 2018-03-02
               </time>
             
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  338
+                  373
                 </span>
               
 
@@ -471,7 +471,8 @@
 <p>几乎都是十几次得到自恰解。</p>
 <p>找到问题所在。</p>
 <h1 id="迭代次数我不是设置的500-么"><a href="#迭代次数我不是设置的500-么" class="headerlink" title="迭代次数我不是设置的500 么"></a>迭代次数我不是设置的500 么</h1><p>回到 windows 版的MS，检查设置。我勒个去，<code>Geometry Optimization</code> 的 <code>Max.iterations</code>是500没错，但是<code>Elastic Constants</code> 的 <code>Max.iterations</code>还是默认的100。</p>
-<p>问题有可能就在这里，提高迭代次数上线，有可能</p>
+<p>问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。</p>
+<p>截断能、k点、自旋、对称性等都有可能影响收敛。</p>
 
       
     </div>
