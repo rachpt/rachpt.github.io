@@ -2088,7 +2088,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9fb3;
+  background: #8c5032;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3553,6 +3553,11 @@ img:hover {
   cursor: url("/images/sword1.ico"), auto !important;
 }
 .daodream-launcher-button .daodream-launcher-maximized .daodream-launcher-with-initials {
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+#daodream-launcher {
   opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
