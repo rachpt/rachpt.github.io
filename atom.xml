@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2018-03-02T02:46:37.625Z</updated>
+  <updated>2018-03-02T02:51:11.924Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -17,16 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>MAterials Studio 迭代次数设置</title>
     <link href="https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/"/>
     <id>https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/</id>
-    <published>2018-03-02T02:47:54.434Z</published>
-    <updated>2018-03-02T02:46:37.625Z</updated>
+    <published>2018-03-02T02:51:11.924Z</published>
+    <updated>2018-03-02T02:51:11.924Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>今天</p></blockquote>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;今天&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      
+    
     </summary>
     
+    
+      <category term="MS" scheme="https://rachpt.github.io/tags/MS/"/>
     
   </entry>
   
