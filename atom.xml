@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2018-03-02T02:51:11.924Z</updated>
+  <updated>2018-03-02T02:53:11.856Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -20,19 +20,19 @@
     <title>MAterials Studio 迭代次数设置</title>
     <link href="https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/"/>
     <id>https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/</id>
-    <published>2018-03-02T02:51:11.924Z</published>
-    <updated>2018-03-02T02:51:11.924Z</updated>
+    <published>2018-03-02T02:53:11.856Z</published>
+    <updated>2018-03-02T02:53:11.856Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>今天</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>今天遇到MS cij计算失败，提示初始电池的电子最小化失败。</p></blockquote><h1 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h1>]]></content>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;p&gt;今天&lt;/p&gt;
+&lt;p&gt;今天遇到MS cij计算失败，提示初始电池的电子最小化失败。&lt;/p&gt;
 &lt;/blockquote&gt;
-
+&lt;h1 id=&quot;错误信息&quot;&gt;&lt;a href=&quot;#错误信息&quot; class=&quot;headerlink&quot; title=&quot;错误信息&quot;&gt;&lt;/a&gt;错误信息&lt;/h1&gt;
       
     
     </summary>
