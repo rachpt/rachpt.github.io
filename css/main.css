@@ -2088,7 +2088,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8c5032;
+  background: #250deb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3558,7 +3558,7 @@ img:hover {
   opacity: 0.5;
 }
 #daodream-launcher {
-  opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
 }
