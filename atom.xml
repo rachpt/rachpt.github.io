@@ -352,9 +352,9 @@
     <link href="https://rachpt.github.io/2017/12/01/python%E7%AC%94%E8%AE%B0/"/>
     <id>https://rachpt.github.io/2017/12/01/python笔记/</id>
     <published>2017-12-01T04:23:12.000Z</published>
-    <updated>2018-02-28T16:10:44.703Z</updated>
+    <updated>2018-03-02T08:56:31.000Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>安装python</li></ul><ul><li><p>安装 selenium 库</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install selenium</span><br></pre></td></tr></table></figure></li><li><p>重要步骤</p></li></ul><blockquote><p>需要将firefox 与驱动程序（）加进环境变量。</p></blockquote><p>assert 插入调试。</p>]]></content>
+    <content type="html"><![CDATA[<ul><li>安装python</li></ul><ul><li>安装 selenium 库</li></ul><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install selenium</span><br></pre></td></tr></table></figure><ul><li>重要步骤</li></ul><blockquote><p>需要将firefox 与驱动程序（）加进环境变量。</p></blockquote><p>assert 插入调试。</p>]]></content>
     
     <summary type="html">
     
@@ -362,7 +362,8 @@
 &lt;li&gt;安装python&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;安装 selenium 库&lt;/p&gt;
+&lt;li&gt;安装 selenium 库&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
