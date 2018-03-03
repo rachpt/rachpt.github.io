@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2018-03-03T03:24:46.844Z</updated>
+  <updated>2018-03-03T03:26:46.839Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/"/>
     <id>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</id>
     <published>2018-03-03T03:08:00.000Z</published>
-    <updated>2018-03-03T03:24:46.844Z</updated>
+    <updated>2018-03-03T03:26:46.839Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。</p></blockquote><h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><p>之前创建过两个相同的 project。比如先建一个 project，觉得不好，删掉再建，手残有时刚刚删掉的project，就会出现这个错误。两个<em>现有</em>虚拟环境具有相同的名称，于是无法设置解释器。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>打开 <code>settings</code> ，在<code>project interpreyer</code> 里面，<code>show all</code> ，</p><blockquote><p> pycharm 报错：pycharm please specify a different SDK name </p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。</p></blockquote><h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><p>之前创建过两个相同的 project。比如先建一个 project，觉得不好，删掉再建，手残有时刚刚删掉的project，就会出现这个错误。两个<em>现有</em>虚拟环境具有相同的名称，于是无法设置解释器。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>打开 <code>settings</code> ，在<code>project interpreyer</code> 里面，<code>show all</code> 。</p><blockquote><p> pycharm 报错：pycharm please specify a different SDK name </p></blockquote>]]></content>
     
     <summary type="html">
     
