@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2018-03-03T03:50:36.168Z</updated>
+  <updated>2018-03-03T03:52:09.631Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -21,19 +21,15 @@
     <link href="https://rachpt.github.io/2018/03/03/gimp-simple-notes/"/>
     <id>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</id>
     <published>2018-03-03T03:40:31.000Z</published>
-    <updated>2018-03-03T03:50:36.168Z</updated>
+    <updated>2018-03-03T03:52:09.631Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p></blockquote><h1 id="画矩形框"><a href="#画矩形框" class="headerlink" title="画矩形框"></a>画矩形框</h1><ol><li>选用<code>矩形选择工具 (快捷键R)</code> ，选区。</li><li>编辑 –&gt; 勾画选区。</li></ol><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhinkhhdj20c609cjs9.jpg" alt="pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhjbusouj20ao0g1gmw.jpg" alt="pic2"></p><hr><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p></blockquote><a id="more"></a><h1 id="画矩形框"><a href="#画矩形框" class="headerlink" title="画矩形框"></a>画矩形框</h1><ol><li>选用<code>矩形选择工具 (快捷键R)</code> ，选区。</li><li>编辑 –&gt; 勾画选区。</li></ol><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhinkhhdj20c609cjs9.jpg" alt="pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhjbusouj20ao0g1gmw.jpg" alt="pic2"></p><hr><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;记录一些 &lt;code&gt;Gimp&lt;/code&gt; 常用操作，力求简洁明了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;画矩形框&quot;&gt;&lt;a href=&quot;#画矩形框&quot; class=&quot;headerlink&quot; title=&quot;画矩形框&quot;&gt;&lt;/a&gt;画矩形框
-      
     
     </summary>
     
@@ -49,19 +45,15 @@
     <link href="https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/"/>
     <id>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</id>
     <published>2018-03-03T03:08:00.000Z</published>
-    <updated>2018-03-03T03:39:21.707Z</updated>
+    <updated>2018-03-03T03:52:51.146Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。</p></blockquote><h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><p>之前创建过两个相同的 project。比如先建一个 project，觉得不好，删掉再建，手残有时刚刚删掉的project，就会出现这个错误。两个<em>现有</em>虚拟环境具有相同的名称，于是无法设置解释器。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>打开 <code>settings</code> ，在<code>project interpreyer</code> 里面，<code>show all</code> 。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozguvqakhj20sk0iw405.jpg" alt="pycharm settings"></p><p>选择有红色警示符的项，删掉即可。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozh1bwu72j20i40fnt8u.jpg" alt="pycharm delete"></p><hr><p>参考： <a href="https://ws1.sinaimg.cn/large/675bda05gy1fozh1bwu72j20i40fnt8u.jpg" target="_blank" rel="noopener">PyCharm 2017.3 Help</a> 。</p><blockquote><p> pycharm 报错：pycharm please specify a different SDK name </p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。</p></blockquote><a id="more"></a><h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><p>之前创建过两个相同的 project。比如先建一个 project，觉得不好，删掉再建，手残有时刚刚删掉的project，就会出现这个错误。两个<em>现有</em>虚拟环境具有相同的名称，于是无法设置解释器。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>打开 <code>settings</code> ，在<code>project interpreyer</code> 里面，<code>show all</code> 。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozguvqakhj20sk0iw405.jpg" alt="pycharm settings"></p><p>选择有红色警示符的项，删掉即可。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozh1bwu72j20i40fnt8u.jpg" alt="pycharm delete"></p><hr><blockquote><p>参考： <a href="https://ws1.sinaimg.cn/large/675bda05gy1fozh1bwu72j20i40fnt8u.jpg" target="_blank" rel="noopener">PyCharm 2017.3 Help</a> 。</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;产生原因&quot;&gt;&lt;a href=
-      
     
     </summary>
     
