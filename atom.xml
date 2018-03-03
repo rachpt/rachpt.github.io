@@ -5,9 +5,9 @@
   <subtitle>时间总是追不上</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://rachpt.github.io/"/>
+  <link href="http://rachpt.me/"/>
   <updated>2018-03-03T03:52:09.631Z</updated>
-  <id>https://rachpt.github.io/</id>
+  <id>http://rachpt.me/</id>
   
   <author>
     <name>rachpt</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Gimp 简单使用笔记</title>
-    <link href="https://rachpt.github.io/2018/03/03/gimp-simple-notes/"/>
-    <id>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</id>
+    <link href="http://rachpt.me/2018/03/03/gimp-simple-notes/"/>
+    <id>http://rachpt.me/2018/03/03/gimp-simple-notes/</id>
     <published>2018-03-03T03:40:31.000Z</published>
     <updated>2018-03-03T03:52:09.631Z</updated>
     
@@ -33,17 +33,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="gimp" scheme="https://rachpt.github.io/tags/gimp/"/>
+      <category term="gimp" scheme="http://rachpt.me/tags/gimp/"/>
     
   </entry>
   
   <entry>
     <title>Pycharm please specify a different SDK name</title>
-    <link href="https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/"/>
-    <id>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</id>
+    <link href="http://rachpt.me/2018/03/03/pycharm-please-specify-a-different-SDK-name/"/>
+    <id>http://rachpt.me/2018/03/03/pycharm-please-specify-a-different-SDK-name/</id>
     <published>2018-03-03T03:08:00.000Z</published>
     <updated>2018-03-03T03:52:51.146Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>MAterials Studio 迭代次数设置</title>
-    <link href="https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/"/>
-    <id>https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/</id>
+    <link href="http://rachpt.me/2018/03/02/ms-scf-max-iterations/"/>
+    <id>http://rachpt.me/2018/03/02/ms-scf-max-iterations/</id>
     <published>2018-03-02T03:11:15.729Z</published>
     <updated>2018-03-02T03:11:15.729Z</updated>
     
@@ -77,17 +77,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="MS" scheme="https://rachpt.github.io/tags/MS/"/>
+      <category term="MS" scheme="http://rachpt.me/tags/MS/"/>
     
   </entry>
   
   <entry>
     <title>声子晶体</title>
-    <link href="https://rachpt.github.io/2018/03/01/%E5%A3%B0%E5%AD%90%E6%99%B6%E4%BD%93-%E5%BA%94%E7%94%A8/"/>
-    <id>https://rachpt.github.io/2018/03/01/声子晶体-应用/</id>
+    <link href="http://rachpt.me/2018/03/01/%E5%A3%B0%E5%AD%90%E6%99%B6%E4%BD%93-%E5%BA%94%E7%94%A8/"/>
+    <id>http://rachpt.me/2018/03/01/声子晶体-应用/</id>
     <published>2018-03-01T15:00:41.510Z</published>
     <updated>2018-03-01T15:00:41.510Z</updated>
     
@@ -99,17 +99,17 @@
     
     </summary>
     
-      <category term="学习" scheme="https://rachpt.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://rachpt.me/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="笔记" scheme="https://rachpt.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>建一个个人网站需要花费多少</title>
-    <link href="https://rachpt.github.io/2018/01/12/%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91/"/>
-    <id>https://rachpt.github.io/2018/01/12/建个人网址需要花多少/</id>
+    <link href="http://rachpt.me/2018/01/12/%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91/"/>
+    <id>http://rachpt.me/2018/01/12/建个人网址需要花多少/</id>
     <published>2018-01-11T16:00:00.000Z</published>
     <updated>2018-03-02T09:30:56.000Z</updated>
     
@@ -121,15 +121,15 @@
     
     </summary>
     
-      <category term="笔记" scheme="https://rachpt.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://rachpt.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
   
   <entry>
     <title>材料物理答案</title>
-    <link href="https://rachpt.github.io/2018/01/03/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E7%AD%94%E6%A1%88/"/>
-    <id>https://rachpt.github.io/2018/01/03/材料物理答案/</id>
+    <link href="http://rachpt.me/2018/01/03/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E7%AD%94%E6%A1%88/"/>
+    <id>http://rachpt.me/2018/01/03/材料物理答案/</id>
     <published>2018-01-02T16:00:00.000Z</published>
     <updated>2018-03-01T09:56:36.108Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>自然辩证法笔记</title>
-    <link href="https://rachpt.github.io/2017/12/23/%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95/"/>
-    <id>https://rachpt.github.io/2017/12/23/自然辩证法/</id>
+    <link href="http://rachpt.me/2017/12/23/%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95/"/>
+    <id>http://rachpt.me/2017/12/23/自然辩证法/</id>
     <published>2017-12-22T16:00:00.000Z</published>
     <updated>2018-03-01T09:46:34.277Z</updated>
     
@@ -166,8 +166,8 @@
   
   <entry>
     <title>Olex2 使用笔记</title>
-    <link href="https://rachpt.github.io/2017/12/21/Olex2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2017/12/21/Olex2使用笔记/</id>
+    <link href="http://rachpt.me/2017/12/21/Olex2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rachpt.me/2017/12/21/Olex2使用笔记/</id>
     <published>2017-12-21T12:00:00.000Z</published>
     <updated>2018-03-02T08:57:13.000Z</updated>
     
@@ -181,19 +181,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="软件" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="olex2" scheme="https://rachpt.github.io/tags/olex2/"/>
+      <category term="olex2" scheme="http://rachpt.me/tags/olex2/"/>
     
   </entry>
   
   <entry>
     <title>linux 创建启动图标</title>
-    <link href="https://rachpt.github.io/2017/12/21/linux%20%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%A0%87/"/>
-    <id>https://rachpt.github.io/2017/12/21/linux 创建启动图标/</id>
+    <link href="http://rachpt.me/2017/12/21/linux%20%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%A0%87/"/>
+    <id>http://rachpt.me/2017/12/21/linux 创建启动图标/</id>
     <published>2017-12-20T16:00:00.000Z</published>
     <updated>2018-03-01T09:58:05.808Z</updated>
     
@@ -205,17 +205,17 @@
     
     </summary>
     
-      <category term="ubuntu" scheme="https://rachpt.github.io/categories/ubuntu/"/>
+      <category term="ubuntu" scheme="http://rachpt.me/categories/ubuntu/"/>
     
     
-      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>ubuntu 学习笔记</title>
-    <link href="https://rachpt.github.io/2017/12/18/ubuntu%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2017/12/18/ubuntu学习笔记/</id>
+    <link href="http://rachpt.me/2017/12/18/ubuntu%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rachpt.me/2017/12/18/ubuntu学习笔记/</id>
     <published>2017-12-18T02:41:04.000Z</published>
     <updated>2018-02-28T02:20:43.000Z</updated>
     
@@ -234,19 +234,19 @@
     
     </summary>
     
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
     
-      <category term="学习" scheme="https://rachpt.github.io/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://rachpt.me/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="ubuntu" scheme="https://rachpt.github.io/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>照片PDF优化成矢量版</title>
-    <link href="https://rachpt.github.io/2017/12/10/%E7%85%A7%E7%89%87PDF%E4%BC%98%E5%8C%96/"/>
-    <id>https://rachpt.github.io/2017/12/10/照片PDF优化/</id>
+    <link href="http://rachpt.me/2017/12/10/%E7%85%A7%E7%89%87PDF%E4%BC%98%E5%8C%96/"/>
+    <id>http://rachpt.me/2017/12/10/照片PDF优化/</id>
     <published>2017-12-09T16:00:00.000Z</published>
     <updated>2018-03-01T09:45:01.820Z</updated>
     
@@ -259,19 +259,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="pdf" scheme="https://rachpt.github.io/tags/pdf/"/>
+      <category term="pdf" scheme="http://rachpt.me/tags/pdf/"/>
     
-      <category term="acrobat" scheme="https://rachpt.github.io/tags/acrobat/"/>
+      <category term="acrobat" scheme="http://rachpt.me/tags/acrobat/"/>
     
   </entry>
   
   <entry>
     <title>ubuntu  firefox</title>
-    <link href="https://rachpt.github.io/2017/12/09/ubuntu%E8%BF%9B%E5%85%A5Firefox%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>https://rachpt.github.io/2017/12/09/ubuntu进入Firefox的方法/</id>
+    <link href="http://rachpt.me/2017/12/09/ubuntu%E8%BF%9B%E5%85%A5Firefox%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://rachpt.me/2017/12/09/ubuntu进入Firefox的方法/</id>
     <published>2017-12-09T06:23:45.000Z</published>
     <updated>2018-03-02T08:57:36.000Z</updated>
     
@@ -288,19 +288,19 @@
     
     </summary>
     
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
     
-      <category term="学习" scheme="https://rachpt.github.io/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://rachpt.me/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="ubuntu" scheme="https://rachpt.github.io/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>COMSOL 简要笔记</title>
-    <link href="https://rachpt.github.io/2017/12/04/COMSOL%20%E7%AE%80%E8%A6%81%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2017/12/04/COMSOL 简要笔记/</id>
+    <link href="http://rachpt.me/2017/12/04/COMSOL%20%E7%AE%80%E8%A6%81%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rachpt.me/2017/12/04/COMSOL 简要笔记/</id>
     <published>2017-12-04T01:12:45.000Z</published>
     <updated>2018-02-28T16:10:02.008Z</updated>
     
@@ -319,19 +319,19 @@
     
     </summary>
     
-      <category term="软件" scheme="https://rachpt.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="http://rachpt.me/categories/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E8%BD%AF%E4%BB%B6/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="comsol" scheme="https://rachpt.github.io/tags/comsol/"/>
+      <category term="comsol" scheme="http://rachpt.me/tags/comsol/"/>
     
   </entry>
   
   <entry>
     <title>我的安卓我做主</title>
-    <link href="https://rachpt.github.io/2017/12/04/%E6%88%91%E7%9A%84%E5%AE%89%E5%8D%93%E6%88%91%E5%81%9A%E4%B8%BB/"/>
-    <id>https://rachpt.github.io/2017/12/04/我的安卓我做主/</id>
+    <link href="http://rachpt.me/2017/12/04/%E6%88%91%E7%9A%84%E5%AE%89%E5%8D%93%E6%88%91%E5%81%9A%E4%B8%BB/"/>
+    <id>http://rachpt.me/2017/12/04/我的安卓我做主/</id>
     <published>2017-12-03T16:00:00.000Z</published>
     <updated>2018-03-02T08:54:11.000Z</updated>
     
@@ -344,14 +344,14 @@
     </summary>
     
     
-      <category term="android" scheme="https://rachpt.github.io/tags/android/"/>
+      <category term="android" scheme="http://rachpt.me/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>linux 笔记</title>
-    <link href="https://rachpt.github.io/2017/12/03/linux%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2017/12/03/linux笔记/</id>
+    <link href="http://rachpt.me/2017/12/03/linux%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rachpt.me/2017/12/03/linux笔记/</id>
     <published>2017-12-02T16:00:00.000Z</published>
     <updated>2018-03-01T10:00:58.953Z</updated>
     
@@ -365,17 +365,17 @@
     
     </summary>
     
-      <category term="ubuntu" scheme="https://rachpt.github.io/categories/ubuntu/"/>
+      <category term="ubuntu" scheme="http://rachpt.me/categories/ubuntu/"/>
     
     
-      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题</title>
-    <link href="https://rachpt.github.io/2017/12/02/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://rachpt.github.io/2017/12/02/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
+    <link href="http://rachpt.me/2017/12/02/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://rachpt.me/2017/12/02/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
     <published>2017-12-01T16:00:00.000Z</published>
     <updated>2018-03-01T10:02:42.857Z</updated>
     
@@ -388,14 +388,14 @@
     </summary>
     
     
-      <category term="php" scheme="https://rachpt.github.io/tags/php/"/>
+      <category term="php" scheme="http://rachpt.me/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>python 笔记</title>
-    <link href="https://rachpt.github.io/2017/12/01/python%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.github.io/2017/12/01/python笔记/</id>
+    <link href="http://rachpt.me/2017/12/01/python%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rachpt.me/2017/12/01/python笔记/</id>
     <published>2017-12-01T04:23:12.000Z</published>
     <updated>2018-03-02T08:56:31.000Z</updated>
     
@@ -412,17 +412,17 @@
     
     </summary>
     
-      <category term="python" scheme="https://rachpt.github.io/categories/python/"/>
+      <category term="python" scheme="http://rachpt.me/categories/python/"/>
     
     
-      <category term="python" scheme="https://rachpt.github.io/tags/python/"/>
+      <category term="python" scheme="http://rachpt.me/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>使用 FlexGet 订阅下载</title>
-    <link href="https://rachpt.github.io/2017/11/29/FlexGet%20PT%E8%AE%A2%E9%98%85/"/>
-    <id>https://rachpt.github.io/2017/11/29/FlexGet PT订阅/</id>
+    <link href="http://rachpt.me/2017/11/29/FlexGet%20PT%E8%AE%A2%E9%98%85/"/>
+    <id>http://rachpt.me/2017/11/29/FlexGet PT订阅/</id>
     <published>2017-11-29T07:12:10.000Z</published>
     <updated>2018-02-28T16:24:21.341Z</updated>
     
@@ -434,17 +434,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="flexget" scheme="https://rachpt.github.io/tags/flexget/"/>
+      <category term="flexget" scheme="http://rachpt.me/tags/flexget/"/>
     
   </entry>
   
   <entry>
     <title>firefox 切换更新通道</title>
-    <link href="https://rachpt.github.io/2017/11/29/Firefox%20%E6%9B%B4%E6%96%B0%E9%80%9A%E9%81%93%E5%88%87%E6%8D%A2/"/>
-    <id>https://rachpt.github.io/2017/11/29/Firefox 更新通道切换/</id>
+    <link href="http://rachpt.me/2017/11/29/Firefox%20%E6%9B%B4%E6%96%B0%E9%80%9A%E9%81%93%E5%88%87%E6%8D%A2/"/>
+    <id>http://rachpt.me/2017/11/29/Firefox 更新通道切换/</id>
     <published>2017-11-29T01:23:34.000Z</published>
     <updated>2018-03-02T08:57:54.000Z</updated>
     
@@ -456,17 +456,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="firefox" scheme="https://rachpt.github.io/tags/firefox/"/>
+      <category term="firefox" scheme="http://rachpt.me/tags/firefox/"/>
     
   </entry>
   
   <entry>
     <title>Acrobat 双页全屏显示</title>
-    <link href="https://rachpt.github.io/2017/11/28/Acrobat%20%E5%8F%8C%E9%A1%B5%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/"/>
-    <id>https://rachpt.github.io/2017/11/28/Acrobat 双页全屏显示/</id>
+    <link href="http://rachpt.me/2017/11/28/Acrobat%20%E5%8F%8C%E9%A1%B5%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/"/>
+    <id>http://rachpt.me/2017/11/28/Acrobat 双页全屏显示/</id>
     <published>2017-11-28T09:34:31.000Z</published>
     <updated>2018-03-02T03:12:29.807Z</updated>
     
@@ -478,10 +478,10 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="pdf" scheme="https://rachpt.github.io/tags/pdf/"/>
+      <category term="pdf" scheme="http://rachpt.me/tags/pdf/"/>
     
   </entry>
   
