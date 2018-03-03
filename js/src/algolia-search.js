@@ -69,7 +69,7 @@ $(document).ready(function () {
             '<!-- <span class="algolia-powered">' +
             '  <img src="' + CONFIG.root + 'images/algolia_logo.svg" alt="Algolia" />' +
             '</span> -->' +
-            '<hr /> <hr />'
+            '<hr />'
           );
         }
       }
