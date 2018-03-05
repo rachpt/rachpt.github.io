@@ -132,10 +132,12 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="记录几个修改，方便以后升级主题后更新。  目前 next 版本：6.0.5 。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-05T11:41:23.917Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp26fi1df9j20l407c3zn.jpg">
+<meta property="og:updated_time" content="2018-03-05T11:43:28.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next 主题设置">
 <meta name="twitter:description" content="记录几个修改，方便以后升级主题后更新。  目前 next 版本：6.0.5 。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp26fi1df9j20l407c3zn.jpg">
 
 
 
@@ -448,8 +450,9 @@
 </blockquote>
 <p>目前 next 版本：6.0.5 。</p>
 <a id="more"></a>
-<h1 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h1><p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,插入 js 脚本：</p>
+<h1 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h1><p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head-&gt;head.swig</code>文件,插入 js 脚本：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (prompt(<span class="string">'请输入文章密码'</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">                alert(<span class="string">'密码错误！返回上页'</span>);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp26fi1df9j20l407c3zn.jpg" alt=""></p>
 
       
     </div>
