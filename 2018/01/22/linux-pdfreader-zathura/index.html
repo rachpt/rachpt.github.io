@@ -109,7 +109,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1v0pmzbkj210o0ni7ck.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1v1i0i0dj20rm0ni0wp.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1v25jgqtj20rm0ni0y7.jpg">
-<meta property="og:updated_time" content="2018-03-05T05:09:50.941Z">
+<meta property="og:updated_time" content="2018-03-05T05:11:50.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下的PDF阅读软件zathura">
 <meta name="twitter:description" content="记录 zathura 的常用设置与技巧。">
@@ -388,7 +388,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:09:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:11:50+08:00">
                 2018-03-05
               </time>
             
@@ -471,7 +471,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  491
+                  493
                 </span>
               
 
@@ -512,7 +512,7 @@
 <p>记录 zathura 的常用设置与技巧。</p>
 </blockquote>
 <a id="more"></a>
-<p><code>~/.config/zathura/zathurarc</code> 用户配置文件与路径；</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>~/.config/zathura/zathurarc</code> 用户配置文件与路径；</p>
 <p><code>/etc/zathurarc</code> 全局配置文件与路径；</p>
 <p>使用 <code>gedit ~/.config/zathura/zathurarc</code> 添加下面的配置命令，#号以及后面为注释。</p>
 <pre><code>set adjust-open &quot;width&quot; #以宽度自适应打开
@@ -526,11 +526,7 @@ set window-height 760 #默认高度，像素
 set window-width 1300 #默认宽度
 
 # 更多请参考：https://github.com/lervag/dotfiles/blob/master/config/zathura/zathurarc
-
-
-## linux mint 18.3 的路径
-
-# 设置默认打开方式，（如果右键无效可使用下面方法）
+</code></pre><h2 id="linux-mint-18-3-的路径"><a href="#linux-mint-18-3-的路径" class="headerlink" title="linux mint 18.3 的路径"></a>linux mint 18.3 的路径</h2><pre><code># 设置默认打开方式，（如果右键无效可使用下面方法）
 /etc/gnome/defaults.list #保存全局打开方式路径
 /usr/share/applications #保存 ，这两个是一样的
 
@@ -538,13 +534,10 @@ set window-width 1300 #默认宽度
 
 # 添加
 application/pdf=xpdf.desktop
+</code></pre><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><blockquote>
+<pre><code>f 高亮链接，按 相应数字 打开链接；
 
-
-## 快捷键
-
-&gt; f 高亮链接，按 相应数字 打开链接；
-</code></pre><blockquote>
-<pre><code>q 退出；
+q 退出；
 
 # ^ 是 ctrl 键
 
@@ -574,11 +567,10 @@ gg 最前
 
 GG 最后
 </code></pre></blockquote>
-<pre><code>## 命令
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><blockquote>
+<pre><code>:bmark xxx 创建书签xxx （长书签）
 
-&gt; :bmark xxx 创建书签xxx （长书签）
-</code></pre><blockquote>
-<pre><code>:blist xxx 打开bookmark
+:blist xxx 打开bookmark
 
 :bdelete xxx 删除书签
 
@@ -905,7 +897,7 @@ GG 最后
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于复制问题"><span class="nav-number">1.</span> <span class="nav-text">关于复制问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">1.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux-mint-18-3-的路径"><span class="nav-number">1.1.</span> <span class="nav-text">linux mint 18.3 的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">1.2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">1.3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于复制问题"><span class="nav-number">1.4.</span> <span class="nav-text">关于复制问题</span></a></li></ol></li></ol></div>
             
 
           </div>
