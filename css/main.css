@@ -2143,7 +2143,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0bfeec;
+  background: #29f56a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3444,4 +3444,12 @@ ul.breadcrumb li+li:last-child {
   opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+.info {
+  visibility: hidden !important;
+  height: 0 !important;
+}
+.txt-right {
+  visibility: hidden !important;
+  height: 0 !important;
 }
