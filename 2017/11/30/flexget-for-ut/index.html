@@ -106,10 +106,11 @@
 <meta property="og:description" content="此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1xlhzn7lj20s00khwgj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1xptpg4aj20ig0fl3z6.jpg">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_21_flexget1.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_08_ut1.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_06_flexget2.png">
-<meta property="og:updated_time" content="2018-03-05T06:40:13.887Z">
+<meta property="og:updated_time" content="2018-03-05T06:42:13.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用FlexGet订阅下载Torrent">
 <meta name="twitter:description" content="此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。">
@@ -388,7 +389,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:40:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:42:13+08:00">
                 2018-03-05
               </time>
             
@@ -471,7 +472,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  944
+                  950
                 </span>
               
 
@@ -535,9 +536,11 @@
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1xlhzn7lj20s00khwgj.jpg" alt="pic1"></p>
 <p>使用1分钟即可，不要配置几个任务，因为运行一次大概需要20-40秒，其中操作使用vbs文件，文件如下写:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;) </span><br><span class="line"></span><br><span class="line">ws.run &quot;C:\Python35\Scripts\flexget.exe execute&quot;,vbhide</span><br><span class="line">//注意上面的路径， execute参数很重要。</span><br></pre></td></tr></table></figure></p>
 <p>推荐直接在你的用户目录下新建<code>flexget</code>文件夹，然后将配置文件<code>config.yml</code> (自己建一个txt，改名即可)丢里面。</p>
-<p><code>config.yml</code> 按照下面的代码填写即可快速设置:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br></pre></td></tr></table></figure></p>
+<p><code>config.yml</code> 按照下面的代码填写即可快速设置:<br>    ​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
 <p>说面一下，注意使用空格（<strong><em>不能使用制表符</em></strong>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<code>download:</code> 后面是你的utorrent自动载入种子的目录，<code>content_size:</code> 正如其义，可用于控制种子体积。其它可以参考 <a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</p>
-<h1 id="UTorrent设置自动重文件夹载如torrent文件，如下图。"><a href="#UTorrent设置自动重文件夹载如torrent文件，如下图。" class="headerlink" title="UTorrent设置自动重文件夹载如torrent文件，如下图。"></a>UTorrent设置自动重文件夹载如torrent文件，如下图。</h1><ul>
+<h1 id="UTorrent设置"><a href="#UTorrent设置" class="headerlink" title="UTorrent设置"></a>UTorrent设置</h1><p>设置 UT 自动重文件夹载如torrent文件，如下图：</p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1xptpg4aj20ig0fl3z6.jpg" alt="pic2"></p>
+<ul>
 <li><p><span class="md-line md-end-block">配置FlexGet</span></p>
 <ul>
 <li><span class="md-line md-end-block">任务计划程序（<span class=""><strong><em>我已经默认大家使用的win</em></strong></span>）添加任务，如下面图。</span><br><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_21_flexget1.png" alt=""></li>
@@ -886,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置FlexGet"><span class="nav-number">2.</span> <span class="nav-text">配置FlexGet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UTorrent设置自动重文件夹载如torrent文件，如下图。"><span class="nav-number">3.</span> <span class="nav-text">UTorrent设置自动重文件夹载如torrent文件，如下图。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置FlexGet"><span class="nav-number">2.</span> <span class="nav-text">配置FlexGet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UTorrent设置"><span class="nav-number">3.</span> <span class="nav-text">UTorrent设置</span></a></li></ol></div>
             
 
           </div>
