@@ -189,9 +189,9 @@
     <link href="http://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/"/>
     <id>http://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/</id>
     <published>2018-01-13T06:32:56.000Z</published>
-    <updated>2018-03-05T05:20:25.859Z</updated>
+    <updated>2018-03-05T05:21:37.500Z</updated>
     
-    <content type="html"><![CDATA[<p>xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。</p><a id="more"></a><p>具体见知乎 <a href="https://zhuanlan.zhihu.com/p/20926080" target="_blank" rel="noopener">谁才是压缩的王者？7z 还是 xz</a> 。</p><p>了解到 xz 5.2 以上才支持多线程，而ubuntu 默认的xz不支持多线程，于是升级xz。</p><p>下面是记录升级方法：</p><p>到 <a href="https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764" target="_blank" rel="noopener">https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764</a> 下载 <code>liblzma5_5.2.2-1.3_amd64.deb (88.7 KiB)</code>安装即可</p><p>使用<code>xz -V</code>  命令查看 xz版本。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vbhl7sgj20g40fn0uz.jpg" alt="xz-pic1"> </p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vc0m5mkj20g60fqmzg.jpg" alt="xz-pic2"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vcr0x28j20g30fndi2.jpg" alt="xz-pic3"></p>]]></content>
+    <content type="html"><![CDATA[<p>xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。</p><a id="more"></a><p>具体见知乎 <a href="https://zhuanlan.zhihu.com/p/20926080" target="_blank" rel="noopener">谁才是压缩的王者？7z 还是 xz</a> 。</p><p>了解到 xz 5.2 以上才支持多线程，而ubuntu 默认的xz不支持多线程，于是升级xz。</p><p>下面是记录升级方法：</p><p>到 <a href="https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764" target="_blank" rel="noopener">https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764</a> 下载 <code>liblzma5_5.2.2-1.3_amd64.deb (88.7 KiB)</code>安装即可</p><p>使用<code>xz -V</code>  命令查看 xz版本。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vbhl7sgj20g40fn0uz.jpg" alt="xz-pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vc0m5mkj20g60fqmzg.jpg" alt="xz-pic2"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vcr0x28j20g30fndi2.jpg" alt="xz-pic3"></p>]]></content>
     
     <summary type="html">
     
