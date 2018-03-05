@@ -106,9 +106,9 @@
 <meta property="og:description" content="此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1xlhzn7lj20s00khwgj.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1xptpg4aj20ig0fl3z6.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1xwzwld6j20ig0flmxt.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1xrdfwm1j20n90kptdx.jpg">
-<meta property="og:updated_time" content="2018-03-05T06:46:13.894Z">
+<meta property="og:updated_time" content="2018-03-05T06:48:13.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用FlexGet订阅下载Torrent">
 <meta name="twitter:description" content="此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。">
@@ -387,7 +387,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:46:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:48:13+08:00">
                 2018-03-05
               </time>
             
@@ -470,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  644
+                  643
                 </span>
               
 
@@ -536,8 +536,8 @@
 <p>推荐直接在你的用户目录下新建<code>flexget</code>文件夹，然后将配置文件<code>config.yml</code> (自己建一个txt，改名即可)丢里面。</p>
 <p><code>config.yml</code> 按照下面的代码填写即可快速设置:<br>    ​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
 <p>说面一下，注意使用空格（<strong><em>不能使用制表符</em></strong>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<code>download:</code> 后面是你的utorrent自动载入种子的目录，<code>content_size:</code> 正如其义，可用于控制种子体积。其它可以参考 <a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</p>
-<h1 id="UTorrent设置"><a href="#UTorrent设置" class="headerlink" title="UTorrent设置"></a>UTorrent设置</h1><p>设置 UT 自动从文件夹载如torrent文件，如下图：</p>
-<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1xptpg4aj20ig0fl3z6.jpg" alt="pic2"></p>
+<h1 id="UTorrent设置"><a href="#UTorrent设置" class="headerlink" title="UTorrent设置"></a>UTorrent设置</h1><p>设置 UT 自动从文件夹载 torrent 文件，如下图：</p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1xwzwld6j20ig0flmxt.jpg" alt="pic2"></p>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>使用 <code>flexget --test</code> 测试，<code>flexget execute</code>直接运行也可以。</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1xrdfwm1j20n90kptdx.jpg" alt="pic3"></p>
 <p>一般来说，种子发布后，2-3分钟内可以实现自动下载，而使用utorrent自带的rss刷新时间最少为5分钟，而且无法自定义体积等其它高级筛选。更多可以参考 <a href="https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477" target="_blank" rel="noopener">https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477</a></p>
