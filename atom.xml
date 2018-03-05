@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.github.io/"/>
-  <updated>2018-03-03T03:52:09.631Z</updated>
+  <updated>2018-03-05T03:45:59.695Z</updated>
   <id>http://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新博客地址</title>
+    <link href="http://rachpt.github.io/2018/03/03/my-new-blog/"/>
+    <id>http://rachpt.github.io/2018/03/03/my-new-blog/</id>
+    <published>2018-03-03T07:57:02.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>已经对 wordpress 无止境的更新无语了，慢慢迁移至 Github Pages &amp; Coding Pages。</p><!--more--><p>永久地址： <a href="https://rachpt.github.io">https://rachpt.github.io</a> ，已经重定向至 <a href="https://rachpt.me" target="_blank" rel="noopener">https://rachpt.me</a> 。</p><p><a href="https://rachpt.coding.me" target="_blank" rel="noopener">https://rachpt.coding.me</a> ，已经重定向至 <a href="https://blog.rachpt.me" target="_blank" rel="noopener">https://blog.rachpt.me</a> 。</p><p>&nbsp;</p><p><span style="text-decoration: underline;"><del>以后有可能 重定向到这个域名。</del></span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;已经对 wordpress 无止境的更新无语了，慢慢迁移至 Github Pages &amp;amp; Coding Pages。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;永久地址： &lt;a href=&quot;https://rachpt.github.
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://rachpt.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Gimp 简单使用笔记</title>
@@ -107,6 +133,93 @@
   </entry>
   
   <entry>
+    <title>Windows  使用笔记-01</title>
+    <link href="http://rachpt.github.io/2018/01/27/windows-note-01/"/>
+    <id>http://rachpt.github.io/2018/01/27/windows-note-01/</id>
+    <published>2018-01-27T05:32:04.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p><span class="md-line md-end-block"><span class="">首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知道自己的系统是啥，和别人的有啥区别，囧）。</span></span></p><p><span class="md-line md-end-block"><span class="">目前而言，可以考虑安装的windows有三个 大版本：win7,win8.1,win10。win7应该很快进入与xp一样的停止支持的状态，而win8.1真心不适合桌面平台，win10将是我最先推荐的。现在几户所有的电脑都是64位的处理器了，除非老爷机。（对于win10 右键</span><span spellcheck="false"><code>此电脑</code></span>，<span spellcheck="false"><code>属性</code></span> 即可看到如下所示<span spellcheck="false"><code>信息页面</code></span>，或则在 <span spellcheck="false"><code>资源管理器</code></span> 中右键点击 <span spellcheck="false"><code>属性</code></span>）</span></p><p><span class="md-line md-end-block"><span class="md-image md-img-loaded" contenteditable="false" data-src="http://upload.rachpt.top/2018-1-27-windows-01.png"><img src="http://upload.rachpt.top/2018-1-27-windows-01.png" alt=""></span></span></p><p><span class="md-line md-end-block"><span class="">32位windows系统最大只支持3.6G左右的内存，如果你有4G或以上内存，请不要考虑32位系统。32位系统也有它自己的优点，小就是一个，32位系统可以节省系统安装空间30%-40%，32位系统当然是不支持64位应用程序的，同一个软件32位版与64版运行效率相当，能用64的我当然是推荐使用64的。</span></span></p><p><span class="md-line md-end-block">如果你是考虑兼容性，在win7 与win10之间无法决则，我几乎可以告诉你兼容性几乎不用考虑，除非你要使用老掉牙的旧软件，或者是某些特别偏的久久未更新的行业（小众）软件。win10 几乎支持能用到的所有软件。</span></p><p><span class="md-line md-end-block"><span class="">如果你还是要使用win7，那么没必要非旗舰版不可，对于普通用户而言可能专业版就很不错了，一是安装体积较旗舰版小上不少，再则你永远用不到的旗舰版的功能也没必要占用你本来就不多的硬件资源。</span></span></p><p><span class="md-line md-end-block"><span class="">win8.1 我们直接忽略，一是安装体积较win7、10都大上不少（是win10的1.5倍），开始屏真的不适合桌面用户，还有那厚厚的程序边框（用过win10的窄边后你会觉得8.1很丑）[我会告诉你有软件可以修改，但是还是没有win10一个像素窄]。</span></span></p><p><span class="md-line md-end-block"><span class=""> 至于win10，如果你是变形本，比如surface之类有触控屏的笔记本，并且想体验完整的windows服务，那么pro专业版或者enterprise企业版将是你最好的选择，教育版和企业版类似。对于普通user而言pro专业版就够了。家庭版没有本地策略组，很多必要的功能没有，所有强烈建议不要使用家庭版系统（谁用谁知道：开机，尼玛，正在安装系统更新，重启，靠，更新失败，正在回滚，重启；关键是这是一个循环，以后还会这样）。</span></span></p><p><span class="md-line md-end-block"><span class="">对于普通笔记本与台式机，如果你不用巨硬的uwp应用，并且不是edge浏览器的忠实粉丝（谁会用这玩意儿啊，体验太差！）。那么 </span><span class=""><strong>windows 10 LTSB 企业长期服务支持版</strong></span> 将是最好的选择。推荐理由如下：</span></p><ul><li><span class="md-line md-end-block"><span class="">原生无应用商店哪些没卵用的东西；</span></span></li><li><span class="md-line md-end-block"><span class="">无edge浏览器，有IE，不用考虑兼容性，有些网银必须这货才能用；</span></span></li><li><p><span class="md-line md-end-block"><span class="">更新少，稳定性高（当然可以设置禁用自动更新）。</span></span><br><span class="md-line md-end-block"><span class="">LTSB目前有两个分支：ltsb 2015 和 ltsb 2016（这两个是独立维护不一样的）。推荐笔记本使用2016，台式机使用2015。理由：</span></span></p></li><li><p><span class="md-line md-end-block">2016 系统自带wifi热点（<span class=""><em>你非要用猎豹wifi，我无话可说</em></span>）与护眼模式（<span class=""><em>第三方软件也可以实现</em></span><span class="">），这两点笔记本比较需要。同时开始菜单较2015版有一点改变，16的更方便些。</span></span></p></li><li><span class="md-line md-end-block">2015 的软件兼容性可能更好，比如好用的<span spellcheck="false"><code>KClock</code></span>只能在2015上用，2016及其以上不行。[<span class="" spellcheck="false"><code>win + x</code></span><span class="">]和2016有区别，个人觉得2015的更方便。</span></span><br><span class="md-line md-end-block"><span class="">至于你一直关心的激活，除win7外，都只能 KMS激活180天（激活软件都贴心的做了定时重新激活，所以一次激活后你就不用管了，至于软件文末给</span><span spellcheck="false"><code>链接</code></span>），系统镜像下载，推荐<span spellcheck="false"><code>百度 i tell you</code></span> 或则记住这个 <span spellcheck="false"><a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">http://msdn.itellyou.cn/</a></span> 。</span></li></ul><p><span class="md-line md-end-block"><span class="md-image md-img-loaded" contenteditable="false" data-src="http://upload.rachpt.top/2018-1-27-windows-02.png"><img src="http://upload.rachpt.top/2018-1-27-windows-02.png" alt=""></span></span></p><p><span class="md-line md-end-block">点击详情，复制 <span spellcheck="false"><code>ed2k</code></span> 链接至百度云离线下载，然后使用工具从百度网盘下载即可得到系统镜像文件。</span></p><p><span class="md-line md-end-block">推荐使用U盘全新安装。win10 的系统可以直接挂载镜像复制里面的全部内容至一个格式化的U盘即可完成启动盘的制作。无需向win7一样必须使用工具刻录制作启动盘。如果你不放心，可以使用这个免费的工具 <span spellcheck="false"><code>Rufus</code></span> <span spellcheck="false"><a href="http://rufus.akeo.ie/" target="_blank" rel="noopener">http://rufus.akeo.ie/</a></span> 。U盘格式一般使用fat32即可，其他的NTFS、exfat也行。</span></p><p><span class="md-line md-end-block"><span class=""><strong>一本正经地系统安装开始</strong></span>。</span></p><p><span class="md-line md-end-block">开始前备份好需要的文件。如果你有固态硬盘，推荐固态硬盘不要分区（自己百度分区脑补），机械的建议不要分太多，两个不能再多了。</span></p><p><span class="md-line md-end-block">可能还有UEFI引导是大多数新手的困惑，UEFI引导需要配合GPT分区（如果有固态，这个是必须的！才能发挥固态的优势）。能使用UEFI则尽量使用。如果安装中发现 以前分区是MBR格式，如果无重要文件可以全盘格式化变成GPT格式分区，如果有重要分区不能格式化，找个PE系统，进去点点点几下就可以轻松转换格式，具体自己百度。</span></p><p><span class="md-line md-end-block">鉴于windows的运行机制，个人建议固体硬盘留给C盘做系统盘，机械硬盘一个分区用作数据存储。如果只有一个机械硬盘，要安装的软件少，则100G给C盘，其他做数据存储。让C盘的空间使用率在60%或许是比较合适的。</span></p><p><span class="md-line md-end-block">具体而言，不同的主板进入BIOS的方法可能不一样，大部分是使用<span spellcheck="false"><code>F2</code></span> 进入BIOS设置。装系统，需要关闭有个 security 啥的，允许 使用<span spellcheck="false"><code>USB boot</code></span> 引导 使用 UEFI，可以设置U盘的引导顺序为第一个，<span spellcheck="false"><code>F10</code></span>保存重启，如果不知道如何进入<span spellcheck="false"><code>boot manager</code></span> 的话。如果一切顺利，重启选择重USB引导启动进入安装界面，一路点点点，设置分区大小，会自动重启几下，随后系统就算是全新安装好了。如果你是个懒人，可以考虑双击<span spellcheck="false"><code>setup</code></span> 进行升级安装，但只能升级对应版本系统，并且升级后极有可能有一些莫名其妙的小bug，不推荐。</span></p><p><span class="md-line md-end-block">win10 全系列+office 激活工具（<span class=""><em>最好的激活工具</em></span>）：</span></p><p><span class="md-line md-end-block"><span class="">蓝奏云盘: </span><span class="" spellcheck="false"><a href="https://pan.lanzou.com/i0fg1tg" target="_blank" rel="noopener">https://pan.lanzou.com/i0fg1tg</a></span> </span></p><p><span class="md-line md-end-block">度盘链接: <span class="" spellcheck="false"><a href="https://pan.baidu.com/s/1mjbPqm0#rach" target="_blank" rel="noopener">https://pan.baidu.com/s/1mjbPqm0</a></span> 密码: rach</span></p><p><span class="md-line md-end-block"><span class="">至于后续，会有其他windows系列教程上线，敬请期待。</span></span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;span class=&quot;md-line md-end-block&quot;&gt;&lt;span class=&quot;&quot;&gt;首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图
+      
+    
+    </summary>
+    
+      <category term="实用" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="windows" scheme="http://rachpt.github.io/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下的PDF阅读软件zathura</title>
+    <link href="http://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/"/>
+    <id>http://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</id>
+    <published>2018-01-22T09:58:31.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><br><code>~/.config/zathura/zathurarc</code> 用户配置文件与路径；<br><br><code>/etc/zathurarc</code> 全局配置文件与路径；<br><br>使用 <code>gedit ~/.config/zathura/zathurarc</code> 添加下面的配置命令，#号以及后面为注释。<br><br>    set adjust-open “width” #以宽度自适应打开<br>    set font “Noto Sans CJK SC Regular 10” #字体与字号<br>    set guioptions “” #GUI相关，留空可隐藏底部statusbar<br>    set window-title-basename true #只显示文件名，否则显示完整路径<br>    set incremental-search true #增强搜索，实时搜索<br>    set show-v-scrollbar true #显示右侧进度条<br>    set selection-clipboard clipboard #粘贴版<br>    set window-height 760 #默认高度，像素<br>    set window-width 1300 #默认宽度<br><br>    # 更多请参考：<a href="https://github.com/lervag/dotfiles/blob/master/config/zathura/zathurarc" target="_blank" rel="noopener">https://github.com/lervag/dotfiles/blob/master/config/zathura/zathurarc</a><br>    <code>&lt;/pre&gt;    ## linux mint 18.3 的路径    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code># 设置默认打开方式，（如果右键无效可使用下面方法）<br>    /etc/gnome/defaults.list <span class="hljs-comment" style="color: #999988; font-style: italic;">#保存全局打开方式路径</span><br>    /usr/share/applications <span class="hljs-comment" style="color: #999988; font-style: italic;">#保存 ，这两个是一样的</span><br><br>    ～/.config/mimeapps.list <span class="hljs-comment" style="color: #999988; font-style: italic;">#用户</span><br><br>    <span class="hljs-comment" style="color: #999988; font-style: italic;"># 添加</span><br>    application/pdf=xpdf.desktop<br>    <code>&lt;/pre&gt;    ## 快捷键    &gt; f 高亮链接，按 相应数字 打开链接；&gt; &gt;     q 退出；&gt; &gt;     # ^ 是 ctrl 键&gt; &gt;     ^f Scroll page down&gt; &gt;     ^b Scroll page up&gt; &gt;     ^d Scroll half a page down&gt; &gt;     ^u Scroll half a page up&gt; &gt;     r Rotate the page&gt; &gt;     R Reload the document&gt; &gt;     ^n Toggle statusbar visibility&gt; &gt;     ^m Toggle inputbar visibility&gt; &gt;     ^r inverted color /反色&gt; &gt;     space 半页&gt; &gt;     数字 + G 跳转页码&gt; &gt;     gg 最前&gt; &gt;     GG 最后    ## 命令    &gt; :bmark xxx 创建书签xxx （长书签）&gt; &gt;     :blist xxx 打开bookmark&gt; &gt;     :bdelete xxx 删除书签&gt; &gt;     :q 退出&gt; &gt;</code>/word<code>搜索word，使用</code>n / N<code>跳到下一个(上一个)结果，&gt; &gt;     / ？ 搜索 向前（向后）&gt; &gt;     :info 显示文档信息    短命令书签 使用</code>a letter or number<code>，先按 m 键，然后按短书签名，创建；    跳转先前的短书签，先按</code>‘<code>键，然后先前的字母或数字；    ## 关于复制问题    &gt; I discovered that zathura is using the x11 primary selection as default instead of the actual clipboard. This can be changed by creating a</code>~/.config/zathura/zathurarc<code>file with the following content:&gt; &gt;     &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>set selection-clipboard clipboard<br>&gt;<br>&gt;<br>&gt; 具体见 <a href="https://github.com/zegervdv/homebrew-zathura/issues/5" target="_blank" rel="noopener">https://github.com/zegervdv/homebrew-zathura/issues/5</a><br><br>部分参考 <a href="http://80x86.io/post/pdf-viewer-for-linuxer" target="_blank" rel="noopener">http://80x86.io/post/pdf-viewer-for-linuxer</a><br><br></div><br><img src="http://rachpt.top/wp-content/uploads/2018/01/zathura1.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura4.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura3.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura2.png" alt=""><br><br>&nbsp;<br><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+YH4vLmNvbmZpZy96YXRodXJhL3phdGh1cmFyY2Ag55So5oi36YWN572u5paH5Lu25LiO6Lev 5b6E77ybPC9wPjxwPmAvZXRjL3phdGh1cmFyY2Ag5YWo5bGA6YWN572u5paH5Lu25LiO6Lev5b6E 77ybPC9wPjxwPuS9v+eUqCBgZ2VkaXQgfi8uY29uZmlnL3phdGh1cmEvemF0aHVyYXJjYCDmt7vl iqDkuIvpnaLnmoTphY3nva7lkb3ku6TvvIwj5Y+35Lul5Y+K5ZCO6Z2i5Li65rOo6YeK44CCPC9w PjxwPmBgYDxicj5zZXQgYWRqdXN0LW9wZW4gIndpZHRoIiAj5Lul5a695bqm6Ieq6YCC5bqU5omT 5byAPGJyPnNldCBmb250ICJOb3RvIFNhbnMgQ0pLIFNDIFJlZ3VsYXIgMTAiICPlrZfkvZPkuI7l rZflj7c8YnI+c2V0IGd1aW9wdGlvbnMgIiIgI0dVSeebuOWFs++8jOeVmeepuuWPr+makOiXj+W6 lemDqHN0YXR1c2Jhcjxicj5zZXQgd2luZG93LXRpdGxlLWJhc2VuYW1lIHRydWUgI+WPquaYvuek uuaWh+S7tuWQje+8jOWQpuWImeaYvuekuuWujOaVtOi3r+W+hDxicj5zZXQgaW5jcmVtZW50YWwt c2VhcmNoIHRydWUgI+WinuW8uuaQnOe0ou+8jOWunuaXtuaQnOe0ojxicj5zZXQgc2hvdy12LXNj cm9sbGJhciB0cnVlICPmmL7npLrlj7Pkvqfov5vluqbmnaE8YnI+c2V0IHNlbGVjdGlvbi1jbGlw Ym9hcmQgY2xpcGJvYXJkICPnspjotLTniYg8YnI+c2V0IHdpbmRvdy1oZWlnaHQgNzYwICPpu5jo rqTpq5jluqbvvIzlg4/ntKA8YnI+c2V0IHdpbmRvdy13aWR0aCAxMzAwICPpu5jorqTlrr3luqY8 L3A+PHA+IyDmm7TlpJror7flj4LogIPvvJpodHRwczovL2dpdGh1Yi5jb20vbGVydmFnL2RvdGZp bGVzL2Jsb2IvbWFzdGVyL2NvbmZpZy96YXRodXJhL3phdGh1cmFyYzxicj5gYGA8L3A+PHA+IyMg bWludCAxOC4zIOeahOi3r+W+hDwvcD48cD5gYGBzaDxicj4vZXRjL2dub21lL2RlZmF1bHRzLmxp c3QgI+S/neWtmOWFqOWxgOaJk+W8gOaWueW8j+i3r+W+hDxicj4vdXNyL3NoYXJlL2FwcGxpY2F0 aW9ucyAj5L+d5a2YIO+8jOi/meS4pOS4quaYr+S4gOagt+eahDwvcD48cD7vvZ4vLmNvbmZpZy9t aW1lYXBwcy5saXN0ICPnlKjmiLc8L3A+PHA+IyDmt7vliqA8YnI+YXBwbGljYXRpb24vcGRmPXhw ZGYuZGVza3RvcCA8YnI+YGBgPC9wPjxwPiMjIOW/q+aNt+mUrjwvcD48cD4mZ3Q7IGYg6auY5Lqu 6ZO+5o6l77yM5oyJIOebuOW6lOaVsOWtlyDmiZPlvIDpk77mjqXvvJs8YnI+Jmd0OyBxIOmAgOWH uu+8mzxicj4mZ3Q7IFwjIF4g5pivIGN0cmwg6ZSuPGJyPiZndDsgXmYgU2Nyb2xsIHBhZ2UgZG93 bjxicj4mZ3Q7IF5iIFNjcm9sbCBwYWdlIHVwPGJyPiZndDsgXmQgU2Nyb2xsIGhhbGYgYSBwYWdl IGRvd248YnI+Jmd0OyBedSBTY3JvbGwgaGFsZiBhIHBhZ2UgdXA8YnI+Jmd0OyByIFJvdGF0ZSB0 aGUgcGFnZTxicj4mZ3Q7IFIgUmVsb2FkIHRoZSBkb2N1bWVudDxicj4mZ3Q7IF5uIFRvZ2dsZSBz dGF0dXNiYXIgdmlzaWJpbGl0eTxicj4mZ3Q7IF5tIFRvZ2dsZSBpbnB1dGJhciB2aXNpYmlsaXR5 PGJyPiZndDsgXnIgaW52ZXJ0ZWQgY29sb3IgL+WPjeiJsjxicj4mZ3Q7IHNwYWNlIOWNiumhtTxi cj4mZ3Q7IOaVsOWtlyArIEcg6Lez6L2s6aG156CBPGJyPiZndDsgZ2cg5pyA5YmNPGJyPiZndDsg R0cg5pyA5ZCOPGJyPiZndDs8L3A+PHA+IyMg5ZG95LukPC9wPjxwPiZndDsgOmJtYXJrIHh4eCDl iJvlu7rkuabnrb54eHgg77yI6ZW/5Lmm562+77yJPGJyPiZndDsgOmJsaXN0IHh4eCDmiZPlvIBi b29rbWFyazxicj4mZ3Q7IDpiZGVsZXRlIHh4eCDliKDpmaTkuabnrb48YnI+Jmd0OyA6cSDpgIDl h7o8YnI+Jmd0OyBgL3dvcmRgIOaQnOe0ondvcmTvvIzkvb/nlKggYG4gLyBOYCDot7PliLDkuIvk uIDkuKoo5LiK5LiA5LiqKee7k+aenO+8jDxicj4mZ3Q7IC8g77yfIOaQnOe0oiDlkJHliY3vvIjl kJHlkI7vvIk8YnI+Jmd0OyA6aW5mbyDmmL7npLrmlofmoaPkv6Hmga88L3A+PHA+55+t5ZG95Luk 5Lmm562+IOS9v+eUqCBgYSBsZXR0ZXIgb3IgbnVtYmVyYCDvvIzlhYjmjIkgbSDplK7vvIznhLbl kI7mjInnn63kuabnrb7lkI3vvIzliJvlu7rvvJs8L3A+PHA+6Lez6L2s5YWI5YmN55qE55+t5Lmm 562+77yM5YWI5oyJIGAnYCDplK7vvIznhLblkI7lhYjliY3nmoTlrZfmr43miJbmlbDlrZfvvJs8 L3A+PHA+IyPlhbPkuo7lpI3liLbpl67popg8L3A+PHA+Jmd0OyBJIGRpc2NvdmVyZWQgdGhhdCB6 YXRodXJhIGlzIHVzaW5nIHRoZSB4MTEgcHJpbWFyeSBzZWxlY3Rpb24gYXMgZGVmYXVsdCBpbnN0 ZWFkIG9mIHRoZSBhY3R1YWwgY2xpcGJvYXJkLiBUaGlzIGNhbiBiZSBjaGFuZ2VkIGJ5IGNyZWF0 aW5nIGEgYH4vLmNvbmZpZy96YXRodXJhL3phdGh1cmFyY2AgZmlsZSB3aXRoIHRoZSBmb2xsb3dp bmcgY29udGVudDo8YnI+Jmd0Ozxicj4mZ3Q7IGBgYDxicj4mZ3Q7IHNldCBzZWxlY3Rpb24tY2xp cGJvYXJkIGNsaXBib2FyZDxicj4mZ3Q7IGBgYDxicj4mZ3Q7IGh0dHBzOi8vZ2l0aHViLmNvbS96 ZWdlcnZkdi9ob21lYnJldy16YXRodXJhL2lzc3Vlcy81PC9wPjxwPmh0dHA6Ly84MHg4Ni5pby9w b3N0L3BkZi12aWV3ZXItZm9yLWxpbnV4ZXI8L3A+">​</div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://rachpt.top/wp-admin/post-new.php&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;~/.config/zathura/z
+      
+    
+    </summary>
+    
+      <category term="实用" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
+    
+      <category term="PDF" scheme="http://rachpt.github.io/tags/PDF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 更新 xz 至 5.2+</title>
+    <link href="http://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/"/>
+    <id>http://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/</id>
+    <published>2018-01-13T06:32:56.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。</p><p>具体见知乎 <a href="https://zhuanlan.zhihu.com/p/20926080" target="_blank" rel="noopener">谁才是压缩的王者？7z 还是 xz</a> 。</p><p>了解到 xz 5.2 以上才支持多线程，而ubuntu 默认的xz不支持多线程，于是升级xz。</p><p>下面是记录升级方法：</p><p>到 <a href="https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764" target="_blank" rel="noopener">https://launchpad.net/ubuntu/+source/xz-utils/5.2.2-1.3/+build/13082764</a> 下载 [code]liblzma5_5.2.2-1.3_amd64.deb (88.7 KiB) [/code] 安装即可</p><p>使用[code] xz -V [/code]  查看 xz版本。</p><p>&nbsp;</p><p><img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-13-14-14-47屏幕截图.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-13-14-14-52屏幕截图.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-13-14-14-57屏幕截图.png" alt=""></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。&lt;/p&gt;
+&lt;p&gt;具体见知乎 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/20926080&quot; target=&quot;_blank&quot; rel=&quot;noo
+      
+    
+    </summary>
+    
+      <category term="实用" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>建一个个人网站需要花费多少</title>
     <link href="http://rachpt.github.io/2018/01/12/%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91/"/>
     <id>http://rachpt.github.io/2018/01/12/建个人网址需要花多少/</id>
@@ -127,6 +240,36 @@
   </entry>
   
   <entry>
+    <title>Linux mint 安装 Materials Studio 8.0</title>
+    <link href="http://rachpt.github.io/2018/01/11/install-materials-studio-on-ubuntu/"/>
+    <id>http://rachpt.github.io/2018/01/11/install-materials-studio-on-ubuntu/</id>
+    <published>2018-01-11T14:35:03.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 <a href="https://www.linuxmint.com/download.php" target="_blank" rel="noopener">mint cinnamon</a> 版）</p><hr><h1 id="Brief-introduce-of-MS’s-setup-on-ubuntu-linux"><a href="#Brief-introduce-of-MS’s-setup-on-ubuntu-linux" class="headerlink" title="Brief introduce of MS’s setup on ubuntu linux."></a>Brief introduce of MS’s setup on ubuntu linux.</h1><h1 id="author-rachpt"><a href="#author-rachpt" class="headerlink" title="author rachpt"></a>author rachpt</h1><p>&nbsp;</p><p>setp1. 安装 rpm2cpio</p><p>step2. 使用 bash csh</p><p>step3. sudo ./install /opt/ms80</p><p>step4. cd /opt/ms80/LicensePack/etc</p><p>step5. sudo ./lp_config</p><p>step6. sudo ./lp_echovars</p><p>step7. sudo ./install /opt/ms80 y</p><h1 id="OK-It-work’s"><a href="#OK-It-work’s" class="headerlink" title="OK! It work’s!"></a>OK! It work’s!</h1><p>&nbsp;</p><p><img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-11-15-47-37屏幕截图.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-11-15-47-57屏幕截图.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-11-15-48-12屏幕截图.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/2018-01-11-15-48-25屏幕截图.png" alt=""></p><hr><p><strong>更新   2018.01.12</strong></p><p>安装到自己的家目录（/home/user）重启后才有用，无需 sudo。</p><p><span style="color: #ff0000;">使用 bash 很重要</span>，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ 具体参考这两篇博文。</p><p><a href="http://blog.csdn.net/hemmingway/article/details/49301873" target="_blank" rel="noopener">http://blog.csdn.net/hemmingway/article/details/49301873</a></p><p><a href="http://blog.csdn.net/gatieme/article/details/52136411" target="_blank" rel="noopener">http://blog.csdn.net/gatieme/article/details/52136411</a></p><p>&nbsp;</p><p>自己看 install.log , 设置开机启动 有个  gateway 什么的 start.</p><p>浏览器   <a href="http://127.0.0.1:18888" target="_blank" rel="noopener">http://127.0.0.1:18888</a>   查看是否成功。</p><p>&nbsp;</p><p>&nbsp;</p><div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 10px; top: 418px; opacity: 0.85;"><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" title="朗读"></div><br></div><br><div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 656px; top: 35px; opacity: 0.8;"><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" title="朗读"></div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 &lt;a href=&quot;https://www.linuxmint.com/download.php&quot; target=&quot;_blank&quot; 
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
+    
+      <category term="Materials Studio" scheme="http://rachpt.github.io/tags/Materials-Studio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>材料物理答案</title>
     <link href="http://rachpt.github.io/2018/01/03/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E7%AD%94%E6%A1%88/"/>
     <id>http://rachpt.github.io/2018/01/03/材料物理答案/</id>
@@ -143,6 +286,38 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 免安装程序配置</title>
+    <link href="http://rachpt.github.io/2017/12/31/green-program-setting-linux/"/>
+    <id>http://rachpt.github.io/2017/12/31/green-program-setting-linux/</id>
+    <published>2017-12-31T15:26:05.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><br>适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。<br><br><!--more--><br><br>## Linux 创建程序图标<br><br>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。<br><br>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：<br><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> mv <span class="hljs-operator">-f</span> pycharm-edu /opt/ <span class="hljs-comment" style="color: #999988; font-style: italic;"># 使用命令移动文件</span><br><br>    <span class="hljs-comment" style="color: #999988; font-style: italic;"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> touch /usr/share/applications/pycharm.desktop <span class="hljs-comment" style="color: #999988; font-style: italic;">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> gedit /usr/share/applications/pycharm.desktop <span class="hljs-comment" style="color: #999988; font-style: italic;"># 在其中写如如下内容</span><br>    <code>&lt;/pre&gt;    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>[Desktop Entry]<br>    Version=1.0<br>    Name=pycharm #显示的名字<br>    Exec=/opt/pycharm-edu/bin/pycharm.sh # 软件路径<br>    Terminal=false<br>    Icon=/opt/pycharm-edu/bin/pycharm.png # 软件图标<br>    Type=Application<br>    Categories=Development # 软件分类<br>    <code>&lt;/pre&gt;    ![](http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-20-27屏幕截图.png) ![](http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-21-15屏幕截图.png)    保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。    ## 加入环境变量    方法一：用户主目录下的</code>.profile<code>或</code>.bashrc<code>文件（推荐）    登录到你的用户（非root），在终端输入：    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code><span class="hljs-built_in" style="color: #0086b3;">sudo</span> gedit ~/.profile <span class="hljs-comment" style="color: #999988; font-style: italic;">#(or .bashrc)</span><br>    <code>&lt;/pre&gt;    可以在此文件末尾加入PATH的设置如下：    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code><span class="hljs-keyword" style="color: #333333; font-weight: bold;">export</span> PATH=”<span class="hljs-variable" style="color: #008080;">$PATH</span>:your path1:your path2 …”<br>    <code>&lt;/pre&gt;    保存文件，注销再登录，变量生效。    该方式添加的变量只对当前用户有效。    方法二：在系统目录，进行类似操作。    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>/etc/profile<br><br>    /etc /environment<br><br>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。<br><br></div><br><img src="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png" alt=""><br><br>&nbsp;<br><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+IyBMaW51eCDlhY3lronoo4XnqIvluo/phY3nva48L3A+PHA+6YCC55So5LqO5Z+65LqOZGVi aW4g55qEIHVidW50dSDvvIzku6Xlj4ogbGludXggbWludO+8iOW8uueDiOaOqOiNkO+8ieOAgjwv cD48cD4jIyBMaW51eCDliJvlu7rnqIvluo/lm77moIc8L3A+PHA+6L+Z57G7bGludXjnmoTova/k u7bljIXmmK8gYGRlYmAg5ZCO57yA77yM6L+Z5piv5LiA56eN57G75Ly8IHdpbmRvd3Mg5LiL55qE IGV4ZSDlronoo4XljIXmlofku7bvvIzpmaTmraTkuYvlpJbvvIzov5jmnInkuIDnp43kuIDmlofk u7blpLnlvaLlvI/lrZjlnKjnmoTova/ku7bljIXvvIzlhbbkuK3nmoQgYHh4eC5zaGAg5bCx5piv 6L2v5Lu255qE5Y+v5omn6KGM5paH5Lu277yM57G75Ly85LiOIHdpbmRvd3Mg6L2v5Lu25a6J6KOF 5a6M5oiQ5ZCO5YW255uu5b2V5Lit55qEIGV4ZSDmlofku7bvvIjova/ku7blv6vmjbfmlrnlvI/l sLHmmK/pk77mjqXliLDov5nnsbvmlofku7bnmoTvvInvvIzov5nlsLHlpoLlkIwgd2luZG93cyDl ubPlj7DnmoTnu7/oibLlhY3lronoo4Xova/ku7bjgII8L3A+PHA+bGludXgg55So5oi36L2v5Lu2 5LiA6Iis5pS+5YiwIGAvb3B0L2Ag55uu5b2V77yM5LiL6Z2i5LulYHB5Y2hhcm0tZWR1YCDkuLrk vovvvJo8L3A+PHA+YGBgc2g8YnI+c3VkbyBtdiAtZiBweWNoYXJtLWVkdSAvb3B0LyAjIOS9v+eU qOWRveS7pOenu+WKqOaWh+S7tjwvcD48cD4jIOeEtuWQjuWIsCAvdXNyL3NoYXJlL2FwcGxpY2F0 aW9ucy8g55uu5b2V5LiL5Yib5bu6IC5kZXNrdG9wIOaWh+S7tjxicj5zdWRvIHRvdWNoIC91c3Iv c2hhcmUvYXBwbGljYXRpb25zL3B5Y2hhcm0uZGVza3RvcCAj5Yib5bu656m65paH5Lu277yM5b2T 54S25Lmf5Y+v5Lul5LiN5Yib5bu677yM5LiL6ams5LiA5q2l5L+d5a2Y5pe25Y+v5Lul5Yib5bu6 44CCPGJyPnN1ZG8gZ2VkaXQgL3Vzci9zaGFyZS9hcHBsaWNhdGlvbnMvcHljaGFybS5kZXNrdG9w ICMg5Zyo5YW25Lit5YaZ5aaC5aaC5LiL5YaF5a65PGJyPmBgYDwvcD48cD5gYGA8YnI+W0Rlc2t0 b3AgRW50cnldPGJyPlZlcnNpb249MS4wPGJyPk5hbWU9cHljaGFybSAj5pi+56S655qE5ZCN5a2X PGJyPkV4ZWM9L29wdC9weWNoYXJtLWVkdS9iaW4vcHljaGFybS5zaCAjIOi9r+S7tui3r+W+hDxi cj5UZXJtaW5hbD1mYWxzZTxicj5JY29uPS9vcHQvcHljaGFybS1lZHUvYmluL3B5Y2hhcm0ucG5n ICMg6L2v5Lu25Zu+5qCHPGJyPlR5cGU9QXBwbGljYXRpb248YnI+Q2F0ZWdvcmllcz1EZXZlbG9w bWVudCAjIOi9r+S7tuWIhuexuzxicj5gYGA8L3A+PHA+5L+d5a2Y5Y2z5Y+v77yM5aaC5p6c6ZyA 6KaB5Yqg5YWl546v5aKD5Y+Y6YeP77yI55u05o6l5ZyodGVybWluYWzkuK3ovpPlhaXova/ku7bl kI3lrZfvvIzljbPlj6/miZPlvIDova/ku7bvvInvvIzpnIDopoHov5vooYzlpoLkuIvmk43kvZzj gII8L3A+PHA+IyMg5Yqg5YWl546v5aKD5Y+Y6YePPC9wPjxwPuaWueazleS4gO+8mueUqOaIt+S4 u+ebruW9leS4i+eahGAucHJvZmlsZWDmiJZgLmJhc2hyY2Dmlofku7bvvIjmjqjojZDvvIk8L3A+ PHA+55m75b2V5Yiw5L2g55qE55So5oi377yI6Z2ecm9vdO+8ie+8jOWcqOe7iOerr+i+k+WFpe+8 mjwvcD48cD5gYGBzaDxicj5zdWRvIGdlZGl0IH4vLnByb2ZpbGUgIyhvciAuYmFzaHJjKTxicj5g YGA8L3A+PHA+5Y+v5Lul5Zyo5q2k5paH5Lu25pyr5bC+5Yqg5YWlUEFUSOeahOiuvue9ruWmguS4 i++8mjwvcD48cD5gYGBzaDxicj5leHBvcnQgUEFUSD3igJ0kUEFUSDp5b3VyIHBhdGgxOnlvdXIg cGF0aDIgLi4u4oCdPGJyPmBgYDwvcD48cD7kv53lrZjmlofku7bvvIzms6jplIDlho3nmbvlvZXv vIzlj5jph4/nlJ/mlYjjgII8YnI+6K+l5pa55byP5re75Yqg55qE5Y+Y6YeP5Y+q5a+55b2T5YmN 55So5oi35pyJ5pWI44CCPC9wPjxwPuaWueazleS6jO+8muWcqOezu+e7n+ebruW9le+8jOi/m+ih jOexu+S8vOaTjeS9nOOAgjwvcD48cD5gYGA8YnI+L2V0Yy9wcm9maWxlPC9wPjxwPi9ldGMgL2Vu dmlyb25tZW50PGJyPmBgYDwvcD48cD7lnKjnmbvlvZXml7Ys5pON5L2c57O757uf5a6a5Yi255So 5oi3546v5aKD5pe25L2/55So55qE56ys5LiA5Liq5paH5Lu2ICzmraTmlofku7bkuLrns7vnu5/n moTmr4/kuKrnlKjmiLforr7nva7njq/looPkv6Hmga8s5b2T55So5oi356ys5LiA5qyh55m75b2V 5pe2LOivpeaWh+S7tuiiq+aJp+ihjOOAguesrOS6jOS4quaWh+S7tiwg57O757uf5Zyo6K+75Y+W 5L2g6Ieq5bex55qEcHJvZmlsZeWJjSzorr7nva7njq/looPmlofku7bnmoTnjq/looPlj5jph4/j gII8L3A+">​</div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://rachpt.top/wp-admin/post-new.php&quot;&gt;&lt;br&gt;&lt;br&gt;适用于基于debian 的 ubuntu ，以及 
+      
+    
+    </summary>
+    
+      <category term="实用" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
+    
+      <category term="mint" scheme="http://rachpt.github.io/tags/mint/"/>
     
   </entry>
   
@@ -244,6 +419,68 @@
   </entry>
   
   <entry>
+    <title>ubuntu 学习笔记</title>
+    <link href="http://rachpt.github.io/2017/12/15/ubuntu/"/>
+    <id>http://rachpt.github.io/2017/12/15/ubuntu/</id>
+    <published>2017-12-15T14:27:36.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>&nbsp;</p><p>## </p><h2 id="查看系统版本命令"><a href="#查看系统版本命令" class="headerlink" title="查看系统版本命令"></a>查看系统版本命令</h2><ul><li><code>getconf LONG_BIT</code> 查看系统位数；</li><li><code>uname -a</code> 更详细的方法；</li><li><code>lsb_release -a</code> 系统详细版本情况。</li></ul><h2 id="python-配置"><a href="#python-配置" class="headerlink" title="python 配置"></a>python 配置</h2><p>&nbsp;</p><ul><li><code>python3 --version</code> 查看安装python版本，如果是3的；</li><li><code>sudo apt-get install python3-pip</code> 安装 pip ;</li><li><code>pip -V</code> 检查pip；</li><li><p>机遇用户的 默认版本切换</p><p>ls /usr/bin/python* <span class="hljs-comment" style="color: #999988; font-style: italic;">#显示所有 python</span><br>vim ~/.bashrc <span class="hljs-comment" style="color: #999988; font-style: italic;">#编辑配置文件</span><br><span class="hljs-comment" style="color: #999988; font-style: italic;">#添加如下行 ，alias，别名。路径以上面显示的为准。</span><br>alias python=<span class="hljs-string" style="color: #dd1144;">‘/usr/bin/python3.5’</span><br>`<br>&nbsp;</p><h2 id="python-计算环境"><a href="#python-计算环境" class="headerlink" title="python 计算环境"></a>python 计算环境</h2><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h2 id="apt-get-使用ipv4"><a href="#apt-get-使用ipv4" class="headerlink" title="apt-get 使用ipv4"></a>apt-get 使用ipv4</h2><p>有时，您需要在APT包中禁用IPv6，只有在需要时，其他程序可以继续使用IPv6。 要在APT中禁用IPv6，请运行以下命令为APT创建一个配置文件。</p><pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">`<span class="hljs-built_in" style="color: #0086b3;">sudo</span> nano /etc/apt/apt.conf.d/<span class="hljs-number" style="color: #008080;">99</span>force-ipv4`</pre>将以下行复制并粘贴到文件中。<pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">`Acquire::ForceIPv4 <span class="hljs-string" style="color: #dd1144;">"true"</span>;`</pre>&nbsp;* * *linux 常用编辑器vi 属于基本编辑器，除此之外，有些发行版还会预装nano，vim等编辑器。**vi命令**ESC 切换到命令模式a A i I 这是个键在命令模式下却换到编辑模式区别在于插入位置，常用 i 。常用命令x 删除一个字符，dd 删除光标所在行，ZZ 保持并退出，ZQ 不保持退出。低行命令使用 : 键进入，:wq 保持并退出，:!q 退出不保存，:set nu 显示行号，:set 语法高亮注意vi 下编辑模式不能使用delete backspace 键，               而vim 可以使用上面两键。** nano命令**帮助中的 `^` 表示`ctrl` 键（也可以连续按两次`esc` 键代替）， `M` 表示 `alt` 键。显示行号： 打开 `/etc/ nanorc` 将 `# set constantshow` 前面的注释`#`号去掉即可。翻页​ `Ctrl+Y`到上一页​ `Ctrl+V`到下一页保存使用`Ctrl+O`来保存所做的修改退出按`Ctrl+X` or `q`              来自: [http://man.linuxde.net/nano](http://man.linuxde.net/nano)## 小技巧长按`Alt` 键拖动看不到head bar的窗口。`cd ~` 返回home目录，注意root用户的目录与普通用户目录的区别。`sudo` 只能暂时切提权，5分钟。使用 `sudo -i` 可以切换到root账户。`pwd` 显示当前目录。clear 清屏。`sudo apt-cache search apache | less` 用于搜索与 apache 相关的 包名（package name）。less 显示文件内容.使用`sudo apt-get autoremove -purge xxxxx`（xxxx为要卸载的软件名）命令卸载软件比较好。**<span style="font-size: 12pt;">修改软件源 `sudo gedit /etc/apt/sources.list` ，`sudo apt-get update` 更显后使用此更新。</span>****PASH环境变量的设置**方法一：用户主目录下的`.profile`或`.bashrc`文件（推荐）登录到你的用户（非root），在终端输入：<pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">` <span class="hljs-built_in" style="color: #0086b3;">sudo</span> gedit ~/.profile <span class="hljs-comment" style="color: #999988; font-style: italic;">#(or .bashrc)</span>`</pre><p>可以在此文件末尾加入PATH的设置如下：</p><pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">` <span class="hljs-keyword" style="color: #333333; font-weight: bold;">export</span> PATH=”<span class="hljs-variable" style="color: #008080;">$PATH</span>:your path1:your path2 ...”`</pre><p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>方法二：在系统目录，进行类似操作。</p><pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">` /etc/profile/etc /environment`</pre><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p><p>&nbsp;</p><p><strong>GIMP</strong> 使用中文界面：(The GNU Image Manipulation Program)</p><p><code>用 LANGUAGE=zh_CN gimp 启动，或者LANG=zh_CN gimp</code> ，然后在选择中文（不行就是阿里的源，<code>sudo apt-get gimp</code>重装一下）。<br>gimp裁剪图片，使用快捷键 <code>shift + c</code>。<br>单窗口模式，在顶部 窗口 菜单下 启用单窗口模式。</p><p><strong>GIMP</strong> 使用教程</p></li></ul><ol><li>拖到最左边的<code>工具列上</code>，打开一张新的图片；</li><li><code>ctrl + shift a</code></li><li><code>矩形选择</code> 和 <code>椭圆选择</code>，使用ctrl减选，shift加选；</li><li><code>自由选择</code> 工具将ps的 套索工具 和 多边形套索 工具结合，左键直接画是套索，而单击是多边形套索；</li><li><p><code>模糊选择</code> 工具和 <code>按颜色选择</code> 工具则是把ps 魔棒 工具给分拆；<br>&nbsp;</p><hr><p>任务管理器打开命令： <code>gnome-system-monitor</code> 。<br><code>sudo gsettings set.com.canonical.Uniyt always-show-menus true</code> 让 Unity 全局菜单始终可见，其中true改为 <code>false</code> 恢复。<br><code>sudo gnome-session-properties</code> 管理开机启动。<br><code>/usr/share/applications</code> 查看所有应用。<br><code>sudo apt-get install -y ubuntu-desktop</code> 修复桌面。<br>16.04开始，用户可以实现改变启动器的位置，可以将启动器移到屏幕底部，但是无法移到右边或顶部。打开终端，然后输入下面这个命令，即可将启动器移到屏幕底部：<br><code>gsettings set com.canonical.Unity.Launcher launcher-position Bottom</code><br>如果你使用后，觉得不喜欢，还可以恢复到屏幕左边，只要运行：<br><code>gsettings set com.canonical.Unity.Launcher launcher-position Left</code><br><code>nohup COMMAND &amp;amp;</code> 后台永久执行 COMMAND 命令。<br>添加到 <code>/etc/init.d/rc.local</code> ，实现开机执行sudo命令。<br><code>cat name</code> 浏览<code>name</code>文件。<br>设置系统变量 PATH 方法：</p><p>[code]/etc/environmet[/code] 中PATH 后面引号中添加，使用<br>分隔不同的路径。</p><p>&nbsp;</p><h2 id="安装Arc-GTK主题"><a href="#安装Arc-GTK主题" class="headerlink" title="安装Arc GTK主题"></a>安装Arc GTK主题</h2><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post.php?post=437&amp;action=edit"></div></li><li><p>先添加 Arc GTK theme 源</p><pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;">`<span class="hljs-built_in" style="color: #0086b3;">sudo</span> sh -c <span class="hljs-string" style="color: #dd1144;">"echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' &gt;&gt; /etc/apt/sources.list.d/arc-theme.list"</span>`</pre></li><li>安装软件源的密钥，否者无法正常使用<br><pre style="font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;"><code>wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.&lt;span class=&quot;hljs-number&quot; style=&quot;color: #008080;&quot;&gt;04&lt;/span&gt;/Release.key&lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt-key add - &amp;lt; Release.key ``</code> <span class="hljs-number" style="color: #008080;">3</span>. 安装 Arc GTK 主题 <code>sh &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt update &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt install arc-theme</code> <span class="hljs-number" style="color: #008080;">4</span>. 安装 Unity Tweak Tool <code>sh &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt install unity-tweak-tool</code> <span class="hljs-built_in" style="color: #0086b3;">sudo</span> 卸载应用， <code>sh &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt-get remove --purge 软件名称 &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt-get autoremove --purge 软件名称</code> —– 使用 ssh 在终端远程连接其他ubuntu系统 两台设备先安装ssh server和 clicent <code>sh &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt-get install openssh-client &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; apt-get install openssh-server</code> 启动于停止service <code>sh &lt;span class=&quot;hljs-built_in&quot; style=&quot;color: #0086b3;&quot;&gt;sudo&lt;/span&gt; /etc/init.d/ssh start &lt;span class=&quot;hljs-comment&quot; style=&quot;color: #999988; font-style: italic;&quot;&gt;#或者 sudo service ssh start sudo /etc/init.d/ssh stop sudo /etc/init.d/ssh restart</code> client 使用下面的命令连接 sever <code>sh ssh 用户名@ip ssh -l 用户名 ip</code> 允许 root 远程登录，修改sever配置文件 <code>sh sudo gedit /etc/ssh/sshd_config 修改 #PermitRootLogin without-password PermitRootLogin yes 然后重启 sudo systemctl restart ssh.service</code> 查看ssh 状态 <code>sh ps -e |grep ssh #看到sshd则说明ssh-server已经安装启动</code> —— 配置 FTP sever linux ftp服务器软件有 vsftpd ，pure-ftpd ，proftp 。 <code>sh #安装 sudo apt-get install vsftpd #控制命令 sudo /etc/init.d/vsftpd start sudo /etc/init.d/vsftpd stop sudo /etc/init.d/vsftpd restart #或者类似 sudo service vsftpd restart #多了ftp用户组和ftp用户 sudo cat /etc/group sudo cat /etc/passwd #ftp服务器的目录位置在 /srv/ftp，这也是匿名用户访问时的根目录。 #使用下列命令来间接更改目录 cd /srv sudo rm -d ftp # 挂载家目录 cd ~/ sudo mkdir ftp # ln -s 为文件创件符号连接，非硬连接. cd ~ #配置 sudo gedit /etc/vsftpd.conf #允许匿名用户登录 anonymous_enable=YES #允许本地用户登录 local_enable=YES #开启全局上传 write_enable=YES #允许匿名用户上传文件 anon_upload_enable=YES #充许匿名用户新建文件夹 anon_mkdir_write_enable=YES #加点banner提示 ftpd_banner=Hello~~ #FTP服务器最大承载用户 max_clients=100 #限制每个IP的进程 max_per_ip=5 #最大传输速率(b/s) local_max_rate=256000 #隐藏帐号 hide_ids=YES #启动chroot列表(Change root) chroot_list_enable=YES #指定列表位置(我这用的是默认地址) chroot_list_file=/etc/vsftpd.chroot_list ssup #这句默认设置里是没有的，自己加 user_config_dir=/etc/自己定义一个设置个别用户用的文件夹地址</code> 客户端常用命令 <code>sh get test.md #下载远程文件到本地 pub test.txt #上传本地文件到远程服务</code> ——- samba 文件共享服务 <code>sh sudo apt install samba #安装samba服务 #更改配置文件 sudo vi /etc/samba/smb.conf #其中 ` ; ` 注释行，</code> ——— ## <code>字体</code> 在终端输入以下命令进行字体安装： <code>`</code>sh wget -O get-fonts.sh.zip <a href="http://files.cnblogs.com/DengYangjun/get-fonts.sh.zip" target="_blank" rel="noopener">http://files.cnblogs.com/DengYangjun/get-fonts.sh.zip</a> unzip -o get-fonts.sh.zip 1&gt;/dev/null<br>chmod a+x get-fonts.sh<br>./get-fonts.sh<br><code>&lt;/pre&gt;如果要删除已下载的字体安装脚本，执行以下命令：&lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>rm get-fonts.sh get-fonts.sh.zip <span class="hljs-number" style="color: #008080;">2</span>&gt;/dev/null<br><code>&lt;/pre&gt;如果要恢复系统默认的字体，执行以下命令：&lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code><span class="hljs-built_in" style="color: #0086b3;">cd</span> /etc/fonts/conf.avail<br><span class="hljs-built_in" style="color: #0086b3;">sudo</span> mv <span class="hljs-number" style="color: #008080;">51</span>-local.conf.old <span class="hljs-number" style="color: #008080;">51</span>-local.conf <span class="hljs-number" style="color: #008080;">2</span>&gt;/dev/null<br><span class="hljs-built_in" style="color: #0086b3;">sudo</span> mv <span class="hljs-number" style="color: #008080;">69</span>-language-selector-zh-cn.conf.old <span class="hljs-number" style="color: #008080;">69</span>-language-selector-zh-cn.conf <span class="hljs-number" style="color: #008080;">2</span>&gt;/dev/null<br><span class="hljs-built_in" style="color: #0086b3;">sudo</span> rm <span class="hljs-operator">-f</span> -r /usr/share/fonts/truetype/myfonts <span class="hljs-number" style="color: #008080;">2</span>&gt;/dev/null</pre></li></ol><p>记录以备用。<br><a href="https://www.cnblogs.com/jaxu/p/5565326.html" target="_blank" rel="noopener">https://www.cnblogs.com/jaxu/p/5565326.html</a></p><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+IyMg5p+l55yL57O757uf54mI5pys5ZG95LukPC9wPjxwPi0gYGdldGNvbmYgTE9OR19CSVQg YCDmn6XnnIvns7vnu5/kvY3mlbDvvJs8YnI+IC0gYHVuYW1lIC1hYCDmm7Tor6bnu4bnmoTmlrnm s5XvvJs8YnI+IC0gYGxzYl9yZWxlYXNlIC1hYCDns7vnu5/or6bnu4bniYjmnKzmg4XlhrXjgII8 L3A+PHA+IyMgcHl0aG9uIOmFjee9rjwvcD48cD4tIGBweXRob24zIC0tdmVyc2lvbmAg5p+l55yL 5a6J6KOFcHl0aG9u54mI5pys77yM5aaC5p6c5pivM+eahO+8mzxicj4gLSBgc3VkbyBhcHQtZ2V0 IGluc3RhbGwgcHl0aG9uMy1waXBgIOWuieijhSBwaXAgOzxicj4gLSBgcGlwIC1WYCDmo4Dmn6Vw aXDvvJs8YnI+IC0g5py66YGH55So5oi355qEIOm7mOiupOeJiOacrOWIh+aNojwvcD48cD5gYGBz aDxicj4gbHMgL3Vzci9iaW4vcHl0aG9uKiAj5pi+56S65omA5pyJIHB5dGhvbjwvcD48cD52aW0g fi8uYmFzaHJjICPnvJbovpHphY3nva7mlofku7Y8YnI+ICPmt7vliqDlpoLkuIvooYwg77yMYWxp YXPvvIzliKvlkI3jgILot6/lvoTku6XkuIrpnaLmmL7npLrnmoTkuLrlh4bjgII8YnI+IGFsaWFz IHB5dGhvbj0nL3Vzci9iaW4vcHl0aG9uMy41JzwvcD48cD5gYGA8L3A+PHA+IyMgcHl0aG9uIOiu oeeul+eOr+WigzwvcD48cD4tIOKAizxicj4gLSDigIs8L3A+PHA+IyMgYXB0LWdldCDkvb/nlKhp cHY0PC9wPjxwPuacieaXtu+8jOaCqOmcgOimgeWcqEFQVOWMheS4reemgeeUqElQdjbvvIzlj6rm nInlnKjpnIDopoHml7bvvIzlhbbku5bnqIvluo/lj6/ku6Xnu6fnu63kvb/nlKhJUHY244CCIOim geWcqEFQVOS4reemgeeUqElQdjbvvIzor7fov5DooYzku6XkuIvlkb3ku6TkuLpBUFTliJvlu7rk uIDkuKrphY3nva7mlofku7bjgII8L3A+PHA+YGBgc2g8YnI+IHN1ZG8gbmFubyAvZXRjL2FwdC9h cHQuY29uZi5kLzk5Zm9yY2UtaXB2NDxicj4gYGBgPC9wPjxwPuWwhuS7peS4i+ihjOWkjeWItuW5 tueymOi0tOWIsOaWh+S7tuS4reOAgjwvcD48cD5gYGBzaDxicj4gQWNxdWlyZTo6Rm9yY2VJUHY0 ICJ0cnVlIjs8YnI+IGBgYDwvcD48cD4tLS0tLS08YnI+IGxpbnV4IOW4uOeUqOe8lui+keWZqDxi cj4gdmkg5bGe5LqO5Z+65pys57yW6L6R5Zmo77yM6Zmk5q2k5LmL5aSW77yM5pyJ5Lqb5Y+R6KGM 54mI6L+Y5Lya6aKE6KOFbmFub++8jHZpbeetiee8lui+keWZqOOAgjxicj4gKip2aeWRveS7pCoq PGJyPiBFU0Mg5YiH5o2i5Yiw5ZG95Luk5qih5byPPGJyPiBhIEEgaSBJIOi/meaYr+S4qumUruWc qOWRveS7pOaooeW8j+S4i+WNtOaNouWIsOe8lui+keaooeW8jzxicj4g5Yy65Yir5Zyo5LqO5o+S 5YWl5L2N572u77yM5bi455SoIGkg44CCPGJyPiDluLjnlKjlkb3ku6Q8YnI+IHgg5Yig6Zmk5LiA 5Liq5a2X56ym77yMPGJyPiBkZCDliKDpmaTlhYnmoIfmiYDlnKjooYzvvIw8YnI+IFpaIOS/neaM geW5tumAgOWHuu+8jDxicj4gWlEg5LiN5L+d5oyB6YCA5Ye644CCPC9wPjxwPuS9juihjOWRveS7 pOS9v+eUqCA6IOmUrui/m+WFpe+8jDxicj4gOndxIOS/neaMgeW5tumAgOWHuu+8jDxicj4gOiFx IOmAgOWHuuS4jeS/neWtmO+8jDxicj4gOnNldCBudSDmmL7npLrooYzlj7fvvIw8YnI+IDpzZXQg 6K+t5rOV6auY5LquPC9wPjxwPuazqOaEj3ZpIOS4i+e8lui+keaooeW8j+S4jeiDveS9v+eUqGRl bGV0ZSBiYWNrc3BhY2Ug6ZSu77yMPGJyPiDogIx2aW0g5Y+v5Lul5L2/55So5LiK6Z2i5Lik6ZSu 44CCPC9wPjxwPi0tLS0tPGJyPiBuYW5v5ZG95LukPC9wPjxwPue/u+mhtTwvcD48cD7luK7liqnk uK3nmoQgYF5gIOihqOekumBjdHJsYCDplK7vvIjkuZ/lj6/ku6Xov57nu63mjInkuKTmrKFgZXNj YCDplK7ku6Pmm7/vvInvvIwgYE1gIOihqOekuiBgYWx0YCDplK7jgII8L3A+PHA+5pi+56S66KGM 5Y+377yaIOaJk+W8gCBgL2V0Yy8gbmFub3JjYCDlsIYgYCMgc2V0IGNvbnN0YW50c2hvd2Ag5YmN 6Z2i55qE5rOo6YeKYCNg5Y+35Y675o6J5Y2z5Y+v44CCPC9wPjxwPuKAiyBgQ3RybCtZYOWIsOS4 iuS4gOmhtTxicj4g4oCLIGBDdHJsK1Zg5Yiw5LiL5LiA6aG1PC9wPjxwPuS/neWtmDwvcD48cD7k vb/nlKhgQ3RybCtPYOadpeS/neWtmOaJgOWBmueahOS/ruaUuTwvcD48cD7pgIDlh7o8L3A+PHA+ 5oyJYEN0cmwrWGAgb3IgYHFgPC9wPjxwPuadpeiHqjogJmx0O2h0dHA6Ly9tYW4ubGludXhkZS5u ZXQvbmFubyZndDs8L3A+PHA+LS0tLS08YnI+ICMjIOWwj+aKgOW3pzwvcD48cD7plb/mjIlgQWx0 YCDplK7mi5bliqjnnIvkuI3liLBoZWFkIGJhcueahOeql+WPo+OAgjwvcD48cD5gY2QgfmAg6L+U 5ZueaG9tZeebruW9le+8jOazqOaEj3Jvb3TnlKjmiLfnmoTnm67lvZXkuI7mma7pgJrnlKjmiLfn m67lvZXnmoTljLrliKvjgII8YnI+IGBzdWRvYCDlj6rog73mmoLml7bliIfmj5DmnYPvvIw15YiG 6ZKf44CC5L2/55SoIGBzdWRvIC1pIGAg5Y+v5Lul5YiH5o2i5Yiwcm9vdOi0puaIt+OAgjxicj4g YHB3ZGAg5pi+56S65b2T5YmN55uu5b2V44CCPGJyPiBjbGVhciDmuIXlsY/jgII8L3A+PHA+YHN1 ZG8gYXB0LWNhY2hlIHNlYXJjaCBhcGFjaGUgfCBsZXNzYCDnlKjkuo7mkJzntKLkuI4gYXBhY2hl IOebuOWFs+eahCDljIXlkI3vvIhwYWNrYWdlIG5hbWXvvInjgIJsZXNzIOaYvuekuuaWh+S7tuWG heWuuS48L3A+PHA+5L2/55SoYHN1ZG8gYXB0LWdldCBhdXRvcmVtb3ZlIC1wdXJnZSB4eHh4eGDv vIh4eHh45Li66KaB5Y246L2955qE6L2v5Lu25ZCN77yJ5ZG95Luk5Y246L296L2v5Lu25q+U6L6D 5aW944CCPC9wPjxwPuS/ruaUuei9r+S7tua6kCBgc3VkbyBnZWRpdCAvZXRjL2FwdC9zb3VyY2Vz Lmxpc3RgIO+8jGBzdWRvIGFwdC1nZXQgdXBkYXRlYCDmm7TmmL7lkI7kvb/nlKjmraTmm7TmlrDj gII8L3A+PHA+LS0tLS0tPC9wPjxwPioqUEFTSOeOr+Wig+WPmOmHj+eahOiuvue9rioqPC9wPjxw PuaWueazleS4gO+8mueUqOaIt+S4u+ebruW9leS4i+eahGAucHJvZmlsZWDmiJZgLmJhc2hyY2Dm lofku7bvvIjmjqjojZDvvIk8L3A+PHA+55m75b2V5Yiw5L2g55qE55So5oi377yI6Z2ecm9vdO+8 ie+8jOWcqOe7iOerr+i+k+WFpe+8mjwvcD48cD5gYGBzaDxicj4gc3VkbyBnZWRpdCB+Ly5wcm9m aWxlICMob3IgLmJhc2hyYyk8YnI+IGBgYDwvcD48cD7lj6/ku6XlnKjmraTmlofku7bmnKvlsL7l iqDlhaVQQVRI55qE6K6+572u5aaC5LiL77yaPC9wPjxwPmBgYHNoPGJyPiBleHBvcnQgUEFUSD3i gJ0kUEFUSDp5b3VyIHBhdGgxOnlvdXIgcGF0aDIgLi4u4oCdPGJyPiBgYGA8L3A+PHA+5L+d5a2Y 5paH5Lu277yM5rOo6ZSA5YaN55m75b2V77yM5Y+Y6YeP55Sf5pWI44CCPGJyPiDor6XmlrnlvI/m t7vliqDnmoTlj5jph4/lj6rlr7nlvZPliY3nlKjmiLfmnInmlYjjgII8L3A+PHA+5pa55rOV5LqM 77ya5Zyo57O757uf55uu5b2V77yM6L+b6KGM57G75Ly85pON5L2c44CCPC9wPjxwPmBgYDxicj4g L2V0Yy9wcm9maWxlPC9wPjxwPi9ldGMgL2Vudmlyb25tZW50PGJyPiBgYGA8L3A+PHA+5Zyo55m7 5b2V5pe2LOaTjeS9nOezu+e7n+WumuWItueUqOaIt+eOr+Wig+aXtuS9v+eUqOeahOesrOS4gOS4 quaWh+S7tiAs5q2k5paH5Lu25Li657O757uf55qE5q+P5Liq55So5oi36K6+572u546v5aKD5L+h 5oGvLOW9k+eUqOaIt+esrOS4gOasoeeZu+W9leaXtizor6Xmlofku7booqvmiafooYzjgILnrKzk uozkuKrmlofku7YsIOezu+e7n+WcqOivu+WPluS9oOiHquW3seeahHByb2ZpbGXliY0s6K6+572u 546v5aKD5paH5Lu255qE546v5aKD5Y+Y6YeP44CCPC9wPjxwPi0tLS0tLS08YnI+ICoqR0lNUCoq IOS9v+eUqOS4reaWh+eVjOmdou+8mihUaGUgR05VIEltYWdlIE1hbmlwdWxhdGlvbiBQcm9ncmFt KTwvcD48cD5g55SoIExBTkdVQUdFPXpoX0NOIGdpbXAg5ZCv5Yqo77yM5oiW6ICFTEFORz16aF9D TiBnaW1wYCDvvIznhLblkI7lnKjpgInmi6nkuK3mlofvvIjkuI3ooYzlsLHmmK/pmL/ph4znmoTm upDvvIxgc3VkbyBhcHQtZ2V0IGdpbXBg6YeN6KOF5LiA5LiL77yJ44CCPC9wPjxwPmdpbXDoo4Hl iarlm77niYfvvIzkvb/nlKjlv6vmjbfplK4gYHNoaWZ0ICsgYyBg44CCPGJyPiDljZXnqpflj6Pm qKHlvI/vvIzlnKjpobbpg6gg56qX5Y+jIOiPnOWNleS4iyDlkK/nlKjljZXnqpflj6PmqKHlvI/j gII8L3A+PHA+KipHSU1QKiog5L2/55So5pWZ56iLPC9wPjxwPjEuIOaLluWIsOacgOW3pui+ueea hGDlt6XlhbfliJfkuIpg77yM5omT5byA5LiA5byg5paw55qE5Zu+54mH77ybPGJyPiAyLiBgY3Ry bCArIHNoaWZ0IGFgPGJyPiAzLiBg55+p5b2i6YCJ5oupYCDlkowgYOakreWchumAieaLqWDvvIzk vb/nlKhjdHJs5YeP6YCJ77yMc2hpZnTliqDpgInvvJs8YnI+IDQuIGDoh6rnlLHpgInmi6lgIOW3 peWFt+WwhnBz55qEIOWll+e0ouW3peWFtyDlkowg5aSa6L655b2i5aWX57SiIOW3peWFt+e7k+WQ iO+8jOW3pumUruebtOaOpeeUu+aYr+Wll+e0ou+8jOiAjOWNleWHu+aYr+Wkmui+ueW9ouWll+e0 ou+8mzxicj4gNS4gYOaooeeziumAieaLqWAg5bel5YW35ZKMIGDmjInpopzoibLpgInmi6lgIOW3 peWFt+WImeaYr+aKinBzIOmtlOajkiDlt6Xlhbfnu5nliIbmi4bvvJs8YnI+IDYuIOKAizwvcD48 cD4tLS0tLS0tLS0tLTwvcD48cD7ku7vliqHnrqHnkIblmajmiZPlvIDlkb3ku6TvvJogYGdub21l LXN5c3RlbS1tb25pdG9yYCDjgII8L3A+PHA+YHN1ZG8gZ3NldHRpbmdzIHNldC5jb20uY2Fub25p Y2FsLlVuaXl0IGFsd2F5cy1zaG93LW1lbnVzIHRydWVgIOiuqSBVbml0eSDlhajlsYDoj5zljZXl p4vnu4jlj6/op4HvvIzlhbbkuK10cnVl5pS55Li6IGBmYWxzZWAg5oGi5aSN44CCPC9wPjxwPmBz dWRvIGdub21lLXNlc3Npb24tcHJvcGVydGllc2Ag566h55CG5byA5py65ZCv5Yqo44CCPC9wPjxw PmAvdXNyL3NoYXJlL2FwcGxpY2F0aW9uc2Ag5p+l55yL5omA5pyJ5bqU55So44CCPC9wPjxwPmBz dWRvIGFwdC1nZXQgaW5zdGFsbCAteSB1YnVudHUtZGVza3RvcGAg5L+u5aSN5qGM6Z2i44CCPC9w PjxwPjE2LjA05byA5aeL77yM55So5oi35Y+v5Lul5a6e546w5pS55Y+Y5ZCv5Yqo5Zmo55qE5L2N 572u77yM5Y+v5Lul5bCG5ZCv5Yqo5Zmo56e75Yiw5bGP5bmV5bqV6YOo77yM5L2G5piv5peg5rOV 56e75Yiw5Y+z6L655oiW6aG26YOo44CC5omT5byA57uI56uv77yM54S25ZCO6L6T5YWl5LiL6Z2i 6L+Z5Liq5ZG95Luk77yM5Y2z5Y+v5bCG5ZCv5Yqo5Zmo56e75Yiw5bGP5bmV5bqV6YOo77yaPGJy PiBgZ3NldHRpbmdzIHNldCBjb20uY2Fub25pY2FsLlVuaXR5LkxhdW5jaGVyIGxhdW5jaGVyLXBv c2l0aW9uIEJvdHRvbWA8YnI+IOWmguaenOS9oOS9v+eUqOWQju+8jOinieW+l+S4jeWWnOasou+8 jOi/mOWPr+S7peaBouWkjeWIsOWxj+W5leW3pui+ue+8jOWPquimgei/kOihjO+8mjxicj4gYGdz ZXR0aW5ncyBzZXQgY29tLmNhbm9uaWNhbC5Vbml0eS5MYXVuY2hlciBsYXVuY2hlci1wb3NpdGlv biBMZWZ0YDwvcD48cD5gbm9odXAgQ09NTUFORCAmYW1wO2Ag5ZCO5Y+w5rC45LmF5omn6KGMIENP TU1BTkQg5ZG95Luk44CCPC9wPjxwPua3u+WKoOWIsCBgL2V0Yy9pbml0LmQvcmMubG9jYWxgIO+8 jOWunueOsOW8gOacuuaJp+ihjHN1ZG/lkb3ku6TjgII8L3A+PHA+YGNhdCBuYW1lYCDmtY/op4hg bmFtZWDmlofku7bjgII8L3A+PHA+6K6+572u57O757uf5Y+Y6YePIFBBVEgg5pa55rOV77yaPC9w PjxwPmAvZXRjL2Vudmlyb25tZXRgIOS4rVBBVEgg5ZCO6Z2i5byV5Y+35Lit5re75Yqg77yM5L2/ 55SoYDpgIOWIhumalOS4jeWQjOeahOi3r+W+hOOAgjwvcD48cD4tLS0tLS0tPGJyPiDlronoo4VB cmMgR1RL5Li76aKYPC9wPjxwPjEuIOWFiOa3u+WKoCBBcmMgR1RLIHRoZW1lIOa6kDwvcD48cD5g YGBzaDxicj4gc3VkbyBzaCAtYyAiZWNobyAnZGViIGh0dHA6Ly9kb3dubG9hZC5vcGVuc3VzZS5v cmcvcmVwb3NpdG9yaWVzL2hvbWU6L0hvcnN0MzE4MC94VWJ1bnR1XzE2LjA0LyAvJyAmZ3Q7Jmd0 OyAvZXRjL2FwdC9zb3VyY2VzLmxpc3QuZC9hcmMtdGhlbWUubGlzdCI8YnI+IGBgYDwvcD48cD4y LiDlronoo4Xova/ku7bmupDnmoTlr4bpkqXvvIzlkKbogIXml6Dms5XmraPluLjkvb/nlKg8L3A+ PHA+YGBgc2g8YnI+IHdnZXQgaHR0cDovL2Rvd25sb2FkLm9wZW5zdXNlLm9yZy9yZXBvc2l0b3Jp ZXMvaG9tZTpIb3JzdDMxODAveFVidW50dV8xNi4wNC9SZWxlYXNlLmtleTxicj4gc3VkbyBhcHQt a2V5IGFkZCAtICZsdDsgUmVsZWFzZS5rZXkgYGBgIDMuIOWuieijhSBBcmMgR1RLIOS4u+mimCBg YGBzaCBzdWRvIGFwdCB1cGRhdGUgc3VkbyBhcHQgaW5zdGFsbCBhcmMtdGhlbWUgYGBgIDQuIOWu ieijhSBVbml0eSBUd2VhayBUb29sIGBgYHNoIHN1ZG8gYXB0IGluc3RhbGwgdW5pdHktdHdlYWst dG9vbCBgYGAgc3VkbyDljbjovb3lupTnlKjvvIwgYGBgc2ggc3VkbyBhcHQtZ2V0IHJlbW92ZSAt LXB1cmdlIOi9r+S7tuWQjeensCBzdWRvIGFwdC1nZXQgYXV0b3JlbW92ZSAtLXB1cmdlIOi9r+S7 tuWQjeensCBgYGAgLS0tLS0g5L2/55SoIHNzaCDlnKjnu4jnq6/ov5znqIvov57mjqXlhbbku5Z1 YnVudHXns7vnu58g5Lik5Y+w6K6+5aSH5YWI5a6J6KOFc3NoIHNlcnZlcuWSjCBjbGljZW50IGBg YHNoIHN1ZG8gYXB0LWdldCBpbnN0YWxsIG9wZW5zc2gtY2xpZW50IHN1ZG8gYXB0LWdldCBpbnN0 YWxsIG9wZW5zc2gtc2VydmVyIGBgYCDlkK/liqjkuo7lgZzmraJzZXJ2aWNlIGBgYHNoIHN1ZG8g L2V0Yy9pbml0LmQvc3NoIHN0YXJ0ICPmiJbogIUgc3VkbyBzZXJ2aWNlIHNzaCBzdGFydCBzdWRv IC9ldGMvaW5pdC5kL3NzaCBzdG9wIHN1ZG8gL2V0Yy9pbml0LmQvc3NoIHJlc3RhcnQgYGBgIGNs aWVudCDkvb/nlKjkuIvpnaLnmoTlkb3ku6Tov57mjqUgc2V2ZXIgYGBgc2ggc3NoIOeUqOaIt+WQ jUBpcCBzc2ggLWwg55So5oi35ZCNIGlwIGBgYCDlhYHorrggcm9vdCDov5znqIvnmbvlvZXvvIzk v67mlLlzZXZlcumFjee9ruaWh+S7tiBgYGBzaCBzdWRvIGdlZGl0IC9ldGMvc3NoL3NzaGRfY29u ZmlnIOS/ruaUuSAjUGVybWl0Um9vdExvZ2luIHdpdGhvdXQtcGFzc3dvcmQgUGVybWl0Um9vdExv Z2luIHllcyDnhLblkI7ph43lkK8gc3VkbyBzeXN0ZW1jdGwgcmVzdGFydCBzc2guc2VydmljZSBg YGAg5p+l55yLc3NoIOeKtuaAgSBgYGBzaCBwcyAtZSB8Z3JlcCBzc2ggI+eci+WIsHNzaGTliJno r7TmmI5zc2gtc2VydmVy5bey57uP5a6J6KOF5ZCv5YqoIGBgYCAtLS0tLS0g6YWN572uIEZUUCBz ZXZlciBsaW51eCBmdHDmnI3liqHlmajova/ku7bmnIkgdnNmdHBkIO+8jHB1cmUtZnRwZCDvvIxw cm9mdHAg44CCIGBgYHNoICPlronoo4Ugc3VkbyBhcHQtZ2V0IGluc3RhbGwgdnNmdHBkICPmjqfl iLblkb3ku6Qgc3VkbyAvZXRjL2luaXQuZC92c2Z0cGQgc3RhcnQgc3VkbyAvZXRjL2luaXQuZC92 c2Z0cGQgc3RvcCBzdWRvIC9ldGMvaW5pdC5kL3ZzZnRwZCByZXN0YXJ0ICPmiJbogIXnsbvkvLwg c3VkbyBzZXJ2aWNlIHZzZnRwZCByZXN0YXJ0ICPlpJrkuoZmdHDnlKjmiLfnu4TlkoxmdHDnlKjm iLcgc3VkbyBjYXQgL2V0Yy9ncm91cCBzdWRvIGNhdCAvZXRjL3Bhc3N3ZCAjZnRw5pyN5Yqh5Zmo 55qE55uu5b2V5L2N572u5ZyoIC9zcnYvZnRw77yM6L+Z5Lmf5piv5Yy/5ZCN55So5oi36K6/6Zeu 5pe255qE5qC555uu5b2V44CCICPkvb/nlKjkuIvliJflkb3ku6TmnaXpl7TmjqXmm7TmlLnnm67l vZUgY2QgL3NydiBzdWRvIHJtIC1kIGZ0cCAjIOaMgui9veWutuebruW9lSBjZCB+LyBzdWRvIG1r ZGlyIGZ0cCAjIGxuIC1zIOS4uuaWh+S7tuWIm+S7tuespuWPt+i/nuaOpe+8jOmdnuehrOi/nuaO pS4gY2QgfiAj6YWN572uIHN1ZG8gZ2VkaXQgL2V0Yy92c2Z0cGQuY29uZiAj5YWB6K645Yy/5ZCN 55So5oi355m75b2VIGFub255bW91c19lbmFibGU9WUVTICPlhYHorrjmnKzlnLDnlKjmiLfnmbvl vZUgbG9jYWxfZW5hYmxlPVlFUyAj5byA5ZCv5YWo5bGA5LiK5LygIHdyaXRlX2VuYWJsZT1ZRVMg I+WFgeiuuOWMv+WQjeeUqOaIt+S4iuS8oOaWh+S7tiBhbm9uX3VwbG9hZF9lbmFibGU9WUVTICPl hYXorrjljL/lkI3nlKjmiLfmlrDlu7rmlofku7blpLkgYW5vbl9ta2Rpcl93cml0ZV9lbmFibGU9 WUVTICPliqDngrliYW5uZXLmj5DnpLogZnRwZF9iYW5uZXI9SGVsbG9+fiAjRlRQ5pyN5Yqh5Zmo 5pyA5aSn5om/6L2955So5oi3IG1heF9jbGllbnRzPTEwMCAj6ZmQ5Yi25q+P5LiqSVDnmoTov5vn qIsgbWF4X3Blcl9pcD01ICPmnIDlpKfkvKDovpPpgJ/njocoYi9zKSBsb2NhbF9tYXhfcmF0ZT0y NTYwMDAgI+makOiXj+W4kOWPtyBoaWRlX2lkcz1ZRVMgI+WQr+WKqGNocm9vdOWIl+ihqChDaGFu Z2Ugcm9vdCkgY2hyb290X2xpc3RfZW5hYmxlPVlFUyAj5oyH5a6a5YiX6KGo5L2N572uKOaIkei/ meeUqOeahOaYr+m7mOiupOWcsOWdgCkgY2hyb290X2xpc3RfZmlsZT0vZXRjL3ZzZnRwZC5jaHJv b3RfbGlzdCBzc3VwICPov5nlj6Xpu5jorqTorr7nva7ph4zmmK/msqHmnInnmoTvvIzoh6rlt7Hl iqAgdXNlcl9jb25maWdfZGlyPS9ldGMv6Ieq5bex5a6a5LmJ5LiA5Liq6K6+572u5Liq5Yir55So 5oi355So55qE5paH5Lu25aS55Zyw5Z2AIGBgYCDlrqLmiLfnq6/luLjnlKjlkb3ku6QgYGBgc2gg Z2V0IHRlc3QubWQgI+S4i+i9vei/nOeoi+aWh+S7tuWIsOacrOWcsCBwdWIgdGVzdC50eHQgI+S4 iuS8oOacrOWcsOaWh+S7tuWIsOi/nOeoi+acjeWKoSBgYGAgLS0tLS0tLSBzYW1iYSDmlofku7bl hbHkuqvmnI3liqEgYGBgc2ggc3VkbyBhcHQgaW5zdGFsbCBzYW1iYSAj5a6J6KOFc2FtYmHmnI3l iqEgI+abtOaUuemFjee9ruaWh+S7tiBzdWRvIHZpIC9ldGMvc2FtYmEvc21iLmNvbmYgI+WFtuS4 rSBgIDsgYCDms6jph4rooYzvvIwgYGBgIC0tLS0tLS0tLSAjIyBg5a2X5L2TYCDlnKjnu4jnq6/o vpPlhaXku6XkuIvlkb3ku6Tov5vooYzlrZfkvZPlronoo4XvvJogYGBgc2ggd2dldCAtTyBnZXQt Zm9udHMuc2guemlwIGh0dHA6Ly9maWxlcy5jbmJsb2dzLmNvbS9EZW5nWWFuZ2p1bi9nZXQtZm9u dHMuc2guemlwIHVuemlwIC1vIGdldC1mb250cy5zaC56aXAgMSZndDsvZGV2L251bGw8L3A+PHA+ Y2htb2QgYSt4IGdldC1mb250cy5zaDwvcD48cD4uL2dldC1mb250cy5zaDxicj4gYGBgPC9wPjxw PuWmguaenOimgeWIoOmZpOW3suS4i+i9veeahOWtl+S9k+WuieijheiEmuacrO+8jOaJp+ihjOS7 peS4i+WRveS7pO+8mjwvcD48cD5gYGBzaDxicj4gcm0gZ2V0LWZvbnRzLnNoIGdldC1mb250cy5z aC56aXAgMiZndDsvZGV2L251bGw8YnI+IGBgYDwvcD48cD7lpoLmnpzopoHmgaLlpI3ns7vnu5/p u5jorqTnmoTlrZfkvZPvvIzmiafooYzku6XkuIvlkb3ku6TvvJo8L3A+PHA+YGBgc2g8YnI+IGNk IC9ldGMvZm9udHMvY29uZi5hdmFpbDwvcD48cD5zdWRvIG12IDUxLWxvY2FsLmNvbmYub2xkIDUx LWxvY2FsLmNvbmYgMiZndDsvZGV2L251bGw8L3A+PHA+c3VkbyBtdiA2OS1sYW5ndWFnZS1zZWxl Y3Rvci16aC1jbi5jb25mLm9sZCA2OS1sYW5ndWFnZS1zZWxlY3Rvci16aC1jbi5jb25mIDImZ3Q7 L2Rldi9udWxsPC9wPjxwPnN1ZG8gcm0gLWYgLXIgL3Vzci9zaGFyZS9mb250cy90cnVldHlwZS9t eWZvbnRzIDImZ3Q7L2Rldi9udWxsPGJyPiBgYGA8L3A+PHA+6K6w5b2V5Lul5aSH55So44CCPGJy PiBodHRwczovL3d3dy5jbmJsb2dzLmNvbS9qYXh1L3AvNTU2NTMyNi5odG1sPC9wPg==">​</div><br><br>———————————————————————————— 2018.1.25<br><br>使用 mount 挂载 samba 一直提示无权限，使用下面的命令，设置本地账户的smb密码<br><br>sudo smbpasswd -a 现有用户<br><br>&nbsp;<br><br><em> </em> *<br><br>2018-01-01              格式莫名奇妙乱成一团，不更新该文了 。<br><br>2017-12-15              每天学一点，写一点。<br><div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 66px; top: 1536px; opacity: 0.2;"><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" title="朗读"></div><br><div id="s3gt_translate_tooltip_mini_copy" class="s3gt_translate_tooltip_mini" title="复制到剪贴板"></div><br><style type="text/css" media="print">#s3gt_translate_tooltip_mini { display: none !important; }</style></div><br><div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 645px; top: 4062px; opacity: 0.8;"><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" title="朗读"></div><br><div id="s3gt_translate_tooltip_mini_copy" class="s3gt_translate_tooltip_mini" title="复制到剪贴板"></div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;## &lt;/p&gt;
+&lt;h2 id=&quot;查看系统版本命令&quot;&gt;&lt;a href=&quot;#查看系统版本命令&quot; class=&quot;headerlink&quot; title=&quot;查看系统版本命令&quot;&gt;&lt;/a&gt;查看系统版本命令&lt;/h2&gt;&lt;ul&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="实用" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Olex2 软件使用笔记</title>
+    <link href="http://rachpt.github.io/2017/12/14/notes-for-olex2/"/>
+    <id>http://rachpt.github.io/2017/12/14/notes-for-olex2/</id>
+    <published>2017-12-14T14:30:23.000Z</published>
+    <updated>2018-03-05T03:45:59.695Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h2><ul><li><span class="md-line md-end-block"><span spellcheck="false"><code>File</code></span> –&gt; <span spellcheck="false"><code>Open</code></span> , 找到 <span spellcheck="false"><code>~.ins</code></span> 文件，打开。</span></li></ul><h2 id="解结构"><a href="#解结构" class="headerlink" title="解结构"></a>解结构</h2><ul><li><span class="md-line md-end-block"><span spellcheck="false"><code>Work</code></span> 中直接单击 <span spellcheck="false"><code>Solve</code></span> 即可自动解；</span></li><li><span class="md-line md-end-block">单击<span spellcheck="false"><code>Work</code></span> 右侧展开详情，选择<span spellcheck="false"><code>Solution Program</code></span> –&gt; <span spellcheck="false"><code>ShelXS</code></span> or <span spellcheck="false"><code>ShelXT</code></span> ,区别；</span></li><li><span class="md-line md-end-block">手动精修，单击<span spellcheck="false"><code>Refine</code></span> ,并展开详情；</span></li><li><span class="md-line md-end-block">左边窗口，鼠标<span spellcheck="false"><code>右键</code></span><span class=""> 前后移动可以放大与缩小所有原子，</span><span spellcheck="false"><code>左键</code></span>单击不放左右可以旋转所有原子；</span></li><li><span class="md-line md-end-block">右键原子，第一项显示原子的相对质量，单击选中，重复取消选中，多选直接单击需要的原子即可，直接滚动鼠标滚轮，实现轻原子隐藏；</span></li><li><span class="md-line md-end-block">由重原子开始，选中其后，右侧<span spellcheck="false"><code>Tool Work</code></span> 标记名称，其中<span spellcheck="false"><code>...</code></span>可以 打开元素周期表；</span></li><li><span class="md-line md-end-block">每次标定等操作后点击<span spellcheck="false"><code>Refine</code></span> 精修一下，直到最上面的八个参量的值全变成绿色即可（d I R 等），R1小于10%为好；</span></li><li><span class="md-line md-end-block">最后如果有些多余的衍射点，需要使用最上面第一个<span spellcheck="false"><code>Edit</code></span>(图标铅笔)，在其中加上<span spellcheck="false"><code>OMIT -2 75</code></span> (此为[测试中心]给的参考值)，其它需要自己试，勾上<span spellcheck="false"><code>Refine</code></span> 里面的<span spellcheck="false"><code>Auto-update ..</code></span> ,然后再多次精修即可</span></li></ul><h2 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h2><p><span class="md-line md-end-block">暂无</span></p><p>&nbsp;</p><p><span style="font-size: 14pt;"><strong>下载与插件</strong></span></p><p><span class="md-line md-end-block">olex2 下载地址：</span></p><p><span class="md-line md-end-block"><span spellcheck="false"><a href="http://www.olex2.org/olex2-distro/1.2/" target="_blank" rel="noopener">http://www.olex2.org/olex2-distro/1.2/</a></span> </span></p><p><span class="md-line md-end-block"><span spellcheck="false"><a href="http://jupiter.plymouth.edu/~jsduncan/software/olex2.php" target="_blank" rel="noopener">http://jupiter.plymouth.edu/~jsduncan/software/olex2.php</a></span></span></p><p><span class="md-line md-end-block"><span class="">shelx 插件下载网址：</span><span class=""><a href="http://muchong.com/bbs/url.php?s=aHR0cDovL3NoZWx4LnVuaS1hYy5nd2RnLmRlL35nc2hlbGRyL2Jpbi8%3D&amp;_s=11cbe58c52112191#opennewwindow" target="_blank" rel="noopener">http://shelx.uni-ac.gwdg.de/~gsheldr/bin/</a></span> </span></p><p><span class="md-line md-end-block"><span class="" spellcheck="false"><code>用户名：shelx 密码：&lt;span style=&quot;font-family: comic\ sans\ ms, sans-serif;&quot;&gt;I43212&lt;/span&gt;</code></span> 感谢木蚂蚁账号分享，密码中第一个是字母 i 。<br></span></p><p><span class="md-line md-end-block md-focus"><span class="">linux 插件安装方法，将可执行文件移动到olex2中，给可执行权限 sudo  chmod +x ***。</span></span></p><p>&nbsp;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;打开文件&quot;&gt;&lt;a href=&quot;#打开文件&quot; class=&quot;headerlink&quot; title=&quot;打开文件&quot;&gt;&lt;/a&gt;打开文件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class=&quot;md-line md-end-block&quot;&gt;&lt;sp
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="olex2" scheme="http://rachpt.github.io/tags/olex2/"/>
+    
+      <category term="笔记" scheme="http://rachpt.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>照片PDF优化成矢量版</title>
     <link href="http://rachpt.github.io/2017/12/10/%E7%85%A7%E7%89%87PDF%E4%BC%98%E5%8C%96/"/>
     <id>http://rachpt.github.io/2017/12/10/照片PDF优化/</id>
@@ -294,194 +531,6 @@
     
     
       <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMSOL 简要笔记</title>
-    <link href="http://rachpt.github.io/2017/12/04/COMSOL%20%E7%AE%80%E8%A6%81%E7%AC%94%E8%AE%B0/"/>
-    <id>http://rachpt.github.io/2017/12/04/COMSOL 简要笔记/</id>
-    <published>2017-12-04T01:12:45.000Z</published>
-    <updated>2018-02-28T16:10:02.008Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="COMSOL-简单模拟声子晶体步骤"><a href="#COMSOL-简单模拟声子晶体步骤" class="headerlink" title="COMSOL 简单模拟声子晶体步骤"></a>COMSOL 简单模拟声子晶体步骤</h1><ul><li>定义</li></ul><p>参数设置</p><ul><li>几何</li></ul><p>几何模型</p><a id="more"></a><ul><li>材料</li></ul><p>计算的材料选择</p><ul><li>物理场</li></ul><p>其中 边界条件选择尤为重要</p><ul><li>网格</li></ul><p>网格</p><ul><li>计算</li></ul><p>后续计算</p><ul><li>结束</li></ul><p>一切完成，导出数据</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;COMSOL-简单模拟声子晶体步骤&quot;&gt;&lt;a href=&quot;#COMSOL-简单模拟声子晶体步骤&quot; class=&quot;headerlink&quot; title=&quot;COMSOL 简单模拟声子晶体步骤&quot;&gt;&lt;/a&gt;COMSOL 简单模拟声子晶体步骤&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;定义&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;参数设置&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;几何&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;几何模型&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="软件" scheme="http://rachpt.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="教程" scheme="http://rachpt.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="comsol" scheme="http://rachpt.github.io/tags/comsol/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的安卓我做主</title>
-    <link href="http://rachpt.github.io/2017/12/04/%E6%88%91%E7%9A%84%E5%AE%89%E5%8D%93%E6%88%91%E5%81%9A%E4%B8%BB/"/>
-    <id>http://rachpt.github.io/2017/12/04/我的安卓我做主/</id>
-    <published>2017-12-03T16:00:00.000Z</published>
-    <updated>2018-03-02T08:54:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>开放源代码的安卓系统无疑是可玩性、可定制性极强的OS。在几年前我对安卓与IOS等系统还无法真正区分，直到换了新安卓手机，自己琢磨学会了刷机。为什么刷机，刷机可以体验到官方系统完全没有的新功能，有可能解决官方无法修复或者实现的功能但也可能引入其他缺陷（全看适配开发者个人能力），就像换了一台新手机，也可以体验纯正的Google服务（前提是要有相应的适配ROM）。</p><a id="more"></a><blockquote><p>安卓一般指Android（Google公司开发的操作系统）。</p><p>开源精神是 Free &amp; Open Source，意思是自由与源代码开放，Free是自由不是免费。<br><a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开放源代码软件</a><br><a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank" rel="noopener">Free and open-source software</a></p></blockquote><h2 id="Recvory"><a href="#Recvory" class="headerlink" title="Recvory"></a>Recvory</h2><p>安卓的硬件和软件是可以分开的，因此用户可以选择其他的系统（定制系统）。刷机和电脑的装系统道理是一样的，当时受限于硬件区别，不是所有的手机底层系统（俗称Recvory）都和电脑的底层系统Bios一样支持所有系统，因此安卓手机刷机的前提是<code>Recvory</code>的支持。<code>TWRP Recovery</code>算是目前最为顺手的 <code>Recovery</code> 了。但是一般情况下这并不是一种通用<code>Recovery</code>，需要有大牛针对具体硬件修改（也称适配）才能用。有了第三方REC是刷机的第一步。有些手机是有<code>BootLoader</code>的，要刷第三方REC就必须先解锁（比如小米魅族），<code>BootLoader</code>在一定程度上能保护用户手机，但还是有可能遭到暴力破解的。魅族手机好像是不给解锁<code>BootLoader</code>的，也就不能刷第三方ROM。具体刷机方法一般给手机论坛或者第三方论坛都有详解。</p><h2 id="ROM"><a href="#ROM" class="headerlink" title="ROM"></a>ROM</h2><p>Miui很便捷，该有的都有，Flyme适合不折腾的人，魔趣ROM可能是最贴切的偏原生安卓系统，AospExtended可能是最接近原生安卓的系统（加个Gapps几乎就是亲儿子了），Resurrection Remix OS（一般称RR）可定制性极高的原生类ROM，其他还有很大定制ROM，这里不详解。</p><h2 id="root"><a href="#root" class="headerlink" title="root"></a>root</h2><p>要想获得系统最高的控制权（root权限），可能小白用户会选择各种一键root应用，但是这里机器不推荐这么干，因为这些工具或多或少都有流氓行为，最优的办法是卡刷<code>Super SU</code>获得完美<code>root</code>权限。</p><p>为什么要root，root后能够对应用进行完整控制，达到常规途径无法实现的操作。比如去广告，安装破解版应用，破解应用，卸载系统预装应用，自动操作，修改系统显示样式，查看连接过的wifi密码，特殊设置达到省电目的等。</p><h2 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h2><p>root已经是玩机用户必备，但是root也可能会引入其他麻烦，最直接的就是影响官方系统的FOTA升级（如果是官方系统）。对于大部分国产rom一般来说root后的系统是不能通过FOTA（增量包）方式升级的。这里推荐一个和root一样强大（或者说比root更强大）的方式，那就是ADB（Andorid Debug Bridge）工具，每个系统都有这个，不管是官方还是第三方，ADB在安卓的开发者模式中开启，ADB大致就是通过PC与通过USB或者网络连接的安卓系统之间进行命令操作控制。pc上需要有ADB工具，百度即可得到，手机上开启USB调试即可（PS.火车站免费充电处千万别打开USB调试，不然就相当于将手机最高权限交予他人）。连接配对后，在PC控制台输入命令即可控制手机，比如卸载、<strong>冻结</strong> (隐藏，没有卸载，但是和卸载效果等同，并不破坏系统完整性)系统或者用户应用。由于有一定门槛，大多数人几乎都没听过。除了这种麻烦的方式外，有手机app开发者制作了使用ADB权限控制手机的应用，比如<code>黑域</code> <code>appops</code>等对于没有root的用户简直就是神器。 这里推荐<code>酷安</code>应用市场，小而实用的各种应用，只要你想得到的几乎都有。</p><h2 id="核心破解"><a href="#核心破解" class="headerlink" title="核心破解"></a>核心破解</h2><p>安卓核心破解，顾名思义，破解安卓的一些系统验证。比如应用签名，低版本应用覆盖安装。一般来说，如果一个应用被反编译后打包，其签名不是和原来一样，系统若检测到签名不一致就不能升级安装应用，有些要求高的应用如果不签名或者签名不一致，会导致闪退或者功能受限，这可是有违反编译的目的，为了能用，就需要强行使用原来的签名，但这样必须要破解安装核心验证，否者应用无法安装，这也就是破解安卓核心的目的所在。典型代表，各种修改、美化、去广告、精简版应用。</p><p>如何破解，一般两种方式，一是使用<code>幸运破解器</code> （神器，还能破解其他东西，谁用谁知道），二是使用<code>xposed</code> 模块破解，其实是幸运破解器的核心破解功能提取。前一种需重启两次才能全部破解。而且每次刷机都必须重新破解，比较麻烦。</p><h2 id="Xposed"><a href="#Xposed" class="headerlink" title="Xposed"></a>Xposed</h2><p>有一个神器，以QQ防撤回、钱红包、微信界面修改、运动记步修改、界面美化等闻名。对于大部分常见rom，需要单独适配才能用。官方下载地址 <a href="http://dl-xda.xposed.info/framework/" target="_blank" rel="noopener">http://dl-xda.xposed.info/framework/</a> ，rov89大神维护。 除自带商店外，酷安里也有xposed模块板块下载。</p><p>有了这些工具，配合相应的强大应用，比如<code>My Android Tools</code>（写轮眼）禁用app组件与权限，<code>SD女佣</code>清理垃圾较<code>CCleaner</code>对于windows之效，xopsed红包插件快到令人发指，<code>阻止运行</code>  <code>绿色守护</code> <code>黑域</code> 以及各种冻结软件共同镇压流氓软件之间的相互唤醒、恶意唤醒、后台耗电，<code>V4A</code> <code>杜比音效</code> 提升音质，<code>tasker</code>高级自动化……</p><hr><p>我的安卓，我做主。玩坏了，大不了用<code>钛备份</code>来一个完整备份与还原。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开放源代码的安卓系统无疑是可玩性、可定制性极强的OS。在几年前我对安卓与IOS等系统还无法真正区分，直到换了新安卓手机，自己琢磨学会了刷机。为什么刷机，刷机可以体验到官方系统完全没有的新功能，有可能解决官方无法修复或者实现的功能但也可能引入其他缺陷（全看适配开发者个人能力），就像换了一台新手机，也可以体验纯正的Google服务（前提是要有相应的适配ROM）。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="android" scheme="http://rachpt.github.io/tags/android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux 笔记</title>
-    <link href="http://rachpt.github.io/2017/12/03/linux%E7%AC%94%E8%AE%B0/"/>
-    <id>http://rachpt.github.io/2017/12/03/linux笔记/</id>
-    <published>2017-12-02T16:00:00.000Z</published>
-    <updated>2018-03-01T10:00:58.953Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>如何计算文件哈希<br><code>md5sum filename</code> 即可,更多:</li></ul><a id="more"></a><ul><li><p>命令格式</p><p>  md5sum [OPTION]… [FILE]… </p><p>  命令选项</p><p>  -b 或 –binary :把输入文件作为二进制文件看待。<br>  -t 或 –text :把输入的文件作为文本文件看待（默认）。<br>  -c 或 –check :用来从文件中读取md5信息检查文件的一致性。(不细说了参见info)<br>  –status :这个选项和check一起使用,在check的时候，不输出，而是根据返回值表示检查结果。<br>  -w 或 –warn :在check的时候，检查输入的md5信息又没有非法的行，如果有则输出相应信息。</p><p>  例子<br>  生产一个文件的md5值，md5sum filename &gt; filename.md5</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;如何计算文件哈希&lt;br&gt;&lt;code&gt;md5sum filename&lt;/code&gt; 即可,更多:&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ubuntu" scheme="http://rachpt.github.io/categories/ubuntu/"/>
-    
-    
-      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题</title>
-    <link href="http://rachpt.github.io/2017/12/02/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://rachpt.github.io/2017/12/02/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
-    <published>2017-12-01T16:00:00.000Z</published>
-    <updated>2018-03-01T10:02:42.857Z</updated>
-    
-    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：<br><a id="more"></a></p><ol><li><p>首先确定关闭了防火墙并且80端口没有被占用.</p></li><li><p>修改apache的httpd.conf文件，一共两处.</p></li></ol><h1 id="第一处"><a href="#第一处" class="headerlink" title="第一处"></a>第一处</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Options FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Order deny,allow</span><br><span class="line">Deny from all</span><br><span class="line">Satisfy all</span><br></pre></td></tr></table></figure><p><strong>修改为：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Options FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Order deny,allow</span><br><span class="line"># Deny from all</span><br><span class="line"></span><br><span class="line">Allow from all</span><br><span class="line">#允许所有访问</span><br><span class="line"></span><br><span class="line">Satisfy all</span><br></pre></td></tr></table></figure><h1 id="第二处"><a href="#第二处" class="headerlink" title="第二处"></a>第二处</h1><p>onlineoffline tag - don’t remove</p><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">onlineoffline tag - don&apos;t remove</span><br><span class="line">Order Deny,Allow</span><br><span class="line">Deny from all</span><br><span class="line">Allow from 127.0.0.1</span><br><span class="line">Allow from all</span><br></pre></td></tr></table></figure></p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">order deny,allow</span><br><span class="line">deny from none</span><br><span class="line">allow from all</span><br></pre></td></tr></table></figure></p><p>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://rachpt.github.io/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python 笔记</title>
-    <link href="http://rachpt.github.io/2017/12/01/python%E7%AC%94%E8%AE%B0/"/>
-    <id>http://rachpt.github.io/2017/12/01/python笔记/</id>
-    <published>2017-12-01T04:23:12.000Z</published>
-    <updated>2018-03-02T08:56:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>安装python</li></ul><ul><li>安装 selenium 库</li></ul><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install selenium</span><br></pre></td></tr></table></figure><ul><li>重要步骤</li></ul><blockquote><p>需要将firefox 与驱动程序（）加进环境变量。</p></blockquote><p>assert 插入调试。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;安装python&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;安装 selenium 库&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://rachpt.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://rachpt.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 FlexGet 订阅下载</title>
-    <link href="http://rachpt.github.io/2017/11/29/FlexGet%20PT%E8%AE%A2%E9%98%85/"/>
-    <id>http://rachpt.github.io/2017/11/29/FlexGet PT订阅/</id>
-    <published>2017-11-29T07:12:10.000Z</published>
-    <updated>2018-02-28T16:24:21.341Z</updated>
-    
-    <content type="html"><![CDATA[<p>FlexGet基于Python的一套订阅方案，看到PY就能想到其牛逼。<br><a id="more"></a></p><blockquote><p>此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求</p></blockquote><p>FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：<a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a> 。</p><ul><li><p>Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a> </p></li><li><p>按照官网方法 <a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<code>python2</code>  <code>python3</code> 。</p><ul><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -U pip setuptools</span><br></pre></td></tr></table></figure></li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flexget</span><br><span class="line">//有可能需要使用pip3,具体看自己环境</span><br></pre></td></tr></table></figure></li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flexget -V</span><br></pre></td></tr></table></figure></li></ul></li><li><p>至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</p></li></ul><hr><ul><li><p>配置FlexGet</p><ul><li><p>任务计划程序（<strong><em>我已经默认大家使用的win</em></strong>）添加任务，如下面两图。</p><p>​</p></li><li><p>使用1分钟即可，不要配置几个任务，因为运行一次大概需要20-40秒，其中操作使用vbs文件，文件如下写</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;) </span><br><span class="line"></span><br><span class="line">ws.run &quot;C:\Python35\Scripts\flexget.exe execute&quot;,vbhide</span><br><span class="line">//注意上面的路径， execute参数很重要。</span><br></pre></td></tr></table></figure></li><li><p>推荐直接在你的用户目录下新建<code>flexget</code>文件夹，然后将配置文件<code>config.yml</code> (自己建一个txt，改名即可)丢里面。</p></li><li><p><code>config.yml</code> 按照下面的代码填写即可快速设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line"> TTG-WiKi:</span><br><span class="line">  rss: https://totheglory.im/****</span><br><span class="line">  if:</span><br><span class="line">   - &quot;&apos;1080p&apos;  in title&quot;: reject</span><br><span class="line">   - &quot;&apos;WiKi&apos;  in title&quot;: accept</span><br><span class="line">  download: C:\FlexgetDownloads\</span><br><span class="line">  content_size:</span><br><span class="line">   min: 400</span><br><span class="line">   max: 60000</span><br><span class="line">   strict: no</span><br><span class="line">  free_space:</span><br><span class="line">   path: C:\</span><br><span class="line">   space: 900</span><br></pre></td></tr></table></figure></li><li><p>说面一下，注意使用空格（<strong><em>不能使用制表符</em></strong>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<code>download:</code> 后面是你的utorrent自动载入种子的目录，<code>content_size:</code> 正如其义，可用于控制种子体积。其它可以参考 <a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</p></li><li><p>UTorrent需要设置自动重文件夹载如torrent文件，如下图。</p><p>​</p></li></ul></li><li><p>一般来说，种子发布后，2-3分钟内可以实现自动下载，而使用utorrent自带的rss刷新时间最少为5分钟，而且无法自定义体积等其它高级筛选。更多可以参考 <a href="https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477" target="_blank" rel="noopener">https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477</a></p></li></ul><hr><p>今天看到公众号又增加了一个粉，于是发篇小笔记 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;FlexGet基于Python的一套订阅方案，看到PY就能想到其牛逼。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="flexget" scheme="http://rachpt.github.io/tags/flexget/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>firefox 切换更新通道</title>
-    <link href="http://rachpt.github.io/2017/11/29/Firefox%20%E6%9B%B4%E6%96%B0%E9%80%9A%E9%81%93%E5%88%87%E6%8D%A2/"/>
-    <id>http://rachpt.github.io/2017/11/29/Firefox 更新通道切换/</id>
-    <published>2017-11-29T01:23:34.000Z</published>
-    <updated>2018-03-02T08:57:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。</p><a id="more"></a><blockquote><p><strong>Mozilla Firefox</strong>（简称<strong>Firefox</strong>），中文俗称<strong>火狐</strong>（<a href="https://zh.wikipedia.org/wiki/%E8%AC%80%E6%99%BA%E4%B8%AD%E5%9C%8B" target="_blank" rel="noopener">中国大陆官方</a>有使用但未注册为商标），是一个<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开源</a>的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" target="_blank" rel="noopener">网页浏览器</a>，由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" target="_blank" rel="noopener">Mozilla基金会</a>及其子公司<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">Mozilla公司</a>开发。Firefox支持<a href="https://zh.wikipedia.org/wiki/Windows" target="_blank" rel="noopener">Windows</a>、<a href="https://zh.wikipedia.org/wiki/OS_X" target="_blank" rel="noopener">OS X</a>及<a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux</a>，其移动版支持<a href="https://zh.wikipedia.org/wiki/Android" target="_blank" rel="noopener">Android</a>及<a href="https://zh.wikipedia.org/wiki/Firefox_OS" target="_blank" rel="noopener">Firefox OS</a>，这些版本的Firefox使用<a href="https://zh.wikipedia.org/wiki/Gecko" target="_blank" rel="noopener">Gecko</a>来排版网页，Gecko是一个运行当前与预期之<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96" target="_blank" rel="noopener">网页标准</a>的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">排版引擎</a>，而在2015年发布的<a href="https://zh.wikipedia.org/wiki/Firefox_for_iOS" target="_blank" rel="noopener">Firefox for iOS</a>则非使用Gecko。</p><p>截至2016年1月，Firefox全球<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" target="_blank" rel="noopener">市占率</a>为9％至16%，为全球第二流行的网页浏览器。</p></blockquote><p>按更新频率大致可以这么排：ESR（42周），Release（6周），Beta（约一周），Nightly（每天），ESR是挺好的，但是Fx有个致命的缺点就是当扩展安装较多后，冷启动速度慢的令人发指，至于原因网上很多这方面的科学解释。现在更新的57版对冷启动速度有巨大提升，而插件兼容性方面对我影响不大，于是将所有的esr53.4升级到了57beta版（正式版当时还是56）。<br>由于每次更新fx都会导致lastpass这个插件无法保持自动登录信息，能让fx延迟更新或者不更新吗？是有办法的。</p><p>[64位版Frefox] 默认安装目录 <code>C:\Program Files\Mozilla Firefox\defaults\pref\channel-prefs.js</code> 下使用记事本（notepad）打开，将末尾部分的 <code>beta</code> 改成 <code>esr</code> 即可进入延长支持版本通道，或者<code>release</code> 进入普通发行版通道。如下图。</p><p>最后可以在设置里面禁用Firefox的自动更新。</p><p>文末附上 Firefox的官方FTP下载地址，再也不用担心下到中国版了……</p><p>http ://ftp.mozilla.org/pub/firefox/releases/ （去掉多余的空格）</p><p>我收藏的旧插件集，Fx 57大部分用不了了</p><p>https ://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/</p><hr><p>about:support 打开 配置目录</p><p>将 gmpopenh264.dll，gmpopenh264.info 这两个文件覆盖安装到 \gmp-gmpopenh264\1.6 目录下 ，版本号自己更新（在info文件中）</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="firefox" scheme="http://rachpt.github.io/tags/firefox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Acrobat 双页全屏显示</title>
-    <link href="http://rachpt.github.io/2017/11/28/Acrobat%20%E5%8F%8C%E9%A1%B5%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/"/>
-    <id>http://rachpt.github.io/2017/11/28/Acrobat 双页全屏显示/</id>
-    <published>2017-11-28T09:34:31.000Z</published>
-    <updated>2018-03-02T03:12:29.807Z</updated>
-    
-    <content type="html"><![CDATA[<p>我有一个大显示器，但是阅读pdf时，Acrobat DC (或者reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？<br><a id="more"></a><br><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6lzg1dbj21hc0u0djh.jpg" alt="acrobat1"></p><p>是的，可以。这里以Acrobat DC 为例。</p><blockquote><p><strong>Adobe Acrobat</strong>是由<a href="https://zh.wikipedia.org/wiki/Adobe_Systems" target="_blank" rel="noopener">Adobe Systems</a>所开发的电子文字处理软件集，可用于阅读、编辑、管理和共享<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>格式文档。</p><p>一般包含如下包：</p><ul><li><strong>Adobe Acrobat</strong>，包括专业版和标准版。用于对<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>文件进行编辑、共享和管理，需要购买，而3D版本，除了专业版的功能，另外也支持立体向量图片的转换。</li><li><strong>Acrobat Reader</strong>（2003年至2014年期间，曾使用Adobe Reader作为名称），用于阅读<a href="https://zh.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">PDF</a>文件，为免费发放。</li></ul></blockquote><ul><li><p>首先，我们需要设置页面显示为双页视图，具体如下图所示。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6mt3mqwj20go0diaag.jpg" alt="acrobat2"></p></li></ul><ul><li><p>然后，在 [首选项] - 快捷键[ Ctrl + K ]，或者从下面的位置进入。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6ppe4iej20at0gumxf.jpg" alt="acrobat3"></p></li></ul><ul><li><p>接着，在 [首选项] –&gt;(左侧)[ 全屏 ]–&gt;[ 全屏设置 ]–&gt;去掉 &lt;下图红框项&gt; 前面的勾。如下图。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6o2gvm2j20u00lcq4q.jpg" alt="acrobat4"></p></li></ul><ul><li><p>另外，如果你想开启Acrobat 的护眼模式(说白了也就是背景颜色)，可以设置一下 [辅助工具] 里面的 [文档颜色选项]，个人觉得这个不错——电脑管家的推荐色 [ R:  204  G: 232 B: 207 ]。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6n9es1xj20tc0k676c.jpg" alt="acrobat5"></p></li><li><p>最后，使用快捷键 [ Ctrl + L ] 进入全屏阅读文档，或者点击 [ 视图 ] –&gt; [ 全屏模式 ] 。</p></li></ul><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fox6qd3t0tj21hc0u0zpz.jpg" alt="acrobat6"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我有一个大显示器，但是阅读pdf时，Acrobat DC (或者reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？&lt;br&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="pdf" scheme="http://rachpt.github.io/tags/pdf/"/>
     
   </entry>
   

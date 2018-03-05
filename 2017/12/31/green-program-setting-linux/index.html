@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！返回上页');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="linux,ubuntu,mint," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="rachpt's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。## Linux 创建程序图标Debian 这类linux的软件包是 deb 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 xxx.sh 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到">
+<meta name="keywords" content="linux,ubuntu,mint">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 免安装程序配置">
+<meta property="og:url" content="http://rachpt.github.io/2017/12/31/green-program-setting-linux/index.html">
+<meta property="og:site_name" content="rachpt&#39;s Blog">
+<meta property="og:description" content="适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。## Linux 创建程序图标Debian 这类linux的软件包是 deb 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 xxx.sh 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png">
+<meta property="og:updated_time" content="2018-03-05T03:45:59.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux 免安装程序配置">
+<meta name="twitter:description" content="适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。## Linux 创建程序图标Debian 这类linux的软件包是 deb 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 xxx.sh 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到">
+<meta name="twitter:image" content="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'E1Y81O5J79',
+      apiKey: '076e64c110174b1744714f713e1edded',
+      indexName: 'search',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://rachpt.github.io/2017/12/31/green-program-setting-linux/"/>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "877b220f"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+  <title>Linux 免安装程序配置 | rachpt's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-109494468-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b3ba4d9faeb9517ea3fb043ffc1c1b7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">rachpt's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/notes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br />
+            
+            札记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rachpt.github.io/2017/12/31/green-program-setting-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Linux 免安装程序配置</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-31T23:26:05+08:00">
+                2017-12-31
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T11:45:59+08:00">
+                2018-03-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/实用/" itemprop="url" rel="index">
+                    <span itemprop="name">实用</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/实用/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/31/green-program-setting-linux/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/31/green-program-setting-linux/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/12/31/green-program-setting-linux/" class="leancloud_visitors" data-flag-title="Linux 免安装程序配置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  624
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><br>适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。<br><br><!--more--><br><br>## Linux 创建程序图标<br><br>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。<br><br>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：<br><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> mv <span class="hljs-operator">-f</span> pycharm-edu /opt/ <span class="hljs-comment" style="color: #999988; font-style: italic;"># 使用命令移动文件</span><br><br>    <span class="hljs-comment" style="color: #999988; font-style: italic;"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> touch /usr/share/applications/pycharm.desktop <span class="hljs-comment" style="color: #999988; font-style: italic;">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span><br>    <span class="hljs-built_in" style="color: #0086b3;">sudo</span> gedit /usr/share/applications/pycharm.desktop <span class="hljs-comment" style="color: #999988; font-style: italic;"># 在其中写如如下内容</span><br>    <code>&lt;/pre&gt;
+    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>[Desktop Entry]<br>    Version=1.0<br>    Name=pycharm #显示的名字<br>    Exec=/opt/pycharm-edu/bin/pycharm.sh # 软件路径<br>    Terminal=false<br>    Icon=/opt/pycharm-edu/bin/pycharm.png # 软件图标<br>    Type=Application<br>    Categories=Development # 软件分类<br>    <code>&lt;/pre&gt;
+    ![](http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-20-27屏幕截图.png) ![](http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-21-15屏幕截图.png)
+
+    保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。
+
+    ## 加入环境变量
+
+    方法一：用户主目录下的</code>.profile<code>或</code>.bashrc<code>文件（推荐）
+
+    登录到你的用户（非root），在终端输入：
+
+    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code><span class="hljs-built_in" style="color: #0086b3;">sudo</span> gedit ~/.profile <span class="hljs-comment" style="color: #999988; font-style: italic;">#(or .bashrc)</span><br>    <code>&lt;/pre&gt;
+
+    可以在此文件末尾加入PATH的设置如下：
+
+    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code><span class="hljs-keyword" style="color: #333333; font-weight: bold;">export</span> PATH=”<span class="hljs-variable" style="color: #008080;">$PATH</span>:your path1:your path2 …”<br>    <code>&lt;/pre&gt;
+
+    保存文件，注销再登录，变量生效。
+    该方式添加的变量只对当前用户有效。
+
+    方法二：在系统目录，进行类似操作。
+
+    &lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;</code>/etc/profile<br><br>    /etc /environment<br><br>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。<br><br></div><br><img src="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png" alt=""><br><br>&nbsp;<br><div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post-new.php"><br><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+IyBMaW51eCDlhY3lronoo4XnqIvluo/phY3nva48L3A+PHA+6YCC55So5LqO5Z+65LqOZGVi aW4g55qEIHVidW50dSDvvIzku6Xlj4ogbGludXggbWludO+8iOW8uueDiOaOqOiNkO+8ieOAgjwv cD48cD4jIyBMaW51eCDliJvlu7rnqIvluo/lm77moIc8L3A+PHA+6L+Z57G7bGludXjnmoTova/k u7bljIXmmK8gYGRlYmAg5ZCO57yA77yM6L+Z5piv5LiA56eN57G75Ly8IHdpbmRvd3Mg5LiL55qE IGV4ZSDlronoo4XljIXmlofku7bvvIzpmaTmraTkuYvlpJbvvIzov5jmnInkuIDnp43kuIDmlofk u7blpLnlvaLlvI/lrZjlnKjnmoTova/ku7bljIXvvIzlhbbkuK3nmoQgYHh4eC5zaGAg5bCx5piv 6L2v5Lu255qE5Y+v5omn6KGM5paH5Lu277yM57G75Ly85LiOIHdpbmRvd3Mg6L2v5Lu25a6J6KOF 5a6M5oiQ5ZCO5YW255uu5b2V5Lit55qEIGV4ZSDmlofku7bvvIjova/ku7blv6vmjbfmlrnlvI/l sLHmmK/pk77mjqXliLDov5nnsbvmlofku7bnmoTvvInvvIzov5nlsLHlpoLlkIwgd2luZG93cyDl ubPlj7DnmoTnu7/oibLlhY3lronoo4Xova/ku7bjgII8L3A+PHA+bGludXgg55So5oi36L2v5Lu2 5LiA6Iis5pS+5YiwIGAvb3B0L2Ag55uu5b2V77yM5LiL6Z2i5LulYHB5Y2hhcm0tZWR1YCDkuLrk vovvvJo8L3A+PHA+YGBgc2g8YnI+c3VkbyBtdiAtZiBweWNoYXJtLWVkdSAvb3B0LyAjIOS9v+eU qOWRveS7pOenu+WKqOaWh+S7tjwvcD48cD4jIOeEtuWQjuWIsCAvdXNyL3NoYXJlL2FwcGxpY2F0 aW9ucy8g55uu5b2V5LiL5Yib5bu6IC5kZXNrdG9wIOaWh+S7tjxicj5zdWRvIHRvdWNoIC91c3Iv c2hhcmUvYXBwbGljYXRpb25zL3B5Y2hhcm0uZGVza3RvcCAj5Yib5bu656m65paH5Lu277yM5b2T 54S25Lmf5Y+v5Lul5LiN5Yib5bu677yM5LiL6ams5LiA5q2l5L+d5a2Y5pe25Y+v5Lul5Yib5bu6 44CCPGJyPnN1ZG8gZ2VkaXQgL3Vzci9zaGFyZS9hcHBsaWNhdGlvbnMvcHljaGFybS5kZXNrdG9w ICMg5Zyo5YW25Lit5YaZ5aaC5aaC5LiL5YaF5a65PGJyPmBgYDwvcD48cD5gYGA8YnI+W0Rlc2t0 b3AgRW50cnldPGJyPlZlcnNpb249MS4wPGJyPk5hbWU9cHljaGFybSAj5pi+56S655qE5ZCN5a2X PGJyPkV4ZWM9L29wdC9weWNoYXJtLWVkdS9iaW4vcHljaGFybS5zaCAjIOi9r+S7tui3r+W+hDxi cj5UZXJtaW5hbD1mYWxzZTxicj5JY29uPS9vcHQvcHljaGFybS1lZHUvYmluL3B5Y2hhcm0ucG5n ICMg6L2v5Lu25Zu+5qCHPGJyPlR5cGU9QXBwbGljYXRpb248YnI+Q2F0ZWdvcmllcz1EZXZlbG9w bWVudCAjIOi9r+S7tuWIhuexuzxicj5gYGA8L3A+PHA+5L+d5a2Y5Y2z5Y+v77yM5aaC5p6c6ZyA 6KaB5Yqg5YWl546v5aKD5Y+Y6YeP77yI55u05o6l5ZyodGVybWluYWzkuK3ovpPlhaXova/ku7bl kI3lrZfvvIzljbPlj6/miZPlvIDova/ku7bvvInvvIzpnIDopoHov5vooYzlpoLkuIvmk43kvZzj gII8L3A+PHA+IyMg5Yqg5YWl546v5aKD5Y+Y6YePPC9wPjxwPuaWueazleS4gO+8mueUqOaIt+S4 u+ebruW9leS4i+eahGAucHJvZmlsZWDmiJZgLmJhc2hyY2Dmlofku7bvvIjmjqjojZDvvIk8L3A+ PHA+55m75b2V5Yiw5L2g55qE55So5oi377yI6Z2ecm9vdO+8ie+8jOWcqOe7iOerr+i+k+WFpe+8 mjwvcD48cD5gYGBzaDxicj5zdWRvIGdlZGl0IH4vLnByb2ZpbGUgIyhvciAuYmFzaHJjKTxicj5g YGA8L3A+PHA+5Y+v5Lul5Zyo5q2k5paH5Lu25pyr5bC+5Yqg5YWlUEFUSOeahOiuvue9ruWmguS4 i++8mjwvcD48cD5gYGBzaDxicj5leHBvcnQgUEFUSD3igJ0kUEFUSDp5b3VyIHBhdGgxOnlvdXIg cGF0aDIgLi4u4oCdPGJyPmBgYDwvcD48cD7kv53lrZjmlofku7bvvIzms6jplIDlho3nmbvlvZXv vIzlj5jph4/nlJ/mlYjjgII8YnI+6K+l5pa55byP5re75Yqg55qE5Y+Y6YeP5Y+q5a+55b2T5YmN 55So5oi35pyJ5pWI44CCPC9wPjxwPuaWueazleS6jO+8muWcqOezu+e7n+ebruW9le+8jOi/m+ih jOexu+S8vOaTjeS9nOOAgjwvcD48cD5gYGA8YnI+L2V0Yy9wcm9maWxlPC9wPjxwPi9ldGMgL2Vu dmlyb25tZW50PGJyPmBgYDwvcD48cD7lnKjnmbvlvZXml7Ys5pON5L2c57O757uf5a6a5Yi255So 5oi3546v5aKD5pe25L2/55So55qE56ys5LiA5Liq5paH5Lu2ICzmraTmlofku7bkuLrns7vnu5/n moTmr4/kuKrnlKjmiLforr7nva7njq/looPkv6Hmga8s5b2T55So5oi356ys5LiA5qyh55m75b2V 5pe2LOivpeaWh+S7tuiiq+aJp+ihjOOAguesrOS6jOS4quaWh+S7tiwg57O757uf5Zyo6K+75Y+W 5L2g6Ieq5bex55qEcHJvZmlsZeWJjSzorr7nva7njq/looPmlofku7bnmoTnjq/looPlj5jph4/j gII8L3A+">​</div><br></div>
+      
+    </div>
+    
+    
+    
+        
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+        ---------本文结束<i class="fa fa-paw"></i>感谢阅读
+        ---------
+        </div>
+    
+</div>
+
+    
+    </div>
+
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rachpt
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://rachpt.github.io/2017/12/31/green-program-setting-linux/" title="Linux 免安装程序配置">http://rachpt.github.io/2017/12/31/green-program-setting-linux/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用  <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank"><i class="fa fa-creative-commons"></i>CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+            <a href="/tags/ubuntu/" rel="tag"><i class="fa fa-tag"></i> ubuntu</a>
+          
+            <a href="/tags/mint/" rel="tag"><i class="fa fa-tag"></i> mint</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/23/自然辩证法/" rel="next" title="自然辩证法笔记">
+                <i class="fa fa-chevron-left"></i> 自然辩证法笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/03/材料物理答案/" rel="prev" title="材料物理答案">
+                材料物理答案 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif"
+                alt="rachpt" />
+            
+              <p class="site-author-name" itemprop="name">rachpt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rachpt" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://rachpt.iok.la/" title="MCP 课题组" target="_blank">MCP 课题组</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.sword.studio/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rachpt</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数&#58;</span>
+    
+    <span title="全站字数">30.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://rachpt.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
+
+
+<div>
+  <i class="fa fa-user-md"></i> 
+  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
+  <i class="fa fa-eye"></i> 
+  本站访客数：<span id="busuanzi_value_site_uv"></span> 
+</div>
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65362593";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <style type="text/css">
+  	.info{
+  	  visibility: hidden !important;
+	  height: 0 !important;
+	}
+	.txt-right{
+	  visibility: hidden !important;
+	  height: 0 !important;
+	}
+  </style>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz", "vi95fo0Sgs7LiKR9VcmKouba");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
