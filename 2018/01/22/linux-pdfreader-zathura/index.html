@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2018/01/zathura4.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2018/01/zathura3.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2018/01/zathura2.png">
-<meta property="og:updated_time" content="2018-03-05T05:05:50.931Z">
+<meta property="og:updated_time" content="2018-03-05T05:07:50.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下的PDF阅读软件zathura">
 <meta name="twitter:description" content="记录 zathura 的常用设置与技巧。">
@@ -388,7 +388,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:05:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:07:50+08:00">
                 2018-03-05
               </time>
             
@@ -471,7 +471,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  509
+                  491
                 </span>
               
 
@@ -593,13 +593,11 @@ GG 最后
 <pre><code>短命令书签 使用 `a letter or number` ，先按 m 键，然后按短书签名，创建；
 
 跳转先前的短书签，先按 `&apos;` 键，然后先前的字母或数字；
-
-## 关于复制问题
-
-&gt; I discovered that zathura is using the x11 primary selection as default instead of the actual clipboard. This can be changed by creating a `~/.config/zathura/zathurarc` file with the following content:
-</code></pre><blockquote>
-<pre><code>&lt;pre style=&quot;font-size: 1em; font-family: Consolas, Inconsolata, Courier, monospace; line-height: 1.2em; margin: 1.2em 0px;&quot;&gt;`set selection-clipboard clipboard
-</code></pre><p>具体见 <a href="https://github.com/zegervdv/homebrew-zathura/issues/5" target="_blank" rel="noopener">https://github.com/zegervdv/homebrew-zathura/issues/5</a></p>
+</code></pre><h2 id="关于复制问题"><a href="#关于复制问题" class="headerlink" title="关于复制问题"></a>关于复制问题</h2><blockquote>
+<p>I discovered that zathura is using the x11 primary selection as default instead of the actual clipboard. This can be changed by creating a <code>~/.config/zathura/zathurarc</code> file with the following content:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set selection-clipboard clipboard</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>具体见 <a href="https://github.com/zegervdv/homebrew-zathura/issues/5" target="_blank" rel="noopener">https://github.com/zegervdv/homebrew-zathura/issues/5</a></p>
 </blockquote>
 <p>部分参考 <a href="http://80x86.io/post/pdf-viewer-for-linuxer" target="_blank" rel="noopener">http://80x86.io/post/pdf-viewer-for-linuxer</a></p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1uxu17u1j20rm0nidic.jpg" alt="zathura-pic1"> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura4.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura3.png" alt=""> <img src="http://rachpt.top/wp-content/uploads/2018/01/zathura2.png" alt=""></p>
@@ -780,8 +778,17 @@ GG 最后
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -886,6 +893,22 @@ GG 最后
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于复制问题"><span class="nav-number">1.</span> <span class="nav-text">关于复制问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
