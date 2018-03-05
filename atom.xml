@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-05T10:00:43.465Z</updated>
+  <updated>2018-03-05T11:37:08.924Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>settings-for-next-theme</title>
+    <link href="https://rachpt.me/2018/03/05/settings-for-next-theme/"/>
+    <id>https://rachpt.me/2018/03/05/settings-for-next-theme/</id>
+    <published>2018-03-05T11:37:08.000Z</published>
+    <updated>2018-03-05T11:37:08.924Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>next 主题使用笔记——标签</title>
@@ -478,30 +500,6 @@
     
     
       <category term="comsol" scheme="https://rachpt.me/tags/comsol/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux 笔记</title>
-    <link href="https://rachpt.me/2017/12/03/linux%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.me/2017/12/03/linux笔记/</id>
-    <published>2017-12-02T16:00:00.000Z</published>
-    <updated>2018-03-01T10:00:58.953Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>如何计算文件哈希<br><code>md5sum filename</code> 即可,更多:</li></ul><a id="more"></a><ul><li><p>命令格式</p><p>  md5sum [OPTION]… [FILE]… </p><p>  命令选项</p><p>  -b 或 –binary :把输入文件作为二进制文件看待。<br>  -t 或 –text :把输入的文件作为文本文件看待（默认）。<br>  -c 或 –check :用来从文件中读取md5信息检查文件的一致性。(不细说了参见info)<br>  –status :这个选项和check一起使用,在check的时候，不输出，而是根据返回值表示检查结果。<br>  -w 或 –warn :在check的时候，检查输入的md5信息又没有非法的行，如果有则输出相应信息。</p><p>  例子<br>  生产一个文件的md5值，md5sum filename &gt; filename.md5</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;如何计算文件哈希&lt;br&gt;&lt;code&gt;md5sum filename&lt;/code&gt; 即可,更多:&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ubuntu" scheme="https://rachpt.me/categories/ubuntu/"/>
-    
-    
-      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
     
   </entry>
   
