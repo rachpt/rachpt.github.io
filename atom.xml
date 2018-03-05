@@ -184,9 +184,9 @@
       <category term="教程" scheme="http://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
-    
       <category term="PDF" scheme="http://rachpt.github.io/tags/PDF/"/>
+    
+      <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
@@ -315,9 +315,9 @@
     
       <category term="linux" scheme="http://rachpt.github.io/tags/linux/"/>
     
-      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
-    
       <category term="mint" scheme="http://rachpt.github.io/tags/mint/"/>
+    
+      <category term="ubuntu" scheme="http://rachpt.github.io/tags/ubuntu/"/>
     
   </entry>
   
