@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,263
+                  5,300
                 </span>
               
 
@@ -700,6 +700,8 @@
 <hr>
 <p>#文件共享</p>
 <h2 id="samba-文件共享服务"><a href="#samba-文件共享服务" class="headerlink" title="samba 文件共享服务"></a><strong>samba 文件共享服务</strong></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install samba   <span class="comment">#安装samba服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改配置文件</span></span><br><span class="line">sudo vi /etc/samba/smb.conf </span><br><span class="line"></span><br><span class="line"><span class="comment">#其中 ` ; ` 注释行，</span></span><br></pre></td></tr></table></figure>
+<p>使用 mount 挂载 samba 一直提示无权限，使用下面的命令，设置本地账户的smb密码</p>
+<p><code>sudo smbpasswd -a 现有用户</code>。</p>
 <hr>
 <h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>在终端输入以下命令进行字体安装：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget -O get-fonts.sh.zip http://files.cnblogs.com/DengYangjun/get-fonts.sh.zip</span><br><span class="line"></span><br><span class="line">unzip -o get-fonts.sh.zip 1&gt;/dev/null</span><br><span class="line"></span><br><span class="line">chmod a+x get-fonts.sh</span><br><span class="line"></span><br><span class="line">./get-fonts.sh</span><br></pre></td></tr></table></figure>
