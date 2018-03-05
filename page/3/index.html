@@ -799,7 +799,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T11:45:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:34:13+08:00">
                 2018-03-05
               </time>
             
@@ -882,7 +882,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  618
+                  654
                 </span>
               
 
@@ -898,7 +898,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -920,75 +920,16 @@
 
       
         
-          
-            <a id="more"></a>
-<p><span class="md-line md-end-block">FlexGet是基于Python的一套订阅方案，看到PY就能想到其牛逼。</span></p>
-<blockquote>
-<p><span class="md-line md-end-block"><span class="">此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求</span></span><br><span class="md-line md-end-block"><span class="">FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：</span><span spellcheck="false"><a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a></span> 。</span></p>
+          <blockquote>
+<p>此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。</p>
 </blockquote>
-<ul>
-<li><span class="md-line md-end-block">Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<span spellcheck="false"><a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a></span> </span></li>
-<li><p><span class="md-line md-end-block">按照官网方法 <span spellcheck="false"><a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a></span> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<span spellcheck="false"><code>python2</code></span> <span spellcheck="false"><code>python3</code></span> 。</span></p>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">python -m pip install -U pip setuptools</span></pre>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">pip install flexget</span>
-<span role="presentation">//有可能需要使用pip3,具体看自己环境</span></pre>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">flexget -V</span></pre>
-</li>
-<li><p><span class="md-line md-end-block">至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</span></p>
-<div class="md-hr md-end-block" tabindex="-1" contenteditable="false">
-
-</div></li>
-</ul>
-<hr>
-<p></p>
-<ul>
-<li><p><span class="md-line md-end-block">配置FlexGet</span></p>
-<ul>
-<li><span class="md-line md-end-block">任务计划程序（<span class=""><strong><em>我已经默认大家使用的win</em></strong></span>）添加任务，如下面图。</span><br><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_21_flexget1.png" alt=""></li>
-</ul>
-</li>
-<li><ul>
-<li><span class="md-line md-end-block">使用1分钟即可，不要配置几个任务，因为运行一次大概需要20-40秒，其中操作使用vbs文件，文件如下写</span><pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">Set ws = CreateObject("Wscript.Shell") </span>
-<span role="presentation">​</span>
-<span role="presentation">ws.run "C:\Python35\Scripts\flexget.exe execute",vbhide</span>
-<span role="presentation">//注意上面的路径， execute参数很重要。</span></pre>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><span class="md-line md-end-block">推荐直接在你的用户目录下新建<span spellcheck="false"><code>flexget</code></span>文件夹，然后将配置文件<span spellcheck="false"><code>config.yml</code></span> (自己建一个txt，改名即可)丢里面。</span></li>
-<li><span class="md-line md-end-block"><span spellcheck="false"><code>config.yml</code></span> 按照下面的代码填写即可快速设置</span><pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">tasks:</span>
-<span role="presentation"> TTG-WiKi:</span>
-<span role="presentation">  rss: https://totheglory.im/****</span>
-<span role="presentation">  if:</span>
-<span role="presentation">   - "'1080p'  in title": reject</span>
-<span role="presentation">   - "'WiKi'  in title": accept</span>
-<span role="presentation">  download: C:\FlexgetDownloads\</span>
-<span role="presentation">  content_size:</span>
-<span role="presentation">   min: 400</span>
-<span role="presentation">   max: 60000</span>
-<span role="presentation">   strict: no</span>
-<span role="presentation">  free_space:</span>
-<span role="presentation">   path: C:\</span>
-<span role="presentation">   space: 900</span>
-<span role="presentation">​</span></pre>
-</li>
-</ul>
-</li>
-<li><p><span class="md-line md-end-block">说明一下，注意使用空格（<span class=""><strong><em>不能使用制表符</em></strong></span>）严格对其，学过python就知道原因，rss就是你在PT站上面得到的个人RSS链接，<span spellcheck="false"><code>download:</code></span> 后面是你的utorrent自动载入种子的目录，<span spellcheck="false"><code>content_size:</code></span> 正如其义，可用于控制种子体积。其它可以参考 <span spellcheck="false"><a href="https://flexget.com/Plugins" target="_blank" rel="noopener">https://flexget.com/Plugins</a></span> 。这里感谢[珞樱-WHUPT]的AutoSeed配置文件详解。</span></p>
-</li>
-<li><span class="md-line md-end-block">UTorrent需要设置自动重文件夹载如torrent文件，如下图。</span><br><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_08_ut1.png" alt=""></li>
-</ul>
-<p><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_06_flexget2.png" alt=""></p>
-<ul>
-<li><span class="md-line md-end-block">一般来说，种子发布后，2-3分钟内可以实现自动下载，而使用utorrent自带的rss刷新时间最少为5分钟，而且无法自定义体积等其它高级筛选。更多可以参考 <span spellcheck="false"><a href="https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477" target="_blank" rel="noopener">https://pt.whu.edu.cn/forums.php?action=viewtopic&amp;topicid=2017&amp;page=p20477</a></span></span><div class="md-hr md-end-block" tabindex="-1" contenteditable="false">
-
-</div></li>
-</ul>
-<hr>
-<p><br><span class="md-line md-end-block">今天看到公众号又增加了一个粉，于是发篇小笔记 。</span></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/30/flexget-for-ut/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2779,7 +2720,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">25.6k</span>
+    <span title="全站字数">25.7k</span>
   
 </div>
 
