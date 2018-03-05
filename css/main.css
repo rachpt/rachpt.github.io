@@ -2050,7 +2050,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ccff49;
+  background: #a21260;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3330,4 +3330,25 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+* {
+  cursor: url("/images/sword2.ico"), auto !important;
+}
+:active {
+  cursor: url("/images/sword1.ico"), auto !important;
+}
+.daodream-launcher-button .daodream-launcher-maximized .daodream-launcher-with-initials {
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+#daodream-launcher {
+  opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+}
+.daodream-launcher-button:hover .daodream-launcher-maximized:hover .daodream-launcher-with-initials:hover {
+  opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
