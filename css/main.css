@@ -1974,8 +1974,6 @@ pre .javascript .function {
   (ase-out)动画播放的速度曲线为以低速结束 
   (1s)等待1秒然后开始动画 
   (1)动画播放次数(infinite为循环播放) ]*/
-  animation: mymove 5s infinite;
-  -webkit-animation: mymove 5s infinite; /* Safari 和 Chrome */
 /* 鼠标经过头像旋转360度 */
   -webkit-transition: -webkit-transform 1s ease-out;
   -moz-transition: -moz-transform 1s ease-out;
@@ -1985,6 +1983,8 @@ img:hover {
 /* 鼠标经过停止头像旋转 
   -webkit-animation-play-state:paused;
   animation-play-state:paused;*/
+  animation: mymove 2s infinite;
+  -webkit-animation: mymove 2s infinite;
 /* 鼠标经过头像旋转360度 */
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
@@ -2159,7 +2159,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e045d0;
+  background: #0a4e9e;
 }
 .links-of-blogroll {
   font-size: 13px;
