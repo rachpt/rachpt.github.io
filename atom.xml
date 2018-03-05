@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-05T09:46:25.006Z</updated>
+  <updated>2018-03-05T09:47:19.998Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -17,17 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
+    <title>next 主题使用笔记</title>
     <link href="https://rachpt.me/2018/03/05/test/"/>
     <id>https://rachpt.me/2018/03/05/test/</id>
     <published>2018-03-05T09:45:01.000Z</published>
-    <updated>2018-03-05T09:46:25.006Z</updated>
+    <updated>2018-03-05T09:47:19.998Z</updated>
     
-    <content type="html"><![CDATA[<p>测试   测试</p><a id="more"></a><blockquote class="blockquote-center"><p>文本居中引用</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录</p></blockquote><a id="more"></a><blockquote class="blockquote-center"><p>文本居中引用</p></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;测试   测试&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;记录&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
