@@ -107,7 +107,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg">
-<meta property="og:updated_time" content="2018-03-05T05:46:37.101Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg">
+<meta property="og:updated_time" content="2018-03-05T05:48:58.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 免安装程序配置">
 <meta name="twitter:description" content="给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
@@ -386,7 +387,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:46:37+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:48:58+08:00">
                 2018-03-05
               </time>
             
@@ -469,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  531
+                  528
                 </span>
               
 
@@ -512,7 +513,8 @@
 <a id="more"></a>
 <h1 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h1><p>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p>
 <p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop	 <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop 	<span class="comment">#在其中写如如下内容</span></span><br><span class="line"></span><br><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm 	<span class="comment">#显示的名字</span></span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh 	<span class="comment">#软件路径</span></span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png 	<span class="comment">#软件图标</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development 	<span class="comment">#软件分类</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop	 <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop 	<span class="comment">#在其中写如如下内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm 	<span class="comment">#显示的名字</span></span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh 	<span class="comment">#软件路径</span></span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png 	<span class="comment">#软件图标</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development 	<span class="comment">#软件分类</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg" alt="program-pic1"></p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg" alt="program-pic2"></p>
 <p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p>
@@ -523,7 +525,7 @@
 <p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>​    </p>
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure></p>
 <p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p>
-<p>![program-pic3<a href="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" target="_blank" rel="noopener"></a></p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" alt="program-pic3"></p>
 
       
     </div>
