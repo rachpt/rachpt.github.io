@@ -107,8 +107,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg">
-<meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png">
-<meta property="og:updated_time" content="2018-03-05T05:42:31.151Z">
+<meta property="og:updated_time" content="2018-03-05T05:44:31.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 免安装程序配置">
 <meta name="twitter:description" content="适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
@@ -387,7 +386,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:42:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T13:44:31+08:00">
                 2018-03-05
               </time>
             
@@ -470,7 +469,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  522
+                  524
                 </span>
               
 
@@ -519,14 +518,11 @@
 <p>配置用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐），</p>
 <p>登录到你的用户（非root），在终端输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile  <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure></p>
 <p>在文件末尾加入PATH的设置如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure></p>
-<p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。</p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。</p>
-<pre><code>/etc/profile
+<p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>​    </p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure></p>
+<p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p>
+<p>![program-pic3<a href="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" target="_blank" rel="noopener"></a></p>
 
-/etc /environment
-</code></pre><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p>
-<p><img src="http://rachpt.top/wp-content/uploads/2017/12/2017-12-31-23-23-18屏幕截图.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
     
