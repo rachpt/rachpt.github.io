@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_21_flexget1.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_08_ut1.png">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_22_06_flexget2.png">
-<meta property="og:updated_time" content="2018-03-05T06:34:13.912Z">
+<meta property="og:updated_time" content="2018-03-05T06:36:13.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用FlexGet订阅下载Torrent">
 <meta name="twitter:description" content="此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。">
@@ -387,7 +387,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:34:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T14:36:13+08:00">
                 2018-03-05
               </time>
             
@@ -470,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  654
+                  628
                 </span>
               
 
@@ -512,25 +512,25 @@
 </blockquote>
 <a id="more"></a>
 <p>FlexGet基于Python的一套订阅方案，看到PY就能想到其牛逼。</p>
-<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><blockquote>
-<p><span class="md-line md-end-block"><span class="">此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求</span></span><br> span class=”md-line md-end-block”&gt;<span class="">FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：</span><span spellcheck="false"><a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a></span> 。</p>
-</blockquote>
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><p>FlexGet所要求的Python环境为2.7或者3.5，（不支持3.6及其以上，具体自己官网瞧）官网：<a href="https://flexget.com/" target="_blank" rel="noopener">https://flexget.com/</a> 。</p>
 <ul>
-<li><span class="md-line md-end-block">Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<span spellcheck="false"><a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a></span> </span></li>
-<li><p><span class="md-line md-end-block">按照官网方法 <span spellcheck="false"><a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a></span> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<span spellcheck="false"><code>python2</code></span> <span spellcheck="false"><code>python3</code></span> 。</span></p>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">python -m pip install -U pip setuptools</span></pre>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">pip install flexget</span>
-<span role="presentation">//有可能需要使用pip3,具体看自己环境</span></pre>
-<pre class="md-fences md-end-block" lang="" contenteditable="false"><span role="presentation">flexget -V</span></pre>
+<li><p>Python环境安装，推荐3.5版64位的，安装时记得添加进环境变量。<a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a> </p>
 </li>
-<li><p><span class="md-line md-end-block">至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</span></p>
-<div class="md-hr md-end-block" tabindex="-1" contenteditable="false">
-
-</div></li>
+<li><p>按照官网方法 <a href="https://flexget.com/InstallWizard/Windows" target="_blank" rel="noopener">https://flexget.com/InstallWizard/Windows</a> 安装。其中注意，如果你之前已经同时安装了py2和py3，那你可能得百度一下自己修改一下命令，<code>python2</code>  <code>python3</code> 。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -U pip setuptools</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flexget</span><br><span class="line">//有可能需要使用pip3,具体看自己环境</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flexget -V</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>至此基于Python的FlexGet环境已经搭建好了。下面我们配置FlexGet的控制文件。</p>
+</li>
 </ul>
 <hr>
-<p></p>
-<ul>
+<h1 id="配置FlexGet"><a href="#配置FlexGet" class="headerlink" title="配置FlexGet"></a>配置FlexGet</h1><ul>
 <li><p><span class="md-line md-end-block">配置FlexGet</span></p>
 <ul>
 <li><span class="md-line md-end-block">任务计划程序（<span class=""><strong><em>我已经默认大家使用的win</em></strong></span>）添加任务，如下面图。</span><br><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_11_30_21_flexget1.png" alt=""></li>
@@ -879,7 +879,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置FlexGet"><span class="nav-number">2.</span> <span class="nav-text">配置FlexGet</span></a></li></ol></div>
             
 
           </div>
