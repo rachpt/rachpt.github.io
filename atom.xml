@@ -486,22 +486,29 @@
   </entry>
   
   <entry>
-    <title>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题</title>
-    <link href="https://rachpt.me/2017/12/02/%E8%A7%A3%E5%86%B3WAMP%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83%E5%90%8E%E5%90%8E%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://rachpt.me/2017/12/02/解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题/</id>
-    <published>2017-12-01T16:00:00.000Z</published>
-    <updated>2018-03-01T10:02:42.857Z</updated>
+    <title>越想越气——福利</title>
+    <link href="https://rachpt.me/2017/12/02/welfare-for-pt/"/>
+    <id>https://rachpt.me/2017/12/02/welfare-for-pt/</id>
+    <published>2017-12-02T14:54:23.000Z</published>
+    <updated>2018-03-05T08:15:40.863Z</updated>
     
-    <content type="html"><![CDATA[<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题<br>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：<br><a id="more"></a></p><ol><li><p>首先确定关闭了防火墙并且80端口没有被占用.</p></li><li><p>修改apache的httpd.conf文件，一共两处.</p></li></ol><h1 id="第一处"><a href="#第一处" class="headerlink" title="第一处"></a>第一处</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Options FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Order deny,allow</span><br><span class="line">Deny from all</span><br><span class="line">Satisfy all</span><br></pre></td></tr></table></figure><p><strong>修改为：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Options FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Order deny,allow</span><br><span class="line"># Deny from all</span><br><span class="line"></span><br><span class="line">Allow from all</span><br><span class="line">#允许所有访问</span><br><span class="line"></span><br><span class="line">Satisfy all</span><br></pre></td></tr></table></figure><h1 id="第二处"><a href="#第二处" class="headerlink" title="第二处"></a>第二处</h1><p>onlineoffline tag - don’t remove</p><p>Order Deny,Allow<br>Deny from all<br>Allow from 127.0.0.1</p><p>修改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">onlineoffline tag - don&apos;t remove</span><br><span class="line">Order Deny,Allow</span><br><span class="line">Deny from all</span><br><span class="line">Allow from 127.0.0.1</span><br><span class="line">Allow from all</span><br></pre></td></tr></table></figure></p><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">order deny,allow</span><br><span class="line">deny from none</span><br><span class="line">allow from all</span><br></pre></td></tr></table></figure></p><p>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>好心发个种子被傻X的Dupe规则删掉了，说的就是 HDChina （等）.</p><p>这里分享一个 PT 吸血方法。</p></blockquote><a id="more"></a><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1x3shbrpj20os08eq3a.jpg" alt="pm-pic1"> <img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1x4l1jzaj20os04f3yf.jpg" alt="PM-PIC2"></p><p><strong>如果你不知道我在说啥，请不要继续往后看了。</strong></p><h1 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h1><p>首先正常下载种子。</p><p>utorrent 开始下载，然后，按下图打开 <code>详情信息</code>。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1x6ufs8wj20z10c9jus.jpg" alt="ut-pic1"></p><p>待到连上足够多的用户后，有较快下载速度，进行后续，如果是冷们资源，可能此法无效。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1x8dwjwcj20z70idwgo.jpg" alt="ut-pic2"></p><p>如下，找到<code>伺服</code>，右键，<code>移除 tracker</code> 。此处使用此方法不会影响下载速度（<strong>下载完成之前</strong> <em>不要</em> 暂停、停止、断网等中断行为），这样 PT Tracker 就没法记录你这个种子的下载和上传流量了。如果你吝啬一点可以限制上传速度。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1xbppfadj20ys0cmjsu.jpg" alt="ut-pic3"></p><p>待到下载完成后，<code>右键删掉任务</code>。<strong>别</strong>手贱删数据。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1xcsb1vmj20z70fxtd7.jpg" alt="ut-pic4"></p><p>至此，教程结束。</p><hr><p>你会发现pt站只是记录你未完成该种，<span style="color: #ff0000;"><strong>我突然不想下来，怎么找，你来ban我啊，我又没使用作弊软件刷上传数据</strong></span>。</p><p>理论上越是热门的东西，速度越是无区别。</p><p>如果你不想有个未完成任务，你可以再上面的步骤完成后 假装辅种一下。如果你不会，就算了。也没人会查你，就算查又能怎样。 这是 tracker 的普遍漏洞。</p><p>现在你再也不用担心下载东西而使分享率下降，因为你的下载量不会再增加了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题&lt;br&gt;刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。解决问题方法如下：&lt;br&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;好心发个种子被傻X的Dupe规则删掉了，说的就是 HDChina （等）.&lt;/p&gt;
+&lt;p&gt;这里分享一个 PT 吸血方法。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
+      <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="php" scheme="https://rachpt.me/tags/php/"/>
+    
+      <category term="ut" scheme="https://rachpt.me/tags/ut/"/>
+    
+      <category term="pt" scheme="https://rachpt.me/tags/pt/"/>
     
   </entry>
   
