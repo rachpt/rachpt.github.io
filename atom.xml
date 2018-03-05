@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-05T11:39:23.909Z</updated>
+  <updated>2018-03-05T11:41:23.917Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="https://rachpt.me/2018/03/05/settings-for-next-theme/"/>
     <id>https://rachpt.me/2018/03/05/settings-for-next-theme/</id>
     <published>2018-03-05T11:37:08.000Z</published>
-    <updated>2018-03-05T11:39:23.909Z</updated>
+    <updated>2018-03-05T11:41:23.917Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>记录几个修改，方便以后升级主题后更新。</p></blockquote><a id="more"></a><h1 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h1>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录几个修改，方便以后升级主题后更新。</p></blockquote><p>目前 next 版本：6.0.5 。</p><a id="more"></a><h1 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h1><p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,插入 js 脚本：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (prompt(<span class="string">'请输入文章密码'</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span><br><span class="line">                alert(<span class="string">'密码错误！返回上页'</span>);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;记录几个修改，方便以后升级主题后更新。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;目前 next 版本：6.0.5 。&lt;/p&gt;
     
     </summary>
     
