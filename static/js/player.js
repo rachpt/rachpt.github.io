@@ -212,7 +212,7 @@
 
 	// add
     FirstLoad(currentTrack, localStorage.time);
-    if (sessionStorage.autoPlay == "true") {
+    if (sessionStorage.autoPlay == "false") {
         play()
     }
     if (localStorage.volume == undefined) {
