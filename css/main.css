@@ -2209,7 +2209,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b3ffac;
+  background: #f05569;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3508,12 +3508,17 @@ ul.breadcrumb li+li:last-child {
   -moz-opacity: 0.1;
   opacity: 0.1;
 }
+#daodream-launcher:hover {
+  opacity: 0.9 !important;
+  -moz-opacity: 0.9 !important;
+  opacity: 0.9 !important;
+}
 .daodream-launcher-button:hover,
 .daodream-launcher-maximized:hover,
 .daodream-launcher-with-initials:hover {
-  opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
+  opacity: 0.9 !important;
+  -moz-opacity: 0.9 !important;
+  opacity: 0.9 !important;
 }
 div.info,
 span.algolia-powered,
