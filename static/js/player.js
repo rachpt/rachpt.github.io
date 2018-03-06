@@ -312,7 +312,7 @@
             $('.ssBtn .adf').removeClass('on')
         }
     });
-    $("div.ssBtn").click()
+    // $("div.ssBtn").click()
 
     $("#player .cover").on('click', function () {
         isShuffle = !isShuffle;
