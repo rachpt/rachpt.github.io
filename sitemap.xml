@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rachpt.me/404.html</loc>
-    
-    <lastmod>2018-03-06T09:00:41.789Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.me/2018/03/05/test/</loc>
     
     <lastmod>2018-03-06T04:29:54.000Z</lastmod>
@@ -114,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/16/download-youtube-video/</loc>
+    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -129,13 +122,6 @@
   
   <url>
     <loc>https://rachpt.me/contact/index.html</loc>
-    
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -184,6 +170,13 @@
   </url>
   
   <url>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
@@ -191,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>https://rachpt.me/2017/11/16/download-youtube-video/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -199,6 +192,13 @@
   
   <url>
     <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -213,13 +213,6 @@
   
   <url>
     <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
