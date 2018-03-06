@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.0.5">
+
+
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'E1Y81O5J79',
+      apiKey: '076e64c110174b1744714f713e1edded',
+      indexName: 'search',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "877b220f"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  
+  <meta name="keywords" content="firefox," />
+
+
+<meta name="description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。&amp;gt; Mozilla Firefox（简称Firefox），中文俗称火狐（中国大陆官方有使用但未">
+<meta name="keywords" content="firefox">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Firefox 更新通道切换">
+<meta property="og:url" content="https://rachpt.me/2017/11/11/firefox-noupgrade/index.html">
+<meta property="og:site_name" content="rachpt&#39;s Blog">
+<meta property="og:description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。&amp;gt; Mozilla Firefox（简称Firefox），中文俗称火狐（中国大陆官方有使用但未">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_1.png">
+<meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_2.png">
+<meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_3.png">
+<meta property="og:updated_time" content="2018-03-05T03:45:59.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Firefox 更新通道切换">
+<meta name="twitter:description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。&amp;gt; Mozilla Firefox（简称Firefox），中文俗称火狐（中国大陆官方有使用但未">
+<meta name="twitter:image" content="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="rachpt's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://rachpt.me/2017/11/11/firefox-noupgrade/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>Firefox 更新通道切换 | rachpt's Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109494468-2');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b3ba4d9faeb9517ea3fb043ffc1c1b7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">rachpt's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/notes/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br />札记</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.me/2017/11/11/firefox-noupgrade/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Firefox 更新通道切换</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-11T00:04:16+08:00">2017-11-11</time>
+            
+
+            
+            
+              
+                
+              
+            
+
+            
+              
+              <span class="post-meta-divider">|</span>
+              
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T11:45:59+08:00">2018-03-05</time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/实用/" itemprop="url" rel="index"><span itemprop="name">实用</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/11/firefox-noupgrade/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/11/11/firefox-noupgrade/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/11/11/firefox-noupgrade/" class="leancloud_visitors" data-flag-title="Firefox 更新通道切换">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:01</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post.php?post=177&amp;action=edit"><br><br>用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，<!--more--><br>或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。<br><br>&gt; <strong>Mozilla Firefox</strong>（简称<strong>Firefox</strong>），中文俗称<strong>火狐</strong>（<a href="https://zh.wikipedia.org/wiki/%E8%AC%80%E6%99%BA%E4%B8%AD%E5%9C%8B" target="_blank" rel="noopener">中国大陆官方</a>有使用但未注册为商标），是一个<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开源</a>的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" target="_blank" rel="noopener">网页浏览器</a>，由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" target="_blank" rel="noopener">Mozilla基金会</a>及其子公司<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">Mozilla公司</a>开发。Firefox支持<a href="https://zh.wikipedia.org/wiki/Windows" target="_blank" rel="noopener">Windows</a>、<a href="https://zh.wikipedia.org/wiki/OS_X" target="_blank" rel="noopener">OS X</a>及<a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux</a>，其移动版支持<a href="https://zh.wikipedia.org/wiki/Android" target="_blank" rel="noopener">Android</a>及<a href="https://zh.wikipedia.org/wiki/Firefox_OS" target="_blank" rel="noopener">Firefox OS</a>，这些版本的Firefox使用<a href="https://zh.wikipedia.org/wiki/Gecko" target="_blank" rel="noopener">Gecko</a>来排版网页，Gecko是一个运行当前与预期之<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96" target="_blank" rel="noopener">网页标准</a>的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">排版引擎</a>，而在2015年发布的<a href="https://zh.wikipedia.org/wiki/Firefox_for_iOS" target="_blank" rel="noopener">Firefox for iOS</a>则非使用Gecko。<br>&gt;<br>&gt; 截至2016年1月，Firefox全球<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" target="_blank" rel="noopener">市占率</a>为9％至16%，为全球第二流行的网页浏览器。<br><br>按更新频率大致可以这么排：ESR（42周），Release（6周），Beta（约一周），Nightly（每天），ESR是挺好的，但是Fx有个致命的缺点就是当扩展安装较多后，冷启动速度慢的令人发指，至于原因网上很多这方面的科学解释。现在更新的57版对冷启动速度有巨大提升，而插件兼容性方面对我影响不大，于是将所有的esr53.4升级到了57beta版（正式版当时还是56）。<br>由于每次更新fx都会导致lastpass这个插件无法保持自动登录信息，能让fx延迟更新或者不更新吗？是有办法的。<br><br>[64位版Frefox] 默认安装目录 <code>C:\Program Files\Mozilla Firefox\defaults\pref\channel-prefs.js</code> 下使用记事本（notepad）打开，将末尾部分的 <code>beta</code> 改成 <code>esr</code> 即可进入延长支持版本通道，或者<code>release</code> 进入普通发行版通道。如下图。<br><br><img src="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_1.png" alt=""><br><br><img src="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_2.png" alt=""><br><br>最后可以在设置里面禁用Firefox的自动更新。<br><br><img src="http://rachpt.top/wp-content/uploads/2017/11/wx_firefox01_3.png" alt=""><br><br><em> </em> *<br><br>文末附上 Firefox的官方FTP下载地址，再也不用担心下到中国版了……<br><br><a href="http://ftp.mozilla.org/pub/firefox/releases/" target="_blank" rel="noopener"> http://ftp.mozilla.org/pub/firefox/releases/</a><br><br>我收藏的插件集，Fx 57部分用不了了<br><br><a href="https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/" target="_blank" rel="noopener">https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/</a><br><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+55So6L+HRmlyZWZveCjngavni5DmtY/op4jlmagp55qE56ul6Z6L6YO955+l6YGT77yMRmly ZWZveOWPr+aYr+S4quabtOaWsOeLgumtlO+8jOWmguaenOS9oOWPquaYr+S4gOS4qua1j+iniOWZ qOi9u+W6puS9v+eUqOiAhe+8jOaIluiAheaYr+aYr+WIq+S6uue7meS9oOaPkOS+m+WVpe+8iOmi hOijhe+8ieWwseeUqOWVpei/meenjVVzZXLvvIzpgqPkuYhGaXJlZm9455qE6auY6aKR5pu05paw 5a+55L2g5Y+v6IO95b2x5ZON5LiN5aSn44CC5aaC5p6c5piv5ZKM5oiR5LiA5qC377yM5Zyo5rWP 6KeI5Zmo5Lit6KOF5LqG5aSn6YeP55qE55Sf5Lqn5Yqb5bel5YW355qE6YeN5bqm77yI5Lyq5p6B 5a6i77yJ55So5oi377yMRljnmoTmm7TmlrDlj6/og73mmK/ngb7pmr7mgKfnmoTjgII8L3A+PHA+ Jmd0OyAqKk1vemlsbGEgRmlyZWZveCoq77yI566A56ewKipGaXJlZm94KirvvInvvIzkuK3mlofk v5fnp7AqKueBq+eLkCoq77yIW+S4reWbveWkp+mZhuWumOaWuV0oaHR0cHM6Ly96aC53aWtpcGVk aWEub3JnL3dpa2kvJUU4JUFDJTgwJUU2JTk5JUJBJUU0JUI4JUFEJUU1JTlDJThCKeacieS9v+eU qOS9huacquazqOWGjOS4uuWVhuagh++8ie+8jOaYr+S4gOS4qlvoh6rnlLHlj4rlvIDmupBdKGh0 dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFOCU4NyVBQSVFNyU5NCVCMSVFNSU4RiU4QSVF NSVCQyU4MCVFNiU5NCVCRSVFNiVCQSU5MCVFNCVCQiVBMyVFNyVBMCU4MSVFOCVCRCVBRiVFNCVC QiVCNinnmoRb572R6aG15rWP6KeI5ZmoXShodHRwczovL3poLndpa2lwZWRpYS5vcmcvd2lraS8l RTclQjYlQjIlRTklQTAlODElRTclODAlOEYlRTglQTYlQkQlRTUlOTklQTgp77yM55SxW01vemls bGHln7rph5HkvJpdKGh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpL01vemlsbGElRTUlOUYl QkElRTklODclOTElRTYlOUMlODMp5Y+K5YW25a2Q5YWs5Y+4W01vemlsbGHlhazlj7hdKGh0dHBz Oi8vemgud2lraXBlZGlhLm9yZy93aWtpL01vemlsbGElRTUlODUlQUMlRTUlOEYlQjgp5byA5Y+R 44CCRmlyZWZveOaUr+aMgVtXaW5kb3dzXShodHRwczovL3poLndpa2lwZWRpYS5vcmcvd2lraS9X aW5kb3dzKeOAgVtPUyBYXShodHRwczovL3poLndpa2lwZWRpYS5vcmcvd2lraS9PU19YKeWPiltM aW51eF0oaHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvTGludXgp77yM5YW256e75Yqo54mI 5pSv5oyBW0FuZHJvaWRdKGh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpL0FuZHJvaWQp5Y+K W0ZpcmVmb3ggT1NdKGh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpL0ZpcmVmb3hfT1Mp77yM 6L+Z5Lqb54mI5pys55qERmlyZWZveOS9v+eUqFtHZWNrb10oaHR0cHM6Ly96aC53aWtpcGVkaWEu b3JnL3dpa2kvR2Vja28p5p2l5o6S54mI572R6aG177yMR2Vja2/mmK/kuIDkuKrov5DooYzlvZPl iY3kuI7pooTmnJ/kuYtb572R6aG15qCH5YeGXShodHRwczovL3poLndpa2lwZWRpYS5vcmcvd2lr aS8lRTclQjYlQjIlRTklQTAlODElRTYlQTglOTklRTYlQkElOTYp55qEW+aOkueJiOW8leaTjl0o aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU2JThFJTkyJUU3JTg5JTg4JUU1JUJDJTk1 JUU2JTkzJThFKe+8jOiAjOWcqDIwMTXlubTlj5HluIPnmoRbRmlyZWZveCBmb3IgaU9TXShodHRw czovL3poLndpa2lwZWRpYS5vcmcvd2lraS9GaXJlZm94X2Zvcl9pT1Mp5YiZ6Z2e5L2/55SoR2Vj a2/jgII8YnI+Jmd0Ozxicj4mZ3Q7IOaIquiHszIwMTblubQx5pyI77yMRmlyZWZveOWFqOeQg1vl uILljaDnjoddKGh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNyVCNiVCMiVFOSVBMCU4 MSVFNyU4MCU4RiVFOCVBNiVCRCVFNSU5OSVBOCVFNyU5QSU4NCVFNCVCRCVCRiVFNyU5NCVBOCVF NSU4OCU4NiVFNCVCRCU4OCnkuLo577yF6IezMTYl77yM5Li65YWo55CD56ys5LqM5rWB6KGM55qE 572R6aG15rWP6KeI5Zmo44CCPC9wPjxwPuaMieabtOaWsOmikeeOh+Wkp+iHtOWPr+S7pei/meS5 iOaOku+8mkVTUu+8iDQy5ZGo77yJ77yMUmVsZWFzZe+8iDblkajvvInvvIxCZXRh77yI57qm5LiA 5ZGo77yJ77yMTmlnaHRsee+8iOavj+Wkqe+8ie+8jEVTUuaYr+aMuuWlveeahO+8jOS9huaYr0Z4 5pyJ5Liq6Ie05ZG955qE57y654K55bCx5piv5b2T5omp5bGV5a6J6KOF6L6D5aSa5ZCO77yM5Ya3 5ZCv5Yqo6YCf5bqm5oWi55qE5Luk5Lq65Y+R5oyH77yM6Iez5LqO5Y6f5Zug572R5LiK5b6I5aSa 6L+Z5pa56Z2i55qE56eR5a2m6Kej6YeK44CC546w5Zyo5pu05paw55qENTfniYjlr7nlhrflkK/l iqjpgJ/luqbmnInlt6jlpKfmj5DljYfvvIzogIzmj5Lku7blhbzlrrnmgKfmlrnpnaLlr7nmiJHl vbHlk43kuI3lpKfvvIzkuo7mmK/lsIbmiYDmnInnmoRlc3I1My405Y2H57qn5Yiw5LqGNTdiZXRh 54mI77yI5q2j5byP54mI5b2T5pe26L+Y5pivNTbvvInjgII8YnI+55Sx5LqO5q+P5qyh5pu05paw Znjpg73kvJrlr7zoh7RsYXN0cGFzc+i/meS4quaPkuS7tuaXoOazleS/neaMgeiHquWKqOeZu+W9 leS/oeaBr++8jOiDveiuqWZ45bu26L+f5pu05paw5oiW6ICF5LiN5pu05paw5ZCX77yf5piv5pyJ 5Yqe5rOV55qE44CCPC9wPjxwPjxiciBkYXRhLW1jZS1ib2d1cz0iMSI+PC9wPjxwPls2NOS9jeeJ iEZyZWZveF0g6buY6K6k5a6J6KOF55uu5b2VIGBDOlxQcm9ncmFtIEZpbGVzXE1vemlsbGEgRmly ZWZveFxkZWZhdWx0c1xwcmVmXGNoYW5uZWwtcHJlZnMuanNgIOS4i+S9v+eUqOiusOS6i+acrO+8 iG5vdGVwYWTvvInmiZPlvIDvvIzlsIbmnKvlsL7pg6jliIbnmoQgYGJldGFgIOaUueaIkCBgZXNy YCDljbPlj6/ov5vlhaXlu7bplb/mlK/mjIHniYjmnKzpgJrpgZPvvIzmiJbogIVgcmVsZWFzZWAg 6L+b5YWl5pmu6YCa5Y+R6KGM54mI6YCa6YGT44CC5aaC5LiL5Zu+44CCPC9wPjxwPjxiciBkYXRh LW1jZS1ib2d1cz0iMSI+PC9wPjxwPuacgOWQjuWPr+S7peWcqOiuvue9rumHjOmdouemgeeUqEZp cmVmb3jnmoToh6rliqjmm7TmlrDjgII8L3A+PHA+PGJyIGRhdGEtbWNlLWJvZ3VzPSIxIj48L3A+ PHA+5paH5pyr6ZmE5LiKIEZpcmVmb3jnmoTlrpjmlrlGVFDkuIvovb3lnLDlnYDvvIzlho3kuZ/k uI3nlKjmi4Xlv4PkuIvliLDkuK3lm73niYjkuobigKbigKY8L3A+PHA+aHR0cCA6Ly9mdHAubW96 aWxsYS5vcmcvcHViL2ZpcmVmb3gvcmVsZWFzZXMvIO+8iOWOu+aOieWkmuS9meeahOepuuagvO+8 iTwvcD48cD7miJHmlLbol4/nmoTml6fmj5Lku7bpm4bvvIxGeCA1N+Wkp+mDqOWIhueUqOS4jeS6 huS6hjwvcD48cD5odHRwcyA6Ly9hZGRvbnMubW96aWxsYS5vcmcvemgtQ04vZmlyZWZveC9jb2xs ZWN0aW9ucy9yYWNocHQvMS88L3A+">​</div><br></div>
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/29/Firefox 更新通道切换/" rel="bookmark">firefox 切换更新通道</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/19/upto-firefox-57/" rel="bookmark">顺利过渡到 Firefox 57</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/03/顺利过渡到 Firefox 57/" rel="bookmark">顺利过度到 firefox 57</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---------本文结束<i class="fa fa-paw"></i>感谢阅读---------</div>
+    
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>rachpt</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://rachpt.me/2017/11/11/firefox-noupgrade/" title="Firefox 更新通道切换">https://rachpt.me/2017/11/11/firefox-noupgrade/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/firefox/" rel="tag"># firefox</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/10/make-pdf/" rel="next" title="照片PDF优化成矢量版">
+                <i class="fa fa-chevron-left"></i> 照片PDF优化成矢量版
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/11/video-test/" rel="prev" title="第一个小视频">
+                第一个小视频 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif"
+                alt="rachpt" />
+            
+              <p class="site-author-name" itemprop="name">rachpt</p>
+              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/images/cc-by-nc.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://rachpt.iok.la/" title="MCP 课题组" target="_blank">MCP 课题组</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.sword.studio/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rachpt</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数&#58;</span>
+    
+    <span title="站点总字数">60k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总阅读时长&#58;</span>
+    
+    <span title="站点总阅读时长">1:01</span>
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div>
+  <i class="fa fa-user-md"></i> 
+  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
+  <i class="fa fa-eye"></i> 
+  本站访客数：<span id="busuanzi_value_site_uv"></span> 
+</div>
+
+        
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65362593";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.5"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.0.5"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz", "vi95fo0Sgs7LiKR9VcmKouba");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
+
+  
+</body>
+</html>
