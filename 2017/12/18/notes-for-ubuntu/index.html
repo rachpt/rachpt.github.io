@@ -704,7 +704,7 @@
 <h1 id="Git-配置-ssh"><a href="#Git-配置-ssh" class="headerlink" title="Git 配置 ssh"></a>Git 配置 ssh</h1><p>配置多用户 git  本地密钥。</p>
 <p>生成新的ssh keys：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用自定义名称</span></span><br><span class="line">/home/rachpt/.ssh/id_rsa_coding</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">/home/rachpt/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
-<p>复制，</p>
+<p>复制，<code>id_rsa_coding.pub</code> or <code>id_rsa_github.pub</code> 至相应网站 SSH 公钥 页面，望</p>
 <p>如果测试报错：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sign_and_send_pubkey: signing failed: agent refused operation</span><br></pre></td></tr></table></figure>
 <p>解决办法：</p>
