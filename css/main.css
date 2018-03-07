@@ -2209,7 +2209,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff38b4;
+  background: #4fffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3507,6 +3507,11 @@ ul.breadcrumb li+li:last-child {
   opacity: 0.1;
   -moz-opacity: 0.1;
   opacity: 0.1;
+}
+div.daodream-launcher-preview {
+  opacity: 0.9 !important;
+  -moz-opacity: 0.9 !important;
+  opacity: 0.9 !important;
 }
 #daodream-launcher:hover {
   opacity: 0.9 !important;
