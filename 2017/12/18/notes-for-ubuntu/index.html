@@ -472,7 +472,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">15k</span>
+                <span title="字数统计">16k</span>
               
 
               
@@ -486,7 +486,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:15</span>
+                <span title="阅读时长">0:16</span>
               
             </div>
           
@@ -701,7 +701,9 @@
 <p>查看ssh 状态</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps -e |grep ssh </span><br><span class="line"></span><br><span class="line"><span class="comment">#看到sshd则说明ssh-server已经安装启动</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="Git-配置-ssh"><a href="#Git-配置-ssh" class="headerlink" title="Git 配置 ssh"></a>Git 配置 ssh</h1><p>配置多用户 git  本地密钥</p>
+<h1 id="Git-配置-ssh"><a href="#Git-配置-ssh" class="headerlink" title="Git 配置 ssh"></a>Git 配置 ssh</h1><p>配置多用户 git  本地密钥。</p>
+<p>生成新的ssh keys：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br><span class="line"></span><br><span class="line">#使用自定义名称</span><br><span class="line">/home/rachpt/.ssh/id_rsa_coding</span><br><span class="line"></span><br><span class="line">/home/rachpt/.ssh/id_rsa_coding</span><br></pre></td></tr></table></figure>
 <p>报错：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sign_and_send_pubkey: signing failed: agent refused operation</span><br></pre></td></tr></table></figure>
 <p>解决办法：</p>
