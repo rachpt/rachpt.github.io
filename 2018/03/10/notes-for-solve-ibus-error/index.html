@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-10T09:17:52.714Z">
+<meta property="og:updated_time" content="2018-03-10T09:19:25.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="几个关于 iBus 输入法的记录">
 <meta name="twitter:description" content="Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。">
@@ -451,7 +451,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1k</span>
+                <span title="字数统计">1.1k</span>
               
 
               
@@ -506,7 +506,9 @@
 <p>如 <code>name</code> 的依赖缺少，就找 <code>libname-dev</code> 的包。</p></div>
 <p>其中 <code>libdb4.8-dev</code> 的部分 直接使用 <code>sudo apt install libdb5.3-dev</code>   解决的（mint 18.3）。</p>
 <p>关于<strong>libpinyin</strong>， 在 <a href="https://github.com/libpinyin/libpinyin" target="_blank" rel="noopener">github</a> 上下源码编译 make 老是报错，最后直接 <a href="https://sourceforge.net/projects/libpinyin/files/" target="_blank" rel="noopener">在此</a> 下载现成的解决的。</p>
-<p><code>./autogen.sh --prefix=/usr</code> 加上路径。默认在 <code>/usr/local</code> 目录下，只带sh are</p>
+<p>libpinyin 使用<code>./autogen.sh --prefix=/usr</code> 加上路径安装。默认在 <code>/usr/local</code> 目录下，只带 share 。装错 直接 rm 删掉即可。</p>
+<hr>
+<p>好气，转好后居然不能用。</p>
 
       
     </div>
