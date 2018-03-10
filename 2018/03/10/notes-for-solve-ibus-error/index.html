@@ -136,7 +136,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-10T08:43:52.747Z">
+<meta property="og:updated_time" content="2018-03-10T08:45:52.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-solve-ibus-error">
 <meta name="twitter:description" content="Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。">
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">203</span>
+                <span title="字数统计">509</span>
               
 
               
@@ -473,6 +473,10 @@
 <h1 id="Sunpinyin-无法打开首选项"><a href="#Sunpinyin-无法打开首选项" class="headerlink" title="Sunpinyin 无法打开首选项"></a>Sunpinyin 无法打开首选项</h1><p>Linux mint 切换输入法还是很简单的，Fictx 和 iBus 一键安装。<code>系统设置</code> –&gt; <code>语言</code> –&gt; <code>输入法</code> –&gt; <code>简体中文</code> 点击安装即可。切换需要重启系统。</p>
 <p>在终端中输入 </p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibus-setup <span class="comment">#设置 iBus</span></span><br></pre></td></tr></table></figure>
+<p>点击 Sunpinyin 首选项，报错如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/share//ibus-sunpinyin/setup/main.py"</span>, line 42, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    import ibus</span><br><span class="line">ImportError: No module named ibus</span><br></pre></td></tr></table></figure>
+<p>提示没有 ibus 模块，网上搜到的解决办法如下：</p>
+<p>从 <a href="https://ubuntu.pkgs.org/14.04/ubuntu-main-amd64/python-ibus_1.5.5-1ubuntu3_all.deb.html" target="_blank" rel="noopener">https://ubuntu.pkgs.org/14.04/ubuntu-main-amd64/python-ibus_1.5.5-1ubuntu3_all.deb.html</a> 下载</p>
 
       
     </div>
