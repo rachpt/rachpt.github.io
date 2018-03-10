@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-10T08:35:27.888Z</updated>
+  <updated>2018-03-10T08:37:52.754Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/"/>
     <id>https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/</id>
     <published>2018-03-10T08:35:27.000Z</published>
-    <updated>2018-03-10T08:35:27.888Z</updated>
+    <updated>2018-03-10T08:37:52.754Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus</p></blockquote><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
+      &lt;blockquote&gt;
+&lt;p&gt;Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -435,9 +433,9 @@
       <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="olex2" scheme="https://rachpt.me/tags/olex2/"/>
-    
       <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="olex2" scheme="https://rachpt.me/tags/olex2/"/>
     
   </entry>
   
