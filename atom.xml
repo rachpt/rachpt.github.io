@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-10T08:47:52.758Z</updated>
+  <updated>2018-03-10T08:51:52.709Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>notes-for-solve-ibus-error</title>
+    <title>几个关于 iBus 输入法的记录</title>
     <link href="https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/"/>
     <id>https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/</id>
     <published>2018-03-10T08:35:27.000Z</published>
-    <updated>2018-03-10T08:47:52.758Z</updated>
+    <updated>2018-03-10T08:51:52.709Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>Mendely 的标注功能只支持 iBus 的中午输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。</p></blockquote><a id="more"></a><h1 id="Sunpinyin-无法打开首选项"><a href="#Sunpinyin-无法打开首选项" class="headerlink" title="Sunpinyin 无法打开首选项"></a>Sunpinyin 无法打开首选项</h1><p>Linux mint 切换输入法还是很简单的，Fictx 和 iBus 一键安装。<code>系统设置</code> –&gt; <code>语言</code> –&gt; <code>输入法</code> –&gt; <code>简体中文</code> 点击安装即可。切换需要重启系统。</p><p>在终端中输入 </p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibus-setup <span class="comment">#设置 iBus</span></span><br></pre></td></tr></table></figure><p>点击 Sunpinyin 首选项，报错如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/share//ibus-sunpinyin/setup/main.py"</span>, line 42, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    import ibus</span><br><span class="line">ImportError: No module named ibus</span><br></pre></td></tr></table></figure><p>提示没有 ibus 模块，网上搜到的解决办法如下：</p><p>从 <a href="https://ubuntu.pkgs.org/14.04/ubuntu-main-amd64/python-ibus_1.5.5-1ubuntu3_all.deb.html" target="_blank" rel="noopener">https://ubuntu.pkgs.org/14.04/ubuntu-main-amd64/python-ibus_1.5.5-1ubuntu3_all.deb.html</a> 下载deb安装即可。</p><p>原地址 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=86&amp;t=468324&amp;sid=b60b121e7fa40bd2f22e6618d7918f6f&amp;start=15" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=86&amp;t=468324&amp;sid=b60b121e7fa40bd2f22e6618d7918f6f&amp;start=15</a></p>]]></content>
     
@@ -32,6 +32,8 @@
 &lt;/blockquote&gt;
     
     </summary>
+    
+      <category term="li n y" scheme="https://rachpt.me/categories/li-n-y/"/>
     
     
   </entry>
