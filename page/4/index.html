@@ -358,6 +358,223 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rachpt.me/2017/11/19/upto-firefox-57/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/19/upto-firefox-57/" itemprop="url">顺利过渡到 Firefox 57</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-19T14:52:09+08:00">2017-11-19</time>
+            
+
+            
+            
+              
+                
+              
+            
+
+            
+              
+              <span class="post-meta-divider">|</span>
+              
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T11:45:59+08:00">2018-03-05</time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/实用/" itemprop="url" rel="index"><span itemprop="name">实用</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/实用/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/19/upto-firefox-57/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/11/19/upto-firefox-57/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">1.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:01</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<div class="markdown-here-wrapper" data-md-url="http://rachpt.top/wp-admin/post.php?post=346&amp;action=edit"><br><br>Firefox 57可以说是火狐有史以来最棒的版本（我说的是速度），但是目前受限于<code>webextension</code>，很多以前实用的插件功能受限或者没有适配版。这里展示几个我遇到的问题与解决办法。<br><br><!--more--><br><br>## 新标签打开书签页<br><br>在firefox 57以前，如果你问有没有办法在新的标签打开书签、搜索、网址等，那么毫不犹豫会被推荐使用 <code>Tab Mix Plus</code> 这个插件，然而，现在的57版，该插件已经不再适用，因此还有办法延续我直接在新标签打开书签的习惯吗（别告诉我使用鼠标中键，我就喜欢左键）。<br>办法是有的，<br><br><code>1\. 在firefox 地址栏输入 about:config ，
+2\. 确定，搜索 browser.tabs.loadBookmarksInTabs ，将其值改为 true (双击即可)。</code><br><br>也许你发现在标签页中建单击就关闭该页，如果你想不想使用这个关闭，可以按上述的方法修改该值 <code>browser.bookmarks.openInTabClosesMenu</code> 为 <code>false</code> 。<br><br>## 全局的鼠标手势<br><br>用过 <code>FireGesture</code> 的都知道全局手势的吧便利性，在养成习惯后更是离不开，然而57版的Firefox可是不在支持这种牛逼的操作了，虽然 <code>Gesturefy</code> 有望成为其替代者，但是终究是无法全局的。这里推荐一款能够实现全局手势的扩展软件 <code>FireDoge</code> 。<br>具体可以详见 <a href="https://shuax.com/portfolio/firedoge/" target="_blank" rel="noopener">https://shuax.com/portfolio/firedoge/</a> ，唯一缺点就是可定制性弱了一点。<br><br>## 其它插件<br><br><code>Lastpass`</code>S3.Translator<code>ADblock Plus</code>ublock<code></code>Tampermonkey<code>等都已经有适配版了，几乎已经能够满足大多数用户的需求。具体下载连接可以在下面的合集中找到。
+
+[https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/](https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/1/)
+
+&lt;/div&gt;
+&amp;nbsp;
+
+* * *
+
+&lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://rachpt.top/wp-admin/post.php?post=346&amp;amp;action=edit&quot;&gt;
+
+至于移动版firefox，57版的冷启动速度已经正常到至少不会像以前版本让人感觉到明显的卡顿，但是网页加载渲染有些慢，而且没有手势（连下滑刷新都木有），或许后期有插件可以实现，目前还是继续使用我的小巧</code>Via`浏览器吧。<br><br><div style="height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; font-size: 0em; padding: 0; margin: 0;" title="MDH:PHA+RmlyZWZveCA1N+WPr+aYr+ivtOaYr+eBq+eLkOacieWPsuS7peadpeacgOajkueahOeJiOac rO+8iOaIkeivtOeahOaYr+mAn+W6pu+8ie+8jOS9huaYr+ebruWJjeWPl+mZkOS6jmB3ZWJleHRl bnNpb25g77yM5b6I5aSa5Lul5YmN5a6e55So55qE5o+S5Lu25Yqf6IO95Y+X6ZmQ5oiW6ICF5rKh 5pyJ6YCC6YWN54mI44CC6L+Z6YeM5bGV56S65Yeg5Liq5oiR6YGH5Yiw55qE6Zeu6aKY5LiO6Kej 5Yaz5Yqe5rOV44CCPC9wPjxwPiMjIOaWsOagh+etvuaJk+W8gOS5puetvumhtTwvcD48cD7lnKhm aXJlZm94IDU35Lul5YmN77yM5aaC5p6c5L2g6Zeu5pyJ5rKh5pyJ5Yqe5rOV5Zyo5paw55qE5qCH 562+5omT5byA5Lmm562+44CB5pCc57Si44CB572R5Z2A562J77yM6YKj5LmI5q+r5LiN54q56LGr 5Lya6KKr5o6o6I2Q5L2/55SoIGBUYWIgTWl4IFBsdXNgIOi/meS4quaPkuS7tu+8jOeEtuiAjO+8 jOeOsOWcqOeahDU354mI77yM6K+l5o+S5Lu25bey57uP5LiN5YaN6YCC55So77yM5Zug5q2k6L+Y 5pyJ5Yqe5rOV5bu257ut5oiR55u05o6l5Zyo5paw5qCH562+5omT5byA5Lmm562+55qE5Lmg5oOv 5ZCX77yI5Yir5ZGK6K+J5oiR5L2/55So6byg5qCH5Lit6ZSu77yM5oiR5bCx5Zac5qyi5bem6ZSu 77yJ44CCPC9wPjxwPuWKnuazleaYr+acieeahO+8jDwvcD48cD5gYGA8L3A+PHA+MS4g5ZyoZmly ZWZveCDlnLDlnYDmoI/ovpPlhaUgYWJvdXQ6Y29uZmlnIO+8jDxicj4yLiDnoa7lrprvvIzmkJzn tKIgYnJvd3Nlci50YWJzLmxvYWRCb29rbWFya3NJblRhYnMg77yM5bCG5YW25YC85pS55Li6IHRy dWUgKOWPjOWHu+WNs+WPrynjgII8L3A+PHA+YGBgPC9wPjxwPuS5n+iuuOS9oOWPkeeOsOWcqOag h+etvumhteS4reW7uuWNleWHu+WwseWFs+mXreivpemhte+8jOWmguaenOS9oOaDs+S4jeaDs+S9 v+eUqOi/meS4quWFs+mXre+8jOWPr+S7peaMieS4iui/sOeahOaWueazleS/ruaUueivpeWAvCBg YnJvd3Nlci5ib29rbWFya3Mub3BlbkluVGFiQ2xvc2VzTWVudWAg5Li6IGBmYWxzZWAg44CCPC9w PjxwPiMjIOWFqOWxgOeahOm8oOagh+aJi+WKvzwvcD48cD7nlKjov4cgYEZpcmVHZXN0dXJlYCDn moTpg73nn6XpgZPlhajlsYDmiYvlir/nmoTlkKfkvr/liKnmgKfvvIzlnKjlhbvmiJDkuaDmg6/l kI7mm7TmmK/nprvkuI3lvIDvvIznhLbogIw1N+eJiOeahEZpcmVmb3jlj6/mmK/kuI3lnKjmlK/m jIHov5nnp43niZvpgLznmoTmk43kvZznmoTkuobvvIzomb3nhLYgYEdlc3R1cmVmeWAg5pyJ5pyb 5oiQ5Li65YW25pu/5Luj6ICF77yM5L2G5piv57uI56m25piv5peg5rOV5YWo5bGA55qE44CC6L+Z 6YeM5o6o6I2Q5LiA5qy+6IO95aSf5a6e546w5YWo5bGA5omL5Yq/55qE5omp5bGV6L2v5Lu2IGBG aXJlRG9nZWAg44CCPC9wPjxwPuWFt+S9k+WPr+S7peivpuingSBodHRwczovL3NodWF4LmNvbS9w b3J0Zm9saW8vZmlyZWRvZ2UvIO+8jOWUr+S4gOe8uueCueWwseaYr+WPr+WumuWItuaAp+W8seS6 huS4gOeCueOAgjwvcD48cD4jIyDlhbblroPmj5Lku7Y8L3A+PHA+YExhc3RwYXNzYCBgUzMuVHJh bnNsYXRvcmAgYEFEYmxvY2sgUGx1c2AgYHVibG9ja2AgYFRhbXBlcm1vbmtleWAg562J6YO95bey 57uP5pyJ6YCC6YWN54mI5LqG77yM5Yeg5LmO5bey57uP6IO95aSf5ruh6Laz5aSn5aSa5pWw55So 5oi355qE6ZyA5rGC44CC5YW35L2T5LiL6L296L+e5o6l5Y+v5Lul5Zyo5LiL6Z2i55qE5ZCI6ZuG 5Lit5om+5Yiw44CCPC9wPjxwPmh0dHBzOi8vYWRkb25zLm1vemlsbGEub3JnL3poLUNOL2ZpcmVm b3gvY29sbGVjdGlvbnMvcmFjaHB0LzEvPC9wPjxwPi0tLS08L3A+PHA+6Iez5LqO56e75Yqo54mI ZmlyZWZveO+8jDU354mI55qE5Ya35ZCv5Yqo6YCf5bqm5bey57uP5q2j5bi45LqG6Iez5bCR5LiN 5Lya5YOP5Lul5YmN54mI5pys6K6p5Lq65oSf6KeJ5Yiw5piO5pi+55qE5Y2h6aG/77yM5L2G5piv 572R6aG15Yqg6L295riy5p+T5pyJ5Lqb5oWi77yM5rKh5pyJ5omL5Yq/77yI6L+e5LiL5ruR5Yi3 5paw6YO95pyo5pyJ77yJ77yM5oiW6K645ZCO5pyf5pyJ5o+S5Lu25Y+v5Lul5a6e546w77yM55uu 5YmN6L+Y5piv57un57ut5L2/55So5oiR55qE5bCP5benYFZpYWDmtY/op4jlmajlkKfjgII8L3A+">​</div><br></div>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rachpt.me/2017/11/17/python-for-data-analysis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2240,247 +2457,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rachpt.me/2017/11/10/materials-studio-super/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rachpt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rachpt's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/10/materials-studio-super/" itemprop="url">Materials Studio 超算步骤_精简版</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T08:30:14+08:00">2017-11-10</time>
-            
-
-            
-            
-              
-                
-              
-            
-
-            
-              
-              <span class="post-meta-divider">|</span>
-              
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-05T11:45:59+08:00">2018-03-05</time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/11/10/materials-studio-super/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/11/10/materials-studio-super/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">2.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">0:02</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <a id="more"></a>
-<h2 id="结构优化文件准备"><a href="#结构优化文件准备" class="headerlink" title="结构优化文件准备"></a>结构优化文件准备</h2><ol>
-<li>cif 文件按 <code>ms_castep</code> 命名（或者其他不带空格简单名字）；</li>
-<li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> , Optimize cell <code>yes</code> ; [Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files → yes ；</li>
-<li>在~Files→Documents→~CASTEP GeomOpt 复制 <code>~.cell</code> 和 <code>~.param</code> 文件到新文件夹 <code>~GeomOpt</code> 同时复制 <code>RunGeneral.sh &amp;amp; subGeneral</code> 到其中；</li>
-<li>设置 <code>subGeneral</code> 中 <code>ppn=?</code> 即是计算使用核数；</li>
-<li>打开<code>~.cell</code> 找到 %BLOCK SPECIES POT 中的 ~.usp 部分，在 Material Studio 安装目录路径 <code>C:\Program Files (x86)\Accelrys\Materials Studio 8.0\share\Resources\Quantum\Castep\Potentials\</code> 中复制所有需要的 到刚才的 <code>~GeomOpt</code> 中，至此结构优化文件准备已经完成。</li>
-</ol>
-<hr>
-<h2 id="超算部分-结构优化"><a href="#超算部分-结构优化" class="headerlink" title="超算部分 _结构优化"></a>超算部分 _结构优化</h2><ol>
-<li>需要使用的步骤，<code>dos2unix subGeneral RunGeneral.sh</code> 转换步骤，<code>chmod +x subGeneral RunGeneral.sh</code> ，可以使用 <code>Tab</code> 自动填充，<code>qsub subGeneral</code> 提交任务， <code>qstat</code> 开始任务， <code>bqueues</code> 查看所有运行、请求与剩余的核数，<code>qdel 任务ID号</code> 结束任务；</li>
-<li>下次在 <code>qstat</code> 无显示表示已经算完，但不知是否正常算完。<span style="background-color: #ffff99;"><strong>$JOBNAME.o$JOBID</strong></span> 标准输出,<strong><span style="background-color: #ff99cc;">$JOBNAME.e$JOBID</span></strong> 标准错误输出。</li>
-</ol>
-<hr>
-<h2 id="计算弹性常数"><a href="#计算弹性常数" class="headerlink" title="计算弹性常数"></a>计算弹性常数</h2><ol>
-<li>下载除 <code>~.check</code> 外的其他文件，复制粘贴并替换本地计算目录<code>~GeomOpt</code> ，在<code>MS</code> 中刷新<code>refresh</code> STP。</li>
-<li>打开<code>~.xsd</code> 文件，选送全部原子，<code>CASTEP Analysis</code> → <code>Structure</code> →<code>Upadte</code> ；取消原子选中，<code>CASTEP Calculation</code> →Task <code>Elastic Constants</code> → <code>Files</code> ，Save。</li>
-<li>根据右侧显示的<code>~.param</code> <code>ms_castep_cij__ii__jj.param</code> 修改<code>subGeneral_cij.cij</code> 中的循环次数，比最大的数大1。</li>
-<li>复制文件到<code>ms_castep_Cij</code> ，所有原 <code>Cij</code>文件夹里面的 <code>~.cel</code> <code>~.param</code> 文件，以及<code>~GeomOpt</code> 里面的  <code>~.usp</code> <code>~.sh</code> ，以及刚才修改的<code>subGeneral_cij.cij</code> 。</li>
-<li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<code>不要使用空格，否者出现 \</code>  ，<code>chmod +x subGeneral_cij.cij RunGeneral.sh</code>  以及 <code>dos2unix subGeneral_cij.cij RunGeneral.sh</code> ，<code>ls</code> 这两出现绿色（或其他）表示已经转码了，<code>qsub subGeneral_cij.cij</code> 提交任务，<code>qstat</code> 开始任务。</li>
-</ol>
-<hr>
-<h2 id="数据处理部分"><a href="#数据处理部分" class="headerlink" title="数据处理部分"></a>数据处理部分</h2><ol>
-<li>同样，下载除 <code>~.check</code> 外的其他文件，覆盖到原本地目录，找到并打开<code>ma_castep.castep</code> 文件，也就是总的计算结果。</li>
-<li>使用<code>CASTEP Analysis</code> → <code>Elastic constants</code> → <code>Calculate</code> 。</li>
-<li>右侧生成 <code>ma_castep Elastic Contants.txt</code> 文件包含计算得到的弹性常数等信息。</li>
-<li>复制其中的<code>Elastic Stiffness Constants Cij</code> 矩阵到计算用的matlab程序包data内。</li>
-</ol>
-<hr>
-<h1 id="使用-Matlab-进一步计算"><a href="#使用-Matlab-进一步计算" class="headerlink" title="使用 Matlab 进一步计算"></a>使用 Matlab 进一步计算</h1><ol>
-<li>导入数据，<code>Input.m</code> 运行[F9] ，<code>ElasticConst3D.m</code>  <code>ElasticConst2D.m</code>  Plot 画图，<code>YoungsModulus.m</code> 计算 Youngs Modulus。</li>
-<li>具体见 &gt;  User’s Guide for ElasticConst 。<br>&nbsp;</li>
-</ol>
-<p><span style="font-size: 18pt;"><strong>完整原版教程：</strong></span></p>
-<hr>
-<p>[reply]<a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">点击跳转到下载页面</a>[/reply]</p>
-<hr>
-<p>&nbsp;</p>
-<p>2017-12-14 更新</p>
-<p>MS 如果不幸遇到下面的错误提示，</p>
-<p><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png" alt=""></p>
-<p>原因是： <strong>文件路径中使用了中文字符所致</strong>。</p>
-<p>解决办法： 使用非中文路径。</p>
-<p>&nbsp;</p>
-<div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 695px; top: 587px; opacity: 0.75;"><br><div title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="朗读"></div><br><div id="s3gt_translate_tooltip_mini_copy" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="复制到剪贴板"></div><br></div>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2532,7 +2508,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -3074,7 +3050,7 @@
       else if (!isArchive && !isCategory && !isTag) { //is index page
         var titles = [] //array to titles
 
-        var postsstr = 'titles.push("《利用Python进行数据分析》");titles.push("高等量子力学_打印版笔记");titles.push("高等统计物理_打印版笔记");titles.push("教育网IPV6下载YouTube视频");titles.push("我的安卓我做主");titles.push("张维为：中国信心");titles.push("第一个小视频");titles.push("Firefox 更新通道切换");titles.push("照片PDF优化成矢量版");titles.push("Materials Studio 超算步骤_精简版");' //if you have a better way to get titles of posts, please change it
+        var postsstr = 'titles.push("顺利过渡到 Firefox 57");titles.push("《利用Python进行数据分析》");titles.push("高等量子力学_打印版笔记");titles.push("高等统计物理_打印版笔记");titles.push("教育网IPV6下载YouTube视频");titles.push("我的安卓我做主");titles.push("张维为：中国信心");titles.push("第一个小视频");titles.push("Firefox 更新通道切换");titles.push("照片PDF优化成矢量版");' //if you have a better way to get titles of posts, please change it
         eval(postsstr)
 
         var promises = titles.map(function (title) {

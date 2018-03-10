@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-06T04:17:58.000Z</updated>
+  <updated>2018-03-10T08:35:27.888Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>notes-for-solve-ibus-error</title>
+    <link href="https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/"/>
+    <id>https://rachpt.me/2018/03/10/notes-for-solve-ibus-error/</id>
+    <published>2018-03-10T08:35:27.000Z</published>
+    <updated>2018-03-10T08:35:27.888Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>MAterials Studio 迭代次数设置</title>
@@ -470,37 +492,6 @@
     
     
       <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMSOL 简要笔记</title>
-    <link href="https://rachpt.me/2017/12/04/COMSOL%20%E7%AE%80%E8%A6%81%E7%AC%94%E8%AE%B0/"/>
-    <id>https://rachpt.me/2017/12/04/COMSOL 简要笔记/</id>
-    <published>2017-12-04T01:12:45.000Z</published>
-    <updated>2018-02-28T16:10:02.008Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="COMSOL-简单模拟声子晶体步骤"><a href="#COMSOL-简单模拟声子晶体步骤" class="headerlink" title="COMSOL 简单模拟声子晶体步骤"></a>COMSOL 简单模拟声子晶体步骤</h1><ul><li>定义</li></ul><p>参数设置</p><ul><li>几何</li></ul><p>几何模型</p><a id="more"></a><ul><li>材料</li></ul><p>计算的材料选择</p><ul><li>物理场</li></ul><p>其中 边界条件选择尤为重要</p><ul><li>网格</li></ul><p>网格</p><ul><li>计算</li></ul><p>后续计算</p><ul><li>结束</li></ul><p>一切完成，导出数据</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;COMSOL-简单模拟声子晶体步骤&quot;&gt;&lt;a href=&quot;#COMSOL-简单模拟声子晶体步骤&quot; class=&quot;headerlink&quot; title=&quot;COMSOL 简单模拟声子晶体步骤&quot;&gt;&lt;/a&gt;COMSOL 简单模拟声子晶体步骤&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;定义&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;参数设置&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;几何&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;几何模型&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="软件" scheme="https://rachpt.me/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="教程" scheme="https://rachpt.me/categories/%E8%BD%AF%E4%BB%B6/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="comsol" scheme="https://rachpt.me/tags/comsol/"/>
     
   </entry>
   
