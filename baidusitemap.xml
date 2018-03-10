@@ -310,17 +310,21 @@
 
     
   <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        <title>高等量子力学_打印版笔记</title>
+        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
         
+        <tag>课件</tag>
+         
+        <tag>高亮</tag>
+         
          
            
              
-              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -328,16 +332,14 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
+    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        <title>照片PDF优化成矢量版</title>
+        <pubTime>2017-11-10T01:29:17.000Z</pubTime>
         
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
+        <tag>PDF</tag>
          
          
            
@@ -350,16 +352,37 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
+        <title>顺利过渡到 Firefox 57</title>
+        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
         
-        <tag>课件</tag>
+        <tag>firefox</tag>
          
-        <tag>高亮</tag>
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+             
+              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>《利用Python进行数据分析》</title>
+        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
+        
+        <tag>python</tag>
          
          
            
@@ -392,89 +415,6 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>《利用Python进行数据分析》</title>
-        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>顺利过渡到 Firefox 57</title>
-        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>京东预售商品加入购物车</title>
-        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
-        
-        <tag>京东</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>照片PDF优化成矢量版</title>
-        <pubTime>2017-11-10T01:29:17.000Z</pubTime>
-        
-        <tag>PDF</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rachpt.me/2017/11/10/acrobat-2page/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -495,19 +435,41 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
+    <loc>https://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>Firefox 更新通道切换</title>
-        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
+        <title>我的研究生阶段该如何度过？</title>
+        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
         
-        <tag>firefox</tag>
+        <tag>忙</tag>
+         
+        <tag>规划</tag>
          
          
            
              
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>京东预售商品加入购物车</title>
+        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
+        
+        <tag>京东</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -557,6 +519,24 @@
 
     
   <url>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/10/materials-studio-super/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -570,28 +550,6 @@
            
              
               <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/20/my-graduate-stage/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>我的研究生阶段该如何度过？</title>
-        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-        <tag>规划</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -614,6 +572,48 @@
            
              
               <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>搭建一个方便的多平台笔记方案</title>
+        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        
+        <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>Firefox 更新通道切换</title>
+        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
+        
+        <tag>firefox</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>
