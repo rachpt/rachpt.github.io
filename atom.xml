@@ -243,9 +243,9 @@
       <category term="教程" scheme="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
-    
       <category term="PDF" scheme="https://rachpt.me/tags/PDF/"/>
+    
+      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
     
   </entry>
   
@@ -437,9 +437,9 @@
       <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="olex2" scheme="https://rachpt.me/tags/olex2/"/>
+    
+      <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
