@@ -719,7 +719,8 @@
 <hr>
 <h1 id="自动挂载"><a href="#自动挂载" class="headerlink" title="自动挂载"></a>自动挂载</h1><p>linux 设置开机自动挂载硬盘，网路空间</p>
 <p>首先使用：</p>
-<p>‵‵</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo blkid <span class="comment">#查看硬盘的格式，以及设备名。</span></span><br><span class="line"><span class="comment"># TYPE="ext4" 等。</span></span><br></pre></td></tr></table></figure>
+<p>编辑 <code>/</code></p>
 <h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>在终端输入以下命令进行字体安装：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget -O get-fonts.sh.zip http://files.cnblogs.com/DengYangjun/get-fonts.sh.zip</span><br><span class="line"></span><br><span class="line">unzip -o get-fonts.sh.zip 1&gt;/dev/null</span><br><span class="line"></span><br><span class="line">chmod a+x get-fonts.sh</span><br><span class="line"></span><br><span class="line">./get-fonts.sh</span><br></pre></td></tr></table></figure>
 <p>如果要删除已下载的字体安装脚本，执行以下命令：</p>
