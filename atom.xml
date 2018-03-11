@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-11T12:29:33.853Z</updated>
+  <updated>2018-03-11T12:31:33.834Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.me/2018/03/11/linux-allow-numlock-on/"/>
     <id>https://rachpt.me/2018/03/11/linux-allow-numlock-on/</id>
     <published>2018-03-11T12:19:08.000Z</published>
-    <updated>2018-03-11T12:29:33.853Z</updated>
+    <updated>2018-03-11T12:31:33.834Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Linux mint 设置开机自动打开数字键盘锁 numlock。</p></blockquote><a id="more"></a><p>因为开机密码是用的数字，每次开机或者重起系统后输入密码前总是需要手动打开Numlock开关，很麻烦，还没有指示器。于是想到让其开机自动打开省事。</p><h1 id="linux-mint-设置"><a href="#linux-mint-设置" class="headerlink" title="linux mint 设置"></a>linux mint 设置</h1><p>对于linux mint ，在小<code>系统设置</code>  –&gt; <code>登录窗口</code> –&gt; <code>设置</code> 中，有激活 numlock 开关，但是是不可用状态。</p><p>原因是需要安装一个软件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install numlockx <span class="comment">#安装好后，可能需要重起系统</span></span><br></pre></td></tr></table></figure><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp95h52f3zj20hu0fbmxt.jpg" alt="pic"></p><p>设置好后，重起即可看到效果。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Linux mint 设置开机自动打开数字键盘锁 numlock。</p></blockquote><a id="more"></a><p>因为开机密码是用的数字，每次开机或者重起系统后输入密码前总是需要手动打开Numlock开关，很麻烦，还没有指示器。于是想到让其开机自动打开省事。</p><h1 id="linux-mint-设置"><a href="#linux-mint-设置" class="headerlink" title="linux mint 设置"></a>linux mint 设置</h1><p>对于linux mint ，在小<code>系统设置</code>  –&gt; <code>登录窗口</code> –&gt; <code>设置</code> 中，有激活 numlock 开关，但是是不可用状态。</p><p>原因是需要安装一个软件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install numlockx <span class="comment">#安装好后，可能需要重起系统</span></span><br></pre></td></tr></table></figure><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp95h52f3zj20hu0fbmxt.jpg" alt="pic"></p><p>设置好后，重起即可看到效果。</p><p>或则编辑 lightdm 的配置文件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">allow-guest=<span class="literal">false</span></span><br><span class="line">greeter-show-manual-login=<span class="literal">false</span></span><br><span class="line">greeter-hide-users=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">greeter-setup-script=/usr/bin/numlockx on <span class="comment">#这一行自己加的，其他是设置时自动加的</span></span><br></pre></td></tr></table></figure><p>这样和设置 就</p>]]></content>
     
     <summary type="html">
     
