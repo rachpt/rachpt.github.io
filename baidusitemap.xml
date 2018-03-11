@@ -387,6 +387,68 @@
 
     
   <url>
+    <loc>https://rachpt.me/2017/11/10/acrobat-2page/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>Acrobat 双页全屏显示</title>
+        <pubTime>2017-11-09T23:51:47.000Z</pubTime>
+        
+        <tag>PDF</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>搭建一个方便的多平台笔记方案</title>
+        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        
+        <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>《利用Python进行数据分析》</title>
+        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -420,68 +482,6 @@
            
              
               <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>《利用Python进行数据分析》</title>
-        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/10/acrobat-2page/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>Acrobat 双页全屏显示</title>
-        <pubTime>2017-11-09T23:51:47.000Z</pubTime>
-        
-        <tag>PDF</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/16/download-youtube-video/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>教育网IPV6下载YouTube视频</title>
-        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
-        
-        <tag>IPV6</tag>
-         
-        <tag>YouTube</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -549,21 +549,22 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
+    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        <title>顺利过渡到 Firefox 57</title>
+        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
         
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
+        <tag>firefox</tag>
          
          
            
              
               <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+             
+              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -586,29 +587,6 @@
            
              
               <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>顺利过渡到 Firefox 57</title>
-        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -649,6 +627,28 @@
            
              
               <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/16/download-youtube-video/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>教育网IPV6下载YouTube视频</title>
+        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
+        
+        <tag>IPV6</tag>
+         
+        <tag>YouTube</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
