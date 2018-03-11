@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://rachpt.me/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
-    <lastmod>2018-03-11T15:39:23.000Z</lastmod>
+    <lastmod>2018-03-11T16:02:05.000Z</lastmod>
     <data>
         <display>
         <title>努比亚 Z11 mini 换电池</title>
@@ -387,34 +387,12 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高亮</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>顺利过渡到 Firefox 57</title>
-        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
+        <title>Firefox 更新通道切换</title>
+        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
         
         <tag>firefox</tag>
          
@@ -422,29 +400,6 @@
            
              
               <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>《利用Python进行数据分析》</title>
-        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -472,6 +427,26 @@
 
     
   <url>
+    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>《利用Python进行数据分析》</title>
+        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/10/acrobat-2page/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -485,6 +460,29 @@
            
              
               <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/19/upto-firefox-57/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>顺利过渡到 Firefox 57</title>
+        <pubTime>2017-11-19T06:52:09.000Z</pubTime>
+        
+        <tag>firefox</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+             
+              <breadCrumb title="教程" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -554,6 +552,24 @@
 
     
   <url>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -576,19 +592,21 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
+    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>Firefox 更新通道切换</title>
-        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
+        <title>高等量子力学_打印版笔记</title>
+        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
         
-        <tag>firefox</tag>
+        <tag>课件</tag>
+         
+        <tag>高亮</tag>
          
          
            
              
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -607,24 +625,6 @@
          
         <tag>规划</tag>
          
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
          
            
              
