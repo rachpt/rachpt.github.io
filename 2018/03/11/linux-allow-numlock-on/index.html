@@ -138,7 +138,7 @@
 <meta property="og:description" content="Linux mint 设置开机自动打开数字键盘锁 numlock。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp95h52f3zj20hu0fbmxt.jpg">
-<meta property="og:updated_time" content="2018-03-11T12:37:26.577Z">
+<meta property="og:updated_time" content="2018-03-11T12:39:05.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 设置开机自动打开数字小键盘">
 <meta name="twitter:description" content="Linux mint 设置开机自动打开数字键盘锁 numlock。">
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">470</span>
+                <span title="字数统计">515</span>
               
 
               
@@ -498,8 +498,10 @@
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp95h52f3zj20hu0fbmxt.jpg" alt="pic"></p>
 <p>设置好后，重起即可看到效果。</p>
 <p>或则编辑 lightdm 的配置文件：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">allow-guest=<span class="literal">false</span></span><br><span class="line">greeter-show-manual-login=<span class="literal">false</span></span><br><span class="line">greeter-hide-users=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">greeter-setup-script=/usr/bin/numlockx on <span class="comment">#这一行自己加的，其他是设置时自动加的</span></span><br></pre></td></tr></table></figure>
-<p>这样等同于 设置 激活numlock 。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/lightdm/lightdm.conf</span><br></pre></td></tr></table></figure>
+<p>添加新行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">allow-guest=<span class="literal">false</span></span><br><span class="line">greeter-show-manual-login=<span class="literal">false</span></span><br><span class="line">greeter-hide-users=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">greeter-setup-script=/usr/bin/numlockx on <span class="comment">#这一行自己加的，其他是系统设置时自动加的</span></span><br></pre></td></tr></table></figure>
+<p>这样等同于在设置中激活numlock 。</p>
 <p><a href="http://blog.csdn.net/ldl22847/article/details/8552894" target="_blank" rel="noopener">参考博文</a> 。</p>
 
       
