@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-10T16:27:36.000Z</updated>
+  <updated>2018-03-11T12:19:08.686Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux-allow-numlock-on</title>
+    <link href="https://rachpt.me/2018/03/11/linux-allow-numlock-on/"/>
+    <id>https://rachpt.me/2018/03/11/linux-allow-numlock-on/</id>
+    <published>2018-03-11T12:19:08.000Z</published>
+    <updated>2018-03-11T12:19:08.686Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>几个关于 iBus 输入法的记录</title>
@@ -437,9 +459,9 @@
       <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="olex2" scheme="https://rachpt.me/tags/olex2/"/>
+    
+      <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -465,35 +487,6 @@
       <category term="pdf" scheme="https://rachpt.me/tags/pdf/"/>
     
       <category term="acrobat" scheme="https://rachpt.me/tags/acrobat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu  firefox</title>
-    <link href="https://rachpt.me/2017/12/09/ubuntu%E8%BF%9B%E5%85%A5Firefox%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>https://rachpt.me/2017/12/09/ubuntu进入Firefox的方法/</id>
-    <published>2017-12-09T06:23:45.000Z</published>
-    <updated>2018-03-02T08:57:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="进入Firefox的方法有："><a href="#进入Firefox的方法有：" class="headerlink" title="进入Firefox的方法有："></a>进入Firefox的方法有：</h1><ol><li><p>SUPER + A，然后按firefox，回车。这个是在Dash面板中搜索应用程序运行。事实上，只要按fir就能定位到Firefox程序。</p></li><li><p>ALT，然后按firefox，回车。这个相当于在命令行运行一条命令。</p></li></ol><a id="more"></a><ol><li>在终端中按firefox&amp;，回车。这个适用于以终端作为主要操作窗口的用户，使用TAB键还可以自动补全命令（只需输入前几个字母再按TAB键）。&amp;在shell中是后台运行的意思，这样终端就不会被Firefox独占。</li></ol><h1 id="部分常用快捷键"><a href="#部分常用快捷键" class="headerlink" title="部分常用快捷键"></a>部分常用快捷键</h1><p>CTRL + T: 新建标签页</p><p>CTRL + W: 关闭标签页</p><p>CTRL + SHIFT + T: 重新打开最近关闭的一个标签页</p><p>CTRL + TAB: 切换到下一个标签页</p><p>CTRL + SHIFT + TAB: 切换到上一个标签页</p><p>ALT + [1-8]: 跳到制定标签页</p><p>ALT + 9: 跳到最后一个标签页</p><p>CTRL + L: 跳到地址栏</p><p>ESC: 停止加载当前页面</p><p>CTRL + K: 跳到搜索引擎输入框</p><p>CTRL + F: 在当前页面中搜索</p><p>/: 快速查找。在Linux中很多程序（如VI、Man、Less）都使用/作为搜索的快捷键，并且可使用正则表达式查找。但在Firefox中没有正则表达式搜索的功能。</p><p>CTRL + D: 收藏到书签</p><p>ALT + 左方向键: 后退</p><p>ALT + v: 前进</p><p>CTRL + Q: 退出</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;进入Firefox的方法有：&quot;&gt;&lt;a href=&quot;#进入Firefox的方法有：&quot; class=&quot;headerlink&quot; title=&quot;进入Firefox的方法有：&quot;&gt;&lt;/a&gt;进入Firefox的方法有：&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;SUPER + A，然后按firefox，回车。这个是在Dash面板中搜索应用程序运行。事实上，只要按fir就能定位到Firefox程序。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;ALT，然后按firefox，回车。这个相当于在命令行运行一条命令。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
-    
-      <category term="学习" scheme="https://rachpt.me/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
     
   </entry>
   
