@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-12T02:46:14.662Z</updated>
+  <updated>2018-03-12T02:48:38.461Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -17,24 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>solve-the-problem-of-cannot-inputting-Chinese-in-mendeley</title>
+    <title>解决 mint 系统种 mendeley 无法使用 fcitx 输入中文</title>
     <link href="https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/"/>
     <id>https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</id>
     <published>2018-03-12T02:46:14.000Z</published>
-    <updated>2018-03-12T02:46:14.662Z</updated>
+    <updated>2018-03-12T02:48:38.461Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote></blockquote><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
+      &lt;blockquote&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
+      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="memdeley" scheme="https://rachpt.me/tags/memdeley/"/>
     
   </entry>
   
