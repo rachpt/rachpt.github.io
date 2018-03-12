@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-12T02:54:38.481Z</updated>
+  <updated>2018-03-12T02:56:38.480Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/"/>
     <id>https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</id>
     <published>2018-03-12T02:46:14.000Z</published>
-    <updated>2018-03-12T02:54:38.481Z</updated>
+    <updated>2018-03-12T02:56:38.480Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。</p><p>一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，</p></blockquote><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。</p><p>一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。</p></blockquote><a id="more"></a><p>使用 ibus 最后连中文都无法输入，冲去换回熟悉的 fcitx ，</p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。&lt;/p&gt;
-&lt;p&gt;一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，&lt;/p&gt;
+&lt;p&gt;一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
