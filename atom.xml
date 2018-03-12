@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-12T02:50:38.456Z</updated>
+  <updated>2018-03-12T02:52:38.499Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/"/>
     <id>https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</id>
     <published>2018-03-12T02:46:14.000Z</published>
-    <updated>2018-03-12T02:50:38.456Z</updated>
+    <updated>2018-03-12T02:52:38.499Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。</p><p>一开始的解决办法是换用 抽</p></blockquote><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。</p><p>一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是</p></blockquote><a id="more"></a>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。&lt;/p&gt;
-&lt;p&gt;一开始的解决办法是换用 抽&lt;/p&gt;
+&lt;p&gt;一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
