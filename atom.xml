@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-11T16:11:19.000Z</updated>
+  <updated>2018-03-12T02:46:14.662Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solve-the-problem-of-cannot-inputting-Chinese-in-mendeley</title>
+    <link href="https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/"/>
+    <id>https://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</id>
+    <published>2018-03-12T02:46:14.000Z</published>
+    <updated>2018-03-12T02:46:14.662Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>努比亚 Z11 mini 换电池</title>
@@ -460,32 +482,6 @@
     
     
       <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Olex2 软件使用笔记</title>
-    <link href="https://rachpt.me/2017/12/14/notes-for-olex2/"/>
-    <id>https://rachpt.me/2017/12/14/notes-for-olex2/</id>
-    <published>2017-12-14T14:30:23.000Z</published>
-    <updated>2018-03-05T06:10:15.222Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>记录 使用软件 Olex2 解晶体的心得与备注。</p></blockquote><a id="more"></a><h1 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h1><ul><li><code>File</code> –&gt; <code>Open</code>  , 找到     <code>~.ins</code> 文件，打开。</li></ul><h1 id="解结构"><a href="#解结构" class="headerlink" title="解结构"></a>解结构</h1><ul><li><code>Work</code> 中直接单击 <code>Solve</code> 即可自动解；</li><li>单击<code>Work</code> 右侧展开详情，选择<code>Solution Program</code> –&gt; <code>ShelXS</code> or <code>ShelXT</code> ,区别；</li><li>手动精修，单击<code>Refine</code> ,并展开详情；</li><li>左边窗口，鼠标<code>右键</code> 前后移动可以放大与缩小所有原子，<code>左键</code>单击不放左右可以旋转所有原子；</li><li>右键原子，第一项显示原子的相对质量，单击选中，重复取消选中，多选直接单击需要的原子即可，直接滚动鼠标滚轮，实现轻原子隐藏；</li><li>由重原子开始，选中其后，右侧<code>Tool Work</code> 标记名称，其中<code>...</code>可以 打开元素周期表；</li><li>每次标定等操作后点击<code>Refine</code> 精修一下，直到最上面的八个参量的值全变成绿色即可（d I R 等），R1小于10%为好；</li><li>最后如果有些多余的衍射点，需要使用最上面第一个<code>Edit</code>(图标铅笔)，在其中加上<code>OMIT -2 75</code> (此为[测试中心]给的参考值)，其它需要自己试，勾上<code>Refine</code> 里面的<code>Auto-update ..</code> ,然后再多次精修即可</li></ul><h1 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h1><p>暂无</p><h1 id="Olex2下载与插件"><a href="#Olex2下载与插件" class="headerlink" title="Olex2下载与插件"></a>Olex2下载与插件</h1><p>Olex2 下载地址：</p><p><a href="http://www.olex2.org/olex2-distro/1.2/" target="_blank" rel="noopener">http://www.olex2.org/olex2-distro/1.2/</a> </p><p><a href="http://jupiter.plymouth.edu/~jsduncan/software/olex2.php" target="_blank" rel="noopener">http://jupiter.plymouth.edu/~jsduncan/software/olex2.php</a></p><p>Shelx 插件下载网址：</p><p><a href="http://muchong.com/bbs/url.php?s=aHR0cDovL3NoZWx4LnVuaS1hYy5nd2RnLmRlL35nc2hlbGRyL2Jpbi8%3D&amp;_s=11cbe58c52112191#opennewwindow" target="_blank" rel="noopener">http://shelx.uni-ac.gwdg.de/~gsheldr/bin/</a>    </p><p>其中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#用户名：</span><br><span class="line">shelx </span><br><span class="line">#密码：</span><br><span class="line">I43212</span><br></pre></td></tr></table></figure></p><p>感谢木蚂蚁网友账号分享，密码中第一个是<strong>字母 i</strong> 。</p><p>linux 安装方法，将可执行文件移动到olex2中，给可执行权限。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;记录 使用软件 Olex2 解晶体的心得与备注。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="笔记" scheme="https://rachpt.me/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="olex2" scheme="https://rachpt.me/tags/olex2/"/>
     
   </entry>
   
