@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-12T14:06:25.077Z</updated>
+  <updated>2018-03-12T14:08:25.040Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.me/2018/03/12/a-simple-example-of-FFmpeg/"/>
     <id>https://rachpt.me/2018/03/12/a-simple-example-of-FFmpeg/</id>
     <published>2018-03-12T13:52:01.000Z</published>
-    <updated>2018-03-12T14:06:25.077Z</updated>
+    <updated>2018-03-12T14:08:25.040Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。</p></blockquote><a id="more"></a><p>直接上命令：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 1 -an -f mp4 -y /dev/nul   <span class="comment">#windows 最后使用 NUL，linux 使用 /dev/nul。抑制输出。</span></span><br><span class="line"><span class="comment"># -s 后面就是视频分辨率， b:v  b:a 后面是相应码率。</span></span><br><span class="line"></span><br><span class="line">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 2 -c:a aac -b:a 64k -strict -2 out.mp4</span><br><span class="line"><span class="comment"># strict -2 参数有ffmpeg版本决定，旧的要，否则报错。</span></span><br></pre></td></tr></table></figure><p>速度选项：</p><p>ultrafast<br>superfast<br>veryfast<br>faster<br>fast<br>medium – default preset<br>slow<br>slower<br>veryslow </p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。</p></blockquote><a id="more"></a><p>直接上命令：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 1 -an -f mp4 -y /dev/nul   <span class="comment">#windows 最后使用 NUL，linux 使用 /dev/nul。抑制输出。</span></span><br><span class="line"><span class="comment"># -s 后面就是视频分辨率， b:v  b:a 后面是相应码率。</span></span><br><span class="line"></span><br><span class="line">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 2 -c:a aac -b:a 64k -strict -2 out.mp4</span><br><span class="line"><span class="comment"># strict -2 参数有ffmpeg版本决定，旧的要，否则报错。</span></span><br></pre></td></tr></table></figure><p>速度选项：</p><p>ultrafast<br>superfast<br>veryfast<br>faster<br>fast<br>medium – default preset<br>slow<br>slower<br>veryslow </p><p><a href="http://trac.ffmpeg.org/wiki/Encode/H.264" target="_blank" rel="noopener">参考内容</a> 。</p>]]></content>
     
     <summary type="html">
     
