@@ -141,7 +141,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp28fd6w34j20g80bywg2.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fpa6b0p565j20dp04674f.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpa6te342gj20hr06mab1.jpg">
-<meta property="og:updated_time" content="2018-03-12T10:02:43.206Z">
+<meta property="og:updated_time" content="2018-03-12T10:04:43.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next 主题设置">
 <meta name="twitter:description" content="记录几个修改，方便以后升级主题后更新。  目前 next 版本：6.0.5 。">
@@ -416,7 +416,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T18:02:43+08:00">2018-03-12</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T18:04:43+08:00">2018-03-12</time>
             
           </span>
 
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">8.1k</span>
+                <span title="字数统计">8.5k</span>
               
 
               
@@ -546,8 +546,9 @@
 <p>其他：</p>
 <p>注释掉 <code>source/static/js/player.js</code>的<code>$(&quot;div.ssBtn&quot;).click()</code> ，播放器就不会一直弹出。</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpa6te342gj20hr06mab1.jpg" alt="pic-2"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">source/static/js/player.js</span><br><span class="line"></span><br><span class="line">var setProgress = function (value) &#123;</span><br><span class="line">    var currentSec = parseInt(value % 60) &lt; 10 ? &apos;0&apos; + parseInt(value % 60) : parseInt(value % 60),</span><br><span class="line">        ratio = value / audio.duration * 100;</span><br><span class="line"></span><br><span class="line">    $(&apos;.timer&apos;).html(parseInt(value / 60) + &apos;:&apos; + currentSec);</span><br><span class="line">+   localStorage.time = value #储音乐的播放状态</span><br><span class="line">+   localStorage.song = currentTrack #储音乐的播放状态</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">source/<span class="keyword">static</span>/js/player.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> setProgress = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> currentSec = <span class="built_in">parseInt</span>(value % <span class="number">60</span>) &lt; <span class="number">10</span> ? <span class="string">'0'</span> + <span class="built_in">parseInt</span>(value % <span class="number">60</span>) : <span class="built_in">parseInt</span>(value % <span class="number">60</span>),</span><br><span class="line">        ratio = value / audio.duration * <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    $(<span class="string">'.timer'</span>).html(<span class="built_in">parseInt</span>(value / <span class="number">60</span>) + <span class="string">':'</span> + currentSec);</span><br><span class="line">+   localStorage.time = value <span class="comment">//储音乐的播放状态</span></span><br><span class="line">+   localStorage.song = currentTrack <span class="comment">//储音乐的播放状态</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>sessionStorage.autoPlay = &quot;true&quot;</code> 控制自动播放。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> FirstLoad = <span class="function"><span class="keyword">function</span> (<span class="params">i, time</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == <span class="literal">undefined</span>) &#123;</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        currentTrack = <span class="number">0</span></span><br><span class="line">        shuffleIndex = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    loadMusic(i)</span><br><span class="line">    <span class="keyword">if</span> (time) &#123;</span><br><span class="line">        audio.currentTime = time</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (localStorage.volume) &#123;</span><br><span class="line">        audio.volume = localStorage.volume</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sessionStorage.autoPlay == <span class="literal">undefined</span>) &#123;</span><br><span class="line">        sessionStorage.autoPlay = <span class="string">"true"</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
