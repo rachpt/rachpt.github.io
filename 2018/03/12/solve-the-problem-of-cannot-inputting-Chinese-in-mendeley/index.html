@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。 一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-12T02:56:38.480Z">
+<meta property="og:updated_time" content="2018-03-12T02:58:38.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决 mint 系统种 mendeley 无法使用 fcitx 输入中文">
 <meta name="twitter:description" content="自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。 一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。">
@@ -451,7 +451,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">225</span>
+                <span title="字数统计">446</span>
               
 
               
@@ -490,7 +490,9 @@
 <p>一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。</p>
 </blockquote>
 <a id="more"></a>
-<p>使用 ibus 最后连中文都无法输入，冲去换回熟悉的 fcitx ，</p>
+<p>使用 ibus 最后连中文都无法输入，重启也无效。于是换回熟悉的 fcitx ，居然让我发现了解决 fcitx 与 mendeley 之间矛盾的方法。</p>
+<p>最简单的解决办法：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so /opt/mendeleydesktop/plugins/qt/plugins/platforminputcontexts/</span><br></pre></td></tr></table></figure>
 
       
     </div>
