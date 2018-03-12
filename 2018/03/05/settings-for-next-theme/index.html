@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp26pa99bnj20fy062wex.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp29t6t0eej20k40jpmzq.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp28fd6w34j20g80bywg2.jpg">
-<meta property="og:updated_time" content="2018-03-12T08:48:33.374Z">
+<meta property="og:updated_time" content="2018-03-12T09:32:43.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next 主题设置">
 <meta name="twitter:description" content="记录几个修改，方便以后升级主题后更新。  目前 next 版本：6.0.5 。">
@@ -414,7 +414,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T16:48:33+08:00">2018-03-12</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T17:32:43+08:00">2018-03-12</time>
             
           </span>
 
@@ -526,7 +526,11 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">var</span> posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">            <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">    &#125;);</span><br><span class="line">  <span class="keyword">var</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">return</span> pagination(<span class="string">''</span>, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>使用：（数值越大文章越靠前）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: </span><br><span class="line">date: 2018-03-05 19:37:08</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">top: #顶置</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h1 id="添加侧边栏音乐播单"><a href="#添加侧边栏音乐播单" class="headerlink" title="添加侧边栏音乐播单"></a>添加侧边栏音乐播单</h1>
+<h1 id="添加侧边栏音乐播单"><a href="#添加侧边栏音乐播单" class="headerlink" title="添加侧边栏音乐播单"></a>添加侧边栏音乐播单</h1><ol>
+<li>下载所需文件：</li>
+<li>设置 hexo 配置文件 <code></code></li>
+</ol>
+
       
     </div>
 
