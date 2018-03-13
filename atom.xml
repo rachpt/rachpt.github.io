@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T09:37:40.018Z</updated>
+  <updated>2018-03-13T09:48:07.820Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>some-notes-about-castep</title>
+    <link href="https://rachpt.me/2018/03/13/some-notes-about-castep-1/"/>
+    <id>https://rachpt.me/2018/03/13/some-notes-about-castep-1/</id>
+    <published>2018-03-13T09:48:07.000Z</published>
+    <updated>2018-03-13T09:48:07.820Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>some-notes-about-castep</title>
@@ -457,36 +479,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 免安装程序配置</title>
-    <link href="https://rachpt.me/2017/12/31/setting-protable-program-on-linux/"/>
-    <id>https://rachpt.me/2017/12/31/setting-protable-program-on-linux/</id>
-    <published>2017-12-31T15:26:05.000Z</published>
-    <updated>2018-03-05T05:48:58.567Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p></blockquote><a id="more"></a><h1 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h1><p>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p><p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop <span class="comment">#在其中写如如下内容</span></span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm <span class="comment">#显示的名字</span></span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh <span class="comment">#软件路径</span></span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png <span class="comment">#软件图标</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development <span class="comment">#软件分类</span></span><br></pre></td></tr></table></figure><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg" alt="program-pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg" alt="program-pic2"></p><p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p><h1 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h1><p>##方法一</p><p>配置用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐），</p><p>登录到你的用户（非root），在终端输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile  <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure></p><p>在文件末尾加入PATH的设置如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure></p><p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>​    </p><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure></p><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" alt="program-pic3"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="实用" scheme="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-    
-      <category term="教程" scheme="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
-    
-      <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
-    
-      <category term="mint" scheme="https://rachpt.me/tags/mint/"/>
     
   </entry>
   
