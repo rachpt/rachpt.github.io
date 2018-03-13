@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-13T12:15:52.525Z">
+<meta property="og:updated_time" content="2018-03-13T12:17:52.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 中快速添加 hexo 文章">
 <meta name="twitter:description" content="在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。">
@@ -451,7 +451,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">586</span>
+                <span title="字数统计">634</span>
               
 
               
@@ -497,8 +497,9 @@ undefined
 <p>想到使用 shell 脚本，然后使用  alias 设置别名，爽歪歪。</p>
 <p>脚本如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line"><span class="built_in">read</span> -t 600 -p <span class="string">"输入文章标题："</span> title</span><br><span class="line"><span class="built_in">cd</span> ~/blog </span><br><span class="line">dir=$(hexo new post <span class="variable">$title</span> | cut -d : -f 2)</span><br><span class="line">dir=<span class="variable">$&#123;dir#*/&#125;</span></span><br><span class="line"><span class="built_in">cd</span> ~ </span><br><span class="line">typora <span class="variable">$dir</span> &amp;</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-<p>其中 600 是超时时间，单位秒，typora 为便</p>
-<p>alias ww=’sh /home/rachpt/document/ww.sh &amp;&amp; exit’</p>
+<p>其中 600 是超时时间，单位秒，typora 为 md 格式编辑器。</p>
+<p>编辑 <code>bashrc</code> 。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gedit .bashrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在最后添加</span></span><br><span class="line"><span class="built_in">alias</span> ww=<span class="string">'sh /home/rachpt/document/ww.sh &amp;&amp; exit'</span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
