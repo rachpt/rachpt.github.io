@@ -129,18 +129,18 @@
   <meta name="keywords" content="python," />
 
 
-<meta name="description" content="安装python   安装 selenium 库">
+<meta name="description" content="记录一些学习 python 的笔记。">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python 笔记">
+<meta property="og:title" content="Python 学习笔记">
 <meta property="og:url" content="https://rachpt.me/2017/12/01/notes-for-learning-python/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="安装python   安装 selenium 库">
+<meta property="og:description" content="记录一些学习 python 的笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-02T08:56:31.000Z">
+<meta property="og:updated_time" content="2018-03-13T01:14:18.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python 笔记">
-<meta name="twitter:description" content="安装python   安装 selenium 库">
+<meta name="twitter:title" content="Python 学习笔记">
+<meta name="twitter:description" content="记录一些学习 python 的笔记。">
 
 
 
@@ -158,7 +158,7 @@
     sidebar: "",
   };
 </script>
-  <title>python 笔记 | rachpt's Blog</title>
+  <title>Python 学习笔记 | rachpt's Blog</title>
   
 
 
@@ -378,7 +378,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">python 笔记</h2>
+          <h2 class="post-title" itemprop="name headline">Python 学习笔记</h2>
         
 
         <div class="post-meta">
@@ -411,7 +411,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-02T16:56:31+08:00">2018-03-02</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T09:14:18+08:00">2018-03-13</time>
             
           </span>
 
@@ -465,7 +465,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">108</span>
+                <span title="字数统计">102</span>
               
 
               
@@ -499,12 +499,9 @@
       
 
       
-        <ul>
-<li>安装python</li>
-</ul>
-<ul>
-<li>安装 selenium 库</li>
-</ul>
+        <blockquote>
+<p>记录一些学习 python 的笔记。</p>
+</blockquote>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install selenium</span><br></pre></td></tr></table></figure>
 <ul>
@@ -598,7 +595,7 @@
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://rachpt.me/2017/12/01/notes-for-learning-python/" title="python 笔记">https://rachpt.me/2017/12/01/notes-for-learning-python/</a>
+    <a href="https://rachpt.me/2017/12/01/notes-for-learning-python/" title="Python 学习笔记">https://rachpt.me/2017/12/01/notes-for-learning-python/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -1265,13 +1262,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'python 笔记'.length > 0
+      var isPost = 'Python 学习笔记'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'python 笔记'
+        var title = 'Python 学习笔记'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
