@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T00:18:22.342Z</updated>
+  <updated>2018-03-13T09:37:40.018Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>some-notes-about-castep</title>
+    <link href="https://rachpt.me/2018/03/13/some-notes-about-castep/"/>
+    <id>https://rachpt.me/2018/03/13/some-notes-about-castep/</id>
+    <published>2018-03-13T09:37:40.000Z</published>
+    <updated>2018-03-13T09:37:40.018Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>简单使用 FFmpeg 压制视频</title>
@@ -465,24 +487,6 @@
       <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
     
       <category term="mint" scheme="https://rachpt.me/tags/mint/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自然辩证法笔记</title>
-    <link href="https://rachpt.me/2017/12/23/%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95/"/>
-    <id>https://rachpt.me/2017/12/23/自然辩证法/</id>
-    <published>2017-12-22T16:00:00.000Z</published>
-    <updated>2018-03-01T09:46:34.277Z</updated>
-    
-    <content type="html"><![CDATA[<p>﻿摘要:证实与证伪作为科学的两种划界标准可以归结为科学命题的经验检验, 这种检验的实质在于用待检验命题或理论解释用于检验的可观察经验, 如此理解检验能避免不对称并不表明证伪更可行。单凭证实或证伪都不足以为科学划界。 </p><a id="more"></a><p>可错性与可死性</p><p>无错推论原则与无罪推论原则</p><p>数学真理 被称为条件真理</p><p>凡天鹅皆白<br>答:<br>天鹅概念没有包含羽毛颜色。</p><p>分析问题，  综合问题。</p><p>1 +2=3</p><p>如果看作分析问题，将3定义成1+2，那么就没有可错性，如果看作综合问题，则有可能错</p><p>如果将3定义成1+2，那么就是分析问题，如果从其他方面来看，比如1就是1，2就是2，加就是加，则有可能是综合问题。</p><p>先天综合问题</p><p>归纳法</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;﻿摘要:证实与证伪作为科学的两种划界标准可以归结为科学命题的经验检验, 这种检验的实质在于用待检验命题或理论解释用于检验的可观察经验, 如此理解检验能避免不对称并不表明证伪更可行。单凭证实或证伪都不足以为科学划界。 &lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
