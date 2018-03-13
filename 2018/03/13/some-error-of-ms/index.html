@@ -126,17 +126,21 @@
 
 
   
-  <meta name="keywords" content="rachpt, rach" />
+  <meta name="keywords" content="ms,castep," />
 
 
+<meta name="description" content="记录几个 MS 的错误。">
+<meta name="keywords" content="ms,castep">
 <meta property="og:type" content="article">
-<meta property="og:title" content="some-error-of-ms">
+<meta property="og:title" content="几个 MS 错误">
 <meta property="og:url" content="https://rachpt.me/2018/03/13/some-error-of-ms/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
+<meta property="og:description" content="记录几个 MS 的错误。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-13T14:02:23.648Z">
+<meta property="og:updated_time" content="2018-03-13T14:04:24.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="some-error-of-ms">
+<meta name="twitter:title" content="几个 MS 错误">
+<meta name="twitter:description" content="记录几个 MS 的错误。">
 
 
 
@@ -154,7 +158,7 @@
     sidebar: "",
   };
 </script>
-  <title>some-error-of-ms | rachpt's Blog</title>
+  <title>几个 MS 错误 | rachpt's Blog</title>
   
 
 
@@ -374,7 +378,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">some-error-of-ms</h2>
+          <h2 class="post-title" itemprop="name headline">几个 MS 错误</h2>
         
 
         <div class="post-meta">
@@ -397,6 +401,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DFT/" itemprop="url" rel="index"><span itemprop="name">DFT</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -429,7 +451,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1</span>
+                <span title="字数统计">18</span>
               
 
               
@@ -463,7 +485,11 @@
       
 
       
-        <a id="more"></a>
+        <blockquote>
+<p>记录几个 MS 的错误。</p>
+</blockquote>
+<a id="more"></a>
+<p>#</p>
 
       
     </div>
@@ -529,7 +555,7 @@
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://rachpt.me/2018/03/13/some-error-of-ms/" title="some-error-of-ms">https://rachpt.me/2018/03/13/some-error-of-ms/</a>
+    <a href="https://rachpt.me/2018/03/13/some-error-of-ms/" title="几个 MS 错误">https://rachpt.me/2018/03/13/some-error-of-ms/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -539,6 +565,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ms/" rel="tag"># ms</a>
+          
+            <a href="/tags/castep/" rel="tag"># castep</a>
+          
+        </div>
       
 
       
@@ -683,7 +717,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -770,7 +806,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">37</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1188,13 +1228,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'some-error-of-ms'.length > 0
+      var isPost = '几个 MS 错误'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'some-error-of-ms'
+        var title = '几个 MS 错误'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))

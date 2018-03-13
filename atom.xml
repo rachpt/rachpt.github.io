@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T14:02:23.648Z</updated>
+  <updated>2018-03-13T14:04:24.465Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -17,24 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>some-error-of-ms</title>
+    <title>几个 MS 错误</title>
     <link href="https://rachpt.me/2018/03/13/some-error-of-ms/"/>
     <id>https://rachpt.me/2018/03/13/some-error-of-ms/</id>
     <published>2018-03-13T14:02:23.000Z</published>
-    <updated>2018-03-13T14:02:23.648Z</updated>
+    <updated>2018-03-13T14:04:24.465Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录几个 MS 的错误。</p></blockquote><a id="more"></a><p>#</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
+      &lt;blockquote&gt;
+&lt;p&gt;记录几个 MS 的错误。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
+      <category term="DFT" scheme="https://rachpt.me/categories/DFT/"/>
+    
+    
+      <category term="ms" scheme="https://rachpt.me/tags/ms/"/>
+    
+      <category term="castep" scheme="https://rachpt.me/tags/castep/"/>
     
   </entry>
   
