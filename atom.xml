@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T12:13:52.480Z</updated>
+  <updated>2018-03-13T12:15:52.525Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.me/2018/03/13/quick-add-a-essay-on-hexoSysem/"/>
     <id>https://rachpt.me/2018/03/13/quick-add-a-essay-on-hexoSysem/</id>
     <published>2018-03-13T10:41:51.000Z</published>
-    <updated>2018-03-13T12:13:52.480Z</updated>
+    <updated>2018-03-13T12:15:52.525Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。</p></blockquote><a id="more"></a><p>所用的系统为 Linux mint ，markdown 编辑器为 typora 。</p><p>由于在 <code>_post</code> 中直接新建 md 文件需要自己手动天际 yaml 文件头，title 、date 等。而 cd 到 hexo 根目录后，使用命令 <code>hexo new post &quot;title-of-essay&quot;</code> ，即可在 <code>_post</code> 中创建预定样式的 md 文件，但是步骤略微繁琐。</p><div class="note default"><p>通常的步骤：</p>undefined<p>需要按的键比较多。</p></div><p>想到使用 shell 脚本，然后使用  alias 设置别名，爽歪歪。</p><p>脚本如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。</p></blockquote><a id="more"></a><p>所用的系统为 Linux mint ，markdown 编辑器为 typora 。</p><p>由于在 <code>_post</code> 中直接新建 md 文件需要自己手动天际 yaml 文件头，title 、date 等。而 cd 到 hexo 根目录后，使用命令 <code>hexo new post &quot;title-of-essay&quot;</code> ，即可在 <code>_post</code> 中创建预定样式的 md 文件，但是步骤略微繁琐。</p><div class="note default"><p>通常的步骤：</p>undefined<p>需要按的键比较多。</p></div><p>想到使用 shell 脚本，然后使用  alias 设置别名，爽歪歪。</p><p>脚本如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line"><span class="built_in">read</span> -t 600 -p <span class="string">"输入文章标题："</span> title</span><br><span class="line"><span class="built_in">cd</span> ~/blog </span><br><span class="line">dir=$(hexo new post <span class="variable">$title</span> | cut -d : -f 2)</span><br><span class="line">dir=<span class="variable">$&#123;dir#*/&#125;</span></span><br><span class="line"><span class="built_in">cd</span> ~ </span><br><span class="line">typora <span class="variable">$dir</span> &amp;</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure><p>其中 600 是超时时间，单位秒，typora 为便</p><p>alias ww=’sh /home/rachpt/document/ww.sh &amp;&amp; exit’</p>]]></content>
     
     <summary type="html">
     
