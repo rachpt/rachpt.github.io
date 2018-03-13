@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T14:04:24.465Z</updated>
+  <updated>2018-03-13T14:06:24.393Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.me/2018/03/13/some-error-of-ms/"/>
     <id>https://rachpt.me/2018/03/13/some-error-of-ms/</id>
     <published>2018-03-13T14:02:23.000Z</published>
-    <updated>2018-03-13T14:04:24.465Z</updated>
+    <updated>2018-03-13T14:06:24.393Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>记录几个 MS 的错误。</p></blockquote><a id="more"></a><p>#</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记录几个 MS 的错误。</p></blockquote><a id="more"></a><h1 id="未找到基态能"><a href="#未找到基态能" class="headerlink" title="未找到基态能"></a>未找到基态能</h1><p> 在计算过程中经常遇到计算失败的情况，文件给出的警告是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*Warning* max. SCF cycles performed but system has not reached the groundstate.</span><br><span class="line"></span><br><span class="line"> Warning: electronic minimisation did not converge when finding ground state.</span><br></pre></td></tr></table></figure><p> 和收敛有关的参数主要有能量的<code>CUTOFF</code>，<code>SCF的次数</code>，<code>SMEAR</code>，以及<code>K点选取</code>等，可以尝试一下。</p><h1 id="优化不收敛"><a href="#优化不收敛" class="headerlink" title="优化不收敛"></a>优化不收敛</h1><p>增加设Max.Interations的大小</p><p><code>interations</code>是定义积分精度的，相当于gaussian里的int选项；根据gauss的经验，对重原子如果不用细的积分网格，结果就不准确，特别是频率计算，可能会把正的频率算成负的频率。提高 interations的确可以提高精度，特别是对于过渡态和频率计算。</p>]]></content>
     
     <summary type="html">
     
