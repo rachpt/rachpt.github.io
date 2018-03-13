@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
+    
+    <lastmod>2018-03-13T01:09:49.709Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.me/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
     
     <lastmod>2018-03-13T00:59:36.625Z</lastmod>
@@ -149,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
+    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
