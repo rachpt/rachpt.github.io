@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T10:43:52.528Z</updated>
+  <updated>2018-03-13T11:39:52.505Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://rachpt.me/2018/03/13/quick-add-a-essay-on-hexoSysem/"/>
     <id>https://rachpt.me/2018/03/13/quick-add-a-essay-on-hexoSysem/</id>
     <published>2018-03-13T10:41:51.000Z</published>
-    <updated>2018-03-13T10:43:52.528Z</updated>
+    <updated>2018-03-13T11:39:52.505Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>使用 hexo 添加新的文章的方式通常</p></blockquote><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后吗</p></blockquote><a id="more"></a>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;使用 hexo 添加新的文章的方式通常&lt;/p&gt;
+&lt;p&gt;在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后吗&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
