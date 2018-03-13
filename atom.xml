@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-13T09:48:47.640Z</updated>
+  <updated>2018-03-13T00:18:22.342Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,72 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>some-notes-about-castep</title>
-    <link href="https://rachpt.me/2018/03/13/some-notes-about-castep-2/"/>
-    <id>https://rachpt.me/2018/03/13/some-notes-about-castep-2/</id>
-    <published>2018-03-13T09:48:47.000Z</published>
-    <updated>2018-03-13T09:48:47.640Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>some-notes-about-castep</title>
-    <link href="https://rachpt.me/2018/03/13/some-notes-about-castep-1/"/>
-    <id>https://rachpt.me/2018/03/13/some-notes-about-castep-1/</id>
-    <published>2018-03-13T09:48:07.000Z</published>
-    <updated>2018-03-13T09:48:07.820Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>some-notes-about-castep</title>
-    <link href="https://rachpt.me/2018/03/13/some-notes-about-castep/"/>
-    <id>https://rachpt.me/2018/03/13/some-notes-about-castep/</id>
-    <published>2018-03-13T09:37:40.000Z</published>
-    <updated>2018-03-13T09:37:40.018Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>简单使用 FFmpeg 压制视频</title>
@@ -481,6 +415,74 @@
       <category term="Materials Studio" scheme="https://rachpt.me/tags/Materials-Studio/"/>
     
       <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>材料物理答案</title>
+    <link href="https://rachpt.me/2018/01/03/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E7%AD%94%E6%A1%88/"/>
+    <id>https://rachpt.me/2018/01/03/材料物理答案/</id>
+    <published>2018-01-02T16:00:00.000Z</published>
+    <updated>2018-03-01T09:56:36.108Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>材料物理部分答案</p></blockquote><a id="more"></a><p>﻿# 自整理答案</p><h2 id="第一大题"><a href="#第一大题" class="headerlink" title="第一大题"></a>第一大题</h2><ul><li>第一题</li></ul><blockquote><p>所谓结构,是指材料系统内各组成单元之间的相互联系和相互作用方式。<br>从尺度上讲，分为宏观结构、显微结构、亚微观结构、微观结构等不同的层次。</p><p>宏观结构：人眼（借助放大镜）可分辨的结构范围，结构组成单元是相、颗粒、组成材料（孔隙、裂纹不同材料的组合与复合方式等）。<br>显微结构：光学显微镜分辨的结构范围，结构组成单元是相（相的种类、数量、形貌、相互关系等）。<br>亚微观结构：普通电子显微镜分辨的结构范围，结构组成单元是微晶粒、胶粒等粒子（单个粒子的形状、大小和分布）。<br>微观结构：高分辨电子显微镜分辨的结构范围，结构组成单元是原子、分子、离子或离子团等质点（质点在相互作用力下的聚集状态、排列形式）。</p><p>人们对结构层次的划分、理解、认识并不统一，有三层次论：宏观结构、亚微观结构、微观结构；</p></blockquote><ul><li>第二题</li></ul><blockquote><ul><li>金刚石</li></ul><p>金刚石晶体属立方晶系，是典型的原子晶体，每个碳原子都以sp3杂化轨道与另外四个碳原子形成共价键，构成正四面体。这是金刚石的面心立方晶胞的结构。<br>由于金刚石晶体中C─C键很强，所有价电子都参与了共价键的形成，晶体中没有自由电子，所以金刚石不仅硬度大，熔点高，而且不导电。</p><ul><li>石墨</li></ul><p>在石墨晶体中，碳原子以sp2杂化轨道和邻近的三个碳原子形成共价单键，构成六角平面的网状结构，这些网状结构又连成片层结构。层中每个碳原子均剩余一个未参加sp2杂化的p轨道，其中有一个未成对的p电子，同一层中这种碳原子中的m电子形成一个m中心m电子的大∏键(键)。这些离域电子可以在整个儿碳原子平面层中活动，所以石墨具有层向的良好导电导热性质。<br>石墨的层与层之间是以分子间力结合起来的，因此石墨容易沿着与层平行的方向滑动、裂开。石墨质软具有润滑性。<br>由于石墨层中有自由的电子存在，石墨的化学性质比金刚石稍显活泼。</p><ul><li>碳六十</li></ul><p>在C60分子中，每个碳原子以sp2杂化轨道与相邻的三个碳原子相连，剩余的未参加杂化的一个p轨道在C60球壳的外围和内腔形成球面大∏键，从而具有芳香性。</p><p>在球面上每个碳原子以杂化轨道与三个近邻碳原子形成共价键，每个碳原子还有一个2p电子未参与杂化，它不属于某一个共价键，具有金属键的性质</p><p>和石墨一样，<br>C60晶体是共价键、金属键和范德瓦尔斯键三键共存的结构</p><ul><li>碳纳米管</li></ul><p>碳纳米管壁上每个碳原子以杂化轨道与三个近邻碳原子形成共价键，每个碳原子还有一个2p电子未参与杂化，它不属于某一个共价键，具有金属键的性质，因此，碳纳米管中含有共价键和金属键二种键</p><ul><li>石墨烯</li></ul><p>可以理解为单层石墨</p><p>石墨烯中的每一个碳原子的四个价电子中只有三个价电子同其它原子形成共价键，而剩下的一个价电子在层上具有“自由电子”的行为，因此，石墨烯是电和热的良导体。</p></blockquote><ul><li>第三题</li></ul><blockquote><p><img src="https://ituku.tk/di/P5T9R/3801213fb80e7becf3bbe464292eb9389a506bd6.png" alt="来自百度"></p><p>如图所示，一个n重轴n经过点O并且和纸面垂直。晶体点阵中必然存在一个经过O的直线AA’ ，并且A与A’ 关于O对称。设向量OA的模为a。将向量OA绕n顺时针旋转2π/n得到向量OB，将向量OA’ 绕n逆时针旋转2π/n得到向量OB’ 。依据n重轴的定义，BB’肯定平行于AA’。设：BB’的模为k·a，则：k.a = 2a·Cos（2π/n），有 k = 2Cos（2π/n），其中Cos（2π/n）的绝对值小于1，所以k的绝对值小于2。根据平移对称性的定义，k必须是整数，所以k只能是-2,-1,0,1,2。</p><p>当k=-2时，Cos（2π/n）= -1，2π/n=180°，n=2。</p><p>当k=-1时，Cos（2π/n）= -1/2，2π/n=120°，n=3。</p><p>当k=-0时，Cos（2π/n）= 0，2π/n=90°，n=4。</p><p>当k=1时，Cos（2π/n）= 1/2，2π/n=60°，n=6。</p><p>当k=2时，Cos（2π/n）= 1，2π/n=360°，n=1。</p><p>所以晶体中只存在1,2,3,4,6重轴。</p><p>如果存在五次轴所形成的正五边形网孔以及围绕高于六次轴所形成的正多边形网孔（如正七边形、正八边形等），都不能毫无间隙地分布满整个平面，从能量上看是不稳定的；而且这些多边形网孔大多数不符合面网上结点所围成的网孔。所以在晶体中不可能存在五次及高于六次的对称轴</p></blockquote><h2 id="第二大题"><a href="#第二大题" class="headerlink" title="第二大题"></a>第二大题</h2><ul><li>第一问</li></ul><p>原子最外层电子由于原子核对其束缚很弱，当大量原子结合成晶体时，这些电子易摆脱原子核的束缚而成为共有化电子，而原子内层电子（芯电子）有较高的结合能，一般脱离不了原子核对其束缚，这些芯电子同原子核一起构成离子实，因此原子又可分为带正电的离子实和带负电的价电子两部分；</p><p>当N个原子彼此相距很远时，每个原子如同孤立的原子，当N个原子相互靠近形成固体时，相邻原子电子壳层间就有了一定程度的交叠，由于电子壳层的交叠，电子不再局限于某一个原子上，可以由一个原子转移到相邻的原子上去，因而，电子将可以在整个固体中运动，这种运动称为电子的公有化运动。</p><p>四 1。</p><blockquote><p>顺磁要符合CURIE-WEISS定律，所以顺磁磁化率的倒数对于温度应该是呈现线性关系。<br>抗磁性的磁化率与应该为负值，并且对于温度没有依赖关系<br>反铁磁在低温会出现一个尖峰。<br>而铁磁性的磁化率在转变温度以下会出现磁化率迅速的增长的趋势。<br>这些都是简单的判断方式，但是并不十分的准确。<br>还要搭配其他的测试方法进行研究。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;材料物理部分答案&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 免安装程序配置</title>
+    <link href="https://rachpt.me/2017/12/31/setting-protable-program-on-linux/"/>
+    <id>https://rachpt.me/2017/12/31/setting-protable-program-on-linux/</id>
+    <published>2017-12-31T15:26:05.000Z</published>
+    <updated>2018-03-05T05:48:58.567Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p></blockquote><a id="more"></a><h1 id="Linux-创建程序图标"><a href="#Linux-创建程序图标" class="headerlink" title="Linux 创建程序图标"></a>Linux 创建程序图标</h1><p>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p><p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop <span class="comment">#在其中写如如下内容</span></span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm <span class="comment">#显示的名字</span></span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh <span class="comment">#软件路径</span></span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png <span class="comment">#软件图标</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development <span class="comment">#软件分类</span></span><br></pre></td></tr></table></figure><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg" alt="program-pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg" alt="program-pic2"></p><p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p><h1 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h1><p>##方法一</p><p>配置用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐），</p><p>登录到你的用户（非root），在终端输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.profile  <span class="comment">#(or .bashrc)</span></span><br></pre></td></tr></table></figure></p><p>在文件末尾加入PATH的设置如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=”<span class="variable">$PATH</span>:your path1:your path2 ...”</span><br></pre></td></tr></table></figure></p><p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>​    </p><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure></p><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" alt="program-pic3"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="实用" scheme="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="教程" scheme="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
+    
+      <category term="mint" scheme="https://rachpt.me/tags/mint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自然辩证法笔记</title>
+    <link href="https://rachpt.me/2017/12/23/%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95/"/>
+    <id>https://rachpt.me/2017/12/23/自然辩证法/</id>
+    <published>2017-12-22T16:00:00.000Z</published>
+    <updated>2018-03-01T09:46:34.277Z</updated>
+    
+    <content type="html"><![CDATA[<p>﻿摘要:证实与证伪作为科学的两种划界标准可以归结为科学命题的经验检验, 这种检验的实质在于用待检验命题或理论解释用于检验的可观察经验, 如此理解检验能避免不对称并不表明证伪更可行。单凭证实或证伪都不足以为科学划界。 </p><a id="more"></a><p>可错性与可死性</p><p>无错推论原则与无罪推论原则</p><p>数学真理 被称为条件真理</p><p>凡天鹅皆白<br>答:<br>天鹅概念没有包含羽毛颜色。</p><p>分析问题，  综合问题。</p><p>1 +2=3</p><p>如果看作分析问题，将3定义成1+2，那么就没有可错性，如果看作综合问题，则有可能错</p><p>如果将3定义成1+2，那么就是分析问题，如果从其他方面来看，比如1就是1，2就是2，加就是加，则有可能是综合问题。</p><p>先天综合问题</p><p>归纳法</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;﻿摘要:证实与证伪作为科学的两种划界标准可以归结为科学命题的经验检验, 这种检验的实质在于用待检验命题或理论解释用于检验的可观察经验, 如此理解检验能避免不对称并不表明证伪更可行。单凭证实或证伪都不足以为科学划界。 &lt;/p&gt;
+    
+    </summary>
+    
     
   </entry>
   
