@@ -138,7 +138,7 @@
 <meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpc7rqbu73j20ov034wed.jpg">
-<meta property="og:updated_time" content="2018-03-14T04:09:29.011Z">
+<meta property="og:updated_time" content="2018-03-14T04:11:29.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
 <meta name="twitter:description" content="简化以方便阅读。">
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T12:09:29+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T12:11:29+08:00">2018-03-14</time>
             
           </span>
 
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">2.3k</span>
+                <span title="字数统计">2.9k</span>
               
 
               
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:02</span>
+                <span title="阅读时长">0:03</span>
               
             </div>
           
@@ -537,11 +537,13 @@
 <li>导入数据，<code>Input.m</code> 运行[F9] ，<code>ElasticConst3D.m</code>  <code>ElasticConst2D.m</code>  Plot 画图，<code>YoungsModulus.m</code> 计算 Youngs Modulus。</li>
 <li>具体见 &gt;  User’s Guide for ElasticConst 。<br>&nbsp;</li>
 </ol>
-<p><strong>完整原版教程：</strong> <a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">下载</a> </p>
-<p>在线计算：</p>
-<p><a href="http://progs.coudert.name/elate" target="_blank" rel="noopener">http://progs.coudert.name/elate</a> </p>
+<h1 id="关于MS-的一些笔记"><a href="#关于MS-的一些笔记" class="headerlink" title="关于MS 的一些笔记"></a>关于MS 的一些笔记</h1><p>在计算弹性常数之前并不一定要进行几何优化，可以由实验观测到的结构计算出Cij数据。尽管如此，如果我们完成晶胞的几何优化，可以获得更多相容的结果，进而计算与理论基态对应的弹性常数。</p>
+<p>弹性常数的精确度，尤其是切变常数的精确度，主要取决于SCF计算的品质，特别是布里渊区取样和波函数收敛程度的品质。所以我们设置SCF、k点取样和FFT格子的精度为Fine。</p>
+<p>CASTEP的弹性常数计算任务的结果以一批.castep输出文件的形式给出。这些文件中的每一个文件都代表确定的晶胞在假设的应变模式和应变振幅下的几何优化运行结果。这些文件的命名约定为：seedname_cij__m__n。对于给定的模式来说，m代表当前的应变模式，n代表当前的应变振幅。 CASTEP可以使用这些结果来分析每一个运行计算出来的压力张量，产生一个有关弹性性质的文件。<code>Modules | CASTEP | Analysis | Elastic constants</code> —-&gt; <code>sedname Elastic Constants.txt</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">此 `txt` 文档中的信息包括：</span><br><span class="line"></span><br><span class="line">* 输入的应变和计算出的应力的总结</span><br><span class="line">* 每一种应变模式线性拟合和拟合质量的计算结果</span><br><span class="line">* 给定对称性下计算出的应力与弹性常数之间的对应</span><br><span class="line">* 弹性常数Cij和弹性柔量Sij的表格</span><br><span class="line">* 导出量：体积模量和其倒数、压缩系数、杨氏模量、Poisson比、 Lame 常数(用于模拟各向同性介质)</span><br></pre></td></tr></table></figure>
+<p>–</p>
 <hr>
-<p>&nbsp;</p>
+<p><strong>完整原版教程：</strong> <a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">下载</a> </p>
 <p>2017-12-14 更新</p>
 <p>MS 如果不幸遇到下面的错误提示，</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpc7rqbu73j20ov034wed.jpg" alt="pic-1"></p>
@@ -959,7 +961,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#结构优化文件准备"><span class="nav-number">1.</span> <span class="nav-text">结构优化文件准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#超算部分-结构优化"><span class="nav-number">2.</span> <span class="nav-text">超算部分 _结构优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算弹性常数"><span class="nav-number">3.</span> <span class="nav-text">计算弹性常数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理部分"><span class="nav-number">4.</span> <span class="nav-text">数据处理部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Matlab-进一步计算"><span class="nav-number">5.</span> <span class="nav-text">使用 Matlab 进一步计算</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#结构优化文件准备"><span class="nav-number">1.</span> <span class="nav-text">结构优化文件准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#超算部分-结构优化"><span class="nav-number">2.</span> <span class="nav-text">超算部分 _结构优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算弹性常数"><span class="nav-number">3.</span> <span class="nav-text">计算弹性常数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理部分"><span class="nav-number">4.</span> <span class="nav-text">数据处理部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Matlab-进一步计算"><span class="nav-number">5.</span> <span class="nav-text">使用 Matlab 进一步计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于MS-的一些笔记"><span class="nav-number">6.</span> <span class="nav-text">关于MS 的一些笔记</span></a></li></ol></div>
             
 
           </div>
