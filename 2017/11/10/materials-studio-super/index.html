@@ -138,7 +138,7 @@
 <meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
-<meta property="og:updated_time" content="2018-03-14T03:39:22.927Z">
+<meta property="og:updated_time" content="2018-03-14T03:41:22.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
 <meta name="twitter:description" content="简化以方便阅读。">
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:39:22+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:41:22+08:00">2018-03-14</time>
             
           </span>
 
@@ -507,7 +507,7 @@
 <a id="more"></a>
 <h1 id="结构优化文件准备"><a href="#结构优化文件准备" class="headerlink" title="结构优化文件准备"></a>结构优化文件准备</h1><ol>
 <li>cif 文件按 <code>ms_castep</code> 命名（或者其他不带空格简单名字）；</li>
-<li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> , Optimize cell <code>yes</code> ; [Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files → yes ；</li>
+<li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> ,（默认的100可能不够） Optimize cell <code>yes</code> ; （优化晶格）[Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files → yes ；</li>
 <li>在~Files→Documents→~CASTEP GeomOpt 复制 <code>~.cell</code> 和 <code>~.param</code> 文件到新文件夹 <code>~GeomOpt</code> 同时复制 <code>RunGeneral.sh &amp;amp; subGeneral</code> 到其中；</li>
 <li>设置 <code>subGeneral</code> 中 <code>ppn=?</code> 即是计算使用核数；</li>
 <li>打开<code>~.cell</code> 找到 %BLOCK SPECIES POT 中的 ~.usp 部分，在 Material Studio 安装目录路径 <code>C:\Program Files (x86)\Accelrys\Materials Studio 8.0\share\Resources\Quantum\Castep\Potentials\</code> 中复制所有需要的 到刚才的 <code>~GeomOpt</code> 中，至此结构优化文件准备已经完成。</li>
@@ -537,8 +537,7 @@
 <li>导入数据，<code>Input.m</code> 运行[F9] ，<code>ElasticConst3D.m</code>  <code>ElasticConst2D.m</code>  Plot 画图，<code>YoungsModulus.m</code> 计算 Youngs Modulus。</li>
 <li>具体见 &gt;  User’s Guide for ElasticConst 。<br>&nbsp;</li>
 </ol>
-<p><span style="font-size: 18pt;"><strong>完整原版教程：</strong></span></p>
-<p><a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">下载</a></p>
+<p><strong>完整原版教程：</strong> <a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">下载</a></p>
 <hr>
 <p>&nbsp;</p>
 <p>2017-12-14 更新</p>
@@ -546,8 +545,7 @@
 <p><img src="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png" alt=""></p>
 <p>原因是： <strong>文件路径中使用了中文字符所致</strong>。</p>
 <p>解决办法： 使用非中文路径。</p>
-<p>&nbsp;</p>
-<div id="s3gt_translate_tooltip_mini" class="s3gt_translate_tooltip_mini_box" style="background: initial !important; border: initial !important; border-radius: initial !important; border-spacing: initial !important; border-collapse: initial !important; direction: ltr !important; flex-direction: initial !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; min-width: initial !important; max-width: initial !important; min-height: initial !important; max-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; table-layout: initial !important; text-align: initial !important; text-shadow: initial !important; width: initial !important; word-break: initial !important; word-spacing: initial !important; overflow-wrap: initial !important; box-sizing: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 695px; top: 587px; opacity: 0.75;"><br><div title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_logo" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="翻译所选文本"></div><br><div id="s3gt_translate_tooltip_mini_sound" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="朗读"></div><br><div id="s3gt_translate_tooltip_mini_copy" class="s3gt_translate_tooltip_mini" style="width: 23px; height: 23px; border-radius: 8px;" title="复制到剪贴板"></div><br></div>
+
       
     </div>
 
