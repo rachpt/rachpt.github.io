@@ -155,6 +155,26 @@
 
     
   <url>
+    <loc>https://rachpt.me/2017/12/01/notes-for-learning-python/</loc>
+    <lastmod>2018-03-13T02:41:05.665Z</lastmod>
+    <data>
+        <display>
+        <title>Python 学习笔记</title>
+        <pubTime>2017-12-01T04:23:12.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="https://rachpt.me/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
     <lastmod>2018-03-13T01:10:44.545Z</lastmod>
     <data>
@@ -514,26 +534,6 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>照片PDF优化成矢量版</title>
-        <pubTime>2017-11-10T01:29:17.000Z</pubTime>
-        
-        <tag>PDF</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -620,6 +620,26 @@
 
     
   <url>
+    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>张维为：中国信心</title>
+        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        
+        <tag>视频</tag>
+         
+         
+           
+             
+              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/10/so-busy/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -658,26 +678,6 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>张维为：中国信心</title>
-        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
-        
-        <tag>视频</tag>
-         
-         
-           
-             
-              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -700,26 +700,6 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>Firefox 更新通道切换</title>
-        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rachpt.me/2017/11/16/download-youtube-video/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -735,6 +715,46 @@
            
              
               <breadCrumb title="教程" url="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/10/make-pdf/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>照片PDF优化成矢量版</title>
+        <pubTime>2017-11-10T01:29:17.000Z</pubTime>
+        
+        <tag>PDF</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/11/firefox-noupgrade/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>Firefox 更新通道切换</title>
+        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
+        
+        <tag>firefox</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>
