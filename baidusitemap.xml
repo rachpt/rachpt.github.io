@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/12/03/linux%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://rachpt.me/2017/12/03/calc-hash-in-linux/</loc>
     <lastmod>2018-03-14T04:57:55.257Z</lastmod>
     <data>
         <display>
@@ -675,21 +675,17 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
         
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
-         
          
            
              
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -708,46 +704,6 @@
          
         <tag>规划</tag>
          
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
-        
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
          
            
              
@@ -801,19 +757,43 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>张维为：中国信心</title>
-        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
         
-        <tag>视频</tag>
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
          
          
            
              
-              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/10/note-markdown/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>搭建一个方便的多平台笔记方案</title>
+        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        
+        <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>
@@ -834,6 +814,26 @@
            
              
               <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>张维为：中国信心</title>
+        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        
+        <tag>视频</tag>
+         
+         
+           
+             
+              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
           
         </display>
     </data>
@@ -885,36 +885,6 @@
         
         <tag>php</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2018/01/03/%E6%9D%90%E6%96%99%E7%89%A9%E7%90%86%E7%AD%94%E6%A1%88/</loc>
-    <lastmod>2018-03-01T09:56:36.108Z</lastmod>
-    <data>
-        <display>
-        <title>材料物理答案</title>
-        <pubTime>2018-01-02T16:00:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2017/12/23/%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95/</loc>
-    <lastmod>2018-03-01T09:46:34.277Z</lastmod>
-    <data>
-        <display>
-        <title>自然辩证法笔记</title>
-        <pubTime>2017-12-22T16:00:00.000Z</pubTime>
-        
          
            
         </display>
