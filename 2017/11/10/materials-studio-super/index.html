@@ -138,7 +138,7 @@
 <meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
-<meta property="og:updated_time" content="2018-03-14T03:41:22.838Z">
+<meta property="og:updated_time" content="2018-03-14T03:43:22.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
 <meta name="twitter:description" content="简化以方便阅读。">
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:41:22+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:43:22+08:00">2018-03-14</time>
             
           </span>
 
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">2.1k</span>
+                <span title="字数统计">2.2k</span>
               
 
               
@@ -507,10 +507,10 @@
 <a id="more"></a>
 <h1 id="结构优化文件准备"><a href="#结构优化文件准备" class="headerlink" title="结构优化文件准备"></a>结构优化文件准备</h1><ol>
 <li>cif 文件按 <code>ms_castep</code> 命名（或者其他不带空格简单名字）；</li>
-<li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> ,（默认的100可能不够） Optimize cell <code>yes</code> ; （优化晶格）[Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files → yes ；</li>
+<li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> ,（默认的100可能不够） Optimize cell <code>yes</code> ; （优化晶格）[Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> （本地跑才需要设置这个） . Files → yes ；</li>
 <li>在~Files→Documents→~CASTEP GeomOpt 复制 <code>~.cell</code> 和 <code>~.param</code> 文件到新文件夹 <code>~GeomOpt</code> 同时复制 <code>RunGeneral.sh &amp;amp; subGeneral</code> 到其中；</li>
 <li>设置 <code>subGeneral</code> 中 <code>ppn=?</code> 即是计算使用核数；</li>
-<li>打开<code>~.cell</code> 找到 %BLOCK SPECIES POT 中的 ~.usp 部分，在 Material Studio 安装目录路径 <code>C:\Program Files (x86)\Accelrys\Materials Studio 8.0\share\Resources\Quantum\Castep\Potentials\</code> 中复制所有需要的 到刚才的 <code>~GeomOpt</code> 中，至此结构优化文件准备已经完成。</li>
+<li>打开<code>~.cell</code> 找到 %BLOCK SPECIES POT 中的 ~.usp 部分，在 Material Studio 安装目录路径 <code>C:\Program Files (x86)\Accelrys\Materials Studio 8.0\share\Resources\Quantum\Castep\Potentials\</code> 中复制所有需要的 到刚才的 <code>~GeomOpt</code> 中（已经证明非比要，超算会自动加相应的 <code>usp</code> 赝势文件），至此结构优化文件准备已经完成。</li>
 </ol>
 <hr>
 <h1 id="超算部分-结构优化"><a href="#超算部分-结构优化" class="headerlink" title="超算部分 _结构优化"></a>超算部分 _结构优化</h1><ol>
