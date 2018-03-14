@@ -138,7 +138,7 @@
 <meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
-<meta property="og:updated_time" content="2018-03-14T03:43:22.861Z">
+<meta property="og:updated_time" content="2018-03-14T03:45:22.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
 <meta name="twitter:description" content="简化以方便阅读。">
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:43:22+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:45:22+08:00">2018-03-14</time>
             
           </span>
 
@@ -514,8 +514,8 @@
 </ol>
 <hr>
 <h1 id="超算部分-结构优化"><a href="#超算部分-结构优化" class="headerlink" title="超算部分 _结构优化"></a>超算部分 _结构优化</h1><ol>
-<li>需要使用的步骤，<code>dos2unix subGeneral RunGeneral.sh</code> 转换步骤，<code>chmod +x subGeneral RunGeneral.sh</code> ，可以使用 <code>Tab</code> 自动填充，<code>qsub subGeneral</code> 提交任务， <code>qstat</code> 开始任务， <code>bqueues</code> 查看所有运行、请求与剩余的核数，<code>qdel 任务ID号</code> 结束任务；</li>
-<li>下次在 <code>qstat</code> 无显示表示已经算完，但不知是否正常算完。<strong>$JOBNAME.o$JOBID</strong> 标准输出,<strong>$JOBNAME.e$JOBID</strong> 标准错误输出。</li>
+<li>需要使用的步骤，<code>dos2unix subGeneral RunGeneral.sh</code> 转换步骤，<code>chmod +x subGeneral RunGeneral.sh</code> （只有使用 windows 提交的才需要这些），可以使用 <code>Tab</code> 自动填充，<code>qsub subGeneral</code> 提交任务， <code>qstat</code> 开始任务， <code>bqueues</code> 查看所有运行、请求与剩余的核数，<code>qdel 任务ID号</code> 结束任务；</li>
+<li>下次在 <code>qstat</code> 无显示表示已经算完，但不知是否正常算完。<strong>$JOBNAME.o$JOBID</strong> 标准输出,<strong>$JOBNAME.e$JOBID</strong> 标准错误输出（直接看 <code>.castep</code> 文件最准确）。</li>
 </ol>
 <hr>
 <h1 id="计算弹性常数"><a href="#计算弹性常数" class="headerlink" title="计算弹性常数"></a>计算弹性常数</h1><ol>
