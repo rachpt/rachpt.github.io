@@ -449,7 +449,7 @@
     <link href="https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/"/>
     <id>https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/</id>
     <published>2018-01-11T14:35:03.000Z</published>
-    <updated>2018-03-05T05:27:35.775Z</updated>
+    <updated>2018-03-14T03:35:18.601Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 <a href="https://www.linuxmint.com/download.php" target="_blank" rel="noopener">mint cinnamon</a> 版）</p></blockquote><a id="more"></a><h1 id="Brief-introduce-of-MS’s-setup-on-ubuntu-linux"><a href="#Brief-introduce-of-MS’s-setup-on-ubuntu-linux" class="headerlink" title="Brief introduce of MS’s setup on ubuntu linux."></a>Brief introduce of MS’s setup on ubuntu linux.</h1><p>setp1.     安装 rpm2cpio</p><p>step2.     使用 bash csh</p><p>step3.     sudo ./install /opt/ms80</p><p>step4.     cd /opt/ms80/LicensePack/etc</p><p>step5.     sudo ./lp_config</p><p>step6.     sudo ./lp_echovars</p><p>step7.     sudo ./install /opt/ms80 y</p><p>#         OK! It work’s!</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhearrjj20n90hyaeq.jpg" alt="ms-ubuntu-pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhxcal7j20n90hydle.jpg" alt="ms-ubuntu-pic2"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vikxx9hj20g20g10vv.jpg" alt="ms-ubuntu-pic3"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1viye0uvj20g20g1aed.jpg" alt="ms-ubuntu-pic4"></p><hr><h1 id="更新-2018-01-12"><a href="#更新-2018-01-12" class="headerlink" title="更新   2018.01.12"></a>更新   2018.01.12</h1><p>安装到自己的家目录（/home/user）重启后才有用，无需 sudo。</p><p><span style="color: #ff0000;">使用 bash 很重要</span>，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ 具体参考这两篇博文。</p><p><a href="http://blog.csdn.net/hemmingway/article/details/49301873" target="_blank" rel="noopener">http://blog.csdn.net/hemmingway/article/details/49301873</a></p><p><a href="http://blog.csdn.net/gatieme/article/details/52136411" target="_blank" rel="noopener">http://blog.csdn.net/gatieme/article/details/52136411</a></p><p>自己看 install.log , 设置开机启动 有个  gateway 什么的 start.</p><p>浏览器   <a href="http://127.0.0.1:18888" target="_blank" rel="noopener">http://127.0.0.1:18888</a>   查看是否成功。</p>]]></content>
     
@@ -461,14 +461,14 @@
     
     </summary>
     
-      <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
     
+      <category term="DFT" scheme="https://rachpt.me/categories/linux/DFT/"/>
     
-      <category term="linux" scheme="https://rachpt.me/tags/linux/"/>
-    
-      <category term="Materials Studio" scheme="https://rachpt.me/tags/Materials-Studio/"/>
     
       <category term="ubuntu" scheme="https://rachpt.me/tags/ubuntu/"/>
+    
+      <category term="ms" scheme="https://rachpt.me/tags/ms/"/>
     
   </entry>
   
