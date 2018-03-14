@@ -129,19 +129,19 @@
   <meta name="keywords" content="ms,castep," />
 
 
-<meta name="description" content="简化以方便">
+<meta name="description" content="简化以方便阅读。">
 <meta name="keywords" content="ms,castep">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Materials Studio 超算步骤_精简版">
 <meta property="og:url" content="https://rachpt.me/2017/11/10/materials-studio-super/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="简化以方便">
+<meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
-<meta property="og:updated_time" content="2018-03-14T03:37:22.832Z">
+<meta property="og:updated_time" content="2018-03-14T03:39:22.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
-<meta name="twitter:description" content="简化以方便">
+<meta name="twitter:description" content="简化以方便阅读。">
 <meta name="twitter:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
 
 
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:37:22+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:39:22+08:00">2018-03-14</time>
             
           </span>
 
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">2.2k</span>
+                <span title="字数统计">2.1k</span>
               
 
               
@@ -502,10 +502,10 @@
 
       
         <blockquote>
-<p>简化以方便</p>
+<p>简化以方便阅读。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="结构优化文件准备"><a href="#结构优化文件准备" class="headerlink" title="结构优化文件准备"></a>结构优化文件准备</h2><ol>
+<h1 id="结构优化文件准备"><a href="#结构优化文件准备" class="headerlink" title="结构优化文件准备"></a>结构优化文件准备</h1><ol>
 <li>cif 文件按 <code>ms_castep</code> 命名（或者其他不带空格简单名字）；</li>
 <li>选中全部原子，<code>CASTEP Calculation</code> 设置参数，[Setup] Task: <code>Geometry Optimization</code> , Quality: <code>Ultra-fine</code> , Functional: <code>LDA, CA-PZ</code> , More → Max.iterations <code>500</code> , Optimize cell <code>yes</code> ; [Electronic] More → Use custom energy cutoff <code>400 or others</code> , k-points → Cusom grid parameters <code>yes</code> ,Grid parameters <code>4,2,4 or others</code>  ;[Propweties] Population analysis <code>yes</code> ; [Job Ctrol] Run in parallel on <code>8 or max</code> . Files → yes ；</li>
 <li>在~Files→Documents→~CASTEP GeomOpt 复制 <code>~.cell</code> 和 <code>~.param</code> 文件到新文件夹 <code>~GeomOpt</code> 同时复制 <code>RunGeneral.sh &amp;amp; subGeneral</code> 到其中；</li>
@@ -513,12 +513,12 @@
 <li>打开<code>~.cell</code> 找到 %BLOCK SPECIES POT 中的 ~.usp 部分，在 Material Studio 安装目录路径 <code>C:\Program Files (x86)\Accelrys\Materials Studio 8.0\share\Resources\Quantum\Castep\Potentials\</code> 中复制所有需要的 到刚才的 <code>~GeomOpt</code> 中，至此结构优化文件准备已经完成。</li>
 </ol>
 <hr>
-<h2 id="超算部分-结构优化"><a href="#超算部分-结构优化" class="headerlink" title="超算部分 _结构优化"></a>超算部分 _结构优化</h2><ol>
+<h1 id="超算部分-结构优化"><a href="#超算部分-结构优化" class="headerlink" title="超算部分 _结构优化"></a>超算部分 _结构优化</h1><ol>
 <li>需要使用的步骤，<code>dos2unix subGeneral RunGeneral.sh</code> 转换步骤，<code>chmod +x subGeneral RunGeneral.sh</code> ，可以使用 <code>Tab</code> 自动填充，<code>qsub subGeneral</code> 提交任务， <code>qstat</code> 开始任务， <code>bqueues</code> 查看所有运行、请求与剩余的核数，<code>qdel 任务ID号</code> 结束任务；</li>
-<li>下次在 <code>qstat</code> 无显示表示已经算完，但不知是否正常算完。<span style="background-color: #ffff99;"><strong>$JOBNAME.o$JOBID</strong></span> 标准输出,<strong><span style="background-color: #ff99cc;">$JOBNAME.e$JOBID</span></strong> 标准错误输出。</li>
+<li>下次在 <code>qstat</code> 无显示表示已经算完，但不知是否正常算完。<strong>$JOBNAME.o$JOBID</strong> 标准输出,<strong>$JOBNAME.e$JOBID</strong> 标准错误输出。</li>
 </ol>
 <hr>
-<h2 id="计算弹性常数"><a href="#计算弹性常数" class="headerlink" title="计算弹性常数"></a>计算弹性常数</h2><ol>
+<h1 id="计算弹性常数"><a href="#计算弹性常数" class="headerlink" title="计算弹性常数"></a>计算弹性常数</h1><ol>
 <li>下载除 <code>~.check</code> 外的其他文件，复制粘贴并替换本地计算目录<code>~GeomOpt</code> ，在<code>MS</code> 中刷新<code>refresh</code> STP。</li>
 <li>打开<code>~.xsd</code> 文件，选送全部原子，<code>CASTEP Analysis</code> → <code>Structure</code> →<code>Upadte</code> ；取消原子选中，<code>CASTEP Calculation</code> →Task <code>Elastic Constants</code> → <code>Files</code> ，Save。</li>
 <li>根据右侧显示的<code>~.param</code> <code>ms_castep_cij__ii__jj.param</code> 修改<code>subGeneral_cij.cij</code> 中的循环次数，比最大的数大1。</li>
@@ -526,7 +526,7 @@
 <li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<code>不要使用空格，否者出现 \</code>  ，<code>chmod +x subGeneral_cij.cij RunGeneral.sh</code>  以及 <code>dos2unix subGeneral_cij.cij RunGeneral.sh</code> ，<code>ls</code> 这两出现绿色（或其他）表示已经转码了，<code>qsub subGeneral_cij.cij</code> 提交任务，<code>qstat</code> 开始任务。</li>
 </ol>
 <hr>
-<h2 id="数据处理部分"><a href="#数据处理部分" class="headerlink" title="数据处理部分"></a>数据处理部分</h2><ol>
+<h1 id="数据处理部分"><a href="#数据处理部分" class="headerlink" title="数据处理部分"></a>数据处理部分</h1><ol>
 <li>同样，下载除 <code>~.check</code> 外的其他文件，覆盖到原本地目录，找到并打开<code>ma_castep.castep</code> 文件，也就是总的计算结果。</li>
 <li>使用<code>CASTEP Analysis</code> → <code>Elastic constants</code> → <code>Calculate</code> 。</li>
 <li>右侧生成 <code>ma_castep Elastic Contants.txt</code> 文件包含计算得到的弹性常数等信息。</li>
@@ -538,8 +538,7 @@
 <li>具体见 &gt;  User’s Guide for ElasticConst 。<br>&nbsp;</li>
 </ol>
 <p><span style="font-size: 18pt;"><strong>完整原版教程：</strong></span></p>
-<hr>
-<p>[reply]<a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">点击跳转到下载页面</a>[/reply]</p>
+<p><a href="https://pan.lanzou.com/i03xvxa" target="_blank" rel="noopener">下载</a></p>
 <hr>
 <p>&nbsp;</p>
 <p>2017-12-14 更新</p>
@@ -958,7 +957,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#结构优化文件准备"><span class="nav-number">1.</span> <span class="nav-text">结构优化文件准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超算部分-结构优化"><span class="nav-number">2.</span> <span class="nav-text">超算部分 _结构优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算弹性常数"><span class="nav-number">3.</span> <span class="nav-text">计算弹性常数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理部分"><span class="nav-number">4.</span> <span class="nav-text">数据处理部分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Matlab-进一步计算"><span class="nav-number"></span> <span class="nav-text">使用 Matlab 进一步计算</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#结构优化文件准备"><span class="nav-number">1.</span> <span class="nav-text">结构优化文件准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#超算部分-结构优化"><span class="nav-number">2.</span> <span class="nav-text">超算部分 _结构优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算弹性常数"><span class="nav-number">3.</span> <span class="nav-text">计算弹性常数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理部分"><span class="nav-number">4.</span> <span class="nav-text">数据处理部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Matlab-进一步计算"><span class="nav-number">5.</span> <span class="nav-text">使用 Matlab 进一步计算</span></a></li></ol></div>
             
 
           </div>
