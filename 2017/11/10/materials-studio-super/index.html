@@ -138,7 +138,7 @@
 <meta property="og:description" content="简化以方便阅读。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://rachpt.top/wp-content/uploads/2017/11/截图_2017_12_14_18_43_22.png">
-<meta property="og:updated_time" content="2018-03-14T03:45:22.932Z">
+<meta property="og:updated_time" content="2018-03-14T03:47:22.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Materials Studio 超算步骤_精简版">
 <meta name="twitter:description" content="简化以方便阅读。">
@@ -413,7 +413,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:45:22+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:47:22+08:00">2018-03-14</time>
             
           </span>
 
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">2.2k</span>
+                <span title="字数统计">2.3k</span>
               
 
               
@@ -519,11 +519,11 @@
 </ol>
 <hr>
 <h1 id="计算弹性常数"><a href="#计算弹性常数" class="headerlink" title="计算弹性常数"></a>计算弹性常数</h1><ol>
-<li>下载除 <code>~.check</code> 外的其他文件，复制粘贴并替换本地计算目录<code>~GeomOpt</code> ，在<code>MS</code> 中刷新<code>refresh</code> STP。</li>
+<li>下载除 <code>~.check</code> 外的其他文件（<code>.usp</code> <code>.pid</code> 也不需要），复制粘贴并替换本地计算目录<code>~GeomOpt</code> ，在<code>MS</code> 中刷新<code>refresh</code> STP。</li>
 <li>打开<code>~.xsd</code> 文件，选送全部原子，<code>CASTEP Analysis</code> → <code>Structure</code> →<code>Upadte</code> ；取消原子选中，<code>CASTEP Calculation</code> →Task <code>Elastic Constants</code> → <code>Files</code> ，Save。</li>
 <li>根据右侧显示的<code>~.param</code> <code>ms_castep_cij__ii__jj.param</code> 修改<code>subGeneral_cij.cij</code> 中的循环次数，比最大的数大1。</li>
 <li>复制文件到<code>ms_castep_Cij</code> ，所有原 <code>Cij</code>文件夹里面的 <code>~.cel</code> <code>~.param</code> 文件，以及<code>~GeomOpt</code> 里面的  <code>~.usp</code> <code>~.sh</code> ，以及刚才修改的<code>subGeneral_cij.cij</code> 。</li>
-<li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<code>不要使用空格，否者出现 \</code>  ，<code>chmod +x subGeneral_cij.cij RunGeneral.sh</code>  以及 <code>dos2unix subGeneral_cij.cij RunGeneral.sh</code> ，<code>ls</code> 这两出现绿色（或其他）表示已经转码了，<code>qsub subGeneral_cij.cij</code> 提交任务，<code>qstat</code> 开始任务。</li>
+<li>提交<code>ms_castep_Cij</code>到远程，进入该目录，<code>不要使用空格已经小括号，否者出现 路径需要使用 \ 转义</code>  ，<code>chmod +x subGeneral_cij.cij RunGeneral.sh</code>  以及 <code>dos2unix subGeneral_cij.cij RunGeneral.sh</code> ，<code>ls</code> 这两出现绿色（或其他）表示已经转码了，<code>qsub subGeneral_cij.cij</code> 提交任务，<code>qstat</code> 开始任务。</li>
 </ol>
 <hr>
 <h1 id="数据处理部分"><a href="#数据处理部分" class="headerlink" title="数据处理部分"></a>数据处理部分</h1><ol>
