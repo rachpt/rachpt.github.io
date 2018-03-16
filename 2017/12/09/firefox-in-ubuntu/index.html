@@ -129,18 +129,18 @@
   <meta name="keywords" content="firefox,ubuntu," />
 
 
-<meta name="description" content="记录几个打开软件的方法。">
+<meta name="description" content="记录几个 firefox 相关的笔记。">
 <meta name="keywords" content="firefox,ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 中的 Firefox">
 <meta property="og:url" content="https://rachpt.me/2017/12/09/firefox-in-ubuntu/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="记录几个打开软件的方法。">
+<meta property="og:description" content="记录几个 firefox 相关的笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-14T04:55:20.575Z">
+<meta property="og:updated_time" content="2018-03-16T14:06:19.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 中的 Firefox">
-<meta name="twitter:description" content="记录几个打开软件的方法。">
+<meta name="twitter:description" content="记录几个 firefox 相关的笔记。">
 
 
 
@@ -407,7 +407,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T12:55:20+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-16T22:06:19+08:00">2018-03-16</time>
             
           </span>
 
@@ -461,7 +461,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">627</span>
+                <span title="字数统计">981</span>
               
 
               
@@ -496,7 +496,7 @@
 
       
         <blockquote>
-<p>记录几个打开软件的方法。</p>
+<p>记录几个 firefox 相关的笔记。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="进入Firefox的方法有："><a href="#进入Firefox的方法有：" class="headerlink" title="进入Firefox的方法有："></a>进入Firefox的方法有：</h1><ol>
@@ -524,6 +524,17 @@
 <p>ALT + 左方向键: 后退</p>
 <p>ALT + v: 前进</p>
 <p>CTRL + Q: 退出</p>
+<h1 id="关闭恢复页面"><a href="#关闭恢复页面" class="headerlink" title="关闭恢复页面"></a>关闭恢复页面</h1><p>每次强行 kill 进程后，再次打开 firefox ，会提示恢复之前页面。对于浏览器偶然崩溃找回之前页面来说不错，但是一般不会，因为需要使用脚本控制 firefox ，所以 kill 后，不需要恢复，于是这样设置。</p>
+<blockquote>
+<ol>
+<li>地址栏 <code>about:config</code>，回车。</li>
+<li>查找<code>browser.sessionstore</code> 。</li>
+<li><code>browser.sessionstore.max_tabs_undo</code> 改为0（非法关闭后保存的Tab页数 0）。</li>
+<li><code>browser.sessionstore.max_windows_undo</code> 改为0（保存的窗口数 0）。</li>
+<li><code>browser.sessionstore.resume_from_crash</code> 改为<code>false</code>（禁用恢复会话功能）。</li>
+<li>重启 firefox生效。</li>
+</ol>
+</blockquote>
 
       
     </div>
@@ -976,7 +987,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#进入Firefox的方法有："><span class="nav-number">1.</span> <span class="nav-text">进入Firefox的方法有：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部分常用快捷键"><span class="nav-number">2.</span> <span class="nav-text">部分常用快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#进入Firefox的方法有："><span class="nav-number">1.</span> <span class="nav-text">进入Firefox的方法有：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部分常用快捷键"><span class="nav-number">2.</span> <span class="nav-text">部分常用快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭恢复页面"><span class="nav-number">3.</span> <span class="nav-text">关闭恢复页面</span></a></li></ol></div>
             
 
           </div>
@@ -1017,7 +1028,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">61k</span>
+    <span title="站点总字数">62k</span>
   
 
   
@@ -1028,7 +1039,7 @@
     
       <span class="post-meta-item-text">站点总阅读时长&#58;</span>
     
-    <span title="站点总阅读时长">1:01</span>
+    <span title="站点总阅读时长">1:02</span>
   
 </div>
 

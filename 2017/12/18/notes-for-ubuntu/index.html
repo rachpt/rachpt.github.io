@@ -796,40 +796,59 @@
 <h1 id="终端中的链接符用法"><a href="#终端中的链接符用法" class="headerlink" title="终端中的链接符用法"></a>终端中的链接符用法</h1><ul>
 <li><p><strong>&amp;</strong>    的作用是使命令在后台运行。</p>
 <p>只要在命令后面跟上一个空格和 ‘&amp;’。你可以一口气在后台运行多个命令。</p>
+</li>
+</ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping c5 www.tecmint.com &amp;</span><br><span class="line">sudo apt-get update &amp; mkdit <span class="built_in">test</span> &amp;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><strong>;</strong>    一口气运行几个命令。</p>
-<p>命令顺序执行。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update ; apt-get upgrade ; mkdir <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<p>  <strong>&amp;&amp;</strong>    与操作符。</p>
+<p> 命令顺序执行。</p>
 </li>
 </ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update ; apt-get upgrade ; mkdir <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>&amp;&amp;</strong>      与操作符。</p>
 <p>如果第一个命令执行成功，才会执行第二个命令。</p>
 </li>
-<li><p><strong>||</strong>    或操作符 。</p>
+</ul>
+<ul>
+<li><p><strong>||</strong>      或操作符 。</p>
 <p>如果第一个命令执行失败，才会执行第二个命令。</p>
 </li>
 </ul>
 <ul>
-<li><p><strong>！</strong>    非操作符。</p>
+<li><p><strong>！</strong>      非操作符。</p>
 <p>执行除了提供的条件外的所有的语句。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r !(*.html) <span class="comment">#删除除了 ‘html’之外的所有文件</span></span><br></pre></td></tr></table></figure>
-<p>   <strong>&amp;&amp; – ||</strong>    与或操作符。</p>
-<p>‘与’和‘或’操作符的组合，它很像‘if-else‘语句。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping -c3 www.tecmint.com &amp;&amp; <span class="built_in">echo</span> <span class="string">"Verified"</span> || <span class="built_in">echo</span> <span class="string">"Host Down"</span></span><br><span class="line"><span class="comment"># ping tecmint.com，如果成功打印‘已验证’，否则打印‘主机故障’。</span></span><br></pre></td></tr></table></figure>
-<p>   <strong>|</strong>    管道操作符。</p>
-<p>将第一个命令的输出作为第二个命令的输入.</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
-<pre><code>**{}**    命令合并操作符。
-</code></pre><p>合并两个或多个命令，第二个命令依赖于第一个命令的执行。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ -f /home/tecmint/Downloads/xyz.txt ] || touch /home/tecmint/Downloads/xyz.txt; <span class="built_in">echo</span> <span class="string">"The file does not exist"</span></span><br><span class="line"></span><br><span class="line">[ -f /home/tecmint/Downloads/xyz1.txt ] || &#123; touch /home/tecmint/Downloads/xyz.txt; <span class="built_in">echo</span> <span class="string">"The file does not exist"</span> &#125; </span><br><span class="line"> </span><br><span class="line"><span class="comment">#检查一下文件‘xyz.txt’是否在Downloads目录下，如果不存在则创建之并输出提示信息。</span></span><br></pre></td></tr></table></figure>
-<pre><code>**()**    优先操作符。
-</code></pre><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(Command_x1 &amp;&amp; Command_x2) || (Command_x3 &amp;&amp; Command_x4)</span><br></pre></td></tr></table></figure>
-<pre><code>**\\**    连接符。
-</code></pre><p>太长而分成多行命令。</p>
-<p>​</p>
 </li>
 </ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r !(*.html) <span class="comment">#删除除了 ‘html’之外的所有文件</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>&amp;&amp; – ||</strong>    与或操作符。</p>
+<p> ‘与’ 和‘ 或’ 操作符的组合，它很像 ‘if-else‘ 语句。</p>
+</li>
+</ul>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping -c3 www.tecmint.com &amp;&amp; <span class="built_in">echo</span> <span class="string">"Verified"</span> || <span class="built_in">echo</span> <span class="string">"Host Down"</span></span><br><span class="line"><span class="comment"># ping tecmint.com，如果成功打印‘已验证’，否则打印‘主机故障’。</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>|</strong>     管道操作符。</p>
+<p>将第一个命令的输出作为第二个命令的输入.</p>
+</li>
+</ul>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>{}</strong>      命令合并操作符。</p>
+<p> 合并两个或多个命令，第二个命令依赖于第一个命令的执行。</p>
+</li>
+</ul>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ -f /home/tecmint/Downloads/xyz.txt ] || touch /home/tecmint/Downloads/xyz.txt; <span class="built_in">echo</span> <span class="string">"The file does not exist"</span></span><br><span class="line"></span><br><span class="line">[ -f /home/tecmint/Downloads/xyz1.txt ] || &#123; touch /home/tecmint/Downloads/xyz.txt; <span class="built_in">echo</span> <span class="string">"The file does not exist"</span> &#125; </span><br><span class="line"> </span><br><span class="line"><span class="comment">#检查一下文件‘xyz.txt’是否在Downloads目录下，如果不存在则创建之并输出提示信息。</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>()</strong>     优先操作符。</li>
+</ul>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(Command_x1 &amp;&amp; Command_x2) || (Command_x3 &amp;&amp; Command_x4)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>\</strong>     连接符。</p>
+<p>太长而分成多行命令。</p>
+</li>
+</ul>
+<p>  ​</p>
 <h1 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h1><p>-h    参数意味着便于人识别，单位 1024.</p>
 <p>-si    与h类似，单位 1000。</p>
 <p>-S    以文件大小排序。</p>
@@ -845,6 +864,42 @@
 <p>-R    递归列出子目录文件。</p>
 <p>-X    以扩展名排序，同 –sort=extension 。</p>
 <p>-t    以修改时间排序，新的在前面。</p>
+<h1 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">crontab -e <span class="comment">#编辑任务</span></span><br><span class="line"></span><br><span class="line">crontab -l <span class="comment">#查看任务</span></span><br><span class="line"></span><br><span class="line">sudo /etc/init.d/cron start <span class="comment">#启动服务</span></span><br><span class="line">sudo service cron restart  <span class="comment"># 也行，还有 stop start等。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pgrep cron <span class="comment">#查看是否在运行</span></span><br></pre></td></tr></table></figure>
+<div class="note default"><p>#  m  h   dom  mon  dow    command</p>
+<p>m  分钟 <code>0-59</code></p>
+<p>h  小时 <code>0-23</code></p>
+<p>dom  天<code>1-31</code>  <strong>Day Of month</strong></p>
+<p>mon  月 <code>1-12</code></p>
+<p>dow   星期 <code>1-6</code>  <code>0</code> 表示星期天 <strong>Day Of Week</strong></p>
+<p>command  就是要执行的命令</p>
+<p>在命令后加入 <code>&gt;&gt; /home/rachpt/task.log</code>  记录时间。</p></div>
+<p><strong>例子：</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*/1  *  *  *  *  python /home/rachpt/test.py &gt;&gt;/home/rachpt/test.log 2&gt;&amp;1</span><br><span class="line"><span class="comment"># 每隔一分钟执行一次，表示重复的 用 */ + 时间。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*/3  6-8  *  *  *  python /home/rachpt/test.py &gt;&gt;/home/rachpt/test.log 2&gt;&amp;1</span><br><span class="line"><span class="comment"># 上午6至8点，每隔 三分钟执行一次。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 5 * * *  /bin/sh /home/rachpt/test.sh &gt;&gt;/home/rachpt/test.log 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 每天上午5点重复执行。</span></span><br></pre></td></tr></table></figure>
+<p>注意 <code>*</code> 号的数量。</p>
+<table>
+<thead>
+<tr>
+<th><code>*</code></th>
+<th>代表所有的取值范围内的数字；</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>代表”每”（“*/5”，表示每5个单位）；</td>
+</tr>
+<tr>
+<td><code>–</code></td>
+<td>代表从某个数字到某个数字（“1-4”，表示1-4个单位）；</td>
+</tr>
+<tr>
+<td><code>,</code></td>
+<td>分开几个离散的数字。</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -1288,7 +1343,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用系统命令"><span class="nav-number">1.</span> <span class="nav-text">常用系统命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python-配置"><span class="nav-number">2.</span> <span class="nav-text">python 配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python-计算环境"><span class="nav-number">3.</span> <span class="nav-text">python 计算环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#apt-get-使用ipv4"><span class="nav-number">4.</span> <span class="nav-text">apt-get 使用ipv4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux-常用编辑器"><span class="nav-number">5.</span> <span class="nav-text">linux 常用编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vi命令"><span class="nav-number">5.1.</span> <span class="nav-text">vi命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">5.2.</span> <span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">5.2.1.</span> <span class="nav-text">复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动"><span class="nav-number">5.2.2.</span> <span class="nav-text">移动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nano命令"><span class="nav-number">5.3.</span> <span class="nav-text">nano命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF阅读软件-zathura"><span class="nav-number">6.</span> <span class="nav-text">PDF阅读软件 zathura</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mint-18-3-的路径"><span class="nav-number">6.1.</span> <span class="nav-text">mint 18.3 的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">6.2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">6.3.</span> <span class="nav-text">命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mpv-播放就差笔记"><span class="nav-number">7.</span> <span class="nav-text">mpv 播放就差笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#部分快捷键"><span class="nav-number">7.1.</span> <span class="nav-text">部分快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义"><span class="nav-number">7.2.</span> <span class="nav-text">用户自定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用小技巧"><span class="nav-number">8.</span> <span class="nav-text">常用小技巧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-ftp，以及-tar-打包与解压"><span class="nav-number">9.</span> <span class="nav-text">使用 ftp，以及 tar 打包与解压</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">9.1.</span> <span class="nav-text">连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端常用命令"><span class="nav-number">9.2.</span> <span class="nav-text">客户端常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包与解包"><span class="nav-number">9.3.</span> <span class="nav-text">打包与解包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PASH环境变量的设置"><span class="nav-number">10.</span> <span class="nav-text">PASH环境变量的设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GIMP-相关"><span class="nav-number">11.</span> <span class="nav-text">GIMP 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GIMP-使用教程"><span class="nav-number">11.1.</span> <span class="nav-text">GIMP 使用教程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Arc-GTK主题-还是不要装的好"><span class="nav-number">12.</span> <span class="nav-text">安装Arc GTK主题 还是不要装的好</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh-使用"><span class="nav-number">13.</span> <span class="nav-text">ssh 使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-配置-ssh"><span class="nav-number">14.</span> <span class="nav-text">Git 配置 ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置-FTP-sever"><span class="nav-number">15.</span> <span class="nav-text">配置 FTP sever</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#samba-文件共享服务"><span class="nav-number">15.1.</span> <span class="nav-text">samba 文件共享服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动挂载"><span class="nav-number">16.</span> <span class="nav-text">自动挂载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体"><span class="nav-number">17.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中文语言下修改-home-文件夹-英文路径"><span class="nav-number">18.</span> <span class="nav-text">中文语言下修改 home 文件夹 英文路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx-配置"><span class="nav-number">19.</span> <span class="nav-text">nginx 配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ImageMagic-使用笔记"><span class="nav-number">20.</span> <span class="nav-text">ImageMagic 使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些快捷键"><span class="nav-number">20.1.</span> <span class="nav-text">一些快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">20.2.</span> <span class="nav-text">display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import-截屏"><span class="nav-number">20.3.</span> <span class="nav-text">import 截屏</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fit2D-linux版下载地址"><span class="nav-number">21.</span> <span class="nav-text">Fit2D linux版下载地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#花生壳"><span class="nav-number">22.</span> <span class="nav-text">花生壳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Texmaker"><span class="nav-number">23.</span> <span class="nav-text">Texmaker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mv-命令"><span class="nav-number">24.</span> <span class="nav-text">mv 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端中的链接符用法"><span class="nav-number">25.</span> <span class="nav-text">终端中的链接符用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ls-命令"><span class="nav-number">26.</span> <span class="nav-text">ls 命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用系统命令"><span class="nav-number">1.</span> <span class="nav-text">常用系统命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python-配置"><span class="nav-number">2.</span> <span class="nav-text">python 配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python-计算环境"><span class="nav-number">3.</span> <span class="nav-text">python 计算环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#apt-get-使用ipv4"><span class="nav-number">4.</span> <span class="nav-text">apt-get 使用ipv4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux-常用编辑器"><span class="nav-number">5.</span> <span class="nav-text">linux 常用编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vi命令"><span class="nav-number">5.1.</span> <span class="nav-text">vi命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">5.2.</span> <span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">5.2.1.</span> <span class="nav-text">复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动"><span class="nav-number">5.2.2.</span> <span class="nav-text">移动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nano命令"><span class="nav-number">5.3.</span> <span class="nav-text">nano命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF阅读软件-zathura"><span class="nav-number">6.</span> <span class="nav-text">PDF阅读软件 zathura</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mint-18-3-的路径"><span class="nav-number">6.1.</span> <span class="nav-text">mint 18.3 的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">6.2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">6.3.</span> <span class="nav-text">命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mpv-播放就差笔记"><span class="nav-number">7.</span> <span class="nav-text">mpv 播放就差笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#部分快捷键"><span class="nav-number">7.1.</span> <span class="nav-text">部分快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户自定义"><span class="nav-number">7.2.</span> <span class="nav-text">用户自定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用小技巧"><span class="nav-number">8.</span> <span class="nav-text">常用小技巧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-ftp，以及-tar-打包与解压"><span class="nav-number">9.</span> <span class="nav-text">使用 ftp，以及 tar 打包与解压</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">9.1.</span> <span class="nav-text">连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端常用命令"><span class="nav-number">9.2.</span> <span class="nav-text">客户端常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包与解包"><span class="nav-number">9.3.</span> <span class="nav-text">打包与解包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PASH环境变量的设置"><span class="nav-number">10.</span> <span class="nav-text">PASH环境变量的设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GIMP-相关"><span class="nav-number">11.</span> <span class="nav-text">GIMP 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GIMP-使用教程"><span class="nav-number">11.1.</span> <span class="nav-text">GIMP 使用教程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Arc-GTK主题-还是不要装的好"><span class="nav-number">12.</span> <span class="nav-text">安装Arc GTK主题 还是不要装的好</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh-使用"><span class="nav-number">13.</span> <span class="nav-text">ssh 使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-配置-ssh"><span class="nav-number">14.</span> <span class="nav-text">Git 配置 ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置-FTP-sever"><span class="nav-number">15.</span> <span class="nav-text">配置 FTP sever</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#samba-文件共享服务"><span class="nav-number">15.1.</span> <span class="nav-text">samba 文件共享服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动挂载"><span class="nav-number">16.</span> <span class="nav-text">自动挂载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体"><span class="nav-number">17.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中文语言下修改-home-文件夹-英文路径"><span class="nav-number">18.</span> <span class="nav-text">中文语言下修改 home 文件夹 英文路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx-配置"><span class="nav-number">19.</span> <span class="nav-text">nginx 配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ImageMagic-使用笔记"><span class="nav-number">20.</span> <span class="nav-text">ImageMagic 使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些快捷键"><span class="nav-number">20.1.</span> <span class="nav-text">一些快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">20.2.</span> <span class="nav-text">display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import-截屏"><span class="nav-number">20.3.</span> <span class="nav-text">import 截屏</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fit2D-linux版下载地址"><span class="nav-number">21.</span> <span class="nav-text">Fit2D linux版下载地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#花生壳"><span class="nav-number">22.</span> <span class="nav-text">花生壳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Texmaker"><span class="nav-number">23.</span> <span class="nav-text">Texmaker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mv-命令"><span class="nav-number">24.</span> <span class="nav-text">mv 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端中的链接符用法"><span class="nav-number">25.</span> <span class="nav-text">终端中的链接符用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ls-命令"><span class="nav-number">26.</span> <span class="nav-text">ls 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定时任务"><span class="nav-number">27.</span> <span class="nav-text">定时任务</span></a></li></ol></div>
             
 
           </div>
@@ -1329,7 +1384,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">61k</span>
+    <span title="站点总字数">62k</span>
   
 
   
@@ -1340,7 +1395,7 @@
     
       <span class="post-meta-item-text">站点总阅读时长&#58;</span>
     
-    <span title="站点总阅读时长">1:01</span>
+    <span title="站点总阅读时长">1:02</span>
   
 </div>
 
