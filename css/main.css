@@ -2208,7 +2208,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0bf79a;
+  background: #83e4f6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3384,7 +3384,7 @@ div.daodream-launcher-preview {
 }
 div.info,
 span.algolia-powered,
-div.daodream-powered-by {
+div.daodream-powered-by div.busuanzi-count {
   visibility: hidden !important;
   height: 0 !important;
 }
