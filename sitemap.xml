@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.me/notes/index.html</loc>
+    
+    <lastmod>2018-03-22T05:04:38.613Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.me/2018/03/19/sevseral-shell-scripts/</loc>
     
     <lastmod>2018-03-20T15:06:46.979Z</lastmod>
@@ -163,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/notes/index.html</loc>
-    
-    <lastmod>2018-03-08T14:46:12.649Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.me/about/index.html</loc>
     
     <lastmod>2018-03-08T14:43:06.399Z</lastmod>
@@ -247,7 +247,14 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -261,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/20/my-graduate-stage/</loc>
+    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -282,14 +289,7 @@
   </url>
   
   <url>
-    <loc>https://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
