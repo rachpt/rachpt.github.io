@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[notes-for-shell-scripting-bible]]></title>
+    <url>%2F2018%2F03%2F23%2Fnotes-for-shell-scripting-bible%2F</url>
+    <content type="text"><![CDATA[Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。 看到哪儿就就记到哪，没有规律可循。 cron 时间表全称 cron table ，* 通配符，dayofweek 可以使用 三字母格式（mon, tue, wed, thu, fri, sat, sun） 对应0-6 ，0 为 sun。 每一月最后一天执行脚本的一种方式： 100 12 * * * if [ `date +%d -d tomorrow` = 01 ] ; then ; COMMAND crontab -l 列出所有定时任务。 crontab -e 编辑用户自己的时间表，文件在 /var/spool/cron/ 目录下。 对于不要求使用精确时间的任务，可以在 /etc/cron.*ly 添加脚本。 hourly，monthly，daily。意如其名，复制到里面即可。 cron 惟一的问题是假定你 7x24 小时开机。 anacron 可以执行错过了的 cron 任务。 cron 时间戳文件在 /var/spool/anacron 下，作业表在 /etc/anacrontab 文件。 开机运行脚本ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 /etc/inittab文件。 0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。 不同发行版使用的 开机脚本(upstart script)路径不同，如 /etc/rc#.d /etc/init.d /etc/init.d/rc.d 定义自己的 /etc/initio.d/rc.local dabian 发行版 /etc/rc.local ubuntn 发行版 如果使用脚本，需要使用全路径名。 任务优先级使用 nice 与 renice 命令修改优先级。值 -20 – 20 ，越大优先级越小。 123nice -d 10 ./test.shrenice 12 -p 进程号 普通用户只能降低优先级，root 用户（或者 sudo）可以随意。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CASTEP-module-in-MS]]></title>
     <url>%2F2018%2F03%2F23%2FCASTEP-module-in-MS%2F</url>
     <content type="text"><![CDATA[网上找的部分 Materials Studio 关于 CASTEP 模块的使用。 生成的文件作用.cell 文件包含 坐标和晶格参数.param 文件包含 所有模拟输入参数 ms 设置 中的 Optimize cell 意思是优化晶格常数，改变 计算精度，自动优化晶包 得到的文件.xsd 最后的优化结构.xtd 轨迹文件，包含每一步的结构.castep 包含优化信息的输出文件 计算任何性质，都有 .param .castep 文件输出。 linux 使用 perl 脚本命令进行 处理 比如 perl cell2poscar.pl .cell, 生成POSCAR文件 原出处 。 关于第一原理的一些理解：（1）第一性原理其实是包括基于密度泛函的从头算和基于Hartree-Fock自洽计算的从头算，前者以电子密度作为基本变量（霍亨伯格-科洪定理），通过求解Kohn-Sham方程，迭代自洽得到体系的基态电子密度，然后求体系的基态性质；后者则通过自洽求解Hartree-Fock方程，获得体系的波函数，求基态性质；评述：K-S方程的计算水平达到了H-F水平，同时还考虑了电子间的交换关联作用。（2）关于DFT中密度泛函的Functional，其实是交换关联泛函，包括LDA，GGA，杂化泛函等等。一般LDA为局域密度近似，在空间某点用均匀电子气密度作为交换关联泛函的唯一变量，多数为参数化的CA-PZ方案；GGA为广义梯度近似，不仅将电子密度作为交换关联泛函的变量，也考虑了密度的梯度为变量，包括PBE,PW,RPBE等方案，BLYP泛函也属于GGA；此外还有一些杂化泛函，B3LYP等。（3）关于赝势在处理计算体系中原子的电子态时，有两种方法，一种是考虑所有电子，叫做全电子法，比如WIEN2K中的FLAPW方法(线性缀加平面波)；此外还有一种方法是只考虑价电子，而把芯电子和原子核构成离子实放在一起考虑，即赝势法，一般赝势法是选取一个截断半径，截断半径以内，波函数变化较平滑，和真实的不同，截断半径以外则和真实情况相同，而且赝势法得到的能量本征值和全电子法应该相同。赝势包括模守恒和超软，模守恒较硬，一般需要较大的截断能，超软势则可以用较小的截断能即可。另外，模守恒势的散射特性和全电子相同，因此一般红外，拉曼等光谱的计算需要用模守恒势。赝势的测试标准应是赝势与全电子法计算结果的匹配度，而不是赝势与实验结果的匹配度，因为和实验结果的匹配可能是偶然的。（4）关于收敛测试：（a）Ecut，也就是截断能，一般情况下，总能相对于不同Ecut做计算，当Ecut增大时总能变化不明显了即可；然而，在需要考虑体系应力时，还需对应力进行收敛测试，而且应力相对于Ecut的收敛要比总能更为苛刻，也就是某个截断能下总能已经收敛了，但应力未必收敛。（b）K-point，即K网格，一般金属需要较大的K网格，采用超晶胞时可以选用相对较小的K网格，但实际上还是要经过测试。（5）关于磁性一般何时考虑自旋呢？举例子，例如BaTiO3中，Ba、Ti和O分别为+2，+4和-2价，离子全部为各个轨道满壳层的结构，就不必考虑自旋了；对于BaMnO3中，由于Mn+3价时d轨道还有电子，但未满，因此需考虑Mn的自旋，至于Ba和O则不必考虑。其实设定自旋就是给定一个原子磁矩的初始值，只在刚开始计算时作为初始值使用，具体的可参照磁性物理。（6）关于几何优化包括很多种了，比如晶格常数和原子位置同时优化，只优化原子位置，只优化晶格常数，还有晶格常数和原子位置分开优化等等。在PRL一篇文章中见到过只优化原子位置，晶格常数用实验值的例子（PRL 100, 186402 (2008)）；也见到过晶格常数先优化，之后固定晶格常数优化原子位置的情况；更多的情况则是Full geometry optimization。一般情况下，也有不优化几何结构直接计算电子结构的，但是对于缺陷形成能的计算则往往要优化。（7）关于软件软件大致分为基于平面波的软件，如CASTEP、PWSCF和ABINIT等等，计算量大概和体系原子数目的三次方相关；还有基于原子轨道线性组合的软件(LCAO)，比如openmx，siesta，dmol等，计算量和体系原子数目相关，一般可模拟较多原子数目的体系。 参考文献：Designing meaningful density functional theory calculations in materials science—a primer 赝势 晶包内原子超过30个时，或者晶包内有许多空洞的地方，使用 real-space 效率更高。 出处 。]]></content>
@@ -54,8 +65,8 @@
         <category>linux</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>shell</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>

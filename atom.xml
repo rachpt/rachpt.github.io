@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-23T03:14:45.997Z</updated>
+  <updated>2018-03-23T14:14:19.238Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>notes-for-shell-scripting-bible</title>
+    <link href="https://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/"/>
+    <id>https://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/</id>
+    <published>2018-03-23T13:23:22.000Z</published>
+    <updated>2018-03-23T14:14:19.238Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。</p></blockquote><a id="more"></a><p>看到哪儿就就记到哪，没有规律可循。</p><h1 id="cron-时间表"><a href="#cron-时间表" class="headerlink" title="cron 时间表"></a>cron 时间表</h1><p>全称 <code>cron table</code> ，*  通配符，dayofweek 可以使用 三字母格式（mon, tue, wed, thu, fri,  sat, sun）</p><p>对应<code>0-6</code> ，0 为 sun。</p><p>每一月最后一天执行脚本的一种方式：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00 12 * * * <span class="keyword">if</span> [ `date +%d -d tomorrow` = 01 ] ; <span class="keyword">then</span> ; COMMAND</span><br></pre></td></tr></table></figure><p>crontab -l    列出所有定时任务。</p><p>crontab -e    编辑用户自己的时间表，文件在 <code>/var/spool/cron/</code> 目录下。</p><p>对于不要求使用精确时间的任务，可以在 <code>/etc/cron.*ly</code> 添加脚本。</p><p>hourly，monthly，daily。意如其名，复制到里面即可。</p><p>cron 惟一的问题是假定你 7x24 小时开机。</p><p>anacron 可以执行错过了的 cron 任务。</p><p>cron 时间戳文件在 <code>/var/spool/anacron</code> 下，作业表在 <code>/etc/anacrontab</code>  文件。</p><h1 id="开机运行脚本"><a href="#开机运行脚本" class="headerlink" title="开机运行脚本"></a>开机运行脚本</h1><p>ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 <code>/etc/inittab</code>文件。</p><p>0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。</p><p>不同发行版使用的 开机脚本(upstart script)路径不同，如</p><p><code>/etc/rc#.d</code></p><p><code>/etc/init.d</code></p><p><code>/etc/init.d/rc.d</code></p><p>定义自己的</p><p><code>/etc/initio.d/rc.local</code>  dabian 发行版</p><p><code>/etc/rc.local</code>    ubuntn 发行版</p><p>如果使用脚本，需要使用全路径名。</p><h1 id="任务优先级"><a href="#任务优先级" class="headerlink" title="任务优先级"></a>任务优先级</h1><p>使用 <code>nice</code> 与 <code>renice</code> 命令修改优先级。值  -20  –  20 ，越大优先级越小。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nice -d 10 ./test.sh</span><br><span class="line"></span><br><span class="line">renice 12 -p 进程号</span><br></pre></td></tr></table></figure><p>普通用户只能降低优先级，root 用户（或者 sudo）可以随意。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="shell" scheme="https://rachpt.me/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>CASTEP-module-in-MS</title>
@@ -136,9 +160,9 @@
       <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
     
     
-      <category term="hexo" scheme="https://rachpt.me/tags/hexo/"/>
-    
       <category term="shell" scheme="https://rachpt.me/tags/shell/"/>
+    
+      <category term="hexo" scheme="https://rachpt.me/tags/hexo/"/>
     
   </entry>
   
@@ -467,34 +491,6 @@
     
       <category term="笔记" scheme="https://rachpt.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</title>
-    <link href="https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/"/>
-    <id>https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/</id>
-    <published>2018-01-11T14:35:03.000Z</published>
-    <updated>2018-03-23T05:42:15.625Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 <a href="https://www.linuxmint.com/download.php" target="_blank" rel="noopener">mint cinnamon</a> 版）</p></blockquote><a id="more"></a><h1 id="安装简要步骤"><a href="#安装简要步骤" class="headerlink" title="安装简要步骤"></a>安装简要步骤</h1><p>setp1.     安装 rpm2cpio</p><p>step2.     使用 bash csh</p><p>step3.     sudo ./install /opt/ms80</p><p>step4.     cd /opt/ms80/LicensePack/etc</p><p>step5.     sudo ./lp_config</p><p>step6.     sudo ./lp_echovars</p><p>step7.     sudo ./install /opt/ms80 y</p><p>#         OK! It work’s!</p><p>#              最好安装到自己的家目录</p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhearrjj20n90hyaeq.jpg" alt="ms-ubuntu-pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhxcal7j20n90hydle.jpg" alt="ms-ubuntu-pic2"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vikxx9hj20g20g10vv.jpg" alt="ms-ubuntu-pic3"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1viye0uvj20g20g1aed.jpg" alt="ms-ubuntu-pic4"></p><hr><h1 id="更新-2018-01-12"><a href="#更新-2018-01-12" class="headerlink" title="更新 2018.01.12"></a>更新 2018.01.12</h1><p>安装到自己的家目录（/home/user）重启后才有用，无需 sudo。</p><p><span style="color: #ff0000;">使用 bash 很重要</span>，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ </p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看使用的默认 shell 是啥。</span></span><br><span class="line">ls -l /bin/sh</span><br></pre></td></tr></table></figure><p><img src="https://imagizer.imageshack.com/img924/969/ARL0vx.png" alt="picture"></p><p>ubuntu 采用的是 dash （<em>theDebian Almquist Shell</em>），而非 bash （<em>GNU Bourne-Again Shell</em>，大多数 linux 默认使用这个作为默认shell）。</p><p>修改默认的sh。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure dash</span><br></pre></td></tr></table></figure><p>然后选择<strong>【否】</strong></p><p><img src="https://imagizer.imageshack.com/img922/3820/FGsZ18.png" alt="picture"></p><p>完成修改。</p><p><a href="http://blog.csdn.net/hemmingway/article/details/49301873" target="_blank" rel="noopener">参考1</a> ，<a href="http://blog.csdn.net/gatieme/article/details/52136411" target="_blank" rel="noopener">bash与dash 区别</a> 。</p><p>自己看 install.log , 并设置开机自动启动  gateway 。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置开机启动</span></span><br><span class="line">/home/rachpt/Accelrys/MaterialsStudio8.0/etc/Gateway/gwstart</span><br></pre></td></tr></table></figure><p><img src="https://imagizer.imageshack.com/img923/111/GS7YLh.png" alt="picture"></p><p>浏览器   <a href="http://127.0.0.1:18888" target="_blank" rel="noopener">http://127.0.0.1:18888</a>   查看是否成功。</p><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 8 <span class="string">"you ms_job path/name"</span> </span><br><span class="line"><span class="comment"># 不要 param 后缀的 param 文件名。</span></span><br><span class="line"><span class="comment"># 例子</span></span><br><span class="line">nohup /home/rachpt/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 7 PMA2PbI4 &amp;</span><br><span class="line"><span class="comment"># nohup ... &amp; 由于后台运行，</span></span><br><span class="line"><span class="comment"># 7 表示CPU 核心数，</span></span><br><span class="line"><span class="comment"># 由于是在 PMA2PbI4 任务的文件夹中打开的终端，所以任务直接使用 相对路径。</span></span><br></pre></td></tr></table></figure><p><img src="https://imagizer.imageshack.com/img924/6715/mrRyHk.png" alt="picture"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 &lt;a href=&quot;https://www.linuxmint.com/download.php&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mint cinnamon&lt;/a&gt; 版）&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
-    
-      <category term="DFT" scheme="https://rachpt.me/categories/linux/DFT/"/>
-    
-    
-      <category term="castep" scheme="https://rachpt.me/tags/castep/"/>
-    
-      <category term="ms" scheme="https://rachpt.me/tags/ms/"/>
     
   </entry>
   
