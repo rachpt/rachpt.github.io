@@ -126,13 +126,13 @@
 
 
   
-  <meta name="keywords" content="ubuntu,ms," />
+  <meta name="keywords" content="castep,ms," />
 
 
 <meta name="description" content="linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 mint cinnamon 版）">
-<meta name="keywords" content="ubuntu,ms">
+<meta name="keywords" content="castep,ms">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux mint 安装 Materials Studio 8.0">
+<meta property="og:title" content="Linux mint 安装 Materials Studio 8.0 与使用 CASTEP">
 <meta property="og:url" content="https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 mint cinnamon 版）">
@@ -141,9 +141,13 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhxcal7j20n90hydle.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vikxx9hj20g20g10vv.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1viye0uvj20g20g1aed.jpg">
-<meta property="og:updated_time" content="2018-03-14T03:35:18.601Z">
+<meta property="og:image" content="https://imagizer.imageshack.com/img924/969/ARL0vx.png">
+<meta property="og:image" content="https://imagizer.imageshack.com/img922/3820/FGsZ18.png">
+<meta property="og:image" content="https://imagizer.imageshack.com/img923/111/GS7YLh.png">
+<meta property="og:image" content="https://imagizer.imageshack.com/img924/6715/mrRyHk.png">
+<meta property="og:updated_time" content="2018-03-23T05:42:15.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux mint 安装 Materials Studio 8.0">
+<meta name="twitter:title" content="Linux mint 安装 Materials Studio 8.0 与使用 CASTEP">
 <meta name="twitter:description" content="linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 mint cinnamon 版）">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhearrjj20n90hyaeq.jpg">
 
@@ -163,7 +167,7 @@
     sidebar: "",
   };
 </script>
-  <title>Linux mint 安装 Materials Studio 8.0 | rachpt's Blog</title>
+  <title>Linux mint 安装 Materials Studio 8.0 与使用 CASTEP | rachpt's Blog</title>
   
 
 
@@ -379,7 +383,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Linux mint 安装 Materials Studio 8.0</h2>
+          <h2 class="post-title" itemprop="name headline">Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</h2>
         
 
         <div class="post-meta">
@@ -412,7 +416,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:35:18+08:00">2018-03-14</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-23T13:42:15+08:00">2018-03-23</time>
             
           </span>
 
@@ -481,7 +485,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">676</span>
+                <span title="字数统计">1.1k</span>
               
 
               
@@ -519,7 +523,7 @@
 <p>linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 <a href="https://www.linuxmint.com/download.php" target="_blank" rel="noopener">mint cinnamon</a> 版）</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="Brief-introduce-of-MS’s-setup-on-ubuntu-linux"><a href="#Brief-introduce-of-MS’s-setup-on-ubuntu-linux" class="headerlink" title="Brief introduce of MS’s setup on ubuntu linux."></a>Brief introduce of MS’s setup on ubuntu linux.</h1><p>setp1.     安装 rpm2cpio</p>
+<h1 id="安装简要步骤"><a href="#安装简要步骤" class="headerlink" title="安装简要步骤"></a>安装简要步骤</h1><p>setp1.     安装 rpm2cpio</p>
 <p>step2.     使用 bash csh</p>
 <p>step3.     sudo ./install /opt/ms80</p>
 <p>step4.     cd /opt/ms80/LicensePack/etc</p>
@@ -527,17 +531,29 @@
 <p>step6.     sudo ./lp_echovars</p>
 <p>step7.     sudo ./install /opt/ms80 y</p>
 <p>#         OK! It work’s!</p>
+<p>#              最好安装到自己的家目录</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhearrjj20n90hyaeq.jpg" alt="ms-ubuntu-pic1"></p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vhxcal7j20n90hydle.jpg" alt="ms-ubuntu-pic2"></p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vikxx9hj20g20g10vv.jpg" alt="ms-ubuntu-pic3"></p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1viye0uvj20g20g1aed.jpg" alt="ms-ubuntu-pic4"></p>
 <hr>
-<h1 id="更新-2018-01-12"><a href="#更新-2018-01-12" class="headerlink" title="更新   2018.01.12"></a>更新   2018.01.12</h1><p>安装到自己的家目录（/home/user）重启后才有用，无需 sudo。</p>
-<p><span style="color: #ff0000;">使用 bash 很重要</span>，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ 具体参考这两篇博文。</p>
-<p><a href="http://blog.csdn.net/hemmingway/article/details/49301873" target="_blank" rel="noopener">http://blog.csdn.net/hemmingway/article/details/49301873</a></p>
-<p><a href="http://blog.csdn.net/gatieme/article/details/52136411" target="_blank" rel="noopener">http://blog.csdn.net/gatieme/article/details/52136411</a></p>
-<p>自己看 install.log , 设置开机启动 有个  gateway 什么的 start.</p>
+<h1 id="更新-2018-01-12"><a href="#更新-2018-01-12" class="headerlink" title="更新 2018.01.12"></a>更新 2018.01.12</h1><p>安装到自己的家目录（/home/user）重启后才有用，无需 sudo。</p>
+<p><span style="color: #ff0000;">使用 bash 很重要</span>，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看使用的默认 shell 是啥。</span></span><br><span class="line">ls -l /bin/sh</span><br></pre></td></tr></table></figure>
+<p><img src="https://imagizer.imageshack.com/img924/969/ARL0vx.png" alt="picture"></p>
+<p>ubuntu 采用的是 dash （<em>theDebian Almquist Shell</em>），而非 bash （<em>GNU Bourne-Again Shell</em>，大多数 linux 默认使用这个作为默认shell）。</p>
+<p>修改默认的sh。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure dash</span><br></pre></td></tr></table></figure>
+<p>然后选择<strong>【否】</strong></p>
+<p><img src="https://imagizer.imageshack.com/img922/3820/FGsZ18.png" alt="picture"></p>
+<p>完成修改。</p>
+<p><a href="http://blog.csdn.net/hemmingway/article/details/49301873" target="_blank" rel="noopener">参考1</a> ，<a href="http://blog.csdn.net/gatieme/article/details/52136411" target="_blank" rel="noopener">bash与dash 区别</a> 。</p>
+<p>自己看 install.log , 并设置开机自动启动  gateway 。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置开机启动</span></span><br><span class="line">/home/rachpt/Accelrys/MaterialsStudio8.0/etc/Gateway/gwstart</span><br></pre></td></tr></table></figure>
+<p><img src="https://imagizer.imageshack.com/img923/111/GS7YLh.png" alt="picture"></p>
 <p>浏览器   <a href="http://127.0.0.1:18888" target="_blank" rel="noopener">http://127.0.0.1:18888</a>   查看是否成功。</p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 8 <span class="string">"you ms_job path/name"</span> </span><br><span class="line"><span class="comment"># 不要 param 后缀的 param 文件名。</span></span><br><span class="line"><span class="comment"># 例子</span></span><br><span class="line">nohup /home/rachpt/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 7 PMA2PbI4 &amp;</span><br><span class="line"><span class="comment"># nohup ... &amp; 由于后台运行，</span></span><br><span class="line"><span class="comment"># 7 表示CPU 核心数，</span></span><br><span class="line"><span class="comment"># 由于是在 PMA2PbI4 任务的文件夹中打开的终端，所以任务直接使用 相对路径。</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://imagizer.imageshack.com/img924/6715/mrRyHk.png" alt="picture"></p>
 
       
     </div>
@@ -551,35 +567,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/01/13/ubuntu-update-xz-to-5-2/" rel="bookmark">ubuntu 更新 xz 至 5.2+</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017/12/31/setting-protable-program-on-linux/" rel="bookmark">Linux 免安装程序配置</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017/12/18/notes-for-ubuntu/" rel="bookmark">ubuntu 学习笔记</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017/12/09/firefox-in-ubuntu/" rel="bookmark">Ubuntu 中的 Firefox</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/2018/03/14/ms-scf-max-iterations/" rel="bookmark">Materials Studio CASTEP 迭代次数设置</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/03/13/some-error-of-ms/" rel="bookmark">几个 MS 错误</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/03/23/CASTEP-module-in-MS/" rel="bookmark">CASTEP-module-in-MS</a></div>
       
     </li>
   
@@ -643,7 +645,7 @@
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/" title="Linux mint 安装 Materials Studio 8.0">https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/</a>
+    <a href="https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/" title="Linux mint 安装 Materials Studio 8.0 与使用 CASTEP">https://rachpt.me/2018/01/11/install-materials-studio-on-ubuntu/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -656,7 +658,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+            <a href="/tags/castep/" rel="tag"># castep</a>
           
             <a href="/tags/ms/" rel="tag"># ms</a>
           
@@ -990,7 +992,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Brief-introduce-of-MS’s-setup-on-ubuntu-linux"><span class="nav-number">1.</span> <span class="nav-text">Brief introduce of MS’s setup on ubuntu linux.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新-2018-01-12"><span class="nav-number">2.</span> <span class="nav-text">更新   2018.01.12</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装简要步骤"><span class="nav-number">1.</span> <span class="nav-text">安装简要步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新-2018-01-12"><span class="nav-number">2.</span> <span class="nav-text">更新 2018.01.12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
             
 
           </div>

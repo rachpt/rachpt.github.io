@@ -190,15 +190,15 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Linux mint 安装 Materials Studio 8.0]]></title>
+    <title><![CDATA[Linux mint 安装 Materials Studio 8.0 与使用 CASTEP]]></title>
     <url>%2F2018%2F01%2F11%2Finstall-materials-studio-on-ubuntu%2F</url>
-    <content type="text"><![CDATA[linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 mint cinnamon 版） Brief introduce of MS’s setup on ubuntu linux.setp1. 安装 rpm2cpio step2. 使用 bash csh step3. sudo ./install /opt/ms80 step4. cd /opt/ms80/LicensePack/etc step5. sudo ./lp_config step6. sudo ./lp_echovars step7. sudo ./install /opt/ms80 y # OK! It work’s! 更新 2018.01.12安装到自己的家目录（/home/user）重启后才有用，无需 sudo。 使用 bash 很重要，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ 具体参考这两篇博文。 http://blog.csdn.net/hemmingway/article/details/49301873 http://blog.csdn.net/gatieme/article/details/52136411 自己看 install.log , 设置开机启动 有个 gateway 什么的 start. 浏览器 http://127.0.0.1:18888 查看是否成功。]]></content>
+    <content type="text"><![CDATA[linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 mint cinnamon 版） 安装简要步骤setp1. 安装 rpm2cpio step2. 使用 bash csh step3. sudo ./install /opt/ms80 step4. cd /opt/ms80/LicensePack/etc step5. sudo ./lp_config step6. sudo ./lp_echovars step7. sudo ./install /opt/ms80 y # OK! It work’s! # 最好安装到自己的家目录 更新 2018.01.12安装到自己的家目录（/home/user）重启后才有用，无需 sudo。 使用 bash 很重要，不能使用 ubuntu默认的 dash，否则软件无法安装，无法运行！ 12# 查看使用的默认 shell 是啥。ls -l /bin/sh ubuntu 采用的是 dash （theDebian Almquist Shell），而非 bash （GNU Bourne-Again Shell，大多数 linux 默认使用这个作为默认shell）。 修改默认的sh。 1sudo dpkg-reconfigure dash 然后选择【否】 完成修改。 参考1 ，bash与dash 区别 。 自己看 install.log , 并设置开机自动启动 gateway 。 12# 设置开机启动/home/rachpt/Accelrys/MaterialsStudio8.0/etc/Gateway/gwstart 浏览器 http://127.0.0.1:18888 查看是否成功。 使用方法1234567~/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 8 "you ms_job path/name" # 不要 param 后缀的 param 文件名。# 例子nohup /home/rachpt/Accelrys/MaterialsStudio8.0/etc/CASTEP/bin/RunCASTEP.sh -np 7 PMA2PbI4 &amp;# nohup ... &amp; 由于后台运行，# 7 表示CPU 核心数，# 由于是在 PMA2PbI4 任务的文件夹中打开的终端，所以任务直接使用 相对路径。]]></content>
       <categories>
         <category>linux</category>
         <category>DFT</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
+        <tag>castep</tag>
         <tag>ms</tag>
       </tags>
   </entry>
@@ -236,8 +236,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>olex2</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -478,8 +478,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>MarkDown</tag>
         <tag>笔记</tag>
+        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>
