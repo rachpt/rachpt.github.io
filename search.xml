@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[transmission-settings]]></title>
+    <url>%2F2018%2F03%2F25%2Ftransmission-settings%2F</url>
+    <content type="text"><![CDATA[之前不会设置 transmission ，习惯了 ut 的点点点，觉得很是不好用，对其 json 的配置文件很不友好的形式感到恶心，不过现在有了更多的 linux 命令行与 shell 脚本知识后，再看 transmission，真心佩服如此灵活的配置。什么 qttorrent，deluge 什么的，一边去，看我 transmission。这里记录一些 配置心得。 transmission 有好几个版本，带有用户图新界面 GUI 的 GTK+、QT，完整命令行的 cli，以及守护进程的 daemon。其中 daemon版没有任何 GUI界面，需要一个例外的软件管理它控制它，remote 或者 webgui。 rpcrpc 可以理解为 WEBGUI 控制的相关设置。 12345678910111213141516171819202122232425"rpc-authentication-required": false,# 是否需要用户名与密码验证，是全局设置"rpc-bind-address": "0.0.0.0",# 黑名单，全局性的"rpc-enabled": true,# 是否开启 WebGUI，开启其他才有效"rpc-host-whitelist": "",# 在有密码验证的时候，不需要验证的ip名单，# 注意，局一网 ip 可以使用通配符，二公共 ip 不能使用通配符，否则，名单整体无效。"rpc-host-whitelist-enabled": true,# 是否开启不需要 密码验证的白名单"rpc-password": "×××",# 密码，保存后自动转化成加密态"rpc-port": 9091,# 端口，默认9091,ip + : + 端口号，才能访问 tr"rpc-url": "/transmission/",# 路径名，显示在端口后面，默认即可"rpc-username": "××",# 用于认证的有户名"rpc-whitelist": "127.0.0.1,10.42.0.*",# 全局白名单，只有 ip 在其中的客户机才能访问，可以使用通配符# 这个与 需不需要 用户名与密码验证无关"rpc-whitelist-enabled": true,# 是否开启 白名单访问，除非你只在一个固定的 ip（段） 上管理，否则不要开启 脚本12345"script-torrent-done-enabled": true,# 每一个种子完成后 执行脚本 开关"script-torrent-done-filename": "/home/transmission/auto",# 执行的脚本路径，使用 全路基 可以 使用的变量 TR_APP_VERSION TR_TIME_LOCALTIME TR_TORRENT_DIR TR_TORRENT_HASH TR_TORRENT_ID TR_TORRENT_NAME 一个例子 , 参考地址 。 其他暂时没什么说的，都能百度到，或者看官方文档搞定。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>transmission</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[notes-for-shell-scripting-bible]]></title>
     <url>%2F2018%2F03%2F23%2Fnotes-for-shell-scripting-bible%2F</url>
-    <content type="text"><![CDATA[Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。 看到哪儿就就记到哪，没有规律可循。 cron 时间表全称 cron table ，* 通配符，dayofweek 可以使用 三字母格式（mon, tue, wed, thu, fri, sat, sun） 对应0-6 ，0 为 sun。 每一月最后一天执行脚本的一种方式： 100 12 * * * if [ `date +%d -d tomorrow` = 01 ] ; then ; COMMAND crontab -l 列出所有定时任务。 crontab -e 编辑用户自己的时间表，文件在 /var/spool/cron/ 目录下。 对于不要求使用精确时间的任务，可以在 /etc/cron.*ly 添加脚本。 hourly，monthly，daily。意如其名，复制到里面即可。 cron 惟一的问题是假定你 7x24 小时开机。 anacron 可以执行错过了的 cron 任务。 cron 时间戳文件在 /var/spool/anacron 下，作业表在 /etc/anacrontab 文件。 开机运行脚本ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 /etc/inittab文件。 0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。 不同发行版使用的 开机脚本(upstart script)路径不同，如 /etc/rc#.d /etc/init.d /etc/init.d/rc.d 定义自己的 /etc/initio.d/rc.local dabian 发行版 /etc/rc.local ubuntn 发行版 如果使用脚本，需要使用全路径名。 任务优先级使用 nice 与 renice 命令修改优先级。值 -20 – 20 ，越大优先级越小。 123nice -d 10 ./test.shrenice 12 -p 进程号 普通用户只能降低优先级，root 用户（或者 sudo）可以随意。 进程状态 S 符号 意义 D 可中断的休眠状态 R 运行状态 S 休眠状态 T 跟踪状态或停止状态 Z 僵化状态 模式空间与保持空间一个经典案例，使用模式空间与保持空间实现反序。 1sed -n '&#123;1!G ; h ; %p &#125;' filepath 命令 操作 h 模式空间 复制 到保持空间 H 模式 附加 到 保持 g 保持 复制到 模式 G 保持 附加到 模式 x 二者交换 ！ negate 排除命令。排除末尾行，\$! N …. and 符号使用&amp;符号 代替 sed 匹配的内容。 1234echo "The cat sleeps in his hat" | sed 's/.at/"&amp;"/g'# 输出结果The "cat" sleeps in his "hat" 上例中可以使用 子字符模块 实现， 123echo "That furry cat is pretty, taht furry hat is pretty" | sed 's/hurry \(.at\)/\1/'# 输出结果That cat is pretty, taht hat is pretty \1 替换第一个模块，\2 替换第二个，以此类推。]]></content>
+    <content type="text"><![CDATA[Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。 看到哪儿就就记到哪，没有规律可循。 cron 时间表全称 cron table ，* 通配符，dayofweek 可以使用 三字母格式（mon, tue, wed, thu, fri, sat, sun） 对应0-6 ，0 为 sun。 每一月最后一天执行脚本的一种方式： 100 12 * * * if [ `date +%d -d tomorrow` = 01 ] ; then ; COMMAND crontab -l 列出所有定时任务。 crontab -e 编辑用户自己的时间表，文件在 /var/spool/cron/ 目录下。 对于不要求使用精确时间的任务，可以在 /etc/cron.*ly 添加脚本。 hourly，monthly，daily。意如其名，复制到里面即可。 cron 惟一的问题是假定你 7x24 小时开机。 anacron 可以执行错过了的 cron 任务。 cron 时间戳文件在 /var/spool/anacron 下，作业表在 /etc/anacrontab 文件。 开机运行脚本ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 /etc/inittab文件。 0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。 不同发行版使用的 开机脚本(upstart script)路径不同，如 /etc/rc#.d /etc/init.d /etc/init.d/rc.d 定义自己的 /etc/initio.d/rc.local dabian 发行版 /etc/rc.local ubuntn 发行版 如果使用脚本，需要使用全路径名。 任务优先级使用 nice 与 renice 命令修改优先级。值 -20 – 20 ，越大优先级越小。 123nice -d 10 ./test.shrenice 12 -p 进程号 普通用户只能降低优先级，root 用户（或者 sudo）可以随意。 进程状态 S 符号 意义 D 可中断的休眠状态 R 运行状态 S 休眠状态 T 跟踪状态或停止状态 Z 僵化状态 模式空间与保持空间一个经典案例，使用模式空间与保持空间实现反序。 1sed -n '&#123;1!G ; h ; %p &#125;' filepath 命令 操作 h 模式空间 复制 到保持空间 H 模式 附加 到 保持 g 保持 复制到 模式 G 保持 附加到 模式 x 二者交换 ！ negate 排除命令。排除末尾行，\$! N …. and 符号使用&amp;符号 代替 sed 匹配的内容。 1234echo "The cat sleeps in his hat" | sed 's/.at/"&amp;"/g'# 输出结果The "cat" sleeps in his "hat" 上例中可以使用 子字符模块 实现， 123echo "That furry cat is pretty, taht furry hat is pretty" | sed 's/hurry \(.at\)/\1/'# 输出结果That cat is pretty, taht hat is pretty \1 替换第一个模块，\2 替换第二个，以此类推。 加倍行间距一个简单的命令，加倍行间距。 1sed '$!G' datafile 保持空间 在启动sed的时候默认只有一行空行。 但是有一个缺点，如果原文件中已经有些许空行，则会出现空行不均。 改进方法。 1sed '/^$/d;$!G' datafile 先删除空行，然后加倍行。如果空行中有空格，需要例外匹配。 添加行号简单的方法。 1sed '=' datafile 但是 行号 与行不在同一行。改进。 1sed '=' datafile | sed 'N; S/\n/ /' 说明，N 同时处理两行，将其中的 \n 换成 空格。 打印末尾几行123456789101112131415161718rachpt@pc ~/desktop $ sed '&#123;&gt; :start&gt; $q&gt; N&gt; 11,$D&gt; b start&gt; &#125;' ms_castep.param# 结果如下geom_method : BFGSfixed_npw : falsegeom_modulus_est : 500.000000000000000 GPacalculate_ELF : falsecalculate_stress : truepopn_calculate : truecalculate_hirshfeld : truecalculate_densdiff : falsepopn_bond_cutoff : 3.000000000000000pdos_calculate_weights : false \$q 末行退出 b 跳转的循环，D 只输出模式空间中的第一行。 选择性删除空行1234567891011rachpt@pc ~/desktop $ sed '/./,/^$/!d' test# 结果如下This is a header lineline 2line 3line 4end of filerachpt@pc ~/desktop $ /./,/^$/ 匹配 任意字符行可空行区间。]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -176,8 +187,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>PDF</tag>
         <tag>linux</tag>
+        <tag>PDF</tag>
       </tags>
   </entry>
   <entry>
@@ -247,8 +258,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>olex2</tag>
         <tag>笔记</tag>
+        <tag>olex2</tag>
       </tags>
   </entry>
   <entry>
@@ -489,8 +500,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>MarkDown</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
