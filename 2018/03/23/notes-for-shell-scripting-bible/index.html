@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-23T14:14:19.238Z">
+<meta property="og:updated_time" content="2018-03-24T16:13:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-shell-scripting-bible">
 <meta name="twitter:description" content="Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。">
@@ -392,8 +392,22 @@
             
             
               
+                
+              
             
 
+            
+              
+              <span class="post-meta-divider">|</span>
+              
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-25T00:13:30+08:00">2018-03-25</time>
             
           </span>
 
@@ -455,7 +469,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">896</span>
+                <span title="字数统计">1.5k</span>
               
 
               
@@ -518,6 +532,74 @@
 <h1 id="任务优先级"><a href="#任务优先级" class="headerlink" title="任务优先级"></a>任务优先级</h1><p>使用 <code>nice</code> 与 <code>renice</code> 命令修改优先级。值  -20  –  20 ，越大优先级越小。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nice -d 10 ./test.sh</span><br><span class="line"></span><br><span class="line">renice 12 -p 进程号</span><br></pre></td></tr></table></figure>
 <p>普通用户只能降低优先级，root 用户（或者 sudo）可以随意。</p>
+<h1 id="进程状态-S"><a href="#进程状态-S" class="headerlink" title="进程状态 S"></a>进程状态 S</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">可中断的休眠状态</td>
+</tr>
+<tr>
+<td style="text-align:center">R</td>
+<td style="text-align:center">运行状态</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td style="text-align:center">休眠状态</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">跟踪状态或停止状态</td>
+</tr>
+<tr>
+<td style="text-align:center">Z</td>
+<td style="text-align:center">僵化状态</td>
+</tr>
+</tbody>
+</table>
+<h1 id="模式空间与保持空间"><a href="#模式空间与保持空间" class="headerlink" title="模式空间与保持空间"></a>模式空间与保持空间</h1><p>一个经典案例，使用模式空间与保持空间实现反序。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'&#123;1!G ; h ; %p &#125;'</span> filepath</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">h</td>
+<td style="text-align:center">模式空间 复制 到保持空间</td>
+</tr>
+<tr>
+<td style="text-align:center">H</td>
+<td style="text-align:center">模式 附加 到 保持</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:center">保持 复制到 模式</td>
+</tr>
+<tr>
+<td style="text-align:center">G</td>
+<td style="text-align:center">保持 附加到 模式</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">二者交换</td>
+</tr>
+</tbody>
+</table>
+<p><code>！</code> negate 排除命令。排除末尾行，<strong>\$!</strong> <em>N</em>  ….</p>
+<h1 id="and-符号"><a href="#and-符号" class="headerlink" title="and 符号"></a>and 符号</h1><p>使用<code>&amp;</code>符号 代替 <code>sed</code> 匹配的内容。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"The cat sleeps in his hat"</span> | sed <span class="string">'s/.at/"&amp;"/g'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">The <span class="string">"cat"</span> sleeps <span class="keyword">in</span> his <span class="string">"hat"</span></span><br></pre></td></tr></table></figure>
+<p>上例中可以使用 子字符模块 实现，</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"That furry cat is pretty, taht furry hat is pretty"</span> | sed <span class="string">'s/hurry \(.at\)/\1/'</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">That cat is pretty, taht hat is pretty</span><br></pre></td></tr></table></figure>
+<p><code>\1</code> 替换第一个模块，<code>\2</code> 替换第二个，以此类推。</p>
 
       
     </div>
@@ -943,7 +1025,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#cron-时间表"><span class="nav-number">1.</span> <span class="nav-text">cron 时间表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开机运行脚本"><span class="nav-number">2.</span> <span class="nav-text">开机运行脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务优先级"><span class="nav-number">3.</span> <span class="nav-text">任务优先级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#cron-时间表"><span class="nav-number">1.</span> <span class="nav-text">cron 时间表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开机运行脚本"><span class="nav-number">2.</span> <span class="nav-text">开机运行脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务优先级"><span class="nav-number">3.</span> <span class="nav-text">任务优先级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程状态-S"><span class="nav-number">4.</span> <span class="nav-text">进程状态 S</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模式空间与保持空间"><span class="nav-number">5.</span> <span class="nav-text">模式空间与保持空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#and-符号"><span class="nav-number">6.</span> <span class="nav-text">and 符号</span></a></li></ol></div>
             
 
           </div>
@@ -984,7 +1066,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">69k</span>
+    <span title="站点总字数">70k</span>
   
 
   
@@ -995,7 +1077,7 @@
     
       <span class="post-meta-item-text">站点总阅读时长&#58;</span>
     
-    <span title="站点总阅读时长">1:09</span>
+    <span title="站点总阅读时长">1:10</span>
   
 </div>
 
