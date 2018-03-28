@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[change-sidebar-width-of-firefox]]></title>
     <url>%2F2018%2F03%2F28%2Fchange-sidebar-width-of-firefox%2F</url>
-    <content type="text"><![CDATA[Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。 配置文件路径在 firfox 地址栏输入 about:profiles ，找到配置文件路径。如下图。 在 Root Directory 中创建 chrome 文件夹，然后在其中新建一个名为 userChrome.css 的 css 文件。 CSS 文件12345#sidebar-box,#sidebar,#sidebar-header &#123; max-width: 300px !important; min-width: 50px !important;&#125; 重启 firefox 生效，效果 如上图。 参考内容1 ，内容2 。]]></content>
+    <content type="text"><![CDATA[Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。 配置文件路径在 firfox 地址栏输入 about:profiles ，找到配置文件路径。如下图。 在 Root Directory 中创建 chrome 文件夹，然后在其中新建一个名为 userChrome.css 的 css 文件。 CSS 文件12345#sidebar-box,#sidebar,#sidebar-header &#123; max-width: 300px !important; min-width: 50px !important;&#125; 重启 firefox 生效，效果 如上图。 参考内容1，内容2，内容3 。]]></content>
       <categories>
         <category>linux</category>
       </categories>

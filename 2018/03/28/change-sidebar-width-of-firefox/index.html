@@ -138,7 +138,7 @@
 <meta property="og:description" content="Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/675bda05ly1fpsvjnovh4j20rx0kd40e.jpg">
-<meta property="og:updated_time" content="2018-03-28T14:05:09.431Z">
+<meta property="og:updated_time" content="2018-03-28T14:11:36.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="change-sidebar-width-of-firefox">
 <meta name="twitter:description" content="Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。">
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">389</span>
+                <span title="字数统计">392</span>
               
 
               
@@ -500,7 +500,7 @@
 <p>在 Root Directory 中创建 <code>chrome</code> 文件夹，然后在其中新建一个名为 <code>userChrome.css</code> 的 <code>css</code> 文件。</p>
 <h1 id="CSS-文件"><a href="#CSS-文件" class="headerlink" title="CSS 文件"></a>CSS 文件</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar-box</span>,<span class="selector-id">#sidebar</span>,<span class="selector-id">#sidebar-header</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">300px</span> <span class="meta">!important</span>;</span><br><span class="line">   <span class="attribute">min-width</span>: <span class="number">50px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>重启 firefox 生效，效果 如上图。</p>
-<p><a href="https://www.howtogeek.com/209320/how-to-set-up-and-use-multiple-profiles-user-accounts-in-firefox/" target="_blank" rel="noopener">参考内容1</a> ，<a href="https://bbs.kafan.cn/forum.php?mod=viewthread&amp;tid=1692356&amp;page=1#pid30582934" target="_blank" rel="noopener">内容2</a> 。</p>
+<p><a href="https://www.howtogeek.com/209320/how-to-set-up-and-use-multiple-profiles-user-accounts-in-firefox/" target="_blank" rel="noopener">参考内容1</a>，<a href="https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/" target="_blank" rel="noopener">内容2</a>，<a href="https://bbs.kafan.cn/forum.php?mod=viewthread&amp;tid=1692356&amp;page=1#pid30582934" target="_blank" rel="noopener">内容3</a> 。</p>
 
       
     </div>
