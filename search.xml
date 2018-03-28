@@ -81,7 +81,7 @@
   </entry>
   <entry>
     <title><![CDATA[Linux 中快速添加 hexo 文章]]></title>
-    <url>%2F2018%2F03%2F13%2Fquick-add-a-essay-on-hexoSysem%2F</url>
+    <url>%2F2018%2F03%2F13%2Fquick-add-a-essay-on-hexoSystem%2F</url>
     <content type="text"><![CDATA[在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。 所用的系统为 Linux mint ，markdown 编辑器为 typora 。 由于在 _post 中直接新建 md 文件需要自己手动天际 yaml 文件头，title 、date 等。而 cd 到 hexo 根目录后，使用命令 hexo new post &quot;title-of-essay&quot; ，即可在 _post 中创建预定样式的 md 文件，但是步骤略微繁琐。 通常的步骤： 1234cd blog #我的 hexo 博客目录hexo new post title-for-a-pagetypora ~blog/source/_posts/title-for-a-page.md &amp; 需要按的键比较多。 想到使用 shell 脚本，然后使用 alias 设置别名，爽歪歪。 脚本如下： 12345678#!/bin/bash read -t 600 -p "输入文章标题：" titlecd ~/blog dir=$(hexo new post $title | cut -d : -f 2)dir=$&#123;dir#*/&#125;cd ~ typora $dir &amp;exit 其中 600 是超时时间，单位秒，typora 为 md 格式编辑器。 编辑 bashrc 。 123456gedit .bashrc# 在最后添加alias ww='sh /home/rachpt/document/ww.sh &amp;&amp; exit'# 写上自己的路径，创建新的文件后自动关闭终端。ww 为自定义别名。 几点笔记： read 命令实现读取用后输入信息。 变量赋值后面直接使用“=”，前后不能空格。 使用前面的变量 使用$ + 变量名。 管道运算符| 将前面命令的输出输入下一个可以接受标准输入的命令。 cut 实现分片。 #*/ 删除第一个/ 以及其前面的部分。]]></content>
       <categories>
         <category>linux</category>
