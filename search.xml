@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[the-gateway-of-materials-studio]]></title>
     <url>%2F2018%2F03%2F31%2Fthe-gateway-of-materials-studio%2F</url>
-    <content type="text"><![CDATA[关于 Materials studio 的 Remote Gateway。 MS 默认 使用 http://localhost:18888 查看进程，之前一直不知道 Edti 的用户名与密码是啥，google 了下，找到官方帮助文档，看了下了解了些许，这里记录一下。 开关找到路径 ~/Accelrys/MaterialsStudio8.0/etc/Gateway 与自己的安装路径有关。 1234567./gwstart# 开./gwstop# 关./gwstop运行计算中 需要保持 这个 是开得状态。 用户1234567# 在刚才的目录下./gwusers /list# 列出 用户./gwusers /add rachpt# 添加用户 默认情况下 使用 gatekeeper 密码： 空 管理 emote Gateway 。 参考内容 。 更多请看 。]]></content>
+    <content type="text"><![CDATA[关于 Materials studio 的 Remote Gateway。 MS 默认 使用 http://localhost:18888 查看进程，之前一直不知道 Edti 的用户名与密码是啥，google 了下，找到官方帮助文档，看了下了解了些许，这里记录一下。 开关找到路径 ~/Accelrys/MaterialsStudio8.0/etc/Gateway 与自己的安装路径有关。 12345678910./gwstart# 开./gwstop# 关./gwrestop# 重启#目录下的其他可执行文件功能，如其名#运行计算中 需要保持 这个 是开得状态。 用户1234567# 在刚才的目录下./gwusers /list# 列出 用户./gwusers /add rachpt# 添加用户 默认情况下 使用 gatekeeper 密码： 空 管理 emote Gateway 。 参考内容 。 更多请看 。]]></content>
       <categories>
         <category>DFT</category>
       </categories>

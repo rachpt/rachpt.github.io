@@ -138,7 +138,7 @@
 <meta property="og:description" content="关于 Materials studio 的 Remote Gateway。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpvu4c62suj20ow0lt3zw.jpg">
-<meta property="og:updated_time" content="2018-03-31T03:27:48.250Z">
+<meta property="og:updated_time" content="2018-03-31T03:31:38.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the-gateway-of-materials-studio">
 <meta name="twitter:description" content="关于 Materials studio 的 Remote Gateway。">
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">387</span>
+                <span title="字数统计">416</span>
               
 
               
@@ -497,7 +497,7 @@
 <a id="more"></a>
 <p>MS 默认 使用 <a href="http://localhost:18888" target="_blank" rel="noopener">http://localhost:18888</a> 查看进程，之前一直不知道 <code>Edti</code> 的用户名与密码是啥，google 了下，找到官方帮助文档，看了下了解了些许，这里记录一下。</p>
 <h1 id="开关"><a href="#开关" class="headerlink" title="开关"></a>开关</h1><p>找到路径 <code>~/Accelrys/MaterialsStudio8.0/etc/Gateway</code> 与自己的安装路径有关。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">./gwstart</span><br><span class="line"><span class="comment">#  开</span></span><br><span class="line">./gwstop</span><br><span class="line"><span class="comment"># 关</span></span><br><span class="line">./gwstop</span><br><span class="line"></span><br><span class="line">运行计算中 需要保持 这个 是开得状态。</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">./gwstart</span><br><span class="line"><span class="comment">#  开</span></span><br><span class="line">./gwstop</span><br><span class="line"><span class="comment"># 关</span></span><br><span class="line">./gwrestop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#目录下的其他可执行文件功能，如其名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#运行计算中 需要保持 这个 是开得状态。</span></span><br></pre></td></tr></table></figure>
 <h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在刚才的目录下</span></span><br><span class="line"></span><br><span class="line">./gwusers /list</span><br><span class="line"><span class="comment"># 列出 用户</span></span><br><span class="line"></span><br><span class="line">./gwusers /add rachpt</span><br><span class="line"><span class="comment"># 添加用户</span></span><br></pre></td></tr></table></figure>
 <p>默认情况下 使用</p>
 <div class="note success"><p><strong>gatekeeper</strong></p>
@@ -1087,8 +1087,6 @@
 
 
 
-  
-
 
 
 
@@ -1126,11 +1124,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
