@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://rachpt.me/2018/03/29/a-bash-script-for-pt-signin/</loc>
+    <lastmod>2018-04-01T11:58:01.356Z</lastmod>
+    <data>
+        <display>
+        <title>a-bash-script-for-pt-signin</title>
+        <pubTime>2018-03-29T02:47:06.000Z</pubTime>
+        
+        <tag>shell</tag>
+         
+        <tag>pt</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2018/04/01/use-linux-format-not-dos/</loc>
     <lastmod>2018-04-01T07:43:27.309Z</lastmod>
     <data>
@@ -32,28 +54,6 @@
         <pubTime>2018-03-31T08:54:27.000Z</pubTime>
         
         <tag>awk</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.me/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2018/03/29/a-bash-script-for-pt-signin/</loc>
-    <lastmod>2018-03-31T07:00:03.626Z</lastmod>
-    <data>
-        <display>
-        <title>a-bash-script-for-pt-signin</title>
-        <pubTime>2018-03-29T02:47:06.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-        <tag>pt</tag>
          
          
            
@@ -879,6 +879,26 @@
 
     
   <url>
+    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>张维为：中国信心</title>
+        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        
+        <tag>视频</tag>
+         
+         
+           
+             
+              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -945,19 +965,17 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>张维为：中国信心</title>
-        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
         
-        <tag>视频</tag>
-         
          
            
              
-              <breadCrumb title="视频" url="https://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
+              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -985,28 +1003,6 @@
 
     
   <url>
-    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rachpt.me/2017/11/10/so-busy/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -1016,24 +1012,6 @@
         
         <tag>忙</tag>
          
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.me/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
          
            
              
@@ -1060,6 +1038,28 @@
            
              
               <breadCrumb title="实用" url="https://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="https://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
