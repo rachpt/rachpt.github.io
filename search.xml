@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[use-linux-format-not-dos]]></title>
+    <url>%2F2018%2F04%2F01%2Fuse-linux-format-not-dos%2F</url>
+    <content type="text"><![CDATA[写个 shell 脚本格式化输出数据，出现诡异 bug，郁闷了一天，早上看书之际，dos2unix 出现到脑海中，乌云散去，果然如此。 情景有一个 txt 文件，行数很多，需要复制其中的部分数据到 excel 统计，一个文件大概要复制 40-50 次，懒人总是想捷径。首先想到的是使用 shell 脚本实现，因为 python 才开始，先是看书，4-5天，写脚本，各种碰壁，于是 用了低级方法可以干活，隔几天后 改进，如下。 123456789101112131415161718192021222324252627282930313233343536373839#!/bin/bashtempfile=`mktemp const.XXXXXXXX`sed -n '/+\/-/p' $1 &gt; $tempfilebulkmodulus=`gawk '/=/ &#123; print $4 &#125;' $tempfile`for (( j = 4; j &lt; 7; j = j + 2 ))do for (( i = 1; i &lt; 22; i++ )) do cijTempName=`cat $tempfile | gawk -v circle=$j '$1 == loop &#123;print $circle&#125;' loop=$i` if [ $i -ge 2 ] &amp;&amp; [ $i -le 6 ] then if [ -z $cijTempName ] then echo -e "-\t\c" else echo -e $cijTempName"\t\c" fi else if [ -z $cijTempName ] then echo -e "0\t\c" else echo -e $cijTempName"\t\c" fi fi done echo doneecho echo 'bulk:' $bulkmodulus rm -f $tempfile $tempfile2 数据大概如下： 做了部分模糊处理。 错误需要提出 cij 的 第 4列 以及 第 6 列。使用制表符在各自行中打印。 结果出乎我的意料，第二行的 误差值 只打印了两个。 百思不得其解，我甚至已经考虑 使用 awk 的 FS ORS 各种折腾。最后皆以失败告终。 解决今天图书馆看书，突然想到我这个 txt 文件是在 windows 生成的，自然 换行符与 linux/unix 的不同，如此以来自然能够解释 中间部分正常，而尾巴部分出现诡异。 于是，加上 dos2unix Constants.txt ，完美解决问题。 存在即是合理，不是莫名其妙，只是你不知道。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[use-outer-variables-in-awk]]></title>
     <url>%2F2018%2F03%2F31%2Fuse-outer-variables-in-awk%2F</url>
     <content type="text"><![CDATA[awk 命令中使用外部定义的变量。 做好了的 12345678910111213141516171819202122for (( i = 1; i &lt; 22; i++ ))do cijTempName=`cat $tempfile | gawk '$1 == loop &#123;print $4&#125;' loop=$i` if [ $i -ge 2 ] &amp;&amp; [ $i -le 6 ] then if [ -z $cijTempName ] then echo -e "-\t\c" else echo -e $cijTempName"\t\c" fi else if [ -z $cijTempName ] then echo -e "0\t\c" else echo -e $cijTempName"\t\c" fi fidone 使用 awk（gawk 是 AWK 的 GNU 版本）获取每行第一个位置的元素，并与外面的 loop counter 比较，如果比配，则打印这一行中的 第四个元素，否则，1-6 loop 中打印 “-”，后面的打印 0。 关键点 gawk 中判断 \$1 与 loop counter 如何处理。 格式：awk ‘{action}’ 变量名=变量值 这样传入变量，可以在action中获得值。 注意：变量名与值放到’{action}’后面。 如果要在 BEGIN 的action不能获得变量值，使用 参数 v，即是 awk -v 。这里没用到。 参考内容。]]></content>

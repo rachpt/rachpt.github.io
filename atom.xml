@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.me/"/>
-  <updated>2018-03-31T09:06:25.086Z</updated>
+  <updated>2018-04-01T07:43:27.309Z</updated>
   <id>https://rachpt.me/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>use-linux-format-not-dos</title>
+    <link href="https://rachpt.me/2018/04/01/use-linux-format-not-dos/"/>
+    <id>https://rachpt.me/2018/04/01/use-linux-format-not-dos/</id>
+    <published>2018-04-01T07:08:21.000Z</published>
+    <updated>2018-04-01T07:43:27.309Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>写个 shell 脚本格式化输出数据，出现诡异 bug，郁闷了一天，早上看书之际，dos2unix 出现到脑海中，乌云散去，果然如此。</p></blockquote><a id="more"></a><h1 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h1><p>有一个 txt 文件，行数很多，需要复制其中的部分数据到 excel 统计，一个文件大概要复制 40-50 次，懒人总是想捷径。首先想到的是使用 shell 脚本实现，因为 python 才开始，先是看书，4-5天，写脚本，各种碰壁，于是 用了低级方法可以干活，隔几天后 改进，如下。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">tempfile=`mktemp const.XXXXXXXX`</span><br><span class="line"></span><br><span class="line">sed -n <span class="string">'/+\/-/p'</span> <span class="variable">$1</span> &gt; <span class="variable">$tempfile</span></span><br><span class="line">bulkmodulus=`gawk <span class="string">'/=/ &#123; print $4 &#125;'</span> <span class="variable">$tempfile</span>`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (( j = 4; j &lt; 7; j = j + 2 ))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">for</span> (( i = 1; i &lt; 22; i++ ))</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">cijTempName=`cat <span class="variable">$tempfile</span> | gawk -v circle=<span class="variable">$j</span> <span class="string">'$1 == loop &#123;print $circle&#125;'</span> loop=<span class="variable">$i</span>`</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$i</span> -ge 2 ] &amp;&amp; [ <span class="variable">$i</span> -le 6 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"-\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"0\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'bulk:'</span> <span class="variable">$bulkmodulus</span> </span><br><span class="line"></span><br><span class="line">rm -f <span class="variable">$tempfile</span> <span class="variable">$tempfile2</span></span><br></pre></td></tr></table></figure><p>数据大概如下：</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpx6q3w2kjj211c0qdtf0.jpg" alt="pic"></p><p>做了部分模糊处理。</p><h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><p>需要提出  cij 的 第 4列 以及 第 6 列。使用制表符在各自行中打印。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpx6wnmz17j20ki093mzn.jpg" alt="pic"></p><p>结果出乎我的意料，第二行的 误差值 只打印了两个。</p><p>百思不得其解，我甚至已经考虑 使用 awk 的 FS ORS 各种折腾。最后皆以失败告终。</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>今天图书馆看书，突然想到我这个 txt 文件是在 windows 生成的，自然 换行符与 linux/unix 的不同，如此以来自然能够解释 中间部分正常，而尾巴部分出现诡异。</p><p>于是，加上 <code>dos2unix Constants.txt</code> ，完美解决问题。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpx6w9o52yj20ki093772.jpg" alt="pic"></p><p>存在即是合理，不是莫名其妙，只是你不知道。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;写个 shell 脚本格式化输出数据，出现诡异 bug，郁闷了一天，早上看书之际，dos2unix 出现到脑海中，乌云散去，果然如此。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="shell" scheme="https://rachpt.me/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>use-outer-variables-in-awk</title>
     <link href="https://rachpt.me/2018/03/31/use-outer-variables-in-awk/"/>
     <id>https://rachpt.me/2018/03/31/use-outer-variables-in-awk/</id>
     <published>2018-03-31T08:54:27.000Z</published>
-    <updated>2018-03-31T09:06:25.086Z</updated>
+    <updated>2018-03-31T09:25:46.067Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>awk 命令中使用外部定义的变量。</p></blockquote><a id="more"></a><p>做好了的</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (( i = 1; i &lt; 22; i++ ))</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">cijTempName=`cat <span class="variable">$tempfile</span> | gawk <span class="string">'$1 == loop &#123;print $4&#125;'</span> loop=<span class="variable">$i</span>`</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$i</span> -ge 2 ] &amp;&amp; [ <span class="variable">$i</span> -le 6 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"-\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"> <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"0\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><p>使用 awk（gawk 是 AWK 的 GNU 版本）获取每行第一个位置的元素，并与外面的 loop counter 比较，如果比配，则打印这一行中的 第四个元素，否则，1-6 loop 中打印 “-”，后面的打印 0。</p><p>关键点 gawk 中判断 \$1 与 loop counter 如何处理。</p><blockquote><p>格式：awk ‘{action}’  变量名=变量值   </p></blockquote><p>这样传入变量，可以在action中获得值。 注意：变量名与值放到’{action}’后面。</p><p>如果要在 BEGIN 的action不能获得变量值，使用 参数 v，即是 <code>awk -v</code> 。这里没用到。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpw3zwkxvnj20f607udgy.jpg" alt="pic"></p><p><a href="https://www.cnblogs.com/chengmo/archive/2010/10/03/1841753.html" target="_blank" rel="noopener">参考内容</a>。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>awk 命令中使用外部定义的变量。</p></blockquote><a id="more"></a><p>做好了的</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (( i = 1; i &lt; 22; i++ ))</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">cijTempName=`cat <span class="variable">$tempfile</span> | gawk <span class="string">'$1 == loop &#123;print $4&#125;'</span> loop=<span class="variable">$i</span>`</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$i</span> -ge 2 ] &amp;&amp; [ <span class="variable">$i</span> -le 6 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"-\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"> <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"0\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><p>使用 awk（gawk 是 AWK 的 GNU 版本）获取每行第一个位置的元素，并与外面的 loop counter 比较，如果比配，则打印这一行中的 第四个元素，否则，1-6 loop 中打印 “-”，后面的打印 0。</p><p>关键点 gawk 中判断 \$1 与 loop counter 如何处理。</p><blockquote><p>格式：awk ‘{action}’  变量名=变量值   </p></blockquote><p>这样传入变量，可以在action中获得值。 注意：变量名与值放到’{action}’后面。</p><p>如果要在 BEGIN 的action不能获得变量值，使用 参数 v，即是 <code>awk -v</code> 。这里没用到。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpw3zwkxvnj20f607udgy.jpg" alt="pic"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpw4kk42izj20g205cdh3.jpg" alt="pic"></p><p><a href="https://www.cnblogs.com/chengmo/archive/2010/10/03/1841753.html" target="_blank" rel="noopener">参考内容</a>。</p>]]></content>
     
     <summary type="html">
     
@@ -472,30 +496,6 @@
     
       <category term="随笔" scheme="https://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Gimp 简单使用笔记</title>
-    <link href="https://rachpt.me/2018/03/03/gimp-simple-notes/"/>
-    <id>https://rachpt.me/2018/03/03/gimp-simple-notes/</id>
-    <published>2018-03-03T03:40:31.000Z</published>
-    <updated>2018-03-25T19:24:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p></blockquote><a id="more"></a><h1 id="画矩形框"><a href="#画矩形框" class="headerlink" title="画矩形框"></a>画矩形框</h1><ol><li>选用<code>矩形选择工具 (快捷键R)</code> ，选区。</li><li>编辑 –&gt; 勾画选区。</li></ol><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhinkhhdj20c609cjs9.jpg" alt="pic1"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fozhjbusouj20ao0g1gmw.jpg" alt="pic2"></p><hr><h1 id="画笔工具"><a href="#画笔工具" class="headerlink" title="画笔工具"></a>画笔工具</h1><p>使用 快捷键 <code>P</code> 进入画笔工具，临时使用拾色器工具 （吸管工具）快捷键 ctrl + 鼠标左键；</p><p>与此对比，PS 使用  <code>b</code> 进入画笔工具，使用 <code>alt</code> 取色。两者 画笔放大缩小 快捷键一致，<code>[  ]</code> 。</p><h1 id="放大缩小"><a href="#放大缩小" class="headerlink" title="放大缩小"></a>放大缩小</h1><p><code>GIMP</code> 和 <code>PS</code> 一样使用 <code>Z</code> 进入缩放zoom。不同处，</p><p>ps 按住<code>z</code> 键 同时按住鼠标左键左右拖动实现缩放；双击左侧工具栏上的 <code>抓手工具</code> 或者 <code>缩放工具</code> 画面大小自适应。</p><p>而<code>GIMP</code>  不同，任意界面 按住 <code>ctrl</code> 键，使用鼠标滚轮实现缩放。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;记录一些 &lt;code&gt;Gimp&lt;/code&gt; 常用操作，力求简洁明了。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="gimp" scheme="https://rachpt.me/tags/gimp/"/>
     
   </entry>
   
