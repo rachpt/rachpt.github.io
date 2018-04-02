@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/</loc>
+    
+    <lastmod>2018-04-02T11:03:03.875Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.me/2018/04/02/windows-note-02/</loc>
     
     <lastmod>2018-04-02T04:25:35.104Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://rachpt.me/2018/03/25/transmission-settings/</loc>
     
     <lastmod>2018-03-25T14:31:36.740Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/</loc>
-    
-    <lastmod>2018-03-25T08:25:05.702Z</lastmod>
     
   </url>
   

@@ -137,10 +137,12 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-25T08:25:05.702Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpyim8n1ovj20f20cit8w.jpg">
+<meta property="og:updated_time" content="2018-04-02T11:03:03.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-shell-scripting-bible">
 <meta name="twitter:description" content="Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpyim8n1ovj20f20cit8w.jpg">
 
 
 
@@ -407,7 +409,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-25T16:25:05+08:00">2018-03-25</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-02T19:03:03+08:00">2018-04-02</time>
             
           </span>
 
@@ -469,7 +471,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">2.4k</span>
+                <span title="字数统计">2.8k</span>
               
 
               
@@ -483,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:02</span>
+                <span title="阅读时长">0:03</span>
               
             </div>
           
@@ -519,6 +521,9 @@
 <p>cron 惟一的问题是假定你 7x24 小时开机。</p>
 <p>anacron 可以执行错过了的 cron 任务。</p>
 <p>cron 时间戳文件在 <code>/var/spool/anacron</code> 下，作业表在 <code>/etc/anacrontab</code>  文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0    2    *    *    6</span><br><span class="line">*    *    *    *    *    *</span><br><span class="line">-    -    -    -    -    -</span><br><span class="line">|    |    |    |    |    |</span><br><span class="line">|    |    |    |    |    + year [optional]</span><br><span class="line">|    |    |    |    +----- day of week (0 - 7) (Sunday=0 or 7)</span><br><span class="line">|    |    |    +---------- month (1 - 12)</span><br><span class="line">|    |    +--------------- day of month (1 - 31)</span><br><span class="line">|    +-------------------- hour (0 - 23)</span><br><span class="line">+------------------------- min (0 - 59)</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpyim8n1ovj20f20cit8w.jpg" alt="pic"></p>
+<p><a href="http://www.atool.org/crontab.php" target="_blank" rel="noopener">在线验证 corntab 表达式</a> 。</p>
 <h1 id="开机运行脚本"><a href="#开机运行脚本" class="headerlink" title="开机运行脚本"></a>开机运行脚本</h1><p>ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 <code>/etc/inittab</code>文件。</p>
 <p>0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。</p>
 <p>不同发行版使用的 开机脚本(upstart script)路径不同，如</p>
