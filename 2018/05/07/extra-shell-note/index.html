@@ -129,18 +129,18 @@
   <meta name="keywords" content="shell," />
 
 
-<meta name="description" content="自学收集的一些有用的 shell 奇淫技巧。">
+<meta name="description" content="自学收集的一些有用的 shell 奇淫妙技。">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="extra-shell-note">
 <meta property="og:url" content="http://rachpt.me/2018/05/07/extra-shell-note/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="自学收集的一些有用的 shell 奇淫技巧。">
+<meta property="og:description" content="自学收集的一些有用的 shell 奇淫妙技。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-07T06:39:21.519Z">
+<meta property="og:updated_time" content="2018-05-07T15:26:34.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="extra-shell-note">
-<meta name="twitter:description" content="自学收集的一些有用的 shell 奇淫技巧。">
+<meta name="twitter:description" content="自学收集的一些有用的 shell 奇淫妙技。">
 
 
 
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">128</span>
+                <span title="字数统计">849</span>
               
 
               
@@ -490,13 +490,23 @@
 
       
         <blockquote>
-<p>自学收集的一些有用的 shell 奇淫技巧。</p>
+<p>自学收集的一些有用的 shell 奇淫妙技。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="unset"><a href="#unset" class="headerlink" title="unset"></a>unset</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> 变量名</span><br><span class="line"><span class="built_in">unset</span> .f 函数名</span><br></pre></td></tr></table></figure>
 <p><code>.f</code> 前后用空格。用于删除定义了的变量与函数。</p>
 <h1 id="包含文件"><a href="#包含文件" class="headerlink" title="包含文件"></a>包含文件</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">. filePath</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> filePath</span><br></pre></td></tr></table></figure>
 <p><code>.</code>  后面有一空格。</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>shell 没有块注释，可以使用一对<code>花括号</code>将需要注释的内容包起来，定义成一个函数，但是后面不使用改函数，从而曲线救国。</p>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p><a href="http://c.biancheng.net/cpp/view/7001.html" target="_blank" rel="noopener">获取字符串长度</a> </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string=<span class="string">"abcd"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;#string&#125;</span> <span class="comment">#输出 4</span></span><br></pre></td></tr></table></figure>
+<p>提取子字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string=&quot;alibaba is a great company&quot;</span><br><span class="line">echo $&#123;string:1:4&#125; #输出liba</span><br></pre></td></tr></table></figure>
+<p>查找子字符串</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string=<span class="string">"alibaba is a great company"</span></span><br><span class="line"><span class="built_in">echo</span> `expr index <span class="string">"<span class="variable">$string</span>"</span> is` <span class="comment"># 查找 i s 在变量中的位置</span></span><br></pre></td></tr></table></figure>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>之前一直不会用，get 到技能，这里记录一下。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">    </span><br><span class="line">NAME[0]=<span class="string">"Zara"</span></span><br><span class="line">NAME[1]=<span class="string">"Qadir"</span></span><br><span class="line">NAME[2]=<span class="string">"Mahnaz"</span></span><br><span class="line">NAME[3]=<span class="string">"Ayan"</span></span><br><span class="line">NAME[4]=<span class="string">"Daisy"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"First Index: <span class="variable">$&#123;NAME[0]&#125;</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Second Index: <span class="variable">$&#123;NAME[*]&#125;</span>"</span> </span><br><span class="line"><span class="comment"># * 与 @ 效果一样，显示全部</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$&#123;NAME[@]&#125;</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;NAME[$i]&#125;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 批量修改</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$&#123;NAME[@]&#125;</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">NAME[<span class="variable">$i</span>]=`expr <span class="variable">$i</span> + 5 `</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;NAME[$i]&#125;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/Lockey23/article/details/74625744?locationNum=9&amp;fps=1" target="_blank" rel="noopener">参考内容1,</a> </p>
 <p>待续……</p>
 
       
@@ -952,7 +962,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unset"><span class="nav-number">1.</span> <span class="nav-text">unset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含文件"><span class="nav-number">2.</span> <span class="nav-text">包含文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unset"><span class="nav-number">1.</span> <span class="nav-text">unset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含文件"><span class="nav-number">2.</span> <span class="nav-text">包含文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">5.</span> <span class="nav-text">数组</span></a></li></ol></div>
             
 
           </div>
