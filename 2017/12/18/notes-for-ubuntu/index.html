@@ -476,7 +476,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">18k</span>
+                <span title="字数统计">19k</span>
               
 
               
@@ -490,7 +490,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:18</span>
+                <span title="阅读时长">0:19</span>
               
             </div>
           
@@ -552,7 +552,9 @@
 <li><code>pip -V</code> 检查pip；</li>
 <li>机遇用户的 默认版本切换</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin/python*  <span class="comment">#显示所有 python</span></span><br><span class="line"></span><br><span class="line">vim ~/.bashrc <span class="comment">#编辑配置文件</span></span><br><span class="line"><span class="comment">#添加如下行 ，alias，别名。路径以上面显示的为准。</span></span><br><span class="line"><span class="built_in">alias</span> python=<span class="string">'/usr/bin/python3.5'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin/python*  <span class="comment">#显示所有 python</span></span><br><span class="line"></span><br><span class="line">vim ~/.bashrc <span class="comment">#编辑配置文件</span></span><br><span class="line"><span class="comment">#添加如下行 ，alias，别名。路径以上面显示的为准。</span></span><br><span class="line"><span class="built_in">alias</span> python=<span class="string">'/usr/bin/python3.5'</span></span><br><span class="line"></span><br><span class="line">sudo pip install --upgrade pip <span class="comment"># 升级</span></span><br><span class="line"></span><br><span class="line">pip show requests <span class="comment"># 查看模块安装位置</span></span><br></pre></td></tr></table></figure>
+<p>解决：<code>Command &quot;python setup.py egg_info&quot; failed with error code 1 in /tmp/pip-build*</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo pip2 install setuptools</span><br><span class="line"><span class="comment"># 或则</span></span><br><span class="line">sudo easy_install -U setuptools</span><br><span class="line">sudo pip install setuptools</span><br></pre></td></tr></table></figure>
 <h1 id="python-计算环境"><a href="#python-计算环境" class="headerlink" title="python 计算环境"></a>python 计算环境</h1><ul>
 <li>暂无</li>
 <li>​</li>
@@ -746,7 +748,7 @@
 <h1 id="配置-FTP-sever"><a href="#配置-FTP-sever" class="headerlink" title="配置 FTP sever"></a>配置 FTP sever</h1><p>linux ftp服务器软件有 vsftpd ，pure-ftpd ，proftp 。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装</span></span><br><span class="line">sudo apt-get install vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment">#控制命令</span></span><br><span class="line">sudo /etc/init.d/vsftpd start</span><br><span class="line">sudo /etc/init.d/vsftpd stop</span><br><span class="line">sudo /etc/init.d/vsftpd restart</span><br><span class="line"><span class="comment">#或者类似</span></span><br><span class="line">sudo service vsftpd restart</span><br><span class="line"></span><br><span class="line"><span class="comment">#多了ftp用户组和ftp用户</span></span><br><span class="line">sudo cat /etc/group</span><br><span class="line">sudo cat /etc/passwd</span><br><span class="line"></span><br><span class="line"><span class="comment">#ftp服务器的目录位置在 /srv/ftp，这也是匿名用户访问时的根目录。 </span></span><br><span class="line"><span class="comment">#使用下列命令来间接更改目录</span></span><br><span class="line"><span class="built_in">cd</span> /srv</span><br><span class="line">sudo rm -d ftp</span><br><span class="line"><span class="comment"># 挂载家目录</span></span><br><span class="line"><span class="built_in">cd</span> ~/</span><br><span class="line">sudo mkdir ftp</span><br><span class="line"><span class="comment"># ln -s 为文件创件符号连接，非硬连接.</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#配置</span></span><br><span class="line">sudo gedit /etc/vsftpd.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#允许匿名用户登录</span></span><br><span class="line">anonymous_enable=YES</span><br><span class="line"><span class="comment">#允许本地用户登录</span></span><br><span class="line">local_enable=YES</span><br><span class="line"><span class="comment">#开启全局上传</span></span><br><span class="line">write_enable=YES</span><br><span class="line"><span class="comment">#允许匿名用户上传文件</span></span><br><span class="line">anon_upload_enable=YES  </span><br><span class="line"><span class="comment">#充许匿名用户新建文件夹</span></span><br><span class="line">anon_mkdir_write_enable=YES</span><br><span class="line"></span><br><span class="line"><span class="comment">#加点banner提示</span></span><br><span class="line">ftpd_banner=Hello~~ </span><br><span class="line"></span><br><span class="line"><span class="comment">#FTP服务器最大承载用户</span></span><br><span class="line">max_clients=100</span><br><span class="line"></span><br><span class="line"><span class="comment">#限制每个IP的进程</span></span><br><span class="line">max_per_ip=5</span><br><span class="line"></span><br><span class="line"><span class="comment">#最大传输速率(b/s)</span></span><br><span class="line">local_max_rate=256000</span><br><span class="line"></span><br><span class="line"><span class="comment">#隐藏帐号</span></span><br><span class="line">hide_ids=YES </span><br><span class="line"></span><br><span class="line"><span class="comment">#启动chroot列表(Change root)</span></span><br><span class="line">chroot_list_enable=YES</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定列表位置(我这用的是默认地址)</span></span><br><span class="line">chroot_list_file=/etc/vsftpd.chroot_list</span><br><span class="line">ssup	</span><br><span class="line"><span class="comment">#这句默认设置里是没有的，自己加</span></span><br><span class="line">user_config_dir=/etc/自己定义一个设置个别用户用的文件夹地址</span><br></pre></td></tr></table></figure>
 <p>关于 <code>vsftpd：500 OOPS: vsftpd: refusing to run with writable root inside chroot ()误的解决方法</code>。<br>比如配置匿名服务器，默认root 目录是 <code>/srv/ftp</code> ，<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod a-w /srv/ftp/</span><br></pre></td></tr></table></figure></p>
-<p>即可解决。</p>
+<p>即可解决。<a href="http://bbs.51cto.com/thread-1509012-1.html" target="_blank" rel="noopener">此帖也有反映</a>。</p>
 <hr>
 <h1 id="文件共享"><a href="#文件共享" class="headerlink" title="文件共享"></a>文件共享</h1><h2 id="samba-文件共享服务"><a href="#samba-文件共享服务" class="headerlink" title="samba 文件共享服务"></a><strong>samba 文件共享服务</strong></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install samba   <span class="comment">#安装samba服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改配置文件</span></span><br><span class="line">sudo vi /etc/samba/smb.conf </span><br><span class="line"></span><br><span class="line"><span class="comment">#其中 ` ; ` 注释行，</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#########</span></span><br><span class="line">sudo mount -t cifs -o username=***,password=**** //10.42.0.1/disk /media/rachpt/server/ <span class="comment">#手动挂载至本地的路径。</span></span><br></pre></td></tr></table></figure>
 <p>使用 mount 挂载 samba 一直提示无权限，使用下面的命令，设置本地账户的smb密码</p>
@@ -817,6 +819,9 @@
 </ol>
 <p>然后将Command一栏中的<code>texmaker %F</code>替换为 <code>env UBUNTU_MENUPROXY= texmaker %F</code> 可解决Texmaker<strong>快捷键失效问题</strong>。</p>
 <h1 id="mv-命令"><a href="#mv-命令" class="headerlink" title="mv 命令"></a>mv 命令</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mv file_2.txt file_3.txt file_4.txt /home/rc/document <span class="comment">#移动多个文件到doc</span></span><br><span class="line">mv -i file_1.txt /home/rc/document <span class="comment">#交互式移动，提醒</span></span><br><span class="line">mv -v *.txt /home/rc/document <span class="comment">#打印移动信息</span></span><br><span class="line">mv -vn *.txt /home/rc/document <span class="comment">#n 移动不重复的</span></span><br><span class="line">mv -vu *.txt /home/rc/document <span class="comment">#u 移动,时间戳更新的覆盖原来的</span></span><br><span class="line">mv -vb *.txt /home/rc/document <span class="comment">#b 移动,以～备份原来的</span></span><br><span class="line">mv -f *.txt /home/rc/document <span class="comment">#无条件覆盖</span></span><br></pre></td></tr></table></figure>
+<p>递归（Recursive）子目录，使用 参数”<code>-r</code>“或者”<code>-R</code>“。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -n file1/ file2/ <span class="comment"># 跳过相同的文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -hc <span class="comment"># 统计大小</span></span><br></pre></td></tr></table></figure>
 <h1 id="终端中的链接符用法"><a href="#终端中的链接符用法" class="headerlink" title="终端中的链接符用法"></a>终端中的链接符用法</h1><ul>
 <li><p><strong>&amp;</strong>    的作用是使命令在后台运行。</p>
 <p>只要在命令后面跟上一个空格和 ‘&amp;’。你可以一口气在后台运行多个命令。</p>
@@ -1419,7 +1424,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">95k</span>
+    <span title="站点总字数">96k</span>
   
 
   
@@ -1430,7 +1435,7 @@
     
       <span class="post-meta-item-text">站点总阅读时长&#58;</span>
     
-    <span title="站点总阅读时长">1:35</span>
+    <span title="站点总阅读时长">1:36</span>
   
 </div>
 
