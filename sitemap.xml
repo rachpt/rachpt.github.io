@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2017/12/01/notes-for-learning-python/</loc>
+    
+    <lastmod>2018-05-12T07:11:29.027Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/05/07/upgrade-ubuntu-stepped-pit/</loc>
     
     <lastmod>2018-05-10T01:58:37.807Z</lastmod>
@@ -226,13 +233,6 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/12/01/notes-for-learning-python/</loc>
-    
-    <lastmod>2018-03-13T02:41:05.665Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rachpt.me/2017/11/17/python-for-data-analysis/</loc>
     
     <lastmod>2018-03-13T01:10:44.545Z</lastmod>
@@ -338,7 +338,7 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     
@@ -394,7 +394,7 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
     
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     

@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="记录一些学习 python 的笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-13T02:41:05.665Z">
+<meta property="og:updated_time" content="2018-05-12T07:11:29.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 学习笔记">
 <meta name="twitter:description" content="记录一些学习 python 的笔记。">
@@ -407,7 +407,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T10:41:05+08:00">2018-03-13</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-12T15:11:29+08:00">2018-05-12</time>
             
           </span>
 
@@ -469,7 +469,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">179</span>
+                <span title="字数统计">419</span>
               
 
               
@@ -518,6 +518,9 @@
 <p>原始字符串： r’string’ 。</p>
 <p>字符串末尾不能以 <code>\</code> 结尾，其表示未完继续。</p>
 <p>长字符串： <code>“““</code> strings  <code>”””</code>  。</p>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">squarers = list(map(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, range(<span class="number">10</span>)))</span><br><span class="line"><span class="comment"># 等价于</span></span><br><span class="line">squarers = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br></pre></td></tr></table></figure>
+<p>这样写不会产生 副作用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>[(x ,y) <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] <span class="keyword">for</span> y <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>] <span class="keyword">if</span> x != y]</span><br><span class="line"><span class="comment"># 输出</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">2</span>), (<span class="number">1</span>, <span class="number">3</span>), (<span class="number">1</span>, <span class="number">4</span>), (<span class="number">3</span>, <span class="number">2</span>), (<span class="number">3</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">3</span>), (<span class="number">2</span>, <span class="number">4</span>)]</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -944,7 +947,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">2.</span> <span class="nav-text">列表</span></a></li></ol></div>
             
 
           </div>
