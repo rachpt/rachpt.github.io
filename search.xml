@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[a-simple-script-to-count-ABC]]></title>
+    <url>%2F2018%2F06%2F21%2Fa-simple-script-to-count-ABC%2F</url>
+    <content type="text"><![CDATA[一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。 我是不会手工数的，当然是写个小程序或者说是脚本更准确。 代码如下： 12345678#!/bin/bashfor n in &#123;1..72&#125;do count=`cat data.csv|sed -n "$&#123;n&#125; p"|egrep -o 'A|B|C'|wc -l` sed -i "$n s/$/,$count/" data.csv count=0done 这里记录一下。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[install-CAJViewer-on-Linux]]></title>
     <url>%2F2018%2F06%2F05%2Finstall-CAJViewer-on-Linux%2F</url>
-    <content type="text"><![CDATA[在安装 Linux 上安装 CAJViewer 阅读 caj 文件。使用 crossover 容器安装。 crossovercrossover 运行在 linux 和 mac 上的用以安装 windows 软件的一个兼容层，商业软件，可以适用几天。为何不用免费开源的 wine？因为目前使用 wine 安装的 Tim 有致命 bug，及其容易卡死软件，而使用 crossover 安装的 Tim 几乎完美（有几个小 bug，传文件OK），安装 crossover 可以参考： 可以在此下载 https://www.newasp.net/soft/423534.html 。 永久试用教程 。 补丁： https://pan.baidu.com/s/1eSgLS6u ，或者 https://pan.baidu.com/s/1kVTeir1 密码：bov7 。 如果使用的是 英文界面，可能会有较为严重的中文支持问题。这里打包了 win10 中文默认字体。 蓝奏云 https://www.lanzous.com/i15vvsb ，注意使用的 xz 压缩， 改成7z后缀方便上传用。 如下图所示，在软件容器中放入字体文件就能解决中文乱码问题。 CAJViewer 直接去 CNKI 下载 CAJViewer 7.2 ，也可以直接在 crossover 里面下载，也是 7.2 版。 直接 使用 软件建议的 xp 兼容层安装。 至此，可能觉得已经万事大吉，不然，当运行软件时，会提示： MSXML not regester ，然后软件闪退。 原因可能是没有必要的运行库。 对于 xp 兼容层，安装 运行库 2010，如下图示。注意 安装到 CAJViewer 的容器里面。 最后提示，别完了复制中文字体到 CAJViewer 容器字体文件夹。 CAJViewer 运行图。]]></content>
+    <content type="text"><![CDATA[在安装 Linux 上安装 CAJViewer 阅读 caj 文件。使用 crossover 容器安装。 crossovercrossover 运行在 linux 和 mac 上的用以安装 windows 软件的一个兼容层，商业软件，可以试用几天。为何不用免费开源的 wine？因为目前使用 wine 安装的 Tim 有致命 bug，及其容易卡死软件，而使用 crossover 安装的 Tim 几乎完美（有几个小 bug，传文件OK），安装 crossover 可以参考： 可以在此下载 https://www.newasp.net/soft/423534.html 。 永久试用教程 。 补丁： https://pan.baidu.com/s/1eSgLS6u ，或者 https://pan.baidu.com/s/1kVTeir1 密码：bov7 。 如果使用的是 英文界面，可能会有较为严重的中文支持问题。这里打包了 win10 中文默认字体。 蓝奏云 https://www.lanzous.com/i15vvsb ，注意使用的 xz 压缩， 改成7z后缀方便上传用。 如下图所示，在软件容器中放入字体文件就能解决中文乱码问题。 CAJViewer 直接去 CNKI 下载 CAJViewer 7.2 ，也可以直接在 crossover 里面下载，也是 7.2 版。 直接 使用 软件建议的 xp 兼容层安装。 至此，可能觉得已经万事大吉，不然，当运行软件时，会提示： MSXML not regester ，然后软件闪退。 原因可能是没有必要的运行库。 对于 xp 兼容层，安装 运行库 2010，如下图示。注意 安装到 CAJViewer 的容器里面。 最后提示，别忘了复制中文字体到 CAJViewer 容器字体文件夹。 CAJViewer 运行图。]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -41,8 +52,8 @@
         <category>linux</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
         <tag>flexget</tag>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>

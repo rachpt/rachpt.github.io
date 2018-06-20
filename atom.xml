@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-06-05T07:28:24.769Z</updated>
+  <updated>2018-06-20T17:18:04.283Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>a-simple-script-to-count-ABC</title>
+    <link href="http://rachpt.me/2018/06/21/a-simple-script-to-count-ABC/"/>
+    <id>http://rachpt.me/2018/06/21/a-simple-script-to-count-ABC/</id>
+    <published>2018-06-20T17:09:03.000Z</published>
+    <updated>2018-06-20T17:18:04.283Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。</p></blockquote><a id="more"></a><p>我是不会手工数的，当然是写个小程序或者说是脚本更准确。</p><p>代码如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> &#123;1..72&#125;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    count=`cat data.csv|sed -n <span class="string">"<span class="variable">$&#123;n&#125;</span> p"</span>|egrep -o <span class="string">'A|B|C'</span>|wc -l`</span><br><span class="line">    sed -i <span class="string">"<span class="variable">$n</span> s/$/,<span class="variable">$count</span>/"</span> data.csv</span><br><span class="line">    count=0</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><p>这里记录一下。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>install-CAJViewer-on-Linux</title>
     <link href="http://rachpt.me/2018/06/05/install-CAJViewer-on-Linux/"/>
     <id>http://rachpt.me/2018/06/05/install-CAJViewer-on-Linux/</id>
     <published>2018-06-05T06:36:35.000Z</published>
-    <updated>2018-06-05T07:28:24.769Z</updated>
+    <updated>2018-06-05T12:14:00.924Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>在安装 Linux 上安装 <em>CAJViewer</em> 阅读 caj 文件。使用 crossover 容器安装。</p></blockquote><a id="more"></a><h1 id="crossover"><a href="#crossover" class="headerlink" title="crossover"></a>crossover</h1><p>crossover 运行在 linux 和 mac 上的用以安装 windows 软件的一个兼容层，商业软件，可以适用几天。为何不用免费开源的 wine？因为目前使用 wine 安装的 Tim 有致命 bug，及其容易卡死软件，而使用 crossover 安装的 Tim 几乎完美（有几个小 bug，传文件OK），安装 crossover 可以参考：</p><blockquote><p>可以在此下载 <a href="https://www.newasp.net/soft/423534.html" target="_blank" rel="noopener">https://www.newasp.net/soft/423534.html</a> 。</p><p><a href="https://jingyan.baidu.com/article/e3c78d649c67dd3c4c85f533.html" target="_blank" rel="noopener">永久试用教程</a> 。 </p><p>补丁： <a href="https://pan.baidu.com/s/1eSgLS6u" target="_blank" rel="noopener">https://pan.baidu.com/s/1eSgLS6u</a> ，或者 <a href="https://pan.baidu.com/s/1kVTeir1" target="_blank" rel="noopener">https://pan.baidu.com/s/1kVTeir1</a> 密码：bov7  。</p></blockquote><p><img src="https://imagizer.imageshack.com/img921/2637/4k67Gn.png" alt="picture"></p><p>如果使用的是 英文界面，可能会有较为严重的中文支持问题。这里打包了 win10 中文默认字体。</p><p>蓝奏云 <a href="https://www.lanzous.com/i15vvsb" target="_blank" rel="noopener">https://www.lanzous.com/i15vvsb</a> ，注意使用的 xz 压缩， 改成7z后缀方便上传用。</p><p>如下图所示，在软件容器中放入字体文件就能解决中文乱码问题。</p><p><img src="https://imagizer.imageshack.com/img921/7375/VwZ3zR.png" alt="picture"></p><h1 id="CAJViewer"><a href="#CAJViewer" class="headerlink" title="CAJViewer"></a>CAJViewer</h1><p> 直接去 <a href="https://www.newasp.net/soft/423534.html" target="_blank" rel="noopener">CNKI</a> 下载 <em>CAJViewer 7.2</em> ，也可以直接在 crossover 里面下载，也是 7.2 版。</p><p> 直接 使用 软件建议的 xp 兼容层安装。</p><p><img src="https://imagizer.imageshack.com/img921/9374/ZXzwtu.png" alt="picture"></p><p>至此，可能觉得已经万事大吉，不然，当运行软件时，会提示：</p><p><code>MSXML not regester</code> ，然后软件闪退。</p><p>原因可能是没有必要的运行库。</p><p>对于 xp 兼容层，安装 运行库 2010，如下图示。注意 安装到 CAJViewer 的容器里面。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fs0bry2y7dj20tl0kktc1.jpg" alt="pic"></p><p>最后提示，别完了复制中文字体到 CAJViewer 容器字体文件夹。</p><p>CAJViewer 运行图。</p><p><img src="https://imagizer.imageshack.com/img921/8148/ez0tsu.png" alt="picture"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在安装 Linux 上安装 <em>CAJViewer</em> 阅读 caj 文件。使用 crossover 容器安装。</p></blockquote><a id="more"></a><h1 id="crossover"><a href="#crossover" class="headerlink" title="crossover"></a>crossover</h1><p>crossover 运行在 linux 和 mac 上的用以安装 windows 软件的一个兼容层，商业软件，可以试用几天。为何不用免费开源的 wine？因为目前使用 wine 安装的 Tim 有致命 bug，及其容易卡死软件，而使用 crossover 安装的 Tim 几乎完美（有几个小 bug，传文件OK），安装 crossover 可以参考：</p><blockquote><p>可以在此下载 <a href="https://www.newasp.net/soft/423534.html" target="_blank" rel="noopener">https://www.newasp.net/soft/423534.html</a> 。</p><p><a href="https://jingyan.baidu.com/article/e3c78d649c67dd3c4c85f533.html" target="_blank" rel="noopener">永久试用教程</a> 。 </p><p>补丁： <a href="https://pan.baidu.com/s/1eSgLS6u" target="_blank" rel="noopener">https://pan.baidu.com/s/1eSgLS6u</a> ，或者 <a href="https://pan.baidu.com/s/1kVTeir1" target="_blank" rel="noopener">https://pan.baidu.com/s/1kVTeir1</a> 密码：bov7  。</p></blockquote><p><img src="https://imagizer.imageshack.com/img921/2637/4k67Gn.png" alt="picture"></p><p>如果使用的是 英文界面，可能会有较为严重的中文支持问题。这里打包了 win10 中文默认字体。</p><p>蓝奏云 <a href="https://www.lanzous.com/i15vvsb" target="_blank" rel="noopener">https://www.lanzous.com/i15vvsb</a> ，注意使用的 xz 压缩， 改成7z后缀方便上传用。</p><p>如下图所示，在软件容器中放入字体文件就能解决中文乱码问题。</p><p><img src="https://imagizer.imageshack.com/img921/7375/VwZ3zR.png" alt="picture"></p><h1 id="CAJViewer"><a href="#CAJViewer" class="headerlink" title="CAJViewer"></a>CAJViewer</h1><p> 直接去 <a href="https://www.newasp.net/soft/423534.html" target="_blank" rel="noopener">CNKI</a> 下载 <em>CAJViewer 7.2</em> ，也可以直接在 crossover 里面下载，也是 7.2 版。</p><p> 直接 使用 软件建议的 xp 兼容层安装。</p><p><img src="https://imagizer.imageshack.com/img921/9374/ZXzwtu.png" alt="picture"></p><p>至此，可能觉得已经万事大吉，不然，当运行软件时，会提示：</p><p><code>MSXML not regester</code> ，然后软件闪退。</p><p>原因可能是没有必要的运行库。</p><p>对于 xp 兼容层，安装 运行库 2010，如下图示。注意 安装到 CAJViewer 的容器里面。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fs0bry2y7dj20tl0kktc1.jpg" alt="pic"></p><p>最后提示，别忘了复制中文字体到 CAJViewer 容器字体文件夹。</p><p>CAJViewer 运行图。</p><p><img src="https://imagizer.imageshack.com/img921/8148/ez0tsu.png" alt="picture"></p>]]></content>
     
     <summary type="html">
     
@@ -107,9 +131,9 @@
       <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
     
     
-      <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
-    
       <category term="flexget" scheme="http://rachpt.me/tags/flexget/"/>
+    
+      <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
     
   </entry>
   
@@ -479,28 +503,6 @@
     
     
       <category term="memdeley" scheme="http://rachpt.me/tags/memdeley/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>努比亚 Z11 mini 换电池</title>
-    <link href="http://rachpt.me/2018/03/11/change-battery-for-nubiaZ11mini/"/>
-    <id>http://rachpt.me/2018/03/11/change-battery-for-nubiaZ11mini/</id>
-    <published>2018-03-11T15:00:00.000Z</published>
-    <updated>2018-03-15T14:12:45.201Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>年前就想换电池了，听说小米7快发布了，于是没换等mi7。现在看来mi7要等上一段时间了。所已淘宝买个电池换换，再战个半年。</p></blockquote><a id="more"></a><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ol><li>淘宝买电池：</li></ol><p>随便找的 <a href="https://detail.tmall.com/item.htm?id=560780453117&amp;_u=blud0h0f3a1" target="_blank" rel="noopener">淘宝电池</a> ，41块大洋。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05gy1fp99vpnqm4j20o604xjs4.jpg" alt="pic1"></p><p>买来后东西挺多的，</p><p><img src="https://ww4.sinaimg.cn/large/675bda05ly1fp9axnshmyj20rs111wlm.jpg" alt="pic2"></p><ol><li>使用工具：</li></ol><p>只需要这三个工具 + 一个电吹风机。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05ly1fp9ay183i4j20rs111wlt.jpg" alt="pic3"></p><p>刀子用来翘壳和电池的，需要十字螺丝刀。</p><h1 id="拆后壳"><a href="#拆后壳" class="headerlink" title="拆后壳"></a>拆后壳</h1><p>由于只有一个手机，所以没拍图片，网上找的图片修的。</p><ol><li>使用吹风机加热后壳，变烫后直接用刀子在下面位置撬开小口。</li></ol><p><img src="https://ww3.sinaimg.cn/large/675bda05gy1fp9a475kezj20go0b4wf7.jpg" alt="pic5"></p><p>注意避开卡扣位置。</p><p><img src="https://ww1.sinaimg.cn/large/675bda05gy1fp9a7ftgjjj20df0b4q44.jpg" alt="pic7"></p><p><img src="https://ww1.sinaimg.cn/large/675bda05gy1fp9a6mjw00j20ar09vt9f.jpg" alt="pic6"></p><p>需要注意的是，有如下三个地方使用了胶，特别是指纹区域附近，用卡片从 <strong>右侧</strong> 顶开胶。</p><p><img src="https://ww1.sinaimg.cn/large/675bda05gy1fp9aaft1qoj20hs0dc40j.jpg" alt="pic8"></p><p>小心指纹排线。</p><p><img src="https://ww2.sinaimg.cn/large/675bda05gy1fp9aayqvvzj20hs0dc75u.jpg" alt="pic9"></p><h1 id="拆开上板"><a href="#拆开上板" class="headerlink" title="拆开上板"></a>拆开上板</h1><p>使用螺丝刀拆掉摄像头所在区域的金属盖板，注意 保存螺丝。</p><p><img src="https://ww1.sinaimg.cn/large/675bda05gy1fp9a7ftgjjj20df0b4q44.jpg" alt="pic7"></p><p>从摄像头红圈上面部分翘起 盖板。</p><h1 id="拆电池"><a href="#拆电池" class="headerlink" title="拆电池"></a>拆电池</h1><p>首先拆掉指纹排线 btb ，然后是电池的 btb。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05gy1fp9af3dzy6j20hs0dc40y.jpg" alt="pic10"></p><p>两块黄色区域就是固定电池的双面胶尾巴。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05gy1fp9aht5t1qj20x70np1kx.jpg" alt="pic11"></p><p>用刀子或者 塑料片拆解电池（图片来自 优酷）。用吹风机加热电池四周以方便将其取下。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05gy1fp9alnanplj20dc0dcq3z.jpg" alt="pic12"></p><p>如果使用刀子，注意电池后面的排线，别划到了。</p><p><strong>拆电池会使电池变形。</strong></p><h1 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h1><p>建议新电池先上排线 btb，开机测试，充电测试一下，没问题再关机装好还原。</p><p>最后，</p><p>附上拆下来的电池图。</p><p><img src="https://ww4.sinaimg.cn/large/675bda05ly1fp9aupqg2qj20rs111465.jpg" alt="pic-1"></p><p><img src="https://ww3.sinaimg.cn/large/675bda05ly1fp9av5shm8j20rs1117aa.jpg" alt="pic-2"></p><p>以及比较。</p><p><img src="https://ww3.sinaimg.cn/large/675bda05ly1fp9aw6w3x4j20k00zkq69.jpg" alt="pic-3"></p><p><img src="https://ww4.sinaimg.cn/large/675bda05ly1fp9awnvod9j20u01hcwj8.jpg" alt="piv-4"></p><p><img src="https://ww1.sinaimg.cn/large/675bda05ly1fp9awzto4ij20u01hc76e.jpg" alt="pic-5"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;年前就想换电池了，听说小米7快发布了，于是没换等mi7。现在看来mi7要等上一段时间了。所已淘宝买个电池换换，再战个半年。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="nubia" scheme="http://rachpt.me/tags/nubia/"/>
     
   </entry>
   
