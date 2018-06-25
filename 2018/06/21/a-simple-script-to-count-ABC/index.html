@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-20T17:18:04.283Z">
+<meta property="og:updated_time" content="2018-06-20T17:26:43.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="a-simple-script-to-count-ABC">
 <meta name="twitter:description" content="一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">261</span>
+                <span title="字数统计">339</span>
               
 
               
@@ -494,8 +494,9 @@
 </blockquote>
 <a id="more"></a>
 <p>我是不会手工数的，当然是写个小程序或者说是脚本更准确。</p>
-<p>代码如下：</p>
+<p>代码如下：<br>可以先 <code>wc -l</code> 看一下 csv 文件行数。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> &#123;1..72&#125;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    count=`cat data.csv|sed -n <span class="string">"<span class="variable">$&#123;n&#125;</span> p"</span>|egrep -o <span class="string">'A|B|C'</span>|wc -l`</span><br><span class="line">    sed -i <span class="string">"<span class="variable">$n</span> s/$/,<span class="variable">$count</span>/"</span> data.csv</span><br><span class="line">    count=0</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>当然开始前（与windows有文件交换）使用 <code>dos2unix</code> 转换一下，结束后 <code>unix2dos</code> 换回来。</p>
 <p>这里记录一下。</p>
 
       

@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[a-simple-script-to-count-ABC]]></title>
     <url>%2F2018%2F06%2F21%2Fa-simple-script-to-count-ABC%2F</url>
-    <content type="text"><![CDATA[一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。 我是不会手工数的，当然是写个小程序或者说是脚本更准确。 代码如下： 12345678#!/bin/bashfor n in &#123;1..72&#125;do count=`cat data.csv|sed -n "$&#123;n&#125; p"|egrep -o 'A|B|C'|wc -l` sed -i "$n s/$/,$count/" data.csv count=0done 这里记录一下。]]></content>
+    <content type="text"><![CDATA[一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。 我是不会手工数的，当然是写个小程序或者说是脚本更准确。 代码如下：可以先 wc -l 看一下 csv 文件行数。 12345678#!/bin/bashfor n in &#123;1..72&#125;do count=`cat data.csv|sed -n "$&#123;n&#125; p"|egrep -o 'A|B|C'|wc -l` sed -i "$n s/$/,$count/" data.csv count=0done 当然开始前（与windows有文件交换）使用 dos2unix 转换一下，结束后 unix2dos 换回来。 这里记录一下。]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -52,8 +52,8 @@
         <category>linux</category>
       </categories>
       <tags>
-        <tag>flexget</tag>
         <tag>ubuntu</tag>
+        <tag>flexget</tag>
       </tags>
   </entry>
   <entry>
