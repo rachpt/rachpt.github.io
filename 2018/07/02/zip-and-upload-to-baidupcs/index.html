@@ -129,18 +129,18 @@
   <meta name="keywords" content="shell," />
 
 
-<meta name="description" content="文件批量使用 zip 打包文件并上传 百度网盘备份。">
+<meta name="description" content="文件批量使用 zip 打包并上传 百度网盘备份。">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zip-and-upload-to-baidupcs">
 <meta property="og:url" content="http://rachpt.me/2018/07/02/zip-and-upload-to-baidupcs/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="文件批量使用 zip 打包文件并上传 百度网盘备份。">
+<meta property="og:description" content="文件批量使用 zip 打包并上传 百度网盘备份。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-02T13:32:59.599Z">
+<meta property="og:updated_time" content="2018-07-02T13:34:59.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zip-and-upload-to-baidupcs">
-<meta name="twitter:description" content="文件批量使用 zip 打包文件并上传 百度网盘备份。">
+<meta name="twitter:description" content="文件批量使用 zip 打包并上传 百度网盘备份。">
 
 
 
@@ -490,7 +490,7 @@
 
       
         <blockquote>
-<p>文件批量使用 zip 打包文件并上传 百度网盘备份。</p>
+<p>文件批量使用 zip 打包并上传 百度网盘备份。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># author: rachpt@126.com</span></span><br><span class="line"><span class="comment"># version: 2.0</span></span><br><span class="line"><span class="comment">#------settings--------#</span></span><br><span class="line"><span class="comment"># 密码</span></span><br><span class="line">password=<span class="string">'password@baidu.com'</span></span><br><span class="line"><span class="comment"># 标识</span></span><br><span class="line">pass=<span class="string">"locked"</span></span><br><span class="line"><span class="comment"># 百度网盘路径</span></span><br><span class="line">uplaodPath=<span class="string">"/zip/path/"</span></span><br><span class="line"><span class="comment"># 获取但前脚本的绝对路径</span></span><br><span class="line">ROOT_PATH=<span class="string">"<span class="variable">$(dirname "$(readlink -f "$0")</span>"</span>)<span class="string">"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#--------zip and upload-----------#</span></span><br><span class="line"><span class="string"># 压缩与上传文件列表，不递归子目录</span></span><br><span class="line"><span class="string">zip_file_list=<span class="variable">$(find "$ROOT_PATH" -maxdepth 1 -iname "*my.file")</span></span></span><br><span class="line"><span class="string"># 设置 IFS，防止路径中有空格</span></span><br><span class="line"><span class="string">IFS_OLD=<span class="variable">$IFS</span></span></span><br><span class="line"><span class="string">IFS=$'\n'</span></span><br><span class="line"><span class="string"># 循环</span></span><br><span class="line"><span class="string">for filename in <span class="variable">$zip_file_list</span></span></span><br><span class="line"><span class="string">do</span></span><br><span class="line"><span class="string">	zipPath=<span class="variable">$&#123;filename%.*&#125;</span>_<span class="variable">$&#123;pass&#125;</span>.zip # zip 路径</span></span><br><span class="line"><span class="string">	zip -rjqP "</span><span class="variable">$password</span><span class="string">" "</span><span class="variable">$zipPath</span><span class="string">" "</span><span class="variable">$filename</span><span class="string">" # 压缩</span></span><br><span class="line"><span class="string">    [ ! -d "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span><span class="string">" ] &amp;&amp; mkdir "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span><span class="string">" # 移动路径</span></span><br><span class="line"><span class="string">    mv "</span><span class="variable">$filename</span><span class="string">" "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span>/<span class="variable">$&#123;filename##*/&#125;</span><span class="string">" # 移动</span></span><br><span class="line"><span class="string">done</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">IFS=<span class="variable">$IFS_OLD</span></span></span><br><span class="line"><span class="string"># 上传百度网盘</span></span><br><span class="line"><span class="string">/opt/baidupcs/baidupcs upload "</span>*_<span class="variable">$&#123;pass&#125;</span>.zip<span class="string">" "</span><span class="variable">$uplaodPath</span><span class="string">"</span></span><br></pre></td></tr></table></figure>
