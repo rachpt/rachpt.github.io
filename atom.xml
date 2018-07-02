@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-06-20T17:26:43.095Z</updated>
+  <updated>2018-07-02T13:32:59.599Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zip-and-upload-to-baidupcs</title>
+    <link href="http://rachpt.me/2018/07/02/zip-and-upload-to-baidupcs/"/>
+    <id>http://rachpt.me/2018/07/02/zip-and-upload-to-baidupcs/</id>
+    <published>2018-07-02T13:03:10.000Z</published>
+    <updated>2018-07-02T13:32:59.599Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>文件批量使用 zip 打包文件并上传 百度网盘备份。</p></blockquote><a id="more"></a><h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># author: rachpt@126.com</span></span><br><span class="line"><span class="comment"># version: 2.0</span></span><br><span class="line"><span class="comment">#------settings--------#</span></span><br><span class="line"><span class="comment"># 密码</span></span><br><span class="line">password=<span class="string">'password@baidu.com'</span></span><br><span class="line"><span class="comment"># 标识</span></span><br><span class="line">pass=<span class="string">"locked"</span></span><br><span class="line"><span class="comment"># 百度网盘路径</span></span><br><span class="line">uplaodPath=<span class="string">"/zip/path/"</span></span><br><span class="line"><span class="comment"># 获取但前脚本的绝对路径</span></span><br><span class="line">ROOT_PATH=<span class="string">"<span class="variable">$(dirname "$(readlink -f "$0")</span>"</span>)<span class="string">"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#--------zip and upload-----------#</span></span><br><span class="line"><span class="string"># 压缩与上传文件列表，不递归子目录</span></span><br><span class="line"><span class="string">zip_file_list=<span class="variable">$(find "$ROOT_PATH" -maxdepth 1 -iname "*my.file")</span></span></span><br><span class="line"><span class="string"># 设置 IFS，防止路径中有空格</span></span><br><span class="line"><span class="string">IFS_OLD=<span class="variable">$IFS</span></span></span><br><span class="line"><span class="string">IFS=$'\n'</span></span><br><span class="line"><span class="string"># 循环</span></span><br><span class="line"><span class="string">for filename in <span class="variable">$zip_file_list</span></span></span><br><span class="line"><span class="string">do</span></span><br><span class="line"><span class="string">zipPath=<span class="variable">$&#123;filename%.*&#125;</span>_<span class="variable">$&#123;pass&#125;</span>.zip # zip 路径</span></span><br><span class="line"><span class="string">zip -rjqP "</span><span class="variable">$password</span><span class="string">" "</span><span class="variable">$zipPath</span><span class="string">" "</span><span class="variable">$filename</span><span class="string">" # 压缩</span></span><br><span class="line"><span class="string">    [ ! -d "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span><span class="string">" ] &amp;&amp; mkdir "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span><span class="string">" # 移动路径</span></span><br><span class="line"><span class="string">    mv "</span><span class="variable">$filename</span><span class="string">" "</span><span class="variable">$&#123;filename%/*&#125;</span>/<span class="keyword">done</span>/<span class="variable">$&#123;filename##*/&#125;</span><span class="string">" # 移动</span></span><br><span class="line"><span class="string">done</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">IFS=<span class="variable">$IFS_OLD</span></span></span><br><span class="line"><span class="string"># 上传百度网盘</span></span><br><span class="line"><span class="string">/opt/baidupcs/baidupcs upload "</span>*_<span class="variable">$&#123;pass&#125;</span>.zip<span class="string">" "</span><span class="variable">$uplaodPath</span><span class="string">"</span></span><br></pre></td></tr></table></figure><h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1><p><code>zip -rjqP</code> ，r 递归所有子文件，j 不保留文件目录结构， q 安静模式， P 设置密码，其后跟密码。</p><p><code>find &quot;$ROOT_PATH&quot; -maxdepth 1 -iname &quot;*my.file&quot;</code>， <code>-maxdepth 1</code> 最大递归深度1，参数放置位置紧跟在 find 路径后。</p><p><code>/opt/baidupcs/baidupcs</code> 为 <a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener">BaiduPCS-Go</a> 客户端。具体可以看其说明文档。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;文件批量使用 zip 打包文件并上传 百度网盘备份。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>a-simple-script-to-count-ABC</title>
@@ -478,31 +502,6 @@
     
     
       <category term="ffmpeg" scheme="http://rachpt.me/tags/ffmpeg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决 mint 系统中 mendeley 无法使用 fcitx 输入中文</title>
-    <link href="http://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/"/>
-    <id>http://rachpt.me/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</id>
-    <published>2018-03-12T02:46:14.000Z</published>
-    <updated>2018-03-12T03:16:00.473Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。</p><p>一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。</p></blockquote><a id="more"></a><p>使用 ibus 最后连中文都无法输入，重启也无效。于是换回熟悉的 fcitx ，居然让我发现了解决 fcitx 与 mendeley 之间矛盾的方法。</p><p>最简单的解决办法：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so    /opt/mendeleydesktop/plugins/qt/plugins/platforminputcontexts/</span><br><span class="line"></span><br><span class="line"><span class="comment"># linux mint 18.3，基于 ubuntu 16.04</span></span><br></pre></td></tr></table></figure><p>参考 <a href="https://www.findhao.net/easycoding/2287#Ubuntu" target="_blank" rel="noopener">此文</a> （ubuntu），以及 <a href="https://www.zhihu.com/question/25517900" target="_blank" rel="noopener">知乎 链接</a> 。</p><p>拷贝  <code>libfcitxplatforminputcontextplugin.so</code> 到 mendeley 安装位置，debian和ubuntu的安装位置为：</p><p><code>/opt/mendeleydesktop/plugins/qt/plugins/platforminputcontexts/</code></p><p>重新启动mendeley即可发现中文可以输入了。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">locate libfcitxplatforminputcontextplugin.so  </span><br><span class="line"><span class="comment">#找到系统中的libfcitxplatforminputcontextplugin.so</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#复制到 /opt/mendeleydesktop/plugins/qt/plugins/platforminputcontexts/ 目录下。</span></span><br></pre></td></tr></table></figure><div class="note success"><p>需要注意的是，在这之前，我使用新立得卸载了 ibus，不知怎么总是无法生效。</p><p>于是在<code>系统设置</code> –&gt; <code>输入法</code> 中 安装简体中文的语言支持，也就是同时装好 fcitx 和ibus 后，重启。</p><p>最后成功解决 fcitx 在 mengeley 中输入中文的问题。</p></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。&lt;/p&gt;
-&lt;p&gt;一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="memdeley" scheme="http://rachpt.me/tags/memdeley/"/>
     
   </entry>
   

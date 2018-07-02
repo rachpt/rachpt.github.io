@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[zip-and-upload-to-baidupcs]]></title>
+    <url>%2F2018%2F07%2F02%2Fzip-and-upload-to-baidupcs%2F</url>
+    <content type="text"><![CDATA[文件批量使用 zip 打包文件并上传 百度网盘备份。 脚本12345678910111213141516171819202122232425262728293031#!/bin/bash# author: rachpt@126.com# version: 2.0#------settings--------## 密码password='password@baidu.com'# 标识pass="locked"# 百度网盘路径uplaodPath="/zip/path/"# 获取但前脚本的绝对路径ROOT_PATH="$(dirname "$(readlink -f "$0")")"#--------zip and upload-----------## 压缩与上传文件列表，不递归子目录zip_file_list=$(find "$ROOT_PATH" -maxdepth 1 -iname "*my.file")# 设置 IFS，防止路径中有空格IFS_OLD=$IFSIFS=$'\n'# 循环for filename in $zip_file_listdo zipPath=$&#123;filename%.*&#125;_$&#123;pass&#125;.zip # zip 路径 zip -rjqP "$password" "$zipPath" "$filename" # 压缩 [ ! -d "$&#123;filename%/*&#125;/done" ] &amp;&amp; mkdir "$&#123;filename%/*&#125;/done" # 移动路径 mv "$filename" "$&#123;filename%/*&#125;/done/$&#123;filename##*/&#125;" # 移动doneIFS=$IFS_OLD# 上传百度网盘/opt/baidupcs/baidupcs upload "*_$&#123;pass&#125;.zip" "$uplaodPath" 解析zip -rjqP ，r 递归所有子文件，j 不保留文件目录结构， q 安静模式， P 设置密码，其后跟密码。 find &quot;$ROOT_PATH&quot; -maxdepth 1 -iname &quot;*my.file&quot;， -maxdepth 1 最大递归深度1，参数放置位置紧跟在 find 路径后。 /opt/baidupcs/baidupcs 为 BaiduPCS-Go 客户端。具体可以看其说明文档。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[a-simple-script-to-count-ABC]]></title>
     <url>%2F2018%2F06%2F21%2Fa-simple-script-to-count-ABC%2F</url>
     <content type="text"><![CDATA[一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。 我是不会手工数的，当然是写个小程序或者说是脚本更准确。 代码如下：可以先 wc -l 看一下 csv 文件行数。 12345678#!/bin/bashfor n in &#123;1..72&#125;do count=`cat data.csv|sed -n "$&#123;n&#125; p"|egrep -o 'A|B|C'|wc -l` sed -i "$n s/$/,$count/" data.csv count=0done 当然开始前（与windows有文件交换）使用 dos2unix 转换一下，结束后 unix2dos 换回来。 这里记录一下。]]></content>
