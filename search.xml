@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[adb-linux-and-mi8]]></title>
+    <url>%2F2018%2F07%2F06%2Fadb-linux-and-mi8%2F</url>
+    <content type="text"><![CDATA[记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。 ADB安装命令（ubuntu系列）： 123456sudo add-apt-repository ppa:nilarimogard/webupd8sudo apt-get update# 直接试下面的，不行在加 ppasudo apt-get install android-tools-adbadb --version # 检查是否安装 授权12345678910# 打开usb 调试，连上 linux，列出所有 usb 设备。lsusbrachpt@pc ~ $ lsusbBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hubBus 001 Device 004: ID 0b95:1790 ASIX Electronics Corp. AX88179 Gigabit EthernetBus 001 Device 002: ID 2109:2812 VIA Labs, Inc. VL812 HubBus 001 Device 071: ID 046d:c534 Logitech, Inc. Unifying ReceiverBus 001 Device 088: ID 2717:ff48 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub 可以通过对比连接前后变化得知哪个是手机的 ID 和idProduct 。 Bus 001 Device 088: ID 2717:ff48 这条即是。新手机有可能带有 Google 字样。 其中ID号：2717，idProduct号：ff48。 参考网上教程，需要建两个文件用于授权。 第一个文件： 1234567891011# 先切换目录cd /etc/udev/rules.d/ &amp;&amp; ls# 新建一个叫 imx-android.rules 的文件。# 也有说是叫 51-android.rules，等等sudo vim imx-android.rules# 填入一下内容SUBSYSTEM=="usb", ATTRS&#123;idVendor&#125;=="填ID号", ATTRS&#123;idProduct&#125;=="填idProduct号",MODE="0777"# 后面的 0777 是因为我需要可执行权限。# 最后加可执行权限sudo chmod +x imx-android.rules 第二个文件： 1234mkdir ~/.androidvim ~/.android/adb_usb.ini# 添加ID号，16进制，0x+ID号0x2717 重启adb。 123adb kill-server# 可能需要 重新插拔一下 usb 线。adb start-server 黑域开启黑域服务： 1adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh MIUI 广告通过 adb 冻结 msa： 12345678adb shell pm disable-user --user 0 com.miui.systemAdSolution # 国内版adb shell pm disable-user --user 0 com.miui.msa.global # 国际版# disable 换成 enable 可解除冻结，当然也可以直接在手机上解除。# 其他命令参考adb shell pm 其他常见广告关闭方法 。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>mi8</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[zip-and-upload-to-baidupcs]]></title>
     <url>%2F2018%2F07%2F02%2Fzip-and-upload-to-baidupcs%2F</url>
     <content type="text"><![CDATA[文件批量使用 zip 打包并上传 百度网盘备份。 脚本12345678910111213141516171819202122232425262728293031#!/bin/bash# author: rachpt@126.com# version: 2.0#------settings--------## 密码password='password@baidu.com'# 标识pass="locked"# 百度网盘路径uplaodPath="/zip/path/"# 获取但前脚本的绝对路径ROOT_PATH="$(dirname "$(readlink -f "$0")")"#--------zip and upload-----------## 压缩与上传文件列表，不递归子目录zip_file_list=$(find "$ROOT_PATH" -maxdepth 1 -iname "*my.file")# 设置 IFS，防止路径中有空格IFS_OLD=$IFSIFS=$'\n'# 循环for filename in $zip_file_listdo zipPath=$&#123;filename%.*&#125;_$&#123;pass&#125;.zip # zip 路径 zip -rjqP "$password" "$zipPath" "$filename" # 压缩 [ ! -d "$&#123;filename%/*&#125;/done" ] &amp;&amp; mkdir "$&#123;filename%/*&#125;/done" # 移动路径 mv "$filename" "$&#123;filename%/*&#125;/done/$&#123;filename##*/&#125;" # 移动doneIFS=$IFS_OLD# 上传百度网盘/opt/baidupcs/baidupcs upload "*_$&#123;pass&#125;.zip" "$uplaodPath" 解析zip -rjqP ，r 递归所有子文件，j 不保留文件目录结构， q 安静模式， P 设置密码，其后跟密码。 find &quot;$ROOT_PATH&quot; -maxdepth 1 -iname &quot;*my.file&quot;， -maxdepth 1 最大递归深度1，参数放置位置紧跟在 find 路径后。 /opt/baidupcs/baidupcs 为 BaiduPCS-Go 客户端。具体可以看其说明文档。]]></content>
@@ -471,8 +482,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>flexget</tag>
         <tag>pt</tag>
+        <tag>flexget</tag>
       </tags>
   </entry>
   <entry>
