@@ -627,7 +627,7 @@
                 
               
 
-              <time title="创建时间：2018-07-20 16:11:00 / 修改时间：17:22:42" itemprop="dateCreated datePublished" datetime="2018-07-20T16:11:00+08:00">2018-07-20</time>
+              <time title="创建时间：2018-07-20 16:11:00 / 修改时间：17:43:22" itemprop="dateCreated datePublished" datetime="2018-07-20T16:11:00+08:00">2018-07-20</time>
             
 
             
@@ -687,7 +687,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">999</span>
+                <span title="本文字数">1k</span>
               
 
               
@@ -722,33 +722,16 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>重源码编译 vim，重而支持系统粘贴板。</p>
 </blockquote>
-<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p><code>&quot; + Y</code> <code>&quot; + P</code> 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。</p>
-<p>如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。</p>
-<h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><ol>
-<li><p>下载源代码,<br><a href="https://github.com/vim/vim" target="_blank" rel="noopener">https://github.com/vim/vim</a><br> 使用 git <code>git clone https://github.com/vim/vim.git</code></p>
-</li>
-<li><p>安装依赖<br><code>sudo apt-get install xorg-dev</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398" target="_blank" rel="noopener">参考文档</a><br><code>sudo apt-get install libncurses5-dev</code>  # <a href="https://blog.csdn.net/jdsjlzx/article/details/12883359" target="_blank" rel="noopener">参考文档</a></p>
-</li>
-<li><p>编译<br><code>cd vim</code><br><code>./configure --with-features=huge</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398" target="_blank" rel="noopener">参考文档</a><br><code>cd src/</code><br><code>make &amp;&amp; sudo make install</code></p>
-</li>
-</ol>
-<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p><code>vim --version | grep &quot;clipboard&quot;</code><br>看到 +clipboard  即是成功了。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>安装 YouCompleteMe 直接参考官方文档，先安装依赖。<br><a href="http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64" target="_blank" rel="noopener">http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64</a></p>
-<p>如果出现下面错误(一定会)：</p>
-<p><code>YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )</code><br>需要在编译 vim 时加入支持 python 的参数。<br><code>--enable-pythoninterp=yes --enable-python3interp=yes</code> # 前面的时 python2 的后面是3的。<br><a href="https://blog.csdn.net/northeastsqure/article/details/72847259" target="_blank" rel="noopener">参考文档1</a> ，<a href="https://blog.csdn.net/u012675539/article/details/51489957" target="_blank" rel="noopener">参考文档2</a>。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>vim 编译主要命令：</p>
-<ol>
-<li><code>./configure --with-features=hug --enable-pythoninterp=yes --enable-python3interp=yes</code></li>
-<li><code>cd src</code></li>
-<li><code>make &amp;&amp; sudo make install</code></li>
-</ol>
-<p>最后关于卸载以及 清理，(在源代码路径下)<br>使用 <code>make clean</code> 清理之间编译完成的；<br>使用 <code>sudo make uninstall</code> 卸载使用 make 安装的软件。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/20/compile-vim-with-clipboard-supported/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
