@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Materials Studio CASTEP 迭代次数设置]]></title>
+    <url>%2F2018%2F07%2F20%2Fms-scf-max-iterations%2F</url>
+    <content type="text"><![CDATA[今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。 错误信息1234Error check_elec_ground_state : electronic_minimisation of initial cell failed.Current trace stack: check_elec_ground_state castep 检查castep 文件发现下面的片段 1234567891011121314... 99 -2.09594982E+004 6.31070540E-001 3.18129596E-006 4013.01 &lt;-- SCF 100 -2.09594980E+004 6.31017470E-001 -2.41328571E-006 4053.95 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF *Warning* max. SCF cycles performed but system has not reached the groundstate. Current total energy, E = -20959.33865776 eVCurrent free energy (E-TS) = -20959.49797103 eV(energies not corrected for finite basis set) . . . 意思大概是我设置的 SCF 迭代次数不够，100次后仍然未能找到自恰解。 回想使用步骤皆是以前的所用的，马上翻看之前成功的castep文件， 12345678 13 -2.78030685E+004 -1.99686373E+000 -7.49554981E-007 898.41 &lt;-- SCF 14 -2.78030685E+004 -1.99941165E+000 4.13854537E-008 943.16 &lt;-- SCF 15 -2.78030685E+004 -2.00267847E+000 -2.65786251E-007 988.60 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF Final energy, E = -27803.06847596 eVFinal free energy (E-TS) = -27803.06847596 eV(energies not corrected for finite basis set) 几乎都是十几次得到自恰解。 找到问题所在。 迭代次数我不是设置的500 么回到 windows 版的MS，检查设置。我勒个去，Geometry Optimization 的 Max.iterations是500没错，但是Elastic Constants 的 Max.iterations还是默认的100。 还有 SCF 迭代次数可以设置。 问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。 截断能、k点、自旋、对称性等都有可能影响收敛。 没办法，只能试试看了。 后续如果解决，会详细记录。]]></content>
+      <categories>
+        <category>DFT</category>
+      </categories>
+      <tags>
+        <tag>castep</tag>
+        <tag>ms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[compile-vim-with-clipboard-supportes]]></title>
+    <url>%2F2018%2F07%2F20%2Fcompile-vim-with-clipboard-supported%2F</url>
+    <content type="text"><![CDATA[重源码编译 vim，重而支持系统粘贴板。 why&quot; + Y &quot; + P 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。 如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。 编译 下载源代码,https://github.com/vim/vim 使用 git git clone https://github.com/vim/vim.git 安装依赖sudo apt-get install xorg-dev # 参考文档sudo apt-get install libncurses5-dev # 参考文档 编译cd vim./configure --with-features=huge # 参考文档cd src/make &amp;&amp; sudo make install 验证vim --version | grep &quot;clipboard&quot;看到 +clipboard 即是成功了。 其他安装 YouCompleteMe 直接参考官方文档，先安装依赖。http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64 如果出现下面错误(一定会)： YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )需要在编译 vim 时加入支持 python 的参数。--enable-pythoninterp=yes --enable-python3interp=yes # 前面的时 python2 的后面是3的。参考文档1 ，参考文档2。 总结vim 编译主要命令： ./configure --with-features=hug --enable-pythoninterp=yes --enable-python3interp=yes cd src make &amp;&amp; sudo make install 最后关于卸载以及 清理，(在源代码路径下)使用 make clean 清理之间编译完成的；使用 sudo make uninstall 卸载使用 make 安装的软件。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[adb-linux-and-mi8]]></title>
     <url>%2F2018%2F07%2F06%2Fadb-linux-and-mi8%2F</url>
     <content type="text"><![CDATA[记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。 ADB安装命令（ubuntu系列）： 123456sudo add-apt-repository ppa:nilarimogard/webupd8sudo apt-get update# 直接试下面的，不行在加 ppasudo apt-get install android-tools-adbadb --version # 检查是否安装 授权12345678910# 打开usb 调试，连上 linux，列出所有 usb 设备。lsusbrachpt@pc ~ $ lsusbBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hubBus 001 Device 004: ID 0b95:1790 ASIX Electronics Corp. AX88179 Gigabit EthernetBus 001 Device 002: ID 2109:2812 VIA Labs, Inc. VL812 HubBus 001 Device 071: ID 046d:c534 Logitech, Inc. Unifying ReceiverBus 001 Device 088: ID 2717:ff48 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub 可以通过对比连接前后变化得知哪个是手机的 ID 和idProduct 。 Bus 001 Device 088: ID 2717:ff48 这条即是。新手机有可能带有 Google 字样。 其中ID号：2717，idProduct号：ff48。 参考网上教程，需要建两个文件用于授权。 第一个文件： 1234567891011# 先切换目录cd /etc/udev/rules.d/ &amp;&amp; ls# 新建一个叫 imx-android.rules 的文件。# 也有说是叫 51-android.rules，等等sudo vim imx-android.rules# 填入一下内容SUBSYSTEM=="usb", ATTRS&#123;idVendor&#125;=="填ID号", ATTRS&#123;idProduct&#125;=="填idProduct号",MODE="0777"# 后面的 0777 是因为我需要可执行权限。# 最后加可执行权限sudo chmod +x imx-android.rules 第二个文件： 1234mkdir ~/.androidvim ~/.android/adb_usb.ini# 添加ID号，16进制，0x+ID号0x2717 重启adb。 123adb kill-server# 可能需要 重新插拔一下 usb 线。adb start-server 黑域开启黑域服务： 1adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh MIUI 广告通过 adb 冻结 msa： 12345678adb shell pm disable-user --user 0 com.miui.systemAdSolution # 国内版adb shell pm disable-user --user 0 com.miui.msa.global # 国际版# disable 换成 enable 可解除冻结，当然也可以直接在手机上解除。# 其他命令参考adb shell pm 其他常见广告关闭方法 。]]></content>
@@ -188,18 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Materials Studio CASTEP 迭代次数设置]]></title>
-    <url>%2F2018%2F03%2F14%2Fms-scf-max-iterations%2F</url>
-    <content type="text"><![CDATA[今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。 错误信息1234Error check_elec_ground_state : electronic_minimisation of initial cell failed.Current trace stack: check_elec_ground_state castep 检查castep 文件发现下面的片段 1234567891011121314... 99 -2.09594982E+004 6.31070540E-001 3.18129596E-006 4013.01 &lt;-- SCF 100 -2.09594980E+004 6.31017470E-001 -2.41328571E-006 4053.95 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF *Warning* max. SCF cycles performed but system has not reached the groundstate. Current total energy, E = -20959.33865776 eVCurrent free energy (E-TS) = -20959.49797103 eV(energies not corrected for finite basis set) . . . 意思大概是我设置的 SCF 迭代次数不够，100次后仍然未能找到自恰解。 回想使用步骤皆是以前的所用的，马上翻看之前成功的castep文件， 12345678 13 -2.78030685E+004 -1.99686373E+000 -7.49554981E-007 898.41 &lt;-- SCF 14 -2.78030685E+004 -1.99941165E+000 4.13854537E-008 943.16 &lt;-- SCF 15 -2.78030685E+004 -2.00267847E+000 -2.65786251E-007 988.60 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF Final energy, E = -27803.06847596 eVFinal free energy (E-TS) = -27803.06847596 eV(energies not corrected for finite basis set) 几乎都是十几次得到自恰解。 找到问题所在。 迭代次数我不是设置的500 么回到 windows 版的MS，检查设置。我勒个去，Geometry Optimization 的 Max.iterations是500没错，但是Elastic Constants 的 Max.iterations还是默认的100。 还有 SCF 迭代次数可以设置。 问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。 截断能、k点、自旋、对称性等都有可能影响收敛。 没办法，只能试试看了。 后续如果解决，会详细记录。]]></content>
-      <categories>
-        <category>DFT</category>
-      </categories>
-      <tags>
-        <tag>castep</tag>
-        <tag>ms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[几个 MS 错误]]></title>
     <url>%2F2018%2F03%2F13%2Fsome-error-of-ms%2F</url>
     <content type="text"><![CDATA[记录几个 MS 的错误。 未找到基态能 在计算过程中经常遇到计算失败的情况，文件给出的警告是： 123*Warning* max. SCF cycles performed but system has not reached the groundstate. Warning: electronic minimisation did not converge when finding ground state. 和收敛有关的参数主要有能量的CUTOFF，SCF的次数，SMEAR，以及K点选取等，可以尝试一下。 SCF最大仍不收敛一般来说，MS默认的SCF次数100对于小系统是够用的，但是，原子数一多，就不一定了。 a) 首先结构的合理性，如果自建的结构偏离最低能量太大（或失配度太大），可能会难以收敛。 b) 取消一切对称性，充分驰豫晶格。 c) 有些结构本身就是亚稳态，scf的各项收敛指标如果设的太高，对于亚稳态就可能达不到如此的精度。 d) 改变收敛的条件，降低精度(能量的截断值)。 e) 增加循环次数。 f) 改变赝势。 优化不收敛增加设Max.Interations的大小 interations是定义积分精度的，相当于gaussian里的int选项；根据gauss的经验，对重原子如果不用细的积分网格，结果就不准确，特别是频率计算，可能会把正的频率算成负的频率。提高 interations的确可以提高精度，特别是对于过渡态和频率计算。 总能和文献不一致，而且多种方法都不同 很正常，只要相对值近似就可以。 在倒空间进行电子结构计算的方法中,都存在一个能量零点的取法的问题,不同的程序,取的不同。根本原因是V(G)在G=0是发散的(可以去R.T. Martin的电子结构那本书)。 castep是利用周期性,在倒空间进行电子结构计算的.我没有记错的话,Dmol3是在实空间来进行电子结构计算的.能量零点的取法就跟不同前者了。 因此在进行电子结构计算中，不要比较任何绝对能量值的大小，这样是毫无意义的，即使是同一个程序中也是这样，更不用说是两个不同的程序。 能量的相对值才具有物理意义。 部分来自该文 。 CASTEP结果错报警信息是CASTEP结果中的出错报警信息，该信息的含义如下： Warning max. SCF cycles performed but system has not reached the groundstate.已完成最大SCF循环，但体系仍未到达基态。Current total energy, E = -3470.539604785 eVCurrent free energy (E-TS) = -3470.795901720 eV(energies not corrected for finite basis set) NB est. 0K energy (E-0.5TS) = -3470.667753253 eV上述三者分别为完成最大SCF循环后（即当前）能量值。**** Warning: electronic minimisation did not converge when finding ground state.在搜寻基态过程中电子最小化并未达到收敛，]]></content>
@@ -376,8 +387,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
         <tag>linux</tag>
+        <tag>ubuntu</tag>
         <tag>mint</tag>
       </tags>
   </entry>

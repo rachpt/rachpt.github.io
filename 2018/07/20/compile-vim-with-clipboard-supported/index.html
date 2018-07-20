@@ -131,18 +131,18 @@
 
 
 
-  <meta name="description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
-<meta name="keywords" content="castep,ms">
+  <meta name="description" content="重源码编译 vim，重而支持系统粘贴板。  why&amp;quot; + Y &amp;quot; + P 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。 如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。 编译 下载源代码,https://github.com/vim/vim 使用 git git clone htt">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Materials Studio CASTEP 迭代次数设置">
-<meta property="og:url" content="http://rachpt.me/2018/03/14/ms-scf-max-iterations/index.html">
+<meta property="og:title" content="compile-vim-with-clipboard-supportes">
+<meta property="og:url" content="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
+<meta property="og:description" content="重源码编译 vim，重而支持系统粘贴板。  why&amp;quot; + Y &amp;quot; + P 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。 如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。 编译 下载源代码,https://github.com/vim/vim 使用 git git clone htt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-14T03:33:31.926Z">
+<meta property="og:updated_time" content="2018-07-20T09:22:42.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Materials Studio CASTEP 迭代次数设置">
-<meta name="twitter:description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
+<meta name="twitter:title" content="compile-vim-with-clipboard-supportes">
+<meta name="twitter:description" content="重源码编译 vim，重而支持系统粘贴板。  why&amp;quot; + Y &amp;quot; + P 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。 如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。 编译 下载源代码,https://github.com/vim/vim 使用 git git clone htt">
 
 
 
@@ -151,7 +151,7 @@
 
 
 
-  <link rel="canonical" href="http://rachpt.me/2018/03/14/ms-scf-max-iterations/"/>
+  <link rel="canonical" href="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/"/>
 
 
 
@@ -161,7 +161,7 @@
   };
 </script>
 
-  <title>Materials Studio CASTEP 迭代次数设置 | rachpt's Blog</title>
+  <title>compile-vim-with-clipboard-supportes | rachpt's Blog</title>
   
 
 
@@ -368,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://rachpt.me/2018/03/14/ms-scf-max-iterations/">
+    <link itemprop="mainEntityOfPage" href="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -385,7 +385,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Materials Studio CASTEP 迭代次数设置<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/ms-scf-max-iterations.md" class="post-edit-link" title="编辑" target="_blank">
+          <h2 class="post-title" itemprop="name headline">compile-vim-with-clipboard-supportes<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/compile-vim-with-clipboard-supported.md" class="post-edit-link" title="编辑" target="_blank">
                     <i class="fa fa-pencil"></i>
                   </a>
                 
@@ -413,9 +413,13 @@
                 
               
 
-              <time title="创建时间：2018-03-14 11:33:31" itemprop="dateCreated datePublished" datetime="2018-03-14T11:33:31+08:00">2018-03-14</time>
+              <time title="创建时间：2018-07-20 16:11:00 / 修改时间：17:22:42" itemprop="dateCreated datePublished" datetime="2018-07-20T16:11:00+08:00">2018-07-20</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -431,7 +435,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DFT/" itemprop="url" rel="index"><span itemprop="name">DFT</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
 
                 
                 
@@ -446,8 +450,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/14/ms-scf-max-iterations/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/14/ms-scf-max-iterations/" itemprop="commentCount"></span>
+                <a href="/2018/07/20/compile-vim-with-clipboard-supported/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/20/compile-vim-with-clipboard-supported/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -477,7 +481,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">999</span>
               
 
               
@@ -512,23 +516,29 @@
 
       
         <blockquote>
-<p>今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。</p>
+<p>重源码编译 vim，重而支持系统粘贴板。</p>
 </blockquote>
-<a id="more"></a>
-<h1 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Error check_elec_ground_state : electronic_minimisation of initial cell failed.</span><br><span class="line">Current trace stack:</span><br><span class="line"> check_elec_ground_state</span><br><span class="line"> castep</span><br></pre></td></tr></table></figure>
-<p>检查<code>castep</code> 文件发现下面的片段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">     99  -2.09594982E+004  6.31070540E-001   3.18129596E-006    4013.01  &lt;-- SCF</span><br><span class="line">    100  -2.09594980E+004  6.31017470E-001  -2.41328571E-006    4053.95  &lt;-- SCF</span><br><span class="line">------------------------------------------------------------------------ &lt;-- SCF</span><br><span class="line"> *Warning* max. SCF cycles performed but system has not reached the groundstate.</span><br><span class="line">  </span><br><span class="line">Current total energy, E     =  -20959.33865776     eV</span><br><span class="line">Current free energy (E-TS)  =  -20959.49797103     eV</span><br><span class="line">(energies not corrected for finite basis set)</span><br><span class="line"> .</span><br><span class="line"> .</span><br><span class="line"> .</span><br></pre></td></tr></table></figure>
-<p>意思大概是我设置的 <code>SCF</code> 迭代次数不够，100次后仍然未能找到自恰解。</p>
-<p>回想使用步骤皆是以前的所用的，马上翻看之前成功的<code>castep</code>文件，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">     13  -2.78030685E+004 -1.99686373E+000  -7.49554981E-007     898.41  &lt;-- SCF</span><br><span class="line">     14  -2.78030685E+004 -1.99941165E+000   4.13854537E-008     943.16  &lt;-- SCF</span><br><span class="line">     15  -2.78030685E+004 -2.00267847E+000  -2.65786251E-007     988.60  &lt;-- SCF</span><br><span class="line">------------------------------------------------------------------------ &lt;-- SCF</span><br><span class="line"> </span><br><span class="line">Final energy, E             =  -27803.06847596     eV</span><br><span class="line">Final free energy (E-TS)    =  -27803.06847596     eV</span><br><span class="line">(energies not corrected for finite basis set)</span><br></pre></td></tr></table></figure>
-<p>几乎都是十几次得到自恰解。</p>
-<p>找到问题所在。</p>
-<h1 id="迭代次数我不是设置的500-么"><a href="#迭代次数我不是设置的500-么" class="headerlink" title="迭代次数我不是设置的500 么"></a>迭代次数我不是设置的500 么</h1><p>回到 windows 版的MS，检查设置。我勒个去，<code>Geometry Optimization</code> 的 <code>Max.iterations</code>是500没错，但是<code>Elastic Constants</code> 的 <code>Max.iterations</code>还是默认的100。</p>
-<p>还有 SCF 迭代次数可以设置。</p>
-<p>问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。</p>
-<p>截断能、k点、自旋、对称性等都有可能影响收敛。</p>
-<p>没办法，只能试试看了。</p>
-<p>后续如果解决，会详细记录。</p>
+<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p><code>&quot; + Y</code> <code>&quot; + P</code> 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。</p>
+<p>如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗。</p>
+<h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><ol>
+<li><p>下载源代码,<br><a href="https://github.com/vim/vim" target="_blank" rel="noopener">https://github.com/vim/vim</a><br> 使用 git <code>git clone https://github.com/vim/vim.git</code></p>
+</li>
+<li><p>安装依赖<br><code>sudo apt-get install xorg-dev</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398" target="_blank" rel="noopener">参考文档</a><br><code>sudo apt-get install libncurses5-dev</code>  # <a href="https://blog.csdn.net/jdsjlzx/article/details/12883359" target="_blank" rel="noopener">参考文档</a></p>
+</li>
+<li><p>编译<br><code>cd vim</code><br><code>./configure --with-features=huge</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398" target="_blank" rel="noopener">参考文档</a><br><code>cd src/</code><br><code>make &amp;&amp; sudo make install</code></p>
+</li>
+</ol>
+<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p><code>vim --version | grep &quot;clipboard&quot;</code><br>看到 +clipboard  即是成功了。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>安装 YouCompleteMe 直接参考官方文档，先安装依赖。<br><a href="http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64" target="_blank" rel="noopener">http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64</a></p>
+<p>如果出现下面错误(一定会)：</p>
+<p><code>YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )</code><br>需要在编译 vim 时加入支持 python 的参数。<br><code>--enable-pythoninterp=yes --enable-python3interp=yes</code> # 前面的时 python2 的后面是3的。<br><a href="https://blog.csdn.net/northeastsqure/article/details/72847259" target="_blank" rel="noopener">参考文档1</a> ，<a href="https://blog.csdn.net/u012675539/article/details/51489957" target="_blank" rel="noopener">参考文档2</a>。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>vim 编译主要命令：</p>
+<ol>
+<li><code>./configure --with-features=hug --enable-pythoninterp=yes --enable-python3interp=yes</code></li>
+<li><code>cd src</code></li>
+<li><code>make &amp;&amp; sudo make install</code></li>
+</ol>
+<p>最后关于卸载以及 清理，(在源代码路径下)<br>使用 <code>make clean</code> 清理之间编译完成的；<br>使用 <code>sudo make uninstall</code> 卸载使用 make 安装的软件。</p>
 
       
     </div>
@@ -542,28 +552,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/03/31/the-gateway-of-materials-studio/" rel="bookmark">the-gateway-of-materials-studio</a></div>
+      <div class="popular-posts-title"><a href="/2018/01/22/linux-pdfreader-zathura/" rel="bookmark">Linux下的PDF阅读软件zathura</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/03/13/some-error-of-ms/" rel="bookmark">几个 MS 错误</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/01/11/install-materials-studio-on-ubuntu/" rel="bookmark">Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/03/23/CASTEP-module-in-MS/" rel="bookmark">CASTEP-module-in-MS</a></div>
+      <div class="popular-posts-title"><a href="/2017/12/31/setting-protable-program-on-linux/" rel="bookmark">Linux 免安装程序配置</a></div>
       
     </li>
   
@@ -627,7 +623,7 @@
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://rachpt.me/2018/03/14/ms-scf-max-iterations/" title="Materials Studio CASTEP 迭代次数设置">http://rachpt.me/2018/03/14/ms-scf-max-iterations/</a>
+    <a href="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/" title="compile-vim-with-clipboard-supportes">http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -640,9 +636,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/castep/" rel="tag"># castep</a>
-          
-            <a href="/tags/ms/" rel="tag"># ms</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
         </div>
       
@@ -670,8 +664,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/13/some-error-of-ms/" rel="next" title="几个 MS 错误">
-                <i class="fa fa-chevron-left"></i> 几个 MS 错误
+              <a href="/2018/07/06/adb-linux-and-mi8/" rel="next" title="adb-linux-and-mi8">
+                <i class="fa fa-chevron-left"></i> adb-linux-and-mi8
               </a>
             
           </div>
@@ -680,8 +674,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/19/sevseral-shell-scripts/" rel="prev" title="几个 shell 脚本">
-                几个 shell 脚本 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/20/ms-scf-max-iterations/" rel="prev" title="Materials Studio CASTEP 迭代次数设置">
+                Materials Studio CASTEP 迭代次数设置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -763,7 +757,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -986,7 +980,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#错误信息"><span class="nav-number">1.</span> <span class="nav-text">错误信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代次数我不是设置的500-么"><span class="nav-number">2.</span> <span class="nav-text">迭代次数我不是设置的500 么</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#why"><span class="nav-number">1.</span> <span class="nav-text">why</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译"><span class="nav-number">2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证"><span class="nav-number">3.</span> <span class="nav-text">验证</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -1027,7 +1021,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">102k</span>
+    <span title="站点总字数">103k</span>
   
 
   
@@ -1038,7 +1032,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:33</span>
+    <span title="站点阅读时长">1:34</span>
   
 </div>
 

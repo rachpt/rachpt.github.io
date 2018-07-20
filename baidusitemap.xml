@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
+    <lastmod>2018-07-20T09:22:42.440Z</lastmod>
+    <data>
+        <display>
+        <title>compile-vim-with-clipboard-supportes</title>
+        <pubTime>2018-07-20T08:11:00.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/03/05/settings-for-next-theme/</loc>
     <lastmod>2018-07-06T13:34:59.256Z</lastmod>
     <data>
@@ -697,12 +717,12 @@
 
     
   <url>
-    <loc>http://rachpt.me/2018/03/14/ms-scf-max-iterations/</loc>
+    <loc>http://rachpt.me/2018/07/20/ms-scf-max-iterations/</loc>
     <lastmod>2018-03-14T03:33:31.926Z</lastmod>
     <data>
         <display>
         <title>Materials Studio CASTEP 迭代次数设置</title>
-        <pubTime>2018-03-14T03:33:31.926Z</pubTime>
+        <pubTime>2018-07-20T09:28:21.945Z</pubTime>
         
         <tag>castep</tag>
          
@@ -970,9 +990,9 @@
         <title>Linux 免安装程序配置</title>
         <pubTime>2017-12-31T15:26:05.000Z</pubTime>
         
-        <tag>ubuntu</tag>
-         
         <tag>linux</tag>
+         
+        <tag>ubuntu</tag>
          
         <tag>mint</tag>
          
@@ -1038,6 +1058,48 @@
 
     
   <url>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>我总是很忙</title>
+        <pubTime>2017-11-09T16:39:30.000Z</pubTime>
+        
+        <tag>忙</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -1080,50 +1142,6 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>我的研究生阶段该如何度过？</title>
-        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-        <tag>规划</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
@@ -1139,28 +1157,6 @@
            
              
               <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
-    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
-    <data>
-        <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
-        
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="http://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>
@@ -1188,14 +1184,16 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
+    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.695Z</lastmod>
     <data>
         <display>
-        <title>我总是很忙</title>
-        <pubTime>2017-11-09T16:39:30.000Z</pubTime>
+        <title>我的研究生阶段该如何度过？</title>
+        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
         
         <tag>忙</tag>
+         
+        <tag>规划</tag>
          
          
            
@@ -1219,6 +1217,28 @@
            
              
               <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
+    <lastmod>2018-03-05T03:45:59.695Z</lastmod>
+    <data>
+        <display>
+        <title>搭建一个方便的多平台笔记方案</title>
+        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        
+        <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="http://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>
