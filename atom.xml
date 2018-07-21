@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-03-14T03:33:31.000Z</updated>
+  <updated>2018-07-21T13:37:00.264Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>make-qbittorrent-from-source-code</title>
+    <link href="http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/"/>
+    <id>http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/</id>
+    <published>2018-07-21T13:21:34.000Z</published>
+    <updated>2018-07-21T13:37:00.264Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。<br><a id="more"></a></p></blockquote><p>以下内容转载至 <a href="https://www.cnblogs.com/shuochen/p/8533712.html" target="_blank" rel="noopener">https://www.cnblogs.com/shuochen/p/8533712.html</a> （仅作为备份）。<br>英文原版 <a href="https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu" target="_blank" rel="noopener">https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu</a> 。</p><h1 id="一、安装依赖环境"><a href="#一、安装依赖环境" class="headerlink" title="一、安装依赖环境"></a>一、安装依赖环境</h1><h2 id="①安装一般依赖包"><a href="#①安装一般依赖包" class="headerlink" title="①安装一般依赖包"></a>①安装一般依赖包</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libboost-dev libboost-system-dev build-essential \</span><br><span class="line">     libboost-chrono-dev libboost-random-dev libssl-dev libgeoip-dev \</span><br><span class="line">     git pkg-config automake libtool</span><br></pre></td></tr></table></figure><h2 id="②安装Qt5库"><a href="#②安装Qt5库" class="headerlink" title="②安装Qt5库"></a>②安装Qt5库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install qtbase5-dev qttools5-dev-tools</span><br></pre></td></tr></table></figure><h2 id="③安装python和GeoIP数据库"><a href="#③安装python和GeoIP数据库" class="headerlink" title="③安装python和GeoIP数据库"></a>③安装python和GeoIP数据库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python geoip-database</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 二、安装Libtorrent</span></span><br><span class="line"><span class="comment">## ①下载Libtorrent包并打开</span></span><br><span class="line"></span><br><span class="line">```sh</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/arvidn/libtorrent.git</span><br><span class="line"><span class="built_in">cd</span> libtorrent</span><br></pre></td></tr></table></figure><h2 id="②选择1-0-分支编译安装"><a href="#②选择1-0-分支编译安装" class="headerlink" title="②选择1.0.*分支编译安装"></a>②选择1.0.*分支编译安装</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout RC_1_0</span><br><span class="line">./autotool.sh</span><br><span class="line">./configure --<span class="built_in">disable</span>-debug --<span class="built_in">enable</span>-encryption --prefix=/usr --with-libgeoip=system</span><br><span class="line">make clean &amp;&amp; make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure><h1 id="三、编辑安装qBittorrent"><a href="#三、编辑安装qBittorrent" class="headerlink" title="三、编辑安装qBittorrent"></a>三、编辑安装qBittorrent</h1><h2 id="①从github下载对应版本的QB安装包"><a href="#①从github下载对应版本的QB安装包" class="headerlink" title="①从github下载对应版本的QB安装包"></a>①从github下载对应版本的QB安装包</h2><p>QB历史版本下载：<a href="https://github.com/qbittorrent/qBittorrent/releases" target="_blank" rel="noopener">https://github.com/qbittorrent/qBittorrent/releases</a></p><p>如编译安装3.3.11版本的QB</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/qbittorrent/qBittorrent/archive/release-3.3.11.tar.gz</span><br><span class="line">tar -xzvf release-3.3.11.tar.gz</span><br><span class="line"><span class="built_in">cd</span> qBittorrent-release-3.3.11</span><br></pre></td></tr></table></figure><h2 id="②编译qBittorrent，需要GUI则可以取消后面的disable参数。"><a href="#②编译qBittorrent，需要GUI则可以取消后面的disable参数。" class="headerlink" title="②编译qBittorrent，需要GUI则可以取消后面的disable参数。"></a>②编译qBittorrent，需要GUI则可以取消后面的disable参数。</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr --<span class="built_in">disable</span>-gui</span><br><span class="line">make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure><p>这里编译的时候如果提示错误 缺少 zlib 运行以下命令即可</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zlib1g-dev</span><br></pre></td></tr></table></figure><h1 id="四、运行qBittorrent"><a href="#四、运行qBittorrent" class="headerlink" title="四、运行qBittorrent"></a>四、运行qBittorrent</h1><p>①初始化QB(设置中文)</p><p>运行以下命令</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qbittorrent-nox  <span class="comment"># 无 GUI</span></span><br><span class="line">qbittorrent      <span class="comment"># 有 GUI</span></span><br></pre></td></tr></table></figure><p>运行后会提示输入,输入y，然后回车即可，这时打开第③步中的地址，进入后打开设置，在WEBUI里将语言改成中文，然后Ctrl+C 结束，再次输入命令运行QB，这是刷新网页就是中文了，意思就是设置完需要重启下客户端才能使语言修改生效，其它设置类似。<br>②在后台运行qBittorrent</p><p>因为直接运行QB，退出shell窗口的话就会关闭，所以我们可以用nohup的方式运行QB</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup qbittorrent-nox &amp;</span><br></pre></td></tr></table></figure><p>这样QB就已经稳定在后台运行了，即使你关闭shell也不会结束的。<br>③访问qBittorrent的Web-UI</p><p>默认地址: <a href="http://IP地址:8080" target="_blank" rel="noopener">http://IP地址:8080</a><br>默认用户名: admin<br>默认密码: adminadmin</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Materials Studio CASTEP 迭代次数设置</title>
@@ -474,32 +497,6 @@
     
     
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几个 MS 错误</title>
-    <link href="http://rachpt.me/2018/03/13/some-error-of-ms/"/>
-    <id>http://rachpt.me/2018/03/13/some-error-of-ms/</id>
-    <published>2018-03-13T14:02:23.000Z</published>
-    <updated>2018-03-13T14:12:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>记录几个 MS 的错误。</p></blockquote><a id="more"></a><h1 id="未找到基态能"><a href="#未找到基态能" class="headerlink" title="未找到基态能"></a>未找到基态能</h1><p> 在计算过程中经常遇到计算失败的情况，文件给出的警告是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*Warning* max. SCF cycles performed but system has not reached the groundstate.</span><br><span class="line"></span><br><span class="line"> Warning: electronic minimisation did not converge when finding ground state.</span><br></pre></td></tr></table></figure><p> 和收敛有关的参数主要有能量的<code>CUTOFF</code>，<code>SCF的次数</code>，<code>SMEAR</code>，以及<code>K点选取</code>等，可以尝试一下。</p><h1 id="SCF最大仍不收敛"><a href="#SCF最大仍不收敛" class="headerlink" title="SCF最大仍不收敛"></a>SCF最大仍不收敛</h1><p>一般来说，MS默认的SCF次数100对于小系统是够用的，但是，原子数一多，就不一定了。</p><p>a) 首先结构的合理性，如果自建的结构偏离最低能量太大（或失配度太大），可能会难以收敛。</p><p>b) 取消一切对称性，充分驰豫晶格。</p><p>c) 有些结构本身就是亚稳态，scf的各项收敛指标如果设的太高，对于亚稳态就可能达不到如此的精度。</p><p>d) 改变收敛的条件，降低精度(能量的截断值)。</p><p>e) 增加循环次数。</p><p>f) 改变赝势。</p><h1 id="优化不收敛"><a href="#优化不收敛" class="headerlink" title="优化不收敛"></a>优化不收敛</h1><p>增加设Max.Interations的大小</p><p><code>interations</code>是定义积分精度的，相当于gaussian里的int选项；根据gauss的经验，对重原子如果不用细的积分网格，结果就不准确，特别是频率计算，可能会把正的频率算成负的频率。提高 interations的确可以提高精度，特别是对于过渡态和频率计算。</p><h1 id="总能和文献不一致，而且多种方法都不同"><a href="#总能和文献不一致，而且多种方法都不同" class="headerlink" title="总能和文献不一致，而且多种方法都不同"></a>总能和文献不一致，而且多种方法都不同</h1><p> 很正常，只要相对值近似就可以。</p><p>在倒空间进行电子结构计算的方法中,都存在一个能量零点的取法的问题,不同的程序,取的不同。根本原因是V(G)在G=0是发散的(可以去R.T. Martin的电子结构那本书)。</p><p>castep是利用周期性,在倒空间进行电子结构计算的.我没有记错的话,Dmol3是在实空间来进行电子结构计算的.能量零点的取法就跟不同前者了。</p><p>因此在进行电子结构计算中，不要比较任何绝对能量值的大小，这样是毫无意义的，即使是同一个程序中也是这样，更不用说是两个不同的程序。</p><p>能量的相对值才具有物理意义。</p><hr><p><a href="http://blog.sina.com.cn/s/blog_68e8ad8f01016oyg.html" target="_blank" rel="noopener">部分来自该文</a> 。</p><h1 id="CASTEP结果错报警信息"><a href="#CASTEP结果错报警信息" class="headerlink" title="CASTEP结果错报警信息"></a>CASTEP结果错报警信息</h1><p>是CASTEP结果中的出错报警信息，该信息的含义如下：</p><p><em>Warning</em> max. SCF cycles performed but system has not reached the groundstate.<br>已完成最大SCF循环，但体系仍未到达基态。<br>Current total energy, E     =  -3470.539604785     eV<br>Current free energy (E-TS)  =  -3470.795901720     eV<br>(energies not corrected for finite basis set)</p><p>NB est. 0K energy (E-0.5TS) =  -3470.667753253     eV<br>上述三者分别为完成最大SCF循环后（即当前）能量值。<br>*<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br> Warning: electronic minimisation did not converge when finding ground state.<br>在搜寻基态过程中电子最小化并未达到收敛，</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;记录几个 MS 的错误。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
-    
-    
-      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
-    
-      <category term="ms" scheme="http://rachpt.me/tags/ms/"/>
     
   </entry>
   

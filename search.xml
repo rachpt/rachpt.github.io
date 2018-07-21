@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[make-qbittorrent-from-source-code]]></title>
+    <url>%2F2018%2F07%2F21%2Fmake-qbittorrent-from-source-code%2F</url>
+    <content type="text"><![CDATA[从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。 以下内容转载至 https://www.cnblogs.com/shuochen/p/8533712.html （仅作为备份）。英文原版 https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu 。 一、安装依赖环境①安装一般依赖包123sudo apt-get install libboost-dev libboost-system-dev build-essential \ libboost-chrono-dev libboost-random-dev libssl-dev libgeoip-dev \ git pkg-config automake libtool ②安装Qt5库1sudo apt-get install qtbase5-dev qttools5-dev-tools ③安装python和GeoIP数据库12345678910sudo apt-get install python geoip-database``` # 二、安装Libtorrent## ①下载Libtorrent包并打开```shsudo git clone https://github.com/arvidn/libtorrent.gitcd libtorrent ②选择1.0.*分支编译安装12345git checkout RC_1_0./autotool.sh./configure --disable-debug --enable-encryption --prefix=/usr --with-libgeoip=systemmake clean &amp;&amp; makesudo make install 三、编辑安装qBittorrent①从github下载对应版本的QB安装包QB历史版本下载：https://github.com/qbittorrent/qBittorrent/releases 如编译安装3.3.11版本的QB 123wget https://github.com/qbittorrent/qBittorrent/archive/release-3.3.11.tar.gztar -xzvf release-3.3.11.tar.gzcd qBittorrent-release-3.3.11 ②编译qBittorrent，需要GUI则可以取消后面的disable参数。12./configure --prefix=/usr --disable-guimake &amp;&amp; sudo make install 这里编译的时候如果提示错误 缺少 zlib 运行以下命令即可 1sudo apt-get install zlib1g-dev 四、运行qBittorrent①初始化QB(设置中文) 运行以下命令 12qbittorrent-nox # 无 GUIqbittorrent # 有 GUI 运行后会提示输入,输入y，然后回车即可，这时打开第③步中的地址，进入后打开设置，在WEBUI里将语言改成中文，然后Ctrl+C 结束，再次输入命令运行QB，这是刷新网页就是中文了，意思就是设置完需要重启下客户端才能使语言修改生效，其它设置类似。②在后台运行qBittorrent 因为直接运行QB，退出shell窗口的话就会关闭，所以我们可以用nohup的方式运行QB 1nohup qbittorrent-nox &amp; 这样QB就已经稳定在后台运行了，即使你关闭shell也不会结束的。③访问qBittorrent的Web-UI 默认地址: http://IP地址:8080默认用户名: admin默认密码: adminadmin]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Materials Studio CASTEP 迭代次数设置]]></title>
     <url>%2F2018%2F07%2F20%2Fms-scf-max-iterations%2F</url>
     <content type="text"><![CDATA[今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。 错误信息1234Error check_elec_ground_state : electronic_minimisation of initial cell failed.Current trace stack: check_elec_ground_state castep 检查castep 文件发现下面的片段 1234567891011121314... 99 -2.09594982E+004 6.31070540E-001 3.18129596E-006 4013.01 &lt;-- SCF 100 -2.09594980E+004 6.31017470E-001 -2.41328571E-006 4053.95 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF *Warning* max. SCF cycles performed but system has not reached the groundstate. Current total energy, E = -20959.33865776 eVCurrent free energy (E-TS) = -20959.49797103 eV(energies not corrected for finite basis set) . . . 意思大概是我设置的 SCF 迭代次数不够，100次后仍然未能找到自恰解。 回想使用步骤皆是以前的所用的，马上翻看之前成功的castep文件， 12345678 13 -2.78030685E+004 -1.99686373E+000 -7.49554981E-007 898.41 &lt;-- SCF 14 -2.78030685E+004 -1.99941165E+000 4.13854537E-008 943.16 &lt;-- SCF 15 -2.78030685E+004 -2.00267847E+000 -2.65786251E-007 988.60 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF Final energy, E = -27803.06847596 eVFinal free energy (E-TS) = -27803.06847596 eV(energies not corrected for finite basis set) 几乎都是十几次得到自恰解。 找到问题所在。 迭代次数我不是设置的500 么回到 windows 版的MS，检查设置。我勒个去，Geometry Optimization 的 Max.iterations是500没错，但是Elastic Constants 的 Max.iterations还是默认的100。 还有 SCF 迭代次数可以设置。 问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。 截断能、k点、自旋、对称性等都有可能影响收敛。 没办法，只能试试看了。 后续如果解决，会详细记录。]]></content>
@@ -412,8 +423,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>olex2</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -654,8 +665,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>MarkDown</tag>
         <tag>笔记</tag>
+        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>
