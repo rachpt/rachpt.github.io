@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-21T13:37:00.264Z">
+<meta property="og:updated_time" content="2018-07-21T13:48:27.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="make-qbittorrent-from-source-code">
 <meta name="twitter:description" content="从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2018-07-21 21:21:34 / 修改时间：21:37:00" itemprop="dateCreated datePublished" datetime="2018-07-21T21:21:34+08:00">2018-07-21</time>
+              <time title="创建时间：2018-07-21 21:21:34 / 修改时间：21:48:27" itemprop="dateCreated datePublished" datetime="2018-07-21T21:21:34+08:00">2018-07-21</time>
             
 
             
@@ -516,9 +516,8 @@
 
       
         <blockquote>
-<p>从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。<br><a id="more"></a></p>
+<p>从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。<br><a id="more"></a><br><div class="note default"><p>以下内容转载至 <a href="https://www.cnblogs.com/shuochen/p/8533712.html" target="_blank" rel="noopener">https://www.cnblogs.com/shuochen/p/8533712.html</a> （仅作为备份）。<br>英文原版 <a href="https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu" target="_blank" rel="noopener">https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu</a> 。</p></div></p>
 </blockquote>
-<p>以下内容转载至 <a href="https://www.cnblogs.com/shuochen/p/8533712.html" target="_blank" rel="noopener">https://www.cnblogs.com/shuochen/p/8533712.html</a> （仅作为备份）。<br>英文原版 <a href="https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu" target="_blank" rel="noopener">https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu</a> 。</p>
 <h1 id="一、安装依赖环境"><a href="#一、安装依赖环境" class="headerlink" title="一、安装依赖环境"></a>一、安装依赖环境</h1><h2 id="①安装一般依赖包"><a href="#①安装一般依赖包" class="headerlink" title="①安装一般依赖包"></a>①安装一般依赖包</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libboost-dev libboost-system-dev build-essential \</span><br><span class="line">     libboost-chrono-dev libboost-random-dev libssl-dev libgeoip-dev \</span><br><span class="line">     git pkg-config automake libtool</span><br></pre></td></tr></table></figure>
 <h2 id="②安装Qt5库"><a href="#②安装Qt5库" class="headerlink" title="②安装Qt5库"></a>②安装Qt5库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install qtbase5-dev qttools5-dev-tools</span><br></pre></td></tr></table></figure>
 <h2 id="③安装python和GeoIP数据库"><a href="#③安装python和GeoIP数据库" class="headerlink" title="③安装python和GeoIP数据库"></a>③安装python和GeoIP数据库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python geoip-database</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 二、安装Libtorrent</span></span><br><span class="line"><span class="comment">## ①下载Libtorrent包并打开</span></span><br><span class="line"></span><br><span class="line">```sh</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/arvidn/libtorrent.git</span><br><span class="line"><span class="built_in">cd</span> libtorrent</span><br></pre></td></tr></table></figure>
