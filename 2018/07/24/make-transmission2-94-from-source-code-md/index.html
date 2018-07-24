@@ -131,22 +131,21 @@
 
 
 
-  <meta name="description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。">
-<meta name="keywords" content="firefox">
+  <meta name="description" content="重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。">
+<meta name="keywords" content="transmission">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Firefox 切换更新通道">
-<meta property="og:url" content="http://rachpt.me/2017/11/11/firefox-noupgrade/index.html">
+<meta property="og:title" content="make-transmission2.94-from-source-code.md">
+<meta property="og:url" content="http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code-md/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。">
+<meta property="og:description" content="重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpc8aa3uwnj20pt0ijmxw.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpc8b76pb2j20ho0ag3zm.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpc8c2bixej20ro0i4dgr.jpg">
-<meta property="og:updated_time" content="2018-04-06T11:02:01.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg">
+<meta property="og:updated_time" content="2018-07-24T03:44:54.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Firefox 切换更新通道">
-<meta name="twitter:description" content="用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fpc8aa3uwnj20pt0ijmxw.jpg">
+<meta name="twitter:title" content="make-transmission2.94-from-source-code.md">
+<meta name="twitter:description" content="重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg">
 
 
 
@@ -155,7 +154,7 @@
 
 
 
-  <link rel="canonical" href="http://rachpt.me/2017/11/11/firefox-noupgrade/"/>
+  <link rel="canonical" href="http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code-md/"/>
 
 
 
@@ -165,7 +164,7 @@
   };
 </script>
 
-  <title>Firefox 切换更新通道 | rachpt's Blog</title>
+  <title>make-transmission2.94-from-source-code.md | rachpt's Blog</title>
   
 
 
@@ -372,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://rachpt.me/2017/11/11/firefox-noupgrade/">
+    <link itemprop="mainEntityOfPage" href="http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rachpt">
@@ -389,7 +388,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Firefox 切换更新通道<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/firefox-noupgrade.md" class="post-edit-link" title="编辑" target="_blank">
+          <h2 class="post-title" itemprop="name headline">make-transmission2.94-from-source-code.md<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/make-transmission2-94-from-source-code-md.md" class="post-edit-link" title="编辑" target="_blank">
                     <i class="fa fa-pencil"></i>
                   </a>
                 
@@ -417,24 +416,12 @@
                 
               
 
-              <time title="创建时间：2017-11-11 00:04:16" itemprop="dateCreated datePublished" datetime="2017-11-11T00:04:16+08:00">2017-11-11</time>
+              <time title="创建时间：2018-07-24 10:47:46 / 修改时间：11:44:54" itemprop="dateCreated datePublished" datetime="2018-07-24T10:47:46+08:00">2018-07-24</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-04-06 19:02:01" itemprop="dateModified" datetime="2018-04-06T19:02:01+08:00">2018-04-06</time>
               
             
           </span>
@@ -451,7 +438,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
 
                 
                 
@@ -466,8 +453,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/11/firefox-noupgrade/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/11/11/firefox-noupgrade/" itemprop="commentCount"></span>
+                <a href="/2018/07/24/make-transmission2-94-from-source-code-md/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/24/make-transmission2-94-from-source-code-md/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -497,7 +484,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -511,7 +498,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:01</span>
+                <span title="阅读时长">0:02</span>
               
             </div>
           
@@ -532,27 +519,37 @@
 
       
         <blockquote>
-<p>用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。</p>
+<p>重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。</p>
 </blockquote>
 <a id="more"></a>
-<blockquote>
-<p><strong>Mozilla Firefox</strong>（简称<strong>Firefox</strong>），中文俗称<strong>火狐</strong>（<a href="https://zh.wikipedia.org/wiki/%E8%AC%80%E6%99%BA%E4%B8%AD%E5%9C%8B" target="_blank" rel="noopener">中国大陆官方</a>有使用但未注册为商标），是一个<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由及开源</a>的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" target="_blank" rel="noopener">网页浏览器</a>，由<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E6%9C%83" target="_blank" rel="noopener">Mozilla基金会</a>及其子公司<a href="https://zh.wikipedia.org/wiki/Mozilla%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener">Mozilla公司</a>开发。Firefox支持<a href="https://zh.wikipedia.org/wiki/Windows" target="_blank" rel="noopener">Windows</a>、<a href="https://zh.wikipedia.org/wiki/OS_X" target="_blank" rel="noopener">OS X</a>及<a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux</a>，其移动版支持<a href="https://zh.wikipedia.org/wiki/Android" target="_blank" rel="noopener">Android</a>及<a href="https://zh.wikipedia.org/wiki/Firefox_OS" target="_blank" rel="noopener">Firefox OS</a>，这些版本的Firefox使用<a href="https://zh.wikipedia.org/wiki/Gecko" target="_blank" rel="noopener">Gecko</a>来排版网页，Gecko是一个运行当前与预期之<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96" target="_blank" rel="noopener">网页标准</a>的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">排版引擎</a>，而在2015年发布的<a href="https://zh.wikipedia.org/wiki/Firefox_for_iOS" target="_blank" rel="noopener">Firefox for iOS</a>则非使用Gecko。</p>
-<p>截至2016年1月，Firefox全球<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" target="_blank" rel="noopener">市占率</a>为9％至16%，为全球第二流行的网页浏览器。</p>
-</blockquote>
-<p>按更新频率大致可以这么排：ESR（42周），Release（6周），Beta（约一周），Nightly（每天），ESR是挺好的，但是Fx有个致命的缺点就是当扩展安装较多后，冷启动速度慢的令人发指，至于原因网上很多这方面的科学解释。现在更新的57版对冷启动速度有巨大提升，而插件兼容性方面对我影响不大，于是将所有的esr53.4升级到了57beta版（正式版当时还是56）。<br>由于每次更新fx都会导致lastpass这个插件无法保持自动登录信息，能让fx延迟更新或者不更新吗？是有办法的。</p>
-<p>[64位版Frefox] 默认安装目录 <code>C:\Program Files\Mozilla Firefox\defaults\pref\channel-prefs.js</code> 下使用记事本（notepad）打开，将末尾部分的 <code>beta</code> 改成 <code>esr</code> 即可进入延长支持版本通道，或者<code>release</code> 进入普通发行版通道。如下图。</p>
-<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpc8aa3uwnj20pt0ijmxw.jpg" alt="pic-1"></p>
-<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpc8b76pb2j20ho0ag3zm.jpg" alt="pic-2"></p>
-<p>最后可以在设置里面禁用Firefox的自动更新。</p>
-<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpc8c2bixej20ro0i4dgr.jpg" alt="pic-3"></p>
-<hr>
-<p>文末附上 Firefox的官方FTP下载地址，再也不用担心下到中国版了……</p>
-<p><a href="http://ftp.mozilla.org/pub/firefox/releases/" target="_blank" rel="noopener">http://ftp.mozilla.org/pub/firefox/releases/</a> </p>
-<p>我收藏的旧插件集，Fx 57+ 有部分用不了了</p>
-<p><a href="https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/addons/" target="_blank" rel="noopener">https://addons.mozilla.org/zh-CN/firefox/collections/rachpt/addons/</a></p>
-<hr>
-<p>about:support 打开 配置目录</p>
-<p>将 gmpopenh264.dll，gmpopenh264.info 这两个文件覆盖安装到 \gmp-gmpopenh264\1.6 目录下 ，版本号自己更新（在info文件中）</p>
+<h1 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential automake autoconf libtool pkg-config intltool libcurl4-openssl-dev libglib2.0-dev libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/transmission/transmission/wiki/Building-Transmission#on-unix" target="_blank" rel="noopener">官方参考文档</a> 。</p>
+<h1 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h1><ol>
+<li>跳过校验<br><a href="https://github.com/superlukia/transmission-2.92_skiphashcheck/commit/56e327d1dacb5b3453954b76a6d0edd30edb7a34" target="_blank" rel="noopener">请参考这里</a>。</li>
+</ol>
+<p><a href="https://tieba.baidu.com/p/4839039900" target="_blank" rel="noopener">以及这里</a>。</p>
+<ol>
+<li>自定义 webUI 界面。</li>
+</ol>
+<p>效果如下图：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg" alt=""></p>
+<p>在工具栏上添加一个跳转到自定义路径的按钮。</p>
+<ul>
+<li>修改1：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim web/index.html</span><br><span class="line"></span><br><span class="line"># 第 50 行附近添加</span><br><span class="line"></span><br><span class="line">			&lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt;</span><br><span class="line">		+	&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">		+	&lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt;</span><br><span class="line">		+	&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">			&lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>为此需要添加一枚 home.png 图标 到 <code>web/images/home.png</code>.<br>同时修改 该文件夹 的 <code>Makefile.am</code> 和 <code>Makefile.in</code>，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.am</span><br><span class="line"></span><br><span class="line"># 改成如下</span><br><span class="line"></span><br><span class="line">datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;</span><br><span class="line">dist_data_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">  webclip-icon.png \</span><br><span class="line">  home.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.in</span><br><span class="line"></span><br><span class="line"># 大约在 365 行附近，如下修改</span><br><span class="line"></span><br><span class="line">disti\_data\_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">+  webclip-icon.png \</span><br><span class="line">+  home.png</span><br><span class="line"></span><br><span class="line">all: all-am</span><br></pre></td></tr></table></figure>
+<p>自此 自定义的 webUI 就算是好啦。</p>
+<ul>
+<li>修改2：</li>
+</ul>
+<p>摸改 401 界面，效果如下：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg" alt=""></p>
+<p>首先使用了命令 <code>cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39;</code> 查找包含 <code>&lt;h1&gt;</code> 的源代码位置。<br>结果为 <code>./libtransmission/rpc-server.c:  evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text);</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ./libtransmission/rpc-server.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约在 128 行</span></span><br><span class="line"></span><br><span class="line">  evbuffer_add_printf (body, <span class="string">"&lt;h1&gt;%d: %s&lt;/h1&gt;"</span>, code, code_text);</span><br><span class="line">  <span class="keyword">if</span> (text)</span><br><span class="line">+    evbuffer_add_printf (body, <span class="string">"%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;"</span>, text);</span><br><span class="line">  evhttp_send_reply (req, code, code_text, body);</span><br></pre></td></tr></table></figure>
+<p>修改如上，在 <code>%s</code> 后面加上了一个 a 标签。</p>
+<h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure -q &amp;&amp; make -s</span><br><span class="line"></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>安装会自动覆盖掉以前的安装版本。</p>
 
       
     </div>
@@ -566,21 +563,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/03/28/change-sidebar-width-of-firefox/" rel="bookmark">change-sidebar-width-of-firefox</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017/12/09/firefox-in-ubuntu/" rel="bookmark">Ubuntu 中的 Firefox</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017/11/03/upto-firefox-57/" rel="bookmark">顺利过度到 firefox 57</a></div>
+      <div class="popular-posts-title"><a href="/2018/03/25/transmission-settings/" rel="bookmark">transmission-settings</a></div>
       
     </li>
   
@@ -644,7 +627,7 @@
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://rachpt.me/2017/11/11/firefox-noupgrade/" title="Firefox 切换更新通道">http://rachpt.me/2017/11/11/firefox-noupgrade/</a>
+    <a href="http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code-md/" title="make-transmission2.94-from-source-code.md">http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code-md/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -657,7 +640,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/firefox/" rel="tag"># firefox</a>
+            <a href="/tags/transmission/" rel="tag"># transmission</a>
           
         </div>
       
@@ -685,8 +668,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/10/make-pdf-file-clear/" rel="next" title="照片PDF优化成矢量版">
-                <i class="fa fa-chevron-left"></i> 照片PDF优化成矢量版
+              <a href="/2018/07/21/make-qbittorrent-from-source-code/" rel="next" title="make-qbittorrent-from-source-code">
+                <i class="fa fa-chevron-left"></i> make-qbittorrent-from-source-code
               </a>
             
           </div>
@@ -694,10 +677,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/11/video-test/" rel="prev" title="第一个小视频">
-                第一个小视频 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -749,8 +728,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -982,6 +970,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编译环境"><span class="nav-number">1.</span> <span class="nav-text">编译环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#魔改"><span class="nav-number">2.</span> <span class="nav-text">魔改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译"><span class="nav-number">3.</span> <span class="nav-text">编译</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
