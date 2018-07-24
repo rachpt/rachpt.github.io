@@ -141,7 +141,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg">
-<meta property="og:updated_time" content="2018-07-24T03:47:16.364Z">
+<meta property="og:updated_time" content="2018-07-24T03:50:14.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="make-transmission2.94-from-source-code">
 <meta name="twitter:description" content="重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。">
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2018-07-24 10:47:46 / 修改时间：11:47:16" itemprop="dateCreated datePublished" datetime="2018-07-24T10:47:46+08:00">2018-07-24</time>
+              <time title="创建时间：2018-07-24 10:47:46 / 修改时间：11:50:14" itemprop="dateCreated datePublished" datetime="2018-07-24T10:47:46+08:00">2018-07-24</time>
             
 
             
@@ -522,34 +522,36 @@
 <p>重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential automake autoconf libtool pkg-config intltool libcurl4-openssl-dev libglib2.0-dev libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev</span><br></pre></td></tr></table></figure>
+<h1 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential automake \</span><br><span class="line">     autoconf libtool pkg-config intltool \</span><br><span class="line">     libcurl4-openssl-dev libglib2.0-dev \</span><br><span class="line">     libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev</span><br></pre></td></tr></table></figure>
 <p><a href="https://github.com/transmission/transmission/wiki/Building-Transmission#on-unix" target="_blank" rel="noopener">官方参考文档</a> 。</p>
 <h1 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h1><ol>
-<li>跳过校验<br><a href="https://github.com/superlukia/transmission-2.92_skiphashcheck/commit/56e327d1dacb5b3453954b76a6d0edd30edb7a34" target="_blank" rel="noopener">请参考这里</a>。</li>
-</ol>
+<li><p>跳过校验</p>
+<p><a href="https://github.com/superlukia/transmission-2.92_skiphashcheck/commit/56e327d1dacb5b3453954b76a6d0edd30edb7a34" target="_blank" rel="noopener">请参考这里</a>。</p>
 <p><a href="https://tieba.baidu.com/p/4839039900" target="_blank" rel="noopener">以及这里</a>。</p>
-<ol>
-<li>自定义 webUI 界面。</li>
-</ol>
+</li>
+<li><p>自定义 webUI 界面。</p>
 <p>效果如下图：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg" alt=""></p>
 <p>在工具栏上添加一个跳转到自定义路径的按钮。</p>
+</li>
+</ol>
 <ul>
 <li>修改1：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim web/index.html</span><br><span class="line"></span><br><span class="line"># 第 50 行附近添加</span><br><span class="line"></span><br><span class="line">			&lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt;</span><br><span class="line">		+	&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">		+	&lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt;</span><br><span class="line">		+	&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">			&lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>为此需要添加一枚 home.png 图标 到 <code>web/images/home.png</code>.<br>同时修改 该文件夹 的 <code>Makefile.am</code> 和 <code>Makefile.in</code>，如下：</p>
+<p>  为此需要添加一枚 home.png 图标 到 <code>web/images/home.png</code>.<br>  同时修改 该文件夹 的 <code>Makefile.am</code> 和 <code>Makefile.in</code>，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.am</span><br><span class="line"></span><br><span class="line"># 改成如下</span><br><span class="line"></span><br><span class="line">datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;</span><br><span class="line">dist_data_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">  webclip-icon.png \</span><br><span class="line">  home.png</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.in</span><br><span class="line"></span><br><span class="line"># 大约在 365 行附近，如下修改</span><br><span class="line"></span><br><span class="line">disti\_data\_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">+  webclip-icon.png \</span><br><span class="line">+  home.png</span><br><span class="line"></span><br><span class="line">all: all-am</span><br></pre></td></tr></table></figure>
-<p>自此 自定义的 webUI 就算是好啦。</p>
+<p>  自此 自定义的 webUI 就算是好啦。</p>
 <ul>
-<li>修改2：</li>
-</ul>
-<p>摸改 401 界面，效果如下：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg" alt=""></p>
+<li><p>修改2：</p>
+<p>魔改 401 界面，效果如下：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg" alt=""></p>
 <p>首先使用了命令 <code>cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39;</code> 查找包含 <code>&lt;h1&gt;</code> 的源代码位置。<br>结果为 <code>./libtransmission/rpc-server.c:  evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text);</code></p>
+</li>
+</ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ./libtransmission/rpc-server.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约在 128 行</span></span><br><span class="line"></span><br><span class="line">  evbuffer_add_printf (body, <span class="string">"&lt;h1&gt;%d: %s&lt;/h1&gt;"</span>, code, code_text);</span><br><span class="line">  <span class="keyword">if</span> (text)</span><br><span class="line">+    evbuffer_add_printf (body, <span class="string">"%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;"</span>, text);</span><br><span class="line">  evhttp_send_reply (req, code, code_text, body);</span><br></pre></td></tr></table></figure>
-<p>修改如上，在 <code>%s</code> 后面加上了一个 a 标签。</p>
+<p>  修改如上，在 <code>%s</code> 后面加上了一个 a 标签。</p>
 <h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure -q &amp;&amp; make -s</span><br><span class="line"></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<p>安装会自动覆盖掉以前的安装版本。</p>
+<p>  安装会自动覆盖掉以前的安装版本。</p>
 
       
     </div>
