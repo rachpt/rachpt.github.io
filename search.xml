@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[make-transmission2.94-from-source-code.md]]></title>
-    <url>%2F2018%2F07%2F24%2Fmake-transmission2-94-from-source-code-md%2F</url>
+    <title><![CDATA[make-transmission2.94-from-source-code]]></title>
+    <url>%2F2018%2F07%2F24%2Fmake-transmission2-94-from-source-code%2F</url>
     <content type="text"><![CDATA[重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。 编译环境1sudo apt-get install build-essential automake autoconf libtool pkg-config intltool libcurl4-openssl-dev libglib2.0-dev libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev 官方参考文档 。 魔改 跳过校验请参考这里。 以及这里。 自定义 webUI 界面。 效果如下图： 在工具栏上添加一个跳转到自定义路径的按钮。 修改1： 123456789vim web/index.html# 第 50 行附近添加 &lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; + &lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; &lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt; 为此需要添加一枚 home.png 图标 到 web/images/home.png.同时修改 该文件夹 的 Makefile.am 和 Makefile.in，如下： 12345678910vim web/images/Makefile.am# 改成如下datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;dist_data_DATA = \ favicon.ico \ favicon.png \ webclip-icon.png \ home.png 1234567891011vim web/images/Makefile.in# 大约在 365 行附近，如下修改disti\_data\_DATA = \ favicon.ico \ favicon.png \+ webclip-icon.png \+ home.pngall: all-am 自此 自定义的 webUI 就算是好啦。 修改2： 摸改 401 界面，效果如下： 首先使用了命令 cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39; 查找包含 &lt;h1&gt; 的源代码位置。结果为 ./libtransmission/rpc-server.c: evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text); 12345678vim ./libtransmission/rpc-server.c# 大约在 128 行 evbuffer_add_printf (body, "&lt;h1&gt;%d: %s&lt;/h1&gt;", code, code_text); if (text)+ evbuffer_add_printf (body, "%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;", text); evhttp_send_reply (req, code, code_text, body); 修改如上，在 %s 后面加上了一个 a 标签。 编译123./configure -q &amp;&amp; make -ssudo make install 安装会自动覆盖掉以前的安装版本。]]></content>
       <categories>
         <category>linux</category>
@@ -434,8 +434,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>olex2</tag>
         <tag>笔记</tag>
+        <tag>olex2</tag>
       </tags>
   </entry>
   <entry>
@@ -676,8 +676,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>MarkDown</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
