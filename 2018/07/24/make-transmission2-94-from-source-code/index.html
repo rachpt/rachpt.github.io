@@ -141,7 +141,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftks3hh5bpj20im076js1.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1ftksonthx2j20b805k0sn.jpg">
-<meta property="og:updated_time" content="2018-07-24T03:50:14.506Z">
+<meta property="og:updated_time" content="2018-07-24T03:54:46.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="make-transmission2.94-from-source-code">
 <meta name="twitter:description" content="重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。">
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2018-07-24 10:47:46 / 修改时间：11:50:14" itemprop="dateCreated datePublished" datetime="2018-07-24T10:47:46+08:00">2018-07-24</time>
+              <time title="创建时间：2018-07-24 10:47:46 / 修改时间：11:54:46" itemprop="dateCreated datePublished" datetime="2018-07-24T10:47:46+08:00">2018-07-24</time>
             
 
             
@@ -551,7 +551,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ./libtransmission/rpc-server.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约在 128 行</span></span><br><span class="line"></span><br><span class="line">  evbuffer_add_printf (body, <span class="string">"&lt;h1&gt;%d: %s&lt;/h1&gt;"</span>, code, code_text);</span><br><span class="line">  <span class="keyword">if</span> (text)</span><br><span class="line">+    evbuffer_add_printf (body, <span class="string">"%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;"</span>, text);</span><br><span class="line">  evhttp_send_reply (req, code, code_text, body);</span><br></pre></td></tr></table></figure>
 <p>  修改如上，在 <code>%s</code> 后面加上了一个 a 标签。</p>
 <h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure -q &amp;&amp; make -s</span><br><span class="line"></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<p>  安装会自动覆盖掉以前的安装版本。</p>
+<p>  安装会自动覆盖掉以前的版本。</p>
 
       
     </div>
