@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/03/02/ms-scf-max-iterations/</loc>
+    
+    <lastmod>2018-07-25T13:36:28.011Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/</loc>
     
     <lastmod>2018-07-25T13:19:07.702Z</lastmod>
@@ -278,13 +285,6 @@
     <loc>http://rachpt.me/2017/11/10/materials-studio-super/</loc>
     
     <lastmod>2018-03-14T04:12:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/07/20/ms-scf-max-iterations/</loc>
-    
-    <lastmod>2018-03-14T03:33:31.000Z</lastmod>
     
   </url>
   

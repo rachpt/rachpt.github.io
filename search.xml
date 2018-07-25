@@ -34,18 +34,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Materials Studio CASTEP 迭代次数设置]]></title>
-    <url>%2F2018%2F07%2F20%2Fms-scf-max-iterations%2F</url>
-    <content type="text"><![CDATA[今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。 错误信息1234Error check_elec_ground_state : electronic_minimisation of initial cell failed.Current trace stack: check_elec_ground_state castep 检查castep 文件发现下面的片段 1234567891011121314... 99 -2.09594982E+004 6.31070540E-001 3.18129596E-006 4013.01 &lt;-- SCF 100 -2.09594980E+004 6.31017470E-001 -2.41328571E-006 4053.95 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF *Warning* max. SCF cycles performed but system has not reached the groundstate. Current total energy, E = -20959.33865776 eVCurrent free energy (E-TS) = -20959.49797103 eV(energies not corrected for finite basis set) . . . 意思大概是我设置的 SCF 迭代次数不够，100次后仍然未能找到自恰解。 回想使用步骤皆是以前的所用的，马上翻看之前成功的castep文件， 12345678 13 -2.78030685E+004 -1.99686373E+000 -7.49554981E-007 898.41 &lt;-- SCF 14 -2.78030685E+004 -1.99941165E+000 4.13854537E-008 943.16 &lt;-- SCF 15 -2.78030685E+004 -2.00267847E+000 -2.65786251E-007 988.60 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF Final energy, E = -27803.06847596 eVFinal free energy (E-TS) = -27803.06847596 eV(energies not corrected for finite basis set) 几乎都是十几次得到自恰解。 找到问题所在。 迭代次数我不是设置的500 么回到 windows 版的MS，检查设置。我勒个去，Geometry Optimization 的 Max.iterations是500没错，但是Elastic Constants 的 Max.iterations还是默认的100。 还有 SCF 迭代次数可以设置。 问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。 截断能、k点、自旋、对称性等都有可能影响收敛。 没办法，只能试试看了。 后续如果解决，会详细记录。]]></content>
-      <categories>
-        <category>DFT</category>
-      </categories>
-      <tags>
-        <tag>castep</tag>
-        <tag>ms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[compile-vim-with-clipboard-supported]]></title>
     <url>%2F2018%2F07%2F20%2Fcompile-vim-with-clipboard-supported%2F</url>
     <content type="text"><![CDATA[从源码编译 vim，以支持使用系统粘贴板。 why&quot; + Y &quot; + P 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。 如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗? 编译 下载源代码,https://github.com/vim/vim 使用 git git clone https://github.com/vim/vim.git 安装依赖sudo apt-get install xorg-dev # 参考文档sudo apt-get install libncurses5-dev # 参考文档 编译cd vim./configure --with-features=huge # 参考文档cd src/make &amp;&amp; sudo make install 验证vim --version | grep &quot;clipboard&quot;看到 +clipboard 即是成功了。 其他安装 YouCompleteMe 直接参考官方文档，先安装依赖。http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64 如果出现下面错误(一定会)：YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )需要在编译 vim 时加入支持 python 的参数。--enable-pythoninterp=yes --enable-python3interp=yes # 前面的时 python2 的后面是3的。参考文档1 ，参考文档2。使用 checkinstall 构建 deb 包。123sudo apt install checkinstallcd ~/vimsudo checkinstall 参考文档。 图标创建图标添加到右键列表。123456789101112131415vim ~/.local/share/applications/vim.desktop [Desktop Entry]Encoding=UTF-8Name=Vim Text Editor (Console)Comment=Edit text files in a console using VimExec=vim %uTerminal=trueType=ApplicationIcon=/usr/share/pixmaps/vim.png # 此处设置图标路径 # 可以下载这个 http://pixelwhip.github.io/svg-flavors/img/logos/vim.pngCategories=Application;Utility;TextEditor;StartupNotify=trueMimeType=text/plain;NoDisplay=true 参考文档.Set vim as your default editor with update-alternatives.1234sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1sudo update-alternatives --set editor /usr/local/bin/vimsudo update-alternatives --install /usr/bin/vi vi /usr/local/bin/vim 1sudo update-alternatives --set vi /usr/local/bin/vim 总结vim 编译主要命令： ./configure --with-features=hug --enable-pythoninterp=yes --enable-python3interp=yes cd src make &amp;&amp; sudo make install 最后关于卸载以及 清理，(在源代码路径下)使用 make clean 清理之间编译完成的；使用 sudo make uninstall 卸载使用 make 安装的软件。实在不行，先 whereis vim，使用 rm -rf 删掉文件即可。]]></content>
@@ -354,6 +342,18 @@
     <content type="text"><![CDATA[设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。 产生原因之前创建过两个相同的 project。比如先建一个 project，觉得不好，删掉再建，手残有时刚刚删掉的project，就会出现这个错误。两个现有虚拟环境具有相同的名称，于是无法设置解释器。 解决办法打开 settings ，在project interpreyer 里面，show all 。 选择有红色警示符的项，删掉即可。 参考： PyCharm 2017.3 Help 。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[Materials Studio CASTEP 迭代次数设置]]></title>
+    <url>%2F2018%2F03%2F02%2Fms-scf-max-iterations%2F</url>
+    <content type="text"><![CDATA[今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。 错误信息1234Error check_elec_ground_state : electronic_minimisation of initial cell failed.Current trace stack: check_elec_ground_state castep 检查castep 文件发现下面的片段 1234567891011121314... 99 -2.09594982E+004 6.31070540E-001 3.18129596E-006 4013.01 &lt;-- SCF 100 -2.09594980E+004 6.31017470E-001 -2.41328571E-006 4053.95 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF *Warning* max. SCF cycles performed but system has not reached the groundstate. Current total energy, E = -20959.33865776 eVCurrent free energy (E-TS) = -20959.49797103 eV(energies not corrected for finite basis set) . . . 意思大概是我设置的 SCF 迭代次数不够，100次后仍然未能找到自恰解。 回想使用步骤皆是以前的所用的，马上翻看之前成功的castep文件， 12345678 13 -2.78030685E+004 -1.99686373E+000 -7.49554981E-007 898.41 &lt;-- SCF 14 -2.78030685E+004 -1.99941165E+000 4.13854537E-008 943.16 &lt;-- SCF 15 -2.78030685E+004 -2.00267847E+000 -2.65786251E-007 988.60 &lt;-- SCF------------------------------------------------------------------------ &lt;-- SCF Final energy, E = -27803.06847596 eVFinal free energy (E-TS) = -27803.06847596 eV(energies not corrected for finite basis set) 几乎都是十几次得到自恰解。 找到问题所在。 迭代次数我不是设置的500 么回到 windows 版的MS，检查设置。我勒个去，Geometry Optimization 的 Max.iterations是500没错，但是Elastic Constants 的 Max.iterations还是默认的100。 还有 SCF 迭代次数可以设置。 问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。 截断能、k点、自旋、对称性等都有可能影响收敛。 没办法，只能试试看了。 后续如果解决，会详细记录。]]></content>
+      <categories>
+        <category>DFT</category>
+      </categories>
+      <tags>
+        <tag>castep</tag>
+        <tag>ms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows 使用笔记-01]]></title>
     <url>%2F2018%2F01%2F27%2Fwindows-note-01%2F</url>
     <content type="text"><![CDATA[首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知道自己的系统是啥，和别人的有啥区别，囧）。 目前而言，可以考虑安装的windows有三个 大版本：win7,win8.1,win10。win7应该很快进入与xp一样的停止支持的状态，而win8.1真心不适合桌面平台，win10将是我最先推荐的。现在几户所有的电脑都是64位的处理器了，除非老爷机。（对于win10 右键此电脑，属性 即可看到如下所示信息页面，或则在 资源管理器 中右键点击 属性） 32位windows系统最大只支持3.6G左右的内存，如果你有4G或以上内存，请不要考虑32位系统。32位系统也有它自己的优点，小就是一个，32位系统可以节省系统安装空间30%-40%，32位系统当然是不支持64位应用程序的，同一个软件32位版与64版运行效率相当，能用64的我当然是推荐使用64的。 如果你是考虑兼容性，在win7 与win10之间无法决则，我几乎可以告诉你兼容性几乎不用考虑，除非你要使用老掉牙的旧软件，或者是某些特别偏的久久未更新的行业（小众）软件。win10 几乎支持能用到的所有软件。 如果你还是要使用win7，那么没必要非旗舰版不可，对于普通用户而言可能专业版就很不错了，一是安装体积较旗舰版小上不少，再则你永远用不到的旗舰版的功能也没必要占用你本来就不多的硬件资源。 win8.1 我们直接忽略，一是安装体积较win7、10都大上不少（是win10的1.5倍），开始屏真的不适合桌面用户，还有那厚厚的程序边框（用过win10的窄边后你会觉得8.1很丑）[我会告诉你有软件可以修改，但是还是没有win10一个像素窄]。 至于win10，如果你是变形本，比如surface之类有触控屏的笔记本，并且想体验完整的windows服务，那么pro专业版或者enterprise企业版将是你最好的选择，教育版和企业版类似。对于普通user而言pro专业版就够了。家庭版没有本地策略组，很多必要的功能没有，所有强烈建议不要使用家庭版系统（谁用谁知道：开机，尼玛，正在安装系统更新，重启，靠，更新失败，正在回滚，重启；关键是这是一个循环，以后还会这样）。 对于普通笔记本与台式机，如果你不用巨硬的uwp应用，并且不是edge浏览器的忠实粉丝（谁会用这玩意儿啊，体验太差！）。那么 windows 10 LTSB 企业长期服务支持版 将是最好的选择。推荐理由如下： 原生无应用商店哪些没卵用的东西； 无edge浏览器，有IE，不用考虑兼容性，有些网银必须这货才能用； 更新少，稳定性高（当然可以设置禁用自动更新）。LTSB目前有两个分支：ltsb 2015 和 ltsb 2016（这两个是独立维护不一样的）。推荐笔记本使用2016，台式机使用2015。理由： 2016 系统自带wifi热点（你非要用猎豹wifi，我无话可说）与护眼模式（第三方软件也可以实现），这两点笔记本比较需要。同时开始菜单较2015版有一点改变，16的更方便些。 2015 的软件兼容性可能更好，比如好用的KClock只能在2015上用，2016及其以上不行。[win + x]和2016有区别，个人觉得2015的更方便。至于你一直关心的激活，除win7外，都只能 KMS激活180天（激活软件都贴心的做了定时重新激活，所以一次激活后你就不用管了，至于软件文末给链接），系统镜像下载，推荐百度 i tell you 或则记住这个 http://msdn.itellyou.cn/ 。 点击详情，复制 ed2k 链接至百度云离线下载，然后使用工具从百度网盘下载即可得到系统镜像文件。 推荐使用U盘全新安装。win10 的系统可以直接挂载镜像复制里面的全部内容至一个格式化的U盘即可完成启动盘的制作。无需向win7一样必须使用工具刻录制作启动盘。如果你不放心，可以使用这个免费的工具 Rufus http://rufus.akeo.ie/ 。U盘格式一般使用fat32即可，其他的NTFS、exfat也行。 一本正经地系统安装开始。 开始前备份好需要的文件。如果你有固态硬盘，推荐固态硬盘不要分区（自己百度分区脑补），机械的建议不要分太多，两个不能再多了。 可能还有UEFI引导是大多数新手的困惑，UEFI引导需要配合GPT分区（如果有固态，这个是必须的！才能发挥固态的优势）。能使用UEFI则尽量使用。如果安装中发现 以前分区是MBR格式，如果无重要文件可以全盘格式化变成GPT格式分区，如果有重要分区不能格式化，找个PE系统，进去点点点几下就可以轻松转换格式，具体自己百度。 鉴于windows的运行机制，个人建议固体硬盘留给C盘做系统盘，机械硬盘一个分区用作数据存储。如果只有一个机械硬盘，要安装的软件少，则100G给C盘，其他做数据存储。让C盘的空间使用率在60%或许是比较合适的。 具体而言，不同的主板进入BIOS的方法可能不一样，大部分是使用F2 进入BIOS设置。装系统，需要关闭有个 security 啥的，允许 使用USB boot 引导 使用 UEFI，可以设置U盘的引导顺序为第一个，F10保存重启，如果不知道如何进入boot manager 的话。如果一切顺利，重启选择重USB引导启动进入安装界面，一路点点点，设置分区大小，会自动重启几下，随后系统就算是全新安装好了。如果你是个懒人，可以考虑双击setup 进行升级安装，但只能升级对应版本系统，并且升级后极有可能有一些莫名其妙的小bug，不推荐。 win10 全系列+office 激活工具（最好的激活工具）： 蓝奏云盘: https://pan.lanzou.com/i0fg1tg 度盘链接: https://pan.baidu.com/s/1mjbPqm0 密码: rach 至于后续，会有其他windows系列教程上线，敬请期待。]]></content>
@@ -445,8 +445,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>olex2</tag>
         <tag>笔记</tag>
+        <tag>olex2</tag>
       </tags>
   </entry>
   <entry>
@@ -687,8 +687,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>MarkDown</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>

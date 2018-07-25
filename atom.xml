@@ -88,32 +88,6 @@
   </entry>
   
   <entry>
-    <title>Materials Studio CASTEP 迭代次数设置</title>
-    <link href="http://rachpt.me/2018/07/20/ms-scf-max-iterations/"/>
-    <id>http://rachpt.me/2018/07/20/ms-scf-max-iterations/</id>
-    <published>2018-07-20T10:14:13.163Z</published>
-    <updated>2018-03-14T03:33:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。</p></blockquote><a id="more"></a><h1 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Error check_elec_ground_state : electronic_minimisation of initial cell failed.</span><br><span class="line">Current trace stack:</span><br><span class="line"> check_elec_ground_state</span><br><span class="line"> castep</span><br></pre></td></tr></table></figure><p>检查<code>castep</code> 文件发现下面的片段</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">     99  -2.09594982E+004  6.31070540E-001   3.18129596E-006    4013.01  &lt;-- SCF</span><br><span class="line">    100  -2.09594980E+004  6.31017470E-001  -2.41328571E-006    4053.95  &lt;-- SCF</span><br><span class="line">------------------------------------------------------------------------ &lt;-- SCF</span><br><span class="line"> *Warning* max. SCF cycles performed but system has not reached the groundstate.</span><br><span class="line">  </span><br><span class="line">Current total energy, E     =  -20959.33865776     eV</span><br><span class="line">Current free energy (E-TS)  =  -20959.49797103     eV</span><br><span class="line">(energies not corrected for finite basis set)</span><br><span class="line"> .</span><br><span class="line"> .</span><br><span class="line"> .</span><br></pre></td></tr></table></figure><p>意思大概是我设置的 <code>SCF</code> 迭代次数不够，100次后仍然未能找到自恰解。</p><p>回想使用步骤皆是以前的所用的，马上翻看之前成功的<code>castep</code>文件，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">     13  -2.78030685E+004 -1.99686373E+000  -7.49554981E-007     898.41  &lt;-- SCF</span><br><span class="line">     14  -2.78030685E+004 -1.99941165E+000   4.13854537E-008     943.16  &lt;-- SCF</span><br><span class="line">     15  -2.78030685E+004 -2.00267847E+000  -2.65786251E-007     988.60  &lt;-- SCF</span><br><span class="line">------------------------------------------------------------------------ &lt;-- SCF</span><br><span class="line"> </span><br><span class="line">Final energy, E             =  -27803.06847596     eV</span><br><span class="line">Final free energy (E-TS)    =  -27803.06847596     eV</span><br><span class="line">(energies not corrected for finite basis set)</span><br></pre></td></tr></table></figure><p>几乎都是十几次得到自恰解。</p><p>找到问题所在。</p><h1 id="迭代次数我不是设置的500-么"><a href="#迭代次数我不是设置的500-么" class="headerlink" title="迭代次数我不是设置的500 么"></a>迭代次数我不是设置的500 么</h1><p>回到 windows 版的MS，检查设置。我勒个去，<code>Geometry Optimization</code> 的 <code>Max.iterations</code>是500没错，但是<code>Elastic Constants</code> 的 <code>Max.iterations</code>还是默认的100。</p><p>还有 SCF 迭代次数可以设置。</p><p>问题有可能就在这里，提高迭代次数上线，有可能能够收敛，也有可能不能，白白浪费时间。</p><p>截断能、k点、自旋、对称性等都有可能影响收敛。</p><p>没办法，只能试试看了。</p><p>后续如果解决，会详细记录。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
-    
-    
-      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
-    
-      <category term="ms" scheme="http://rachpt.me/tags/ms/"/>
-    
-  </entry>
-  
-  <entry>
     <title>compile-vim-with-clipboard-supported</title>
     <link href="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/"/>
     <id>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</id>
@@ -497,6 +471,30 @@
     
     
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CASTEP-module-in-MS</title>
+    <link href="http://rachpt.me/2018/03/23/CASTEP-module-in-MS/"/>
+    <id>http://rachpt.me/2018/03/23/CASTEP-module-in-MS/</id>
+    <published>2018-03-23T02:56:20.000Z</published>
+    <updated>2018-03-23T03:14:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>网上找的部分 Materials Studio 关于 CASTEP 模块的使用。</p></blockquote><a id="more"></a><h1 id="生成的文件作用"><a href="#生成的文件作用" class="headerlink" title="生成的文件作用"></a>生成的文件作用</h1><p><code>.cell</code>    文件包含 坐标和晶格参数<br><code>.param</code>  文件包含 所有模拟输入参数</p><p>ms 设置 中的 Optimize cell 意思是优化晶格常数，改变 计算精度，自动优化晶包</p><p>得到的文件<br><code>.xsd</code>        最后的优化结构<br><code>.xtd</code>        轨迹文件，包含每一步的结构<br><code>.castep</code>    包含优化信息的输出文件</p><p>计算任何性质，都有 <code>.param</code> <code>.castep</code> 文件输出。</p><p>linux 使用 perl 脚本命令进行 处理</p><p>比如    <code>perl cell2poscar.pl .cell, 生成POSCAR文件</code></p><p><a href="http://muchong.com/zhuanji-322-1" target="_blank" rel="noopener">原出处</a> 。</p><h1 id="关于第一原理的一些理解："><a href="#关于第一原理的一些理解：" class="headerlink" title="关于第一原理的一些理解："></a>关于第一原理的一些理解：</h1><p>（1）第一性原理其实是包括基于密度泛函的从头算和基于Hartree-Fock自洽计算的从头算，前者以电子密度作为基本变量（霍亨伯格-科洪定理），通过求解Kohn-Sham方程，迭代自洽得到体系的基态电子密度，然后求体系的基态性质；后者则通过自洽求解Hartree-Fock方程，获得体系的波函数，求基态性质；<br>评述：K-S方程的计算水平达到了H-F水平，同时还考虑了电子间的交换关联作用。<br>（2）关于DFT中密度泛函的Functional，其实是交换关联泛函，包括LDA，GGA，杂化泛函等等。<br>一般LDA为局域密度近似，在空间某点用均匀电子气密度作为交换关联泛函的唯一变量，多数为参数化的CA-PZ方案；<br>GGA为广义梯度近似，不仅将电子密度作为交换关联泛函的变量，也考虑了密度的梯度为变量，包括PBE,PW,RPBE等方案，BLYP泛函也属于GGA；<br>此外还有一些杂化泛函，B3LYP等。<br>（3）关于赝势<br>在处理计算体系中原子的电子态时，有两种方法，一种是考虑所有电子，叫做全电子法，比如WIEN2K中的FLAPW方法(线性缀加平面波)；此外还有一种方法是只考虑价电子，而把芯电子和原子核构成离子实放在一起考虑，即赝势法，一般赝势法是选取一个截断半径，截断半径以内，波函数变化较平滑，和真实的不同，截断半径以外则和真实情况相同，而且赝势法得到的能量本征值和全电子法应该相同。<br>赝势包括模守恒和超软，模守恒较硬，一般需要较大的截断能，超软势则可以用较小的截断能即可。另外，模守恒势的散射特性和全电子相同，因此一般红外，拉曼等光谱的计算需要用模守恒势。<br>赝势的测试标准应是赝势与全电子法计算结果的匹配度，而不是赝势与实验结果的匹配度，因为和实验结果的匹配可能是偶然的。<br>（4）关于收敛测试：<br>（a）Ecut，也就是截断能，一般情况下，总能相对于不同Ecut做计算，当Ecut增大时总能变化不明显了即可；然而，在需要考虑体系应力时，还需对应力进行收敛测试，而且应力相对于Ecut的收敛要比总能更为苛刻，也就是某个截断能下总能已经收敛了，但应力未必收敛。<br>（b）K-point，即K网格，一般金属需要较大的K网格，采用超晶胞时可以选用相对较小的K网格，但实际上还是要经过测试。<br>（5）关于磁性<br>一般何时考虑自旋呢？举例子，例如BaTiO3中，Ba、Ti和O分别为+2，+4和-2价，离子全部为各个轨道满壳层的结构，就不必考虑自旋了；对于BaMnO3中，由于Mn+3价时d轨道还有电子，但未满，因此需考虑Mn的自旋，至于Ba和O则不必考虑。其实设定自旋就是给定一个原子磁矩的初始值，只在刚开始计算时作为初始值使用，具体的可参照磁性物理。<br>（6）关于几何优化<br>包括很多种了，比如晶格常数和原子位置同时优化，只优化原子位置，只优化晶格常数，还有晶格常数和原子位置分开优化等等。<br>在PRL一篇文章中见到过只优化原子位置，晶格常数用实验值的例子（PRL 100, 186402 (2008)）；也见到过晶格常数先优化，之后固定晶格常数优化原子位置的情况；更多的情况则是Full geometry optimization。<br>一般情况下，也有不优化几何结构直接计算电子结构的，但是对于缺陷形成能的计算则往往要优化。<br>（7）关于软件<br>软件大致分为基于平面波的软件，如CASTEP、PWSCF和ABINIT等等，计算量大概和体系原子数目的三次方相关；还有基于原子轨道线性组合的软件(LCAO)，比如openmx，siesta，dmol等，计算量和体系原子数目相关，一般可模拟较多原子数目的体系。 </p><p>参考文献：<br><em>Designing meaningful density functional theory calculations in materials science—a primer</em></p><p>赝势</p><p>晶包内原子超过30个时，或者晶包内有许多空洞的地方，使用 <code>real-space</code> 效率更高。</p><p><a href="https://wenku.baidu.com/view/cfd6d12e360cba1aa911daa6.html" target="_blank" rel="noopener">出处</a> 。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;网上找的部分 Materials Studio 关于 CASTEP 模块的使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
+    
+    
+      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
     
   </entry>
   
