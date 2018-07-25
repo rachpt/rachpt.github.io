@@ -2,16 +2,6 @@
 <search>
   <entry>
     <title><![CDATA[run-matlab-in-a-terminal]]></title>
-    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-3%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[run-matlab-in-a-terminal]]></title>
-    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-2%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[run-matlab-in-a-terminal]]></title>
     <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal%2F</url>
     <content type="text"><![CDATA[直接在 termianl 中运行 matlab，输入命令，执行脚本。 matlab 绝对是一个超级强大的 脚本工具，当然不仅仅是。对于使用 linux 日常来说，程序提供 cli，就意味着可以集成并协同工作。在一个 shell 脚本种一个程序(命令)只做一件事，程序的输出作为另一个程序的输入，配合 Linux 的管道机制，一切皆有可能。Keep calm and open a terminal. 安装使用 mount 先挂载 dvd1,图形界面直接双击挂载。一定要在挂载路径之外 使用 sudo install后面按提示弹出 dvd1,挂载 dvd2. 安装路径 建议软件默认位置，选择创建 /usr/local/bin/matlab。 激活hust 买了正版授权，注意一个学号只能授权一台设备一个版本，可以取消已经授权了的设备。 终端运行打开 terminal， matlab -help 可以看到帮助文档。 使用 matlab -nodesktop 在 terminal 中运行 matlab，但是会闪过 matlab 的版权信息UI。 使用 matlab -nojvm 关闭 matlab 的 java 虚拟机，所有与 GUI 相关的都用不了，不会有图形界面。 使用 matlab -nosplash 关闭版权信息页面。 使用 matlab -nodesktop -nosplash -r script/PATH 运行 m 脚本，(不要 .m 后缀)。 使用 alias: 123vim ~/.bashrcalias matlab='matlab -nojvm -nodesktop -nosplash' 退出 使用 quit 或者 exit。]]></content>
       <categories>
@@ -20,11 +10,6 @@
       <tags>
         <tag>matlab</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[run-matlab-in-a-terminal]]></title>
-    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-1%2F</url>
-    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[make-transmission2.94-from-source-code]]></title>
@@ -460,8 +445,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>olex2</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -702,8 +687,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>MarkDown</tag>
         <tag>笔记</tag>
+        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>
