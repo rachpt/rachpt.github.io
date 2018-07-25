@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-07-25T13:19:07.702Z</updated>
+  <updated>2018-07-25T15:19:44.402Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>compile-nginx-1.14</title>
+    <link href="http://rachpt.me/2018/07/25/compile-nginx-1-14/"/>
+    <id>http://rachpt.me/2018/07/25/compile-nginx-1-14/</id>
+    <published>2018-07-25T14:58:31.000Z</published>
+    <updated>2018-07-25T15:19:44.402Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>魔改编译安装 nginx。</p></blockquote><a id="more"></a><h1 id="要做啥"><a href="#要做啥" class="headerlink" title="要做啥"></a>要做啥</h1><p>如图所示：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftmi6tdbu4j20bu06n746.jpg" alt=""></p><p>希望将 nginx 默认的 错误页面自定义加入一个 返回的超链接。</p><h1 id="改源码"><a href="#改源码" class="headerlink" title="改源码"></a>改源码</h1><ol><li><p>下载源码，<br><a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br>选择 Stable version，    nginx-1.14.0。</p></li><li><p>修改源码：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">vim nginx-1.14.0/src/http/ngx_http_special_response.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约 109 行开始</span></span><br><span class="line"></span><br><span class="line">static char ngx_http_error_401_page[] =</span><br><span class="line"><span class="string">"&lt;html&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;401 Authorization Required&lt;/title&gt;&lt;/head&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;body bgcolor=\"white\"&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h1&gt;401 Authorization Required&lt;/h1&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">static char ngx_http_error_402_page[] =</span><br><span class="line"><span class="string">"&lt;html&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;402 Payment Required&lt;/title&gt;&lt;/head&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;body bgcolor=\"white\"&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h1&gt;402 Payment Required&lt;/h1&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">static char ngx_http_error_403_page[] =</span><br><span class="line"><span class="string">"&lt;html&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;body bgcolor=\"white\"&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line"><span class="string">"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;"</span> CRLF</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure></li></ol><p>按自己需求修改，其中，包含中文不要指定 utf-8 编码。</p><h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nginx-1.14.0</span><br><span class="line"></span><br><span class="line">./configure --with-select_module --with-poll_module \</span><br><span class="line">--with-threads --with-file-aio --with-http_ssl_module \</span><br><span class="line">--with-http_v2_module --with-http_realip_module \</span><br><span class="line">--with-http_addition_module --with-http_xslt_module \</span><br><span class="line">--with-http_xslt_module --with-http_image_filter_module \</span><br><span class="line">--with-http_image_filter_module --with-http_geoip_module \</span><br><span class="line">--with-http_geoip_module --with-http_sub_module \</span><br><span class="line">--with-http_dav_module --with-http_flv_module \</span><br><span class="line">--with-http_mp4_module --with-http_gunzip_module \</span><br><span class="line">--with-http_gzip_static_module --with-http_auth_request_module \</span><br><span class="line">--with-http_random_index_module --with-http_secure_link_module \</span><br><span class="line">--with-http_degradation_module --with-http_slice_module \</span><br><span class="line">--with-http_stub_status_module --with-http_perl_module \</span><br><span class="line">--with-mail --with-mail_ssl_module --with-stream --with-stream \</span><br><span class="line">--with-stream_ssl_module --with-google_perftools_module \</span><br><span class="line">--with-cpp_test_module --with-pcre --with-libatomic \</span><br><span class="line">--prefix=/usr/<span class="built_in">local</span>/nginx --sbin-path=/usr/sbin/nginx \</span><br><span class="line">--conf-path=/etc/nginx/nginx.conf --error-log-path=/var/<span class="built_in">log</span>/nginx/error.log \</span><br><span class="line">--http-log-path=/var/<span class="built_in">log</span>/nginx/access.log \</span><br><span class="line">--pid-path=/var/run/nginx/nginx.pid --lock-path=/var/lock/nginx.lock</span><br><span class="line"></span><br><span class="line">make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure><p>各个模块具体用处，请参看以下文章。</p><p><a href="https://www.cnblogs.com/dtiove/p/5924385.html" target="_blank" rel="noopener">参考文档1</a>，<a href="https://blog.csdn.net/likelxl/article/details/789167050" target="_blank" rel="noopener">参考文档2</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;魔改编译安装 nginx。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="nginx" scheme="http://rachpt.me/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>run-matlab-in-a-terminal</title>
@@ -471,30 +495,6 @@
     
     
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CASTEP-module-in-MS</title>
-    <link href="http://rachpt.me/2018/03/23/CASTEP-module-in-MS/"/>
-    <id>http://rachpt.me/2018/03/23/CASTEP-module-in-MS/</id>
-    <published>2018-03-23T02:56:20.000Z</published>
-    <updated>2018-03-23T03:14:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>网上找的部分 Materials Studio 关于 CASTEP 模块的使用。</p></blockquote><a id="more"></a><h1 id="生成的文件作用"><a href="#生成的文件作用" class="headerlink" title="生成的文件作用"></a>生成的文件作用</h1><p><code>.cell</code>    文件包含 坐标和晶格参数<br><code>.param</code>  文件包含 所有模拟输入参数</p><p>ms 设置 中的 Optimize cell 意思是优化晶格常数，改变 计算精度，自动优化晶包</p><p>得到的文件<br><code>.xsd</code>        最后的优化结构<br><code>.xtd</code>        轨迹文件，包含每一步的结构<br><code>.castep</code>    包含优化信息的输出文件</p><p>计算任何性质，都有 <code>.param</code> <code>.castep</code> 文件输出。</p><p>linux 使用 perl 脚本命令进行 处理</p><p>比如    <code>perl cell2poscar.pl .cell, 生成POSCAR文件</code></p><p><a href="http://muchong.com/zhuanji-322-1" target="_blank" rel="noopener">原出处</a> 。</p><h1 id="关于第一原理的一些理解："><a href="#关于第一原理的一些理解：" class="headerlink" title="关于第一原理的一些理解："></a>关于第一原理的一些理解：</h1><p>（1）第一性原理其实是包括基于密度泛函的从头算和基于Hartree-Fock自洽计算的从头算，前者以电子密度作为基本变量（霍亨伯格-科洪定理），通过求解Kohn-Sham方程，迭代自洽得到体系的基态电子密度，然后求体系的基态性质；后者则通过自洽求解Hartree-Fock方程，获得体系的波函数，求基态性质；<br>评述：K-S方程的计算水平达到了H-F水平，同时还考虑了电子间的交换关联作用。<br>（2）关于DFT中密度泛函的Functional，其实是交换关联泛函，包括LDA，GGA，杂化泛函等等。<br>一般LDA为局域密度近似，在空间某点用均匀电子气密度作为交换关联泛函的唯一变量，多数为参数化的CA-PZ方案；<br>GGA为广义梯度近似，不仅将电子密度作为交换关联泛函的变量，也考虑了密度的梯度为变量，包括PBE,PW,RPBE等方案，BLYP泛函也属于GGA；<br>此外还有一些杂化泛函，B3LYP等。<br>（3）关于赝势<br>在处理计算体系中原子的电子态时，有两种方法，一种是考虑所有电子，叫做全电子法，比如WIEN2K中的FLAPW方法(线性缀加平面波)；此外还有一种方法是只考虑价电子，而把芯电子和原子核构成离子实放在一起考虑，即赝势法，一般赝势法是选取一个截断半径，截断半径以内，波函数变化较平滑，和真实的不同，截断半径以外则和真实情况相同，而且赝势法得到的能量本征值和全电子法应该相同。<br>赝势包括模守恒和超软，模守恒较硬，一般需要较大的截断能，超软势则可以用较小的截断能即可。另外，模守恒势的散射特性和全电子相同，因此一般红外，拉曼等光谱的计算需要用模守恒势。<br>赝势的测试标准应是赝势与全电子法计算结果的匹配度，而不是赝势与实验结果的匹配度，因为和实验结果的匹配可能是偶然的。<br>（4）关于收敛测试：<br>（a）Ecut，也就是截断能，一般情况下，总能相对于不同Ecut做计算，当Ecut增大时总能变化不明显了即可；然而，在需要考虑体系应力时，还需对应力进行收敛测试，而且应力相对于Ecut的收敛要比总能更为苛刻，也就是某个截断能下总能已经收敛了，但应力未必收敛。<br>（b）K-point，即K网格，一般金属需要较大的K网格，采用超晶胞时可以选用相对较小的K网格，但实际上还是要经过测试。<br>（5）关于磁性<br>一般何时考虑自旋呢？举例子，例如BaTiO3中，Ba、Ti和O分别为+2，+4和-2价，离子全部为各个轨道满壳层的结构，就不必考虑自旋了；对于BaMnO3中，由于Mn+3价时d轨道还有电子，但未满，因此需考虑Mn的自旋，至于Ba和O则不必考虑。其实设定自旋就是给定一个原子磁矩的初始值，只在刚开始计算时作为初始值使用，具体的可参照磁性物理。<br>（6）关于几何优化<br>包括很多种了，比如晶格常数和原子位置同时优化，只优化原子位置，只优化晶格常数，还有晶格常数和原子位置分开优化等等。<br>在PRL一篇文章中见到过只优化原子位置，晶格常数用实验值的例子（PRL 100, 186402 (2008)）；也见到过晶格常数先优化，之后固定晶格常数优化原子位置的情况；更多的情况则是Full geometry optimization。<br>一般情况下，也有不优化几何结构直接计算电子结构的，但是对于缺陷形成能的计算则往往要优化。<br>（7）关于软件<br>软件大致分为基于平面波的软件，如CASTEP、PWSCF和ABINIT等等，计算量大概和体系原子数目的三次方相关；还有基于原子轨道线性组合的软件(LCAO)，比如openmx，siesta，dmol等，计算量和体系原子数目相关，一般可模拟较多原子数目的体系。 </p><p>参考文献：<br><em>Designing meaningful density functional theory calculations in materials science—a primer</em></p><p>赝势</p><p>晶包内原子超过30个时，或者晶包内有许多空洞的地方，使用 <code>real-space</code> 效率更高。</p><p><a href="https://wenku.baidu.com/view/cfd6d12e360cba1aa911daa6.html" target="_blank" rel="noopener">出处</a> 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;网上找的部分 Materials Studio 关于 CASTEP 模块的使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
-    
-    
-      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
     
   </entry>
   
