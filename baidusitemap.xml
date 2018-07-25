@@ -1008,9 +1008,9 @@
         <title>Olex2 软件使用笔记</title>
         <pubTime>2017-12-14T14:30:23.000Z</pubTime>
         
-        <tag>olex2</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>olex2</tag>
          
          
            
@@ -1030,9 +1030,9 @@
         <title>Linux 免安装程序配置</title>
         <pubTime>2017-12-31T15:26:05.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>ubuntu</tag>
+         
+        <tag>linux</tag>
          
         <tag>mint</tag>
          
@@ -1098,21 +1098,17 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
         
-        <tag>课件</tag>
-         
-        <tag>高亮</tag>
-         
          
            
              
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -1140,21 +1136,19 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        <title>张维为：中国信心</title>
+        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
         
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
+        <tag>视频</tag>
          
          
            
              
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+              <breadCrumb title="视频" url="http://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
           
         </display>
     </data>
@@ -1169,9 +1163,9 @@
         <title>搭建一个方便的多平台笔记方案</title>
         <pubTime>2017-11-09T16:52:35.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -1204,19 +1198,43 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>张维为：中国信心</title>
-        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
+        <title>高等量子力学_打印版笔记</title>
+        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
         
-        <tag>视频</tag>
+        <tag>课件</tag>
+         
+        <tag>高亮</tag>
          
          
            
              
-              <breadCrumb title="视频" url="http://rachpt.me/categories/%E8%A7%86%E9%A2%91/"/>
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -1239,24 +1257,6 @@
            
              
               <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
