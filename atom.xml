@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-07-24T04:41:07.653Z</updated>
+  <updated>2018-07-25T12:40:56.678Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>run-matlab-in-a-terminal</title>
+    <link href="http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-3/"/>
+    <id>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-3/</id>
+    <published>2018-07-25T12:40:56.000Z</published>
+    <updated>2018-07-25T12:40:56.678Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>run-matlab-in-a-terminal</title>
+    <link href="http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-2/"/>
+    <id>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-2/</id>
+    <published>2018-07-25T12:40:26.000Z</published>
+    <updated>2018-07-25T12:40:26.010Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>run-matlab-in-a-terminal</title>
+    <link href="http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/"/>
+    <id>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/</id>
+    <published>2018-07-25T12:39:59.000Z</published>
+    <updated>2018-07-25T13:19:07.702Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>直接在 termianl 中运行 matlab，输入命令，执行脚本。</p></blockquote><a id="more"></a><p>matlab 绝对是一个超级强大的 脚本工具，当然不仅仅是。对于使用 linux 日常来说，程序提供 cli，就意味着可以集成并协同工作。在一个 shell  脚本种一个程序(命令)只做一件事，程序的输出作为另一个程序的输入，配合 Linux 的管道机制，一切皆有可能。<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1ftmeutjlz7j20em0ixwgk.jpg" alt="Keep calm and open a terminal."><br><blockquote class="blockquote-center"><p>Keep calm and open a terminal.</p></blockquote></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>使用 mount 先挂载 dvd1,图形界面直接双击挂载。<br><strong>一定要在挂载路径之外 使用 <code>sudo install</code></strong><br>后面按提示弹出 dvd1,挂载 dvd2.<br> 安装路径 建议软件默认位置，选择创建 <code>/usr/local/bin/matlab</code>。</p><h1 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h1><p>hust 买了正版授权，注意一个学号只能授权一台设备一个版本，可以取消已经授权了的设备。</p><h1 id="终端运行"><a href="#终端运行" class="headerlink" title="终端运行"></a>终端运行</h1><p>打开 terminal， <code>matlab -help</code></p><p>可以看到帮助文档。</p><p>使用 <code>matlab -nodesktop</code> 在 terminal 中运行 matlab，但是会闪过 matlab 的版权信息UI。</p><p>使用 <code>matlab -nojvm</code> 关闭 matlab 的 java 虚拟机，所有与 GUI 相关的都用不了，不会有图形界面。</p><p>使用 <code>matlab -nosplash</code> 关闭版权信息页面。</p><p>使用 <code>matlab -nodesktop -nosplash -r script/PATH</code> 运行 m 脚本，(不要 .m 后缀)。</p><p>使用 alias:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> matlab=<span class="string">'matlab -nojvm -nodesktop -nosplash'</span></span><br></pre></td></tr></table></figure><p>退出 使用 <code>quit</code> 或者 <code>exit</code>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;直接在 termianl 中运行 matlab，输入命令，执行脚本。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="matlab" scheme="http://rachpt.me/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>run-matlab-in-a-terminal</title>
+    <link href="http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-1/"/>
+    <id>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal-1/</id>
+    <published>2018-07-25T12:33:46.000Z</published>
+    <updated>2018-07-25T12:33:46.199Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>make-transmission2.94-from-source-code</title>
@@ -402,101 +492,6 @@
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
     
       <category term="pt" scheme="http://rachpt.me/tags/pt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>change-sidebar-width-of-firefox</title>
-    <link href="http://rachpt.me/2018/03/28/change-sidebar-width-of-firefox/"/>
-    <id>http://rachpt.me/2018/03/28/change-sidebar-width-of-firefox/</id>
-    <published>2018-03-28T13:12:24.000Z</published>
-    <updated>2018-03-28T14:11:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。</p></blockquote><a id="more"></a><h1 id="配置文件路径"><a href="#配置文件路径" class="headerlink" title="配置文件路径"></a>配置文件路径</h1><p>在 firfox 地址栏输入 <code>about:profiles</code> ，找到配置文件路径。如下图。</p><p><img src="https://ww4.sinaimg.cn/large/675bda05ly1fpsvjnovh4j20rx0kd40e.jpg" alt="pic"></p><p>在 Root Directory 中创建 <code>chrome</code> 文件夹，然后在其中新建一个名为 <code>userChrome.css</code> 的 <code>css</code> 文件。</p><h1 id="CSS-文件"><a href="#CSS-文件" class="headerlink" title="CSS 文件"></a>CSS 文件</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar-box</span>,<span class="selector-id">#sidebar</span>,<span class="selector-id">#sidebar-header</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">300px</span> <span class="meta">!important</span>;</span><br><span class="line">   <span class="attribute">min-width</span>: <span class="number">50px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>重启 firefox 生效，效果 如上图。</p><p><a href="https://www.howtogeek.com/209320/how-to-set-up-and-use-multiple-profiles-user-accounts-in-firefox/" target="_blank" rel="noopener">参考内容1</a>，<a href="https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/" target="_blank" rel="noopener">内容2</a>，<a href="https://bbs.kafan.cn/forum.php?mod=viewthread&amp;tid=1692356&amp;page=1#pid30582934" target="_blank" rel="noopener">内容3</a> 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="firefox" scheme="http://rachpt.me/tags/firefox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>transmission-settings</title>
-    <link href="http://rachpt.me/2018/03/25/transmission-settings/"/>
-    <id>http://rachpt.me/2018/03/25/transmission-settings/</id>
-    <published>2018-03-25T12:51:06.000Z</published>
-    <updated>2018-05-15T06:27:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>之前不会设置 transmission ，习惯了 ut 的点点点，觉得很是不好用，对其 json 的配置文件很不友好的形式感到恶心，不过现在有了更多的 linux 命令行与 shell 脚本知识后，再看 transmission，真心佩服如此灵活的配置。什么 qBittorrent，deluge 什么的，一边去，看我 transmission。<br>这里记录一些 配置心得。<br><a id="more"></a></p></blockquote><p>transmission 有好几个版本，带有用户形图界面 GUI 的 GTK+、QT，完整命令行的 cli，以及守护进程的 daemon。<br>其中 daemon版没有任何 GUI界面，需要一个例外的软件管理它控制它，remote 或者 WebGUI。</p><p>下面说的是 daemon 版的设置，对其他的也是有效的。只是 <code>settings.json</code> 的位置读一样。</p><h1 id="rpc"><a href="#rpc" class="headerlink" title="rpc"></a>rpc</h1><p>rpc 可以理解为 WEBGUI 控制的相关设置。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&quot;rpc-authentication-required&quot;: false,</span><br><span class="line"># 是否需要用户名与密码验证，是全局设置</span><br><span class="line">&quot;rpc-bind-address&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line"># 黑名单，全局性的</span><br><span class="line">&quot;rpc-enabled&quot;: true,</span><br><span class="line"># 是否开启 WebGUI，开启其他才有效</span><br><span class="line">&quot;rpc-host-whitelist&quot;: &quot;*example.com&quot;,</span><br><span class="line"># 在有密码验证的时候，host名单，默认 localhost 和所有 ip 地址在其中</span><br><span class="line">&quot;rpc-host-whitelist-enabled&quot;: true,</span><br><span class="line"># 是否开启 host 白名单</span><br><span class="line">&quot;rpc-password&quot;: &quot;×××&quot;,</span><br><span class="line"># 密码，保存后自动转化成加密态</span><br><span class="line">&quot;rpc-port&quot;: 9091,</span><br><span class="line"># 端口，默认9091,ip + : + 端口号，才能访问 tr</span><br><span class="line">&quot;rpc-url&quot;: &quot;/transmission/&quot;,</span><br><span class="line"># 路径名，显示在端口后面，默认即可</span><br><span class="line">&quot;rpc-username&quot;: &quot;××&quot;,</span><br><span class="line"># 用于认证的有户名</span><br><span class="line">&quot;rpc-whitelist&quot;: &quot;127.0.0.1,10.42.0.*&quot;,</span><br><span class="line"># 全局白名单，只有 ip 在其中的客户机才能访问，可以使用通配符</span><br><span class="line"># 这个与 需不需要 用户名与密码验证无关</span><br><span class="line">&quot;rpc-whitelist-enabled&quot;: true,</span><br><span class="line"># 是否开启 白名单访问，除非你只在一个固定的 ip (段)上管理，否则不要开启</span><br></pre></td></tr></table></figure><p><a href="https://github.com/transmission/transmission/wiki/Editing-Configuration-Files#rpc" target="_blank" rel="noopener">参考文档</a> 。</p><h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;script-torrent-done-enabled&quot;: true,</span><br><span class="line"># 每一个种子完成后 执行脚本 开关</span><br><span class="line">&quot;script-torrent-done-filename&quot;: &quot;/home/transmission/auto&quot;,</span><br><span class="line"># 执行的脚本路径，使用 全路径</span><br></pre></td></tr></table></figure><p>可以 使用的变量</p><pre><code>TR_APP_VERSIONTR_TIME_LOCALTIMETR_TORRENT_DIRTR_TORRENT_HASHTR_TORRENT_IDTR_TORRENT_NAME </code></pre><p><a href="https://trac.transmissionbt.com/browser/trunk/extras/send-email-when-torrent-done.sh" target="_blank" rel="noopener">一个例子</a> ,</p><p><a href="https://trac.transmissionbt.com/wiki/Scripts#Script" target="_blank" rel="noopener">参考文档</a> 。</p><p>其他暂时没什么说的，都能百度到，或者看官方文档搞定。</p><hr><p>2018-05-15  更新</p><h1 id="制作种子"><a href="#制作种子" class="headerlink" title="制作种子"></a>制作种子</h1><p>需要安装 <code>transmission-create</code> ，<a href="https://linux.die.net/man/1/transmission-create" target="_blank" rel="noopener">web版帮助文档</a>。</p><p>使用命令：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-create -p -o /path/out.torrent -s 16384 -t https://example.com/announce.php -c <span class="string">'made by Linux'</span> /path/something/</span><br></pre></td></tr></table></figure><p><code>-p</code> 表示私密种子， <code>-o</code> 设置输出路径，<code>-s</code> 设置分块大小，单位<code>KiB</code> ，默认 2M，<code>-t</code> 设置tracker，<code>-c</code> 添加评论，最后的文件或者路径即是需要制作种子的源文件。</p><h1 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h1><p>使用<code>transmission-remote</code> 管理tr，<a href="https://linux.die.net/man/1/transmission-remote" target="_blank" rel="noopener">web版帮助文档</a>。</p><p>具体应用可以参考<a href="https://github.com/rachpt/shell-scripts/blob/master/auto_delete_torrentfile.sh" target="_blank" rel="noopener">这里</a>。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;之前不会设置 transmission ，习惯了 ut 的点点点，觉得很是不好用，对其 json 的配置文件很不友好的形式感到恶心，不过现在有了更多的 linux 命令行与 shell 脚本知识后，再看 transmission，真心佩服如此灵活的配置。什么 qBittorrent，deluge 什么的，一边去，看我 transmission。&lt;br&gt;这里记录一些 配置心得。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="transmission" scheme="http://rachpt.me/tags/transmission/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>notes-for-shell-scripting-bible</title>
-    <link href="http://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/"/>
-    <id>http://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/</id>
-    <published>2018-03-23T13:23:22.000Z</published>
-    <updated>2018-04-02T11:02:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。</p></blockquote><a id="more"></a><p>看到哪儿就就记到哪，没有规律可循。</p><h1 id="cron-时间表"><a href="#cron-时间表" class="headerlink" title="cron 时间表"></a>cron 时间表</h1><p>全称 <code>cron table</code> ，*  通配符，dayofweek 可以使用 三字母格式（mon, tue, wed, thu, fri,  sat, sun）</p><p>对应<code>0-6</code> ，0 为 sun。</p><p>每一月最后一天执行脚本的一种方式：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00 12 * * * <span class="keyword">if</span> [ `date +%d -d tomorrow` = 01 ] ; <span class="keyword">then</span> ; COMMAND</span><br></pre></td></tr></table></figure><p>crontab -l    列出所有定时任务。</p><p>crontab -e    编辑用户自己的时间表，文件在 <code>/var/spool/cron/</code> 目录下。</p><p>对于不要求使用精确时间的任务，可以在 <code>/etc/cron.*ly</code> 添加脚本。</p><p>hourly，monthly，daily。意如其名，复制到里面即可。</p><p>cron 惟一的问题是假定你 7x24 小时开机。</p><p>anacron 可以执行错过了的 cron 任务。</p><p>cron 时间戳文件在 <code>/var/spool/anacron</code> 下，作业表在 <code>/etc/anacrontab</code>  文件。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0    2    *    *    6</span><br><span class="line">*    *    *    *    *    *</span><br><span class="line">-    -    -    -    -    -</span><br><span class="line">|    |    |    |    |    |</span><br><span class="line">|    |    |    |    |    + year [optional]</span><br><span class="line">|    |    |    |    +----- day of week (0 - 7) (Sunday=0 or 7)</span><br><span class="line">|    |    |    +---------- month (1 - 12)</span><br><span class="line">|    |    +--------------- day of month (1 - 31)</span><br><span class="line">|    +-------------------- hour (0 - 23)</span><br><span class="line">+------------------------- min (0 - 59)</span><br></pre></td></tr></table></figure><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpyim8n1ovj20f20cit8w.jpg" alt="pic"></p><p><a href="http://www.atool.org/crontab.php" target="_blank" rel="noopener">在线验证 corntab 表达式</a> 。</p><h1 id="开机运行脚本"><a href="#开机运行脚本" class="headerlink" title="开机运行脚本"></a>开机运行脚本</h1><p>ubuntu 发行版默认开机运行级别 2 ，如果想改，需要自己创建 <code>/etc/inittab</code>文件。</p><p>0，关机；1 ，单用户模式；6 ，关机。2-5 ubuntu 不区分，red hat 区分。</p><p>不同发行版使用的 开机脚本(upstart script)路径不同，如</p><p><code>/etc/rc#.d</code></p><p><code>/etc/init.d</code></p><p><code>/etc/init.d/rc.d</code></p><p>定义自己的</p><p><code>/etc/initio.d/rc.local</code>  dabian 发行版</p><p><code>/etc/rc.local</code>    ubuntn 发行版</p><p>如果使用脚本，需要使用全路径名。</p><h1 id="任务优先级"><a href="#任务优先级" class="headerlink" title="任务优先级"></a>任务优先级</h1><p>使用 <code>nice</code> 与 <code>renice</code> 命令修改优先级。值  -20  –  20 ，越大优先级越小。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nice -d 10 ./test.sh</span><br><span class="line"></span><br><span class="line">renice 12 -p 进程号</span><br></pre></td></tr></table></figure><p>普通用户只能降低优先级，root 用户（或者 sudo）可以随意。</p><h1 id="进程状态-S"><a href="#进程状态-S" class="headerlink" title="进程状态 S"></a>进程状态 S</h1><table><thead><tr><th style="text-align:center">符号</th><th style="text-align:center">意义</th></tr></thead><tbody><tr><td style="text-align:center">D</td><td style="text-align:center">可中断的休眠状态</td></tr><tr><td style="text-align:center">R</td><td style="text-align:center">运行状态</td></tr><tr><td style="text-align:center">S</td><td style="text-align:center">休眠状态</td></tr><tr><td style="text-align:center">T</td><td style="text-align:center">跟踪状态或停止状态</td></tr><tr><td style="text-align:center">Z</td><td style="text-align:center">僵化状态</td></tr></tbody></table><h1 id="模式空间与保持空间"><a href="#模式空间与保持空间" class="headerlink" title="模式空间与保持空间"></a>模式空间与保持空间</h1><p>一个经典案例，使用模式空间与保持空间实现反序。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'&#123;1!G ; h ; %p &#125;'</span> filepath</span><br></pre></td></tr></table></figure><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">操作</th></tr></thead><tbody><tr><td style="text-align:center">h</td><td style="text-align:center">模式空间 复制 到保持空间</td></tr><tr><td style="text-align:center">H</td><td style="text-align:center">模式 附加 到 保持</td></tr><tr><td style="text-align:center">g</td><td style="text-align:center">保持 复制到 模式</td></tr><tr><td style="text-align:center">G</td><td style="text-align:center">保持 附加到 模式</td></tr><tr><td style="text-align:center">x</td><td style="text-align:center">二者交换</td></tr></tbody></table><p><code>！</code> negate 排除命令。排除末尾行，<strong>\$!</strong> <em>N</em>  ….</p><h1 id="and-符号"><a href="#and-符号" class="headerlink" title="and 符号"></a>and 符号</h1><p>使用<code>&amp;</code>符号 代替 <code>sed</code> 匹配的内容。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"The cat sleeps in his hat"</span> | sed <span class="string">'s/.at/"&amp;"/g'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">The <span class="string">"cat"</span> sleeps <span class="keyword">in</span> his <span class="string">"hat"</span></span><br></pre></td></tr></table></figure><p>上例中可以使用 子字符模块 实现，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"That furry cat is pretty, taht furry hat is pretty"</span> | sed <span class="string">'s/hurry \(.at\)/\1/'</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">That cat is pretty, taht hat is pretty</span><br></pre></td></tr></table></figure><p><code>\1</code> 替换第一个模块，<code>\2</code> 替换第二个，以此类推。</p><h1 id="加倍行间距"><a href="#加倍行间距" class="headerlink" title="加倍行间距"></a>加倍行间距</h1><p>一个简单的命令，加倍行间距。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'$!G'</span> datafile</span><br></pre></td></tr></table></figure><p>保持空间 在启动sed的时候默认只有一行空行。</p><p>但是有一个缺点，如果原文件中已经有些许空行，则会出现空行不均。</p><p>改进方法。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'/^$/d;$!G'</span> datafile</span><br></pre></td></tr></table></figure><p>先删除空行，然后加倍行。如果空行中有空格，需要例外匹配。</p><h1 id="添加行号"><a href="#添加行号" class="headerlink" title="添加行号"></a>添加行号</h1><p>简单的方法。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'='</span> datafile</span><br></pre></td></tr></table></figure><p>但是 行号 与行不在同一行。改进。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'='</span> datafile | sed <span class="string">'N; S/\n/ /'</span></span><br></pre></td></tr></table></figure><p>说明，N 同时处理两行，将其中的 \n 换成 空格。</p><h1 id="打印末尾几行"><a href="#打印末尾几行" class="headerlink" title="打印末尾几行"></a>打印末尾几行</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">rachpt@pc ~/desktop $ sed <span class="string">'&#123;</span></span><br><span class="line"><span class="string">&gt; :start</span></span><br><span class="line"><span class="string">&gt; $q</span></span><br><span class="line"><span class="string">&gt; N</span></span><br><span class="line"><span class="string">&gt; 11,$D</span></span><br><span class="line"><span class="string">&gt; b start</span></span><br><span class="line"><span class="string">&gt; &#125;'</span> ms_castep.param</span><br><span class="line"><span class="comment"># 结果如下</span></span><br><span class="line">geom_method : BFGS</span><br><span class="line">fixed_npw : <span class="literal">false</span></span><br><span class="line">geom_modulus_est :      500.000000000000000  GPa</span><br><span class="line">calculate_ELF : <span class="literal">false</span></span><br><span class="line">calculate_stress : <span class="literal">true</span></span><br><span class="line">popn_calculate : <span class="literal">true</span></span><br><span class="line">calculate_hirshfeld : <span class="literal">true</span></span><br><span class="line">calculate_densdiff : <span class="literal">false</span></span><br><span class="line">popn_bond_cutoff :        3.000000000000000</span><br><span class="line">pdos_calculate_weights : <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>\$q 末行退出 b 跳转的循环，D 只输出模式空间中的第一行。</p><h1 id="选择性删除空行"><a href="#选择性删除空行" class="headerlink" title="选择性删除空行"></a>选择性删除空行</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">rachpt@pc ~/desktop $ sed <span class="string">'/./,/^$/!d'</span> <span class="built_in">test</span></span><br><span class="line"><span class="comment"># 结果如下</span></span><br><span class="line">This is a header line</span><br><span class="line"></span><br><span class="line">line 2</span><br><span class="line">line 3</span><br><span class="line"></span><br><span class="line">line 4</span><br><span class="line"></span><br><span class="line">end of file</span><br><span class="line">rachpt@pc ~/desktop $</span><br></pre></td></tr></table></figure><p><code>/./,/^$/</code> 匹配 任意字符行可空行区间。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CASTEP-module-in-MS</title>
-    <link href="http://rachpt.me/2018/03/23/CASTEP-module-in-MS/"/>
-    <id>http://rachpt.me/2018/03/23/CASTEP-module-in-MS/</id>
-    <published>2018-03-23T02:56:20.000Z</published>
-    <updated>2018-03-23T03:14:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>网上找的部分 Materials Studio 关于 CASTEP 模块的使用。</p></blockquote><a id="more"></a><h1 id="生成的文件作用"><a href="#生成的文件作用" class="headerlink" title="生成的文件作用"></a>生成的文件作用</h1><p><code>.cell</code>    文件包含 坐标和晶格参数<br><code>.param</code>  文件包含 所有模拟输入参数</p><p>ms 设置 中的 Optimize cell 意思是优化晶格常数，改变 计算精度，自动优化晶包</p><p>得到的文件<br><code>.xsd</code>        最后的优化结构<br><code>.xtd</code>        轨迹文件，包含每一步的结构<br><code>.castep</code>    包含优化信息的输出文件</p><p>计算任何性质，都有 <code>.param</code> <code>.castep</code> 文件输出。</p><p>linux 使用 perl 脚本命令进行 处理</p><p>比如    <code>perl cell2poscar.pl .cell, 生成POSCAR文件</code></p><p><a href="http://muchong.com/zhuanji-322-1" target="_blank" rel="noopener">原出处</a> 。</p><h1 id="关于第一原理的一些理解："><a href="#关于第一原理的一些理解：" class="headerlink" title="关于第一原理的一些理解："></a>关于第一原理的一些理解：</h1><p>（1）第一性原理其实是包括基于密度泛函的从头算和基于Hartree-Fock自洽计算的从头算，前者以电子密度作为基本变量（霍亨伯格-科洪定理），通过求解Kohn-Sham方程，迭代自洽得到体系的基态电子密度，然后求体系的基态性质；后者则通过自洽求解Hartree-Fock方程，获得体系的波函数，求基态性质；<br>评述：K-S方程的计算水平达到了H-F水平，同时还考虑了电子间的交换关联作用。<br>（2）关于DFT中密度泛函的Functional，其实是交换关联泛函，包括LDA，GGA，杂化泛函等等。<br>一般LDA为局域密度近似，在空间某点用均匀电子气密度作为交换关联泛函的唯一变量，多数为参数化的CA-PZ方案；<br>GGA为广义梯度近似，不仅将电子密度作为交换关联泛函的变量，也考虑了密度的梯度为变量，包括PBE,PW,RPBE等方案，BLYP泛函也属于GGA；<br>此外还有一些杂化泛函，B3LYP等。<br>（3）关于赝势<br>在处理计算体系中原子的电子态时，有两种方法，一种是考虑所有电子，叫做全电子法，比如WIEN2K中的FLAPW方法(线性缀加平面波)；此外还有一种方法是只考虑价电子，而把芯电子和原子核构成离子实放在一起考虑，即赝势法，一般赝势法是选取一个截断半径，截断半径以内，波函数变化较平滑，和真实的不同，截断半径以外则和真实情况相同，而且赝势法得到的能量本征值和全电子法应该相同。<br>赝势包括模守恒和超软，模守恒较硬，一般需要较大的截断能，超软势则可以用较小的截断能即可。另外，模守恒势的散射特性和全电子相同，因此一般红外，拉曼等光谱的计算需要用模守恒势。<br>赝势的测试标准应是赝势与全电子法计算结果的匹配度，而不是赝势与实验结果的匹配度，因为和实验结果的匹配可能是偶然的。<br>（4）关于收敛测试：<br>（a）Ecut，也就是截断能，一般情况下，总能相对于不同Ecut做计算，当Ecut增大时总能变化不明显了即可；然而，在需要考虑体系应力时，还需对应力进行收敛测试，而且应力相对于Ecut的收敛要比总能更为苛刻，也就是某个截断能下总能已经收敛了，但应力未必收敛。<br>（b）K-point，即K网格，一般金属需要较大的K网格，采用超晶胞时可以选用相对较小的K网格，但实际上还是要经过测试。<br>（5）关于磁性<br>一般何时考虑自旋呢？举例子，例如BaTiO3中，Ba、Ti和O分别为+2，+4和-2价，离子全部为各个轨道满壳层的结构，就不必考虑自旋了；对于BaMnO3中，由于Mn+3价时d轨道还有电子，但未满，因此需考虑Mn的自旋，至于Ba和O则不必考虑。其实设定自旋就是给定一个原子磁矩的初始值，只在刚开始计算时作为初始值使用，具体的可参照磁性物理。<br>（6）关于几何优化<br>包括很多种了，比如晶格常数和原子位置同时优化，只优化原子位置，只优化晶格常数，还有晶格常数和原子位置分开优化等等。<br>在PRL一篇文章中见到过只优化原子位置，晶格常数用实验值的例子（PRL 100, 186402 (2008)）；也见到过晶格常数先优化，之后固定晶格常数优化原子位置的情况；更多的情况则是Full geometry optimization。<br>一般情况下，也有不优化几何结构直接计算电子结构的，但是对于缺陷形成能的计算则往往要优化。<br>（7）关于软件<br>软件大致分为基于平面波的软件，如CASTEP、PWSCF和ABINIT等等，计算量大概和体系原子数目的三次方相关；还有基于原子轨道线性组合的软件(LCAO)，比如openmx，siesta，dmol等，计算量和体系原子数目相关，一般可模拟较多原子数目的体系。 </p><p>参考文献：<br><em>Designing meaningful density functional theory calculations in materials science—a primer</em></p><p>赝势</p><p>晶包内原子超过30个时，或者晶包内有许多空洞的地方，使用 <code>real-space</code> 效率更高。</p><p><a href="https://wenku.baidu.com/view/cfd6d12e360cba1aa911daa6.html" target="_blank" rel="noopener">出处</a> 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;网上找的部分 Materials Studio 关于 CASTEP 模块的使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
-    
-    
-      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
     
   </entry>
   

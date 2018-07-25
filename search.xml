@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[run-matlab-in-a-terminal]]></title>
+    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-3%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[run-matlab-in-a-terminal]]></title>
+    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-2%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[run-matlab-in-a-terminal]]></title>
+    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal%2F</url>
+    <content type="text"><![CDATA[直接在 termianl 中运行 matlab，输入命令，执行脚本。 matlab 绝对是一个超级强大的 脚本工具，当然不仅仅是。对于使用 linux 日常来说，程序提供 cli，就意味着可以集成并协同工作。在一个 shell 脚本种一个程序(命令)只做一件事，程序的输出作为另一个程序的输入，配合 Linux 的管道机制，一切皆有可能。Keep calm and open a terminal. 安装使用 mount 先挂载 dvd1,图形界面直接双击挂载。一定要在挂载路径之外 使用 sudo install后面按提示弹出 dvd1,挂载 dvd2. 安装路径 建议软件默认位置，选择创建 /usr/local/bin/matlab。 激活hust 买了正版授权，注意一个学号只能授权一台设备一个版本，可以取消已经授权了的设备。 终端运行打开 terminal， matlab -help 可以看到帮助文档。 使用 matlab -nodesktop 在 terminal 中运行 matlab，但是会闪过 matlab 的版权信息UI。 使用 matlab -nojvm 关闭 matlab 的 java 虚拟机，所有与 GUI 相关的都用不了，不会有图形界面。 使用 matlab -nosplash 关闭版权信息页面。 使用 matlab -nodesktop -nosplash -r script/PATH 运行 m 脚本，(不要 .m 后缀)。 使用 alias: 123vim ~/.bashrcalias matlab='matlab -nojvm -nodesktop -nosplash' 退出 使用 quit 或者 exit。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[run-matlab-in-a-terminal]]></title>
+    <url>%2F2018%2F07%2F25%2Frun-matlab-in-a-terminal-1%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[make-transmission2.94-from-source-code]]></title>
     <url>%2F2018%2F07%2F24%2Fmake-transmission2-94-from-source-code%2F</url>
     <content type="text"><![CDATA[重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。 编译环境1234sudo apt-get install build-essential automake \ autoconf libtool pkg-config intltool \ libcurl4-openssl-dev libglib2.0-dev \ libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev 官方参考文档 。 魔改 跳过校验 请参考这里。 以及这里。 自定义 webUI 界面。 效果如下图： 在工具栏上添加一个跳转到自定义路径的按钮。 修改1： 123456789vim web/index.html# 第 50 行附近添加 &lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; + &lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; &lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt; 为此需要添加一枚 home.png 图标 到 web/images/home.png. 同时修改 该文件夹 的 Makefile.am 和 Makefile.in，如下： 12345678910vim web/images/Makefile.am# 改成如下datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;dist_data_DATA = \ favicon.ico \ favicon.png \ webclip-icon.png \ home.png 1234567891011vim web/images/Makefile.in# 大约在 365 行附近，如下修改disti\_data\_DATA = \ favicon.ico \ favicon.png \+ webclip-icon.png \+ home.pngall: all-am 自此 自定义的 webUI 就算是好啦。 修改2： 魔改 401 界面，效果如下： 首先使用了命令 cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39; 查找包含 &lt;h1&gt; 的源代码位置。结果为 ./libtransmission/rpc-server.c: evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text); 12345678vim ./libtransmission/rpc-server.c# 大约在 128 行 evbuffer_add_printf (body, "&lt;h1&gt;%d: %s&lt;/h1&gt;", code, code_text); if (text)+ evbuffer_add_printf (body, "%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;", text); evhttp_send_reply (req, code, code_text, body); 修改如上，在 %s 后面加上了一个 a 标签。 编译123./configure -q &amp;&amp; make -ssudo make install 安装会自动覆盖掉以前的版本。 详见：ihttps://github.com/rachpt/transmission-skiphashcheck-mod-webUI]]></content>
