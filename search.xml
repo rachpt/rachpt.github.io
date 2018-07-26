@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[use-expect-to-ssh-and-solve-a-problem]]></title>
+    <url>%2F2018%2F07%2F26%2Fuse-expect-to-ssh-and-solve-a-problem%2F</url>
+    <content type="text"><![CDATA[使用 expect 实现一个简单命来使用 ssh 连上远程主机，并解决一个恼火的问题。 正常的远程连接主机的方法是ssh user@ip -p port，根据提示输入密码，很是繁琐。expect 能过实现交互式的脚本命令。 脚本expect 一般需要自己额外安装，ubuntu为例： 1234567891011121314151617sudo apt-get install expect# 创建脚本vim auto_ssh.sh#!/usr/bin/expect -fset timeout 10 # 脚本超时时间spawn ssh rachpt@115.156.156.156expect "rachpt@115.156.156.156's password: "send "mypassword\r" # 密码expect "rachpt@pc:*" # 远程主机名 pcsend "clear\r" # 清屏interact # 退出脚本，控制交给用户 12345vim ~/.bashrc# 添加一个别名alias as='/path/auto_ssh.sh' 之前一直用这个脚本，开始时很是爽，只需 as 一下，就自动连接。 但是我不得不忍受下面的情形： 连上后如果改变 terminal 大小，远程的大小不会随着变。 后来发现不是我一个人遇到这问题。 解决使用下面的脚本代替： 123456789101112131415161718#!/usr/bin/expect -f#trap sigwinch spawnedtrap &#123; set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)&#125; WINCHset timeout 10spawn ssh rachpt@115.156.215.11expect "rachpt@115.156.215.11's password: "send "1784\r"expect "rachpt@pc:*"send "clear\r"interact 原因是没有传输窗口改变信号，加一个 trap在前面即可。 参考文档1，文档2，文档3。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>expect</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[compile-nginx-1.14]]></title>
     <url>%2F2018%2F07%2F25%2Fcompile-nginx-1-14%2F</url>
     <content type="text"><![CDATA[魔改编译安装 nginx。 要做啥如图所示： 希望将 nginx 默认的 错误页面自定义加入一个 返回的超链接。 改源码 下载源码，http://nginx.org/en/download.html选择 Stable version， nginx-1.14.0。 修改源码： 12345678910111213141516171819202122232425262728293031vim nginx-1.14.0/src/http/ngx_http_special_response.c# 大约 109 行开始static char ngx_http_error_401_page[] ="&lt;html&gt;" CRLF"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;401 Authorization Required&lt;/title&gt;&lt;/head&gt;" CRLF"&lt;body bgcolor=\"white\"&gt;" CRLF"&lt;center&gt;&lt;h1&gt;401 Authorization Required&lt;/h1&gt;&lt;/center&gt;" CRLF"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;" CRLF;static char ngx_http_error_402_page[] ="&lt;html&gt;" CRLF"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;402 Payment Required&lt;/title&gt;&lt;/head&gt;" CRLF"&lt;body bgcolor=\"white\"&gt;" CRLF"&lt;center&gt;&lt;h1&gt;402 Payment Required&lt;/h1&gt;&lt;/center&gt;" CRLF"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;" CRLF;static char ngx_http_error_403_page[] ="&lt;html&gt;" CRLF"&lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;" CRLF"&lt;body bgcolor=\"white\"&gt;" CRLF"&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;" CRLF"&lt;center&gt;&lt;h2&gt;&lt;a href=\"/index.html\"&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;" CRLF... 按自己需求修改，其中，包含中文不要指定 utf-8 编码。 编译123456789101112131415161718192021222324cd nginx-1.14.0./configure --with-select_module --with-poll_module \--with-threads --with-file-aio --with-http_ssl_module \--with-http_v2_module --with-http_realip_module \--with-http_addition_module --with-http_xslt_module \--with-http_xslt_module --with-http_image_filter_module \--with-http_image_filter_module --with-http_geoip_module \--with-http_geoip_module --with-http_sub_module \--with-http_dav_module --with-http_flv_module \--with-http_mp4_module --with-http_gunzip_module \--with-http_gzip_static_module --with-http_auth_request_module \--with-http_random_index_module --with-http_secure_link_module \--with-http_degradation_module --with-http_slice_module \--with-http_stub_status_module --with-http_perl_module \--with-mail --with-mail_ssl_module --with-stream --with-stream \--with-stream_ssl_module --with-google_perftools_module \--with-cpp_test_module --with-pcre --with-libatomic \--prefix=/usr/local/nginx --sbin-path=/usr/sbin/nginx \--conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log \--http-log-path=/var/log/nginx/access.log \--pid-path=/var/run/nginx/nginx.pid --lock-path=/var/lock/nginx.lockmake &amp;&amp; sudo make install 各个模块具体用处，请参看以下文章。 参考文档1，参考文档2。]]></content>
@@ -431,8 +443,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>ubuntu</tag>
+        <tag>linux</tag>
         <tag>mint</tag>
       </tags>
   </entry>
@@ -456,8 +468,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>olex2</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -698,8 +710,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>MarkDown</tag>
         <tag>笔记</tag>
+        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>
