@@ -1092,9 +1092,9 @@
         <title>Linux 免安装程序配置</title>
         <pubTime>2017-12-31T15:26:05.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>ubuntu</tag>
+         
+        <tag>linux</tag>
          
         <tag>mint</tag>
          
@@ -1160,13 +1160,15 @@
 
     
   <url>
-    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        <title>我总是很忙</title>
+        <pubTime>2017-11-09T16:39:30.000Z</pubTime>
         
+        <tag>忙</tag>
+         
          
            
              
@@ -1193,6 +1195,26 @@
            
              
               <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>京东预售商品加入购物车</title>
+        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
+        
+        <tag>京东</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1264,6 +1286,24 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1286,26 +1326,6 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>我总是很忙</title>
-        <pubTime>2017-11-09T16:39:30.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1316,26 +1336,6 @@
         <tag>IPV6</tag>
          
         <tag>YouTube</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>京东预售商品加入购物车</title>
-        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
-        
-        <tag>京东</tag>
          
          
            
