@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/07/25/compile-nginx-1-14/</loc>
+    <lastmod>2018-07-27T11:28:56.248Z</lastmod>
+    <data>
+        <display>
+        <title>compile-nginx-1.14</title>
+        <pubTime>2018-07-25T14:58:31.000Z</pubTime>
+        
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/</loc>
     <lastmod>2018-07-27T05:43:50.267Z</lastmod>
     <data>
@@ -34,26 +54,6 @@
         <tag>ssh</tag>
          
         <tag>expect</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/07/25/compile-nginx-1-14/</loc>
-    <lastmod>2018-07-25T15:19:44.402Z</lastmod>
-    <data>
-        <display>
-        <title>compile-nginx-1.14</title>
-        <pubTime>2018-07-25T14:58:31.000Z</pubTime>
-        
-        <tag>nginx</tag>
          
          
            
