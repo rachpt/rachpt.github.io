@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://rachpt.me/2017/11/30/flexget-for-ut/</loc>
+    <lastmod>2018-07-27T13:26:40.766Z</lastmod>
+    <data>
+        <display>
+        <title>使用FlexGet订阅下载Torrent</title>
+        <pubTime>2017-11-30T14:21:05.000Z</pubTime>
+        
+        <tag>pt</tag>
+         
+        <tag>flexget</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/07/25/compile-nginx-1-14/</loc>
     <lastmod>2018-07-27T11:28:56.248Z</lastmod>
     <data>
@@ -767,28 +789,6 @@
         <pubTime>2017-11-03T12:17:56.000Z</pubTime>
         
         <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/30/flexget-for-ut/</loc>
-    <lastmod>2018-03-14T04:35:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用FlexGet订阅下载Torrent</title>
-        <pubTime>2017-11-30T14:21:05.000Z</pubTime>
-        
-        <tag>pt</tag>
-         
-        <tag>flexget</tag>
          
          
            
