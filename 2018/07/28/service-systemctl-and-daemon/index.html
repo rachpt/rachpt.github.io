@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-28T05:28:08.037Z">
+<meta property="og:updated_time" content="2018-07-28T05:33:56.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="service-systemctl-and-daemon">
 <meta name="twitter:description" content="前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2018-07-28 00:43:38 / 修改时间：13:28:08" itemprop="dateCreated datePublished" datetime="2018-07-28T00:43:38+08:00">2018-07-28</time>
+              <time title="创建时间：2018-07-28 00:43:38 / 修改时间：13:33:56" itemprop="dateCreated datePublished" datetime="2018-07-28T00:43:38+08:00">2018-07-28</time>
             
 
             
@@ -550,8 +550,8 @@
 <p>记得加执行权限。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-rc.d flexget defaults</span><br></pre></td></tr></table></figure>
 <p>建立 <code>flexget.service</code> 文件。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo vim /etc/systemd/system/flexget.service </span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=Flexget Daemon</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=rachpt</span><br><span class="line">Type=simple</span><br><span class="line">WorkingDirectory=/home/rachpt/.config/flexget</span><br><span class="line">ExecStart=/usr/<span class="built_in">local</span>/bin/flexget daemon start</span><br><span class="line">ExecStop=/usr/<span class="built_in">local</span>/bin/flexget daemon stop</span><br><span class="line">ExecReload=/usr/<span class="built_in">local</span>/bin/flexget daemon reload</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-<p>其他和前面一样，不在重复。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/systemd/system/flexget.service </span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=Flexget Daemon</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=rachpt</span><br><span class="line">Type=simple</span><br><span class="line">WorkingDirectory=/home/rachpt/.config/flexget</span><br><span class="line">ExecStart=/usr/<span class="built_in">local</span>/bin/flexget daemon start</span><br><span class="line">ExecStop=/usr/<span class="built_in">local</span>/bin/flexget daemon stop</span><br><span class="line">ExecReload=/usr/<span class="built_in">local</span>/bin/flexget daemon reload</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>其他和前面一样，不再重复。</p>
 <p>使用 <code>pidtree</code> 可以看到所有进程的父进程。</p>
 
       
@@ -1022,7 +1022,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">132k</span>
+    <span title="站点总字数">133k</span>
   
 
   

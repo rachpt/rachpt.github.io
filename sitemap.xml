@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
+    
+    <lastmod>2018-07-28T14:43:29.176Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/07/28/service-systemctl-and-daemon/</loc>
     
-    <lastmod>2018-07-28T05:28:08.037Z</lastmod>
+    <lastmod>2018-07-28T05:33:56.362Z</lastmod>
     
   </url>
   
@@ -110,13 +117,6 @@
     <loc>http://rachpt.me/2018/06/05/install-CAJViewer-on-Linux/</loc>
     
     <lastmod>2018-06-05T12:14:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
-    
-    <lastmod>2018-05-16T13:08:56.000Z</lastmod>
     
   </url>
   
