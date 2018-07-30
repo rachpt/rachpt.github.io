@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
+    
+    <lastmod>2018-07-30T08:54:18.622Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
     
     <lastmod>2018-07-28T14:43:29.176Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://rachpt.me/notes/index.html</loc>
     
     <lastmod>2018-07-21T04:24:20.734Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
-    
-    <lastmod>2018-07-21T04:05:55.425Z</lastmod>
     
   </url>
   
@@ -415,27 +415,6 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
@@ -443,14 +422,7 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
@@ -464,6 +436,27 @@
   </url>
   
   <url>
+    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
@@ -471,7 +464,14 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
