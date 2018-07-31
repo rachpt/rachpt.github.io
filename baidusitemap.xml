@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
+    <lastmod>2018-07-31T08:32:24.626Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 学习笔记</title>
+        <pubTime>2017-12-18T02:41:04.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
     <lastmod>2018-07-30T09:13:56.248Z</lastmod>
     <data>
@@ -1180,6 +1200,92 @@
 
     
   <url>
+    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>京东预售商品加入购物车</title>
+        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
+        
+        <tag>京东</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>教育网IPV6下载YouTube视频</title>
+        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
+        
+        <tag>IPV6</tag>
+         
+        <tag>YouTube</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>高等量子力学_打印版笔记</title>
+        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高亮</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1224,28 +1330,6 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高亮</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1259,88 +1343,6 @@
            
              
               <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>京东预售商品加入购物车</title>
-        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
-        
-        <tag>京东</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>教育网IPV6下载YouTube视频</title>
-        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
-        
-        <tag>IPV6</tag>
-         
-        <tag>YouTube</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1368,6 +1370,24 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/03/03/my-new-blog/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>新博客地址</title>
+        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
     <lastmod>2018-03-03T03:52:51.000Z</lastmod>
     <data>
@@ -1383,27 +1403,4 @@
 
     
     
-    
-  <url>
-    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
-    <lastmod>2018-02-28T02:20:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 学习笔记</title>
-        <pubTime>2017-12-18T02:41:04.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
-          
-             
-              <breadCrumb title="学习" url="http://rachpt.me/categories/linux/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>

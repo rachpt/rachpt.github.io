@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
+    
+    <lastmod>2018-07-31T08:32:24.626Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
     
     <lastmod>2018-07-30T09:13:56.248Z</lastmod>
@@ -422,6 +429,13 @@
   </url>
   
   <url>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
@@ -443,13 +457,6 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
@@ -464,7 +471,7 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
@@ -495,13 +502,6 @@
     <loc>http://rachpt.me/tags/index.html</loc>
     
     <lastmod>2018-03-01T07:23:27.643Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
-    
-    <lastmod>2018-02-28T02:20:43.000Z</lastmod>
     
   </url>
   
