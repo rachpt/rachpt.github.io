@@ -91,9 +91,9 @@
         <title>使用FlexGet订阅下载Torrent</title>
         <pubTime>2017-11-30T14:21:05.000Z</pubTime>
         
-        <tag>pt</tag>
-         
         <tag>flexget</tag>
+         
+        <tag>pt</tag>
          
          
            
@@ -1200,21 +1200,21 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
+    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>教育网IPV6下载YouTube视频</title>
-        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
+        <title>我的研究生阶段该如何度过？</title>
+        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
         
-        <tag>IPV6</tag>
+        <tag>忙</tag>
          
-        <tag>YouTube</tag>
+        <tag>规划</tag>
          
          
            
              
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -1262,19 +1262,43 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>京东预售商品加入购物车</title>
-        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
+        <title>高等统计物理_打印版笔记</title>
+        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
         
-        <tag>京东</tag>
+        <tag>课件</tag>
+         
+        <tag>高统</tag>
          
          
            
              
-              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>高等量子力学_打印版笔记</title>
+        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
+        
+        <tag>课件</tag>
+         
+        <tag>高亮</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -1302,21 +1326,21 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/16/statistical-physics-notes/</loc>
+    <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
+        <title>教育网IPV6下载YouTube视频</title>
+        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
         
-        <tag>课件</tag>
+        <tag>IPV6</tag>
          
-        <tag>高统</tag>
+        <tag>YouTube</tag>
          
          
            
              
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1344,43 +1368,19 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
+    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
         <display>
-        <title>我的研究生阶段该如何度过？</title>
-        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
+        <title>京东预售商品加入购物车</title>
+        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
         
-        <tag>忙</tag>
-         
-        <tag>规划</tag>
+        <tag>京东</tag>
          
          
            
              
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/11/17/quantum-mechanics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高亮</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="http://rachpt.me/categories/%E8%B5%84%E6%BA%90/"/>
+              <breadCrumb title="教程" url="http://rachpt.me/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
