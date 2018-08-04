@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="记录一些学习ubuntu要点，力求实用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-31T08:52:16.455Z">
+<meta property="og:updated_time" content="2018-08-04T14:53:50.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu 学习笔记">
 <meta name="twitter:description" content="记录一些学习ubuntu要点，力求实用。">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-31 16:52:16" itemprop="dateModified" datetime="2018-07-31T16:52:16+08:00">2018-07-31</time>
+                <time title="修改时间：2018-08-04 22:53:50" itemprop="dateModified" datetime="2018-08-04T22:53:50+08:00">2018-08-04</time>
               
             
           </span>
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:17</span>
+                <span title="阅读时长">0:18</span>
               
             </div>
           
@@ -579,6 +579,11 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-cache search package 搜索软件包</span><br><span class="line">apt-cache show package  获取包的相关信息，如说明、大小、版本等</span><br><span class="line">sudo apt-get install package 安装包</span><br><span class="line">sudo apt-get install package --reinstall   重新安装包</span><br><span class="line">sudo apt-get -f install   修复安装</span><br><span class="line">sudo apt-get remove package 删除包</span><br><span class="line">sudo apt-get remove package --purge 删除包，包括配置文件等</span><br><span class="line">sudo apt-get update  更新源</span><br><span class="line">sudo apt-get upgrade 更新已安装的包</span><br><span class="line">sudo apt-get dist-upgrade 升级系统</span><br><span class="line">apt-cache depends package 了解使用该包依赖那些包</span><br><span class="line">apt-cache rdepends package 查看该包被哪些包依赖</span><br><span class="line">sudo apt-get build-dep package 安装相关的编译环境</span><br><span class="line">apt-get <span class="built_in">source</span> package  下载该包的源代码</span><br><span class="line">sudo apt-get clean &amp;&amp; sudo apt-get autoclean 清理无用的包</span><br><span class="line">sudo apt-get check 检查是否有损坏的依赖</span><br></pre></td></tr></table></figure>
 <h1 id="linux-常用编辑器"><a href="#linux-常用编辑器" class="headerlink" title="linux 常用编辑器"></a>linux 常用编辑器</h1><p>vi (visual editor, ex编辑器的改进版)属于 Unix 系统基本编辑器(部分 Linux 发行版都把 vi 映射到 vim,还有部分会把 vi 映射到 ex)，除此之外，有些发行版还会预装nano编辑器。</p>
 <h2 id="vim-vi-命令"><a href="#vim-vi-命令" class="headerlink" title="vim (vi) 命令"></a>vim (vi) 命令</h2><p>vim 是 vi 的增强版（vi improved）。</p>
+<p><strong>这里多说一点</strong></p>
+<blockquote>
+<p>大多数 Linux 发行版不包含真正的 vi；而是自带一款高级替代版本，叫做 vim（它是“vi improved”的简写）由 Bram Moolenaar 开发的。vim 相对于传统的 Unix vi 来说，取得了实质性进步。通常，vim 在 Linux 系统中是“vi”的符号链接（或别名）。 在随后的讨论中，我们将会假定我们有一个叫做“vi”的程序，但它其实是 vim。</p>
+</blockquote>
+<p><a href="https://www.kancloud.cn/thinkphp/linux-command-line/39443" target="_blank" rel="noopener">参考文档</a>。</p>
 <h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><table>
 <thead>
 <tr>
