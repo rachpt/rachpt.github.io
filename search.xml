@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[vim-set-working-directory-to-the-current-file]]></title>
     <url>%2F2018%2F08%2F22%2Fvim-set-working-directory-to-the-current-file%2F</url>
-    <content type="text"><![CDATA[vim自动进入打开文件所在目录,原谅我无耻地 copy。 如果装了插件 NERDTree，使用 :NERDTreeFind 可以扩展到打开文件所在目录。不自动有点麻烦。 百度了一圈，找到的答案是使用 12&quot;在.vimrc 中加入execute &quot;cd&quot; expand(&quot;%:h&quot;) 缺点是如果目录路径中有特殊字符可能报错。比如： 使用 Google 查找关键词 vimrc execute cd expand，找到 vim 官方解决办法。 12345set autochdirautocmd BufEnter * silent! lcd %:p:hautocmd BufEnter * if expand(&quot;%:p:h&quot;) !~ &apos;^/tmp&apos; | silent! lcd %:p:h | endif 第一种，肯和某些插件有冲突，本人测试刚才有特殊字符的文件正常。后面两个兼容性更好，最后一个加了判断，/tmp 中的文件不切换到改路径去。 参考文档1，文档2-wiki.]]></content>
+    <content type="text"><![CDATA[vim自动进入打开文件所在目录,原谅我无耻地 copy。 如果装了插件 NERDTree，使用 :NERDTreeFind 可以扩展到打开文件所在目录。不自动有点麻烦。 百度了一圈，找到的答案是使用 12&quot;在.vimrc 中加入execute &quot;cd&quot; expand(&quot;%:h&quot;) 缺点是如果目录路径中有特殊字符可能报错。比如： 使用 Google 查找关键词 vimrc execute cd expand，找到 vim 官方解决办法。 123456set autochdirautocmd BufEnter * silent! lcd %:p:hautocmd BufEnter * if expand(&quot;%:p:h&quot;) !~ &apos;^/tmp&apos; | silent! lcd %:p:h | endif 第一种，可能和某些插件有冲突，本人测试刚才有特殊字符的文件正常。后面两个兼容性更好，最后一个加了判断，/tmp 中的文件不切换到改路径去。此法最好。 参考文档1，文档2-wiki.]]></content>
       <categories>
         <category>linux</category>
       </categories>
