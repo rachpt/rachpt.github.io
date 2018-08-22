@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-07-28T05:33:56.362Z</updated>
+  <updated>2018-08-22T02:06:06.719Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim-set-working-directory-to-the-current-file</title>
+    <link href="http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/"/>
+    <id>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</id>
+    <published>2018-08-22T01:47:54.000Z</published>
+    <updated>2018-08-22T02:06:06.719Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>vim自动进入打开文件所在目录,原谅我无耻地 copy。</p></blockquote><a id="more"></a><p>如果装了插件 NERDTree，使用 <code>:NERDTreeFind</code> 可以扩展到打开文件所在目录。不自动有点麻烦。</p><p>百度了一圈，找到的答案是使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;在.vimrc 中加入</span><br><span class="line">execute &quot;cd&quot; expand(&quot;%:h&quot;)</span><br></pre></td></tr></table></figure><p>缺点是如果目录路径中有特殊字符可能报错。比如：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1fui8tvgh0ej20pp0avdhk.jpg" alt=""></p><p>使用 Google 查找关键词 <code>vimrc execute cd expand</code>，找到 vim 官方解决办法。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set autochdir</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * silent! lcd %:p:h</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if expand(&quot;%:p:h&quot;) !~ &apos;^/tmp&apos; | silent! lcd %:p:h | endif</span><br></pre></td></tr></table></figure><p>第一种，肯和某些插件有冲突，本人测试刚才有特殊字符的文件正常。<br>后面两个兼容性更好，最后一个加了判断，<code>/tmp</code> 中的文件不切换到改路径去。</p><p>参考<a href="https://www.douban.com/note/543140992/" target="_blank" rel="noopener">文档1</a>，<a href="http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file" target="_blank" rel="noopener">文档2-wiki</a>.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;vim自动进入打开文件所在目录,原谅我无耻地 copy。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="vim" scheme="http://rachpt.me/tags/vim/"/>
+    
+  </entry>
   
   <entry>
     <title>service-systemctl-and-daemon</title>
@@ -474,30 +498,6 @@
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
     
       <category term="pt" scheme="http://rachpt.me/tags/pt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>change-sidebar-width-of-firefox</title>
-    <link href="http://rachpt.me/2018/03/28/change-sidebar-width-of-firefox/"/>
-    <id>http://rachpt.me/2018/03/28/change-sidebar-width-of-firefox/</id>
-    <published>2018-03-28T13:12:24.000Z</published>
-    <updated>2018-03-28T14:11:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。</p></blockquote><a id="more"></a><h1 id="配置文件路径"><a href="#配置文件路径" class="headerlink" title="配置文件路径"></a>配置文件路径</h1><p>在 firfox 地址栏输入 <code>about:profiles</code> ，找到配置文件路径。如下图。</p><p><img src="https://ww4.sinaimg.cn/large/675bda05ly1fpsvjnovh4j20rx0kd40e.jpg" alt="pic"></p><p>在 Root Directory 中创建 <code>chrome</code> 文件夹，然后在其中新建一个名为 <code>userChrome.css</code> 的 <code>css</code> 文件。</p><h1 id="CSS-文件"><a href="#CSS-文件" class="headerlink" title="CSS 文件"></a>CSS 文件</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar-box</span>,<span class="selector-id">#sidebar</span>,<span class="selector-id">#sidebar-header</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">300px</span> <span class="meta">!important</span>;</span><br><span class="line">   <span class="attribute">min-width</span>: <span class="number">50px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>重启 firefox 生效，效果 如上图。</p><p><a href="https://www.howtogeek.com/209320/how-to-set-up-and-use-multiple-profiles-user-accounts-in-firefox/" target="_blank" rel="noopener">参考内容1</a>，<a href="https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/" target="_blank" rel="noopener">内容2</a>，<a href="https://bbs.kafan.cn/forum.php?mod=viewthread&amp;tid=1692356&amp;page=1#pid30582934" target="_blank" rel="noopener">内容3</a> 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="firefox" scheme="http://rachpt.me/tags/firefox/"/>
     
   </entry>
   
