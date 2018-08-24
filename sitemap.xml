@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
+    
+    <lastmod>2018-08-24T13:40:52.540Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
     
     <lastmod>2018-08-22T02:12:38.442Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>http://rachpt.me/2018/03/05/settings-for-next-theme/</loc>
     
     <lastmod>2018-07-06T13:34:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
-    
-    <lastmod>2018-07-06T04:13:11.000Z</lastmod>
     
   </url>
   

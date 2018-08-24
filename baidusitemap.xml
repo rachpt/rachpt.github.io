@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
+    <lastmod>2018-08-24T13:40:52.540Z</lastmod>
+    <data>
+        <display>
+        <title>adb-linux-and-mi8</title>
+        <pubTime>2018-07-06T03:37:15.000Z</pubTime>
+        
+        <tag>mi8</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
     <lastmod>2018-08-22T02:12:38.442Z</lastmod>
     <data>
@@ -260,26 +280,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
-    <lastmod>2018-07-06T04:13:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>adb-linux-and-mi8</title>
-        <pubTime>2018-07-06T03:37:15.000Z</pubTime>
-        
-        <tag>mi8</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
-          
         </display>
     </data>
     </url>
