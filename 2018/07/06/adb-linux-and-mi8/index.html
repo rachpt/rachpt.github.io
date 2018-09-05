@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-25T09:45:19.317Z">
+<meta property="og:updated_time" content="2018-09-05T08:12:26.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="adb-linux-and-mi8">
 <meta name="twitter:description" content="记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-25 17:45:19" itemprop="dateModified" datetime="2018-08-25T17:45:19+08:00">2018-08-25</time>
+                <time title="修改时间：2018-09-05 16:12:26" itemprop="dateModified" datetime="2018-09-05T16:12:26+08:00">2018-09-05</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.2k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -533,6 +533,8 @@
 <a id="more"></a>
 <h1 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h1><p>安装命令（ubuntu系列）：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:nilarimogard/webupd8</span><br><span class="line">sudo apt-get update</span><br><span class="line"><span class="comment"># 直接试下面的，不行在加 ppa</span></span><br><span class="line">sudo apt-get install android-tools-adb</span><br><span class="line"></span><br><span class="line">adb --version <span class="comment"># 检查是否安装</span></span><br></pre></td></tr></table></figure>
+<h1 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install android-tools-fastboot</span><br></pre></td></tr></table></figure>
+<p>fastboot 授权： <a href="https://developer.android.com/studio/run/device" target="_blank" rel="noopener">https://developer.android.com/studio/run/device</a></p>
 <h1 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开usb 调试，连上 linux，列出所有 usb 设备。</span></span><br><span class="line">lsusb</span><br><span class="line"></span><br><span class="line">rachpt@pc ~ $ lsusb</span><br><span class="line">Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub</span><br><span class="line">Bus 001 Device 004: ID 0b95:1790 ASIX Electronics Corp. AX88179 Gigabit Ethernet</span><br><span class="line">Bus 001 Device 002: ID 2109:2812 VIA Labs, Inc. VL812 Hub</span><br><span class="line">Bus 001 Device 071: ID 046d:c534 Logitech, Inc. Unifying Receiver</span><br><span class="line">Bus 001 Device 088: ID 2717:ff48  </span><br><span class="line">Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub</span><br></pre></td></tr></table></figure>
 <p>可以通过对比连接前后变化得知哪个是手机的 ID 和idProduct 。</p>
 <p><code>Bus 001 Device 088: ID 2717:ff48</code> 这条即是。新手机有可能带有 Google 字样。</p>
@@ -1000,7 +1002,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ADB"><span class="nav-number">1.</span> <span class="nav-text">ADB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#授权"><span class="nav-number">2.</span> <span class="nav-text">授权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#黑域"><span class="nav-number">3.</span> <span class="nav-text">黑域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MIUI-广告"><span class="nav-number">4.</span> <span class="nav-text">MIUI 广告</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷-TWRP"><span class="nav-number">5.</span> <span class="nav-text">刷 TWRP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ADB"><span class="nav-number">1.</span> <span class="nav-text">ADB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fastboot"><span class="nav-number">2.</span> <span class="nav-text">fastboot</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#授权"><span class="nav-number">3.</span> <span class="nav-text">授权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#黑域"><span class="nav-number">4.</span> <span class="nav-text">黑域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MIUI-广告"><span class="nav-number">5.</span> <span class="nav-text">MIUI 广告</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷-TWRP"><span class="nav-number">6.</span> <span class="nav-text">刷 TWRP</span></a></li></ol></div>
             
 
           </div>
@@ -1052,7 +1054,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:02</span>
+    <span title="站点阅读时长">2:03</span>
   
 </div>
 
