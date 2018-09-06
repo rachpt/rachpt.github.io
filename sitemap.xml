@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
+    
+    <lastmod>2018-09-06T03:23:49.994Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/04/02/windows-note-02/</loc>
     
     <lastmod>2018-09-06T02:05:51.646Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
     
     <lastmod>2018-07-30T09:13:56.248Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
-    
-    <lastmod>2018-07-28T14:43:29.176Z</lastmod>
     
   </url>
   

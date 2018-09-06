@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="自学收集的一些有用的 shell 奇淫妙技。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-28T14:43:29.176Z">
+<meta property="og:updated_time" content="2018-09-06T03:23:49.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="extra-shell-note">
 <meta name="twitter:description" content="自学收集的一些有用的 shell 奇淫妙技。">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-28 22:43:29" itemprop="dateModified" datetime="2018-07-28T22:43:29+08:00">2018-07-28</time>
+                <time title="修改时间：2018-09-06 11:23:49" itemprop="dateModified" datetime="2018-09-06T11:23:49+08:00">2018-09-06</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.1k</span>
+                <span title="本文字数">4.3k</span>
               
 
               
@@ -532,7 +532,7 @@
 </blockquote>
 <a id="more"></a>
 <h1 id="unset"><a href="#unset" class="headerlink" title="unset"></a>unset</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> 变量名</span><br><span class="line"><span class="built_in">unset</span> .f 函数名</span><br></pre></td></tr></table></figure>
-<p><code>.f</code> 前后用空格。用于删除定义了的变量与函数。</p>
+<p><code>.f</code> 前后有空格。用于删除定义了的变量与函数。</p>
 <h1 id="包含文件"><a href="#包含文件" class="headerlink" title="包含文件"></a>包含文件</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">. filePath</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> filePath</span><br></pre></td></tr></table></figure>
 <p><code>.</code>  后面有一空格。</p>
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>shell 没有块注释，可以使用一对<code>花括号</code>将需要注释的内容包起来，定义成一个函数，但是后面不使用改函数，从而曲线救国。</p>
@@ -562,7 +562,7 @@
 <p>其他，</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'$!N;$!D'</span></span><br><span class="line"><span class="comment"># 获取最后两行</span></span><br><span class="line"><span class="comment"># 一样的效果</span></span><br><span class="line">awk <span class="string">'&#123;b=a"\n"$0;a=$0&#125;END&#123;print b&#125;'</span></span><br></pre></td></tr></table></figure>
 <p><a href="http://bbs.51cto.com/viewthread.php?tid=961661&amp;page=1&amp;authorid=1170427" target="_blank" rel="noopener">参考资料</a> 。</p>
-<h1 id="不让别名生效"><a href="#不让别名生效" class="headerlink" title="不让别名生效"></a>不让别名生效</h1><p>在 <code>.bashrc</code> 或者 <code>.profile</code> 里面定义 <code>alias</code> 可以简化命令输入，但有时想用非别名命令，可以在前面加一个 <code>\</code> ，如下</p>
+<h1 id="不让别名生效"><a href="#不让别名生效" class="headerlink" title="不让别名生效"></a>不让别名生效</h1><p>在 <code>.bashrc</code> 或者 <code>.profile</code> 里面定义 <code>alias</code> 可以简化命令输入，但有时想用非别名命令，可以在前面加一个 <code>\\</code> ，如下</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\grep something filename</span><br></pre></td></tr></table></figure>
 <h1 id="ps-命令"><a href="#ps-命令" class="headerlink" title="ps 命令"></a>ps 命令</h1><p><code>ps</code> 命令的参数有：</p>
 <table>
@@ -642,6 +642,20 @@
 <p><code>:r !pwd</code> 或 <code>:r !ls</code> 将执行结果复制到 vim 中.</p>
 <p>vim 替换中，<code>%</code>的意义是代表整个文件，而执行外部命令时则是文件名.</p>
 <p>可以详见 <a href="https://www.jb51.net/LINUXjishu/608817.html" target="_blank" rel="noopener">此处</a>.</p>
+<h1 id="查看归档或压缩文件内容"><a href="#查看归档或压缩文件内容" class="headerlink" title="查看归档或压缩文件内容"></a>查看归档或压缩文件内容</h1><p>无需解压，查看 归档文件包含的内容。</p>
+<ol>
+<li><p>vim<br>命令模式下直接使用 vim 可以查看归档文件内容。</p>
+</li>
+<li><p>tar -tf 文件路径<br>此法在 man tar 有说。</p>
+</li>
+<li><p>rar unrar zip unzip</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rar v 文件.rar</span><br><span class="line"><span class="comment"># 字幕 L</span></span><br><span class="line">unrar l 文件.rar</span><br><span class="line"></span><br><span class="line">zip -sf 文件.zip</span><br><span class="line"></span><br><span class="line">unzip -l 文件.zip</span><br></pre></td></tr></table></figure>
+<ol>
+<li>其他</li>
+</ol>
+<p><code>zipinfo</code> <code>zcat</code> <code>zless</code><br>以及 <code>less</code>。</p>
 <p>待续……</p>
 
       
@@ -1115,7 +1129,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unset"><span class="nav-number">1.</span> <span class="nav-text">unset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含文件"><span class="nav-number">2.</span> <span class="nav-text">包含文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无限循环"><span class="nav-number">6.</span> <span class="nav-text">无限循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#取最后一行"><span class="nav-number">7.</span> <span class="nav-text">取最后一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不让别名生效"><span class="nav-number">8.</span> <span class="nav-text">不让别名生效</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ps-命令"><span class="nav-number">9.</span> <span class="nav-text">ps 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有用的小命令"><span class="nav-number">10.</span> <span class="nav-text">有用的小命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史命令"><span class="nav-number">11.</span> <span class="nav-text">历史命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sed"><span class="nav-number">12.</span> <span class="nav-text">sed</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量"><span class="nav-number">13.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-编辑后无权限"><span class="nav-number">14.</span> <span class="nav-text">vim 编辑后无权限</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unset"><span class="nav-number">1.</span> <span class="nav-text">unset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含文件"><span class="nav-number">2.</span> <span class="nav-text">包含文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无限循环"><span class="nav-number">6.</span> <span class="nav-text">无限循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#取最后一行"><span class="nav-number">7.</span> <span class="nav-text">取最后一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不让别名生效"><span class="nav-number">8.</span> <span class="nav-text">不让别名生效</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ps-命令"><span class="nav-number">9.</span> <span class="nav-text">ps 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有用的小命令"><span class="nav-number">10.</span> <span class="nav-text">有用的小命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史命令"><span class="nav-number">11.</span> <span class="nav-text">历史命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sed"><span class="nav-number">12.</span> <span class="nav-text">sed</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量"><span class="nav-number">13.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-编辑后无权限"><span class="nav-number">14.</span> <span class="nav-text">vim 编辑后无权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看归档或压缩文件内容"><span class="nav-number">15.</span> <span class="nav-text">查看归档或压缩文件内容</span></a></li></ol></div>
             
 
           </div>
