@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/04/02/windows-note-02/</loc>
+    <lastmod>2018-09-06T02:05:51.646Z</lastmod>
+    <data>
+        <display>
+        <title>Windows 使用笔记-02</title>
+        <pubTime>2018-04-02T04:00:00.000Z</pubTime>
+        
+        <tag>windows</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
     <lastmod>2018-09-05T08:12:26.836Z</lastmod>
     <data>
@@ -445,23 +462,6 @@
              
               <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/04/02/windows-note-02/</loc>
-    <lastmod>2018-04-13T04:38:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows 使用笔记-02</title>
-        <pubTime>2018-04-02T04:00:00.000Z</pubTime>
-        
-        <tag>windows</tag>
-         
-         
-           
         </display>
     </data>
     </url>
