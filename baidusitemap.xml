@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
+    <lastmod>2018-09-07T12:28:50.782Z</lastmod>
+    <data>
+        <display>
+        <title>adb-linux-and-mi8</title>
+        <pubTime>2018-07-06T03:37:15.000Z</pubTime>
+        
+        <tag>mi8</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
     <lastmod>2018-09-06T03:23:49.994Z</lastmod>
     <data>
@@ -35,26 +55,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
-    <lastmod>2018-09-05T08:12:26.836Z</lastmod>
-    <data>
-        <display>
-        <title>adb-linux-and-mi8</title>
-        <pubTime>2018-07-06T03:37:15.000Z</pubTime>
-        
-        <tag>mi8</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
-          
         </display>
     </data>
     </url>

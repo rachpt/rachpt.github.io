@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
+    
+    <lastmod>2018-09-07T12:28:50.782Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
     
     <lastmod>2018-09-06T03:23:49.994Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://rachpt.me/2018/04/02/windows-note-02/</loc>
     
     <lastmod>2018-09-06T02:05:51.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
-    
-    <lastmod>2018-09-05T08:12:26.836Z</lastmod>
     
   </url>
   
