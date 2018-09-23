@@ -140,7 +140,7 @@
 <meta property="og:description" content="使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fpavl4w4ymj20zm0frdoz.jpg">
-<meta property="og:updated_time" content="2018-03-20T10:02:25.000Z">
+<meta property="og:updated_time" content="2018-09-23T06:54:05.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单使用 FFmpeg 压制视频">
 <meta name="twitter:description" content="使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。">
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-03-20 18:02:25" itemprop="dateModified" datetime="2018-03-20T18:02:25+08:00">2018-03-20</time>
+                <time title="修改时间：2018-09-23 14:54:05" itemprop="dateModified" datetime="2018-09-23T14:54:05+08:00">2018-09-23</time>
               
             
           </span>
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">2.5k</span>
               
 
               
@@ -539,8 +539,7 @@
 <p>ultrafast<br>superfast<br>veryfast<br>faster<br>fast<br>medium – default preset<br>slow<br>slower<br>veryslow </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-an   : 不编码音频</span><br><span class="line">-vcodec : 设置视频的编码，我这里使用的是x264</span><br><span class="line">-b   : 这个是码率</span><br><span class="line">-f   : 强制使用格式</span><br><span class="line">-y   : 自动输y确认</span><br></pre></td></tr></table></figure>
 <p>一条命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 1 -an -f mp4 -y /dev/null &amp;&amp; \ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 2 -c:a aac -b:a 64k -strict -2 out.mp4 &gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-<p>注意 <code>\</code> 后面不要空格，直接接 <code>ffmpeg</code> 命令。或者不要这个连接符 试试。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 1 -an -f mp4 -y /dev/null &amp;&amp; ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass 2 -c:a aac -b:a 64k -strict -2 out.mp4 &gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fpavl4w4ymj20zm0frdoz.jpg" alt="pic-1"></p>
 <p> <a href="https://stackoverflow.com/questions/32931685/the-encoder-aac-is-experimental-but-experimental-codecs-are-not-enabled" target="_blank" rel="noopener">参考内容1</a> ， <a href="http://trac.ffmpeg.org/wiki/Encode/H.264" target="_blank" rel="noopener">参考内容2</a>  。</p>
 <div class="note success"><p>使用脚本批量压制：</p></div>
@@ -552,6 +551,7 @@
 <h1 id="裁剪"><a href="#裁剪" class="headerlink" title="裁剪"></a>裁剪</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -ss 00:00:00 -i in.mp4 -to 03:35:55 -vcodec copy -acodec copy -avoid_negative_ts 1 cutout.mp4</span><br></pre></td></tr></table></figure>
 <p><code>-i</code> 需要在 <code>-to</code> 前面。</p>
 <p><a href="http://blog.csdn.net/matrix_laboratory/article/details/53157383" target="_blank" rel="noopener">参考文章1</a>，<a href="http://trac.ffmpeg.org/wiki/Seeking" target="_blank" rel="noopener">参考2</a>。</p>
+<h1 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -i subtitles.srt -c:s mov_text -c:v copy -c:a copy output.mp4</span><br></pre></td></tr></table></figure>
 <p>附录：</p>
 <p>mpv 几个快捷键</p>
 <table>
@@ -1019,7 +1019,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#裁剪"><span class="nav-number">1.</span> <span class="nav-text">裁剪</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#裁剪"><span class="nav-number">1.</span> <span class="nav-text">裁剪</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字幕"><span class="nav-number">2.</span> <span class="nav-text">字幕</span></a></li></ol></div>
             
 
           </div>
