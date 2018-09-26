@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-09-26T03:06:08.753Z</updated>
+  <updated>2018-09-26T03:09:02.100Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>chang-the-resolution-of-the-console</title>
+    <title>change-the-resolution-of-the-console</title>
     <link href="http://rachpt.me/2018/09/20/change-the-resolution-of-the-console/"/>
     <id>http://rachpt.me/2018/09/20/change-the-resolution-of-the-console/</id>
     <published>2018-09-20T12:52:51.000Z</published>
-    <updated>2018-09-26T03:06:08.753Z</updated>
+    <updated>2018-09-26T03:09:02.100Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>周末花了一个下午搞定了 Linux 字符界面分辨率与中文环境。</p></blockquote><a id="more"></a><h1 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h1><p>一般有图形界面的 Linux 发行版通过 <code>Ctrl + Alt + F[1-6]</code> 进入(切换)到字符界面(控制台 字符哑终端) console.<code>C + A + F7</code> 返回 x-window。</p><p>临时切换至字符界面能过在不影响后台计算进程的前提下处理轻量文本任务、查看系统状态等操作。</p><p>但是有两个问题，一是分辨率，二是中文支持。</p><h1 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h1><p>由于之前图方便，直接使用的 VGA 接口，字符界面分辨率特别难受，后来查看才得知 1080p 的显示器一直使用的 800x600 分辨率模式，各种模糊、显示不清，甚至让我怀疑 linux 版本的问题。Google 百度来来回回一个下午找到一些修改 vga 模式下分辨率的方法。</p><p>对于 ubuntu / Linux mint，修改 grub 配置文件 <code>/etc/default/grub</code>。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加</span></span><br><span class="line">GRUB_GFXMODE=1600x1200x32</span><br><span class="line">GRUB_GFXPAYLOAD_LINUX=keep</span><br></pre></td></tr></table></figure><p>之前一直坑在这里面，就是自以为 分辨率以及 色深自己根据显示器随便写就是。<br>后面才发现需要在开机选择引导时，按 <code>c</code> 进入 grub 界面，使用 <code>vbeinfo</code> 查看系统支持的分辨率和色深。</p><p>写非法的分辨率以及色深会导致 console 进不去。</p><p>鉴于 vga 模式下的分辨率没有和显示器匹配的。于是不得不改用 DVI接口，渣渣显卡没有 HDMI 接口，否则就不存在这些问题。</p><p>dvi 可以粗略理解为 HDMI 接口的缩水版，dvi 和 HDMI 接口都是数字信号传输的，直接匹配显示器分辨率。</p><p><strong>所以最终的解决办法是 使用 DVI/HDMI 接口代替 VGA 接口</strong></p><h1 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h1><ol><li><p>使用英文作为系统语言，添加中文支持，这样欢迎等信息都是英文。</p></li><li><p>安装 <code>sudo apt install zhcon</code></p></li></ol><p>使用 <code>zhcon --utf8</code> 进入中文环境。</p><h1 id="鼠标"><a href="#鼠标" class="headerlink" title="鼠标"></a>鼠标</h1><p>使用 <code>GPM</code> 实现.<br>安装:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gpm</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> gpm.service</span><br><span class="line"></span><br><span class="line">sudo systemctl start gpm.service</span><br><span class="line"></span><br><span class="line">sudo systemctl status gpm.service</span><br></pre></td></tr></table></figure>]]></content>
     
