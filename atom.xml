@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-09-26T03:09:02.100Z</updated>
+  <updated>2018-10-28T08:37:38.476Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>an-error-in-mpv-player</title>
+    <link href="http://rachpt.me/2018/10/28/an-error-in-mpv-player/"/>
+    <id>http://rachpt.me/2018/10/28/an-error-in-mpv-player/</id>
+    <published>2018-10-28T08:29:17.000Z</published>
+    <updated>2018-10-28T08:37:38.476Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。</p></blockquote><a id="more"></a><p>使用终端运行错误提示如下，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mpv  </span><br><span class="line">mpv: relocation error: /usr/lib/x86_64-linux-gnu/libldb.so.1: symbol talloc_strdup_append_buffer version TALLOC_2.0.2 not defined <span class="keyword">in</span> file libtalloc.so.2 with link time reference</span><br></pre></td></tr></table></figure><p>百度一番，有类似的问题的解决记录。</p><p><a href="http://blog.chinaunix.net/uid-27057175-id-5747280.html" target="_blank" rel="noopener">文档1</a>，<a href="https://answers.launchpad.net/ubuntu/+question/291448" target="_blank" rel="noopener">文档2</a>.</p><p>经比较，应该是 libtalloc 有问题。</p><p>解决：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --reinstall libtevent0 libtalloc2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可能只要最后的 libtalloc2 即可</span></span><br></pre></td></tr></table></figure><p>小记。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>change-the-resolution-of-the-console</title>
@@ -470,32 +492,6 @@
     
     
       <category term="awk" scheme="http://rachpt.me/tags/awk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>the-gateway-of-materials-studio</title>
-    <link href="http://rachpt.me/2018/03/31/the-gateway-of-materials-studio/"/>
-    <id>http://rachpt.me/2018/03/31/the-gateway-of-materials-studio/</id>
-    <published>2018-03-31T03:13:07.000Z</published>
-    <updated>2018-03-31T03:55:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>关于 Materials studio 的 Remote Gateway。</p></blockquote><a id="more"></a><p>MS 默认 使用 <a href="http://localhost:18888" target="_blank" rel="noopener">http://localhost:18888</a> 查看进程，之前一直不知道 <code>Edti</code> 的用户名与密码是啥，google 了下，找到官方帮助文档，看了下了解了些许，这里记录一下。</p><h1 id="开关"><a href="#开关" class="headerlink" title="开关"></a>开关</h1><p>找到路径 <code>~/Accelrys/MaterialsStudio8.0/etc/Gateway</code> 与自己的安装路径有关。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">./gwstart</span><br><span class="line"><span class="comment">#  开</span></span><br><span class="line">./gwstop</span><br><span class="line"><span class="comment"># 关</span></span><br><span class="line">./gwrestop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#目录下的其他可执行文件功能，如其名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#运行计算中 需要保持 这个 是开得状态。</span></span><br></pre></td></tr></table></figure><h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在刚才的目录下</span></span><br><span class="line"></span><br><span class="line">./gwusers /list</span><br><span class="line"><span class="comment"># 列出 用户</span></span><br><span class="line"></span><br><span class="line">./gwusers /add rachpt</span><br><span class="line"><span class="comment"># 添加用户</span></span><br></pre></td></tr></table></figure><p>默认情况下 使用</p><div class="note success"><p><strong>gatekeeper</strong></p><p><em>密码： 空</em></p></div><p>管理 emote Gateway 。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpvv0vvyybj20mi09yq3q.jpg" alt="pic"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpvu4c62suj20ow0lt3zw.jpg" alt="pic"></p><p><a href="https://sites.ualberta.ca/dept/chemeng/software/Documentation/MaterialsStudio_8.0_InstallGuide.pdf" target="_blank" rel="noopener"> 参考内容</a> 。</p><p><a href="/2018/01/11/install-materials-studio-on-ubuntu/">更多请看</a> 。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;关于 Materials studio 的 Remote Gateway。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="DFT" scheme="http://rachpt.me/categories/DFT/"/>
-    
-    
-      <category term="castep" scheme="http://rachpt.me/tags/castep/"/>
-    
-      <category term="ms" scheme="http://rachpt.me/tags/ms/"/>
     
   </entry>
   
