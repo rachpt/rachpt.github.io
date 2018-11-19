@@ -27,9 +27,11 @@
     
     
     
+    
+    
   <url>
     <loc>http://rachpt.me/2018/10/28/an-error-in-mpv-player/</loc>
-    <lastmod>2018-10-28T08:37:38.476Z</lastmod>
+    <lastmod>2018-10-28T08:37:38.000Z</lastmod>
     <data>
         <display>
         <title>an-error-in-mpv-player</title>
@@ -46,7 +48,7 @@
     
   <url>
     <loc>http://rachpt.me/2017/11/16/download-youtube-video/</loc>
-    <lastmod>2018-10-10T03:59:46.569Z</lastmod>
+    <lastmod>2018-10-10T03:59:46.000Z</lastmod>
     <data>
         <display>
         <title>教育网IPV6下载YouTube视频</title>
@@ -68,7 +70,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/09/20/change-the-resolution-of-the-console/</loc>
-    <lastmod>2018-09-26T03:09:02.100Z</lastmod>
+    <lastmod>2018-09-26T03:09:02.000Z</lastmod>
     <data>
         <display>
         <title>change-the-resolution-of-the-console</title>
@@ -88,7 +90,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/03/12/a-simple-example-of-FFmpeg/</loc>
-    <lastmod>2018-09-23T06:56:43.657Z</lastmod>
+    <lastmod>2018-09-23T06:56:43.000Z</lastmod>
     <data>
         <display>
         <title>简单使用 FFmpeg 压制视频</title>
@@ -108,7 +110,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</loc>
-    <lastmod>2018-09-07T12:28:50.782Z</lastmod>
+    <lastmod>2018-09-07T12:28:50.000Z</lastmod>
     <data>
         <display>
         <title>adb-linux-and-mi8</title>
@@ -128,7 +130,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/05/07/extra-shell-note/</loc>
-    <lastmod>2018-09-06T03:23:49.994Z</lastmod>
+    <lastmod>2018-09-06T03:23:49.000Z</lastmod>
     <data>
         <display>
         <title>extra-shell-note</title>
@@ -148,7 +150,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/04/02/windows-note-02/</loc>
-    <lastmod>2018-09-06T02:05:51.646Z</lastmod>
+    <lastmod>2018-09-06T02:05:51.000Z</lastmod>
     <data>
         <display>
         <title>Windows 使用笔记-02</title>
@@ -165,7 +167,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/03/25/transmission-settings/</loc>
-    <lastmod>2018-08-25T08:39:16.025Z</lastmod>
+    <lastmod>2018-08-25T08:39:16.000Z</lastmod>
     <data>
         <display>
         <title>transmission-settings</title>
@@ -185,7 +187,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
-    <lastmod>2018-08-22T02:12:38.442Z</lastmod>
+    <lastmod>2018-08-22T02:12:38.000Z</lastmod>
     <data>
         <display>
         <title>vim-set-working-directory-to-the-current-file</title>
@@ -205,7 +207,7 @@
     
   <url>
     <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
-    <lastmod>2018-08-05T12:51:07.677Z</lastmod>
+    <lastmod>2018-08-05T12:51:07.000Z</lastmod>
     <data>
         <display>
         <title>ubuntu 学习笔记</title>
@@ -225,7 +227,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</loc>
-    <lastmod>2018-07-30T09:13:56.248Z</lastmod>
+    <lastmod>2018-07-30T09:13:56.000Z</lastmod>
     <data>
         <display>
         <title>compile-vim-with-clipboard-supported</title>
@@ -245,7 +247,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/28/service-systemctl-and-daemon/</loc>
-    <lastmod>2018-07-28T05:33:56.362Z</lastmod>
+    <lastmod>2018-07-28T05:33:56.000Z</lastmod>
     <data>
         <display>
         <title>service-systemctl-and-daemon</title>
@@ -265,15 +267,15 @@
     
   <url>
     <loc>http://rachpt.me/2017/11/30/flexget-for-ut/</loc>
-    <lastmod>2018-07-27T13:26:40.766Z</lastmod>
+    <lastmod>2018-07-27T13:26:40.000Z</lastmod>
     <data>
         <display>
         <title>使用FlexGet订阅下载Torrent</title>
         <pubTime>2017-11-30T14:21:05.000Z</pubTime>
         
-        <tag>pt</tag>
-         
         <tag>flexget</tag>
+         
+        <tag>pt</tag>
          
          
            
@@ -287,7 +289,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/25/compile-nginx-1-14/</loc>
-    <lastmod>2018-07-27T11:28:56.248Z</lastmod>
+    <lastmod>2018-07-27T11:28:56.000Z</lastmod>
     <data>
         <display>
         <title>compile-nginx-1.14</title>
@@ -307,7 +309,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/</loc>
-    <lastmod>2018-07-27T05:43:50.267Z</lastmod>
+    <lastmod>2018-07-27T05:43:50.000Z</lastmod>
     <data>
         <display>
         <title>make-qbittorrent-from-source-code</title>
@@ -327,7 +329,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/26/use-expect-to-ssh-and-solve-a-problem/</loc>
-    <lastmod>2018-07-26T09:26:57.402Z</lastmod>
+    <lastmod>2018-07-26T09:26:57.000Z</lastmod>
     <data>
         <display>
         <title>use-expect-to-ssh-and-solve-a-problem</title>
@@ -349,7 +351,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/03/02/ms-scf-max-iterations/</loc>
-    <lastmod>2018-07-25T13:39:56.141Z</lastmod>
+    <lastmod>2018-07-25T13:39:56.000Z</lastmod>
     <data>
         <display>
         <title>Materials Studio CASTEP 迭代次数设置</title>
@@ -371,7 +373,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/</loc>
-    <lastmod>2018-07-25T13:19:07.702Z</lastmod>
+    <lastmod>2018-07-25T13:19:07.000Z</lastmod>
     <data>
         <display>
         <title>run-matlab-in-a-terminal</title>
@@ -391,7 +393,7 @@
     
   <url>
     <loc>http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code/</loc>
-    <lastmod>2018-07-24T04:41:07.653Z</lastmod>
+    <lastmod>2018-07-24T04:41:07.000Z</lastmod>
     <data>
         <display>
         <title>make-transmission2.94-from-source-code</title>
@@ -1261,9 +1263,9 @@
         <title>Linux下的PDF阅读软件zathura</title>
         <pubTime>2018-01-22T09:58:31.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>PDF</tag>
+         
+        <tag>linux</tag>
          
          
            
@@ -1337,28 +1339,6 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的研究生阶段该如何度过？</title>
-        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-        <tag>规划</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1374,6 +1354,28 @@
            
              
               <breadCrumb title="实用" url="http://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的研究生阶段该如何度过？</title>
+        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
+        
+        <tag>忙</tag>
+         
+        <tag>规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -1458,6 +1460,4 @@
     </data>
     </url>
 
-    
-    
 </urlset>
