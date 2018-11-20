@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+
+
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "877b220f"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  <meta name="description" content="首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知">
+<meta name="keywords" content="windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 使用笔记-01">
+<meta property="og:url" content="http://rachpt.me/2018/01/27/windows-note-01/index.html">
+<meta property="og:site_name" content="rachpt&#39;s Blog">
+<meta property="og:description" content="首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1tfwit30j20sa0goaba.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1thecmcdj20vl0gcgno.jpg">
+<meta property="og:updated_time" content="2018-04-02T04:18:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows 使用笔记-01">
+<meta name="twitter:description" content="首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1tfwit30j20sa0goaba.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="rachpt's Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://rachpt.me/2018/01/27/windows-note-01/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Windows 使用笔记-01 | rachpt's Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109494468-2');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">rachpt's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/notes/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rachpt.me/2018/01/27/windows-note-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rachpt">
+      <meta itemprop="description" content="出去跑跑，总是好的">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rachpt's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Windows 使用笔记-01<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/windows-note-01.md" class="post-edit-link" title="编辑" target="_blank">
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-27 13:32:04" itemprop="dateCreated datePublished" datetime="2018-01-27T13:32:04+08:00">2018-01-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-04-02 12:18:21" itemprop="dateModified" datetime="2018-04-02T12:18:21+08:00">2018-04-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/实用/" itemprop="url" rel="index"><span itemprop="name">实用</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/实用/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/27/windows-note-01/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/27/windows-note-01/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:02</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知道自己的系统是啥，和别人的有啥区别，囧）。</p>
+<a id="more"></a>
+<p>目前而言，可以考虑安装的windows有三个 大版本：win7,win8.1,win10。win7应该很快进入与xp一样的停止支持的状态，而win8.1真心不适合桌面平台，win10将是我最先推荐的。现在几户所有的电脑都是64位的处理器了，除非老爷机。（对于win10 右键<code>此电脑</code>，<code>属性</code> 即可看到如下所示<code>信息页面</code>，或则在 <code>资源管理器</code> 中右键点击 <code>属性</code>）</p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1tfwit30j20sa0goaba.jpg" alt="windows-pic1"></p>
+<p>32位windows系统最大只支持3.6G左右的内存，如果你有4G或以上内存，请不要考虑32位系统。32位系统也有它自己的优点，小就是一个，32位系统可以节省系统安装空间30%-40%，32位系统当然是不支持64位应用程序的，同一个软件32位版与64版运行效率相当，能用64的我当然是推荐使用64的。</p>
+<p>如果你是考虑兼容性，在win7 与win10之间无法决则，我几乎可以告诉你兼容性几乎不用考虑，除非你要使用老掉牙的旧软件，或者是某些特别偏的久久未更新的行业（小众）软件。win10 几乎支持能用到的所有软件。</p>
+<p>如果你还是要使用win7，那么没必要非旗舰版不可，对于普通用户而言可能专业版就很不错了，一是安装体积较旗舰版小上不少，再则你永远用不到的旗舰版的功能也没必要占用你本来就不多的硬件资源。</p>
+<p>win8.1 我们直接忽略，一是安装体积较win7、10都大上不少（是win10的1.5倍），开始屏真的不适合桌面用户，还有那厚厚的程序边框（用过win10的窄边后你会觉得8.1很丑）[我会告诉你有软件可以修改，但是还是没有win10一个像素窄]。</p>
+<p> 至于win10，如果你是变形本，比如surface之类有触控屏的笔记本，并且想体验完整的windows服务，那么pro专业版或者enterprise企业版将是你最好的选择，教育版和企业版类似。对于普通user而言pro专业版就够了。家庭版没有本地策略组，很多必要的功能没有，所有强烈建议不要使用家庭版系统（谁用谁知道：开机，尼玛，正在安装系统更新，重启，靠，更新失败，正在回滚，重启；关键是这是一个循环，以后还会这样）。</p>
+<p>对于普通笔记本与台式机，如果你不用巨硬的uwp应用，并且不是edge浏览器的忠实粉丝（谁会用这玩意儿啊，体验太差！）。那么 <strong>windows 10 LTSB 企业长期服务支持版</strong> 将是最好的选择。推荐理由如下：</p>
+<ul>
+<li>原生无应用商店哪些没卵用的东西；</li>
+<li>无edge浏览器，有IE，不用考虑兼容性，有些网银必须这货才能用；</li>
+<li><p>更新少，稳定性高（当然可以设置禁用自动更新）。<br>LTSB目前有两个分支：ltsb 2015 和 ltsb 2016（这两个是独立维护不一样的）。推荐笔记本使用2016，台式机使用2015。理由：</p>
+</li>
+<li><p>2016 系统自带wifi热点（<em>你非要用猎豹wifi，我无话可说</em>）与护眼模式（<em>第三方软件也可以实现</em>），这两点笔记本比较需要。同时开始菜单较2015版有一点改变，16的更方便些。</p>
+</li>
+<li>2015 的软件兼容性可能更好，比如好用的<code>KClock</code>只能在2015上用，2016及其以上不行。[<code>win + x</code>]和2016有区别，个人觉得2015的更方便。<br>至于你一直关心的激活，除win7外，都只能 KMS激活180天（激活软件都贴心的做了定时重新激活，所以一次激活后你就不用管了，至于软件文末给<code>链接</code>），系统镜像下载，推荐<code>百度 i tell you</code> 或则记住这个 <a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">http://msdn.itellyou.cn/</a> 。</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1thecmcdj20vl0gcgno.jpg" alt="windows-pic2"></p>
+<p>点击详情，复制 <code>ed2k</code> 链接至百度云离线下载，然后使用工具从百度网盘下载即可得到系统镜像文件。</p>
+<p>推荐使用U盘全新安装。win10 的系统可以直接挂载镜像复制里面的全部内容至一个格式化的U盘即可完成启动盘的制作。无需向win7一样必须使用工具刻录制作启动盘。如果你不放心，可以使用这个免费的工具 <code>Rufus</code> <a href="http://rufus.akeo.ie/" target="_blank" rel="noopener">http://rufus.akeo.ie/</a> 。U盘格式一般使用fat32即可，其他的NTFS、exfat也行。</p>
+<p><strong>一本正经地系统安装开始</strong>。</p>
+<p>开始前备份好需要的文件。如果你有固态硬盘，推荐固态硬盘不要分区（自己百度分区脑补），机械的建议不要分太多，两个不能再多了。</p>
+<p>可能还有UEFI引导是大多数新手的困惑，UEFI引导需要配合GPT分区（如果有固态，这个是必须的！才能发挥固态的优势）。能使用UEFI则尽量使用。如果安装中发现 以前分区是MBR格式，如果无重要文件可以全盘格式化变成GPT格式分区，如果有重要分区不能格式化，找个PE系统，进去点点点几下就可以轻松转换格式，具体自己百度。</p>
+<p>鉴于windows的运行机制，个人建议固体硬盘留给C盘做系统盘，机械硬盘一个分区用作数据存储。如果只有一个机械硬盘，要安装的软件少，则100G给C盘，其他做数据存储。让C盘的空间使用率在60%或许是比较合适的。</p>
+<p>具体而言，不同的主板进入BIOS的方法可能不一样，大部分是使用<code>F2</code> 进入BIOS设置。装系统，需要关闭有个 security 啥的，允许 使用<code>USB boot</code> 引导 使用 UEFI，可以设置U盘的引导顺序为第一个，<code>F10</code>保存重启，如果不知道如何进入<code>boot manager</code> 的话。如果一切顺利，重启选择重USB引导启动进入安装界面，一路点点点，设置分区大小，会自动重启几下，随后系统就算是全新安装好了。如果你是个懒人，可以考虑双击<code>setup</code> 进行升级安装，但只能升级对应版本系统，并且升级后极有可能有一些莫名其妙的小bug，不推荐。</p>
+<p>win10 全系列+office 激活工具（<em>最好的激活工具</em>）：</p>
+<p>蓝奏云盘: <a href="https://pan.lanzou.com/i0fg1tg" target="_blank" rel="noopener">https://pan.lanzou.com/i0fg1tg</a> </p>
+<p>度盘链接: <a href="https://pan.baidu.com/s/1mjbPqm0#rach" target="_blank" rel="noopener">https://pan.baidu.com/s/1mjbPqm0</a> 密码: rach</p>
+<p>至于后续，会有其他windows系列教程上线，敬请期待。</p>
+
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/04/02/windows-note-02/" rel="bookmark">Windows 使用笔记-02</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---------本文结束<i class="fa fa-paw"></i>感谢阅读---------</div>
+    
+</div>
+
+      </div>
+    
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>rachpt</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://rachpt.me/2018/01/27/windows-note-01/" title="Windows 使用笔记-01">http://rachpt.me/2018/01/27/windows-note-01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/22/linux-pdfreader-zathura/" rel="next" title="Linux下的PDF阅读软件zathura">
+                <i class="fa fa-chevron-left"></i> Linux下的PDF阅读软件zathura
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/02/ms-scf-max-iterations/" rel="prev" title="Materials Studio CASTEP 迭代次数设置">
+                Materials Studio CASTEP 迭代次数设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif" alt="rachpt">
+            
+              <p class="site-author-name" itemprop="name">rachpt</p>
+              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">71</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://rachpt.iok.la/" title="MCP 课题组" target="_blank">MCP 课题组</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://agint.me/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://quanyaxin.github.io/" title="Quanyaxin" target="_blank">Quanyaxin</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rachpt</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">139k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">2:07</span>
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
+<div>
+  <i class="fa fa-user-md"></i> 
+  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
+  <i class="fa fa-eye"></i> 
+  本站访客数：<span id="busuanzi_value_site_uv"></span> 
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65362593";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="/static/css/player.css">
+</head>
+
+<div id="QPlayer">
+	<div id="pContent">
+		<div id="player">
+			<span class="cover"></span>
+			<div class="ctrl">
+				<div class="musicTag marquee">
+					<strong>Title</strong>
+					 <span> - </span>
+					<span class="artist">Artist</span>
+				</div>
+				<div class="progress">
+					<div class="timer left">0:00</div>
+					<div class="contr">
+						<div class="rewind icon"></div>
+						<div class="playback icon"></div>
+						<div class="fastforward icon"></div>
+					</div>
+					<div class="right">
+						<div class="liebiao icon"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ssBtn">
+				<div class="adf"></div>
+		</div>
+	</div>
+	<ol id="playlist"></ol>
+</div>
+<script src="//cdn.bootcss.com/jQuery.Marquee/1.3.94/jquery.marquee.min.js"></script>
+<script>
+  var playlist = [];
+  
+  playlist.push({title:'时间煮雨',artist:'小时代3：刺金时代',mp3:'https://m10.music.126.net/20181120201325/d37e78eb9b78ae1b1b4de95df769ecf7/ymusic/c724/5d53/0aa3/9e8ff94cf485bb8a00a296874670df38.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000000xWexl4IDgp7.jpg'})
+  
+  playlist.push({title:'团子大家族',artist:'CLANNAD',mp3:'https://fdfs.xmcdn.com/group33/M0A/BA/27/wKgJUVoDtHzzb37cAB6GDZold80719.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000001UINeG0D2h5q.jpg'})
+  
+  playlist.push({title:'虹之间',artist:'金贵晟',mp3:'https://music.163.com/song/media/outer/url?id=28219176.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M0000020pad81OQG64.jpg'})
+  
+  playlist.push({title:'Secret',artist:'茶太',mp3:'https://music.163.com/song/media/outer/url?id=640866.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000004OHYfb34IrnF.jpg'})
+  
+  playlist.push({title:'心做し (无心)',artist:'まじ娘 (majiko)',mp3:'https://music.163.com/song/media/outer/url?id=31134451.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000004GC5gr1Djev0.jpg'})
+  
+  playlist.push({title:'なんでもないや',artist:'君の名は',mp3:'https://m10.music.126.net/20181120201639/dc61a6c52bcbc3e83da6dafba05d5666/ymusic/718e/ffe8/44cc/bc8035532e4f63ae0cb48a4c1ff0e969.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M0000007oL0R1hDyxV.jpg'})
+  
+  playlist.push({title:'光るなら (若能绽放光芒)',artist:'《四月..》',mp3:'https://music.163.com/song/media/outer/url?id=29732992.mp3',cover:'https://p1.music.126.net/TM6SM2-ppcd1F66YyjR-Eg==/2537672838610591.jpg?param=300x300'})
+  
+  playlist.push({title:'フラッシュバック',artist:'(闪现)',mp3:'https://music.163.com/song/media/outer/url?id=36924083.mp3',cover:'https://p1.music.126.net/SL6lz7yGHXNQFbs5830Beg==/3408486048713557.jpg?param=300x300'})
+  
+  var isRotate = true;
+  var autoplay = false;
+</script>
+<script src="/static/js/player.js"></script>
+<script>
+  function bgChange(){
+	var lis= $('.lib');
+	for(var i=0; i<lis.length; i+=2)
+	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+  }
+  window.onload = bgChange;
+</script>
+
+</body>
+</html>
