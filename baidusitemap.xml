@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
+    <lastmod>2018-11-20T11:14:05.943Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 学习笔记</title>
+        <pubTime>2017-12-18T02:41:04.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rachpt.me/2018/03/29/a-bash-script-for-pt-signin/</loc>
     <lastmod>2018-11-19T07:50:13.939Z</lastmod>
     <data>
@@ -194,26 +214,6 @@
         <pubTime>2018-08-22T01:47:54.000Z</pubTime>
         
         <tag>vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://rachpt.me/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
-    <lastmod>2018-08-05T12:51:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 学习笔记</title>
-        <pubTime>2017-12-18T02:41:04.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
          
          
            
@@ -1339,28 +1339,6 @@
 
     
   <url>
-    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
-        
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="http://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     <data>
@@ -1376,6 +1354,28 @@
            
              
               <breadCrumb title="随笔" url="http://rachpt.me/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建一个方便的多平台笔记方案</title>
+        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
+        
+        <tag>MarkDown</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="实用" url="http://rachpt.me/categories/%E5%AE%9E%E7%94%A8/"/>
           
         </display>
     </data>

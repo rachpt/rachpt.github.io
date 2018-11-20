@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
+    
+    <lastmod>2018-11-20T11:14:05.943Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/2018/03/29/a-bash-script-for-pt-signin/</loc>
     
     <lastmod>2018-11-19T07:50:13.939Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
     
     <lastmod>2018-08-22T02:12:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
-    
-    <lastmod>2018-08-05T12:51:07.000Z</lastmod>
     
   </url>
   
