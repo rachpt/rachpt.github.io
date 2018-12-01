@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[change-to-use-archlinux]]></title>
+    <url>%2F2018%2F12%2F01%2Fchange-to-use-archlinux%2F</url>
+    <content type="text"><![CDATA[因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。 KED之前习惯了类windows的cinnamon，也想过直接使用manjaro的cinnamon版本，但是考虑到 mint19 上比较容易出现的xwindow卡死，于是决定尝试使用manjaro官方支持的kde版本，之前体验过一小段时间，当时感觉是初始设置反人类，设置麻烦。经过一两周的使用，现在基本上能把kde配置成方便自己习惯了。 文件双击打开， 桌面显示desktop文件夹内容， 任务栏调成类 windows， 开机自动启用小键盘， 安装 tim，kde connect配合安卓手机太棒了！… Tinyproxy安装好后啥配置对没改，使用 systemctl 启动不了，提示啥 /run/tinyproxy/tinyproxy.pid 无法创建。 解决办法：12345# PidFile: Write the PID of the main tinyproxy thread to this file so it# can be used for signalling purposes.# If not specified, no pidfile will be written.##PidFile "/run/tinyproxy/tinyproxy.pid" 取消 /etc/tinyproxy/tinyproxy.conf 如上的注释行。参考文档。 vsftpdvsftpd 的匿名模式路径一片空白，使用shell的ftp也连接不了。解决办法：123vim /etc/vsftpd.conf# 添加下面一行seccomp_sandbox=NO 参考文档。 例外，vsftpd 不支持使用 ln -s 软连接，使用 mount –band /old /new 可解。12# 在 /etc/fstab 中添加如下行，以便开机自动bind。/mnt/data/pub /srv/ftp/pub none bind 0 0 swapfie使用sudo fallocate -l 20G /swapfile 快速创建大体积swapfile 文件。12345678910111213141516sudo fallocate -l 20G /swapfile# 为了安全sudo chown root:root /swapfilesudo chmod 0600 /swapfilesudo mkswap /swapfile# 开sudo swapon /swapfile# 关sudo swapoff /swapfile# 添加开机自动挂载vim /etc/fstab/swapfile none swap sw 0 0 /etc/fstab 会在启动的时候执行. 若文件有误那么会启动失败！！！]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[an-error-in-mpv-player]]></title>
     <url>%2F2018%2F10%2F28%2Fan-error-in-mpv-player%2F</url>
     <content type="text"><![CDATA[最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。 使用终端运行错误提示如下， 12$ mpv mpv: relocation error: /usr/lib/x86_64-linux-gnu/libldb.so.1: symbol talloc_strdup_append_buffer version TALLOC_2.0.2 not defined in file libtalloc.so.2 with link time reference 百度一番，有类似的问题的解决记录。 文档1，文档2. 经比较，应该是 libtalloc 有问题。 解决： 123sudo apt-get install --reinstall libtevent0 libtalloc2# 可能只要最后的 libtalloc2 即可 小记。]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-10-28T08:37:38.000Z</updated>
+  <updated>2018-12-01T13:30:09.591Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>change-to-use-archlinux</title>
+    <link href="http://rachpt.me/2018/12/01/change-to-use-archlinux/"/>
+    <id>http://rachpt.me/2018/12/01/change-to-use-archlinux/</id>
+    <published>2018-12-01T12:59:54.000Z</published>
+    <updated>2018-12-01T13:30:09.591Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。</p></blockquote><a id="more"></a><h1 id="KED"><a href="#KED" class="headerlink" title="KED"></a>KED</h1><p>之前习惯了类windows的cinnamon，也想过直接使用manjaro的cinnamon版本，但是考虑到 mint19 上比较容易出现的xwindow卡死，于是决定尝试使用manjaro官方支持的kde版本，之前体验过一小段时间，当时感觉是初始设置反人类，设置麻烦。<br>经过一两周的使用，现在基本上能把kde配置成方便自己习惯了。</p><ol><li>文件双击打开，</li><li>桌面显示desktop文件夹内容，</li><li>任务栏调成类 windows，</li><li>开机自动启用小键盘，</li><li>安装 tim，kde connect配合安卓手机太棒了！<br>…</li></ol><h1 id="Tinyproxy"><a href="#Tinyproxy" class="headerlink" title="Tinyproxy"></a>Tinyproxy</h1><p>安装好后啥配置对没改，使用 systemctl 启动不了，提示啥 <code>/run/tinyproxy/tinyproxy.pid</code> 无法创建。</p><p>解决办法：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PidFile: Write the PID of the main tinyproxy thread to this file so it</span></span><br><span class="line"><span class="comment"># can be used for signalling purposes.</span></span><br><span class="line"><span class="comment"># If not specified, no pidfile will be written.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#PidFile "/run/tinyproxy/tinyproxy.pid"</span></span><br></pre></td></tr></table></figure></p><p>取消 <code>/etc/tinyproxy/tinyproxy.conf</code> 如上的注释行。<br><a href="https://github.com/StreisandEffect/streisand/issues/1381" target="_blank" rel="noopener">参考文档</a>。</p><h1 id="vsftpd"><a href="#vsftpd" class="headerlink" title="vsftpd"></a>vsftpd</h1><p>vsftpd 的匿名模式路径一片空白，使用shell的ftp也连接不了。<br>解决办法：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/vsftpd.conf</span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line">seccomp_sandbox=NO</span><br></pre></td></tr></table></figure></p><p><a href="https://wiki.archlinux.org/index.php/Very_Secure_FTP_Daemon" target="_blank" rel="noopener">参考文档</a>。</p><p>例外，vsftpd 不支持使用 ln -s 软连接，使用 mount –band /old /new 可解。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 /etc/fstab 中添加如下行，以便开机自动bind。</span></span><br><span class="line">/mnt/data/pub                             /srv/ftp/pub       none  <span class="built_in">bind</span>    0 0</span><br></pre></td></tr></table></figure></p><h1 id="swapfie"><a href="#swapfie" class="headerlink" title="swapfie"></a>swapfie</h1><p>使用<code>sudo fallocate -l 20G /swapfile</code> 快速创建大体积swapfile 文件。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sudo fallocate -l 20G /swapfile</span><br><span class="line"><span class="comment"># 为了安全</span></span><br><span class="line">sudo chown root:root /swapfile</span><br><span class="line"></span><br><span class="line">sudo chmod 0600 /swapfile</span><br><span class="line"></span><br><span class="line">sudo mkswap /swapfile</span><br><span class="line"><span class="comment"># 开</span></span><br><span class="line">sudo swapon /swapfile</span><br><span class="line"><span class="comment"># 关</span></span><br><span class="line">sudo swapoff /swapfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加开机自动挂载</span></span><br><span class="line">vim /etc/fstab</span><br><span class="line"></span><br><span class="line">/swapfile      none       swap    sw 0 0</span><br></pre></td></tr></table></figure></p><p>/etc/fstab 会在启动的时候执行. 若文件有误那么会启动失败！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>an-error-in-mpv-player</title>
@@ -468,30 +490,6 @@
     
     
       <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>use-outer-variables-in-awk</title>
-    <link href="http://rachpt.me/2018/03/31/use-outer-variables-in-awk/"/>
-    <id>http://rachpt.me/2018/03/31/use-outer-variables-in-awk/</id>
-    <published>2018-03-31T08:54:27.000Z</published>
-    <updated>2018-03-31T09:25:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>awk 命令中使用外部定义的变量。</p></blockquote><a id="more"></a><p>做好了的</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (( i = 1; i &lt; 22; i++ ))</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">cijTempName=`cat <span class="variable">$tempfile</span> | gawk <span class="string">'$1 == loop &#123;print $4&#125;'</span> loop=<span class="variable">$i</span>`</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$i</span> -ge 2 ] &amp;&amp; [ <span class="variable">$i</span> -le 6 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"-\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"> <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$cijTempName</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"0\t\c"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="variable">$cijTempName</span><span class="string">"\t\c"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><p>使用 awk（gawk 是 AWK 的 GNU 版本）获取每行第一个位置的元素，并与外面的 loop counter 比较，如果比配，则打印这一行中的 第四个元素，否则，1-6 loop 中打印 “-”，后面的打印 0。</p><p>关键点 gawk 中判断 \$1 与 loop counter 如何处理。</p><blockquote><p>格式：awk ‘{action}’  变量名=变量值   </p></blockquote><p>这样传入变量，可以在action中获得值。 注意：变量名与值放到’{action}’后面。</p><p>如果要在 BEGIN 的action不能获得变量值，使用 参数 v，即是 <code>awk -v</code> 。这里没用到。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpw3zwkxvnj20f607udgy.jpg" alt="pic"></p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpw4kk42izj20g205cdh3.jpg" alt="pic"></p><p><a href="https://www.cnblogs.com/chengmo/archive/2010/10/03/1841753.html" target="_blank" rel="noopener">参考内容</a>。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;awk 命令中使用外部定义的变量。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
-    
-    
-      <category term="awk" scheme="http://rachpt.me/tags/awk/"/>
     
   </entry>
   
