@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[something-difference-from-manjaro-back-to-ubuntu]]></title>
+    <url>%2F2018%2F12%2F18%2Fsomething-difference-from-manjaro-back-to-ubuntu%2F</url>
+    <content type="text"><![CDATA[qprop无法在软件较新的manjaro上编译运行，matlab试试脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。 适合自己的linux发行版到目前为止，我已经完全使用linux系统一年了，所谓完全就是作为主力机器，能不用Windows坚决不用Windows。在这之前自认为对Windows的使用有一些自己的见解，对于配置出适合自己的Windows工作环境非常熟悉。清晰的知道Windows所不能给我提供的功能(或者实现困难)，我尝试过使用 ubuntu 以及ubuntu麒麟(大概14年，那时候原生的ubuntu配置中文比较费劲)，当时啥都不会，没多久就回到Windows10预览版了(那时候Windows8的开始屏可恶心死我了)，后面有试过几次，都没能领会到linux的精髓。 去年的大约这个时候，由于当时有一台闲置的pc用于 web 服务器，刚开始用的 Windows10，由于Windows总是自己坏掉，于是试了 Windows server 2016，稳定运行15天后再次死机，再加上当时我们需要连接超级计算机提交计算任务，于是了解了部分linux的脚本命令等，有理由相信我已经可以驾驭(使用)linux了，于是安装了ubuntu 16.04lts 到那台闲置的机器上。经过各种配置后，相当稳定，连续正常运行 93 天(后来需要升级系统才关机的)，在了解到各种软件的linux情况后，果断将工作电脑安装上 linux。 使用过好几个桌面系统，debian 系的、redhat 系的，最后选择了 linux mint，因为界面很适合从Windows转过来的用户，ubuntu的核心让我能够在网上找到较多的教程。用的相当舒适。直到后来从 18.3 升级到 19，有道词典用不了了(看文献屏幕取词翻译)。 我也试过回到就得 18.3，但是当时因为 python 的几个库的依赖相互冲突解决不了(可能是 3.5太老了，加上用过新的界面就回不去了)，最后我强行升级系统python直接将系统弄死了。 rpm的包看着好不友好，还有个莫名其妙的 iptable，对于我来说往往全全就是阻碍，centos 难用到死的 gnome桌面我打死不会再试，suse 由于当时试的 kde 版本，各种快捷键都不一样，最后被定义为难用。 先在笔记本装了 manjaro 的 cinnamon版本，一直也没啥问题。体验几乎和 mint 一致。最后将 开机 没有任何窗口的mint 18.3 替换成manjaro kde版，毕竟ked试manjaro官方维护的，可能会好一些。 经过短暂而痛苦的学习习惯kde桌面后，配置后喜爱的工作环境，还行。 不知道什么原因，TensorFlow本来一条命令轻轻松松搞定，然而费了吃奶的力气才装上，MATLAB的安装更是气，先后试了 2017a 2018a 2018b，中午乱码，无法创建实时脚本，帮助页面显示有问题。忍着用！还有最近好几次遇到升级时提示 python的xxx已经存在，无法升级系统，长久考虑，以后可能会出大问题。 加上最近导师想要使用 qprop 计算东西，刚开始怎么都编译不了，后面编译好后运行有问题。但是在个导师新装的 ubuntu 上编译后可以运行。 在虚拟机中测试 kubuntu 可以编译运行。于是重装系统至 kubuntu。 matlab刚开始时 实时脚本帮助文档都没问题，但是更换为原来的 home 后，又有问题了。删除 ~/.matlab 后一切正常！ 搜狗乱码貌似不需要 archlinux 的在 .xinputrc 里面加东西，其他参考这里。 使用原home使用 fstab 挂载原来的 home，体验很糟糕，文件管理器中文乱码，全新配置不会。 使用 cp -axv /old/home/xxconf /new/home/dir 还原 .mozilla 等软件数据。 待续…]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux, ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[dual-disk-install-dual-system]]></title>
     <url>%2F2018%2F12%2F10%2Fdual-disk-install-dual-system%2F</url>
     <content type="text"><![CDATA[双 11 花了110元买了块 mstata 固态硬盘，完成多年的愿望。这里记录一下双硬盘独立安装 windows 和 Linux 系统。 现在的情况一般网上都是单一硬盘安装双系统的，不管是 legacy 或是 uefi，双系统的引导文件都在一块硬盘里面，所以最多就是通过软件修复一下例外一个系统的引导即可。现在的情况是两块固态硬盘，大小一样 120G，需要将 windows 安装到其中一块，而 Linux 安装到另外一块，并且希望在开机的时候提供一个友好的选择系统的界面。 比较容易实现的是，两块硬盘按照正常步骤分别安装到两硬盘，开机的时候 狂按 F12 (或者其他) 进入 boot manger 选择不同启动硬盘，就能进入不同的系统。但是操作很是不友好。 背景知识win7 不支持 uefi + GPT 模式启动，只能使用传统的 legacy Bios + MBR 模式启动，缺点很明显，硬盘上线2.2T，启动速度也相对慢，多了 Bios 自检过程。更多请看这里，或者这里。 刚开始的时候，我的唯一的硬盘上面安装的是 manjaro Linux，加装硬盘后，我使用常规方法安装了 windows 10，然后我将 windows 盘作为默认启动硬盘，使用 easyBSD 创建 Linux 的引导，失败告终，windows 不能切换 Linux，只能改启动应到盘。 就在要绝望的时候，有人说 Fedora 可以双硬盘安装并解决双系统引导问题。于是开始准别全部重装。 重装系统能用 uefi 的机器我当然不会使用 legacy 啦。 首先安装 windows 到 windows 认为的 disk 0，后来发现这个可有可无。有几点需要注意，修改 windows 安装程序 默认的 efi 100m 的设置，因为我们想把 linux 的 efi 挂载到 windows 的 efi 分区。时候证明，这一步可能不需要(在linux下看到 efi 使用量 35 m)。 系统版本选择界面后，按Shift+F10调出命令提示符， 1234567diskpartlist diskselect disk 0cleanconvert gptcreate partition efi size=800create partition primary size=102400 自定义 efi 分区大小， 其实 500m 可能就够了，保险起见，设了 800m。 具体情况这个参考文档。 第一次尝试安装 Fedora cinnamon 版本，一切照旧，我只是选择了 安装到另外空的硬盘，分区使用自动。装好后，自动将 Linux 盘作为了默认引导硬盘，greb 页面出了 Fedora 外还有 windows 的启动项，一切如愿。当然选择 windows 所在硬盘为默认引导盘 自然无法进入 Linux。 本来就此结束，但是那个引导界面实在是太丑了，还有 Fedora 用不习惯。 于是开始第二次尝试。Linux 版本是 manjaro KDE 版本，windows 还是之前的不变，只是格式化 Fedora 的盘。安装的时候 自己设置分区以及挂载点。windows 的(/dev/sda) efi 分区挂载到 /boot/efi，不格式化， /dev/sdb 上8 G linuxswap，其余全部ext4 挂载点 / 。 装完后 一切和 Fedora 一致，引导界面漂亮了很多，很现代，还能记住上一次使用的引导选项。 在 linux 下可以看到 efi 里面有 windows 的引导文件夹。 有可能在windows下使用 efi 引导修复工具可以将 Linux 引导选项加入到 windows 引导列表里面，这样每个硬盘都能引导双系统(未测试)。 。]]></content>
@@ -527,8 +538,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>olex2</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -769,8 +780,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>MarkDown</tag>
         <tag>笔记</tag>
+        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>

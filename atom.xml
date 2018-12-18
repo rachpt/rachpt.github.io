@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachpt.me/"/>
-  <updated>2018-12-11T13:05:32.179Z</updated>
+  <updated>2018-12-18T08:15:38.332Z</updated>
   <id>http://rachpt.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>something-difference-from-manjaro-back-to-ubuntu</title>
+    <link href="http://rachpt.me/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/"/>
+    <id>http://rachpt.me/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</id>
+    <published>2018-12-18T07:03:54.000Z</published>
+    <updated>2018-12-18T08:15:38.332Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>qprop无法在软件较新的manjaro上编译运行，matlab试试脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。</p></blockquote><a id="more"></a><h1 id="适合自己的linux发行版"><a href="#适合自己的linux发行版" class="headerlink" title="适合自己的linux发行版"></a>适合自己的linux发行版</h1><p>到目前为止，我已经完全使用linux系统一年了，所谓完全就是作为主力机器，能不用Windows坚决不用Windows。在这之前自认为对Windows的使用有一些自己的见解，对于配置出适合自己的Windows工作环境非常熟悉。清晰的知道Windows所不能给我提供的功能(或者实现困难)，我尝试过使用 ubuntu 以及ubuntu麒麟(大概14年，那时候原生的ubuntu配置中文比较费劲)，当时啥都不会，没多久就回到Windows10预览版了(那时候Windows8的开始屏可恶心死我了)，后面有试过几次，都没能领会到linux的精髓。</p><p>去年的大约这个时候，由于当时有一台闲置的pc用于 web 服务器，刚开始用的 Windows10，由于Windows总是自己坏掉，于是试了 Windows server 2016，稳定运行15天后再次死机，再加上当时我们需要连接超级计算机提交计算任务，于是了解了部分linux的脚本命令等，有理由相信我已经可以驾驭(使用)linux了，于是安装了ubuntu 16.04lts 到那台闲置的机器上。经过各种配置后，相当稳定，连续正常运行 93 天(后来需要升级系统才关机的)，在了解到各种软件的linux情况后，果断将工作电脑安装上 linux。</p><p>使用过好几个桌面系统，debian 系的、redhat 系的，最后选择了 linux mint，因为界面很适合从Windows转过来的用户，ubuntu的核心让我能够在网上找到较多的教程。用的相当舒适。直到后来从 18.3 升级到 19，有道词典用不了了(看文献屏幕取词翻译)。</p><p>我也试过回到就得 18.3，但是当时因为 python 的几个库的依赖相互冲突解决不了(可能是 3.5太老了，加上用过新的界面就回不去了)，最后我强行升级系统python直接将系统弄死了。</p><p>rpm的包看着好不友好，还有个莫名其妙的 iptable，对于我来说往往全全就是阻碍，centos 难用到死的 gnome桌面我打死不会再试，suse 由于当时试的 kde 版本，各种快捷键都不一样，最后被定义为难用。</p><p>先在笔记本装了 manjaro 的 cinnamon版本，一直也没啥问题。体验几乎和 mint 一致。<br>最后将 开机 没有任何窗口的mint 18.3 替换成manjaro kde版，毕竟ked试manjaro官方维护的，可能会好一些。</p><p>经过短暂而痛苦的学习习惯kde桌面后，配置后喜爱的工作环境，还行。</p><p>不知道什么原因，TensorFlow本来一条命令轻轻松松搞定，然而费了吃奶的力气才装上，MATLAB的安装更是气，先后试了 2017a 2018a 2018b，中午乱码，无法创建实时脚本，帮助页面显示有问题。忍着用！还有最近好几次遇到升级时提示 python的xxx已经存在，无法升级系统，长久考虑，以后可能会出大问题。</p><p>加上最近导师想要使用 <a href="https://github.com/jam31118/rigged-qprop" target="_blank" rel="noopener">qprop</a> 计算东西，刚开始怎么都编译不了，后面编译好后运行有问题。但是在个导师新装的 ubuntu 上编译后可以运行。</p><p>在虚拟机中测试 kubuntu 可以编译运行。于是重装系统至 kubuntu。</p><h1 id="matlab"><a href="#matlab" class="headerlink" title="matlab"></a>matlab</h1><p>刚开始时 实时脚本帮助文档都没问题，但是更换为原来的 home 后，又有问题了。<br>删除 ~/.matlab 后一切正常！</p><h1 id="搜狗乱码"><a href="#搜狗乱码" class="headerlink" title="搜狗乱码"></a>搜狗乱码</h1><p>貌似不需要 archlinux 的在 .xinputrc 里面加东西，其他<a href="https://blog.csdn.net/oncealong/article/details/79328930" target="_blank" rel="noopener">参考这里</a>。</p><h1 id="使用原home"><a href="#使用原home" class="headerlink" title="使用原home"></a>使用原home</h1><p>使用 fstab 挂载原来的 home，体验很糟糕，文件管理器中文乱码，全新配置不会。</p><p>使用 cp -axv /old/home/xxconf /new/home/dir 还原 .mozilla 等软件数据。</p><p>待续…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;qprop无法在软件较新的manjaro上编译运行，matlab试试脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+    
+    
+      <category term="linux, ubuntu" scheme="http://rachpt.me/tags/linux-ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>dual-disk-install-dual-system</title>
@@ -467,29 +491,6 @@
       <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
     
       <category term="flexget" scheme="http://rachpt.me/tags/flexget/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 使用笔记-02</title>
-    <link href="http://rachpt.me/2018/04/02/windows-note-02/"/>
-    <id>http://rachpt.me/2018/04/02/windows-note-02/</id>
-    <published>2018-04-02T04:00:00.000Z</published>
-    <updated>2018-09-06T02:05:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>承诺好的笔记，一直没写，一是不好意思，因为我已经转向 linux 了，不好说啥，二是才学疏浅，想到没必要将自己的观点强加到他人身上。</p><p>但还是继续，承诺需要兑现。</p></blockquote><a id="more"></a><h1 id="装机后驱动"><a href="#装机后驱动" class="headerlink" title="装机后驱动"></a>装机后驱动</h1><p>不管是核心显卡还是独立显卡，刚刚装好系统后，显示一般都比较粗大，甚至是模糊，亮度最大，不能调节，这是驱动的问题，需要更新驱动。如果不是很老的机器，或者硬件特殊，只需要使用 windows 的系统更新即可自动装好合适的驱动。</p><p>你可能需要先激活系统才能进行自定义设置。激活工具推荐 01笔记文末 链接。</p><p>如果嫌 windows 系统更新的下载速度慢，可以使用 <a href="https://pan.baidu.com/s/1eSvl02m" target="_blank" rel="noopener">绿色版的 驱动精灵</a>安装驱动，推荐 在 <a href="http://www.zdfans.com/" target="_blank" rel="noopener">http://www.zdfans.com/</a> 上下载，或者 baidu，如果你经验足够丰富不会下到 <strong>下载器</strong> 安装流氓软件。</p><p>右键 <code>此电脑</code>  —-&gt; <code>管理</code> —-&gt;  <code>设备管理器</code>（或者 <code>ctrl + x</code>   —-&gt; <code>m</code>，或者 <code>右键</code> 开始 —-&gt; <code>设备管理器(M)</code>）进入设备管理器，没有叹号，表明几乎所有驱动 ok 了。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy2n877tnj21030nz0wq.jpg" alt="pic"></p><h1 id="关闭-windows-的自动更新"><a href="#关闭-windows-的自动更新" class="headerlink" title="关闭 windows 的自动更新"></a>关闭 windows 的自动更新</h1><p>为什么要关闭 自动更新，会不会不安全？</p><p>几乎没有坏的影响，好的到是有，之所以 你被流氓 安装 xx管家、xx助手等不是电脑中毒了，而是你自己手贱所致。如何下载到正确的软件 我之后会提到。别用软件管家！真的是没必要，贪图眼前的便利准会掉坑里。</p><p>自动更新，windows 防火墙，windows defender 这三个不是同一个东西。</p><p>如何关闭。（家庭版需要其他方法，自己百度）</p><p>点击 <code>运行</code>，或者     <code>win + R</code> ，输入 <code>gpedit.msc</code> ；或者 打开 <code>cmd</code> 输入 <code>gpedit</code> 。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy310p3rwj20r70gsq3u.jpg" alt="pic"></p><p>依次展开 <code>计算机配置</code> —-&gt; <code>管理模板</code> —-&gt; <code>windows 组件</code> —-&gt;  <code>windows 更新</code>。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy358unh2j20ky0eowfm.jpg" alt="pic"></p><p>将 <code>配置自动更新</code>  （双击打开） 改成 <code>已禁用</code> ，这是最重要的，其他的可以不改，如果你想尝试 ，请仔细阅读 说明。可以将 <code>自动更新频率</code> 设为 <code>禁用</code>。</p><p>同样的道理，你可以在这里面 禁用 onedrive  defender等。</p><p>理论上讲，只要你不自己去点 设置（<code>win+I</code>） 里面的 检查更新，系统不会自己 更新。</p><h1 id="运行库"><a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>Microsoft Visual C++ Redist xxxx，有些软件提醒你安装运行库，</p><p>推荐  <a href="http://www.zdfans.com/systemplus/yunxingku" target="_blank" rel="noopener">zdfans</a>  上面的运行库。说一下，这个 zdfans 大部分软件不是 他自己做的，是搬运，或者说是一种备份。自己百度 常用运行库也是可以的。</p><h1 id="别提醒我-是否"><a href="#别提醒我-是否" class="headerlink" title="别提醒我 是否"></a>别提醒我 是否</h1><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy3kbspuuj210q0p644g.jpg" alt="pic"></p><p>我知道需要运行的软件很安全，不需要这个。怎么去掉？</p><p>打开 <code>控制面板</code>（<code>win + R</code>然后输入 <code>ctontrol</code>）不行的话你点点点找一下，</p><p>展开 <code>用户账户</code>，然后再点击 <code>用户账户</code>。接着 <code>更改用户账户控制设置</code>。</p><p>滑块移到最下面，确定。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy3rh9rg3j20v80lracg.jpg" alt="pic"></p><h1 id="显示此电脑"><a href="#显示此电脑" class="headerlink" title="显示此电脑"></a>显示此电脑</h1><p><code>win + I</code> 打开设置，或者你点点点找一下，不同版本可能不一样。</p><p><code>个性化</code> —-&gt; <code>主题</code> —-&gt; <code>桌面图标设置</code>，把<code>计算机</code>勾上，其他的按需勾选。</p><p>又或者 <code>桌面 右键</code> —-&gt; <code>个性化</code> —-&gt; <code>主题</code> —-&gt; <code>桌面图标设置</code>。</p><p>点点点，没什么好说的。</p><h1 id="更干净的界面"><a href="#更干净的界面" class="headerlink" title="更干净的界面"></a>更干净的界面</h1><p>推荐 软件 <code>dism++</code>， 下载请出门百度，第一个就是（如果你没被广告）。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy41gicfdj20ks06yq3n.jpg" alt="pic"></p><p> 这个  <a href="https://www.chuyu.me/zh-Hans/index.html" target="_blank" rel="noopener">Dism++ x86/x64</a> ，就是下载链接。</p><p> 绿色软件 无需安装，解压后 推荐放到 D 盘(区别于系统盘)。</p><p>dism++ 可以干的事：</p><ul><li>清理垃圾，清理 C盘的windows 目录，我一般是全部勾上清理。</li><li>去掉 桌面 <code>快捷方式 字样</code>，<code>快捷方式箭头</code>，以及<code>小盾牌</code>，具体自己去该软件里面点点点找一下。</li><li>精简 <code>文件资源管理器</code> （就是点开此电脑的界面）左侧 的东西，比如网络、家庭组、可移动设备、以及此电脑下的 6个（或者其他）文件夹。</li><li>找回 window 照片查看器，去掉 ie 右上角笑脸。</li><li>关闭 安全警告等等 。</li><li>卸载 uwp 应用，不懂别乱卸！</li></ul><h1 id="显示复选框-扩展名等"><a href="#显示复选框-扩展名等" class="headerlink" title="显示复选框 扩展名等"></a>显示复选框 扩展名等</h1><p>如下图没什么好说的。</p><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy4cthwiaj20no0g43zm.jpg" alt="pic"></p><h1 id="清理注册表"><a href="#清理注册表" class="headerlink" title="清理注册表"></a>清理注册表</h1><p>软件卸载后一般会在注册表里面留下无用的记录，可以使用 <code>CCleaner</code>清理，这软件不免费，推荐 zdfans 上面下载，或者其他的 什么 大眼仔啥的。</p><p>这个软件也可以清理系统 垃圾 ，主要是 user 目录下的，注意清理别勾选 浏览器的 cookie，否则你每次都要登录。</p><p>使用绿色版！</p><h1 id="一些日用软件"><a href="#一些日用软件" class="headerlink" title="一些日用软件"></a>一些日用软件</h1><ol><li><p>bandizip</p><p><a href="https://www.bandisoft.com/bandizip/cn/" target="_blank" rel="noopener">点击到官网</a>，免费，无广告，图标主题不错！兼容 rar、7z、zip、等各种格式，压缩 推荐 使用 7z 格式，别用 rar 这个收费格式，也别用各种破解版 winRAR 了（别提免费版），好压、360压啥的也不要用。而且支持不解压 看图。自动解压功能也很好用，具体看官网的介绍。</p><p><a href="https://www.7-zip.org/" target="_blank" rel="noopener">7zip</a> 也不错，可是界面有点丑。不嫌弃用这个也可以的。</p></li><li><p>potplayer</p><p>棒子出品，质量不错，解码强，无广告，可玩性很丰富，有很多快捷键。</p><p><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener">点击到官网</a> ，安装的时候记得把推荐的额外解码器都装上，保平安。如果嫌烦，可以关闭它的自动更新。开源 全平台的 <a href="http://www.videolan.org/" target="_blank" rel="noopener">vlc</a> 也是不错的，论外观易用性，还是首推 pot。我 Linux 上最喜欢的简洁 <a href="https://mpv.io/" target="_blank" rel="noopener">mpv</a> (全平台)播放器是不会推荐的，那是极客的最爱。</p><p>极客请使用 <a href="https://mpv.io/" target="_blank" rel="noopener">mpv 播放器</a>，介绍可以看<a href="https://www.iplaysoft.com/mpv.html" target="_blank" rel="noopener">这里</a>。</p></li><li><p>TIM</p><p>比 QQ 好，干净些许。</p></li><li><p>Sumatra PDF</p><p>免费小巧的 pdf &amp; 电子书（mobi、epub等）阅读软件，如果你<strong>不需要 做标记</strong>，用这个准没错，有绿色便携版，推荐使用安装版，可以关联格式。</p><p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">点击到官网</a> ，LaTeX 的御用 阅读器。</p></li><li><p>Gimp &amp; photoshop</p><p>这年头，不会P图，好意思说自己会用电脑？</p><p>免费 开源 跨平台 就用 Gimp，只用 win 的话，网上搜个 破解版的 ps cc，有绿色破解版，自己baidu，这玩意儿 熟能生巧。</p><p><a href="https://www.gimp.org/" target="_blank" rel="noopener">点击到 Gimp 官网</a> 。Gimp 比 PS 小巧很多，有中文官方文档。</p></li><li><p>Snipaste</p><p><a href="https://www.snipaste.com/" target="_blank" rel="noopener">点击到官网</a> ，比 QQ（TIM） 的强大，图标好看，快捷键强。免费。希望 linux 版快点出来。</p></li><li><p>写代码</p><p>Visual Studio Code，atom，sublime 破解版，notepad++，notepad2 都不错。</p><p>如果只是想看 linux 生成的 文本文件 ，notepad2 代替默认的记事本很便利 (写字板可以救急！)。</p></li><li><p>IDM &amp; FDM</p><p>下载器，区别前者收费，后者免费，但是前者感觉更好。迅雷什么的还是不要用。</p><p><a href="https://www.freedownloadmanager.org/download.htm" target="_blank" rel="noopener">Get Free Download Manager</a> ，<a href="https://pan.lanzou.com/i0lcb4d" target="_blank" rel="noopener">IDM -旧版- 绿色破解版</a> 。</p></li><li><p>视频压制</p><p>推荐使用 <a href="https://maruko.appinn.me/" target="_blank" rel="noopener">小丸工具箱</a>，如果你不会 使用 ffmpeg 的话，megui 啥的大部分人也用不着。</p></li><li><p>隆重介绍一下火绒</p><p>想不出什么理由让我不推荐它。如果你不放心 defender ，别用管家、别用卫士！</p><p><a href="https://www.huorong.cn/" target="_blank" rel="noopener">点击到官网</a> ，注意 设置取消 它的 主页推广，如果你不想被它换主页。</p></li></ol><p>先这样吧 :joy: 。</p><p>推荐阅读 <a href="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/content/zh-CN/" target="_blank" rel="noopener">Windows 绝赞应用</a> 。 可以先关注 <a href="http://amazingapps.org/" target="_blank" rel="noopener">http://amazingapps.org/</a> 这个，截止目前就 windows 的比较完整。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;承诺好的笔记，一直没写，一是不好意思，因为我已经转向 linux 了，不好说啥，二是才学疏浅，想到没必要将自己的观点强加到他人身上。&lt;/p&gt;
-&lt;p&gt;但还是继续，承诺需要兑现。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="windows" scheme="http://rachpt.me/tags/windows/"/>
     
   </entry>
   
