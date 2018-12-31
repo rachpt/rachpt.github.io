@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3lo8lu2j20sj0nq0xs.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3mvwd53j218g0p0n4n.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3oxdhebj218g0p0jyf.jpg">
-<meta property="og:updated_time" content="2018-12-31T10:40:18.036Z">
+<meta property="og:updated_time" content="2018-12-31T10:46:41.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="install-matlab-on-archlinux">
 <meta name="twitter:description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。">
@@ -417,7 +417,7 @@
                 
               
 
-              <time title="创建时间：2018-12-31 17:50:22 / 修改时间：18:40:18" itemprop="dateCreated datePublished" datetime="2018-12-31T17:50:22+08:00">2018-12-31</time>
+              <time title="创建时间：2018-12-31 17:50:22 / 修改时间：18:46:41" itemprop="dateCreated datePublished" datetime="2018-12-31T17:50:22+08:00">2018-12-31</time>
             
 
             
@@ -522,9 +522,9 @@
 <p>由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="linux-上安装-matlab"><a href="#linux-上安装-matlab" class="headerlink" title="linux 上安装 matlab"></a>linux 上安装 matlab</h1><p>不同于windows，在linux安装iso封装的软件可能需要使用命令(mount)挂载先，然后运行安装程序，后面就是熟悉的点点了。大体步骤如下。</p>
+<h1 id="linux-上安装-matlab"><a href="#linux-上安装-matlab" class="headerlink" title="linux 上安装 matlab"></a>linux 上安装 matlab</h1><p>不同于windows，在linux安装iso封装的软件可能需要使用命令(mount)挂载先，然后运行安装程序，后面就是熟悉的点点点了。大体步骤如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mkdir /tmp/matlab</span><br><span class="line"></span><br><span class="line">sudo mount  -o loop /mnt/data/MATLAB_R2018b_Linux/R2018b_glnxa64_dvd1.iso  /tmp/matlab</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新开一个 terminal</span></span><br><span class="line"><span class="comment"># 使用普通账户运行！</span></span><br><span class="line">sudo /tmp/matlab/install  <span class="comment"># 如果安装到自己的家目录，不需要使用 sudo。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 后面会弹出一个安装界面，</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若全部安装，50% 时提示弹出 dvd1 插入 dvd2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 df 查看挂在的所有设备</span></span><br><span class="line">sudo umount -f /dev/loop0  <span class="comment"># 如果提示设备忙，可以稍微等几分钟，再试。</span></span><br><span class="line"></span><br><span class="line">sudo mount  -o loop /mnt/data/MATLAB_R2018b_Linux/R2018b_glnxa64_dvd2.iso  /tmp/matlab</span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击安装界面的继续</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后  umount ，以及 rmdir /tmp/matlab</span></span><br></pre></td></tr></table></figure>
-<p> 话windows的安装一样(挂载相同的盘符)，dvd2 的挂载点(路径)应与dvd1 一至。理论上相当于将两dvd解压到一个文件夹(挂载相当于允许你分两次解压)。</p>
+<p> 和windows的安装一样(挂载相同的盘符)，dvd2 的挂载点(路径)应与dvd1 一致。理论上相当于将两dvd解压到一个文件夹(挂载相当于允许你分两次解压)。</p>
 <h1 id="matlab-支持的系统"><a href="#matlab-支持的系统" class="headerlink" title="matlab 支持的系统"></a>matlab 支持的系统</h1><p>如下图：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1fyq3z9pj1fj20vo0qidje.jpg" alt=""></p>
 <p><a href="https://ww2.mathworks.cn/support/sysreq.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/support/sysreq.html</a></p>
 <p>并没有 archlinux。archlinux wiki上如是说：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1fyq39xdg8yj20ii03z0sy.jpg" alt=""></p>
