@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rachpt.me/2018/12/31/install-matlab-on-archlinux/</loc>
+    
+    <lastmod>2018-12-31T10:40:18.036Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code/</loc>
+    
+    <lastmod>2018-12-31T09:47:53.365Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rachpt.me/notes/index.html</loc>
     
     <lastmod>2018-12-24T12:17:13.440Z</lastmod>
@@ -11,47 +25,47 @@
   <url>
     <loc>http://rachpt.me/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</loc>
     
-    <lastmod>2018-12-18T08:17:36.017Z</lastmod>
+    <lastmod>2018-12-18T08:17:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://rachpt.me/2018/12/10/dual-disk-install-dual-system/</loc>
     
-    <lastmod>2018-12-11T13:05:32.179Z</lastmod>
+    <lastmod>2018-12-11T13:05:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://rachpt.me/2018/12/01/change-to-use-archlinux/</loc>
     
-    <lastmod>2018-12-01T13:30:09.591Z</lastmod>
+    <lastmod>2018-12-01T13:30:09.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://rachpt.me/2017/12/18/notes-for-ubuntu/</loc>
     
-    <lastmod>2018-11-20T11:22:40.532Z</lastmod>
+    <lastmod>2018-11-20T11:22:40.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://rachpt.me/2018/03/29/a-bash-script-for-pt-signin/</loc>
     
-    <lastmod>2018-11-19T07:50:13.939Z</lastmod>
+    <lastmod>2018-11-19T07:50:13.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rachpt.me/tags/index.html</loc>
+    <loc>http://rachpt.me/about/index.html</loc>
     
     <lastmod>2018-11-14T01:50:17.019Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rachpt.me/about/index.html</loc>
+    <loc>http://rachpt.me/tags/index.html</loc>
     
     <lastmod>2018-11-14T01:50:17.019Z</lastmod>
     
@@ -180,13 +194,6 @@
     <loc>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/</loc>
     
     <lastmod>2018-07-25T13:19:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code/</loc>
-    
-    <lastmod>2018-07-24T04:41:07.000Z</lastmod>
     
   </url>
   
@@ -492,21 +499,14 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
+    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
+    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
@@ -527,14 +527,21 @@
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/20/my-graduate-stage/</loc>
+    <loc>http://rachpt.me/2017/11/12/chinas-confidence/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rachpt.me/2017/11/28/add-items-to-jdcart/</loc>
+    <loc>http://rachpt.me/2017/11/10/note-markdown/</loc>
+    
+    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rachpt.me/2017/11/10/so-busy/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     

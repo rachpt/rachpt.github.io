@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[install-matlab-on-archlinux]]></title>
+    <url>%2F2018%2F12%2F31%2Finstall-matlab-on-archlinux%2F</url>
+    <content type="text"><![CDATA[由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。 linux 上安装 matlab不同于windows，在linux安装iso封装的软件可能需要使用命令(mount)挂载先，然后运行安装程序，后面就是熟悉的点点了。大体步骤如下。 1234567891011121314151617181920mkdir /tmp/matlabsudo mount -o loop /mnt/data/MATLAB_R2018b_Linux/R2018b_glnxa64_dvd1.iso /tmp/matlab# 新开一个 terminal# 使用普通账户运行！sudo /tmp/matlab/install # 如果安装到自己的家目录，不需要使用 sudo。# 后面会弹出一个安装界面，# 若全部安装，50% 时提示弹出 dvd1 插入 dvd2# 使用 df 查看挂在的所有设备sudo umount -f /dev/loop0 # 如果提示设备忙，可以稍微等几分钟，再试。sudo mount -o loop /mnt/data/MATLAB_R2018b_Linux/R2018b_glnxa64_dvd2.iso /tmp/matlab# 点击安装界面的继续# 最后 umount ，以及 rmdir /tmp/matlab 话windows的安装一样(挂载相同的盘符)，dvd2 的挂载点(路径)应与dvd1 一至。理论上相当于将两dvd解压到一个文件夹(挂载相当于允许你分两次解压)。 matlab 支持的系统如下图： https://ww2.mathworks.cn/support/sysreq.html 并没有 archlinux。archlinux wiki上如是说： https://wiki.archlinux.org/index.php/MATLAB 所以但我安装后遇到 matlab 无法使用试试脚本以及帮助文档不正常时，以为这就是不支持的代价。 我甚至已经使用systemd-nspawn 构建 ubuntu容器运行 matlab，但是容器中的matlab仍然有如上问题。同样的matlab 版本，我在 ubuntu 系的linux上安装所有功能均表现正常。这甚至逼迫我更换系统发行版。 无意中发现通过下面的办法是可以解决archlinux 中matlab 部分功能受限的问题。 解决办法 通过 dvd 安装好matlab 2017b后， 使用yaourt matlab-r2017b 安装依赖。 构建肯定是会失败的，但是依赖会被安装。 也可以自己安装 如下图片中所示的依赖，使用 yaourt 比较省事。 下面是matlab安装依赖前的报错情况。 实时脚本、帮助文档正常图。 最后通过最近频繁更换linux 发行版，得出的结论就是，home 和系统分开，大软件安装到 home下user 外面，比如 matlab comsol crossover pycharm anaconda 等。 .desktop 文件使用绝对路径，添加到 ~/.local/share/applications/ 里面。下面是我的 matlab.desktop。 12345678910[Desktop Entry] Categories=Application;Development;Comment=Scientific computing environmentEncoding=UTF-8Exec=/home/program/MATLAB/R2018b/bin/matlab -desktopIcon=/home/program/MATLAB/R2018b/toolbox/shared/dastudio/resources/MatlabIcon.pngName=MATLAB R2018bStartupNotify=true Terminal=falseType=Application]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[something-difference-from-manjaro-back-to-ubuntu]]></title>
     <url>%2F2018%2F12%2F18%2Fsomething-difference-from-manjaro-back-to-ubuntu%2F</url>
     <content type="text"><![CDATA[qprop无法在软件较新的manjaro上编译运行，matlab实时脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。 适合自己的linux发行版到目前为止，我已经完全使用linux系统一年了，所谓完全就是作为主力机器，能不用Windows坚决不用Windows。在这之前自认为对Windows的使用有一些自己的见解，对于配置出适合自己的Windows工作环境非常熟悉。清晰的知道Windows所不能给我提供的功能(或者实现困难)，我尝试过使用 ubuntu 以及ubuntu麒麟(大概14年，那时候原生的ubuntu配置中文比较费劲)，当时啥都不会，没多久就回到Windows10预览版了(那时候Windows8的开始屏可恶心死我了)，后面有试过几次，都没能领会到linux的精髓。 去年的大约这个时候，由于当时有一台闲置的pc用于 web 服务器，刚开始用的 Windows10，由于Windows总是自己坏掉，于是试了 Windows server 2016，稳定运行15天后再次死机，再加上当时我们需要连接超级计算机提交计算任务，于是了解了部分linux的脚本命令等，有理由相信我已经可以驾驭(使用)linux了，于是安装了ubuntu 16.04lts 到那台闲置的机器上。经过各种配置后，相当稳定，连续正常运行 93 天(后来需要升级系统才关机的)，在了解到各种软件的linux情况后，果断将工作电脑安装上 linux。 使用过好几个桌面系统，debian 系的、redhat 系的，最后选择了 linux mint，因为界面很适合从Windows转过来的用户，ubuntu的核心让我能够在网上找到较多的教程。用的相当舒适。直到后来从 18.3 升级到 19，有道词典用不了了(看文献屏幕取词翻译)。 我也试过回到就得 18.3，但是当时因为 python 的几个库的依赖相互冲突解决不了(可能是 3.5太老了，加上用过新的界面就回不去了)，最后我强行升级系统python直接将系统弄死了。 rpm的包看着好不友好，还有个莫名其妙的 iptable，对于我来说往往全全就是阻碍，centos 难用到死的 gnome桌面我打死不会再试，suse 由于当时试的 kde 版本，各种快捷键都不一样，最后被定义为难用。 先在笔记本装了 manjaro 的 cinnamon版本，一直也没啥问题。体验几乎和 mint 一致。最后将 开机 没有任何窗口的mint 18.3 替换成manjaro kde版，毕竟ked试manjaro官方维护的，可能会好一些。 经过短暂而痛苦的学习习惯kde桌面后，配置后喜爱的工作环境，还行。 不知道什么原因，TensorFlow本来一条命令轻轻松松搞定，然而费了吃奶的力气才装上，MATLAB的安装更是气，先后试了 2017a 2018a 2018b，中午乱码，无法创建实时脚本，帮助页面显示有问题。忍着用！还有最近好几次遇到升级时提示 python的xxx已经存在，无法升级系统，长久考虑，以后可能会出大问题。 加上最近导师想要使用 qprop 计算东西，刚开始怎么都编译不了，后面编译好后运行有问题。但是在个导师新装的 ubuntu 上编译后可以运行。 在虚拟机中测试 kubuntu 可以编译运行。于是重装系统至 kubuntu。 matlab刚开始时 实时脚本帮助文档都没问题，但是更换为原来的 home 后，又有问题了。删除 ~/.matlab 后一切正常！ 搜狗乱码貌似不需要 archlinux 的在 .xinputrc 里面加东西，其他参考这里。 使用原home使用 fstab 挂载原来的 home，体验很糟糕，文件管理器中文乱码，全新配置不会。 使用 cp -axv /old/home/xxconf /new/home/dir 还原 .mozilla 等软件数据。 待续…]]></content>
@@ -108,7 +119,7 @@
   <entry>
     <title><![CDATA[make-transmission2.94-from-source-code]]></title>
     <url>%2F2018%2F07%2F24%2Fmake-transmission2-94-from-source-code%2F</url>
-    <content type="text"><![CDATA[重源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。 编译环境1234sudo apt-get install build-essential automake \ autoconf libtool pkg-config intltool \ libcurl4-openssl-dev libglib2.0-dev \ libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev 官方参考文档 。 魔改 跳过校验 请参考这里。 以及这里。 自定义 webUI 界面。 效果如下图： 在工具栏上添加一个跳转到自定义路径的按钮。 修改1： 123456789vim web/index.html# 第 50 行附近添加 &lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; + &lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; &lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt; 为此需要添加一枚 home.png 图标 到 web/images/home.png. 同时修改 该文件夹 的 Makefile.am 和 Makefile.in，如下： 12345678910vim web/images/Makefile.am# 改成如下datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;dist_data_DATA = \ favicon.ico \ favicon.png \ webclip-icon.png \ home.png 1234567891011vim web/images/Makefile.in# 大约在 365 行附近，如下修改disti\_data\_DATA = \ favicon.ico \ favicon.png \+ webclip-icon.png \+ home.pngall: all-am 自此 自定义的 webUI 就算是好啦。 修改2： 魔改 401 界面，效果如下： 首先使用了命令 cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39; 查找包含 &lt;h1&gt; 的源代码位置。结果为 ./libtransmission/rpc-server.c: evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text); 12345678vim ./libtransmission/rpc-server.c# 大约在 128 行 evbuffer_add_printf (body, "&lt;h1&gt;%d: %s&lt;/h1&gt;", code, code_text); if (text)+ evbuffer_add_printf (body, "%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;", text); evhttp_send_reply (req, code, code_text, body); 修改如上，在 %s 后面加上了一个 a 标签。 编译123./configure -q &amp;&amp; make -ssudo make install 安装会自动覆盖掉以前的版本。 详见：ihttps://github.com/rachpt/transmission-skiphashcheck-mod-webUI]]></content>
+    <content type="text"><![CDATA[从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。 编译环境1234sudo apt-get install build-essential automake \ autoconf libtool pkg-config intltool \ libcurl4-openssl-dev libglib2.0-dev \ libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev 官方参考文档 。 魔改 跳过校验 请参考这里。 以及这里。 自定义 webUI 界面。 效果如下图： 在工具栏上添加一个跳转到自定义路径的按钮。 修改1： 123456789vim web/index.html# 第 50 行附近添加 &lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; + &lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt; + &lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt; &lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt; 为此需要添加一枚 home.png 图标 到 web/images/home.png. 同时修改 该文件夹 的 Makefile.am 和 Makefile.in，如下： 12345678910vim web/images/Makefile.am# 改成如下datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;dist_data_DATA = \ favicon.ico \ favicon.png \ webclip-icon.png \ home.png 1234567891011vim web/images/Makefile.in# 大约在 365 行附近，如下修改disti\_data\_DATA = \ favicon.ico \ favicon.png \+ webclip-icon.png \+ home.pngall: all-am 自此 自定义的 webUI 就算是好啦。 修改2： 魔改 401 界面，效果如下： 首先使用了命令 cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39; 查找包含 &lt;h1&gt; 的源代码位置。结果为 ./libtransmission/rpc-server.c: evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text); 12345678vim ./libtransmission/rpc-server.c# 大约在 128 行 evbuffer_add_printf (body, "&lt;h1&gt;%d: %s&lt;/h1&gt;", code, code_text); if (text)+ evbuffer_add_printf (body, "%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;", text); evhttp_send_reply (req, code, code_text, body); 修改如上，在 %s 后面加上了一个 a 标签。 编译123./configure -q &amp;&amp; make -ssudo make install 安装会自动覆盖掉以前的版本。 详见：ihttps://github.com/rachpt/transmission-skiphashcheck-mod-webUI]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -538,8 +549,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>olex2</tag>
         <tag>笔记</tag>
+        <tag>olex2</tag>
       </tags>
   </entry>
   <entry>
@@ -780,8 +791,8 @@
         <category>实用</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>MarkDown</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
