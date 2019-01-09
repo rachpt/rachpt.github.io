@@ -5,9 +5,9 @@
   <subtitle>时间总是追不上</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://rachpt.me/"/>
+  <link href="https://rachpt.github.io/"/>
   <updated>2019-01-09T08:09:46.460Z</updated>
-  <id>http://rachpt.me/</id>
+  <id>https://rachpt.github.io/</id>
   
   <author>
     <name>rachpt</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>install-matlab-on-archlinux</title>
-    <link href="http://rachpt.me/2018/12/31/install-matlab-on-archlinux/"/>
-    <id>http://rachpt.me/2018/12/31/install-matlab-on-archlinux/</id>
+    <link href="https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/"/>
+    <id>https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/</id>
     <published>2018-12-31T09:50:22.000Z</published>
     <updated>2019-01-09T08:09:46.460Z</updated>
     
@@ -33,17 +33,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="matlab" scheme="http://rachpt.me/tags/matlab/"/>
+      <category term="matlab" scheme="https://rachpt.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>something-difference-from-manjaro-back-to-ubuntu</title>
-    <link href="http://rachpt.me/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/"/>
-    <id>http://rachpt.me/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</id>
+    <link href="https://rachpt.github.io/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/"/>
+    <id>https://rachpt.github.io/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</id>
     <published>2018-12-18T07:03:54.000Z</published>
     <updated>2018-12-18T08:17:36.000Z</updated>
     
@@ -57,17 +57,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="linux, ubuntu" scheme="http://rachpt.me/tags/linux-ubuntu/"/>
+      <category term="linux, ubuntu" scheme="https://rachpt.github.io/tags/linux-ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>dual-disk-install-dual-system</title>
-    <link href="http://rachpt.me/2018/12/10/dual-disk-install-dual-system/"/>
-    <id>http://rachpt.me/2018/12/10/dual-disk-install-dual-system/</id>
+    <link href="https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/"/>
+    <id>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</id>
     <published>2018-12-10T06:46:25.000Z</published>
     <updated>2018-12-11T13:05:32.000Z</updated>
     
@@ -81,17 +81,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="linux, windows" scheme="http://rachpt.me/tags/linux-windows/"/>
+      <category term="linux, windows" scheme="https://rachpt.github.io/tags/linux-windows/"/>
     
   </entry>
   
   <entry>
     <title>change-to-use-archlinux</title>
-    <link href="http://rachpt.me/2018/12/01/change-to-use-archlinux/"/>
-    <id>http://rachpt.me/2018/12/01/change-to-use-archlinux/</id>
+    <link href="https://rachpt.github.io/2018/12/01/change-to-use-archlinux/"/>
+    <id>https://rachpt.github.io/2018/12/01/change-to-use-archlinux/</id>
     <published>2018-12-01T12:59:54.000Z</published>
     <updated>2018-12-01T13:30:09.000Z</updated>
     
@@ -106,14 +106,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>an-error-in-mpv-player</title>
-    <link href="http://rachpt.me/2018/10/28/an-error-in-mpv-player/"/>
-    <id>http://rachpt.me/2018/10/28/an-error-in-mpv-player/</id>
+    <link href="https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/"/>
+    <id>https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/</id>
     <published>2018-10-28T08:29:17.000Z</published>
     <updated>2018-10-28T08:37:38.000Z</updated>
     
@@ -128,14 +128,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>change-the-resolution-of-the-console</title>
-    <link href="http://rachpt.me/2018/09/20/change-the-resolution-of-the-console/"/>
-    <id>http://rachpt.me/2018/09/20/change-the-resolution-of-the-console/</id>
+    <link href="https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/"/>
+    <id>https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/</id>
     <published>2018-09-20T12:52:51.000Z</published>
     <updated>2018-09-26T03:09:02.000Z</updated>
     
@@ -149,17 +149,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="console" scheme="http://rachpt.me/tags/console/"/>
+      <category term="console" scheme="https://rachpt.github.io/tags/console/"/>
     
   </entry>
   
   <entry>
     <title>vim-set-working-directory-to-the-current-file</title>
-    <link href="http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/"/>
-    <id>http://rachpt.me/2018/08/22/vim-set-working-directory-to-the-current-file/</id>
+    <link href="https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/"/>
+    <id>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</id>
     <published>2018-08-22T01:47:54.000Z</published>
     <updated>2018-08-22T02:12:38.000Z</updated>
     
@@ -173,17 +173,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="vim" scheme="http://rachpt.me/tags/vim/"/>
+      <category term="vim" scheme="https://rachpt.github.io/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>service-systemctl-and-daemon</title>
-    <link href="http://rachpt.me/2018/07/28/service-systemctl-and-daemon/"/>
-    <id>http://rachpt.me/2018/07/28/service-systemctl-and-daemon/</id>
+    <link href="https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/"/>
+    <id>https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/</id>
     <published>2018-07-27T16:43:38.000Z</published>
     <updated>2018-07-28T05:33:56.000Z</updated>
     
@@ -197,17 +197,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="daemon" scheme="http://rachpt.me/tags/daemon/"/>
+      <category term="daemon" scheme="https://rachpt.github.io/tags/daemon/"/>
     
   </entry>
   
   <entry>
     <title>use-expect-to-ssh-and-solve-a-problem</title>
-    <link href="http://rachpt.me/2018/07/26/use-expect-to-ssh-and-solve-a-problem/"/>
-    <id>http://rachpt.me/2018/07/26/use-expect-to-ssh-and-solve-a-problem/</id>
+    <link href="https://rachpt.github.io/2018/07/26/use-expect-to-ssh-and-solve-a-problem/"/>
+    <id>https://rachpt.github.io/2018/07/26/use-expect-to-ssh-and-solve-a-problem/</id>
     <published>2018-07-26T08:24:18.000Z</published>
     <updated>2018-07-26T09:26:57.000Z</updated>
     
@@ -221,19 +221,19 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="ssh" scheme="http://rachpt.me/tags/ssh/"/>
+      <category term="ssh" scheme="https://rachpt.github.io/tags/ssh/"/>
     
-      <category term="expect" scheme="http://rachpt.me/tags/expect/"/>
+      <category term="expect" scheme="https://rachpt.github.io/tags/expect/"/>
     
   </entry>
   
   <entry>
     <title>compile-nginx-1.14</title>
-    <link href="http://rachpt.me/2018/07/25/compile-nginx-1-14/"/>
-    <id>http://rachpt.me/2018/07/25/compile-nginx-1-14/</id>
+    <link href="https://rachpt.github.io/2018/07/25/compile-nginx-1-14/"/>
+    <id>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</id>
     <published>2018-07-25T14:58:31.000Z</published>
     <updated>2018-07-27T11:28:56.000Z</updated>
     
@@ -247,17 +247,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="nginx" scheme="http://rachpt.me/tags/nginx/"/>
+      <category term="nginx" scheme="https://rachpt.github.io/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>run-matlab-in-a-terminal</title>
-    <link href="http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/"/>
-    <id>http://rachpt.me/2018/07/25/run-matlab-in-a-terminal/</id>
+    <link href="https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/"/>
+    <id>https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/</id>
     <published>2018-07-25T12:39:59.000Z</published>
     <updated>2018-07-25T13:19:07.000Z</updated>
     
@@ -271,17 +271,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="matlab" scheme="http://rachpt.me/tags/matlab/"/>
+      <category term="matlab" scheme="https://rachpt.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>make-transmission2.94-from-source-code</title>
-    <link href="http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code/"/>
-    <id>http://rachpt.me/2018/07/24/make-transmission2-94-from-source-code/</id>
+    <link href="https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/"/>
+    <id>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</id>
     <published>2018-07-24T02:47:46.000Z</published>
     <updated>2018-12-31T09:47:53.365Z</updated>
     
@@ -295,17 +295,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="transmission" scheme="http://rachpt.me/tags/transmission/"/>
+      <category term="transmission" scheme="https://rachpt.github.io/tags/transmission/"/>
     
   </entry>
   
   <entry>
     <title>make-qbittorrent-from-source-code</title>
-    <link href="http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/"/>
-    <id>http://rachpt.me/2018/07/21/make-qbittorrent-from-source-code/</id>
+    <link href="https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/"/>
+    <id>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</id>
     <published>2018-07-21T13:21:34.000Z</published>
     <updated>2018-07-27T05:43:50.000Z</updated>
     
@@ -318,17 +318,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>compile-vim-with-clipboard-supported</title>
-    <link href="http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/"/>
-    <id>http://rachpt.me/2018/07/20/compile-vim-with-clipboard-supported/</id>
+    <link href="https://rachpt.github.io/2018/07/20/compile-vim-with-clipboard-supported/"/>
+    <id>https://rachpt.github.io/2018/07/20/compile-vim-with-clipboard-supported/</id>
     <published>2018-07-20T08:11:00.000Z</published>
     <updated>2018-07-30T09:13:56.000Z</updated>
     
@@ -342,17 +342,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://rachpt.me/tags/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>adb-linux-and-mi8</title>
-    <link href="http://rachpt.me/2018/07/06/adb-linux-and-mi8/"/>
-    <id>http://rachpt.me/2018/07/06/adb-linux-and-mi8/</id>
+    <link href="https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/"/>
+    <id>https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/</id>
     <published>2018-07-06T03:37:15.000Z</published>
     <updated>2018-09-07T12:28:50.000Z</updated>
     
@@ -366,17 +366,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="mi8" scheme="http://rachpt.me/tags/mi8/"/>
+      <category term="mi8" scheme="https://rachpt.github.io/tags/mi8/"/>
     
   </entry>
   
   <entry>
     <title>zip-and-upload-to-baidupcs</title>
-    <link href="http://rachpt.me/2018/07/02/zip-and-upload-to-baidupcs/"/>
-    <id>http://rachpt.me/2018/07/02/zip-and-upload-to-baidupcs/</id>
+    <link href="https://rachpt.github.io/2018/07/02/zip-and-upload-to-baidupcs/"/>
+    <id>https://rachpt.github.io/2018/07/02/zip-and-upload-to-baidupcs/</id>
     <published>2018-07-02T13:03:10.000Z</published>
     <updated>2018-07-02T13:34:59.000Z</updated>
     
@@ -390,17 +390,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+      <category term="shell" scheme="https://rachpt.github.io/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>a-simple-script-to-count-ABC</title>
-    <link href="http://rachpt.me/2018/06/21/a-simple-script-to-count-ABC/"/>
-    <id>http://rachpt.me/2018/06/21/a-simple-script-to-count-ABC/</id>
+    <link href="https://rachpt.github.io/2018/06/21/a-simple-script-to-count-ABC/"/>
+    <id>https://rachpt.github.io/2018/06/21/a-simple-script-to-count-ABC/</id>
     <published>2018-06-20T17:09:03.000Z</published>
     <updated>2018-06-20T17:26:43.000Z</updated>
     
@@ -414,17 +414,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+      <category term="shell" scheme="https://rachpt.github.io/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>install-CAJViewer-on-Linux</title>
-    <link href="http://rachpt.me/2018/06/05/install-CAJViewer-on-Linux/"/>
-    <id>http://rachpt.me/2018/06/05/install-CAJViewer-on-Linux/</id>
+    <link href="https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/"/>
+    <id>https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/</id>
     <published>2018-06-05T06:36:35.000Z</published>
     <updated>2018-06-05T12:14:00.000Z</updated>
     
@@ -438,17 +438,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="CAJViewer" scheme="http://rachpt.me/tags/CAJViewer/"/>
+      <category term="CAJViewer" scheme="https://rachpt.github.io/tags/CAJViewer/"/>
     
   </entry>
   
   <entry>
     <title>upgrade-ubuntu-stepped-pit</title>
-    <link href="http://rachpt.me/2018/05/07/upgrade-ubuntu-stepped-pit/"/>
-    <id>http://rachpt.me/2018/05/07/upgrade-ubuntu-stepped-pit/</id>
+    <link href="https://rachpt.github.io/2018/05/07/upgrade-ubuntu-stepped-pit/"/>
+    <id>https://rachpt.github.io/2018/05/07/upgrade-ubuntu-stepped-pit/</id>
     <published>2018-05-07T12:31:19.000Z</published>
     <updated>2018-05-10T01:58:37.000Z</updated>
     
@@ -462,17 +462,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="ubuntu" scheme="http://rachpt.me/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="https://rachpt.github.io/tags/ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>extra-shell-note</title>
-    <link href="http://rachpt.me/2018/05/07/extra-shell-note/"/>
-    <id>http://rachpt.me/2018/05/07/extra-shell-note/</id>
+    <link href="https://rachpt.github.io/2018/05/07/extra-shell-note/"/>
+    <id>https://rachpt.github.io/2018/05/07/extra-shell-note/</id>
     <published>2018-05-07T06:31:04.000Z</published>
     <updated>2018-09-06T03:23:49.000Z</updated>
     
@@ -486,10 +486,10 @@
     
     </summary>
     
-      <category term="linux" scheme="http://rachpt.me/categories/linux/"/>
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
     
     
-      <category term="shell" scheme="http://rachpt.me/tags/shell/"/>
+      <category term="shell" scheme="https://rachpt.github.io/tags/shell/"/>
     
   </entry>
   
