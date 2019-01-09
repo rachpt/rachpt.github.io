@@ -131,23 +131,23 @@
 
 
 
-  <meta name="description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。">
+  <meta name="description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。">
 <meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="install-matlab-on-archlinux">
 <meta property="og:url" content="http://rachpt.me/2018/12/31/install-matlab-on-archlinux/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
-<meta property="og:description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。">
+<meta property="og:description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3z9pj1fj20vo0qidje.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq39xdg8yj20ii03z0sy.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3lo8lu2j20sj0nq0xs.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3mvwd53j218g0p0n4n.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3oxdhebj218g0p0jyf.jpg">
-<meta property="og:updated_time" content="2018-12-31T10:46:41.718Z">
+<meta property="og:updated_time" content="2019-01-09T08:09:46.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="install-matlab-on-archlinux">
-<meta name="twitter:description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。">
+<meta name="twitter:description" content="由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fyq3z9pj1fj20vo0qidje.jpg">
 
 
@@ -417,12 +417,24 @@
                 
               
 
-              <time title="创建时间：2018-12-31 17:50:22 / 修改时间：18:46:41" itemprop="dateCreated datePublished" datetime="2018-12-31T17:50:22+08:00">2018-12-31</time>
+              <time title="创建时间：2018-12-31 17:50:22" itemprop="dateCreated datePublished" datetime="2018-12-31T17:50:22+08:00">2018-12-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-09 16:09:46" itemprop="dateModified" datetime="2019-01-09T16:09:46+08:00">2019-01-09</time>
               
             
           </span>
@@ -519,7 +531,7 @@
 
       
         <blockquote>
-<p>由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab，一直觉得理所当然，居然是有解决办法的。</p>
+<p>由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="linux-上安装-matlab"><a href="#linux-上安装-matlab" class="headerlink" title="linux 上安装 matlab"></a>linux 上安装 matlab</h1><p>不同于windows，在linux安装iso封装的软件可能需要使用命令(mount)挂载先，然后运行安装程序，后面就是熟悉的点点点了。大体步骤如下：</p>
@@ -533,8 +545,8 @@
 <p>我甚至已经使用systemd-nspawn 构建 ubuntu容器运行 matlab，但是容器中的matlab仍然有如上问题。<br>同样的matlab 版本，我在 ubuntu 系的linux上安装所有功能均表现正常。这甚至逼迫我更换系统发行版。</p>
 <p>无意中发现通过下面的办法是可以解决archlinux 中matlab 部分功能受限的问题。</p>
 <h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><ol>
-<li>通过 dvd 安装好matlab 2017b后，</li>
-<li>使用<code>yaourt matlab-r2017b</code> 安装依赖。</li>
+<li>通过 dvd 安装好matlab 2018b后，</li>
+<li>使用<code>yaourt matlab-r2017b</code> (这个时候最高只有2017b)安装依赖。</li>
 <li>构建肯定是会失败的，但是依赖会被安装。</li>
 </ol>
 <p>也可以自己安装 如下图片中所示的依赖，使用 yaourt 比较省事。</p>
@@ -1031,7 +1043,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">145k</span>
+    <span title="站点总字数">146k</span>
   
 
   
