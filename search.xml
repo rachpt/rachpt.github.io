@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Trouble-with-automatic-mouse-copy-function-under-linux]]></title>
     <url>%2F2019%2F02%2F22%2FTrouble-with-automatic-mouse-copy-function-under-linux%2F</url>
-    <content type="text"><![CDATA[突然选中文本就自动复制到粘贴板了，怎么回事？ 这几天又安装了 goldendict，配合 translate-shell 直接使用 goolgle 翻译文献。不知道怎么回事一时间 Ctrl + C + C 无法使用，各种折腾之后终于能用了。这不是重点，重点是现在突然发现我选中任意地方的文本后，就自动被复制到张贴板了，这对于浏览器操作及其不便。 关闭词典以及其屏幕取词也无效。网上搜索一下，发现 linux 竟然有 选中复制/鼠标中建粘贴，以及 ctrl + c /ctrl + v 两种粘贴板，默认情况下两种粘贴板互相独立。因为我的某种操作让两种内容混在一起了。 粘贴板学问详情可以看 http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535 。 具体的误操作在该出 应该关闭*同步剪切粘贴板和选中内容**。 第一次知道还有选中复制这种功能。]]></content>
+    <content type="text"><![CDATA[突然选中文本就自动复制到粘贴板了，怎么回事？ 这几天又安装了 goldendict，配合 translate-shell 直接使用 goolgle 翻译文献。不知道怎么回事一时间 Ctrl + C + C 无法使用，各种折腾之后终于能用了。这不是重点，重点是现在突然发现我选中任意地方的文本后，就自动被复制到张贴板了，这对于浏览器操作及其不便。 关闭词典以及其屏幕取词也无效。网上搜索一下，发现 linux 竟然有 选中复制/鼠标中建粘贴，以及 ctrl + c /ctrl + v 两种粘贴板，默认情况下两种粘贴板互相独立。因为我的某种操作让两种内容混在一起了。 粘贴板学问详情可以看 http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535 。 具体的误操作在该出 应该关闭同步剪切粘贴板和选中内容。 第一次知道还有选中复制这种功能。]]></content>
       <tags>
         <tag>linux, clipboard</tag>
       </tags>

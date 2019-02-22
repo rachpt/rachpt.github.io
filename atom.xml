@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-02-22T03:51:52.235Z</updated>
+  <updated>2019-02-22T03:54:00.737Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.github.io/2019/02/22/Trouble-with-automatic-mouse-copy-function-under-linux/"/>
     <id>https://rachpt.github.io/2019/02/22/Trouble-with-automatic-mouse-copy-function-under-linux/</id>
     <published>2019-02-22T03:37:03.000Z</published>
-    <updated>2019-02-22T03:51:52.235Z</updated>
+    <updated>2019-02-22T03:54:00.737Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>突然选中文本就自动复制到粘贴板了，怎么回事？</p></blockquote><a id="more"></a><p>这几天又安装了 goldendict，配合 translate-shell 直接使用 goolgle 翻译文献。不知道怎么回事一时间 <code>Ctrl + C + C</code> 无法使用，各种折腾之后终于能用了。这不是重点，重点是现在突然发现我选中任意地方的文本后，就自动被复制到张贴板了，这对于浏览器操作及其不便。</p><p>关闭词典以及其屏幕取词也无效。<br>网上搜索一下，发现 linux 竟然有 选中复制/鼠标中建粘贴，以及 ctrl + c /ctrl + v 两种粘贴板，默认情况下两种粘贴板互相独立。因为我的某种操作让两种内容混在一起了。</p><p>粘贴板学问详情可以看 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535</a> 。</p><p>具体的误操作在该出<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1g0f243mk88j20hu0jrq4d.jpg" alt=""></p><p>应该关闭*同步剪切粘贴板和选中内容**。</p><p>第一次知道还有选中复制这种功能。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>突然选中文本就自动复制到粘贴板了，怎么回事？</p></blockquote><a id="more"></a><p>这几天又安装了 goldendict，配合 translate-shell 直接使用 goolgle 翻译文献。不知道怎么回事一时间 <code>Ctrl + C + C</code> 无法使用，各种折腾之后终于能用了。这不是重点，重点是现在突然发现我选中任意地方的文本后，就自动被复制到张贴板了，这对于浏览器操作及其不便。</p><p>关闭词典以及其屏幕取词也无效。<br>网上搜索一下，发现 linux 竟然有 选中复制/鼠标中建粘贴，以及 ctrl + c /ctrl + v 两种粘贴板，默认情况下两种粘贴板互相独立。因为我的某种操作让两种内容混在一起了。</p><p>粘贴板学问详情可以看 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535</a> 。</p><p>具体的误操作在该出<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1g0f243mk88j20hu0jrq4d.jpg" alt=""></p><p>应该关闭<strong>同步剪切粘贴板和选中内容</strong>。</p><p>第一次知道还有选中复制这种功能。</p>]]></content>
     
     <summary type="html">
     
