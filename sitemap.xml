@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/notes/index.html</loc>
+    
+    <lastmod>2019-03-02T02:53:18.318Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/02/22/Trouble-with-automatic-mouse-copy-function-under-linux/</loc>
     
     <lastmod>2019-02-22T03:54:00.737Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/</loc>
     
     <lastmod>2019-01-09T08:09:46.460Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/notes/index.html</loc>
-    
-    <lastmod>2018-12-24T12:17:13.440Z</lastmod>
     
   </url>
   
