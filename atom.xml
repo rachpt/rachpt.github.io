@@ -39,6 +39,30 @@
   </entry>
   
   <entry>
+    <title>latex-beamer-note</title>
+    <link href="https://rachpt.github.io/2019/01/16/latex-beamer-note/"/>
+    <id>https://rachpt.github.io/2019/01/16/latex-beamer-note/</id>
+    <published>2019-01-16T06:24:19.000Z</published>
+    <updated>2019-03-20T00:46:40.537Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>记录一些使用 LaTeX beamer 的技巧。</p></blockquote><a id="more"></a><h1 id="图片显示编号以及不显示编号"><a href="#图片显示编号以及不显示编号" class="headerlink" title="图片显示编号以及不显示编号"></a>图片显示编号以及不显示编号</h1><p>大部分模板图片都不会编号，只需在导言区加上如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\setbeamertemplate&#123;caption&#125;[numbered]</span><br></pre></td></tr></table></figure><p>即可显示图片编号。<br><a href="https://yihui.name/cn/2010/08/show-caption-numbers-in-beamer/" target="_blank" rel="noopener">参考文档</a>。</p><p>自定义编号，使用caption 宏包。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;caption&#125;</span><br></pre></td></tr></table></figure><p>标签使用 <code>\caption*{}</code>。<br><a href="https://blog.csdn.net/ProgramChangesWorld/article/details/51553683" target="_blank" rel="noopener">参考文档</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;记录一些使用 LaTeX beamer 的技巧。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="latex" scheme="https://rachpt.github.io/categories/latex/"/>
+    
+    
+      <category term="beamer" scheme="https://rachpt.github.io/tags/beamer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>install-matlab-on-archlinux</title>
     <link href="https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/"/>
     <id>https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/</id>
@@ -464,30 +488,6 @@
     
     
       <category term="CAJViewer" scheme="https://rachpt.github.io/tags/CAJViewer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>upgrade-ubuntu-stepped-pit</title>
-    <link href="https://rachpt.github.io/2018/05/07/upgrade-ubuntu-stepped-pit/"/>
-    <id>https://rachpt.github.io/2018/05/07/upgrade-ubuntu-stepped-pit/</id>
-    <published>2018-05-07T12:31:19.000Z</published>
-    <updated>2018-05-10T01:58:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>日常干活用的 mint，特殊情况换到 ubuntu 上干活，一直很烦 窗口关闭按钮一会儿在左边一会儿在右边，考虑到娱乐用的 windows 也在右边，所以看到 ubuntu 18.04 lts 的关闭按钮在右侧，于是有了将 16.04 lts （unity 好像没法设置按钮）升级的想法。</p></blockquote><a id="more"></a><h1 id="换更新源"><a href="#换更新源" class="headerlink" title="换更新源"></a>换更新源</h1><p>之前一直用的 清华的源，毕竟同一个局域网速度快。前几天，大概 5月4日，一直检测不到新版本，于是换了个 阿里云 的，一下检测到新的版本，载了一个多小时，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">do</span>-release-upgrade -d</span><br></pre></td></tr></table></figure><p><a href="https://www.appinn.com/ubuntu-16-04-to-ubuntu-18-04-lts/" target="_blank" rel="noopener">参考内容。</a></p><p>期间不能跑，需要选择配置。因为不想继续使用 unity ，所示选择安装 GNOME 3。</p><p>重启后，以前的 <code>ctrl + alt + f7</code> 变成了 <code>ctrl + alt + f1</code> 。</p><p>差点吓傻了我，屏幕被放得很大，找了下，发现是 无障碍模式某个都系被打开了，这可能是之前开了大小写指示器的原因所致。</p><h1 id="python3-6"><a href="#python3-6" class="headerlink" title="python3.6"></a>python3.6</h1><p>python3.5 被升级至 3.6 版本。为什么我关心python版本，应为之前安装 flexget ，官方说是不支援 py3.6，因为2.7还在，所以先 用 pip2 重新安装了 flexget 。正在愁以后是不是要装个虚拟环境 装 3.5，某天再看 flexget 的主页，居然支持 3.6了，balabala……</p><p>问题就是 pip 还是 pip3.5 ，而非 3.6 ，</p><p>没办法了，一个一个改，使用 find 搜了一下所有 python3.5 的残留相关文件，cd 过去 cat 看看能不能删。最主要的就是 pip3.5 这个也得干掉（sudo apt remove pip3.5），将python 的脚本文件夹<code>/usr/local/lib/python3.5/dist-packages/</code> 改到3.6，我可不想再一个一个 pip 重装。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove pip3.5</span><br><span class="line"></span><br><span class="line">sudo rm /usr/share/app-install/desktop/python3.5:python3.5.desktop</span><br><span class="line">sudo rm -f/usr/share/app-install/desktop/idle-python3.5:idle-python3.5.desktop</span><br><span class="line">sudo rm -f /usr/share/app-install/desktop/idle-python3.5:idle-python3.5.desktop</span><br><span class="line"></span><br><span class="line">sudo rm -r python3.5</span><br><span class="line">sudo rm  /var/lib/dpkg/info/python3.5-minimal.list</span><br><span class="line">sudo rm /var/lib/dpkg/info/libpython3.5-minimal:amd64.list</span><br><span class="line"></span><br><span class="line">sudo rm -r /usr/<span class="built_in">local</span>/lib/python3.6 <span class="comment">#先看下里面的东西</span></span><br><span class="line">sudo mv /usr/<span class="built_in">local</span>/lib/python3.5 /usr/<span class="built_in">local</span>/lib/python3.6</span><br><span class="line">sudo rm /var/lib/dpkg/info/libpython3.5-minimal:amd64.postrm</span><br><span class="line">sudo rm /var/lib/dpkg/info/python3.5-minimal.postrm</span><br><span class="line"><span class="comment">#/home/[username]/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/JediHTTP/vendor/parso/test/normalizer_issue_files/</span></span><br><span class="line"><span class="comment"># 上面这个不要 remove</span></span><br><span class="line"></span><br><span class="line">sudo apt install python3-pip</span><br><span class="line">sudo pip3 install --upgrade pip</span><br></pre></td></tr></table></figure><p>附上 修改 pip 源。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.pip/pip.conf </span><br><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">extra-index-url= https://pypi.doubanio.com/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure><p>需要自己创建该文件。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;日常干活用的 mint，特殊情况换到 ubuntu 上干活，一直很烦 窗口关闭按钮一会儿在左边一会儿在右边，考虑到娱乐用的 windows 也在右边，所以看到 ubuntu 18.04 lts 的关闭按钮在右侧，于是有了将 16.04 lts （unity 好像没法设置按钮）升级的想法。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="ubuntu" scheme="https://rachpt.github.io/tags/ubuntu/"/>
     
   </entry>
   
