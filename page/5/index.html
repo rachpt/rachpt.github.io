@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
 
@@ -35,20 +33,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2">
 
 
 
@@ -69,37 +54,38 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.3.0',
-    sidebar: {"position":"left","width":240,"display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '7.0.1',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: true,
@@ -110,7 +96,7 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -153,7 +139,7 @@
 
 
 
-<script type="text/javascript" id="page.configurations">
+<script id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -165,14 +151,8 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-109494468-2');
-</script>
+
 
 
 
@@ -180,29 +160,27 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -221,7 +199,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -235,6 +213,7 @@
       
         <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
       
+    
     
   </div>
 
@@ -258,32 +237,68 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-notes">
-    <a href="/notes/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/notes/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
 
       
@@ -335,6 +350,15 @@
     </header>
 
     
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
 
 
     <main id="main" class="main">
@@ -382,9 +406,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/05/settings-for-next-theme/" itemprop="url">
-                  next 主题设置
-                </a>
+                
+                <a href="/2018/03/05/settings-for-next-theme/" class="post-title-link" itemprop="url">next 主题设置</a>
               
             
           </h2>
@@ -435,19 +458,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/05/settings-for-next-theme/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/05/settings-for-next-theme/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/05/settings-for-next-theme/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/05/settings-for-next-theme/" class="leancloud_visitors" data-flag-title="next 主题设置">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -503,11 +541,13 @@
 </blockquote>
 <p>目前 next 版本：<code>6.0.5</code> 。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/05/settings-for-next-theme/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/05/settings-for-next-theme/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -520,9 +560,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -581,9 +624,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/05/test/" itemprop="url">
-                  next 主题使用笔记——标签
-                </a>
+                
+                <a href="/2018/03/05/test/" class="post-title-link" itemprop="url">next 主题使用笔记——标签</a>
               
             
           </h2>
@@ -634,19 +676,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/05/test/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/05/test/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/05/test/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/05/test/" class="leancloud_visitors" data-flag-title="next 主题使用笔记——标签">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -662,7 +719,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.1k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -701,11 +758,13 @@
 <p>记录 hexo-theme-next 一些使用技巧，自用。 版本要求 <code>0.4.5+</code> 。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/05/test/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/05/test/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -718,9 +777,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -779,9 +841,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/03/my-new-blog/" itemprop="url">
-                  新博客地址
-                </a>
+                
+                <a href="/2018/03/03/my-new-blog/" class="post-title-link" itemprop="url">新博客地址</a>
               
             
           </h2>
@@ -850,19 +911,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/03/my-new-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/my-new-blog/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/my-new-blog/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/03/my-new-blog/" class="leancloud_visitors" data-flag-title="新博客地址">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -917,8 +993,8 @@
             <a id="more"></a>
 <p>已经对 wordpress 无止境的更新无语了，慢慢迁移至 Github Pages &amp; Coding Pages。</p>
 <!--more-->
-<p>永久地址： <a href="https://rachpt.github.io">https://rachpt.github.io</a> ，已经重定向至 <a href="https://rachpt.me" target="_blank" rel="noopener">https://rachpt.me</a> 。</p>
-<p><a href="https://rachpt.coding.me" target="_blank" rel="noopener">https://rachpt.coding.me</a> ，已经重定向至 <a href="https://blog.rachpt.me" target="_blank" rel="noopener">https://blog.rachpt.me</a> 。</p>
+<p>永久地址： <a href="https://rachpt.github.io">https://rachpt.github.io</a> ，已经重定向至 <span class="exturl" data-url="aHR0cHM6Ly9yYWNocHQubWU=" title="https://rachpt.me">https://rachpt.me<i class="fa fa-external-link"></i></span> 。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yYWNocHQuY29kaW5nLm1l" title="https://rachpt.coding.me">https://rachpt.coding.me<i class="fa fa-external-link"></i></span> ，已经重定向至 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnJhY2hwdC5tZQ==" title="https://blog.rachpt.me">https://blog.rachpt.me<i class="fa fa-external-link"></i></span> 。</p>
 <p>&nbsp;</p>
 <p><span style="text-decoration: underline;"><del>以后有可能 重定向到这个域名。</del></span></p>
 
@@ -934,9 +1010,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -995,9 +1074,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/03/gimp-simple-notes/" itemprop="url">
-                  Gimp 简单使用笔记
-                </a>
+                
+                <a href="/2018/03/03/gimp-simple-notes/" class="post-title-link" itemprop="url">Gimp 简单使用笔记</a>
               
             
           </h2>
@@ -1066,19 +1144,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/03/gimp-simple-notes/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/gimp-simple-notes/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/gimp-simple-notes/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/03/gimp-simple-notes/" class="leancloud_visitors" data-flag-title="Gimp 简单使用笔记">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1133,11 +1226,13 @@
 <p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/gimp-simple-notes/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/03/gimp-simple-notes/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -1150,9 +1245,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -1211,9 +1309,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/03/pycharm-please-specify-a-different-SDK-name/" itemprop="url">
-                  Pycharm please specify a different SDK name
-                </a>
+                
+                <a href="/2018/03/03/pycharm-please-specify-a-different-SDK-name/" class="post-title-link" itemprop="url">Pycharm please specify a different SDK name</a>
               
             
           </h2>
@@ -1252,19 +1349,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/03/pycharm-please-specify-a-different-SDK-name/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/pycharm-please-specify-a-different-SDK-name/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/03/pycharm-please-specify-a-different-SDK-name/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/03/pycharm-please-specify-a-different-SDK-name/" class="leancloud_visitors" data-flag-title="Pycharm please specify a different SDK name">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1319,11 +1431,13 @@
 <p>设置 pycharm 保存时， 报错：pycharm please specify a different SDK name ，网上找到解决办法，这里记录一下，备用。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/pycharm-please-specify-a-different-SDK-name/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/03/pycharm-please-specify-a-different-SDK-name/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -1336,9 +1450,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -1397,9 +1514,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/02/ms-scf-max-iterations/" itemprop="url">
-                  Materials Studio CASTEP 迭代次数设置
-                </a>
+                
+                <a href="/2018/03/02/ms-scf-max-iterations/" class="post-title-link" itemprop="url">Materials Studio CASTEP 迭代次数设置</a>
               
             
           </h2>
@@ -1468,19 +1584,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/02/ms-scf-max-iterations/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/02/ms-scf-max-iterations/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/02/ms-scf-max-iterations/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/02/ms-scf-max-iterations/" class="leancloud_visitors" data-flag-title="Materials Studio CASTEP 迭代次数设置">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1535,11 +1666,13 @@
 <p>今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/02/ms-scf-max-iterations/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/02/ms-scf-max-iterations/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -1552,9 +1685,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -1613,9 +1749,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/27/windows-note-01/" itemprop="url">
-                  Windows 使用笔记-01
-                </a>
+                
+                <a href="/2018/01/27/windows-note-01/" class="post-title-link" itemprop="url">Windows 使用笔记-01</a>
               
             
           </h2>
@@ -1691,19 +1826,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/01/27/windows-note-01/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/27/windows-note-01/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/27/windows-note-01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/01/27/windows-note-01/" class="leancloud_visitors" data-flag-title="Windows 使用笔记-01">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1756,11 +1906,13 @@
         
           <p>首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知道自己的系统是啥，和别人的有啥区别，囧）。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/27/windows-note-01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/27/windows-note-01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -1773,9 +1925,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -1834,9 +1989,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/22/linux-pdfreader-zathura/" itemprop="url">
-                  Linux下的PDF阅读软件zathura
-                </a>
+                
+                <a href="/2018/01/22/linux-pdfreader-zathura/" class="post-title-link" itemprop="url">Linux下的PDF阅读软件zathura</a>
               
             
           </h2>
@@ -1912,19 +2066,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/01/22/linux-pdfreader-zathura/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/22/linux-pdfreader-zathura/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/22/linux-pdfreader-zathura/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/01/22/linux-pdfreader-zathura/" class="leancloud_visitors" data-flag-title="Linux下的PDF阅读软件zathura">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1979,11 +2148,13 @@
 <p>记录 zathura 的常用设置与技巧。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/22/linux-pdfreader-zathura/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/22/linux-pdfreader-zathura/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -1996,9 +2167,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -2057,9 +2231,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/13/ubuntu-update-xz-to-5-2/" itemprop="url">
-                  ubuntu 更新 xz 至 5.2+
-                </a>
+                
+                <a href="/2018/01/13/ubuntu-update-xz-to-5-2/" class="post-title-link" itemprop="url">ubuntu 更新 xz 至 5.2+</a>
               
             
           </h2>
@@ -2135,19 +2308,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/01/13/ubuntu-update-xz-to-5-2/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/13/ubuntu-update-xz-to-5-2/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/13/ubuntu-update-xz-to-5-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/01/13/ubuntu-update-xz-to-5-2/" class="leancloud_visitors" data-flag-title="ubuntu 更新 xz 至 5.2+">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -2200,11 +2388,13 @@
         
           <p>xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/13/ubuntu-update-xz-to-5-2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/13/ubuntu-update-xz-to-5-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -2217,9 +2407,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -2278,9 +2471,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/12/建个人网址需要花多少/" itemprop="url">
-                  建一个个人网站需要花费多少
-                </a>
+                
+                <a href="/2018/01/12/建个人网址需要花多少/" class="post-title-link" itemprop="url">建一个个人网站需要花费多少</a>
               
             
           </h2>
@@ -2349,19 +2541,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/01/12/建个人网址需要花多少/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/12/建个人网址需要花多少/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/12/建个人网址需要花多少/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/01/12/建个人网址需要花多少/" class="leancloud_visitors" data-flag-title="建一个个人网站需要花费多少">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -2416,11 +2623,13 @@
 <p>几年前，当我还是个电脑盲，在探索各种系统美化设置的过程中了解到了博客这种东西。</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/12/建个人网址需要花多少/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/01/12/建个人网址需要花多少/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
@@ -2433,9 +2642,12 @@
     
 
     
-    
+
     
 
+    
+      
+    
     
 
     
@@ -2485,21 +2697,20 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif" alt="rachpt">
             
               <p class="site-author-name" itemprop="name">rachpt</p>
-              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+              <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
           </div>
 
           
@@ -2519,7 +2730,11 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -2556,7 +2771,11 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -2687,28 +2906,41 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="GitHub &rarr; https://github.com/rachpt"><i class="fa fa-fw fa-github"></i></span>
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnJhY2hwdEAxMjYuY29t" title="E-Mail &rarr; mailto:rachpt@126.com"><i class="fa fa-fw fa-envelope"></i></span>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
           
 
           
@@ -2716,20 +2948,20 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-block">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友情链接
+                Links
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://rachpt.iok.la/" title="控制面板" target="_blank">控制面板</a>
+                    <span class="exturl" data-url="aHR0cDovL3JhY2hwdC5pb2subGEv" title="http://rachpt.iok.la/">控制面板</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://agint.me/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9hZ2ludC5tZS8=" title="https://agint.me/">sword 杂货屋</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://quanyaxin.github.io/" title="Quanyaxin" target="_blank">Quanyaxin</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9xdWFueWF4aW4uZ2l0aHViLmlvLw==" title="https://quanyaxin.github.io/">Quanyaxin</span>
                   </li>
                 
               </ul>
@@ -2742,7 +2974,7 @@
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2757,6 +2989,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -2765,7 +2998,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heartbeat"></i>
   </span>
@@ -2777,8 +3010,6 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">站点总字数：</span>
-    
     <span title="站点总字数">146k</span>
   
 
@@ -2788,15 +3019,9 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    
     <span title="站点阅读时长">2:13</span>
   
 </div>
-
-
-  
-
 
 
 
@@ -2806,20 +3031,32 @@
 
 
   <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
-<div>
-  <i class="fa fa-user-md"></i> 
-  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
-  <i class="fa fa-eye"></i> 
-  本站访客数：<span id="busuanzi_value_site_uv"></span> 
-</div>
 
 
         
 <div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -2827,8 +3064,7 @@
 
 
 
-
-  <script type="text/javascript">
+  <script>
     (function() {
       var hm = document.createElement("script");
       hm.src = "//tajs.qq.com/stats?sId=65362593";
@@ -2836,6 +3072,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -2848,11 +3085,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2888,37 +3128,27 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
-  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
@@ -2926,9 +3156,10 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+  <script src="/js/src/affix.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
 
 
 
@@ -2937,58 +3168,81 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
-
-
-
-  
-
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
 
+  
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+  
+    <script src="/lib/quicklink/dist/quicklink.umd.js"></script>
+    <script>
+      
+        window.addEventListener('load', () => {
+      
+        quicklink({
+          timeout: 3000,
+          priority: true,
+          ignores: [uri => uri.includes('#'),uri => uri == 'https://rachpt.github.io/page/5/',]
+        });
+      
+        });
+      
+    </script>
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+    appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+    placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
 
 
 
 
   
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
-        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
-        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
-        avatar:'wavatar',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
-
-
-  
-
-  <script type="text/javascript">
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -3074,7 +3328,7 @@
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -3243,9 +3497,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -3317,20 +3571,41 @@
   
 
   
+
+  
+
+  
 <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+  });
+}
 </script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
   
@@ -3339,23 +3614,23 @@
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
       pbOptions = {};
       
-          pbOptions.iconStyle = "box";
+        pbOptions.iconStyle = "box";
       
-          pbOptions.boxForm = "horizontal";
+        pbOptions.boxForm = "horizontal";
       
-          pbOptions.position = "bottomCenter";
+        pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
   </script>
+
 
   
 
@@ -3363,18 +3638,14 @@
   
   
   <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script type="text/javascript">pangu.spacingPage();</script>
+  <script>pangu.spacingPage();</script>
 
-
-  
-
-  
 
   
   
   
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
+  <script>
   
     bookmark.loadBookmark();
   
@@ -3382,75 +3653,45 @@
 
 
   
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
 
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
 
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
+  
 
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap')
-      $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text()
-        }).toArray().join('\n')
-        var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('复制成功')
-          else $(this).text('复制失败')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('复制')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
+  
 
   
 <head><meta name="generator" content="Hexo 3.8.0">

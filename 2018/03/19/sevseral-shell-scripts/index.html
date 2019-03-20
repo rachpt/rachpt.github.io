@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
 
@@ -35,20 +33,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2">
 
 
 
@@ -69,37 +54,38 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.3.0',
-    sidebar: {"position":"left","width":240,"display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '7.0.1',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: true,
@@ -110,7 +96,7 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -155,7 +141,7 @@
 
 
 
-<script type="text/javascript" id="page.configurations">
+<script id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -167,14 +153,8 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-109494468-2');
-</script>
+
 
 
 
@@ -182,29 +162,27 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -222,7 +200,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -236,6 +214,7 @@
       
         <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
       
+    
     
   </div>
 
@@ -259,32 +238,68 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-notes">
-    <a href="/notes/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/notes/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
 
       
@@ -336,6 +351,15 @@
     </header>
 
     
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
 
 
     <main id="main" class="main">
@@ -383,10 +407,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">几个 shell 脚本<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/sevseral-shell-scripts.md" class="post-edit-link" title="编辑" target="_blank">
-                    <i class="fa fa-pencil"></i>
-                  </a>
-                
+          <h2 class="post-title" itemprop="name headline">几个 shell 脚本
+
               
             
           </h2>
@@ -455,19 +477,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/19/sevseral-shell-scripts/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/19/sevseral-shell-scripts/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/19/sevseral-shell-scripts/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/19/sevseral-shell-scripts/" class="leancloud_visitors" data-flag-title="几个 shell 脚本">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -529,9 +566,9 @@
 </blockquote>
 <a id="more"></a>
 <h1 id="批量使用下划线替换路径中的空格"><a href="#批量使用下划线替换路径中的空格" class="headerlink" title="批量使用下划线替换路径中的空格"></a>批量使用下划线替换路径中的空格</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line"></span><br><span class="line">find . -name <span class="string">"* *"</span>|</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> name;<span class="keyword">do</span></span><br><span class="line"></span><br><span class="line">        na=$(<span class="built_in">echo</span> <span class="variable">$name</span> | tr <span class="string">' '</span> <span class="string">'_'</span>)</span><br><span class="line"></span><br><span class="line">        mv <span class="string">"<span class="variable">$name</span>"</span> <span class="variable">$na</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://crabdave.iteye.com/blog/2315483" target="_blank" rel="noopener">参考文章</a>。</p>
+<p><span class="exturl" data-url="aHR0cDovL2NyYWJkYXZlLml0ZXllLmNvbS9ibG9nLzIzMTU0ODM=" title="http://crabdave.iteye.com/blog/2315483">参考文章<i class="fa fa-external-link"></i></span>。</p>
 <h1 id="Imagemagic-批量缩小图片"><a href="#Imagemagic-批量缩小图片" class="headerlink" title="Imagemagic 批量缩小图片"></a>Imagemagic 批量缩小图片</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ ! -d re_size ];<span class="keyword">then</span></span><br><span class="line">  mkdir -p re_size</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">filelist=$(find  -iname <span class="string">"*.jpg"</span>)</span><br><span class="line">FOLDER=$(<span class="built_in">cd</span> `dirname <span class="variable">$0</span>`; <span class="built_in">pwd</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> <span class="variable">$filelist</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span>  </span><br><span class="line">	tempname=<span class="variable">$&#123;filename#*.&#125;</span></span><br><span class="line">	newfilename=<span class="variable">$&#123;FOLDER&#125;</span><span class="variable">$&#123;tempname&#125;</span></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> [ ! -d re_size<span class="variable">$&#123;tempname%/*&#125;</span> ];<span class="keyword">then</span></span><br><span class="line">  		mkdir -p re_size<span class="variable">$&#123;tempname%/*&#125;</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">	</span><br><span class="line">	convert <span class="variable">$newfilename</span> -resize 800 -quality 60 <span class="variable">$&#123;FOLDER&#125;</span>/re_size<span class="variable">$&#123;tempname&#125;</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://www.jincon.com/archives/249" target="_blank" rel="noopener">参考文章1</a> ，<a href="http://blog.sina.com.cn/s/blog_ba532aea0101bty5.html" target="_blank" rel="noopener">参考2</a>  。</p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5qaW5jb24uY29tL2FyY2hpdmVzLzI0OQ==" title="http://www.jincon.com/archives/249">参考文章1<i class="fa fa-external-link"></i></span> ，<span class="exturl" data-url="aHR0cDovL2Jsb2cuc2luYS5jb20uY24vcy9ibG9nX2JhNTMyYWVhMDEwMWJ0eTUuaHRtbA==" title="http://blog.sina.com.cn/s/blog_ba532aea0101bty5.html">参考2<i class="fa fa-external-link"></i></span>  。</p>
 <h1 id="批量压制视频"><a href="#批量压制视频" class="headerlink" title="批量压制视频"></a>批量压制视频</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line"><span class="comment"># author: rachpt@126.com</span></span><br><span class="line"><span class="comment">#------settings--------#</span></span><br><span class="line"></span><br><span class="line">myfolder=finshed</span><br><span class="line"><span class="comment"># use sd or ipad</span></span><br><span class="line">compatibility=sd </span><br><span class="line"></span><br><span class="line"><span class="comment">#-------maincode-------#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$compatibility</span> == <span class="string">"sd"</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">	cut=<span class="string">"854x480"</span></span><br><span class="line">	videorate=<span class="string">"500k"</span></span><br><span class="line">	audiorate=<span class="string">"64k"</span></span><br><span class="line">	speed=<span class="string">"fast"</span></span><br><span class="line">	profile=<span class="string">"-x264-params \"profile=high:level=4.0\""</span></span><br><span class="line">	out=<span class="string">"480p"</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$compatibility</span> == <span class="string">"ipad"</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">	cut=<span class="string">"1280x720"</span></span><br><span class="line">	videorate=<span class="string">"2200k"</span></span><br><span class="line">	audiorate=<span class="string">"128k"</span></span><br><span class="line">	speed=<span class="string">"slow"</span></span><br><span class="line">	profile=<span class="string">"-x264-params \"profile=high:level=4.2\""</span></span><br><span class="line">	out=<span class="string">"720p"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ ! -d <span class="variable">$myfolder</span> ];<span class="keyword">then</span></span><br><span class="line">  mkdir -p <span class="variable">$myfolder</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">filelist=$(find \( -iname <span class="string">"*.mp4"</span> -o -iname <span class="string">"*.mkv"</span> -o -iname <span class="string">"*.ts"</span> -o -iname <span class="string">"*.avi"</span> -o -iname <span class="string">"*.wmv"</span> \) -a ! -name <span class="string">"*_<span class="variable">$out</span>.mp4"</span>)</span><br><span class="line">FOLDER=$(<span class="built_in">cd</span> `dirname <span class="variable">$0</span>`; <span class="built_in">pwd</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> <span class="variable">$filelist</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	tempname=<span class="variable">$&#123;filename#*/&#125;</span></span><br><span class="line">	newfilename=<span class="variable">$&#123;FOLDER&#125;</span>/<span class="variable">$&#123;tempname&#125;</span></span><br><span class="line">	ffmpegcode=<span class="string">"ffmpeg -i <span class="variable">$newfilename</span> -s <span class="variable">$cut</span> -c:v libx264 <span class="variable">$profile</span> -preset <span class="variable">$speed</span> -b:v <span class="variable">$videorate</span>"</span></span><br><span class="line">	isempty=<span class="variable">$&#123;filename#*.&#125;</span></span><br><span class="line">	isempty=<span class="variable">$&#123;isempty%/*&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> [ ! -d <span class="variable">$myfolder</span><span class="variable">$isempty</span> ];<span class="keyword">then</span></span><br><span class="line">	</span><br><span class="line">  		mkdir -p <span class="variable">$myfolder</span><span class="variable">$isempty</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">	</span><br><span class="line">	nohup <span class="variable">$ffmpegcode</span> -pass 1 -an -f mp4 -y /dev/null &amp;&amp; <span class="variable">$ffmpegcode</span> -pass 2 -c:a aac -b:a <span class="variable">$audiorate</span> -strict -2 <span class="variable">$&#123;FOLDER&#125;</span>/<span class="variable">$myfolder</span>/<span class="variable">$&#123;tempname%.*&#125;</span>_<span class="variable">$out</span>.mp4 &gt;/dev/null 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line">rm -f ffmpeg2pass*</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"finished!"</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
       
@@ -597,32 +634,39 @@
 
       </div>
     
-    
+
     
 
+    
+      
+    
     
       <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+        <div id="reward-container">
   <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
   </button>
-  <div id="QR" style="display: none;">
+  <div id="qr" style="display: none;">
 
     
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
         <p>微信支付</p>
       </div>
     
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
         <p>支付宝</p>
       </div>
-    
-
     
 
   </div>
@@ -633,15 +677,25 @@
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="https://rachpt.github.io/2018/03/19/sevseral-shell-scripts/" title="几个 shell 脚本">https://rachpt.github.io/2018/03/19/sevseral-shell-scripts/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -665,10 +719,16 @@
 
         
           
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
           </div>
         
         </div>
@@ -707,10 +767,6 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -720,6 +776,7 @@
   
     <div class="comments" id="comments">
     </div>
+
   
 
 
@@ -737,7 +794,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -753,14 +809,14 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif" alt="rachpt">
             
               <p class="site-author-name" itemprop="name">rachpt</p>
-              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+              <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
           </div>
 
           
@@ -780,7 +836,11 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -817,7 +877,11 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -948,28 +1012,41 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="GitHub &rarr; https://github.com/rachpt"><i class="fa fa-fw fa-github"></i></span>
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnJhY2hwdEAxMjYuY29t" title="E-Mail &rarr; mailto:rachpt@126.com"><i class="fa fa-fw fa-envelope"></i></span>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
           
 
           
@@ -977,20 +1054,20 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-block">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友情链接
+                Links
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://rachpt.iok.la/" title="控制面板" target="_blank">控制面板</a>
+                    <span class="exturl" data-url="aHR0cDovL3JhY2hwdC5pb2subGEv" title="http://rachpt.iok.la/">控制面板</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://agint.me/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9hZ2ludC5tZS8=" title="https://agint.me/">sword 杂货屋</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://quanyaxin.github.io/" title="Quanyaxin" target="_blank">Quanyaxin</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9xdWFueWF4aW4uZ2l0aHViLmlvLw==" title="https://quanyaxin.github.io/">Quanyaxin</span>
                   </li>
                 
               </ul>
@@ -1003,15 +1080,16 @@
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
@@ -1019,7 +1097,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -1034,6 +1112,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -1042,7 +1121,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heartbeat"></i>
   </span>
@@ -1054,8 +1133,6 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">站点总字数：</span>
-    
     <span title="站点总字数">146k</span>
   
 
@@ -1065,15 +1142,9 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    
     <span title="站点阅读时长">2:13</span>
   
 </div>
-
-
-  
-
 
 
 
@@ -1083,20 +1154,32 @@
 
 
   <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
-<div>
-  <i class="fa fa-user-md"></i> 
-  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
-  <i class="fa fa-eye"></i> 
-  本站访客数：<span id="busuanzi_value_site_uv"></span> 
-</div>
 
 
         
 <div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -1104,8 +1187,7 @@
 
 
 
-
-  <script type="text/javascript">
+  <script>
     (function() {
       var hm = document.createElement("script");
       hm.src = "//tajs.qq.com/stats?sId=65362593";
@@ -1113,6 +1195,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -1125,11 +1208,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1165,37 +1251,27 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
-  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
@@ -1203,73 +1279,80 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+  <script src="/js/src/affix.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
 
 
 
   
 
 
-
-  
-
-
-
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
 
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
-        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
-        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
-        avatar:'wavatar',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
 
 
   
+  
+  
 
-  <script type="text/javascript">
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+    appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+    placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -1355,7 +1438,7 @@
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -1524,9 +1607,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -1598,20 +1681,41 @@
   
 
   
+
+  
+
+  
 <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+  });
+}
 </script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
   
@@ -1620,23 +1724,23 @@
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
       pbOptions = {};
       
-          pbOptions.iconStyle = "box";
+        pbOptions.iconStyle = "box";
       
-          pbOptions.boxForm = "horizontal";
+        pbOptions.boxForm = "horizontal";
       
-          pbOptions.position = "bottomCenter";
+        pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
   </script>
+
 
   
 
@@ -1644,18 +1748,14 @@
   
   
   <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script type="text/javascript">pangu.spacingPage();</script>
+  <script>pangu.spacingPage();</script>
 
-
-  
-
-  
 
   
   
   
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
+  <script>
   
     bookmark.scrollToMark('auto', "#更多");
   
@@ -1663,75 +1763,45 @@
 
 
   
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
 
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
 
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
+  
 
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap')
-      $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text()
-        }).toArray().join('\n')
-        var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('复制成功')
-          else $(this).text('复制失败')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('复制')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
+  
 
   
 <head><meta name="generator" content="Hexo 3.8.0">

@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
 
@@ -35,20 +33,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2">
 
 
 
@@ -69,37 +54,38 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.3.0',
-    sidebar: {"position":"left","width":240,"display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '7.0.1',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: true,
@@ -110,7 +96,7 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -155,7 +141,7 @@
 
 
 
-<script type="text/javascript" id="page.configurations">
+<script id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -167,14 +153,8 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-109494468-2');
-</script>
+
 
 
 
@@ -182,29 +162,27 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -222,7 +200,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -236,6 +214,7 @@
       
         <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
       
+    
     
   </div>
 
@@ -259,32 +238,68 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-notes">
-    <a href="/notes/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/notes/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
 
       
@@ -336,6 +351,15 @@
     </header>
 
     
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
 
 
     <main id="main" class="main">
@@ -383,10 +407,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">transmission-settings<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/transmission-settings.md" class="post-edit-link" title="编辑" target="_blank">
-                    <i class="fa fa-pencil"></i>
-                  </a>
-                
+          <h2 class="post-title" itemprop="name headline">transmission-settings
+
               
             
           </h2>
@@ -455,19 +477,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/03/25/transmission-settings/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/25/transmission-settings/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/25/transmission-settings/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/03/25/transmission-settings/" class="leancloud_visitors" data-flag-title="transmission-settings">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -532,7 +569,7 @@
 <p>下面说的是 daemon 版的设置，对其它的也是有效的。只是 <code>settings.json</code> 的位置不一样。</p>
 <h1 id="rpc"><a href="#rpc" class="headerlink" title="rpc"></a>rpc</h1><p>rpc 为 WEBGUI 控制的相关设置。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&quot;rpc-authentication-required&quot;: false,</span><br><span class="line"># 是否需要用户名与密码验证，是全局设置</span><br><span class="line">&quot;rpc-bind-address&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line"># 黑名单，全局性的</span><br><span class="line">&quot;rpc-enabled&quot;: true,</span><br><span class="line"># 是否开启 WebGUI，开启其他才有效</span><br><span class="line">&quot;rpc-host-whitelist&quot;: &quot;*example.com&quot;,</span><br><span class="line"># 在有密码验证的时候，host名单，默认 localhost 和所有 ip 地址在其中</span><br><span class="line">&quot;rpc-host-whitelist-enabled&quot;: true,</span><br><span class="line"># 是否开启 host 白名单</span><br><span class="line">&quot;rpc-password&quot;: &quot;×××&quot;,</span><br><span class="line"># 密码，保存后自动转化成加密态</span><br><span class="line">&quot;rpc-port&quot;: 9091,</span><br><span class="line"># 端口，默认9091,ip + : + 端口号，才能访问 tr</span><br><span class="line">&quot;rpc-url&quot;: &quot;/transmission/&quot;,</span><br><span class="line"># 路径名，显示在端口后面，默认即可</span><br><span class="line">&quot;rpc-username&quot;: &quot;××&quot;,</span><br><span class="line"># 用于认证的有户名</span><br><span class="line">&quot;rpc-whitelist&quot;: &quot;127.0.0.1,10.42.0.*&quot;,</span><br><span class="line"># 全局白名单，只有 ip 在其中的客户机才能访问，可以使用通配符</span><br><span class="line"># 这个与 需不需要 用户名与密码验证无关</span><br><span class="line">&quot;rpc-whitelist-enabled&quot;: true,</span><br><span class="line"># 是否开启 白名单访问，除非你只在一个固定的 ip (段)上管理，否则不要开启</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/transmission/transmission/wiki/Editing-Configuration-Files#rpc" target="_blank" rel="noopener">参考文档</a> 。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RyYW5zbWlzc2lvbi90cmFuc21pc3Npb24vd2lraS9FZGl0aW5nLUNvbmZpZ3VyYXRpb24tRmlsZXMjcnBj" title="https://github.com/transmission/transmission/wiki/Editing-Configuration-Files#rpc">参考文档<i class="fa fa-external-link"></i></span> 。</p>
 <h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;script-torrent-done-enabled&quot;: true,</span><br><span class="line"># 每一个种子完成后 执行脚本 开关</span><br><span class="line">&quot;script-torrent-done-filename&quot;: &quot;/home/transmission/auto&quot;,</span><br><span class="line"># 执行的脚本路径，使用 全路径</span><br></pre></td></tr></table></figure>
 <p>可以 使用的变量</p>
 <pre><code>TR_APP_VERSION
@@ -541,17 +578,17 @@ TR_TORRENT_DIR
 TR_TORRENT_HASH
 TR_TORRENT_ID
 TR_TORRENT_NAME 
-</code></pre><p><a href="https://trac.transmissionbt.com/browser/trunk/extras/send-email-when-torrent-done.sh" target="_blank" rel="noopener">一个例子</a> ,</p>
-<p><a href="https://trac.transmissionbt.com/wiki/Scripts#Script" target="_blank" rel="noopener">参考文档</a> 。</p>
+</code></pre><p><span class="exturl" data-url="aHR0cHM6Ly90cmFjLnRyYW5zbWlzc2lvbmJ0LmNvbS9icm93c2VyL3RydW5rL2V4dHJhcy9zZW5kLWVtYWlsLXdoZW4tdG9ycmVudC1kb25lLnNo" title="https://trac.transmissionbt.com/browser/trunk/extras/send-email-when-torrent-done.sh">一个例子<i class="fa fa-external-link"></i></span> ,</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly90cmFjLnRyYW5zbWlzc2lvbmJ0LmNvbS93aWtpL1NjcmlwdHMjU2NyaXB0" title="https://trac.transmissionbt.com/wiki/Scripts#Script">参考文档<i class="fa fa-external-link"></i></span> 。</p>
 <p>其他暂时没什么说的，都能百度到，或者看官方文档搞定。</p>
 <hr>
 <p>2018-05-15  更新</p>
-<h1 id="制作种子"><a href="#制作种子" class="headerlink" title="制作种子"></a>制作种子</h1><p>需要使用 <code>transmission-create</code>命令(由 transmission-cli 提供)，<a href="https://linux.die.net/man/1/transmission-create" target="_blank" rel="noopener">web版帮助文档</a>。</p>
+<h1 id="制作种子"><a href="#制作种子" class="headerlink" title="制作种子"></a>制作种子</h1><p>需要使用 <code>transmission-create</code>命令(由 transmission-cli 提供)，<span class="exturl" data-url="aHR0cHM6Ly9saW51eC5kaWUubmV0L21hbi8xL3RyYW5zbWlzc2lvbi1jcmVhdGU=" title="https://linux.die.net/man/1/transmission-create">web版帮助文档<i class="fa fa-external-link"></i></span>。</p>
 <p>使用命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-create -p -o /path/out.torrent -s 16384 -t https://example.com/announce.php -c <span class="string">'made by Linux'</span> /path/something/</span><br></pre></td></tr></table></figure>
 <p><code>-p</code> 表示私密种子， <code>-o</code> 设置输出路径，<code>-s</code> 设置分块大小，单位<code>KiB</code> ，默认 2M，<code>-t</code> 设置tracker，<code>-c</code> 添加评论，最后的文件或者路径即是需要制作种子的源文件。</p>
-<h1 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h1><p>使用<code>transmission-remote</code> 管理tr，<a href="https://linux.die.net/man/1/transmission-remote" target="_blank" rel="noopener">web版帮助文档</a>。</p>
-<p>具体应用可以参考<a href="https://github.com/rachpt/shell-scripts/blob/master/auto_delete_torrentfile.sh" target="_blank" rel="noopener">这里</a>。</p>
+<h1 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h1><p>使用<code>transmission-remote</code> 管理tr，<span class="exturl" data-url="aHR0cHM6Ly9saW51eC5kaWUubmV0L21hbi8xL3RyYW5zbWlzc2lvbi1yZW1vdGU=" title="https://linux.die.net/man/1/transmission-remote">web版帮助文档<i class="fa fa-external-link"></i></span>。</p>
+<p>具体应用可以参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdC9zaGVsbC1zY3JpcHRzL2Jsb2IvbWFzdGVyL2F1dG9fZGVsZXRlX3RvcnJlbnRmaWxlLnNo" title="https://github.com/rachpt/shell-scripts/blob/master/auto_delete_torrentfile.sh">这里<i class="fa fa-external-link"></i></span>。</p>
 
       
     </div>
@@ -588,32 +625,39 @@ TR_TORRENT_NAME
 
       </div>
     
-    
+
     
 
+    
+      
+    
     
       <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+        <div id="reward-container">
   <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
   </button>
-  <div id="QR" style="display: none;">
+  <div id="qr" style="display: none;">
 
     
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
         <p>微信支付</p>
       </div>
     
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
         <p>支付宝</p>
       </div>
-    
-
     
 
   </div>
@@ -624,15 +668,25 @@ TR_TORRENT_NAME
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="https://rachpt.github.io/2018/03/25/transmission-settings/" title="transmission-settings">https://rachpt.github.io/2018/03/25/transmission-settings/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -656,10 +710,16 @@ TR_TORRENT_NAME
 
         
           
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
           </div>
         
         </div>
@@ -698,10 +758,6 @@ TR_TORRENT_NAME
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -711,6 +767,7 @@ TR_TORRENT_NAME
   
     <div class="comments" id="comments">
     </div>
+
   
 
 
@@ -728,7 +785,6 @@ TR_TORRENT_NAME
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -744,14 +800,14 @@ TR_TORRENT_NAME
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif" alt="rachpt">
             
               <p class="site-author-name" itemprop="name">rachpt</p>
-              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+              <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
           </div>
 
           
@@ -771,7 +827,11 @@ TR_TORRENT_NAME
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -808,7 +868,11 @@ TR_TORRENT_NAME
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -939,28 +1003,41 @@ TR_TORRENT_NAME
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="GitHub &rarr; https://github.com/rachpt"><i class="fa fa-fw fa-github"></i></span>
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnJhY2hwdEAxMjYuY29t" title="E-Mail &rarr; mailto:rachpt@126.com"><i class="fa fa-fw fa-envelope"></i></span>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
           
 
           
@@ -968,20 +1045,20 @@ TR_TORRENT_NAME
             <div class="links-of-blogroll motion-element links-of-blogroll-block">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友情链接
+                Links
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://rachpt.iok.la/" title="控制面板" target="_blank">控制面板</a>
+                    <span class="exturl" data-url="aHR0cDovL3JhY2hwdC5pb2subGEv" title="http://rachpt.iok.la/">控制面板</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://agint.me/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9hZ2ludC5tZS8=" title="https://agint.me/">sword 杂货屋</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://quanyaxin.github.io/" title="Quanyaxin" target="_blank">Quanyaxin</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9xdWFueWF4aW4uZ2l0aHViLmlvLw==" title="https://quanyaxin.github.io/">Quanyaxin</span>
                   </li>
                 
               </ul>
@@ -994,15 +1071,16 @@ TR_TORRENT_NAME
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
@@ -1010,7 +1088,7 @@ TR_TORRENT_NAME
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -1025,6 +1103,7 @@ TR_TORRENT_NAME
 
     </div>
   </aside>
+  
 
 
         
@@ -1033,7 +1112,7 @@ TR_TORRENT_NAME
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heartbeat"></i>
   </span>
@@ -1045,8 +1124,6 @@ TR_TORRENT_NAME
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">站点总字数：</span>
-    
     <span title="站点总字数">146k</span>
   
 
@@ -1056,15 +1133,9 @@ TR_TORRENT_NAME
       <i class="fa fa-coffee"></i>
     </span>
     
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    
     <span title="站点阅读时长">2:13</span>
   
 </div>
-
-
-  
-
 
 
 
@@ -1074,20 +1145,32 @@ TR_TORRENT_NAME
 
 
   <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
-<div>
-  <i class="fa fa-user-md"></i> 
-  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
-  <i class="fa fa-eye"></i> 
-  本站访客数：<span id="busuanzi_value_site_uv"></span> 
-</div>
 
 
         
 <div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -1095,8 +1178,7 @@ TR_TORRENT_NAME
 
 
 
-
-  <script type="text/javascript">
+  <script>
     (function() {
       var hm = document.createElement("script");
       hm.src = "//tajs.qq.com/stats?sId=65362593";
@@ -1104,6 +1186,7 @@ TR_TORRENT_NAME
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -1116,11 +1199,14 @@ TR_TORRENT_NAME
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1156,37 +1242,27 @@ TR_TORRENT_NAME
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
-  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
@@ -1194,73 +1270,80 @@ TR_TORRENT_NAME
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+  <script src="/js/src/affix.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
 
 
 
   
 
 
-
-  
-
-
-
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
 
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
-        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
-        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
-        avatar:'wavatar',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
 
 
   
+  
+  
 
-  <script type="text/javascript">
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+    appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+    placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -1346,7 +1429,7 @@ TR_TORRENT_NAME
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -1515,9 +1598,9 @@ TR_TORRENT_NAME
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -1589,20 +1672,41 @@ TR_TORRENT_NAME
   
 
   
+
+  
+
+  
 <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+  });
+}
 </script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
   
@@ -1611,23 +1715,23 @@ TR_TORRENT_NAME
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
       pbOptions = {};
       
-          pbOptions.iconStyle = "box";
+        pbOptions.iconStyle = "box";
       
-          pbOptions.boxForm = "horizontal";
+        pbOptions.boxForm = "horizontal";
       
-          pbOptions.position = "bottomCenter";
+        pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
   </script>
+
 
   
 
@@ -1635,18 +1739,14 @@ TR_TORRENT_NAME
   
   
   <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script type="text/javascript">pangu.spacingPage();</script>
+  <script>pangu.spacingPage();</script>
 
-
-  
-
-  
 
   
   
   
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
+  <script>
   
     bookmark.scrollToMark('auto', "#更多");
   
@@ -1654,75 +1754,45 @@ TR_TORRENT_NAME
 
 
   
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
 
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
 
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
+  
 
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap')
-      $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text()
-        }).toArray().join('\n')
-        var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('复制成功')
-          else $(this).text('复制失败')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('复制')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
+  
 
   
 <head><meta name="generator" content="Hexo 3.8.0">

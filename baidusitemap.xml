@@ -1,1577 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
     <loc>https://rachpt.github.io/2019/01/16/latex-beamer-note/</loc>
-    <lastmod>2019-03-20T00:46:40.537Z</lastmod>
-    <data>
-        <display>
-        <title>latex-beamer-note</title>
-        <pubTime>2019-01-16T06:24:19.000Z</pubTime>
-        
-        <tag>beamer</tag>
-         
-         
-           
-             
-              <breadCrumb title="latex" url="https://rachpt.github.io/categories/latex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
+    <lastmod>2019-03-20</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2019/02/22/Trouble-with-automatic-mouse-copy-function-under-linux/</loc>
-    <lastmod>2019-02-22T03:54:00.737Z</lastmod>
-    <data>
-        <display>
-        <title>Trouble-with-automatic-mouse-copy-function-under-linux</title>
-        <pubTime>2019-02-22T03:37:03.000Z</pubTime>
-        
-        <tag>linux, clipboard</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-22</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</loc>
-    <lastmod>2019-02-15T13:49:16.133Z</lastmod>
-    <data>
-        <display>
-        <title>make-transmission2.94-from-source-code</title>
-        <pubTime>2018-07-24T02:47:46.000Z</pubTime>
-        
-        <tag>transmission</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-15</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/</loc>
-    <lastmod>2019-01-09T08:09:46.460Z</lastmod>
-    <data>
-        <display>
-        <title>install-matlab-on-archlinux</title>
-        <pubTime>2018-12-31T09:50:22.000Z</pubTime>
-        
-        <tag>matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-09</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</loc>
-    <lastmod>2018-12-18T08:17:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>something-difference-from-manjaro-back-to-ubuntu</title>
-        <pubTime>2018-12-18T07:03:54.000Z</pubTime>
-        
-        <tag>linux, ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-18</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
-    <lastmod>2018-12-11T13:05:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>dual-disk-install-dual-system</title>
-        <pubTime>2018-12-10T06:46:25.000Z</pubTime>
-        
-        <tag>linux, windows</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-11</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/12/01/change-to-use-archlinux/</loc>
-    <lastmod>2018-12-01T13:30:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>change-to-use-archlinux</title>
-        <pubTime>2018-12-01T12:59:54.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-01</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/18/notes-for-ubuntu/</loc>
-    <lastmod>2018-11-20T11:22:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 学习笔记</title>
-        <pubTime>2017-12-18T02:41:04.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-11-20</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
-    <lastmod>2018-11-19T07:50:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>a-bash-script-for-pt-signin</title>
-        <pubTime>2018-03-29T02:47:06.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-        <tag>pt</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
+    <lastmod>2018-11-19</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/</loc>
-    <lastmod>2018-10-28T08:37:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>an-error-in-mpv-player</title>
-        <pubTime>2018-10-28T08:29:17.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-10-28</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/16/download-youtube-video/</loc>
-    <lastmod>2018-10-10T03:59:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>教育网IPV6下载YouTube视频</title>
-        <pubTime>2017-11-15T16:12:44.000Z</pubTime>
-        
-        <tag>IPV6</tag>
-         
-        <tag>YouTube</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-10-10</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/</loc>
-    <lastmod>2018-09-26T03:09:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>change-the-resolution-of-the-console</title>
-        <pubTime>2018-09-20T12:52:51.000Z</pubTime>
-        
-        <tag>console</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-09-26</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
-    <lastmod>2018-09-23T06:56:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>简单使用 FFmpeg 压制视频</title>
-        <pubTime>2018-03-12T13:52:01.000Z</pubTime>
-        
-        <tag>ffmpeg</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-09-23</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/</loc>
-    <lastmod>2018-09-07T12:28:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>adb-linux-and-mi8</title>
-        <pubTime>2018-07-06T03:37:15.000Z</pubTime>
-        
-        <tag>mi8</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-09-07</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/05/07/extra-shell-note/</loc>
-    <lastmod>2018-09-06T03:23:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>extra-shell-note</title>
-        <pubTime>2018-05-07T06:31:04.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-09-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/04/02/windows-note-02/</loc>
-    <lastmod>2018-09-06T02:05:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows 使用笔记-02</title>
-        <pubTime>2018-04-02T04:00:00.000Z</pubTime>
-        
-        <tag>windows</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-09-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/25/transmission-settings/</loc>
-    <lastmod>2018-08-25T08:39:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>transmission-settings</title>
-        <pubTime>2018-03-25T12:51:06.000Z</pubTime>
-        
-        <tag>transmission</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-25</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
-    <lastmod>2018-08-22T02:12:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>vim-set-working-directory-to-the-current-file</title>
-        <pubTime>2018-08-22T01:47:54.000Z</pubTime>
-        
-        <tag>vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-22</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/20/compile-vim-with-clipboard-supported/</loc>
-    <lastmod>2018-07-30T09:13:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>compile-vim-with-clipboard-supported</title>
-        <pubTime>2018-07-20T08:11:00.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-30</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/</loc>
-    <lastmod>2018-07-28T05:33:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>service-systemctl-and-daemon</title>
-        <pubTime>2018-07-27T16:43:38.000Z</pubTime>
-        
-        <tag>daemon</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-28</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/30/flexget-for-ut/</loc>
-    <lastmod>2018-07-27T13:26:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用FlexGet订阅下载Torrent</title>
-        <pubTime>2017-11-30T14:21:05.000Z</pubTime>
-        
-        <tag>flexget</tag>
-         
-        <tag>pt</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-27</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
-    <lastmod>2018-07-27T11:28:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>compile-nginx-1.14</title>
-        <pubTime>2018-07-25T14:58:31.000Z</pubTime>
-        
-        <tag>nginx</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-27</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
-    <lastmod>2018-07-27T05:43:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>make-qbittorrent-from-source-code</title>
-        <pubTime>2018-07-21T13:21:34.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-27</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/26/use-expect-to-ssh-and-solve-a-problem/</loc>
-    <lastmod>2018-07-26T09:26:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>use-expect-to-ssh-and-solve-a-problem</title>
-        <pubTime>2018-07-26T08:24:18.000Z</pubTime>
-        
-        <tag>ssh</tag>
-         
-        <tag>expect</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-26</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/02/ms-scf-max-iterations/</loc>
-    <lastmod>2018-07-25T13:39:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Materials Studio CASTEP 迭代次数设置</title>
-        <pubTime>2018-03-02T02:50:00.000Z</pubTime>
-        
-        <tag>castep</tag>
-         
-        <tag>ms</tag>
-         
-         
-           
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-25</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/</loc>
-    <lastmod>2018-07-25T13:19:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>run-matlab-in-a-terminal</title>
-        <pubTime>2018-07-25T12:39:59.000Z</pubTime>
-        
-        <tag>matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-25</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
-    <lastmod>2018-07-06T13:34:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>next 主题设置</title>
-        <pubTime>2018-03-05T11:37:08.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/02/zip-and-upload-to-baidupcs/</loc>
-    <lastmod>2018-07-02T13:34:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>zip-and-upload-to-baidupcs</title>
-        <pubTime>2018-07-02T13:03:10.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-02</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/06/21/a-simple-script-to-count-ABC/</loc>
-    <lastmod>2018-06-20T17:26:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>a-simple-script-to-count-ABC</title>
-        <pubTime>2018-06-20T17:09:03.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-06-20</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/</loc>
-    <lastmod>2018-06-05T12:14:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>install-CAJViewer-on-Linux</title>
-        <pubTime>2018-06-05T06:36:35.000Z</pubTime>
-        
-        <tag>CAJViewer</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-06-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/01/notes-for-learning-python/</loc>
-    <lastmod>2018-05-12T02:35:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python 学习笔记</title>
-        <pubTime>2017-12-01T04:23:12.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="https://rachpt.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-05-12</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/05/07/upgrade-ubuntu-stepped-pit/</loc>
-    <lastmod>2018-05-10T01:58:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>upgrade-ubuntu-stepped-pit</title>
-        <pubTime>2018-05-07T12:31:19.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-05-10</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/05/07/flexget-and-transmission-on-ubuntu/</loc>
-    <lastmod>2018-05-07T05:48:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>flexget-and-transmission-on-ubuntu</title>
-        <pubTime>2018-05-06T16:30:00.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>flexget</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-05-07</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/09/firefox-in-ubuntu/</loc>
-    <lastmod>2018-04-16T05:21:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu 中的 Firefox</title>
-        <pubTime>2017-12-09T06:23:45.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-        <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-16</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/11/firefox-noupgrade/</loc>
-    <lastmod>2018-04-06T11:02:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Firefox 切换更新通道</title>
-        <pubTime>2017-11-10T16:04:16.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/23/notes-for-shell-scripting-bible/</loc>
-    <lastmod>2018-04-02T11:02:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>notes-for-shell-scripting-bible</title>
-        <pubTime>2018-03-23T13:23:22.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-02</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/01/27/windows-note-01/</loc>
-    <lastmod>2018-04-02T04:18:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows 使用笔记-01</title>
-        <pubTime>2018-01-27T05:32:04.000Z</pubTime>
-        
-        <tag>windows</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-02</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/04/01/use-linux-format-not-dos/</loc>
-    <lastmod>2018-04-01T07:43:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>use-linux-format-not-dos</title>
-        <pubTime>2018-04-01T07:08:21.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-01</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/31/use-outer-variables-in-awk/</loc>
-    <lastmod>2018-03-31T09:25:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>use-outer-variables-in-awk</title>
-        <pubTime>2018-03-31T08:54:27.000Z</pubTime>
-        
-        <tag>awk</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-31</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/31/the-gateway-of-materials-studio/</loc>
-    <lastmod>2018-03-31T03:55:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>the-gateway-of-materials-studio</title>
-        <pubTime>2018-03-31T03:13:07.000Z</pubTime>
-        
-        <tag>castep</tag>
-         
-        <tag>ms</tag>
-         
-         
-           
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-31</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/28/change-sidebar-width-of-firefox/</loc>
-    <lastmod>2018-03-28T14:11:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>change-sidebar-width-of-firefox</title>
-        <pubTime>2018-03-28T13:12:24.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-28</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</loc>
-    <lastmod>2018-03-25T19:24:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>Gimp 简单使用笔记</title>
-        <pubTime>2018-03-03T03:40:31.000Z</pubTime>
-        
-        <tag>gimp</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-25</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/01/11/install-materials-studio-on-ubuntu/</loc>
-    <lastmod>2018-03-23T05:42:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</title>
-        <pubTime>2018-01-11T14:35:03.000Z</pubTime>
-        
-        <tag>castep</tag>
-         
-        <tag>ms</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/linux/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-23</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/23/CASTEP-module-in-MS/</loc>
-    <lastmod>2018-03-23T03:14:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>CASTEP-module-in-MS</title>
-        <pubTime>2018-03-23T02:56:20.000Z</pubTime>
-        
-        <tag>castep</tag>
-         
-         
-           
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-23</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/19/sevseral-shell-scripts/</loc>
-    <lastmod>2018-03-20T15:06:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>几个 shell 脚本</title>
-        <pubTime>2018-03-19T14:12:41.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-20</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
-    <lastmod>2018-03-15T14:12:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>努比亚 Z11 mini 换电池</title>
-        <pubTime>2018-03-11T15:00:00.000Z</pubTime>
-        
-        <tag>nubia</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-15</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/02/solve-some-problem-about-wamp/</loc>
-    <lastmod>2018-03-14T05:01:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题</title>
-        <pubTime>2017-12-01T16:00:00.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>wamp</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/03/calc-hash-in-linux/</loc>
-    <lastmod>2018-03-14T04:57:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 文件 hash</title>
-        <pubTime>2017-12-02T16:00:00.000Z</pubTime>
-        
-        <tag>hash</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
-    <lastmod>2018-03-14T04:51:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>Acrobat 双页全屏显示</title>
-        <pubTime>2017-11-09T23:51:47.000Z</pubTime>
-        
-        <tag>PDF</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
-    <lastmod>2018-03-14T04:44:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>照片PDF优化成矢量版</title>
-        <pubTime>2017-11-10T01:29:17.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-        <tag>acrobat</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/03/upto-firefox-57/</loc>
-    <lastmod>2018-03-14T04:39:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>顺利过度到 firefox 57</title>
-        <pubTime>2017-11-03T12:17:56.000Z</pubTime>
-        
-        <tag>firefox</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/04/COMSOL-notes/</loc>
-    <lastmod>2018-03-14T04:15:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>COMSOL 简要笔记</title>
-        <pubTime>2017-12-04T01:12:45.000Z</pubTime>
-        
-        <tag>comsol</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://rachpt.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/materials-studio-super/</loc>
-    <lastmod>2018-03-14T04:12:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>Materials Studio 超算步骤_精简版</title>
-        <pubTime>2017-11-10T00:30:14.000Z</pubTime>
-        
-        <tag>ms,castep</tag>
-         
-         
-           
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-14</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/13/some-error-of-ms/</loc>
-    <lastmod>2018-03-13T14:12:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>几个 MS 错误</title>
-        <pubTime>2018-03-13T14:02:23.000Z</pubTime>
-        
-        <tag>castep</tag>
-         
-        <tag>ms</tag>
-         
-         
-           
-             
-              <breadCrumb title="DFT" url="https://rachpt.github.io/categories/DFT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-13</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/13/quick-add-a-essay-on-hexoSystem/</loc>
-    <lastmod>2018-03-13T12:36:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 中快速添加 hexo 文章</title>
-        <pubTime>2018-03-13T10:41:51.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-13</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/17/python-for-data-analysis/</loc>
-    <lastmod>2018-03-13T01:10:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>《利用Python进行数据分析》</title>
-        <pubTime>2017-11-17T09:20:20.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.github.io/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-13</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/12/solve-the-problem-of-cannot-inputting-Chinese-in-mendeley/</loc>
-    <lastmod>2018-03-12T03:16:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决 mint 系统中 mendeley 无法使用 fcitx 输入中文</title>
-        <pubTime>2018-03-12T02:46:14.000Z</pubTime>
-        
-        <tag>memdeley</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-12</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/11/linux-allow-numlock-on/</loc>
-    <lastmod>2018-03-11T12:40:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 设置开机自动打开数字小键盘</title>
-        <pubTime>2018-03-11T12:19:08.000Z</pubTime>
-        
-        <tag>numlock</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-11</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/10/notes-for-solve-ibus-error/</loc>
-    <lastmod>2018-03-10T16:27:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>几个关于 iBus 输入法的记录</title>
-        <pubTime>2018-03-10T08:35:27.000Z</pubTime>
-        
-        <tag>ibus</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://rachpt.github.io/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-10</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/05/test/</loc>
-    <lastmod>2018-03-06T10:34:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>next 主题使用笔记——标签</title>
-        <pubTime>2018-03-05T09:45:01.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/11/video-test/</loc>
-    <lastmod>2018-03-06T04:25:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>第一个小视频</title>
-        <pubTime>2017-11-11T02:55:54.000Z</pubTime>
-        
-        <tag>视频</tag>
-         
-         
-           
-             
-              <breadCrumb title="视频" url="https://rachpt.github.io/categories/%E8%A7%86%E9%A2%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/01/12/%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E5%9D%80%E9%9C%80%E8%A6%81%E8%8A%B1%E5%A4%9A%E5%B0%91/</loc>
-    <lastmod>2018-03-06T04:16:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>建一个个人网站需要花费多少</title>
-        <pubTime>2018-01-11T16:00:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="笔记" url="https://rachpt.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-06</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/02/welfare-for-pt/</loc>
-    <lastmod>2018-03-05T08:15:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>越想越气——福利</title>
-        <pubTime>2017-12-02T14:54:23.000Z</pubTime>
-        
-        <tag>pt</tag>
-         
-        <tag>ut</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/14/my-android/</loc>
-    <lastmod>2018-03-05T06:15:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的安卓我做主</title>
-        <pubTime>2017-11-14T03:34:51.000Z</pubTime>
-        
-        <tag>安卓</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/14/notes-for-olex2/</loc>
-    <lastmod>2018-03-05T06:10:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Olex2 软件使用笔记</title>
-        <pubTime>2017-12-14T14:30:23.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>olex2</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/31/setting-protable-program-on-linux/</loc>
-    <lastmod>2018-03-05T05:48:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 免安装程序配置</title>
-        <pubTime>2017-12-31T15:26:05.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>ubuntu</tag>
-         
-        <tag>mint</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/</loc>
-    <lastmod>2018-03-05T05:21:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 更新 xz 至 5.2+</title>
-        <pubTime>2018-01-13T06:32:56.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
-    <lastmod>2018-03-05T05:15:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux下的PDF阅读软件zathura</title>
-        <pubTime>2018-01-22T09:58:31.000Z</pubTime>
-        
-        <tag>PDF</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>京东预售商品加入购物车</title>
-        <pubTime>2017-11-28T09:42:30.000Z</pubTime>
-        
-        <tag>京东</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://rachpt.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/12/chinas-confidence/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>张维为：中国信心</title>
-        <pubTime>2017-11-12T05:26:20.000Z</pubTime>
-        
-        <tag>视频</tag>
-         
-         
-           
-             
-              <breadCrumb title="视频" url="https://rachpt.github.io/categories/%E8%A7%86%E9%A2%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://rachpt.github.io/2017/11/20/my-graduate-stage/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的研究生阶段该如何度过？</title>
-        <pubTime>2017-11-19T16:04:17.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-        <tag>规划</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>新博客地址</title>
-        <pubTime>2018-03-03T07:57:02.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/20/my-graduate-stage/</loc>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/note-markdown/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建一个方便的多平台笔记方案</title>
-        <pubTime>2017-11-09T16:52:35.000Z</pubTime>
-        
-        <tag>MarkDown</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="实用" url="https://rachpt.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/17/quantum-mechanics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>高等量子力学_打印版笔记</title>
-        <pubTime>2017-11-17T07:17:43.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高亮</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.github.io/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/so-busy/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>我总是很忙</title>
-        <pubTime>2017-11-09T16:39:30.000Z</pubTime>
-        
-        <tag>忙</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="https://rachpt.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/16/statistical-physics-notes/</loc>
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>高等统计物理_打印版笔记</title>
-        <pubTime>2017-11-16T05:12:08.000Z</pubTime>
-        
-        <tag>课件</tag>
-         
-        <tag>高统</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://rachpt.github.io/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
-    <lastmod>2018-03-03T03:52:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>Pycharm please specify a different SDK name</title>
-        <pubTime>2018-03-03T03:08:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
+    <lastmod>2018-03-03</lastmod>
+  </url>
 </urlset>

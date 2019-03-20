@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
 
@@ -35,20 +33,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-  <meta name="google-site-verification" content="YPLJqqT2JNCqcYPQUq0Io-rMcn5izvphUhRA6ZVE9yk">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2">
 
 
 
@@ -69,37 +54,38 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=6.3.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1">
 
 
-
+  <link rel="mask-icon" href="https://ws1.sinaimg.cn/large/675bda05gy1foxcscw2hvj2046046mx5.jpg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.3.0',
-    sidebar: {"position":"left","width":240,"display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '7.0.1',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: true,
@@ -110,7 +96,7 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"想看啥？输入关键词","hits_empty":"没有找到与 [${query}] 相关的内容，换个词试试？","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -163,7 +149,7 @@
 
 
 
-<script type="text/javascript" id="page.configurations">
+<script id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -175,14 +161,8 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-109494468-2');
-</script>
+
 
 
 
@@ -190,29 +170,27 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -230,7 +208,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -244,6 +222,7 @@
       
         <h1 class="site-subtitle" itemprop="description">时间总是追不上</h1>
       
+    
     
   </div>
 
@@ -267,32 +246,68 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-notes">
-    <a href="/notes/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/notes/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>札记</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
 
       
@@ -344,6 +359,15 @@
     </header>
 
     
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
 
 
     <main id="main" class="main">
@@ -391,10 +415,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Windows 使用笔记-02<a href="https://github.com/rachpt/rachpt.github.io/_posts/tree/master/windows-note-02.md" class="post-edit-link" title="编辑" target="_blank">
-                    <i class="fa fa-pencil"></i>
-                  </a>
-                
+          <h2 class="post-title" itemprop="name headline">Windows 使用笔记-02
+
               
             
           </h2>
@@ -445,19 +467,34 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2018/04/02/windows-note-02/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/02/windows-note-02/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/02/windows-note-02/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+            <span id="/2018/04/02/windows-note-02/" class="leancloud_visitors" data-flag-title="Windows 使用笔记-02">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -521,7 +558,7 @@
 <a id="more"></a>
 <h1 id="装机后驱动"><a href="#装机后驱动" class="headerlink" title="装机后驱动"></a>装机后驱动</h1><p>不管是核心显卡还是独立显卡，刚刚装好系统后，显示一般都比较粗大，甚至是模糊，亮度最大，不能调节，这是驱动的问题，需要更新驱动。如果不是很老的机器，或者硬件特殊，只需要使用 windows 的系统更新即可自动装好合适的驱动。</p>
 <p>你可能需要先激活系统才能进行自定义设置。激活工具推荐 01笔记文末 链接。</p>
-<p>如果嫌 windows 系统更新的下载速度慢，可以使用 <a href="https://pan.baidu.com/s/1eSvl02m" target="_blank" rel="noopener">绿色版的 驱动精灵</a>安装驱动，推荐 在 <a href="http://www.zdfans.com/" target="_blank" rel="noopener">http://www.zdfans.com/</a> 上下载，或者 baidu，如果你经验足够丰富不会下到 <strong>下载器</strong> 安装流氓软件。</p>
+<p>如果嫌 windows 系统更新的下载速度慢，可以使用 <span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMWVTdmwwMm0=" title="https://pan.baidu.com/s/1eSvl02m">绿色版的 驱动精灵<i class="fa fa-external-link"></i></span>安装驱动，推荐 在 <span class="exturl" data-url="aHR0cDovL3d3dy56ZGZhbnMuY29tLw==" title="http://www.zdfans.com/">http://www.zdfans.com/<i class="fa fa-external-link"></i></span> 上下载，或者 baidu，如果你经验足够丰富不会下到 <strong>下载器</strong> 安装流氓软件。</p>
 <p>右键 <code>此电脑</code>  —-&gt; <code>管理</code> —-&gt;  <code>设备管理器</code>（或者 <code>ctrl + x</code>   —-&gt; <code>m</code>，或者 <code>右键</code> 开始 —-&gt; <code>设备管理器(M)</code>）进入设备管理器，没有叹号，表明几乎所有驱动 ok 了。</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy2n877tnj21030nz0wq.jpg" alt="pic"></p>
 <h1 id="关闭-windows-的自动更新"><a href="#关闭-windows-的自动更新" class="headerlink" title="关闭 windows 的自动更新"></a>关闭 windows 的自动更新</h1><p>为什么要关闭 自动更新，会不会不安全？</p>
@@ -536,7 +573,7 @@
 <p>同样的道理，你可以在这里面 禁用 onedrive  defender等。</p>
 <p>理论上讲，只要你不自己去点 设置（<code>win+I</code>） 里面的 检查更新，系统不会自己 更新。</p>
 <h1 id="运行库"><a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>Microsoft Visual C++ Redist xxxx，有些软件提醒你安装运行库，</p>
-<p>推荐  <a href="http://www.zdfans.com/systemplus/yunxingku" target="_blank" rel="noopener">zdfans</a>  上面的运行库。说一下，这个 zdfans 大部分软件不是 他自己做的，是搬运，或者说是一种备份。自己百度 常用运行库也是可以的。</p>
+<p>推荐  <span class="exturl" data-url="aHR0cDovL3d3dy56ZGZhbnMuY29tL3N5c3RlbXBsdXMveXVueGluZ2t1" title="http://www.zdfans.com/systemplus/yunxingku">zdfans<i class="fa fa-external-link"></i></span>  上面的运行库。说一下，这个 zdfans 大部分软件不是 他自己做的，是搬运，或者说是一种备份。自己百度 常用运行库也是可以的。</p>
 <h1 id="别提醒我-是否"><a href="#别提醒我-是否" class="headerlink" title="别提醒我 是否"></a>别提醒我 是否</h1><p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy3kbspuuj210q0p644g.jpg" alt="pic"></p>
 <p>我知道需要运行的软件很安全，不需要这个。怎么去掉？</p>
 <p>打开 <code>控制面板</code>（<code>win + R</code>然后输入 <code>ctontrol</code>）不行的话你点点点找一下，</p>
@@ -549,7 +586,7 @@
 <p>点点点，没什么好说的。</p>
 <h1 id="更干净的界面"><a href="#更干净的界面" class="headerlink" title="更干净的界面"></a>更干净的界面</h1><p>推荐 软件 <code>dism++</code>， 下载请出门百度，第一个就是（如果你没被广告）。</p>
 <p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fpy41gicfdj20ks06yq3n.jpg" alt="pic"></p>
-<p> 这个  <a href="https://www.chuyu.me/zh-Hans/index.html" target="_blank" rel="noopener">Dism++ x86/x64</a> ，就是下载链接。</p>
+<p> 这个  <span class="exturl" data-url="aHR0cHM6Ly93d3cuY2h1eXUubWUvemgtSGFucy9pbmRleC5odG1s" title="https://www.chuyu.me/zh-Hans/index.html">Dism++ x86/x64<i class="fa fa-external-link"></i></span> ，就是下载链接。</p>
 <p> 绿色软件 无需安装，解压后 推荐放到 D 盘(区别于系统盘)。</p>
 <p>dism++ 可以干的事：</p>
 <ul>
@@ -567,28 +604,28 @@
 <p>使用绿色版！</p>
 <h1 id="一些日用软件"><a href="#一些日用软件" class="headerlink" title="一些日用软件"></a>一些日用软件</h1><ol>
 <li><p>bandizip</p>
-<p><a href="https://www.bandisoft.com/bandizip/cn/" target="_blank" rel="noopener">点击到官网</a>，免费，无广告，图标主题不错！兼容 rar、7z、zip、等各种格式，压缩 推荐 使用 7z 格式，别用 rar 这个收费格式，也别用各种破解版 winRAR 了（别提免费版），好压、360压啥的也不要用。而且支持不解压 看图。自动解压功能也很好用，具体看官网的介绍。</p>
-<p><a href="https://www.7-zip.org/" target="_blank" rel="noopener">7zip</a> 也不错，可是界面有点丑。不嫌弃用这个也可以的。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmFuZGlzb2Z0LmNvbS9iYW5kaXppcC9jbi8=" title="https://www.bandisoft.com/bandizip/cn/">点击到官网<i class="fa fa-external-link"></i></span>，免费，无广告，图标主题不错！兼容 rar、7z、zip、等各种格式，压缩 推荐 使用 7z 格式，别用 rar 这个收费格式，也别用各种破解版 winRAR 了（别提免费版），好压、360压啥的也不要用。而且支持不解压 看图。自动解压功能也很好用，具体看官网的介绍。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuNy16aXAub3JnLw==" title="https://www.7-zip.org/">7zip<i class="fa fa-external-link"></i></span> 也不错，可是界面有点丑。不嫌弃用这个也可以的。</p>
 </li>
 <li><p>potplayer</p>
 <p>棒子出品，质量不错，解码强，无广告，可玩性很丰富，有很多快捷键。</p>
-<p><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener">点击到官网</a> ，安装的时候记得把推荐的额外解码器都装上，保平安。如果嫌烦，可以关闭它的自动更新。开源 全平台的 <a href="http://www.videolan.org/" target="_blank" rel="noopener">vlc</a> 也是不错的，论外观易用性，还是首推 pot。我 Linux 上最喜欢的简洁 <a href="https://mpv.io/" target="_blank" rel="noopener">mpv</a> (全平台)播放器是不会推荐的，那是极客的最爱。</p>
-<p>极客请使用 <a href="https://mpv.io/" target="_blank" rel="noopener">mpv 播放器</a>，介绍可以看<a href="https://www.iplaysoft.com/mpv.html" target="_blank" rel="noopener">这里</a>。</p>
+<p><span class="exturl" data-url="aHR0cDovL3BvdHBsYXllci5kYXVtLm5ldC8/bGFuZz16aF9DTg==" title="http://potplayer.daum.net/?lang=zh_CN">点击到官网<i class="fa fa-external-link"></i></span> ，安装的时候记得把推荐的额外解码器都装上，保平安。如果嫌烦，可以关闭它的自动更新。开源 全平台的 <span class="exturl" data-url="aHR0cDovL3d3dy52aWRlb2xhbi5vcmcv" title="http://www.videolan.org/">vlc<i class="fa fa-external-link"></i></span> 也是不错的，论外观易用性，还是首推 pot。我 Linux 上最喜欢的简洁 <span class="exturl" data-url="aHR0cHM6Ly9tcHYuaW8v" title="https://mpv.io/">mpv<i class="fa fa-external-link"></i></span> (全平台)播放器是不会推荐的，那是极客的最爱。</p>
+<p>极客请使用 <span class="exturl" data-url="aHR0cHM6Ly9tcHYuaW8v" title="https://mpv.io/">mpv 播放器<i class="fa fa-external-link"></i></span>，介绍可以看<span class="exturl" data-url="aHR0cHM6Ly93d3cuaXBsYXlzb2Z0LmNvbS9tcHYuaHRtbA==" title="https://www.iplaysoft.com/mpv.html">这里<i class="fa fa-external-link"></i></span>。</p>
 </li>
 <li><p>TIM</p>
 <p>比 QQ 好，干净些许。</p>
 </li>
 <li><p>Sumatra PDF</p>
 <p>免费小巧的 pdf &amp; 电子书（mobi、epub等）阅读软件，如果你<strong>不需要 做标记</strong>，用这个准没错，有绿色便携版，推荐使用安装版，可以关联格式。</p>
-<p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">点击到官网</a> ，LaTeX 的御用 阅读器。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3VtYXRyYXBkZnJlYWRlci5vcmcvZnJlZS1wZGYtcmVhZGVyLmh0bWw=" title="https://www.sumatrapdfreader.org/free-pdf-reader.html">点击到官网<i class="fa fa-external-link"></i></span> ，LaTeX 的御用 阅读器。</p>
 </li>
 <li><p>Gimp &amp; photoshop</p>
 <p>这年头，不会P图，好意思说自己会用电脑？</p>
 <p>免费 开源 跨平台 就用 Gimp，只用 win 的话，网上搜个 破解版的 ps cc，有绿色破解版，自己baidu，这玩意儿 熟能生巧。</p>
-<p><a href="https://www.gimp.org/" target="_blank" rel="noopener">点击到 Gimp 官网</a> 。Gimp 比 PS 小巧很多，有中文官方文档。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2ltcC5vcmcv" title="https://www.gimp.org/">点击到 Gimp 官网<i class="fa fa-external-link"></i></span> 。Gimp 比 PS 小巧很多，有中文官方文档。</p>
 </li>
 <li><p>Snipaste</p>
-<p><a href="https://www.snipaste.com/" target="_blank" rel="noopener">点击到官网</a> ，比 QQ（TIM） 的强大，图标好看，快捷键强。免费。希望 linux 版快点出来。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc25pcGFzdGUuY29tLw==" title="https://www.snipaste.com/">点击到官网<i class="fa fa-external-link"></i></span> ，比 QQ（TIM） 的强大，图标好看，快捷键强。免费。希望 linux 版快点出来。</p>
 </li>
 <li><p>写代码</p>
 <p>Visual Studio Code，atom，sublime 破解版，notepad++，notepad2 都不错。</p>
@@ -596,18 +633,18 @@
 </li>
 <li><p>IDM &amp; FDM</p>
 <p>下载器，区别前者收费，后者免费，但是前者感觉更好。迅雷什么的还是不要用。</p>
-<p><a href="https://www.freedownloadmanager.org/download.htm" target="_blank" rel="noopener">Get Free Download Manager</a> ，<a href="https://pan.lanzou.com/i0lcb4d" target="_blank" rel="noopener">IDM -旧版- 绿色破解版</a> 。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZnJlZWRvd25sb2FkbWFuYWdlci5vcmcvZG93bmxvYWQuaHRt" title="https://www.freedownloadmanager.org/download.htm">Get Free Download Manager<i class="fa fa-external-link"></i></span> ，<span class="exturl" data-url="aHR0cHM6Ly9wYW4ubGFuem91LmNvbS9pMGxjYjRk" title="https://pan.lanzou.com/i0lcb4d">IDM -旧版- 绿色破解版<i class="fa fa-external-link"></i></span> 。</p>
 </li>
 <li><p>视频压制</p>
-<p>推荐使用 <a href="https://maruko.appinn.me/" target="_blank" rel="noopener">小丸工具箱</a>，如果你不会 使用 ffmpeg 的话，megui 啥的大部分人也用不着。</p>
+<p>推荐使用 <span class="exturl" data-url="aHR0cHM6Ly9tYXJ1a28uYXBwaW5uLm1lLw==" title="https://maruko.appinn.me/">小丸工具箱<i class="fa fa-external-link"></i></span>，如果你不会 使用 ffmpeg 的话，megui 啥的大部分人也用不着。</p>
 </li>
 <li><p>隆重介绍一下火绒</p>
 <p>想不出什么理由让我不推荐它。如果你不放心 defender ，别用管家、别用卫士！</p>
-<p><a href="https://www.huorong.cn/" target="_blank" rel="noopener">点击到官网</a> ，注意 设置取消 它的 主页推广，如果你不想被它换主页。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuaHVvcm9uZy5jbi8=" title="https://www.huorong.cn/">点击到官网<i class="fa fa-external-link"></i></span> ，注意 设置取消 它的 主页推广，如果你不想被它换主页。</p>
 </li>
 </ol>
 <p>先这样吧 :joy: 。</p>
-<p>推荐阅读 <a href="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/content/zh-CN/" target="_blank" rel="noopener">Windows 绝赞应用</a> 。 可以先关注 <a href="http://amazingapps.org/" target="_blank" rel="noopener">http://amazingapps.org/</a> 这个，截止目前就 windows 的比较完整。</p>
+<p>推荐阅读 <span class="exturl" data-url="aHR0cHM6Ly9hbWF6aW5nLWFwcHMuZ2l0Ym9va3MuaW8vd2luZG93cy1hcHBzLXRoYXQtYW1hemUtdXMvY29udGVudC96aC1DTi8=" title="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/content/zh-CN/">Windows 绝赞应用<i class="fa fa-external-link"></i></span> 。 可以先关注 <span class="exturl" data-url="aHR0cDovL2FtYXppbmdhcHBzLm9yZy8=" title="http://amazingapps.org/">http://amazingapps.org/<i class="fa fa-external-link"></i></span> 这个，截止目前就 windows 的比较完整。</p>
 
       
     </div>
@@ -644,32 +681,39 @@
 
       </div>
     
-    
+
     
 
+    
+      
+    
     
       <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+        <div id="reward-container">
   <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
   </button>
-  <div id="QR" style="display: none;">
+  <div id="qr" style="display: none;">
 
     
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox9241nbjj20dw0dw404.jpg" alt="rachpt 微信支付">
         <p>微信支付</p>
       </div>
     
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://ws1.sinaimg.cn/large/675bda05ly1fox92hbktpj20dw0dwjsq.jpg" alt="rachpt 支付宝">
         <p>支付宝</p>
       </div>
-    
-
     
 
   </div>
@@ -680,15 +724,25 @@
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>rachpt</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="https://rachpt.github.io/2018/04/02/windows-note-02/" title="Windows 使用笔记-02">https://rachpt.github.io/2018/04/02/windows-note-02/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -712,10 +766,16 @@
 
         
           
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
           </div>
         
         </div>
@@ -754,10 +814,6 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -767,6 +823,7 @@
   
     <div class="comments" id="comments">
     </div>
+
   
 
 
@@ -784,7 +841,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -800,14 +856,14 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="https://ws1.sinaimg.cn/large/675bda05ly1foxezbtslfg208w06otub.gif" alt="rachpt">
             
               <p class="site-author-name" itemprop="name">rachpt</p>
-              <p class="site-description motion-element" itemprop="description">出去跑跑，总是好的</p>
+              <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
           </div>
 
           
@@ -827,7 +883,11 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -864,7 +924,11 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -995,28 +1059,41 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/rachpt" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JhY2hwdA==" title="GitHub &rarr; https://github.com/rachpt"><i class="fa fa-fw fa-github"></i></span>
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:rachpt@126.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i></a>
                   
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnJhY2hwdEAxMjYuY29t" title="E-Mail &rarr; mailto:rachpt@126.com"><i class="fa fa-fw fa-envelope"></i></span>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc.svg" alt="Creative Commons">
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
           
 
           
@@ -1024,20 +1101,20 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-block">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友情链接
+                Links
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://rachpt.iok.la/" title="控制面板" target="_blank">控制面板</a>
+                    <span class="exturl" data-url="aHR0cDovL3JhY2hwdC5pb2subGEv" title="http://rachpt.iok.la/">控制面板</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://agint.me/" title="sword 杂货屋" target="_blank">sword 杂货屋</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9hZ2ludC5tZS8=" title="https://agint.me/">sword 杂货屋</span>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://quanyaxin.github.io/" title="Quanyaxin" target="_blank">Quanyaxin</a>
+                    <span class="exturl" data-url="aHR0cHM6Ly9xdWFueWF4aW4uZ2l0aHViLmlvLw==" title="https://quanyaxin.github.io/">Quanyaxin</span>
                   </li>
                 
               </ul>
@@ -1050,15 +1127,16 @@
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
@@ -1066,7 +1144,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -1081,6 +1159,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -1089,7 +1168,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heartbeat"></i>
   </span>
@@ -1101,8 +1180,6 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">站点总字数：</span>
-    
     <span title="站点总字数">146k</span>
   
 
@@ -1112,15 +1189,9 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    
     <span title="站点阅读时长">2:13</span>
   
 </div>
-
-
-  
-
 
 
 
@@ -1130,20 +1201,32 @@
 
 
   <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
-<div>
-  <i class="fa fa-user-md"></i> 
-  本站总访问量：<span id="busuanzi_value_site_pv"></span> &nbsp;| &nbsp;
-  <i class="fa fa-eye"></i> 
-  本站访客数：<span id="busuanzi_value_site_uv"></span> 
-</div>
 
 
         
 <div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -1151,8 +1234,7 @@
 
 
 
-
-  <script type="text/javascript">
+  <script>
     (function() {
       var hm = document.createElement("script");
       hm.src = "//tajs.qq.com/stats?sId=65362593";
@@ -1160,6 +1242,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -1172,11 +1255,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1212,37 +1298,27 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
-  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
@@ -1250,73 +1326,80 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+  <script src="/js/src/affix.js?v=7.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
 
 
 
   
 
 
-
-  
-
-
-
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
 
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
-        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
-        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
-        avatar:'wavatar',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
 
 
   
+  
+  
 
-  <script type="text/javascript">
+  
+
+  
+  
+  
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+    appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+    placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -1402,7 +1485,7 @@
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -1571,9 +1654,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -1645,20 +1728,41 @@
   
 
   
+
+  
+
+  
 <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+  });
+}
 </script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
   
@@ -1667,23 +1771,23 @@
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
       pbOptions = {};
       
-          pbOptions.iconStyle = "box";
+        pbOptions.iconStyle = "box";
       
-          pbOptions.boxForm = "horizontal";
+        pbOptions.boxForm = "horizontal";
       
-          pbOptions.position = "bottomCenter";
+        pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
   </script>
+
 
   
 
@@ -1691,18 +1795,14 @@
   
   
   <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script type="text/javascript">pangu.spacingPage();</script>
+  <script>pangu.spacingPage();</script>
 
-
-  
-
-  
 
   
   
   
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
+  <script>
   
     bookmark.scrollToMark('auto', "#更多");
   
@@ -1710,75 +1810,45 @@
 
 
   
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
 
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
 
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
+  
 
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap')
-      $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text()
-        }).toArray().join('\n')
-        var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('复制成功')
-          else $(this).text('复制失败')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('复制')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
+  
 
   
 <head><meta name="generator" content="Hexo 3.8.0">
