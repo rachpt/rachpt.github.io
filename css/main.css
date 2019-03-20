@@ -2158,7 +2158,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3d1436;
+  background: #876c26;
 }
 .links-of-blogroll {
   margin-top: 10px;
@@ -2287,6 +2287,9 @@ pre .javascript .function {
 }
 .footer-inner {
   text-align: center;
+}
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
   display: inline-block;
@@ -3447,8 +3450,7 @@ div.daodream-launcher-preview {
 }
 div.info,
 span.algolia-powered,
-div.daodream-powered-by,
-div.busuanzi-count {
+div.daodream-powered-by {
   visibility: hidden !important;
   height: 0 !important;
 }

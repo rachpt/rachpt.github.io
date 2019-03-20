@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/</loc>
+    
+    <lastmod>2019-03-20T06:12:02.287Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/notes/index.html</loc>
     
     <lastmod>2019-03-20T04:21:13.098Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>https://rachpt.github.io/2018/07/20/compile-vim-with-clipboard-supported/</loc>
     
     <lastmod>2018-07-30T09:13:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/</loc>
-    
-    <lastmod>2018-07-28T05:33:56.000Z</lastmod>
     
   </url>
   
