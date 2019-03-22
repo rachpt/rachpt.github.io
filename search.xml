@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[amazing-sed-on-Linux]]></title>
+    <url>%2F2019%2F03%2F22%2Famazing-sed-on-Linux%2F</url>
+    <content type="text"><![CDATA[记录一些少有用到的sed使用技巧。 正则匹配sed 默认情况使用基本正则表达式(BRE)，也就是有些元字符需要使用转义\，加上 -E或则-r参数后即可变成扩展正则表达a(ERE)式情况。 grep 可以使用 -i 参数忽略大小写，而 sed 的 -i 参数表示直接修改源文件而不是输出到标准输出 stdout，在替换模式下也是可以使用参数忽略大小写的，就是在 表示全部(g)的位置放置i。sed &#39;s/旧的东西/新的东西/ig&#39; filename。g 全部，i大小写不敏感。 sed 可以使用行号，范围或则正则表达式限定和面代码的作用范围，如sed -n &#39;1,3 p&#39; filename 只打印1到3行，如果有多个命令，则使用;分隔，{}裹起来。sed -n &#39;1, /匹配这个/ {s/old/new/;s%ba/ba%la/la%}&#39; filename，对于这个，使用正则表达式限定下界，普通情况我们使用两个/将正则表达式裹起来，可以看到后面替换模式中我们使用%而不是通常的/作为分隔符，这对于字段中包含/的情况会相当友好，不用使用\转义。所以前面正则表达式限定的地方有没有可能使用自定义符号而不是/？匹配网站链接、路径时需要注意，特别使用使用了变量的情况！！！有两种方式解决： 1. 使用`\`对所有匹配内容中的`/`转义， 2. 使用`\`转义你自己的第一个限定符。 sed &#39;/abc\/def/ {do something}&#39; filename，sed &#39;\=abc/def= {do something}&#39; filename。效果如下： 追加多行通常我们使用 a 加上我们需要添加的内容 最佳到指定位置。但是我们找遇到了如下错误： 使用\n来表示换行如何， 这次我们成功了。那么我们只需要将包含多行的一个变量将 不可见的换行辅 替换成字符\n即可追加这个多行变量到指定位置。那么如何将一个包含多行的变量变成一个使用符号\n分隔的单行变量？mult_lines=&quot;$(echo &quot;$mult_lines&quot;|sed &#39;:a;N;s/\n/\\n/;ta;&#39;)&quot;，注意双引号的使用。这里使用a 作为自定义标示符(label)用于跳转，N追加到模式空间，s就是我们熟悉的替换，注意\\n的使用。t仅当最后一个替换命令修改了模式空间时才跳转到标签。如果未指定label，则跳转到脚本的末尾，扩展阅读。还有一个细节需要提一下，就是$()中我们使用\\n，如果是使用` ` ，那么需要使用\\\n，一个应用例子。 其他还没有…]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>sed</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Trouble-with-automatic-mouse-copy-function-under-linux]]></title>
     <url>%2F2019%2F02%2F22%2FTrouble-with-automatic-mouse-copy-function-under-linux%2F</url>
     <content type="text"><![CDATA[突然选中文本就自动复制到粘贴板了，怎么回事？ 这几天又安装了 goldendict，配合 translate-shell 直接使用 goolgle 翻译文献。不知道怎么回事一时间 Ctrl + C + C 无法使用，各种折腾之后终于能用了。这不是重点，重点是现在突然发现我选中任意地方的文本后，就自动被复制到张贴板了，这对于浏览器操作及其不便。 关闭词典以及其屏幕取词也无效。网上搜索一下，发现 linux 竟然有 选中复制/鼠标中建粘贴，以及 ctrl + c /ctrl + v 两种粘贴板，默认情况下两种粘贴板互相独立。因为我的某种操作让两种内容混在一起了。 粘贴板学问详情可以看 http://forum.ubuntu.org.cn/viewtopic.php?f=48&amp;t=279535 。 具体的误操作在该出 应该关闭同步剪切粘贴板和选中内容。 第一次知道还有选中复制这种功能。]]></content>
