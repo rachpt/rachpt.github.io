@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[notes-about-awstats]]></title>
+    <url>%2F2019%2F03%2F22%2Fnotes-about-awstats%2F</url>
+    <content type="text"><![CDATA[使用awstata分析nginx以及vsftp日志。 安装可以使用相应平台的包管理器安装，也可以直接到官网下载归档文件，解压其中的 wwwroot放到nginx的根目录，或者在nginx config文件设置alias，可以参考 https://wiki.archlinux.org/index.php/awstats 或者tools/nginx/awstats-nginx.conf文件。 另外，需要 perl，这个系统一般都带有。 配置这部分比较复杂，可以使用配套的tools 里面的 awstats_configure.pl 交互式生成配置文件，也可以修改 /etc/awstats/awstats.model.conf，包管理器安装才有的。 我是用的 pacman 安装的，所以直接复制修改该model文件，将model改成自己的任务名，比如web或则ftp啥的。 123456789101112131415161718LogFile=&quot;/var/log/nginx/access.log&quot;LogType=W # 默认 web模式LogFormat=1SiteDomain=&quot;web-server&quot; # 改成你想显示的AllowToUpdateStatsFromBrowser=0 # 是否可以通过网页更新，具体好坏里面有说明DirIcons=&quot;/awstatsicons&quot; # 如果你修改了该路径UseFramesWhenCGI=0 # 是否开启侧边栏，0 不开ShowFlagLinks=&quot;en cn tw de jp&quot; # 显示语言切换按钮Logo=&quot;awstats_logo1.png&quot; # logo 图片LogoLink=&quot;/&quot; # logo 链接 上面是 nginx 日志的，对于 vsftp 只有一点区别，就是需要自己定义 LogFormat，如下： 1234567LogFile=&quot;/var/log/vsftpd.log&quot; # vsftp 需要打开对于的日志开关！！！LogType=F # ftp 模式LogFormat=&quot;%time3 %other %host %bytesd %url %other %other %method %other %logname %other %code %other %other&quot; # 这个需要和你的 vsftp log 文件列匹配。# 其他类似 需要注意文件权限问题，比如 awstats 需要chown http(你的 nginx 运行用户)，log文件需要有读权限，否则你需要使用 root 运行下面家要说的生成命令。 生成需要使用 crontab (cronie) 定时运行更新命令。 1234sudo crontab -e # 创建 root 用户的定时任务# 每个 1 小时运行一次7 */1 * * * /usr/share/awstats/tools/awstats_updateall.pl now -awstatsprog=/usr/share/webapps/awstats/awstats/awstats.pl &gt; /home/awstatus.log# 因为配置文件在 etc 里面，所以上面没有指明路径。 其他效果展示: http://mirrors.hust.edu.cn/visitor/ http://rachpt.iok.la/awstats/awstats.pl?config=nginx http://rachpt.iok.la/awstats/awstats.pl?config=vsftp]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>awstats</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[amazing-sed-on-Linux]]></title>
     <url>%2F2019%2F03%2F22%2Famazing-sed-on-Linux%2F</url>
     <content type="text"><![CDATA[记录一些少有用到的sed使用技巧。 正则匹配sed 默认情况使用基本正则表达式(BRE)，也就是有些元字符需要使用转义\，加上 -E或则-r参数后即可变成扩展正则表达a(ERE)式情况。 grep 可以使用 -i 参数忽略大小写，而 sed 的 -i 参数表示直接修改源文件而不是输出到标准输出 stdout，在替换模式下也是可以使用参数忽略大小写的，就是在 表示全部(g)的位置放置i。sed &#39;s/旧的东西/新的东西/ig&#39; filename。g 全部，i大小写不敏感。 sed 可以使用行号，范围或则正则表达式限定和面代码的作用范围，如sed -n &#39;1,3 p&#39; filename 只打印1到3行，如果有多个命令，则使用;分隔，{}裹起来。sed -n &#39;1, /匹配这个/ {s/old/new/;s%ba/ba%la/la%}&#39; filename，对于这个，使用正则表达式限定下界，普通情况我们使用两个/将正则表达式裹起来，可以看到后面替换模式中我们使用%而不是通常的/作为分隔符，这对于字段中包含/的情况会相当友好，不用使用\转义。所以前面正则表达式限定的地方有没有可能使用自定义符号而不是/？匹配网站链接、路径时需要注意，特别使用使用了变量的情况！！！有两种方式解决： 1. 使用`\`对所有匹配内容中的`/`转义， 2. 使用`\`转义你自己的第一个限定符。 sed &#39;/abc\/def/ {do something}&#39; filename，sed &#39;\=abc/def= {do something}&#39; filename。效果如下： 追加多行通常我们使用 a 加上我们需要添加的内容 最佳到指定位置。但是我们找遇到了如下错误： 使用\n来表示换行如何， 这次我们成功了。那么我们只需要将包含多行的一个变量将 不可见的换行辅 替换成字符\n即可追加这个多行变量到指定位置。那么如何将一个包含多行的变量变成一个使用符号\n分隔的单行变量？mult_lines=&quot;$(echo &quot;$mult_lines&quot;|sed &#39;:a;N;s/\n/\\n/;ta;&#39;)&quot;，注意双引号的使用。这里使用a 作为自定义标示符(label)用于跳转，N追加到模式空间，s就是我们熟悉的替换，注意\\n的使用。t仅当最后一个替换命令修改了模式空间时才跳转到标签。如果未指定label，则跳转到脚本的末尾，扩展阅读。还有一个细节需要提一下，就是$()中我们使用\\n，如果是使用` ` ，那么需要使用\\\n，一个应用例子。 其他还没有…]]></content>
