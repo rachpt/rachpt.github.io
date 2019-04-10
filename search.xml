@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jupyter-notebook-cannot-work-with-the-same-base-name]]></title>
+    <url>%2F2019%2F04%2F10%2Fjupyter-notebook-cannot-work-with-the-same-base-name%2F</url>
+    <content type="text"><![CDATA[.ipynb 死活连接不上kernel，但是单独放到其他目录又可以。 使用 pycharm 以及 vs code编辑python 代码，但是运行时提示我的 matplotlib 有问题，因为我使用了 anaconda，同时有使用过 virtualenv，环境乱七八糟，但是我的 anaconda base环境里面使用我所用到的库的。由于代码也不多，于是想到直接使用jupyter notebook。 于是我创建了一个和刚才的 py 文件同名的 ipynb 文件。当然它们是在同一个文件夹下。下面就是我的遭遇： 我打开其他目录下的 ipynb 文件却是正常的，于是排除我的 jupyter 环境的问题。经过一通复制粘贴重命名后，最终确定是那个 base name 一样的 py 文件导致的。改名问题解决。 这里记录一下，希望有用。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>jupyter, python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[notes-about-awstats]]></title>
     <url>%2F2019%2F03%2F22%2Fnotes-about-awstats%2F</url>
     <content type="text"><![CDATA[使用awstata分析nginx以及vsftp日志。 安装可以使用相应平台的包管理器安装，也可以直接到官网下载归档文件，解压其中的 wwwroot放到nginx的根目录，或者在nginx config文件设置alias，可以参考 https://wiki.archlinux.org/index.php/awstats 或者tools/nginx/awstats-nginx.conf文件。 另外，需要 perl，这个系统一般都带有。 配置这部分比较复杂，可以使用配套的tools 里面的 awstats_configure.pl 交互式生成配置文件，也可以修改 /etc/awstats/awstats.model.conf，包管理器安装才有的。 我是用的 pacman 安装的，所以直接复制修改该model文件，将model改成自己的任务名，比如web或则ftp啥的。 123456789101112131415161718LogFile=&quot;/var/log/nginx/access.log&quot;LogType=W # 默认 web模式LogFormat=1SiteDomain=&quot;web-server&quot; # 改成你想显示的AllowToUpdateStatsFromBrowser=0 # 是否可以通过网页更新，具体好坏里面有说明DirIcons=&quot;/awstatsicons&quot; # 如果你修改了该路径UseFramesWhenCGI=0 # 是否开启侧边栏，0 不开ShowFlagLinks=&quot;en cn tw de jp&quot; # 显示语言切换按钮Logo=&quot;awstats_logo1.png&quot; # logo 图片LogoLink=&quot;/&quot; # logo 链接 上面是 nginx 日志的，对于 vsftp 只有一点区别，就是需要自己定义 LogFormat，如下： 1234567LogFile=&quot;/var/log/vsftpd.log&quot; # vsftp 需要打开对应的日志开关！！！LogType=F # ftp 模式LogFormat=&quot;%time3 %other %host %bytesd %url %other %other %method %other %logname %other %code %other %other&quot; # 这个需要和你的 vsftp log 文件列匹配。# 其他类似 需要注意文件权限问题，比如 wwwroot里面的 需要chown http(你的 nginx 运行用户)，log文件需要有读权限，否则你需要使用 root 运行下面家要说的生成命令。 生成需要使用 crontab (cronie) 定时运行更新命令。 1234sudo crontab -e # 创建 root 用户的定时任务# 每个 1 小时运行一次7 */1 * * * /usr/share/awstats/tools/awstats_updateall.pl now -awstatsprog=/usr/share/webapps/awstats/awstats/awstats.pl &gt; /home/awstatus.log# 因为配置文件在 etc 里面，所以上面没有指明路径。 因为我是用的是nginx alias 方式，所以 -awstatsprog 路径就是安装默认路径。 其他效果展示: http://mirrors.hust.edu.cn/visitor/ http://rachpt.iok.la/awstats/awstats.pl?config=nginx http://rachpt.iok.la/awstats/awstats.pl?config=vsftp]]></content>
