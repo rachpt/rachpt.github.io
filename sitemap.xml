@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
+    
+    <lastmod>2019-04-23T10:09:14.765Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2018/03/23/notes-for-shell-scripting-bible/</loc>
     
     <lastmod>2019-04-22T09:49:11.380Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://rachpt.github.io/2017/12/18/notes-for-ubuntu/</loc>
     
     <lastmod>2019-04-22T09:38:47.830Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
-    
-    <lastmod>2019-04-19T06:50:27.640Z</lastmod>
     
   </url>
   
