@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
+    
+    <lastmod>2019-04-28T15:54:49.978Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/28/change-sidebar-width-of-firefox/</loc>
+    
+    <lastmod>2019-04-28T15:52:58.590Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
+    
+    <lastmod>2019-04-28T15:51:53.740Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2019/03/22/amazing-sed-on-Linux/</loc>
+    
+    <lastmod>2019-04-28T15:43:36.514Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
+    
+    <lastmod>2019-04-28T15:41:56.944Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
+    
+    <lastmod>2019-04-28T15:38:43.211Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
+    
+    <lastmod>2019-04-28T15:32:07.735Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
+    
+    <lastmod>2019-04-28T15:30:54.478Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
     
     <lastmod>2019-04-28T15:01:38.435Z</lastmod>
@@ -40,13 +96,6 @@
     <loc>https://rachpt.github.io/2019/03/22/notes-about-awstats/</loc>
     
     <lastmod>2019-03-22T04:28:04.354Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2019/03/22/amazing-sed-on-Linux/</loc>
-    
-    <lastmod>2019-03-22T02:34:37.070Z</lastmod>
     
   </url>
   
@@ -114,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
-    
-    <lastmod>2018-11-19T07:50:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/about/index.html</loc>
     
     <lastmod>2018-11-14T01:50:17.019Z</lastmod>
@@ -159,13 +201,6 @@
     <loc>https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/</loc>
     
     <lastmod>2018-09-26T03:09:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
-    
-    <lastmod>2018-09-23T06:56:43.000Z</lastmod>
     
   </url>
   
@@ -215,13 +250,6 @@
     <loc>https://rachpt.github.io/2017/11/30/flexget-for-ut/</loc>
     
     <lastmod>2018-07-27T13:26:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
-    
-    <lastmod>2018-07-27T11:28:56.000Z</lastmod>
     
   </url>
   
@@ -345,13 +373,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.github.io/2018/03/28/change-sidebar-width-of-firefox/</loc>
-    
-    <lastmod>2018-03-28T14:11:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</loc>
     
     <lastmod>2018-03-25T19:24:33.000Z</lastmod>
@@ -380,13 +401,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.github.io/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
-    
-    <lastmod>2018-03-15T14:12:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/2017/12/02/solve-some-problem-about-wamp/</loc>
     
     <lastmod>2018-03-14T05:01:16.000Z</lastmod>
@@ -397,13 +411,6 @@
     <loc>https://rachpt.github.io/2017/12/03/calc-hash-in-linux/</loc>
     
     <lastmod>2018-03-14T04:57:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
-    
-    <lastmod>2018-03-14T04:51:29.000Z</lastmod>
     
   </url>
   
@@ -542,13 +549,6 @@
   
   <url>
     <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
-    
-    <lastmod>2018-03-05T03:45:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
     
     <lastmod>2018-03-05T03:45:59.000Z</lastmod>
     

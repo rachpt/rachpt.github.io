@@ -705,12 +705,12 @@
   <entry>
     <title><![CDATA[京东预售商品加入购物车]]></title>
     <url>%2F2017%2F11%2F28%2Fadd-items-to-jdcart%2F</url>
-    <content type="text"><![CDATA[京东抢购商品 在开始前提前加入购物车，这能够很大概率增大成功几率。使用下面的网址提交即可实现。 **https://cart.jd.com/gate.action?pid=商品编号&amp;amp;pcount=1&amp;amp;ptype=1** 其中的 商品编号 可以在商品详情页面网址中找到，就是那串数字。 抢购的时候。只需看着电脑上的毫秒显示，手机点击 [code]去结算[/code]， 使用默认收货信息，快速点击 立即下单 。除非是特别稀少，应该是能抢到的。 ​ &nbsp;]]></content>
+    <content type="text"><![CDATA[可能已经失效。 京东抢购商品 在开始前提前加入购物车，这能够很大概率增大成功几率。使用下面的网址提交即可实现。 **https://cart.jd.com/gate.action?pid=商品编号&amp;amp;pcount=1&amp;amp;ptype=1** 其中的 商品编号 可以在商品详情页面网址中找到，就是那串数字。 抢购的时候。只需看着电脑上的毫秒显示，手机点击 [code]去结算[/code]， 使用默认收货信息，快速点击 立即下单 。除非是特别稀少，应该是能抢到的。 ​]]></content>
       <categories>
-        <category>教程</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
-        <tag>京东</tag>
+        <tag>jd</tag>
       </tags>
   </entry>
   <entry>
@@ -845,7 +845,7 @@
     <url>%2F2017%2F11%2F10%2Facrobat-2pages-display%2F</url>
     <content type="text"><![CDATA[我有一个大显示器，但是阅读pdf时，Acrobat DC (或者reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？ 是的，可以。这里以Acrobat DC 为例。 Adobe Acrobat是由Adobe Systems所开发的电子文字处理软件集，可用于阅读、编辑、管理和共享PDF格式文档。 一般包含如下包： Adobe Acrobat，包括专业版和标准版。用于对PDF文件进行编辑、共享和管理，需要购买，而3D版本，除了专业版的功能，另外也支持立体向量图片的转换。 Acrobat Reader（2003年至2014年期间，曾使用Adobe Reader作为名称），用于阅读PDF文件，为免费发放。 首先，我们需要设置页面显示为双页视图，具体如下图所示。 然后，在 [首选项] - 快捷键[ Ctrl + K ]，或者从下面的位置进入。 接着，在 [首选项] →(左侧)[ 全屏 ]→[ 全屏设置 ]→去掉 &lt;下图红框项&gt; 前面的勾。如下图。 另外，如果你想开启Acrobat 的护眼模式(说白了也就是背景颜色)，可以设置一下 [辅助工具] 里面的 [文档颜色选项]，个人觉得这个不错——电脑管家的推荐色 [ R: 204 G: 232 B: 207 ]。 最后，使用快捷键 [ Ctrl + L ] 进入全屏阅读文档，或者点击 [ 视图 ] → [ 全屏模式 ] 。]]></content>
       <categories>
-        <category>教程</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
         <tag>PDF</tag>

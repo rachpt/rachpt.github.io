@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/28/change-sidebar-width-of-firefox/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2019/03/22/amazing-sed-on-Linux/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
+    <lastmod>2019-04-28</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
     <lastmod>2019-04-28</lastmod>
   </url>  <url>
@@ -17,9 +41,6 @@
     <lastmod>2019-04-10</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2019/03/22/notes-about-awstats/</loc>
-    <lastmod>2019-03-22</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2019/03/22/amazing-sed-on-Linux/</loc>
     <lastmod>2019-03-22</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/28/service-systemctl-and-daemon/</loc>
@@ -46,9 +67,6 @@
     <loc>https://rachpt.github.io/2018/12/01/change-to-use-archlinux/</loc>
     <lastmod>2018-12-01</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
-    <lastmod>2018-11-19</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/</loc>
     <lastmod>2018-10-28</lastmod>
   </url>  <url>
@@ -57,9 +75,6 @@
   </url>  <url>
     <loc>https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/</loc>
     <lastmod>2018-09-26</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
-    <lastmod>2018-09-23</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/</loc>
     <lastmod>2018-09-07</lastmod>
@@ -80,9 +95,6 @@
     <lastmod>2018-07-30</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/30/flexget-for-ut/</loc>
-    <lastmod>2018-07-27</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
     <lastmod>2018-07-27</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
@@ -136,9 +148,6 @@
     <loc>https://rachpt.github.io/2018/03/31/the-gateway-of-materials-studio/</loc>
     <lastmod>2018-03-31</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/28/change-sidebar-width-of-firefox/</loc>
-    <lastmod>2018-03-28</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</loc>
     <lastmod>2018-03-25</lastmod>
   </url>  <url>
@@ -151,16 +160,10 @@
     <loc>https://rachpt.github.io/2018/03/19/sevseral-shell-scripts/</loc>
     <lastmod>2018-03-20</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/11/change-battery-for-nubiaZ11mini/</loc>
-    <lastmod>2018-03-15</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2017/12/02/solve-some-problem-about-wamp/</loc>
     <lastmod>2018-03-14</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/12/03/calc-hash-in-linux/</loc>
-    <lastmod>2018-03-14</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
     <lastmod>2018-03-14</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
@@ -220,28 +223,25 @@
     <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
-    <lastmod>2018-03-05</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
+    <loc>https://rachpt.github.io/2017/11/12/chinas-confidence/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/17/quantum-mechanics-notes/</loc>
-    <lastmod>2018-03-05</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/16/statistical-physics-notes/</loc>
-    <lastmod>2018-03-05</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/12/chinas-confidence/</loc>
+    <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/note-markdown/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/17/quantum-mechanics-notes/</loc>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/so-busy/</loc>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
