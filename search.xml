@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[substitute-sinaimg-with-githubimg-url]]></title>
+    <url>%2F2019%2F04%2F29%2Fsubstitute-sinaimg-with-githubimg-url%2F</url>
+    <content type="text"><![CDATA[最好的图床 新浪 已经禁止外链，图片迁移至 github。 前些天，得知 新浪 图片禁止外链，就在想怎么解决图片问题，直接放在 github pages 里面又要改动很多。 恰好最近在使用 vs-code，试了一下 picgo 插件，感觉很棒，smsm图床我是不敢用，404了去找谁。 于是在github建一个 repo 专门存放图片，还能备份到坚果云一份。替换新浪图片链接为 github 链接。 先是在 vs-code 里面手动替换了几个，工作量太大，于是写了个bash脚本完成这件事。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#!/bin/bash# Author: rachpt@126.com# Date: 2019-04-29# 批量下载 md 文件中的 新浪图片，重命名为 `文件名-数字` 格式# 替换md文件中的 新浪图片地址# 批量下载图片download_pic() &#123;for i in `ls -1 *.md`; dolists="$(grep -Eio 'https?://ws..sinaimg.[-0-9a-z/]+.jpg' "$i")"if [[ $lists ]]; then total=`echo "$lists"|wc -l`; j=1while [[ $j -le $total ]]; do echo $&#123;i%.md&#125;-$jpicurl=`echo "$lists"|sed -n "$j p"`echo $picurl# 此处使用了 httpie，当然可以使用 crul wget 等工具http -d "$picurl" -o "../pic/$&#123;i%.md&#125;-$j.jpg"((j++))donefidone&#125;# 替换 url 地址。两条完全可以合在一起，为了减少意外错误，这里分开substitute_url() &#123;for i in `ls -1 *.md`; dolists="$(grep -Eio 'https?://ws..sinaimg.[-0-9a-z/]+.jpg' "$i")"if [[ $lists ]]; then total=`echo "$lists"|wc -l`; j=1while [[ $j -le $total ]]; do echo $&#123;i%.md&#125;-$jpicurl=`echo "$lists"|sed -n "$j p"`echo $picurl# 说明：picurl 中包含'/'，因此使用\% 作为自定义正则标识符# s 命令匹配部分 ![] 都需要转义，替换的不用，后一个 s 使用%分割而不是/# 使用 &#123;&#125; 限定替换范围sed -Ei "\%$picurl% &#123; s/\!\[.*\]/![$&#123;i%.md&#125;-$j.jpg]/; s%$picurl%https://raw.githubusercontent.com/rachpt/imgs/master/$&#123;i%.md&#125;-$j.jpg%; &#125;" "$i"((j++))donefidone&#125;# 调用download_picecho '若无问题 30 秒后开始替换'echo 'Ctrl + C 强制取消替换'sleep 30substitute_urlecho 'Done!' 脚本在 https://github.com/rachpt/shell-scripts/blob/master/change-url.sh 。 这里记录一下。]]></content>
+      <categories>
+        <category>shell</category>
+      </categories>
+      <tags>
+        <tag>sinaimg</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[notes-for-gnuplot]]></title>
     <url>%2F2019%2F04%2F19%2Fnotes-for-gnuplot%2F</url>
     <content type="text"><![CDATA[gnuplot 画图笔记。 使用希腊字母这个叫 Enhanced 文本模式，首先需要设置terminal enhanced。1set term qt enhanced term 是 terminal 的简写形式，我使用的 qt 模式。比如我想将图例，也就是 key 中插入希腊字母，1plot &apos;real-prop-vecpot.dat&apos; u (-$3):($2) w lp lw 2 title &apos;E(t)/&#123;/Symbol= \145&#125;&apos; 这里指定了 线的title，{/Symbol= \145}，145是8进制数 表示 16进制 65。gnuplot 的 Symbol 表中 65 表示 omega。(图片版权：我) 设置字体大小通常情况gnuplot 字体小的看不见。 123456789# 设置 图例字体大小20set key font &apos;,20&apos;# 可以指定字体set key font &apos;字体名,20&apos;# 详情 help set key# 其他 xlabel xtics tics 一样set tics font &apos;,15&apos; 设置 x(y) 轴间距1234set xtics 0,2,20# x轴 0开始至20，间距2# 要指定显示形式，则需要使用 像列表一样的东西。 图片大小 圆形，也就是 x=y 1set size square 其他… 设置plotplot 加上 with (简写 w) 有 linepoints(简写 lp)，linewidth(lw)，linecolor(lc)，pointtype(pt)，pointsize(ps) 等参数，后面紧跟数子值即可，可是使用 test 查看各种样式对应值。 对数据列操作使用 plot &#39;路径&#39; using 1:2 ... 可以将路径里面 第一列作为 x 第二列作为 y 画图，using简写 u，使用($列号)对列操作，比如这样 u ($1 /2):($2 ** 2)。** 表示 次方。 设置 xy 轴范围如下所示。12set xrange[0:20]set yrange[0:10] GUI 的一些快捷键按住 ctrl 鼠标滚轮， 可以缩放。 r 键，显示鼠标处 十字。xy 值可以在左下角显示。 其他以后写，现在忘记了… 参考文档。 在 gnuplot 中调用 shell 命令使用 system 函数。 123456789# 打印当前路径system(&quot;pwd&quot;)path = system(&quot;pwd&quot;)print path# 当前文件夹名foldername=system(&quot;basename `pwd`&quot;) 参考文档。]]></content>
