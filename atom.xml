@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-04-29T04:26:57.378Z</updated>
+  <updated>2019-05-29T15:01:27.354Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh-tunnel</title>
+    <link href="https://rachpt.github.io/2019/05/29/ssh-tunnel/"/>
+    <id>https://rachpt.github.io/2019/05/29/ssh-tunnel/</id>
+    <published>2019-05-29T14:21:12.000Z</published>
+    <updated>2019-05-29T15:01:27.354Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用 ssh 隧道使用外网访问 NAT 内网服务。</p></blockquote><a id="more"></a><h1 id="情景描述"><a href="#情景描述" class="headerlink" title="情景描述"></a>情景描述</h1><p>一台电脑能够 使用 ssh 链接到外部电脑，比如地址是 <code>115.115.115.1</code>，但是反过来不行，因为这台电脑得到的地址是 10 开头的 NAT 内网地址。</p><p>现在希望 外面的 115 地址的机器可以 ssh 到这台 10 地址的机器上，并且访问该机器上面的 web 服务(比如qbittorrent的webui)。</p><p>单独使用 ssh 方向透穿不稳定，因为 ssh 不活动一段时间过后这条连接就会被中断，然后你在外面的 115 那里是死活也每办法让 10 那里再重新 ssh到 115这里的啦。</p><p>于是 autossh 就被用来干这样一件事情，维持一条持续的 ssh 通道。</p><h1 id="反向穿透-ssh"><a href="#反向穿透-ssh" class="headerlink" title="反向穿透 ssh"></a>反向穿透 ssh</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.115.115.1 -p 22</span><br></pre></td></tr></table></figure><p>5678 是autossh的监听端口，2333 就是在外部 115 机器上访问 10 机器的端口号，第一个 22 表示 10 机器的 ssh 在22端口(默认值)，后面的表示 115 机器ssh端口在默认的22。</p><p>这样做有个问题，就是需要输入 115 机器的ssh密码，我们可以使用 ssh 的 pub key避免输入密码，就像我面使用github那样。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 在 10 机器上</span></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line"><span class="comment"># 生成公钥，自己记得给名字</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/你命的名.pub</span><br><span class="line"></span><br><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 复制到 115 的机器上面</span></span><br><span class="line"><span class="comment"># 比如放到 ~/.ssh/authorized_keys 里面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑 /etc/ssh/sshd_config 文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加或则修改</span></span><br><span class="line">AuthorizedKeysFile      .ssh/authorized_keys</span><br></pre></td></tr></table></figure><p>这样就能实现 10 机器免密码 ssh 到 115 机器。</p><p>为了实现开机自动使用 autossh 反向透穿，使用 systemd，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/systemd/system/autossh.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=auto SSH</span><br><span class="line">After=network.target</span><br><span class="line">[Service]</span><br><span class="line">User=rachpt</span><br><span class="line">ExecStart=/usr/bin/autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.156.156.1</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure><p>一通 daemon-reload enable start就可以了。</p><p>记得kill掉占用端口的进程，不然gg…</p><h1 id="反向穿透-web-服务"><a href="#反向穿透-web-服务" class="headerlink" title="反向穿透 web 服务"></a>反向穿透 web 服务</h1><p>这里以 qbittorrent-nox webui 为例。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autossh -M 5001 -CNR 10010:localhost:10010 rachpt@115.156.115.1</span><br></pre></td></tr></table></figure><p><strong><a href="https://github.com/qbittorrent/qBittorrent/issues/7274#issuecomment-362936393" target="_blank" rel="noopener">重要提示：远程端口和服务端口必须一致</a></strong>，我用的10010端口，否则401连不上。</p><p>当然 qbittorrent-nox 需要在 10010端口运行 webui(具体请使用 help)。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;使用 ssh 隧道使用外网访问 NAT 内网服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+    
+    
+      <category term="ssh" scheme="https://rachpt.github.io/tags/ssh/"/>
+    
+  </entry>
   
   <entry>
     <title>substitute-sinaimg-with-githubimg-url</title>
@@ -461,30 +485,6 @@
     
     
       <category term="matlab" scheme="https://rachpt.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>make-transmission2.94-from-source-code</title>
-    <link href="https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/"/>
-    <id>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</id>
-    <published>2018-07-24T02:47:46.000Z</published>
-    <updated>2019-04-29T02:37:09.897Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。</p></blockquote><a id="more"></a><h1 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential automake \</span><br><span class="line">     autoconf libtool pkg-config intltool \</span><br><span class="line">     libcurl4-openssl-dev libglib2.0-dev \</span><br><span class="line">     libevent-dev libminiupnpc-dev libgtk-3-dev libappindicator3-dev</span><br></pre></td></tr></table></figure><p><a href="https://github.com/transmission/transmission/wiki/Building-Transmission#on-unix" target="_blank" rel="noopener">官方参考文档</a> 。</p><h1 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h1><ol><li><p>跳过校验</p><p><a href="https://github.com/superlukia/transmission-2.92_skiphashcheck/commit/56e327d1dacb5b3453954b76a6d0edd30edb7a34" target="_blank" rel="noopener">请参考这里</a>。</p><p><a href="https://tieba.baidu.com/p/4839039900" target="_blank" rel="noopener">以及这里</a>。</p></li><li><p>自定义 webUI 界面。</p><p>效果如下图：<br><img src="https://raw.githubusercontent.com/rachpt/imgs/master/make-transmission2-94-from-source-code-1.jpg" alt="make-transmission2-94-from-source-code-1.jpg"></p><p>在工具栏上添加一个跳转到自定义路径的按钮。</p></li></ol><ul><li>修改1：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim web/index.html</span><br><span class="line"></span><br><span class="line"># 第 50 行附近添加</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;toolbar-pause-all&quot; title=&quot;Pause All Torrents&quot;&gt;&lt;/div&gt;</span><br><span class="line">+&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">+&lt;a href=&quot;/index.html&quot; title=&quot;返回首页&quot;&gt;&lt;div style=&quot;margin-right: 10px; margin-top: 6px&quot;&gt;&lt;img src=&quot;./images/home.png&quot; /&gt;&lt;/div&gt;&lt;/a&gt;</span><br><span class="line">+&lt;div id=&quot;toolbar-separator&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;toolbar-inspector&quot; title=&quot;Toggle Inspector&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>  为此需要添加一枚 home.png 图标 到 <code>web/images/home.png</code>.<br>  同时修改 该文件夹 的 <code>Makefile.am</code> 和 <code>Makefile.in</code>，如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.am</span><br><span class="line"></span><br><span class="line"># 改成如下</span><br><span class="line"></span><br><span class="line">datadir = $&#123;datarootdir&#125;/$&#123;PACKAGE_NAME&#125;/$&#123;subdir&#125;</span><br><span class="line">dist_data_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">  webclip-icon.png \</span><br><span class="line">  home.png</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim web/images/Makefile.in</span><br><span class="line"></span><br><span class="line"># 大约在 365 行附近，如下修改</span><br><span class="line"></span><br><span class="line">disti\_data\_DATA = \</span><br><span class="line">  favicon.ico \</span><br><span class="line">  favicon.png \</span><br><span class="line">+  webclip-icon.png \</span><br><span class="line">+  home.png</span><br><span class="line"></span><br><span class="line">all: all-am</span><br></pre></td></tr></table></figure><p>  自此 自定义的 webUI 就算是好啦。</p><ul><li><p>修改2：</p><p>魔改 401 界面，效果如下：<br><img src="https://raw.githubusercontent.com/rachpt/imgs/master/make-transmission2-94-from-source-code-2.jpg" alt="make-transmission2-94-from-source-code-2.jpg"></p><p>首先使用了命令 <code>cd transmission-2.94 &amp;&amp; find . | xargs grep &#39;&lt;h1&gt;&#39;</code> 查找包含 <code>&lt;h1&gt;</code> 的源代码位置。<br>结果为 <code>./libtransmission/rpc-server.c:  evbuffer_add_printf (body, &quot;&lt;h1&gt;%d: %s&lt;/h1&gt;&quot;, code, code_text);</code></p></li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ./libtransmission/rpc-server.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约在 128 行</span></span><br><span class="line"></span><br><span class="line">  evbuffer_add_printf (body, <span class="string">"&lt;h1&gt;%d: %s&lt;/h1&gt;"</span>, code, code_text);</span><br><span class="line">  <span class="keyword">if</span> (text)</span><br><span class="line">+    evbuffer_add_printf (body, <span class="string">"%s&lt;br /&gt;&lt;br /&gt;&lt;a href=\"/index.html\"&gt;Click to Homepage&lt;/a&gt;"</span>, text);</span><br><span class="line">  evhttp_send_reply (req, code, code_text, body);</span><br></pre></td></tr></table></figure><p>  修改如上，在 <code>%s</code> 后面加上了一个 a 标签。</p><h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure -q &amp;&amp; make -s</span><br><span class="line"></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure><p>  安装会自动覆盖掉以前的版本。</p><p>  详见：<br><a href="https://github.com/rachpt/transmission-skiphashcheck-mod-webUI" target="_blank" rel="noopener">https://github.com/rachpt/transmission-skiphashcheck-mod-webUI</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="transmission" scheme="https://rachpt.github.io/tags/transmission/"/>
     
   </entry>
   

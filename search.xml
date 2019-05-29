@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ssh-tunnel]]></title>
+    <url>%2F2019%2F05%2F29%2Fssh-tunnel%2F</url>
+    <content type="text"><![CDATA[使用 ssh 隧道使用外网访问 NAT 内网服务。 情景描述一台电脑能够 使用 ssh 链接到外部电脑，比如地址是 115.115.115.1，但是反过来不行，因为这台电脑得到的地址是 10 开头的 NAT 内网地址。 现在希望 外面的 115 地址的机器可以 ssh 到这台 10 地址的机器上，并且访问该机器上面的 web 服务(比如qbittorrent的webui)。 单独使用 ssh 方向透穿不稳定，因为 ssh 不活动一段时间过后这条连接就会被中断，然后你在外面的 115 那里是死活也每办法让 10 那里再重新 ssh到 115这里的啦。 于是 autossh 就被用来干这样一件事情，维持一条持续的 ssh 通道。 反向穿透 ssh1autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.115.115.1 -p 22 5678 是autossh的监听端口，2333 就是在外部 115 机器上访问 10 机器的端口号，第一个 22 表示 10 机器的 ssh 在22端口(默认值)，后面的表示 115 机器ssh端口在默认的22。 这样做有个问题，就是需要输入 115 机器的ssh密码，我们可以使用 ssh 的 pub key避免输入密码，就像我面使用github那样。 123456789101112131415#------------------# 在 10 机器上ssh-keygen -t rsa# 生成公钥，自己记得给名字cat ~/.ssh/你命的名.pub#------------------# 复制到 115 的机器上面# 比如放到 ~/.ssh/authorized_keys 里面# 编辑 /etc/ssh/sshd_config 文件# 添加或则修改AuthorizedKeysFile .ssh/authorized_keys 这样就能实现 10 机器免密码 ssh 到 115 机器。 为了实现开机自动使用 autossh 反向透穿，使用 systemd， 12345678910vim /etc/systemd/system/autossh.service[Unit]Description=auto SSHAfter=network.target[Service]User=rachptExecStart=/usr/bin/autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.156.156.1[Install]WantedBy=multi-user.target 一通 daemon-reload enable start就可以了。 记得kill掉占用端口的进程，不然gg… 反向穿透 web 服务这里以 qbittorrent-nox webui 为例。 1autossh -M 5001 -CNR 10010:localhost:10010 rachpt@115.156.115.1 重要提示：远程端口和服务端口必须一致，我用的10010端口，否则401连不上。 当然 qbittorrent-nox 需要在 10010端口运行 webui(具体请使用 help)。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[substitute-sinaimg-with-githubimg-url]]></title>
     <url>%2F2019%2F04%2F29%2Fsubstitute-sinaimg-with-githubimg-url%2F</url>
     <content type="text"><![CDATA[最好的图床 新浪 已经禁止外链，图片迁移至 github。 前些天，得知 新浪 图片禁止外链，就在想怎么解决图片问题，直接放在 github pages 里面又要改动很多。 恰好最近在使用 vs-code，试了一下 picgo 插件，感觉很棒，smsm图床我是不敢用，404了去找谁。 于是在github建一个 repo 专门存放图片，还能备份到坚果云一份。替换新浪图片链接为 github 链接。 先是在 vs-code 里面手动替换了几个，工作量太大，于是写了个bash脚本完成这件事。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#!/bin/bash# Author: rachpt@126.com# Date: 2019-04-29# 批量下载 md 文件中的 新浪图片，重命名为 `文件名-数字` 格式# 替换md文件中的 新浪图片地址# 批量下载图片download_pic() &#123;for i in `ls -1 *.md`; dolists="$(grep -Eio 'https?://ws..sinaimg.[-0-9a-z/]+.jpg' "$i")"if [[ $lists ]]; then total=`echo "$lists"|wc -l`; j=1while [[ $j -le $total ]]; do echo $&#123;i%.md&#125;-$jpicurl=`echo "$lists"|sed -n "$j p"`echo $picurl# 此处使用了 httpie，当然可以使用 crul wget 等工具http -d "$picurl" -o "../pic/$&#123;i%.md&#125;-$j.jpg"((j++))donefidone&#125;# 替换 url 地址。两条完全可以合在一起，为了减少意外错误，这里分开substitute_url() &#123;for i in `ls -1 *.md`; dolists="$(grep -Eio 'https?://ws..sinaimg.[-0-9a-z/]+.jpg' "$i")"if [[ $lists ]]; then total=`echo "$lists"|wc -l`; j=1while [[ $j -le $total ]]; do echo $&#123;i%.md&#125;-$jpicurl=`echo "$lists"|sed -n "$j p"`echo $picurl# 说明：picurl 中包含'/'，因此使用\% 作为自定义正则标识符# s 命令匹配部分 ![] 都需要转义，替换的不用，后一个 s 使用%分割而不是/# 使用 &#123;&#125; 限定替换范围sed -Ei "\%$picurl% &#123; s/\!\[.*\]/![$&#123;i%.md&#125;-$j.jpg]/; s%$picurl%https://raw.githubusercontent.com/rachpt/imgs/master/$&#123;i%.md&#125;-$j.jpg%; &#125;" "$i"((j++))donefidone&#125;# 调用download_picecho '若无问题 30 秒后开始替换'echo 'Ctrl + C 强制取消替换'sleep 30substitute_urlecho 'Done!' 脚本在 https://github.com/rachpt/shell-scripts/blob/master/change-url.sh 。 这里记录一下。]]></content>
@@ -558,8 +569,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>PDF</tag>
         <tag>linux</tag>
+        <tag>PDF</tag>
       </tags>
   </entry>
   <entry>
