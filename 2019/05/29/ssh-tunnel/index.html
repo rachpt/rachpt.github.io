@@ -132,7 +132,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="使用 ssh 隧道使用外网访问 NAT 内网服务。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-29T15:01:27.354Z">
+<meta property="og:updated_time" content="2019-05-29T15:05:34.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh-tunnel">
 <meta name="twitter:description" content="使用 ssh 隧道使用外网访问 NAT 内网服务。">
@@ -469,7 +469,7 @@
                 
               
 
-              <time title="创建时间：2019-05-29 22:21:12 / 修改时间：23:01:27" itemprop="dateCreated datePublished" datetime="2019-05-29T22:21:12+08:00">2019-05-29</time>
+              <time title="创建时间：2019-05-29 22:21:12 / 修改时间：23:05:34" itemprop="dateCreated datePublished" datetime="2019-05-29T22:21:12+08:00">2019-05-29</time>
             
 
             
@@ -595,6 +595,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autossh -M 5001 -CNR 10010:localhost:10010 rachpt@115.156.115.1</span><br></pre></td></tr></table></figure>
 <p><strong><a href="https://github.com/qbittorrent/qBittorrent/issues/7274#issuecomment-362936393" target="_blank" rel="noopener">重要提示：远程端口和服务端口必须一致</a></strong>，我用的10010端口，否则401连不上。</p>
 <p>当然 qbittorrent-nox 需要在 10010端口运行 webui(具体请使用 help)。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -t -i:10010</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看占用端口 10010 的进程</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1100,7 +1101,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#情景描述"><span class="nav-number">1.</span> <span class="nav-text">情景描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向穿透-ssh"><span class="nav-number">2.</span> <span class="nav-text">反向穿透 ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向穿透-web-服务"><span class="nav-number">3.</span> <span class="nav-text">反向穿透 web 服务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#情景描述"><span class="nav-number">1.</span> <span class="nav-text">情景描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向穿透-ssh"><span class="nav-number">2.</span> <span class="nav-text">反向穿透 ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向穿透-web-服务"><span class="nav-number">3.</span> <span class="nav-text">反向穿透 web 服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
