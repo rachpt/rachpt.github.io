@@ -132,7 +132,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="使用 ssh 隧道使用外网访问 NAT 内网服务。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-29T15:05:34.491Z">
+<meta property="og:updated_time" content="2019-06-01T08:23:17.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh-tunnel">
 <meta name="twitter:description" content="使用 ssh 隧道使用外网访问 NAT 内网服务。">
@@ -469,12 +469,24 @@
                 
               
 
-              <time title="创建时间：2019-05-29 22:21:12 / 修改时间：23:05:34" itemprop="dateCreated datePublished" datetime="2019-05-29T22:21:12+08:00">2019-05-29</time>
+              <time title="创建时间：2019-05-29 22:21:12" itemprop="dateCreated datePublished" datetime="2019-05-29T22:21:12+08:00">2019-05-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-01 16:23:17" itemprop="dateModified" datetime="2019-06-01T16:23:17+08:00">2019-06-01</time>
               
             
           </span>
@@ -578,14 +590,14 @@
 <p>使用 ssh 隧道使用外网访问 NAT 内网服务。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="情景描述"><a href="#情景描述" class="headerlink" title="情景描述"></a>情景描述</h1><p>一台电脑能够 使用 ssh 链接到外部电脑，比如地址是 <code>115.115.115.1</code>，但是反过来不行，因为这台电脑得到的地址是 10 开头的 NAT 内网地址。</p>
+<h1 id="情景描述"><a href="#情景描述" class="headerlink" title="情景描述"></a>情景描述</h1><p>一台电脑能够 使用 ssh 连接到外部电脑，比如地址是 <code>115.115.115.1</code>，但是反过来不行，因为这台电脑得到的地址是 10 开头的 NAT 内网地址。</p>
 <p>现在希望 外面的 115 地址的机器可以 ssh 到这台 10 地址的机器上，并且访问该机器上面的 web 服务(比如qbittorrent的webui)。</p>
 <p>单独使用 ssh 方向透穿不稳定，因为 ssh 不活动一段时间过后这条连接就会被中断，然后你在外面的 115 那里是死活也每办法让 10 那里再重新 ssh到 115这里的啦。</p>
 <p>于是 autossh 就被用来干这样一件事情，维持一条持续的 ssh 通道。</p>
 <h1 id="反向穿透-ssh"><a href="#反向穿透-ssh" class="headerlink" title="反向穿透 ssh"></a>反向穿透 ssh</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.115.115.1 -p 22</span><br></pre></td></tr></table></figure>
 <p>5678 是autossh的监听端口，2333 就是在外部 115 机器上访问 10 机器的端口号，第一个 22 表示 10 机器的 ssh 在22端口(默认值)，后面的表示 115 机器ssh端口在默认的22。</p>
-<p>这样做有个问题，就是需要输入 115 机器的ssh密码，我们可以使用 ssh 的 pub key避免输入密码，就像我面使用github那样。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 在 10 机器上</span></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line"><span class="comment"># 生成公钥，自己记得给名字</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/你命的名.pub</span><br><span class="line"></span><br><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 复制到 115 的机器上面</span></span><br><span class="line"><span class="comment"># 比如放到 ~/.ssh/authorized_keys 里面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑 /etc/ssh/sshd_config 文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加或则修改</span></span><br><span class="line">AuthorizedKeysFile      .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<p>这样做有个问题，就是需要输入 115 机器的ssh密码，我们可以使用 ssh 的 pub key避免输入密码，就像我们使用github那样。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 在 10 机器上</span></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line"><span class="comment"># 生成公钥，自己记得给个名字</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/你命的名.pub</span><br><span class="line"></span><br><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 复制到 115 的机器上面</span></span><br><span class="line"><span class="comment"># 比如放到 ~/.ssh/authorized_keys 里面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑 /etc/ssh/sshd_config 文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加或则修改</span></span><br><span class="line">AuthorizedKeysFile      .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <p>这样就能实现 10 机器免密码 ssh 到 115 机器。</p>
 <p>为了实现开机自动使用 autossh 反向透穿，使用 systemd，</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/systemd/system/autossh.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=auto SSH</span><br><span class="line">After=network.target</span><br><span class="line">[Service]</span><br><span class="line">User=rachpt</span><br><span class="line">ExecStart=/usr/bin/autossh -M 5678 -CNR 2333:localhost:22 rachpt@115.156.156.1</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
