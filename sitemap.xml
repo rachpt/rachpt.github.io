@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
+    
+    <lastmod>2019-06-01T08:16:36.913Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/05/29/ssh-tunnel/</loc>
     
     <lastmod>2019-05-29T15:05:34.491Z</lastmod>
@@ -187,13 +194,6 @@
     <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
     
     <lastmod>2019-04-29T02:37:09.864Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
-    
-    <lastmod>2019-04-29T02:37:09.810Z</lastmod>
     
   </url>
   
