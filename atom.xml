@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-06-01T08:23:17.353Z</updated>
+  <updated>2019-06-02T10:25:03.168Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>notes-for-ffmpeg</title>
+    <link href="https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/"/>
+    <id>https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/</id>
+    <published>2019-06-02T09:08:49.000Z</published>
+    <updated>2019-06-02T10:25:03.168Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>一些ffmpeg处理视频笔记。</p></blockquote><a id="more"></a><h1 id="裁剪黑边"><a href="#裁剪黑边" class="headerlink" title="裁剪黑边"></a>裁剪黑边</h1><p>主要使用 ffmpeg 的 <code>crop</code> 以及 <code>cropdetect</code> 参数。</p><p>视频左上角为坐标(0,0)，单位为像素。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -vf <span class="string">"cropdetect=24:16:0"</span> dummy.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以得到如下所示信息</span></span><br><span class="line"><span class="comment"># [Parsed_cropdetect_0 @ 0x7fab586781c0] x1:36 x2:1883 y1:0 y2:1079 w:1840 h:1072 x:40 y:4 pts:3584 t:0.233333 crop=1840:1072:40:4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Ctrl + C 停止，复制 crop=1840:1072:40:4 用于后面步骤</span></span><br><span class="line"><span class="comment"># 注意视频黑边 是否会变化，否则需取舍使用哪些参数。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用 ffplay 预览，不用'压制'即可得到 crop 信息。</span></span><br><span class="line">ffplay input.mp4 -vf cropdetect=24:16:0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 后面的参数 24 16 0 为默认值，更多请移步 [官方文档](https://www.ffmpeg.org/ffmpeg-filters.html#cropdetect)</span></span><br></pre></td></tr></table></figure><p>关于 crop，第一个 1840 表示裁剪出来的矩形长1840像素，宽1072像素，从(40,0)坐标处开始裁剪。<a href="https://www.ffmpeg.org/ffmpeg-filters.html#crop" target="_blank" rel="noopener">crop官方文档</a>。</p><p>除了使用 ffmpeg 的 cropdetect 参数外，可以截取一张视频图片，使用 GIMP 等图像工具，手动测量得到需要的参数。<br>以 GIMP 为例：</p><pre><code>1. 拉出参考线，Ctrl+鼠标滚轮放大，M 移动工具；2. Shift + M 换到测量工具，Ctrl 拉出水平垂直测量线。</code></pre><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-7-13.png" alt="notes-for-ffmpeg-2019-6-2-18-7-13.png"></p><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-7-28.png" alt="notes-for-ffmpeg-2019-6-2-18-7-28.png"></p><h1 id="去水印"><a href="#去水印" class="headerlink" title="去水印"></a>去水印</h1><p>和裁剪黑边类似，使用 <code>delogo</code> 命令，<a href="https://www.ffmpeg.org/ffmpeg-filters.html#delogo" target="_blank" rel="noopener">官方文档</a>。</p><p>同样需要定位位置，使用上面提到的 GIMP 测量坐标。<br><code>delogo=x=1742:y=992:w=132:h=40</code>，如其意，x y坐标起点(左上角0、0)，w  h宽和高。<br>一次可以定义多个去水印位置，使用 <code>,</code> 分隔，放置在滤镜参数里面。例子如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ffmpeg -y -i in.mp4 -vf <span class="string">"delogo=x=1472:y=35:w=408:h=42,delogo=x=1742:y=992:w=132:h=40,crop=1840:1040:40:0"</span> \</span><br><span class="line">-metadata comment=<span class="string">'made by rachpt'</span> -max_muxing_queue_size 1024 out.mp4</span><br></pre></td></tr></table></figure></p><p>两个水印，加上裁剪黑边。</p><p>效果对比如下：</p><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-25.png" alt="notes-for-ffmpeg-2019-6-2-18-10-25.png"></p><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-38.png" alt="notes-for-ffmpeg-2019-6-2-18-10-38.png"></p><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-54.png" alt="notes-for-ffmpeg-2019-6-2-18-10-54.png"></p><h1 id="倍速"><a href="#倍速" class="headerlink" title="倍速"></a>倍速</h1><p>详见：<br><a href="https://github.com/rachpt/shell-scripts/blob/master/speed_up_video.sh" target="_blank" rel="noopener">https://github.com/rachpt/shell-scripts/blob/master/speed_up_video.sh</a></p><h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><p>1.7 倍速：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="string">"<span class="variable">$i</span>"</span> -r 30 -c:v libx264 -preset fast \</span><br><span class="line">-filter_complex <span class="string">"[0:v]setpts=10/17 *PTS[v];[0:a]atempo=1.7[a]"</span> \</span><br><span class="line">-map <span class="string">"[v]"</span> -map <span class="string">"[a]"</span> <span class="string">"../encode/<span class="variable">$i</span>"</span> -y</span><br></pre></td></tr></table></figure></p><h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>如上，<code>[0:a]atempo=1.7[a]</code>。</p><h2 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h2><p>使用shell来完成，<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `grep -Eo <span class="string">'([0-9]&#123;2&#125;:)&#123;2&#125;[0-9]&#123;2&#125;,[0-9]&#123;3&#125;'</span> <span class="string">"<span class="variable">$file</span>"</span>` ;<span class="keyword">do</span> </span><br><span class="line">  a=<span class="variable">$&#123;i:0:2&#125;</span>;</span><br><span class="line">  b=<span class="variable">$&#123;i:3:2&#125;</span>;</span><br><span class="line">  c=<span class="variable">$&#123;i:6:2&#125;</span>;</span><br><span class="line">  d=<span class="variable">$&#123;i:9:3&#125;</span>;</span><br><span class="line">  <span class="comment"># 匹配视频 1.7 倍速</span></span><br><span class="line">  total=`<span class="built_in">echo</span> <span class="string">"scale=0;(((<span class="variable">$a</span>*60+<span class="variable">$b</span>)*60+<span class="variable">$c</span>)*1000+<span class="variable">$d</span>)/1.7"</span>|bc`;</span><br><span class="line">  e=$((total % 1000));f=$((total / 1000));</span><br><span class="line">  g=$((f % 60));</span><br><span class="line">  h=$((f / 60));x=$((h % 60));</span><br><span class="line">  y=$((h / 60)) ;</span><br><span class="line">  j=`<span class="built_in">printf</span> <span class="string">"%02d:%02d:%02d,%03d\n"</span> <span class="variable">$y</span> <span class="variable">$x</span> <span class="variable">$g</span> <span class="variable">$e</span>`;</span><br><span class="line">  sed -i <span class="string">"s/<span class="variable">$i</span>/<span class="variable">$j</span>/"</span> <span class="string">"<span class="variable">$file</span>"</span>;</span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后封装在一起参数</span></span><br><span class="line">ffmpeg -i in.mp4 -i sub.srt -c:s mov_text -c:v copy -c:a copy out.mp4</span><br></pre></td></tr></table></figure></p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul><li>使用 -ss 0:0:0 -t 1:0:0 后可能会遇到下面的报错，</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Too many packets buffered <span class="keyword">for</span> output stream 0:1.</span><br></pre></td></tr></table></figure><p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/questions/49686244/ffmpeg-too-many-packets-buffered-for-output-stream-01#answer-50262835" target="_blank" rel="noopener">详见这里</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一些ffmpeg处理视频笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+    
+    
+      <category term="ffmpeg" scheme="https://rachpt.github.io/tags/ffmpeg/"/>
+    
+  </entry>
   
   <entry>
     <title>ssh-tunnel</title>
@@ -461,30 +485,6 @@
     
     
       <category term="nginx" scheme="https://rachpt.github.io/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>run-matlab-in-a-terminal</title>
-    <link href="https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/"/>
-    <id>https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/</id>
-    <published>2018-07-25T12:39:59.000Z</published>
-    <updated>2019-04-29T02:37:09.994Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>直接在 termianl 中运行 matlab，输入命令，执行脚本。</p></blockquote><a id="more"></a><p>matlab 绝对是一个超级强大的 脚本工具，当然不仅仅是。对于使用 linux 日常来说，程序提供 cli，就意味着可以集成并协同工作。在一个 shell  脚本种一个程序(命令)只做一件事，程序的输出作为另一个程序的输入，配合 Linux 的管道机制，一切皆有可能。<br><img src="https://raw.githubusercontent.com/rachpt/imgs/master/run-matlab-in-a-terminal-1.jpg" alt="run-matlab-in-a-terminal-1.jpg"><br><blockquote class="blockquote-center"><p>Keep calm and open a terminal.</p></blockquote></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>使用 mount 先挂载 dvd1,图形界面直接双击挂载。<br><strong>一定要在挂载路径之外 使用 <code>sudo install</code></strong><br>后面按提示弹出 dvd1,挂载 dvd2.<br> 安装路径 建议软件默认位置，选择创建 <code>/usr/local/bin/matlab</code>。</p><h1 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h1><p>hust 买了正版授权，注意一个学号只能授权一台设备一个版本，可以取消已经授权了的设备。</p><h1 id="终端运行"><a href="#终端运行" class="headerlink" title="终端运行"></a>终端运行</h1><p>打开 terminal， <code>matlab -help</code></p><p>可以看到帮助文档。</p><p>使用 <code>matlab -nodesktop</code> 在 terminal 中运行 matlab，但是会闪过 matlab 的版权信息UI。</p><p>使用 <code>matlab -nojvm</code> 关闭 matlab 的 java 虚拟机，所有与 GUI 相关的都用不了，不会有图形界面。</p><p>使用 <code>matlab -nosplash</code> 关闭版权信息页面。</p><p>使用 <code>matlab -nodesktop -nosplash -r script/PATH</code> 运行 m 脚本，(不要 .m 后缀)。</p><p>使用 alias:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> matlab=<span class="string">'matlab -nojvm -nodesktop -nosplash'</span></span><br></pre></td></tr></table></figure><p>退出 使用 <code>quit</code> 或者 <code>exit</code>。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;直接在 termianl 中运行 matlab，输入命令，执行脚本。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="matlab" scheme="https://rachpt.github.io/tags/matlab/"/>
     
   </entry>
   
