@@ -132,14 +132,14 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-1.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-2.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-3.jpg">
-<meta property="og:updated_time" content="2019-04-29T02:37:10.017Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg">
+<meta property="og:updated_time" content="2018-03-05T05:48:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 免安装程序配置">
 <meta name="twitter:description" content="给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-1.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg">
 
 
 
@@ -300,7 +300,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">85</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">119</span></a>
 
   </li>
         
@@ -490,7 +490,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-29 10:37:10" itemprop="dateModified" datetime="2019-04-29T10:37:10+08:00">2019-04-29</time>
+                <time title="修改时间：2018-03-05 13:48:58" itemprop="dateModified" datetime="2018-03-05T13:48:58+08:00">2018-03-05</time>
               
             
           </span>
@@ -605,8 +605,8 @@
 <p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mv -f pycharm-edu /opt/ <span class="comment"># 使用命令移动文件</span></span><br><span class="line"><span class="comment"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span></span><br><span class="line">sudo touch /usr/share/applications/pycharm.desktop	 <span class="comment">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span></span><br><span class="line">sudo gedit /usr/share/applications/pycharm.desktop 	<span class="comment">#在其中写如如下内容</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Name=pycharm 	<span class="comment">#显示的名字</span></span><br><span class="line">Exec=/opt/pycharm-edu/bin/pycharm.sh 	<span class="comment">#软件路径</span></span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Icon=/opt/pycharm-edu/bin/pycharm.png 	<span class="comment">#软件图标</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Development 	<span class="comment">#软件分类</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-1.jpg" alt="setting-protable-program-on-linux-1.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-2.jpg" alt="setting-protable-program-on-linux-2.jpg"></p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05ly1fp1vuqrprcj20r80k5dko.jpg" alt="program-pic1"></p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1vvtftn0j20l10fowh2.jpg" alt="program-pic2"></p>
 <p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p>
 <h1 id="加入环境变量"><a href="#加入环境变量" class="headerlink" title="加入环境变量"></a>加入环境变量</h1><p>##方法一</p>
 <p>配置用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐），</p>
@@ -615,7 +615,7 @@
 <p>保存文件，注销再登录，变量生效。<br>该方式添加的变量只对当前用户有效。<br>​    </p>
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在系统目录，进行类似操作。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">/etc /environment</span><br></pre></td></tr></table></figure></p>
 <p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p>
-<p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/setting-protable-program-on-linux-3.jpg" alt="setting-protable-program-on-linux-3.jpg"></p>
+<p><img src="https://ws1.sinaimg.cn/large/675bda05gy1fp1w1y3fquj20n90jv7bh.jpg" alt="program-pic3"></p>
 
       
     </div>
@@ -625,6 +625,13 @@
 
   <div class="popular-posts-header">相关文章</div>
   <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/12/31/setting-protable-program-on-linux-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="bookmark">Linux 免安装程序配置</a></div>
+      
+    </li>
   
     <li class="popular-posts-item">
       
@@ -650,14 +657,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/07/20/compile-vim-with-clipboard-supported/" rel="bookmark">compile-vim-with-clipboard-supported</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/05/07/upgrade-ubuntu-stepped-pit/" rel="bookmark">upgrade-ubuntu-stepped-pit</a></div>
+      <div class="popular-posts-title"><a href="/2018/07/21/make-qbittorrent-from-source-code-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="bookmark">make-qbittorrent-from-source-code</a></div>
       
     </li>
   
@@ -789,8 +789,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/18/notes-for-ubuntu/" rel="next" title="ubuntu 学习笔记">
-                <i class="fa fa-chevron-left"></i> ubuntu 学习笔记
+              <a href="/2017/12/31/setting-protable-program-on-linux-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="next" title="Linux 免安装程序配置">
+                <i class="fa fa-chevron-left"></i> Linux 免安装程序配置
               </a>
             
           </div>
@@ -799,7 +799,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/11/install-materials-studio-on-ubuntu/" rel="prev" title="Linux mint 安装 Materials Studio 8.0 与使用 CASTEP">
+              <a href="/2018/01/11/install-materials-studio-on-ubuntu-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="prev" title="Linux mint 安装 Materials Studio 8.0 与使用 CASTEP">
                 Linux mint 安装 Materials Studio 8.0 与使用 CASTEP <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -876,7 +876,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">85</span>
+                    <span class="site-state-item-count">119</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1199,7 +1199,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">160k</span>
+    <span title="站点总字数">224k</span>
   
 
   
@@ -1210,7 +1210,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:25</span>
+    <span title="站点阅读时长">3:23</span>
   
 </div>
 
