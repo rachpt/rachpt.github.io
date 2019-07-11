@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rachpt.github.io/2019/04/15/notes-for-flexget/</loc>
+    <lastmod>2019-07-11</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/</loc>
     <lastmod>2019-06-02</lastmod>
   </url>  <url>
@@ -144,9 +147,6 @@
   </url>  <url>
     <loc>https://rachpt.github.io/2017/12/18/notes-for-ubuntu/</loc>
     <lastmod>2019-04-22</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2019/04/15/notes-for-flexget/</loc>
-    <lastmod>2019-04-16</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2019/04/10/jupyter-notebook-cannot-work-with-the-same-base-name/</loc>
     <lastmod>2019-04-10</lastmod>
