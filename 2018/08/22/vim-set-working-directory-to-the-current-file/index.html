@@ -132,12 +132,12 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="vim自动进入打开文件所在目录,原谅我无耻地 copy。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fui8tvgh0ej20pp0avdhk.jpg">
-<meta property="og:updated_time" content="2018-08-22T02:12:38.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/vim-set-working-directory-to-the-current-file-1.jpg">
+<meta property="og:updated_time" content="2019-04-29T02:37:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim-set-working-directory-to-the-current-file">
 <meta name="twitter:description" content="vim自动进入打开文件所在目录,原谅我无耻地 copy。">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/675bda05ly1fui8tvgh0ej20pp0avdhk.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/vim-set-working-directory-to-the-current-file-1.jpg">
 
 
 
@@ -298,7 +298,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">119</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">85</span></a>
 
   </li>
         
@@ -471,12 +471,24 @@
                 
               
 
-              <time title="创建时间：2018-08-22 09:47:54 / 修改时间：10:12:38" itemprop="dateCreated datePublished" datetime="2018-08-22T09:47:54+08:00">2018-08-22</time>
+              <time title="创建时间：2018-08-22 09:47:54" itemprop="dateCreated datePublished" datetime="2018-08-22T09:47:54+08:00">2018-08-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-29 10:37:10" itemprop="dateModified" datetime="2019-04-29T10:37:10+08:00">2019-04-29</time>
               
             
           </span>
@@ -583,7 +595,7 @@
 <p>如果装了插件 NERDTree，使用 <code>:NERDTreeFind</code> 可以扩展到打开文件所在目录。不自动有点麻烦。</p>
 <p>百度了一圈，找到的答案是使用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;在.vimrc 中加入</span><br><span class="line">execute &quot;cd&quot; expand(&quot;%:h&quot;)</span><br></pre></td></tr></table></figure>
-<p>缺点是如果目录路径中有特殊字符可能报错。比如：<br><img src="https://ws1.sinaimg.cn/large/675bda05ly1fui8tvgh0ej20pp0avdhk.jpg" alt=""></p>
+<p>缺点是如果目录路径中有特殊字符可能报错。比如：<br><img src="https://raw.githubusercontent.com/rachpt/imgs/master/vim-set-working-directory-to-the-current-file-1.jpg" alt="vim-set-working-directory-to-the-current-file-1.jpg"></p>
 <p>使用 Google 查找关键词 <code>vimrc execute cd expand</code>，找到 vim 官方解决办法。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set autochdir</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * silent! lcd %:p:h</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if expand(&quot;%:p:h&quot;) !~ &apos;^/tmp&apos; | silent! lcd %:p:h | endif</span><br></pre></td></tr></table></figure>
 <p>第一种，可能和某些插件有冲突，本人测试刚才有特殊字符的文件正常。<br>后面两个兼容性更好，最后一个加了判断，<code>/tmp</code> 中的文件不切换到改路径去。此法最好。</p>
@@ -594,18 +606,6 @@
 
     
       
-
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018/08/22/vim-set-working-directory-to-the-current-file-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="bookmark">vim-set-working-directory-to-the-current-file</a></div>
-      
-    </li>
-  
-  </ul>
 
 
     
@@ -729,8 +729,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/22/vim-set-working-directory-to-the-current-file-NSConflict-rachpt-linux4.19.45-1-MANJARO/" rel="next" title="vim-set-working-directory-to-the-current-file">
-                <i class="fa fa-chevron-left"></i> vim-set-working-directory-to-the-current-file
+              <a href="/2018/07/28/service-systemctl-and-daemon/" rel="next" title="service-systemctl-and-daemon">
+                <i class="fa fa-chevron-left"></i> service-systemctl-and-daemon
               </a>
             
           </div>
@@ -807,7 +807,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">119</span>
+                    <span class="site-state-item-count">85</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1113,7 +1113,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">224k</span>
+    <span title="站点总字数">160k</span>
   
 
   
@@ -1124,7 +1124,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:24</span>
+    <span title="站点阅读时长">2:26</span>
   
 </div>
 
