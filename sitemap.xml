@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2019/07/14/digital-image-processing-notes/</loc>
+    
+    <lastmod>2019-07-19T00:52:01.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</loc>
+    
+    <lastmod>2019-07-17T10:18:48.466Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2018/12/31/install-matlab-on-archlinux/</loc>
     
     <lastmod>2019-07-14T08:58:35.802Z</lastmod>
@@ -212,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.github.io/2018/03/03/gimp-simple-notes/</loc>
-    
-    <lastmod>2019-04-29T02:37:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
     
     <lastmod>2019-04-29T02:37:09.000Z</lastmod>
@@ -298,7 +305,7 @@
   <url>
     <loc>https://rachpt.github.io/2019/03/22/amazing-sed-on-Linux/</loc>
     
-    <lastmod>2019-04-28T15:43:36.000Z</lastmod>
+    <lastmod>2019-04-28T15:43:31.000Z</lastmod>
     
   </url>
   
@@ -312,14 +319,14 @@
   <url>
     <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
     
-    <lastmod>2019-04-28T15:38:43.000Z</lastmod>
+    <lastmod>2019-04-28T15:38:10.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://rachpt.github.io/2018/03/12/a-simple-example-of-FFmpeg/</loc>
     
-    <lastmod>2019-04-28T15:32:07.000Z</lastmod>
+    <lastmod>2019-04-28T15:31:53.000Z</lastmod>
     
   </url>
   
@@ -333,7 +340,7 @@
   <url>
     <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
     
-    <lastmod>2019-04-28T15:01:38.000Z</lastmod>
+    <lastmod>2019-04-28T14:56:32.000Z</lastmod>
     
   </url>
   

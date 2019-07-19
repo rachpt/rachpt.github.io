@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -39,11 +39,6 @@
 
 
 
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
   <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ">
 
 
@@ -62,21 +57,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.2.0">
 
 
-  <link rel="mask-icon" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.0.1" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.2.0">
+
+
+  <link rel="mask-icon" href="https://raw.githubusercontent.com/rachpt/imgs/master/favicon-small.jpg?v=7.2.0" color="#222">
 
 
 
@@ -89,13 +84,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.0.1',
-    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: true,
+    version: '7.2.0',
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
     fancybox: false,
     fastclick: false,
-    lazyload: true,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -104,14 +99,14 @@
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
     }
   };
 </script>
-
-
-  
-
-
 
 
   <script>
@@ -121,7 +116,6 @@
     });
   daovoice('update');
   </script>
-
 
 
   <meta name="description" content="出去跑跑，总是好的">
@@ -141,7 +135,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="https://rachpt.github.io/categories/DFT/">
 
 
@@ -152,13 +147,14 @@
   };
 </script>
 
+  
   <title>分类: DFT | rachpt's Blog</title>
   
 
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109494468-2"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -170,16 +166,6 @@
   </script>
 
 
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?e716173cfd1770decdca06bf11927adc";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -214,7 +200,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -224,7 +210,7 @@
   <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -267,7 +253,6 @@
 
     
     
-    
       
     
 
@@ -286,7 +271,6 @@
 
     
     
-    
       
     
 
@@ -294,7 +278,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">85</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">86</span></a>
 
   </li>
         
@@ -303,7 +287,6 @@
           
           <li class="menu-item menu-item-notes">
 
-    
     
     
       
@@ -322,7 +305,6 @@
           
           <li class="menu-item menu-item-about">
 
-    
     
     
       
@@ -377,22 +359,16 @@
 
 
 
-  
-
-
-
 </div>
     </header>
 
     
   
   
-  
-  
 
   
 
-  <a href="https://github.com/rachpt" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/rachpt" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -439,7 +415,7 @@
       
         
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
@@ -465,7 +441,7 @@
       
         
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
@@ -491,7 +467,7 @@
       
         
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
@@ -517,7 +493,7 @@
       
         
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
@@ -543,7 +519,7 @@
       
         
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
@@ -602,295 +578,292 @@
 
       <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/rachpt/imgs/master/avatar-tom-cat.gif" alt="rachpt">
-            
-              <p class="site-author-name" itemprop="name">rachpt</p>
-              <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
-          </div>
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/rachpt/imgs/master/avatar-tom-cat.gif" alt="rachpt">
+  
+  <p class="site-author-name" itemprop="name">rachpt</p>
+  <div class="site-description motion-element" itemprop="description">出去跑跑，总是好的</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/rachpt" title="GitHub &rarr; https://github.com/rachpt" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="mailto:rachpt@126.com" title="E-Mail &rarr; mailto:rachpt@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+    
+  </div>
+
+
+
+  <div class="cc-license motion-element" itemprop="license">
+  
+  
+    
+  
+  
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://rachpt.iok.la/" title="http://rachpt.iok.la/" rel="noopener" target="_blank">控制面板</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://agint.me/" title="https://agint.me/" rel="noopener" target="_blank">sword 杂货屋</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://quanyaxin.github.io/" title="https://quanyaxin.github.io/" rel="noopener" target="_blank">Quanyaxin</a>
+        </li>
+      
+    </ul>
+  </div>
+
 
           
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">85</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">14</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">60</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
           
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/rachpt" title="GitHub &rarr; https://github.com/rachpt" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="mailto:rachpt@126.com" title="E-Mail &rarr; mailto:rachpt@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
-                </span>
-              
-            </div>
-          
-
-          
-             <div class="cc-license motion-element" itemprop="license">
-              
-              
-                
-              
-              
-              
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-             </div>
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://rachpt.iok.la/" title="http://rachpt.iok.la/" rel="noopener" target="_blank">控制面板</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://agint.me/" title="https://agint.me/" rel="noopener" target="_blank">sword 杂货屋</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://quanyaxin.github.io/" title="https://quanyaxin.github.io/" rel="noopener" target="_blank">Quanyaxin</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
         </div>
       </div>
 
       
 
       
-        <div class="back-to-top">
+        <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
           
             <span id="scrollpercent"><span>0</span>%</span>
@@ -900,7 +873,7 @@
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
         
@@ -923,7 +896,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">160k</span>
+    <span title="站点总字数">162k</span>
   
 
   
@@ -934,7 +907,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:26</span>
+    <span title="站点阅读时长">2:27</span>
   
 </div>
 
@@ -944,8 +917,6 @@
 
 
 
-
-  <div class="footer-custom">Hosted by <a target="_blank" href="https://rachpt.github.io">GitHub Pages</a> & <a target="_blank" href="https://pages.coding.me">Coding Pages</a> &nbsp;| &nbsp;<i class="fa fa-map-marker"></i> <a target="_blank" href="/sitemap.xml">SiteMap</a></div>
 
 
         
@@ -1001,8 +972,6 @@
     
 
     
-
-    
   </div>
 
   
@@ -1019,14 +988,11 @@
 
 
 
+
+
+
   
-
-
-
-
-
-
-
+  
 
 
 
@@ -1043,10 +1009,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1058,33 +1021,30 @@
   <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
-  
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.2.0"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=7.0.1"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
-
+  <script src="/js/motion.js?v=7.2.0"></script>
 
 
 
   
-
   
 
 
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+  <script src="/js/affix.js?v=7.2.0"></script>
 
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+
+  
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
 
   
 
@@ -1103,10 +1063,6 @@
 
   
   
-
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
 
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
@@ -1123,7 +1079,7 @@
     appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
     appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
     placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
-    avatar: 'wavatar',
+    avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
@@ -1465,6 +1421,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
@@ -1547,115 +1510,11 @@ if ($('body').find('pre.mermaid').length) {
 
 
   
-<script>
-  $('.highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-        if (result) $(this).text('复制成功');
-        else $(this).text('复制失败');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('复制');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
 
   
 
-  
 
   
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" href="/static/css/player.css">
-</head>
-
-<div id="QPlayer">
-	<div id="pContent">
-		<div id="player">
-			<span class="cover"></span>
-			<div class="ctrl">
-				<div class="musicTag marquee">
-					<strong>Title</strong>
-					 <span> - </span>
-					<span class="artist">Artist</span>
-				</div>
-				<div class="progress">
-					<div class="timer left">0:00</div>
-					<div class="contr">
-						<div class="rewind icon"></div>
-						<div class="playback icon"></div>
-						<div class="fastforward icon"></div>
-					</div>
-					<div class="right">
-						<div class="liebiao icon"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ssBtn">
-				<div class="adf"></div>
-		</div>
-	</div>
-	<ol id="playlist"></ol>
-</div>
-<script src="//cdn.bootcss.com/jQuery.Marquee/1.3.94/jquery.marquee.min.js"></script>
-<script>
-  var playlist = [];
-  
-  playlist.push({title:'时间煮雨',artist:'小时代3：刺金时代',mp3:'https://m10.music.126.net/20190320153054/fbfafa2a777e9cf340498a19d116b2f0/ymusic/718e/ffe8/44cc/bc8035532e4f63ae0cb48a4c1ff0e969.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000000xWexl4IDgp7.jpg'})
-  
-  playlist.push({title:'团子大家族',artist:'CLANNAD',mp3:'https://fdfs.xmcdn.com/group33/M0A/BA/27/wKgJUVoDtHzzb37cAB6GDZold80719.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000001UINeG0D2h5q.jpg'})
-  
-  playlist.push({title:'虹之间',artist:'金贵晟',mp3:'https://music.163.com/song/media/outer/url?id=28219176.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M0000020pad81OQG64.jpg'})
-  
-  playlist.push({title:'Secret',artist:'茶太',mp3:'https://music.163.com/song/media/outer/url?id=640866.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000004OHYfb34IrnF.jpg'})
-  
-  playlist.push({title:'心做し (无心)',artist:'まじ娘 (majiko)',mp3:'https://music.163.com/song/media/outer/url?id=31134451.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M000004GC5gr1Djev0.jpg'})
-  
-  playlist.push({title:'なんでもないや',artist:'君の名は',mp3:'https://m10.music.126.net/20181120201639/dc61a6c52bcbc3e83da6dafba05d5666/ymusic/718e/ffe8/44cc/bc8035532e4f63ae0cb48a4c1ff0e969.mp3',cover:'https://y.gtimg.cn/music/photo_new/T002R300x300M0000007oL0R1hDyxV.jpg'})
-  
-  playlist.push({title:'光るなら (若能绽放光芒)',artist:'《四月..》',mp3:'https://music.163.com/song/media/outer/url?id=29732992.mp3',cover:'https://p1.music.126.net/TM6SM2-ppcd1F66YyjR-Eg==/2537672838610591.jpg?param=300x300'})
-  
-  playlist.push({title:'フラッシュバック',artist:'(闪现)',mp3:'https://music.163.com/song/media/outer/url?id=36924083.mp3',cover:'https://p1.music.126.net/SL6lz7yGHXNQFbs5830Beg==/3408486048713557.jpg?param=300x300'})
-  
-  var isRotate = true;
-  var autoplay = false;
-</script>
-<script src="/static/js/player.js"></script>
-<script>
-  function bgChange(){
-	var lis= $('.lib');
-	for(var i=0; i<lis.length; i+=2)
-	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
-  }
-  window.onload = bgChange;
-</script>
 
 </body>
 </html>
