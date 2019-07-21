@@ -126,7 +126,7 @@
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="hexo 中遇到的坑">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T11:06:48.152Z">
+<meta property="og:updated_time" content="2019-07-21T11:15:53.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-pit">
 <meta name="twitter:description" content="hexo 中遇到的坑">
@@ -445,7 +445,7 @@
                 
               
 
-              <time title="创建时间：2019-07-21 18:59:19 / 修改时间：19:06:48" itemprop="dateCreated datePublished" datetime="2019-07-21T18:59:19+08:00">2019-07-21</time>
+              <time title="创建时间：2019-07-21 18:59:19 / 修改时间：19:15:53" itemprop="dateCreated datePublished" datetime="2019-07-21T18:59:19+08:00">2019-07-21</time>
             </span>
           
 
@@ -537,6 +537,9 @@
 <p>这些东西如果出现在博文中需要放到<code>代码</code>里面，特别是对于不全的形式，需要使用代码块，行内形式都不行。</p>
 <p>比如<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$&#123;#abv&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>如果直接使用 ` 包裹就会遇到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span><br><span class="line">Template render error: (unknown path)</span><br><span class="line">Error: expected end of comment, got end of file</span><br><span class="line">at Object._prettifyError (/home/rachpt/blog-old/node_modules/nunjucks/src/lib.js:36:11)</span><br><span class="line">......</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://xcoding.tech/2018/08/08/hexo/%E5%A6%82%E4%BD%95%E4%BB%8E%E6%A0%B9%E6%9C%AC%E8%A7%A3%E5%86%B3hexo%E4%B8%8D%E5%85%BC%E5%AE%B9%7B%7B%7D%7D%E6%A0%87%E7%AD%BE%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">扩展阅读</a>。</p>
+<h1 id="相对链接"><a href="#相对链接" class="headerlink" title="相对链接"></a>相对链接</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_link markdown-learning-by-maxiang 点击这里查看这篇文章 %&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/iissnan/hexo-theme-next/issues/978#issuecomment-231634416" target="_blank" rel="noopener">参考文档</a>。</p>
 
       
     </div>
@@ -696,8 +699,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -983,6 +995,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#相对链接"><span class="nav-number">1.</span> <span class="nav-text">相对链接</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
