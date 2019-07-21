@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rachpt.github.io/2018/05/07/extra-shell-note/</loc>
+    <lastmod>2019-07-21</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2019/07/21/hexo-pit/</loc>
+    <lastmod>2019-07-21</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
+    <lastmod>2019-07-21</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
+    <lastmod>2019-07-21</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2019/07/14/digital-image-processing-notes/</loc>
     <lastmod>2019-07-19</lastmod>
   </url>  <url>
@@ -49,31 +61,25 @@
     <loc>https://rachpt.github.io/2018/03/31/use-outer-variables-in-awk/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
+    <loc>https://rachpt.github.io/2017/12/02/welfare-for-pt/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/12/02/welfare-for-pt/</loc>
+    <loc>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/01/27/windows-note-01/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2018/04/02/windows-note-02/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/16/download-youtube-video/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/11/firefox-noupgrade/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/30/flexget-for-ut/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/16/download-youtube-video/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/</loc>
@@ -88,16 +94,16 @@
     <loc>https://rachpt.github.io/2018/03/11/linux-allow-numlock-on/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/materials-studio-super/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/14/my-android/</loc>
@@ -165,9 +171,6 @@
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/</loc>
     <lastmod>2018-09-07</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/05/07/extra-shell-note/</loc>
-    <lastmod>2018-09-06</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/03/25/transmission-settings/</loc>
     <lastmod>2018-08-25</lastmod>

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2018/05/07/extra-shell-note/</loc>
+    
+    <lastmod>2019-07-21T11:08:06.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2019/07/21/hexo-pit/</loc>
+    
+    <lastmod>2019-07-21T11:06:48.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
+    
+    <lastmod>2019-07-21T10:20:14.484Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
+    
+    <lastmod>2019-07-21T09:44:21.236Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/07/14/digital-image-processing-notes/</loc>
     
     <lastmod>2019-07-19T00:52:01.975Z</lastmod>
@@ -121,13 +149,6 @@
   </url>
   
   <url>
-    <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
-    
-    <lastmod>2019-04-29T02:37:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/2018/03/05/test/</loc>
     
     <lastmod>2019-04-29T02:37:10.000Z</lastmod>
@@ -171,13 +192,6 @@
   
   <url>
     <loc>https://rachpt.github.io/2019/04/10/jupyter-notebook-cannot-work-with-the-same-base-name/</loc>
-    
-    <lastmod>2019-04-29T02:37:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
     
     <lastmod>2019-04-29T02:37:09.000Z</lastmod>
     
@@ -411,13 +425,6 @@
     <loc>https://rachpt.github.io/2018/07/06/adb-linux-and-mi8/</loc>
     
     <lastmod>2018-09-07T12:28:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/05/07/extra-shell-note/</loc>
-    
-    <lastmod>2018-09-06T03:23:49.000Z</lastmod>
     
   </url>
   
