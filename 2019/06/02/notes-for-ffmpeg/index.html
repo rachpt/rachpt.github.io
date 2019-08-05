@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-25.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-38.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-54.png">
-<meta property="og:updated_time" content="2019-07-30T10:32:10.301Z">
+<meta property="og:updated_time" content="2019-08-05T13:50:32.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-ffmpeg">
 <meta name="twitter:description" content="一些ffmpeg处理视频笔记。">
@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 18:32:10" itemprop="dateModified" datetime="2019-07-30T18:32:10+08:00">2019-07-30</time>
+                <time title="修改时间：2019-08-05 21:50:32" itemprop="dateModified" datetime="2019-08-05T21:50:32+08:00">2019-08-05</time>
               </span>
             
           
@@ -588,11 +588,23 @@
 <p>其中 <code>v</code> 视频，<code>a</code> 音频。</p>
 <h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 视频 音频 (字幕)分别单文件</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -i sub.srt -c:v copy -c:a copy -c:s mov_text output.mp4</span><br><span class="line"><span class="comment"># 视频里面有音轨，需要替换音轨</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 output.mp4</span><br><span class="line"><span class="comment"># 追加音轨，再加一个  -map 0:a:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 封装多字幕</span></span><br><span class="line">ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -map 2:0 -c:s mov_text -c:s mov_text output.mp4</span><br></pre></td></tr></table></figure>
 <p><code>map</code> 参数第一个表示 输出文件，0第一个，1第二个，v/a和上面提到的一样，表示视频/音频，最后面的数字表示输入文件里面的第几个视频/音频 轨道。通常一个视频 一个视频轨道一个音频轨道，这个需要自己看 <code>mediainfo</code>。</p>
+<h1 id="删除压制信息"><a href="#删除压制信息" class="headerlink" title="删除压制信息"></a>删除压制信息</h1><p>删除视频文件mediainfo 里面的 <code>Writing library</code> 和 <code>Encoding settings</code>，<br>添加如下参数<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># x265</span></span><br><span class="line">-x265-params no-info=1 </span><br><span class="line"></span><br><span class="line"><span class="comment"># x264 (ffmpeg 4.0+)</span></span><br><span class="line">-bsf:v <span class="string">'filter_units=remove_types=6'</span></span><br></pre></td></tr></table></figure></p>
+<p>参考<a href="https://superuser.com/a/1218771" target="_blank" rel="noopener">文档一</a>，<a href="https://video.stackexchange.com/a/27617" target="_blank" rel="noopener">文档二</a>。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>使用 -ss 0:0:0 -t 1:0:0 后可能会遇到下面的报错，</li>
 </ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Too many packets buffered <span class="keyword">for</span> output stream 0:1.</span><br></pre></td></tr></table></figure>
-<p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/questions/49686244/ffmpeg-too-many-packets-buffered-for-output-stream-01#answer-50262835" target="_blank" rel="noopener">详见这里</a>。</p>
+<p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/questions/49686244/ffmpeg-too-many-packets-buffered-for-output-stream-01#answer-50262835" target="_blank" rel="noopener">详见这里</a>。后面的值 9999 都行。</p>
+<ul>
+<li>隐藏 版本信息编译参数</li>
+</ul>
+<p>添加参数 <code>-hide_banner</code> 即可。</p>
+<ul>
+<li>libx265 2pass 遇到如下错误，卡住不动</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cur_dts is invalid (this is harmless if it occurs once at the start per stream)</span><br><span class="line">在不同机器上，不同版本 ffmpeg 使用相同的压制命令却不会遇到这个问题。</span><br><span class="line">另外，换用 libx264 不会遇到此问题。</span><br></pre></td></tr></table></figure>
+<p>多番查证，可能是原视频某些信息不全所致。<br>最终发现是 使用的 缩放(-s 1280x720 或者 滤镜-vf scale=-2:720) 参数导致的，去掉缩放，2pass 不会遇到此问题。</p>
+<p>最后曲线救国，先将原文件使用 <code>ffmpeg -c copy</code> 相同容器复制一份，使用新生成的文件成功缩放压制。 </p>
 
       
     </div>
@@ -1063,7 +1075,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#裁剪黑边"><span class="nav-number">1.</span> <span class="nav-text">裁剪黑边</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去水印"><span class="nav-number">2.</span> <span class="nav-text">去水印</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#倍速"><span class="nav-number">3.</span> <span class="nav-text">倍速</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视频"><span class="nav-number">3.1.</span> <span class="nav-text">视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音频"><span class="nav-number">3.2.</span> <span class="nav-text">音频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字幕"><span class="nav-number">3.3.</span> <span class="nav-text">字幕</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#音视频提取与合并"><span class="nav-number">4.</span> <span class="nav-text">音视频提取与合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#提取"><span class="nav-number">4.1.</span> <span class="nav-text">提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并"><span class="nav-number">4.2.</span> <span class="nav-text">合并</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#裁剪黑边"><span class="nav-number">1.</span> <span class="nav-text">裁剪黑边</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去水印"><span class="nav-number">2.</span> <span class="nav-text">去水印</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#倍速"><span class="nav-number">3.</span> <span class="nav-text">倍速</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视频"><span class="nav-number">3.1.</span> <span class="nav-text">视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音频"><span class="nav-number">3.2.</span> <span class="nav-text">音频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字幕"><span class="nav-number">3.3.</span> <span class="nav-text">字幕</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#音视频提取与合并"><span class="nav-number">4.</span> <span class="nav-text">音视频提取与合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#提取"><span class="nav-number">4.1.</span> <span class="nav-text">提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并"><span class="nav-number">4.2.</span> <span class="nav-text">合并</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除压制信息"><span class="nav-number">5.</span> <span class="nav-text">删除压制信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">6.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>

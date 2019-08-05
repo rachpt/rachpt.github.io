@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/</loc>
-    <lastmod>2019-07-30</lastmod>
+    <lastmod>2019-08-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/05/07/extra-shell-notes/</loc>
     <lastmod>2019-07-22</lastmod>
@@ -40,19 +40,13 @@
     <loc>https://rachpt.github.io/2019/02/22/Trouble-with-automatic-mouse-copy-function-under-linux/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/12/31/setting-protable-program-on-linux/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/05/test/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/31/the-gateway-of-materials-studio/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/</loc>
+    <loc>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/26/use-expect-to-ssh-and-solve-a-problem/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/04/02/windows-note-02/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/04/01/use-linux-format-not-dos/</loc>
@@ -61,19 +55,52 @@
     <loc>https://rachpt.github.io/2018/03/31/use-outer-variables-in-awk/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/12/02/welfare-for-pt/</loc>
+    <loc>https://rachpt.github.io/2018/03/31/the-gateway-of-materials-studio/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</loc>
+    <loc>https://rachpt.github.io/2018/03/05/test/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/01/27/windows-note-01/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/04/02/windows-note-02/</loc>
+    <loc>https://rachpt.github.io/2018/01/13/ubuntu-update-xz-to-5-2/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/11/firefox-noupgrade/</loc>
+    <loc>https://rachpt.github.io/2017/12/31/setting-protable-program-on-linux/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/12/02/welfare-for-pt/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2019/04/15/notes-for-flexget/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2019/04/10/jupyter-notebook-cannot-work-with-the-same-base-name/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/23/notes-for-shell-scripting-bible/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/11/linux-allow-numlock-on/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
+    <lastmod>2019-04-29</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2018/01/11/install-materials-studio-on-ubuntu/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/30/flexget-for-ut/</loc>
@@ -82,43 +109,16 @@
     <loc>https://rachpt.github.io/2017/11/16/download-youtube-video/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/06/05/install-CAJViewer-on-Linux/</loc>
+    <loc>https://rachpt.github.io/2017/11/14/my-android/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/01/11/install-materials-studio-on-ubuntu/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2019/04/10/jupyter-notebook-cannot-work-with-the-same-base-name/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/11/linux-allow-numlock-on/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/07/24/make-transmission2-94-from-source-code/</loc>
+    <loc>https://rachpt.github.io/2017/11/11/firefox-noupgrade/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/make-pdf-file-clear/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/materials-studio-super/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/07/21/make-qbittorrent-from-source-code/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/14/my-android/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2019/04/15/notes-for-flexget/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/23/notes-for-shell-scripting-bible/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/03/pycharm-please-specify-a-different-SDK-name/</loc>
-    <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/07/25/run-matlab-in-a-terminal/</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/07/25/compile-nginx-1-14/</loc>
@@ -241,25 +241,25 @@
     <loc>https://rachpt.github.io/2017/12/14/notes-for-olex2/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/12/chinas-confidence/</loc>
+    <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/20/my-graduate-stage/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2018/03/03/my-new-blog/</loc>
+    <loc>https://rachpt.github.io/2017/11/17/quantum-mechanics-notes/</loc>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/16/statistical-physics-notes/</loc>
+    <lastmod>2018-03-05</lastmod>
+  </url>  <url>
+    <loc>https://rachpt.github.io/2017/11/12/chinas-confidence/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/note-markdown/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/17/quantum-mechanics-notes/</loc>
-    <lastmod>2018-03-05</lastmod>
-  </url>  <url>
     <loc>https://rachpt.github.io/2017/11/10/so-busy/</loc>
-    <lastmod>2018-03-05</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/11/16/statistical-physics-notes/</loc>
     <lastmod>2018-03-05</lastmod>
   </url>
 </urlset>
