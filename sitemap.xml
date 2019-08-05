@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2019/07/14/digital-image-processing-notes/</loc>
+    
+    <lastmod>2019-08-05T14:31:23.879Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/</loc>
     
     <lastmod>2019-08-05T13:50:32.145Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
     
     <lastmod>2019-07-21T09:44:21.236Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2019/07/14/digital-image-processing-notes/</loc>
-    
-    <lastmod>2019-07-19T00:52:01.975Z</lastmod>
     
   </url>
   
