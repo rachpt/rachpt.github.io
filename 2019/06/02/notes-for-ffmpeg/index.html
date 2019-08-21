@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-25.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-38.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-54.png">
-<meta property="og:updated_time" content="2019-08-21T11:42:04.671Z">
+<meta property="og:updated_time" content="2019-08-21T11:52:18.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-ffmpeg">
 <meta name="twitter:description" content="一些ffmpeg处理视频笔记。">
@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-21 19:42:04" itemprop="dateModified" datetime="2019-08-21T19:42:04+08:00">2019-08-21</time>
+                <time title="修改时间：2019-08-21 19:52:18" itemprop="dateModified" datetime="2019-08-21T19:52:18+08:00">2019-08-21</time>
               </span>
             
           
@@ -590,7 +590,7 @@
 <p><code>map</code> 参数第一个表示 输出文件，0第一个，1第二个，v/a和上面提到的一样，表示视频/音频，最后面的数字表示输入文件里面的第几个视频/音频 轨道。通常一个视频 一个视频轨道一个音频轨道，这个需要自己看 <code>mediainfo</code>。</p>
 <h1 id="删除压制信息"><a href="#删除压制信息" class="headerlink" title="删除压制信息"></a>删除压制信息</h1><p>删除视频文件mediainfo 里面的 <code>Writing library</code> 和 <code>Encoding settings</code>，<br>添加如下参数<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># x265</span></span><br><span class="line">-x265-params no-info=1 </span><br><span class="line"></span><br><span class="line"><span class="comment"># x264 (ffmpeg 4.0+)</span></span><br><span class="line">-bsf:v <span class="string">'filter_units=remove_types=6'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 General 里面的附加信息 </span></span><br><span class="line">-map_metadata -1</span><br></pre></td></tr></table></figure></p>
 <p>参考<a href="https://superuser.com/a/1218771" target="_blank" rel="noopener">文档一</a>，<a href="https://video.stackexchange.com/a/27617" target="_blank" rel="noopener">文档二</a>。</p>
-<h1 id="停止播放"><a href="#停止播放" class="headerlink" title="停止播放"></a>停止播放</h1><p>ffplay 使用 <code>-t 时间</code> 可以只播放一小段，但是并不会到时间和退出播放，而是会处于等待状态。<br>添加 <code>-autoexit</code> 参数即可解决该问题。</p>
+<h1 id="停止播放"><a href="#停止播放" class="headerlink" title="停止播放"></a>停止播放</h1><p>ffplay 使用 <code>-t 时间</code> 可以只播放一小段，但是并不会到时间后退出播放，而是会处于等待状态。<br>添加 <code>-autoexit</code> 参数即可解决该问题。</p>
 <p><a href="https://stackoverflow.com/a/29893414/11817844" target="_blank" rel="noopener">参考链接</a>。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>使用 -ss 0:0:0 -t 1:0:0 后可能会遇到下面的报错，</li>
