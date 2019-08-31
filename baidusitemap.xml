@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
+    <lastmod>2019-08-31</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2019/06/02/notes-for-ffmpeg/</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
@@ -14,9 +17,6 @@
     <lastmod>2019-07-22</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2019/07/21/hexo-pit/</loc>
-    <lastmod>2019-07-21</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
     <lastmod>2019-07-21</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2018/03/05/settings-for-next-theme/</loc>
