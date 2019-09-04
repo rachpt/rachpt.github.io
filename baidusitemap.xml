@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rachpt.github.io/2017/12/18/notes-for-ubuntu/</loc>
+    <lastmod>2019-09-04</lastmod>
+  </url>  <url>
     <loc>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</loc>
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
@@ -150,9 +153,6 @@
   </url>  <url>
     <loc>https://rachpt.github.io/2019/04/19/notes-for-gnuplot/</loc>
     <lastmod>2019-04-28</lastmod>
-  </url>  <url>
-    <loc>https://rachpt.github.io/2017/12/18/notes-for-ubuntu/</loc>
-    <lastmod>2019-04-22</lastmod>
   </url>  <url>
     <loc>https://rachpt.github.io/2019/03/22/notes-about-awstats/</loc>
     <lastmod>2019-03-22</lastmod>
