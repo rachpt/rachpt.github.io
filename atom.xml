@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-08-09T02:44:36.052Z</updated>
+  <updated>2019-09-18T07:45:41.988Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Interview-notes</title>
+    <link href="https://rachpt.github.io/2019/09/18/Interview-notes/"/>
+    <id>https://rachpt.github.io/2019/09/18/Interview-notes/</id>
+    <published>2019-09-18T01:39:33.000Z</published>
+    <updated>2019-09-18T07:45:41.988Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>面试笔记</p></blockquote><a id="more"></a><h1 id="cache-buffer-区别"><a href="#cache-buffer-区别" class="headerlink" title="cache buffer 区别"></a>cache buffer 区别</h1><p>cache 高速缓存区，提高度取命中率，速度较快，一般为RAM静态区域，buffer 缓冲区，将文件一次写入磁盘，减少写文件I/O压力。</p><h1 id="du-与-ls-查看文件大小区别"><a href="#du-与-ls-查看文件大小区别" class="headerlink" title="du 与 ls 查看文件大小区别"></a>du 与 ls 查看文件大小区别</h1><p>du 为 disk usage，显示的是文件占用磁盘的大小，而 ls -l 显示的是文件的实际大小，占用大小大于等于文件大小。</p><p>因为文件系统使用 块 block 作为最小单元管理磁盘，一般为 4K 一个block，所以 1K 大小的文件使用 du 查看占用一个 block，4K。</p><h1 id="load-大小"><a href="#load-大小" class="headerlink" title="load 大小"></a>load 大小</h1><p>load 与系统 CPU 核数有关，单核 CPU load 为 1 就表示满负载，对于多核，load 满负载时为 核心数。</p><p>三个值为 1、5、15分钟内平均负载。</p><p>查看 CPU 核心数<code>grep &#39;model name&#39; /proc/cpuinfo | wc -l</code></p><h1 id="301-与-302-跳转区别"><a href="#301-与-302-跳转区别" class="headerlink" title="301 与 302 跳转区别"></a>301 与 302 跳转区别</h1><p>301 为永久性的跳转，对搜索引擎友好，302 为暂时性的跳转。</p><h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -exec 末尾  + 或者 \;</span></span><br><span class="line"><span class="comment">#  + 后面可以使用 管道</span></span><br><span class="line">find ../Public/ -<span class="built_in">type</span> f -<span class="built_in">exec</span> du -Sh &#123;&#125; +</span><br><span class="line">find ../Public/ -<span class="built_in">type</span> f -<span class="built_in">exec</span> du -Sh &#123;&#125; \;</span><br></pre></td></tr></table></figure><p>列出最大的前10个文件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -<span class="built_in">type</span> f -<span class="built_in">exec</span> du -Sh &#123;&#125; + | sort -rh | head -n 10</span><br></pre></td></tr></table></figure></p><p><a href="https://linux.cn/article-9495-1.html" target="_blank" rel="noopener">参考文档</a>。</p><p><code>-mtime +2</code> 大于2天，<code>-mmin -2</code> 两分钟之内，<code>-size -10M</code> 大小。</p><h1 id="HTTP-版本区别"><a href="#HTTP-版本区别" class="headerlink" title="HTTP 版本区别"></a>HTTP 版本区别</h1><p>HTTP/2采用二进制格式而非文本格式<br>HTTP/2是完全多路复用的，而非有序并阻塞的——只需一个连接即可实现并行<br>使用报头压缩，HTTP/2降低了开销<br>HTTP/2让服务器可以将响应主动“推送”到客户端缓存中</p><p><a href="https://blog.csdn.net/N1314N/article/details/91312173" target="_blank" rel="noopener">参考文档</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;面试笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://rachpt.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>proxy-to-subpath-with-nginx</title>
@@ -457,30 +479,6 @@
     
     
       <category term="console" scheme="https://rachpt.github.io/tags/console/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim-set-working-directory-to-the-current-file</title>
-    <link href="https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/"/>
-    <id>https://rachpt.github.io/2018/08/22/vim-set-working-directory-to-the-current-file/</id>
-    <published>2018-08-22T01:47:54.000Z</published>
-    <updated>2019-04-29T02:37:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>vim自动进入打开文件所在目录,原谅我无耻地 copy。</p></blockquote><a id="more"></a><p>如果装了插件 NERDTree，使用 <code>:NERDTreeFind</code> 可以扩展到打开文件所在目录。不自动有点麻烦。</p><p>百度了一圈，找到的答案是使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;在.vimrc 中加入</span><br><span class="line">execute &quot;cd&quot; expand(&quot;%:h&quot;)</span><br></pre></td></tr></table></figure><p>缺点是如果目录路径中有特殊字符可能报错。比如：<br><img src="https://raw.githubusercontent.com/rachpt/imgs/master/vim-set-working-directory-to-the-current-file-1.jpg" alt="vim-set-working-directory-to-the-current-file-1.jpg"></p><p>使用 Google 查找关键词 <code>vimrc execute cd expand</code>，找到 vim 官方解决办法。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set autochdir</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * silent! lcd %:p:h</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if expand(&quot;%:p:h&quot;) !~ &apos;^/tmp&apos; | silent! lcd %:p:h | endif</span><br></pre></td></tr></table></figure><p>第一种，可能和某些插件有冲突，本人测试刚才有特殊字符的文件正常。<br>后面两个兼容性更好，最后一个加了判断，<code>/tmp</code> 中的文件不切换到改路径去。此法最好。</p><p>参考<a href="https://www.douban.com/note/543140992/" target="_blank" rel="noopener">文档1</a>，<a href="http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file" target="_blank" rel="noopener">文档2-wiki</a>.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;vim自动进入打开文件所在目录,原谅我无耻地 copy。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="vim" scheme="https://rachpt.github.io/tags/vim/"/>
     
   </entry>
   
