@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-25.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-38.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/notes-for-ffmpeg-2019-6-2-18-10-54.png">
-<meta property="og:updated_time" content="2019-08-21T11:52:18.706Z">
+<meta property="og:updated_time" content="2019-09-23T09:46:12.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-ffmpeg">
 <meta name="twitter:description" content="一些ffmpeg处理视频笔记。">
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">89</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">88</span></a>
 
   </li>
         
@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-21 19:52:18" itemprop="dateModified" datetime="2019-08-21T19:52:18+08:00">2019-08-21</time>
+                <time title="修改时间：2019-09-23 17:46:12" itemprop="dateModified" datetime="2019-09-23T17:46:12+08:00">2019-09-23</time>
               </span>
             
           
@@ -585,33 +585,32 @@
 <h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>如上，<code>[0:a]atempo=1.7[a]</code>。</p>
 <h2 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h2><p>使用shell来完成，<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `grep -Eo <span class="string">'([0-9]&#123;2&#125;:)&#123;2&#125;[0-9]&#123;2&#125;,[0-9]&#123;3&#125;'</span> <span class="string">"<span class="variable">$file</span>"</span>` ;<span class="keyword">do</span> </span><br><span class="line">  a=<span class="variable">$&#123;i:0:2&#125;</span>;</span><br><span class="line">  b=<span class="variable">$&#123;i:3:2&#125;</span>;</span><br><span class="line">  c=<span class="variable">$&#123;i:6:2&#125;</span>;</span><br><span class="line">  d=<span class="variable">$&#123;i:9:3&#125;</span>;</span><br><span class="line">  <span class="comment"># 匹配视频 1.7 倍速</span></span><br><span class="line">  total=`<span class="built_in">echo</span> <span class="string">"scale=0;(((<span class="variable">$a</span>*60+<span class="variable">$b</span>)*60+<span class="variable">$c</span>)*1000+<span class="variable">$d</span>)/1.7"</span>|bc`;</span><br><span class="line">  e=$((total % 1000));f=$((total / 1000));</span><br><span class="line">  g=$((f % 60));</span><br><span class="line">  h=$((f / 60));x=$((h % 60));</span><br><span class="line">  y=$((h / 60)) ;</span><br><span class="line">  j=`<span class="built_in">printf</span> <span class="string">"%02d:%02d:%02d,%03d\n"</span> <span class="variable">$y</span> <span class="variable">$x</span> <span class="variable">$g</span> <span class="variable">$e</span>`;</span><br><span class="line">  sed -i <span class="string">"s/<span class="variable">$i</span>/<span class="variable">$j</span>/"</span> <span class="string">"<span class="variable">$file</span>"</span>;</span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后封装在一起参数</span></span><br><span class="line">ffmpeg -i in.mp4 -i sub.srt -c:s mov_text -c:v copy -c:a copy out.mp4</span><br></pre></td></tr></table></figure></p>
 <h1 id="音视频提取与合并"><a href="#音视频提取与合并" class="headerlink" title="音视频提取与合并"></a>音视频提取与合并</h1><h2 id="提取"><a href="#提取" class="headerlink" title="提取"></a>提取</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提取视频</span></span><br><span class="line">ffmpeg -i input.mp4 -c:v copy -an video.mp4</span><br><span class="line"><span class="comment"># 提取音频</span></span><br><span class="line">ffmpeg -i input.mp4 -c:a copy -vn audio.m4a</span><br></pre></td></tr></table></figure>
-<p>其中 <code>v</code> 视频，<code>a</code> 音频。</p>
-<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 视频 音频 (字幕)分别单文件</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -i sub.srt -c:v copy -c:a copy -c:s mov_text output.mp4</span><br><span class="line"><span class="comment"># 视频里面有音轨，需要替换音轨</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 output.mp4</span><br><span class="line"><span class="comment"># 追加音轨，再加一个  -map 0:a:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 封装多字幕</span></span><br><span class="line">ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -map 2:0 -c:s mov_text -c:s mov_text output.mp4</span><br></pre></td></tr></table></figure>
-<p><code>map</code> 参数第一个表示 输出文件，0第一个，1第二个，v/a和上面提到的一样，表示视频/音频，最后面的数字表示输入文件里面的第几个视频/音频 轨道。通常一个视频 一个视频轨道一个音频轨道，这个需要自己看 <code>mediainfo</code>。</p>
-<h1 id="删除压制信息"><a href="#删除压制信息" class="headerlink" title="删除压制信息"></a>删除压制信息</h1><p>删除视频文件mediainfo 里面的 <code>Writing library</code> 和 <code>Encoding settings</code>，<br>添加如下参数<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># x265</span></span><br><span class="line">-x265-params no-info=1 </span><br><span class="line"></span><br><span class="line"><span class="comment"># x264 (ffmpeg 4.0+)</span></span><br><span class="line">-bsf:v <span class="string">'filter_units=remove_types=6'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 General 里面的附加信息 </span></span><br><span class="line">-map_metadata -1</span><br></pre></td></tr></table></figure></p>
+<p>其中 v 视频，a 音频。</p>
+<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 视频 音频 (字幕)分别单文件</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -i sub.srt -c:v copy -c:a copy -c:s mov_text output.mp4</span><br><span class="line"><span class="comment"># 视频里面有音轨，需要替换音轨</span></span><br><span class="line">ffmpeg -i input.mp4 -i audio.m4a -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 output.mp4</span><br><span class="line"><span class="comment"># 追加音轨，再加一个  -map 0:a:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 封装多字幕</span></span><br><span class="line">ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -map 2:0 \</span><br><span class="line">-c:s mov_text -c:s mov_text output.mp4</span><br></pre></td></tr></table></figure>
+<p><code>map</code> 参数第一个表示 输出文件，0 第一个，1 第二个，v/a 和上面提到的一样，表示视频 / 音频，最后面的数字表示输入文件里面的第几个视频 / 音频 轨道。通常一个视频 一个视频轨道一个音频轨道，这个需要自己看 <code>mediainfo</code>。</p>
+<h1 id="删除压制信息"><a href="#删除压制信息" class="headerlink" title="删除压制信息"></a>删除压制信息</h1><p>删除视频文件 mediainfo 里面的 Writing library 和 Encoding settings，<br>添加如下参数<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># x265</span></span><br><span class="line">-x265-params no-info=1</span><br><span class="line"></span><br><span class="line"><span class="comment"># x264 (ffmpeg 4.0+)</span></span><br><span class="line">-bsf:v <span class="string">'filter_units=remove_types=6'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 General 里面的附加信息</span></span><br><span class="line">-map_metadata -1</span><br></pre></td></tr></table></figure></p>
 <p>参考<a href="https://superuser.com/a/1218771" target="_blank" rel="noopener">文档一</a>，<a href="https://video.stackexchange.com/a/27617" target="_blank" rel="noopener">文档二</a>。</p>
 <h1 id="停止播放"><a href="#停止播放" class="headerlink" title="停止播放"></a>停止播放</h1><p>ffplay 使用 <code>-t 时间</code> 可以只播放一小段，但是并不会到时间后退出播放，而是会处于等待状态。<br>添加 <code>-autoexit</code> 参数即可解决该问题。</p>
-<p><a href="https://stackoverflow.com/a/29893414/11817844" target="_blank" rel="noopener">参考链接</a>。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>使用 -ss 0:0:0 -t 1:0:0 后可能会遇到下面的报错，</li>
 </ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Too many packets buffered <span class="keyword">for</span> output stream 0:1.</span><br></pre></td></tr></table></figure>
-<p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/questions/49686244/ffmpeg-too-many-packets-buffered-for-output-stream-01#answer-50262835" target="_blank" rel="noopener">详见这里</a>。后面的值 9999 都行。</p>
+<p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/q/49686244/11817844" target="_blank" rel="noopener">详见这里</a>。</p>
 <ul>
 <li>隐藏 版本信息编译参数</li>
 </ul>
-<p>添加参数 <code>-hide_banner</code> 即可。</p>
+<p>添加参数 -hide_banner 即可。</p>
 <ul>
-<li>libx265 2pass 遇到如下错误，卡住不动</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cur_dts is invalid (this is harmless if it occurs once at the start per stream)</span><br><span class="line">在不同机器上，不同版本 ffmpeg 使用相同的压制命令却不会遇到这个问题。</span><br><span class="line">另外，换用 libx264 不会遇到此问题。</span><br></pre></td></tr></table></figure>
-<p>多番查证，可能是原视频某些信息不全所致。<br>最终发现是 使用的 缩放(-s 1280x720 或者 滤镜-vf scale=-2:720) 参数导致的，去掉缩放，2pass 不会遇到此问题。</p>
-<p>最后曲线救国，先将原文件使用 <code>ffmpeg -c copy</code> 相同容器复制一份，使用新生成的文件成功缩放压制。 </p>
-<ul>
-<li>缩放警告<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[swscaler @ 0x558c475f32c0] Warning: data is not aligned! This can lead to a speed loss</span><br></pre></td></tr></table></figure>
+<li>libx265 2pass 遇到如下错误，卡住不动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cur_dts is invalid (this is harmless if it occurs once at the start per stream)</span><br><span class="line">在不同机器上，不同版本 ffmpeg 使用相同的压制命令却不会遇到这个问题。</span><br><span class="line">另外，换用 libx264 不会遇到此问题。</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>修改 宽度 为 <code>16</code> 的倍数。<a href="https://blog.csdn.net/panda1234lee/article/details/53334254" target="_blank" rel="noopener">参考文档</a>。</p>
+<p>多番查证，可能是原视频某些信息不全所致。<br>最终发现是 使用的 缩放 (-s 1280x720 或者 滤镜 - vf scale=-2:720) 参数导致的，去掉缩放，2pass 不会遇到此问题。</p>
+<p>最后曲线救国，先将原文件使用 ffmpeg -c copy 相同容器复制一份，使用新生成的文件成功缩放压制。 </p>
+<ul>
+<li>缩放警告 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[swscaler @ 0x558c475f32c0] Warning: data is not aligned! This can lead to a speed loss</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>修改 宽度 为 16 的倍数。<a href="https://blog.csdn.net/panda1234lee/article/details/53334254" target="_blank" rel="noopener">参考文档</a>。</p>
 
       
     </div>
@@ -803,7 +802,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -864,6 +863,8 @@
           
         
         
+        
+          
         
           
         
@@ -1126,7 +1127,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">171k</span>
+    <span title="站点总字数">170k</span>
   
 
   

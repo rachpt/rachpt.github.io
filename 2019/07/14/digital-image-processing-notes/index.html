@@ -126,7 +126,7 @@
 <meta property="og:description" content="数字图像处理笔记。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/digital-image-processing-notes-2019-7-17-16-51-26.png">
-<meta property="og:updated_time" content="2019-08-05T14:31:23.879Z">
+<meta property="og:updated_time" content="2019-09-23T03:40:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="digital-image-processing-notes">
 <meta name="twitter:description" content="数字图像处理笔记。">
@@ -281,7 +281,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">89</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">88</span></a>
 
   </li>
         
@@ -461,7 +461,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-05 22:31:23" itemprop="dateModified" datetime="2019-08-05T22:31:23+08:00">2019-08-05</time>
+                <time title="修改时间：2019-09-23 11:40:20" itemprop="dateModified" datetime="2019-09-23T11:40:20+08:00">2019-09-23</time>
               </span>
             
           
@@ -572,33 +572,33 @@ v(x, y) = \sum_{i=0}^3 \sum_{j=0}^3 a_{ij} x^i y^j</script></li>
 <tbody>
 <tr>
 <td style="text-align:center">恒等变换</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=v \\ y=w</script></td>
+<td style="text-align:center">$\begin{bmatrix} 1 &amp; 0 &amp; 0 \ 0 &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=v \ y=w$</td>
 </tr>
 <tr>
 <td style="text-align:center">缩放</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} c_x & 0 & 0 \\ 0 & c_y & 0 \\ 0 & 0 & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=c_xv \\ y=c_yw</script></td>
+<td style="text-align:center">$\begin{bmatrix} c_x &amp; 0 &amp; 0 \ 0 &amp; c_y &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=c_xv \ y=c_yw$</td>
 </tr>
 <tr>
 <td style="text-align:center">旋转</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} \cos\theta & \sin\theta & 0 \\ -\sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=v\cos\theta - w\sin\theta \\ y=v\sin\theta+w\cos\theta</script></td>
+<td style="text-align:center">$\begin{bmatrix} \cos\theta &amp; \sin\theta &amp; 0 \ -\sin\theta &amp; \cos\theta &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=v\cos\theta - w\sin\theta \ y=v\sin\theta+w\cos\theta$</td>
 </tr>
 <tr>
 <td style="text-align:center">平移</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ t_x & t_y & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=v+t_x \\ y=w+t_y</script></td>
+<td style="text-align:center">$\begin{bmatrix} 1 &amp; 0 &amp; 0 \ 0 &amp; 1 &amp; 0 \ t_x &amp; t_y &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=v+t_x \ y=w+t_y$</td>
 </tr>
 <tr>
 <td style="text-align:center">偏移(垂直)</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} 1 & 0 & 0 \\ s_v & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=v+s_vw \\ y=w</script></td>
+<td style="text-align:center">$\begin{bmatrix} 1 &amp; 0 &amp; 0 \ s_v &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=v+s_vw \ y=w$</td>
 </tr>
 <tr>
 <td style="text-align:center">偏移(水平)</td>
-<td style="text-align:center"><script type="math/tex">\begin{bmatrix} 1 & s_v & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}</script></td>
-<td style="text-align:center"><script type="math/tex">x=v \\ y=w+s_vv</script></td>
+<td style="text-align:center">$\begin{bmatrix} 1 &amp; s_v &amp; 0 \ 0 &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}$</td>
+<td style="text-align:center">$x=v \ y=w+s_vv$</td>
 </tr>
 </tbody>
 </table>
@@ -781,7 +781,7 @@ v(x, y) = \sum_{i=0}^3 \sum_{j=0}^3 a_{ij} x^i y^j</script></li>
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -842,6 +842,8 @@ v(x, y) = \sum_{i=0}^3 \sum_{j=0}^3 a_{ij} x^i y^j</script></li>
           
         
         
+        
+          
         
           
         
@@ -1104,7 +1106,7 @@ v(x, y) = \sum_{i=0}^3 \sum_{j=0}^3 a_{ij} x^i y^j</script></li>
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">171k</span>
+    <span title="站点总字数">170k</span>
   
 
   
