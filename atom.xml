@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-10-05T14:08:48.420Z</updated>
+  <updated>2019-10-05T14:56:42.782Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.github.io/2019/10/05/eclipse-notes/"/>
     <id>https://rachpt.github.io/2019/10/05/eclipse-notes/</id>
     <published>2019-10-05T13:46:37.000Z</published>
-    <updated>2019-10-05T14:08:48.420Z</updated>
+    <updated>2019-10-05T14:56:42.782Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>eclipse 使用笔记。</p></blockquote><a id="more"></a><h1 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h1><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>安装 CDT 以支持 C/C++：<br>  <code>Help --&gt; Eclipse Marketplace</code>，搜索 CDT，<code>Eclipse C/C++ IDE CDT x.x(xxxx-xx)</code> Install 即可。</p><h2 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h2><p>  普通可以在 marketplace 里面的 Installed 里面卸载。<br>  中文语言包卸载方法：<code>Help --&gt; About Eclipse IDE --&gt; Installation Details</code>，选中相关的插件 Uninstall 即可。</p><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li><code>Alt + /</code> 智能补全，</li><li><code>Ctrl + /</code> 行 注释与取消注释，</li><li><code>Ctrl + Shift + /</code> 块注释选中内容，</li><li><code>Ctrl + Shift + \</code> 取消块注释选中内容，</li><li><code>Ctrl + Shift + F</code> 自动整理代码，</li><li><code>Ctrl + Shift + O</code> 自动导入包，</li><li><code>Alt + 上</code> 当前行上移，</li><li><code>Alt + 下</code> 当前行下移，</li><li><code>Ctrl + Alt + 上</code> 当前行向上复制一行，</li><li><code>Ctrl + Alt + 下</code> 当前行向下复制一行，</li><li><code>Ctrl + D</code> 删除当前行，</li><li><code>Shift + Enter</code> 光标行下面新建一行，并将光标移到那一行，</li><li><code>Ctrl + M</code> 编辑区最大化显示，</li><li><code>Ctrl + Shift + L</code> 显示快捷键列表。</li></ul><p>缩放编辑区字体：</p><p>Ctrl + 鼠标滚轮无效，使用通用的 <code>Ctrl + -</code> 缩小，<code>Ctrl + =</code> 放大。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>eclipse 使用笔记。</p></blockquote><a id="more"></a><h1 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h1><p><a href="https://www.iqiyi.com/v_19rrdgzjfc.html" target="_blank" rel="noopener">参考教学视频1</a>。</p><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>安装 CDT 以支持 C/C++：<br>  <code>Help --&gt; Eclipse Marketplace</code>，搜索 CDT，<code>Eclipse C/C++ IDE CDT x.x(xxxx-xx)</code> Install 即可。</p><h2 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h2><p>  普通可以在 marketplace 里面的 Installed 里面卸载。<br>  中文语言包卸载方法：<code>Help --&gt; About Eclipse IDE --&gt; Installation Details</code>，选中相关的插件 Uninstall 即可。</p><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li><code>Alt + /</code> 智能补全，</li><li><code>Ctrl + /</code> 行 注释与取消注释，</li><li><code>Ctrl + Shift + /</code> 块注释选中内容，</li><li><code>Ctrl + Shift + \</code> 取消块注释选中内容，</li><li><code>Ctrl + Shift + F</code> 自动整理代码，</li><li><code>Ctrl + Shift + O</code> 自动导入包，</li><li><code>Alt + 上</code> 当前行上移，</li><li><code>Alt + 下</code> 当前行下移，</li><li><code>Ctrl + Alt + 上</code> 当前行向上复制一行，</li><li><code>Ctrl + Alt + 下</code> 当前行向下复制一行，</li><li><code>Ctrl + D</code> 删除当前行，</li><li><code>Shift + Enter</code> 光标行下面新建一行，并将光标移到那一行，</li><li><code>Ctrl + M</code> 编辑区最大化显示，</li><li><code>Ctrl + Shift + L</code> 显示快捷键列表。</li></ul><p><a href="https://www.iqiyi.com/v_19rrdgznbk.html" target="_blank" rel="noopener">参考教学视频2</a>。</p><p>缩放编辑区字体：</p><p>Ctrl + 鼠标滚轮无效，使用通用的 <code>Ctrl + -</code> 缩小，<code>Ctrl + =</code> 放大。</p>]]></content>
     
     <summary type="html">
     

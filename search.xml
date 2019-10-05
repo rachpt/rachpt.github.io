@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[eclipse-notes]]></title>
     <url>%2F2019%2F10%2F05%2Feclipse-notes%2F</url>
-    <content type="text"><![CDATA[eclipse 使用笔记。 安装配置模块安装 CDT 以支持 C/C++： Help --&gt; Eclipse Marketplace，搜索 CDT，Eclipse C/C++ IDE CDT x.x(xxxx-xx) Install 即可。 卸载模块 普通可以在 marketplace 里面的 Installed 里面卸载。 中文语言包卸载方法：Help --&gt; About Eclipse IDE --&gt; Installation Details，选中相关的插件 Uninstall 即可。 快捷键 Alt + / 智能补全， Ctrl + / 行 注释与取消注释， Ctrl + Shift + / 块注释选中内容， Ctrl + Shift + \ 取消块注释选中内容， Ctrl + Shift + F 自动整理代码， Ctrl + Shift + O 自动导入包， Alt + 上 当前行上移， Alt + 下 当前行下移， Ctrl + Alt + 上 当前行向上复制一行， Ctrl + Alt + 下 当前行向下复制一行， Ctrl + D 删除当前行， Shift + Enter 光标行下面新建一行，并将光标移到那一行， Ctrl + M 编辑区最大化显示， Ctrl + Shift + L 显示快捷键列表。 缩放编辑区字体： Ctrl + 鼠标滚轮无效，使用通用的 Ctrl + - 缩小，Ctrl + = 放大。]]></content>
+    <content type="text"><![CDATA[eclipse 使用笔记。 安装配置参考教学视频1。 模块安装 CDT 以支持 C/C++： Help --&gt; Eclipse Marketplace，搜索 CDT，Eclipse C/C++ IDE CDT x.x(xxxx-xx) Install 即可。 卸载模块 普通可以在 marketplace 里面的 Installed 里面卸载。 中文语言包卸载方法：Help --&gt; About Eclipse IDE --&gt; Installation Details，选中相关的插件 Uninstall 即可。 快捷键 Alt + / 智能补全， Ctrl + / 行 注释与取消注释， Ctrl + Shift + / 块注释选中内容， Ctrl + Shift + \ 取消块注释选中内容， Ctrl + Shift + F 自动整理代码， Ctrl + Shift + O 自动导入包， Alt + 上 当前行上移， Alt + 下 当前行下移， Ctrl + Alt + 上 当前行向上复制一行， Ctrl + Alt + 下 当前行向下复制一行， Ctrl + D 删除当前行， Shift + Enter 光标行下面新建一行，并将光标移到那一行， Ctrl + M 编辑区最大化显示， Ctrl + Shift + L 显示快捷键列表。 参考教学视频2。 缩放编辑区字体： Ctrl + 鼠标滚轮无效，使用通用的 Ctrl + - 缩小，Ctrl + = 放大。]]></content>
       <tags>
         <tag>eclipse</tag>
       </tags>
