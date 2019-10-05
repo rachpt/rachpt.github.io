@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-09-23T03:39:47.000Z</updated>
+  <updated>2019-10-05T14:08:48.420Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>eclipse-notes</title>
+    <link href="https://rachpt.github.io/2019/10/05/eclipse-notes/"/>
+    <id>https://rachpt.github.io/2019/10/05/eclipse-notes/</id>
+    <published>2019-10-05T13:46:37.000Z</published>
+    <updated>2019-10-05T14:08:48.420Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>eclipse 使用笔记。</p></blockquote><a id="more"></a><h1 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h1><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>安装 CDT 以支持 C/C++：<br>  <code>Help --&gt; Eclipse Marketplace</code>，搜索 CDT，<code>Eclipse C/C++ IDE CDT x.x(xxxx-xx)</code> Install 即可。</p><h2 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h2><p>  普通可以在 marketplace 里面的 Installed 里面卸载。<br>  中文语言包卸载方法：<code>Help --&gt; About Eclipse IDE --&gt; Installation Details</code>，选中相关的插件 Uninstall 即可。</p><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li><code>Alt + /</code> 智能补全，</li><li><code>Ctrl + /</code> 行 注释与取消注释，</li><li><code>Ctrl + Shift + /</code> 块注释选中内容，</li><li><code>Ctrl + Shift + \</code> 取消块注释选中内容，</li><li><code>Ctrl + Shift + F</code> 自动整理代码，</li><li><code>Ctrl + Shift + O</code> 自动导入包，</li><li><code>Alt + 上</code> 当前行上移，</li><li><code>Alt + 下</code> 当前行下移，</li><li><code>Ctrl + Alt + 上</code> 当前行向上复制一行，</li><li><code>Ctrl + Alt + 下</code> 当前行向下复制一行，</li><li><code>Ctrl + D</code> 删除当前行，</li><li><code>Shift + Enter</code> 光标行下面新建一行，并将光标移到那一行，</li><li><code>Ctrl + M</code> 编辑区最大化显示，</li><li><code>Ctrl + Shift + L</code> 显示快捷键列表。</li></ul><p>缩放编辑区字体：</p><p>Ctrl + 鼠标滚轮无效，使用通用的 <code>Ctrl + -</code> 缩小，<code>Ctrl + =</code> 放大。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;eclipse 使用笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="eclipse" scheme="https://rachpt.github.io/tags/eclipse/"/>
+    
+  </entry>
   
   <entry>
     <title>Interview-notes</title>
@@ -455,30 +477,6 @@
     
     
       <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>change-the-resolution-of-the-console</title>
-    <link href="https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/"/>
-    <id>https://rachpt.github.io/2018/09/20/change-the-resolution-of-the-console/</id>
-    <published>2018-09-20T12:52:51.000Z</published>
-    <updated>2019-09-23T03:40:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>周末花了一个下午搞定了 Linux 字符界面分辨率与中文环境。</p></blockquote><a id="more"></a><h1 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h1><p>一般有图形界面的 Linux 发行版通过 <code>Ctrl + Alt + F[1-6]</code> 进入(切换)到字符界面(控制台 字符哑终端) console.<code>C + A + F7</code> 返回 x-window。</p><p>临时切换至字符界面能过在不影响后台计算进程的前提下处理轻量文本任务、查看系统状态等操作。</p><p>但是有两个问题，一是分辨率，二是中文支持。</p><h1 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h1><p>由于之前图方便，直接使用的 VGA 接口，字符界面分辨率特别难受，后来查看才得知 1080p 的显示器一直使用的 800x600 分辨率模式，各种模糊、显示不清，甚至让我怀疑 linux 版本的问题。Google 百度来来回回一个下午找到一些修改 vga 模式下分辨率的方法。</p><p>对于 ubuntu / Linux mint，修改 grub 配置文件 <code>/etc/default/grub</code>。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加</span></span><br><span class="line">GRUB_GFXMODE=1600x1200x32</span><br><span class="line">GRUB_GFXPAYLOAD_LINUX=keep</span><br></pre></td></tr></table></figure><p>之前一直坑在这里面，就是自以为 分辨率以及 色深自己根据显示器随便写就是。<br>后面才发现需要在开机选择引导时，按 <code>c</code> 进入 grub 界面，使用 <code>vbeinfo</code> 查看系统支持的分辨率和色深。</p><p>写非法的分辨率以及色深会导致 console 进不去。</p><p>鉴于 vga 模式下的分辨率没有和显示器匹配的。于是不得不改用 DVI接口，渣渣显卡没有 HDMI 接口，否则就不存在这些问题。</p><p>dvi 可以粗略理解为 HDMI 接口的缩水版，dvi 和 HDMI 接口都是数字信号传输的，直接匹配显示器分辨率。</p><p><strong>所以最终的解决办法是 使用 DVI/HDMI 接口代替 VGA 接口</strong></p><h1 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h1><ol><li><p>使用英文作为系统语言，添加中文支持，这样欢迎等信息都是英文。</p></li><li><p>安装 <code>sudo apt install zhcon</code></p></li></ol><p>使用 <code>zhcon --utf8</code> 进入中文环境。</p><h1 id="鼠标"><a href="#鼠标" class="headerlink" title="鼠标"></a>鼠标</h1><p>使用 <code>GPM</code> 实现.<br>安装:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gpm</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> gpm.service</span><br><span class="line"></span><br><span class="line">sudo systemctl start gpm.service</span><br><span class="line"></span><br><span class="line">sudo systemctl status gpm.service</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;周末花了一个下午搞定了 Linux 字符界面分辨率与中文环境。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="console" scheme="https://rachpt.github.io/tags/console/"/>
     
   </entry>
   
