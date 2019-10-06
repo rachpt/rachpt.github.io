@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/2018/05/07/extra-shell-notes/</loc>
+    
+    <lastmod>2019-10-06T16:14:20.640Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/10/05/eclipse-notes/</loc>
     
-    <lastmod>2019-10-05T14:56:42.782Z</lastmod>
+    <lastmod>2019-10-06T15:31:58.280Z</lastmod>
     
   </url>
   
@@ -453,13 +460,6 @@
     <loc>https://rachpt.github.io/2017/12/09/firefox-in-ubuntu/</loc>
     
     <lastmod>2019-09-23T03:40:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/05/07/extra-shell-notes/</loc>
-    
-    <lastmod>2019-09-23T03:40:29.000Z</lastmod>
     
   </url>
   
