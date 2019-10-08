@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rachpt.github.io/notes/index.html</loc>
+    
+    <lastmod>2019-10-08T06:30:47.579Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2019/10/05/eclipse-notes/</loc>
     
     <lastmod>2019-10-07T07:08:05.562Z</lastmod>
@@ -621,13 +628,6 @@
     <loc>https://rachpt.github.io/2018/03/29/a-bash-script-for-pt-signin/</loc>
     
     <lastmod>2019-09-23T03:39:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/notes/index.html</loc>
-    
-    <lastmod>2019-06-22T07:18:33.516Z</lastmod>
     
   </url>
   
