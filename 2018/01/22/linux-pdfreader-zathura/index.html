@@ -119,9 +119,9 @@
 
 
   <meta name="description" content="记录 zathura 的常用设置与技巧，vim党的最爱。">
-<meta name="keywords" content="PDF">
+<meta name="keywords" content="pdf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux下的PDF阅读软件zathura">
+<meta property="og:title" content="Linux下的PDF阅读软件Zathura">
 <meta property="og:url" content="https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/index.html">
 <meta property="og:site_name" content="rachpt&#39;s Blog">
 <meta property="og:description" content="记录 zathura 的常用设置与技巧，vim党的最爱。">
@@ -130,9 +130,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-2.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-3.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-4.jpg">
-<meta property="og:updated_time" content="2019-09-23T03:40:48.000Z">
+<meta property="og:updated_time" content="2019-10-13T08:42:06.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux下的PDF阅读软件zathura">
+<meta name="twitter:title" content="Linux下的PDF阅读软件Zathura">
 <meta name="twitter:description" content="记录 zathura 的常用设置与技巧，vim党的最爱。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-1.jpg">
 
@@ -155,7 +155,7 @@
 </script>
 
   
-  <title>Linux下的PDF阅读软件zathura | rachpt's Blog</title>
+  <title>Linux下的PDF阅读软件Zathura | rachpt's Blog</title>
   
 
 
@@ -424,7 +424,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Linux下的PDF阅读软件zathura
+          <h2 class="post-title" itemprop="name headline">Linux下的PDF阅读软件Zathura
 
               
             
@@ -465,7 +465,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-23 11:40:48" itemprop="dateModified" datetime="2019-09-23T11:40:48+08:00">2019-09-23</time>
+                <time title="修改时间：2019-10-13 16:42:06" itemprop="dateModified" datetime="2019-10-13T16:42:06+08:00">2019-10-13</time>
               </span>
             
           
@@ -564,21 +564,13 @@
 </blockquote>
 <a id="more"></a>
 <p>关于安装：<br>  archlinux 请看 <a href="https://wiki.archlinux.org/index.php/Zathura" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Zathura</a> ;<br>  ubuntu 系 <code>sudo apt install zathura</code>；或则源码编译安装 <a href="https://github.com/pwmt/zathura" target="_blank" rel="noopener">https://github.com/pwmt/zathura</a> 。</p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>~/.config/zathura/zathurarc</code> 用户配置文件与路径；</p>
-<p><code>/etc/zathurarc</code> 全局配置文件与路径；</p>
-<p>使用 <code>vim ~/.config/zathura/zathurarc</code> 添加下面的配置命令，#号以及后面为注释。</p>
-<pre><code>set adjust-open &quot;width&quot;   #以宽度自适应打开
-set font &quot;Noto Sans CJK SC Regular 10&quot;   #字体与字号
-set guioptions &quot;&quot;   #GUI相关，留空可隐藏底部statusbar
-set window-title-basename true   #只显示文件名，否则显示完整路径
-set incremental-search true   #增强搜索，实时搜索
-set show-v-scrollbar true   #显示右侧进度条
-set selection-clipboard clipboard   #粘贴版
-set window-height 760   #默认高度，像素
-set window-width 1300   #默认宽度
-
-# 更多可以参考：https://github.com/lervag/dotfiles/blob/master/zathura/.config/zathura/zathurarc
-</code></pre><h1 id="默认打开方式的路径"><a href="#默认打开方式的路径" class="headerlink" title="默认打开方式的路径"></a>默认打开方式的路径</h1><pre><code># linux mint 18.3 设置默认打开方式，
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>若配置文件不存在则需要自己手动创建。</p>
+<p>用户配置文件路径 <code>~/.config/zathura/zathurarc</code>；</p>
+<p>全局配置文件路径 <code>/etc/zathurarc</code>；</p>
+<p>常用配置<br>使用 <code>vim ~/.config/zathura/zathurarc</code> 添加下面的配置命令，#号以及后面为注释。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以宽度自适应打开</span></span><br><span class="line"><span class="built_in">set</span> adjust-open <span class="string">"width"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字体与字号</span></span><br><span class="line"><span class="built_in">set</span> font <span class="string">"Noto Sans CJK SC Regular 10"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#GUI相关，留空可隐藏底部statusbar</span></span><br><span class="line"><span class="built_in">set</span> guioptions <span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#只显示文件名，否则显示完整路径</span></span><br><span class="line"><span class="built_in">set</span> window-title-basename <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#增强搜索，实时搜索</span></span><br><span class="line"><span class="built_in">set</span> incremental-search <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#显示右侧进度条</span></span><br><span class="line"><span class="built_in">set</span> show-v-scrollbar <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#粘贴版</span></span><br><span class="line"><span class="built_in">set</span> selection-clipboard clipboard</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认高度，像素</span></span><br><span class="line"><span class="built_in">set</span> window-height 760</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认宽度</span></span><br><span class="line"><span class="built_in">set</span> window-width 1300</span><br></pre></td></tr></table></figure>
+<p>更多可以参考：<a href="https://github.com/lervag/dotfiles/blob/master/zathura/.config/zathura/zathurarc" target="_blank" rel="noopener">https://github.com/lervag/dotfiles/blob/master/zathura/.config/zathura/zathurarc</a></p>
+<h1 id="默认打开方式的路径"><a href="#默认打开方式的路径" class="headerlink" title="默认打开方式的路径"></a>默认打开方式的路径</h1><pre><code># linux mint 18.3 设置默认打开方式，
 # 如果右键无效可使用下面方法
 
 /etc/gnome/defaults.list  #保存全局打开方式路径
@@ -604,7 +596,7 @@ space 下滚半页
 ^b    Scroll page up 上一屏
 ^d    Scroll half a page down 下半屏
 ^u    Scroll half a page up 上半屏
-数字 + G     跳转页码
+数字 + G     跳转对应页码
 gg    最前
 GG    最后
 </code></pre><h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><pre><code>:bmark xxx    创建书签xxx （长书签）
@@ -614,13 +606,11 @@ GG    最后
 
 # 下面命令和 vim 类似
 :q            退出
-`/word`v      搜索word，使用 `n / N` 跳到下一个(上一个)结果，
-？            搜索 向前（向后）
-
-短命令书签 使用 `a letter or number` ，先按 m 键，然后按短书签名，创建；
-
-跳转先前的短书签，先按 `&#39;` 键，然后先前的字母或数字；
-</code></pre><h1 id="关于复制问题"><a href="#关于复制问题" class="headerlink" title="关于复制问题"></a>关于复制问题</h1><blockquote>
+/word         搜索word，使用 n / N 跳到下一个(上一个)结果，
+?word         搜索 向前（向后）
+</code></pre><p>短命令书签 使用 <code>a letter or number</code> ，先按 m 键，然后按短书签名，创建；</p>
+<p>跳转先前的短书签，先按 <code>&#39;</code> 键，然后先前的字母或数字；</p>
+<h1 id="关于复制问题"><a href="#关于复制问题" class="headerlink" title="关于复制问题"></a>关于复制问题</h1><blockquote>
 <p>I discovered that zathura is using the x11 primary selection as default instead of the actual clipboard. This can be changed by creating a <code>~/.config/zathura/zathurarc</code> file with the following content:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set selection-clipboard clipboard</span><br></pre></td></tr></table></figure>
@@ -632,7 +622,7 @@ GG    最后
 <p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-2.jpg" alt="linux-pdfreader-zathura-2.jpg"></p>
 <p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-3.jpg" alt="linux-pdfreader-zathura-3.jpg"></p>
 <p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/linux-pdfreader-zathura-4.jpg" alt="linux-pdfreader-zathura-4.jpg"></p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>如果需要对 pdf 进行标记，KDE 推荐 Okular，其他桌面环境推荐<a href="https://www.foxitsoftware.cn/downloads/" target="_blank" rel="noopener">福昕阅读器</a>。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>如果需要对 pdf 进行标注，KDE桌面 推荐 Okular，其他桌面环境推荐 <a href="https://www.foxitsoftware.cn/downloads/" target="_blank" rel="noopener">福昕阅读器</a>。</p>
 
       
     </div>
@@ -642,6 +632,13 @@ GG    最后
 
   <div class="popular-posts-header">相关文章</div>
   <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/10/make-pdf-file-clear/" rel="bookmark">照片PDF优化成矢量版</a></div>
+      
+    </li>
   
     <li class="popular-posts-item">
       
@@ -687,7 +684,7 @@ GG    最后
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/" title="Linux下的PDF阅读软件zathura">https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</a>
+    <a href="https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/" title="Linux下的PDF阅读软件Zathura">https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -703,7 +700,7 @@ GG    最后
         
         <div class="post-tags">
           
-            <a href="/tags/PDF/" rel="tag"><i class="fa fa-tag"></i> PDF</a>
+            <a href="/tags/pdf/" rel="tag"><i class="fa fa-tag"></i> pdf</a>
           
         </div>
       
@@ -840,6 +837,8 @@ GG    最后
           
         
         
+        
+          
         
           
         
@@ -1012,7 +1011,7 @@ GG    最后
         
           
         
-        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-count">62</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
