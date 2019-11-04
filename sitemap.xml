@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rachpt.github.io/2018/05/07/extra-shell-notes/</loc>
-    
-    <lastmod>2019-11-04T06:47:28.337Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
-    
-    <lastmod>2019-11-04T06:47:28.337Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://rachpt.github.io/notes/index.html</loc>
     
     <lastmod>2019-11-04T06:47:28.337Z</lastmod>
@@ -23,16 +9,37 @@
   </url>
   
   <url>
+    <loc>https://rachpt.github.io/2019/10/05/eclipse-notes/</loc>
+    
+    <lastmod>2019-10-17T02:48:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rachpt.github.io/2017/11/28/add-items-to-jdcart/</loc>
     
-    <lastmod>2019-11-04T06:47:28.331Z</lastmod>
+    <lastmod>2019-10-13T08:45:42.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://rachpt.github.io/2017/11/10/acrobat-2pages-display/</loc>
     
-    <lastmod>2019-11-04T06:47:28.331Z</lastmod>
+    <lastmod>2019-10-13T08:42:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/01/22/linux-pdfreader-zathura/</loc>
+    
+    <lastmod>2019-10-13T08:42:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rachpt.github.io/2018/05/07/extra-shell-notes/</loc>
+    
+    <lastmod>2019-10-06T16:14:20.000Z</lastmod>
     
   </url>
   
