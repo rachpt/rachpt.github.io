@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-10-17T02:48:06.000Z</updated>
+  <updated>2019-11-09T15:26:21.003Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solve-composting-broken</title>
+    <link href="https://rachpt.github.io/2019/11/09/solve-composting-broken/"/>
+    <id>https://rachpt.github.io/2019/11/09/solve-composting-broken/</id>
+    <published>2019-11-09T15:12:11.000Z</published>
+    <updated>2019-11-09T15:26:21.003Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。</p></blockquote><a id="more"></a><h1 id="问题表现"><a href="#问题表现" class="headerlink" title="问题表现"></a>问题表现</h1><p>以前正常的透明特效丢失，设置里面的 显示与监控 混成器 无法打开。</p><p>尝试更新显卡驱动无法解决该问题。</p><h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p>必须要英语搜索啊。使用关键词 <code>KDE composting not work</code> 就找到解决办法。</p><p>解决办法<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改 ~/.config/kwinrc 的 OpenGLIsUnsafe 值为 false</span></span><br><span class="line">grep <span class="string">"OpenGLIsUnsafe"</span> ~/.config/kwinrc</span><br><span class="line"></span><br><span class="line">sed <span class="string">'/OpenGLIsUnsafe/&#123;s/true/false/&#125;'</span> ~/.config/kwinrc</span><br></pre></td></tr></table></figure></p><p>参考 <a href="https://bbs.archlinux.org/viewtopic.php?pid=1721227#p1721227" target="_blank" rel="noopener">文档一</a>，<a href="https://bbs.archlinux.org/viewtopic.php?pid=1723539#p1723539" target="_blank" rel="noopener">文档二</a> 。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+    
+    
+      <category term="kde" scheme="https://rachpt.github.io/tags/kde/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git-notes</title>
+    <link href="https://rachpt.github.io/2019/11/04/git-notes/"/>
+    <id>https://rachpt.github.io/2019/11/04/git-notes/</id>
+    <published>2019-11-04T07:40:20.000Z</published>
+    <updated>2019-11-04T07:56:47.047Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>一些不是很常用的 git 使用操作笔记。</p></blockquote><a id="more"></a><h1 id="删除-github-上的一个分支"><a href="#删除-github-上的一个分支" class="headerlink" title="删除 github 上的一个分支"></a>删除 github 上的一个分支</h1><p>本地新建一个文件，初始化一个 git 空间，push 这个空目录至远程仓库的对应分支，就可以删掉该分支。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir new_folder</span><br><span class="line"><span class="built_in">cd</span> new_folder</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:USER/reop.git</span><br><span class="line">git push -u origin the_branch_to_delete</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">rm -r new_folder</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一些不是很常用的 git 使用操作笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>eclipse-notes</title>
@@ -433,50 +477,6 @@
       <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
       <category term="windows" scheme="https://rachpt.github.io/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>change-to-use-archlinux</title>
-    <link href="https://rachpt.github.io/2018/12/01/change-to-use-archlinux/"/>
-    <id>https://rachpt.github.io/2018/12/01/change-to-use-archlinux/</id>
-    <published>2018-12-01T12:59:54.000Z</published>
-    <updated>2019-09-23T03:40:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。</p></blockquote><a id="more"></a><h1 id="KED"><a href="#KED" class="headerlink" title="KED"></a>KED</h1><p>之前习惯了类windows的cinnamon，也想过直接使用manjaro的cinnamon版本，但是考虑到 mint19 上比较容易出现的xwindow卡死，于是决定尝试使用manjaro官方支持的kde版本，之前体验过一小段时间，当时感觉是初始设置反人类，设置麻烦。<br>经过一两周的使用，现在基本上能把kde配置成方便自己习惯了。</p><ol><li>文件双击打开，</li><li>桌面显示desktop文件夹内容，</li><li>任务栏调成类 windows，</li><li>开机自动启用小键盘，</li><li>安装 tim，kde connect配合安卓手机太棒了！<br>…</li></ol><h1 id="Tinyproxy"><a href="#Tinyproxy" class="headerlink" title="Tinyproxy"></a>Tinyproxy</h1><p>安装好后啥配置对没改，使用 systemctl 启动不了，提示啥 <code>/run/tinyproxy/tinyproxy.pid</code> 无法创建。</p><p>解决办法：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PidFile: Write the PID of the main tinyproxy thread to this file so it</span></span><br><span class="line"><span class="comment"># can be used for signalling purposes.</span></span><br><span class="line"><span class="comment"># If not specified, no pidfile will be written.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#PidFile "/run/tinyproxy/tinyproxy.pid"</span></span><br></pre></td></tr></table></figure></p><p>取消 <code>/etc/tinyproxy/tinyproxy.conf</code> 如上的注释行。<br><a href="https://github.com/StreisandEffect/streisand/issues/1381" target="_blank" rel="noopener">参考文档</a>。</p><h1 id="vsftpd"><a href="#vsftpd" class="headerlink" title="vsftpd"></a>vsftpd</h1><p>vsftpd 的匿名模式路径一片空白，使用shell的ftp也连接不了。<br>解决办法：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/vsftpd.conf</span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line">seccomp_sandbox=NO</span><br></pre></td></tr></table></figure></p><p><a href="https://wiki.archlinux.org/index.php/Very_Secure_FTP_Daemon" target="_blank" rel="noopener">参考文档</a>。</p><p>例外，vsftpd 不支持使用 ln -s 软连接，使用 mount —band /old /new 可解。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 /etc/fstab 中添加如下行，以便开机自动bind。</span></span><br><span class="line">/mnt/data/pub                             /srv/ftp/pub       none  <span class="built_in">bind</span>    0 0</span><br></pre></td></tr></table></figure></p><h1 id="swapfie"><a href="#swapfie" class="headerlink" title="swapfie"></a>swapfie</h1><p>使用<code>sudo fallocate -l 20G /swapfile</code> 快速创建大体积swapfile 文件。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sudo fallocate -l 20G /swapfile</span><br><span class="line"><span class="comment"># 为了安全</span></span><br><span class="line">sudo chown root:root /swapfile</span><br><span class="line"></span><br><span class="line">sudo chmod 0600 /swapfile</span><br><span class="line"></span><br><span class="line">sudo mkswap /swapfile</span><br><span class="line"><span class="comment"># 开</span></span><br><span class="line">sudo swapon /swapfile</span><br><span class="line"><span class="comment"># 关</span></span><br><span class="line">sudo swapoff /swapfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加开机自动挂载</span></span><br><span class="line">vim /etc/fstab</span><br><span class="line"></span><br><span class="line">/swapfile      none       swap    sw 0 0</span><br></pre></td></tr></table></figure></p><p>/etc/fstab 会在启动的时候执行. 若文件有误那么会启动失败！！！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>an-error-in-mpv-player</title>
-    <link href="https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/"/>
-    <id>https://rachpt.github.io/2018/10/28/an-error-in-mpv-player/</id>
-    <published>2018-10-28T08:29:17.000Z</published>
-    <updated>2019-09-23T03:40:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。</p></blockquote><a id="more"></a><p>使用终端运行错误提示如下，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mpv  </span><br><span class="line">mpv: relocation error: /usr/lib/x86_64-linux-gnu/libldb.so.1: symbol talloc_strdup_append_buffer version TALLOC_2.0.2 not defined <span class="keyword">in</span> file libtalloc.so.2 with link time reference</span><br></pre></td></tr></table></figure><p>百度一番，有类似的问题的解决记录。</p><p><a href="http://blog.chinaunix.net/uid-27057175-id-5747280.html" target="_blank" rel="noopener">文档1</a>，<a href="https://answers.launchpad.net/ubuntu/+question/291448" target="_blank" rel="noopener">文档2</a>.</p><p>经比较，应该是 libtalloc 有问题。</p><p>解决：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --reinstall libtevent0 libtalloc2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可能只要最后的 libtalloc2 即可</span></span><br></pre></td></tr></table></figure><p>小记。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
     
   </entry>
   
