@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-11-09T15:35:37.124Z</updated>
+  <updated>2019-11-17T07:39:54.216Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rachpt.github.io/2019/11/09/solve-composting-broken/"/>
     <id>https://rachpt.github.io/2019/11/09/solve-composting-broken/</id>
     <published>2019-11-09T15:12:11.000Z</published>
-    <updated>2019-11-09T15:35:37.124Z</updated>
+    <updated>2019-11-17T07:39:54.216Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。</p></blockquote><a id="more"></a><h1 id="问题表现"><a href="#问题表现" class="headerlink" title="问题表现"></a>问题表现</h1><p>以前正常的透明特效丢失，设置里面的 显示与监控 混成器 无法打开。</p><p>尝试更新显卡驱动无法解决该问题。</p><h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p>必须要英语搜索啊。使用关键词 <code>KDE composting not work</code> 就找到解决办法。</p><p>解决办法<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改 ~/.config/kwinrc 的 OpenGLIsUnsafe 值为 false</span></span><br><span class="line">grep <span class="string">"OpenGLIsUnsafe"</span> ~/.config/kwinrc</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">'/OpenGLIsUnsafe/&#123;s/true/false/&#125;'</span> ~/.config/kwinrc</span><br></pre></td></tr></table></figure></p><p>参考 <a href="https://bbs.archlinux.org/viewtopic.php?pid=1721227#p1721227" target="_blank" rel="noopener">文档一</a>，<a href="https://bbs.archlinux.org/viewtopic.php?pid=1723539#p1723539" target="_blank" rel="noopener">文档二</a> 。</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>XRender 透明开关快捷键 <code>Alt+Shift+F12</code>.</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。</p></blockquote><a id="more"></a><h1 id="问题表现"><a href="#问题表现" class="headerlink" title="问题表现"></a>问题表现</h1><p>以前正常的透明特效丢失，设置里面的 显示与监控 混成器 无法打开。</p><p>尝试更新显卡驱动无法解决该问题。</p><h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p>必须要英语搜索啊。使用关键词 <code>KDE composting not work</code> 就找到解决办法。</p><p>解决办法<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改 ~/.config/kwinrc 的 OpenGLIsUnsafe 值为 false</span></span><br><span class="line">grep <span class="string">"OpenGLIsUnsafe"</span> ~/.config/kwinrc</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">'/OpenGLIsUnsafe/&#123;s/true/false/&#125;'</span> ~/.config/kwinrc</span><br></pre></td></tr></table></figure></p><p>参考 <a href="https://bbs.archlinux.org/viewtopic.php?pid=1721227#p1721227" target="_blank" rel="noopener">文档一</a>，<a href="https://bbs.archlinux.org/viewtopic.php?pid=1723539#p1723539" target="_blank" rel="noopener">文档二</a> 。</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>XRender 透明开关快捷键 <code>Alt+Shift+F12</code>.</p><hr><p>更新：某次几百兆的系统更新后，设置中的混成器已经不闪退了，等待也是修复bug的一种方式。</p>]]></content>
     
     <summary type="html">
     

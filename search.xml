@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[solve-composting-broken]]></title>
     <url>%2F2019%2F11%2F09%2Fsolve-composting-broken%2F</url>
-    <content type="text"><![CDATA[某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。 问题表现以前正常的透明特效丢失，设置里面的 显示与监控 混成器 无法打开。 尝试更新显卡驱动无法解决该问题。 解决问题必须要英语搜索啊。使用关键词 KDE composting not work 就找到解决办法。 解决办法1234# 修改 ~/.config/kwinrc 的 OpenGLIsUnsafe 值为 falsegrep "OpenGLIsUnsafe" ~/.config/kwinrcsed -i '/OpenGLIsUnsafe/&#123;s/true/false/&#125;' ~/.config/kwinrc 参考 文档一，文档二 。 其他XRender 透明开关快捷键 Alt+Shift+F12.]]></content>
+    <content type="text"><![CDATA[某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。 问题表现以前正常的透明特效丢失，设置里面的 显示与监控 混成器 无法打开。 尝试更新显卡驱动无法解决该问题。 解决问题必须要英语搜索啊。使用关键词 KDE composting not work 就找到解决办法。 解决办法1234# 修改 ~/.config/kwinrc 的 OpenGLIsUnsafe 值为 falsegrep "OpenGLIsUnsafe" ~/.config/kwinrcsed -i '/OpenGLIsUnsafe/&#123;s/true/false/&#125;' ~/.config/kwinrc 参考 文档一，文档二 。 其他XRender 透明开关快捷键 Alt+Shift+F12. 更新：某次几百兆的系统更新后，设置中的混成器已经不闪退了，等待也是修复bug的一种方式。]]></content>
       <categories>
         <category>linux</category>
       </categories>
