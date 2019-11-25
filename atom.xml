@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rachpt.github.io/"/>
-  <updated>2019-11-17T07:39:54.216Z</updated>
+  <updated>2019-11-25T14:49:06.075Z</updated>
   <id>https://rachpt.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zsh-notes</title>
+    <link href="https://rachpt.github.io/2019/11/25/zsh-notes/"/>
+    <id>https://rachpt.github.io/2019/11/25/zsh-notes/</id>
+    <published>2019-11-25T02:14:47.000Z</published>
+    <updated>2019-11-25T14:49:06.075Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>从bash切换到zsh，记录一些注意点与心得。</p></blockquote><a id="more"></a><h1 id="why"><a href="#why" class="headerlink" title="why?"></a>why?</h1><p>很早就听说 <code>zsh</code> 的强大，期间也尝试过使用 <code>fish</code>，相比 <code>bash</code>，两者确实有太多的优势。在使用<code>bash</code>两年后，对其有了较为深刻的理解后，我决定使用 zsh 来提升日常工作效率。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>manjaro</code> 默认已经(也可能是我很久前自己)安装了<code>zsh</code>，直在bash中接敲 zsh，就能切换过去，由于HOME目录没有<code>.zshrc</code>，zsh会先提示你配置，当然也可以按提示跳过配置。没有经过配置的 zsh 是真的不好用，一些常用的alias一个都没有，而且那个<code>prompt</code>对于习惯了 <code>bash + powerline</code> 来说是真的有点失望。手动配置zsh对于只会 bash 语法嗲我来说是有些困难的，于是找到了简化其配置的 <code>oh-my-zsh</code>。</p><h1 id="ohmyzsh"><a href="#ohmyzsh" class="headerlink" title="ohmyzsh"></a>ohmyzsh</h1><ol><li><p>如果 <code>raw.githubusercontent.com</code> 可以访问，则直接使用官方推荐方式：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br><span class="line"><span class="comment"># 或则</span></span><br><span class="line">sh -c <span class="string">"<span class="variable">$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure></li><li><p>如果上述链接访问缓慢，可以使用 <code>git clone</code> 或者下载 zip 至 <code>~/.oh-my-zsh</code>，然后 复制其中的 <code>templates/zshrc.zsh-template</code> 至 <code>~/.zshrc</code> 即可手动安装。<br>打开 <code>zshrc.zsh-template</code> 可以看到 <code>export ZSH=$HOME/.oh-my-zsh</code> 这行，这就是为什么设置目录为 <code>~/.oh-my-zsh</code> 的原因，当然可以改成其他路径，如果需要。</p></li></ol><h1 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h1><p><code>ohmyzsh</code> 只是一个方便管理 zsh 各种插件主题的工具，就好比 vim 的插件管理扩展 <a href="https://github.com/junegunn/vim-plug" target="_blank" rel="noopener">Plug</a>，它内置了一些主题和扩展，同时我们也可以安装(复制文件到指定文件夹)其他主题、扩展。</p><h2 id="powerlevel10k-主题"><a href="#powerlevel10k-主题" class="headerlink" title="powerlevel10k 主题"></a>powerlevel10k 主题</h2><p>这是一个速度很快的样式很漂亮的主题，相比它的上一代<code>powerlevel9k</code>速度提升明显。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">$ZSH_CUSTOM</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure></p><p>其中 <code>$ZSH_CUSTOM</code> 值应该是<code>~/.oh-my-zsh/custom</code>，<code>--depth=1</code> 表示只 克隆最近一次commit后的全部代码，而不会下载以前的旧代码，理论上只比下载 zip 大一丢丢，以后还可以 pull 最新的代码升级。<br>下载完成后，在<code>zshrc</code> 中修改 <code>ZSH_THEME=&quot;robbyrussell&quot;</code> 为 <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code>即可。新开一个 zsh，会自动执行 <code>p10k configure</code> 配置生成 该主题的配置文件 <code>~/.p10k.zsh</code>，不过在这之前需要先下载推荐的字体，并使用这些字体，才能顺利显示各种有意思的符号(和powerline道理一样)。就是用官方推荐的<code>Meslo Nerd Font</code>字体即可。字体下载：</p><ul><li><a href="https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf" target="_blank" rel="noopener">MesloLGS NF Regular.ttf</a></li><li><a href="https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf" target="_blank" rel="noopener">MesloLGS NF Bold.ttf</a></li><li><a href="https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf" target="_blank" rel="noopener">MesloLGS NF Italic.ttf</a></li><li><a href="https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf" target="_blank" rel="noopener">MesloLGS NF Bold Italic.ttf</a></li></ul><p>如果对配置不满意可以使用<code>p10k configure</code>重新配置，后面覆盖即可。</p><h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p>功能：和tab不全不同，这个插件可以以灰色字体猜你命令的后面部分。<br>地址：<a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-autosuggestions</a> 。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><p>启用：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    git</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-syntax-highlighting  <span class="comment"># 这是后面要提的重插件</span></span><br><span class="line">    <span class="built_in">history</span>-substring-search  <span class="comment"># 这是后面要提的重插件</span></span><br><span class="line">    zsh-completions  <span class="comment"># 这是后面要提的重插件</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p><h2 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h2><p>功能：以不同的颜色标记命令的不同部分，比如，错误命令显示红色，正确命令显示绿色。<br>地址：<a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-syntax-highlighting</a> 。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$&#123;ZSH_CUSTOM&#125;</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure></p><p>启用同上。</p><h2 id="zsh-history-substring-search"><a href="#zsh-history-substring-search" class="headerlink" title="zsh-history-substring-search"></a>zsh-history-substring-search</h2><p>功能：输入部分字符，按上下键在历史记录中匹配包含的命令，这个比 <code>Ctrl+r</code> 好用，类似的 bash 有 <a href="https://github.com/cantino/mcfly" target="_blank" rel="noopener">mcfly</a> 工具，个人觉得这个插件更符合习惯。<br>地址：<a href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-history-substring-search</a> 。<br>和上面两个插件步骤一致。</p><h2 id="zsh-completions"><a href="#zsh-completions" class="headerlink" title="zsh-completions"></a>zsh-completions</h2><p>功能：扩展zsh的自动补全覆盖范围。<br>地址：<a href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-completions</a> 。</p><h1 id="一些兼容设置"><a href="#一些兼容设置" class="headerlink" title="一些兼容设置"></a>一些兼容设置</h1><p>一些 bash 下有用的 alias 可以单独写入到一个文件，比如<code>.alias</code>，然后在<code>.bashrc</code>、<code>.zshrc</code> 里面都 <code>source</code> 包含一下该文件，对于一些 PATH 设置，比如 Go、Java的配置，可以考虑写入系统配置文件<code>/etc/profile</code>里面，同时该文件一般也会包含所有 <code>/etc/profile.d</code> 文件夹下的所有其他PATH设置。zsh默认是不会<code>source /etc/profile</code>的，需要在 <code>/etc/zsh/zprofile</code> 中写入 <code>emulate sh -c &#39;source /etc/profile&#39;</code>。</p><p>另外一点，<code>source</code> 与 <code>. (dot)</code> 两者在 bash 与zsh 中有一点区别。bash 中两者等价，zsh 中，<code>.</code> 不再是 <code>source</code> 的别名，所以 直接 <code>. .zshrc</code> 会报错。具体可以 <code>man dot</code> 查看<code>.</code>命令的作用。可以看<a href="https://superuser.com/questions/1499020/why-does-the-dot-command-source-not-work-on-files-without-path-in-zsh" target="_blank" rel="noopener">这个问题</a>了解两者的区别。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;从bash切换到zsh，记录一些注意点与心得。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
+    
+    
+      <category term="bash" scheme="https://rachpt.github.io/tags/bash/"/>
+    
+      <category term="zsh" scheme="https://rachpt.github.io/tags/zsh/"/>
+    
+  </entry>
   
   <entry>
     <title>solve-composting-broken</title>
@@ -451,32 +477,6 @@
     
     
       <category term="linux, ubuntu" scheme="https://rachpt.github.io/tags/linux-ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dual-disk-install-dual-system</title>
-    <link href="https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/"/>
-    <id>https://rachpt.github.io/2018/12/10/dual-disk-install-dual-system/</id>
-    <published>2018-12-10T06:46:25.000Z</published>
-    <updated>2019-09-23T03:40:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>双 11 花了110元买了块 mstata 固态硬盘，完成多年的愿望。这里记录一下双硬盘独立安装 windows 和 Linux 系统。</p></blockquote><a id="more"></a><h1 id="现在的情况"><a href="#现在的情况" class="headerlink" title="现在的情况"></a>现在的情况</h1><p>一般网上都是单一硬盘安装双系统的，不管是 legacy 或是 uefi，双系统的引导文件都在一块硬盘里面，所以最多就是通过软件修复一下例外一个系统的引导即可。<br>现在的情况是两块固态硬盘，大小一样 120G，需要将 windows 安装到其中一块，而 Linux 安装到另外一块，并且希望在开机的时候提供一个友好的选择系统的界面。</p><p>比较容易实现的是，两块硬盘按照正常步骤分别安装到两硬盘，开机的时候 狂按 F12 (或者其他) 进入 boot manger 选择不同启动硬盘，就能进入不同的系统。但是操作很是不友好。</p><h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>win7 不支持 uefi + GPT 模式启动，只能使用传统的 legacy Bios + MBR 模式启动，缺点很明显，硬盘上线2.2T，启动速度也相对慢，多了 Bios 自检过程。<br><a href="https://zhuanlan.zhihu.com/p/36976698" target="_blank" rel="noopener">更多请看这里</a>，<a href="https://blog.csdn.net/u014712482/article/details/80686387" target="_blank" rel="noopener">或者这里</a>。</p><p>刚开始的时候，我的唯一的硬盘上面安装的是 manjaro Linux，加装硬盘后，我使用常规方法安装了 windows 10，然后我将 windows 盘作为默认启动硬盘，使用 easyBSD 创建 Linux 的引导，失败告终，windows 不能切换 Linux，只能改启动应到盘。</p><p>就在要绝望的时候，有人说 Fedora 可以双硬盘安装并解决双系统引导问题。于是开始准别全部重装。</p><h1 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h1><p>能用 uefi 的机器我当然不会使用 legacy 啦。</p><p>首先安装 windows 到 windows 认为的 disk 0，后来发现这个可有可无。<br>有几点需要注意，修改 windows 安装程序 默认的 efi 100m 的设置，因为我们想把 linux 的 efi 挂载到 windows 的 efi 分区。<br>时候证明，这一步可能不需要(在linux下看到 efi 使用量 35 m)。</p><p>系统版本选择界面后，按<code>Shift+F10</code>调出命令提示符，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk 0</span><br><span class="line">clean</span><br><span class="line">convert gpt</span><br><span class="line">create partition efi size=800</span><br><span class="line">create partition primary size=102400</span><br></pre></td></tr></table></figure><p>自定义 efi 分区大小， 其实 500m 可能就够了，保险起见，设了 800m。</p><p><a href="https://www.ithome.com/html/win10/224908.htm" target="_blank" rel="noopener">具体情况这个参考文档</a>。</p><p><strong>第一次</strong>尝试安装 Fedora cinnamon 版本，一切照旧，我只是选择了 安装到另外空的硬盘，分区使用自动。<br>装好后，自动将 Linux 盘作为了默认引导硬盘，greb 页面出了 Fedora 外还有 windows 的启动项，一切如愿。当然选择 windows 所在硬盘为默认引导盘 自然无法进入 Linux。</p><p>本来就此结束，但是那个引导界面实在是太丑了，还有 Fedora 用不习惯。</p><p>于是开始<strong>第二次</strong>尝试。<br>Linux 版本是 manjaro KDE 版本，windows 还是之前的不变，只是格式化 Fedora 的盘。<br>安装的时候 自己设置分区以及挂载点。<br>windows 的(/dev/sda) efi 分区挂载到 /boot/efi，不格式化， /dev/sdb 上8 G linuxswap，其余全部ext4 挂载点 / 。</p><p>装完后 一切和 Fedora 一致，引导界面漂亮了很多，很现代，还能记住上一次使用的引导选项。</p><p>在 linux 下可以看到 efi 里面有 windows 的引导文件夹。</p><p>有可能在windows下使用 efi 引导修复工具可以将 Linux 引导选项加入到 windows 引导列表里面，这样每个硬盘都能引导双系统(未测试)。</p><p><img src="https://raw.githubusercontent.com/rachpt/imgs/master/dual-disk-install-dual-system-1.jpg" alt="dual-disk-install-dual-system-1.jpg">。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;双 11 花了110元买了块 mstata 固态硬盘，完成多年的愿望。这里记录一下双硬盘独立安装 windows 和 Linux 系统。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://rachpt.github.io/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="https://rachpt.github.io/tags/linux/"/>
-    
-      <category term="windows" scheme="https://rachpt.github.io/tags/windows/"/>
     
   </entry>
   
