@@ -1,7 +1,0 @@
-select a.org, a.avgAlertCount as 日均告警接收量, a.avgAlertEvent as 日均告警量, a.avgPerAppkey AS 日均单AppKey告警接收量, a.avgPerPerson as 日均单人告警接收量, a.avgResponseRate as 日均响应率, a.ackAvgResponseRate as `日均响应率(去除不可响应告警)`, a.avgRecoverTime as 日均恢复时长, (select sum(CASE WHEN b.total>2000 THEN 1 ELSE 0 END) from daojiametric_acappkey b where b.org=a.org and b.date='${date}') as 超标appkey数, (select sum(CASE WHEN c.total>3000 THEN 1 ELSE 0 END) from daojiametric_acuser c where c.org=a.org and c.date='${date}') as 超标user数, ((select sum(CASE WHEN b.total>2000 THEN 1 ELSE 0 END) from daojiametric_acappkey b where b.org=a.org and b.date='${date}') + (select sum(CASE WHEN c.total>3000 THEN 1 ELSE 0 END) from daojiametric_acuser c where c.org=a.org and c.date='${date}')) `超标appkey&user数` FROM daojiametric_ac a 
-where (a.avgAlertCount != 0 or a.avgAlertEvent != 0 or a.avgResponseRate != 0 or a.avgRecoverTime != 0 or a.avgPerAppkey != 0 or a.avgPerPerson != 0) and a.date='${date}' and
-(CASE 
-WHEN '${org}'='配送' THEN a.org in ('APP组', 'FE组', '履约系统组', '业务系统组', '数据组','算法策略组')
- 
-WHEN '${org}'='闪购' THEN a.org in ('闪购技术部', '医药研发组', '数据研发组', '策略算法组', '终端研发组', '新业务研发组', '闪购研发组') 
-ELSE a.org in ('') END)
