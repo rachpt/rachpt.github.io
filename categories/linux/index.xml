@@ -174,10 +174,10 @@
     
     <item>
       <title>compile-nginx-1.14</title>
-      <link>https://rachpt.cn/2018/07/25/compile-nginx-1.14/</link>
+      <link>https://rachpt.cn/2018/07/25/compile-nginx-1-14/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/07/25/compile-nginx-1.14/</guid>
+      <guid>https://rachpt.cn/2018/07/25/compile-nginx-1-14/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;魔改编译安装 nginx。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -196,10 +196,10 @@
     
     <item>
       <title>make-transmission2.94-from-source-code</title>
-      <link>https://rachpt.cn/2018/07/24/make-transmission2.94-from-source-code/</link>
+      <link>https://rachpt.cn/2018/07/24/make-transmission2-94-from-source-code/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/07/24/make-transmission2.94-from-source-code/</guid>
+      <guid>https://rachpt.cn/2018/07/24/make-transmission2-94-from-source-code/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -373,10 +373,10 @@
     
     <item>
       <title>几个 shell 脚本</title>
-      <link>https://rachpt.cn/2018/03/19/%E5%87%A0%E4%B8%AA-shell-%E8%84%9A%E6%9C%AC/</link>
+      <link>https://rachpt.cn/2018/03/19/sevseral-shell-scripts/</link>
       <pubDate>Mon, 19 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/19/%E5%87%A0%E4%B8%AA-shell-%E8%84%9A%E6%9C%AC/</guid>
+      <guid>https://rachpt.cn/2018/03/19/sevseral-shell-scripts/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录几个 shell 脚本，高效。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -384,10 +384,10 @@
     
     <item>
       <title>Linux 中快速添加 hexo 文章</title>
-      <link>https://rachpt.cn/2018/03/13/linux-%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0-hexo-%E6%96%87%E7%AB%A0/</link>
+      <link>https://rachpt.cn/2018/03/13/quick-add-a-essay-on-hexosystem/</link>
       <pubDate>Tue, 13 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/13/linux-%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0-hexo-%E6%96%87%E7%AB%A0/</guid>
+      <guid>https://rachpt.cn/2018/03/13/quick-add-a-essay-on-hexosystem/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -395,10 +395,10 @@
     
     <item>
       <title>简单使用 FFmpeg 压制视频</title>
-      <link>https://rachpt.cn/2018/03/12/%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8-ffmpeg-%E5%8E%8B%E5%88%B6%E8%A7%86%E9%A2%91/</link>
+      <link>https://rachpt.cn/2018/03/12/a-simple-example-of-ffmpeg/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/12/%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8-ffmpeg-%E5%8E%8B%E5%88%B6%E8%A7%86%E9%A2%91/</guid>
+      <guid>https://rachpt.cn/2018/03/12/a-simple-example-of-ffmpeg/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -406,10 +406,10 @@
     
     <item>
       <title>解决 mint 系统中 mendeley 无法使用 fcitx 输入中文</title>
-      <link>https://rachpt.cn/2018/03/12/%E8%A7%A3%E5%86%B3-mint-%E7%B3%BB%E7%BB%9F%E4%B8%AD-mendeley-%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8-fcitx-%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
+      <link>https://rachpt.cn/2018/03/12/solve-the-problem-of-cannot-inputting-chinese-in-mendeley/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/12/%E8%A7%A3%E5%86%B3-mint-%E7%B3%BB%E7%BB%9F%E4%B8%AD-mendeley-%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8-fcitx-%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
+      <guid>https://rachpt.cn/2018/03/12/solve-the-problem-of-cannot-inputting-chinese-in-mendeley/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;自从使用了 mendeley 软件后各种不顺，万恶之源就是在 mendeley 中无法使用 fcitx 输入中文。&lt;/p&gt;
 &lt;p&gt;一开始的解决办法是换用 ibus 输入法，万般无赖，离开了使用良久的 fcitx，转向 ibus。先是 ibus 的 sunpinyin 无法设置使用双拼，然后是升级 libpinyin ，最后是尝试升级 ibus 本身，最后以失败告终，白白浪费时间罢了。&lt;/p&gt;
@@ -418,10 +418,10 @@
     
     <item>
       <title>Linux 设置开机自动打开数字小键盘</title>
-      <link>https://rachpt.cn/2018/03/11/linux-%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E5%B0%8F%E9%94%AE%E7%9B%98/</link>
+      <link>https://rachpt.cn/2018/03/11/linux-allow-numlock-on/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/11/linux-%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E5%B0%8F%E9%94%AE%E7%9B%98/</guid>
+      <guid>https://rachpt.cn/2018/03/11/linux-allow-numlock-on/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Linux mint 设置开机自动打开数字键盘锁 numlock。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -429,10 +429,10 @@
     
     <item>
       <title>几个关于 iBus 输入法的记录</title>
-      <link>https://rachpt.cn/2018/03/10/%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8E-ibus-%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+      <link>https://rachpt.cn/2018/03/10/notes-for-solve-ibus-error/</link>
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/10/%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8E-ibus-%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://rachpt.cn/2018/03/10/notes-for-solve-ibus-error/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Mendely 的标注功能只支持 iBus 的中文输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -440,10 +440,10 @@
     
     <item>
       <title>Linux下的PDF阅读软件Zathura</title>
-      <link>https://rachpt.cn/2018/01/22/linux%E4%B8%8B%E7%9A%84pdf%E9%98%85%E8%AF%BB%E8%BD%AF%E4%BB%B6zathura/</link>
+      <link>https://rachpt.cn/2018/01/22/linux-pdfreader-zathura/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/01/22/linux%E4%B8%8B%E7%9A%84pdf%E9%98%85%E8%AF%BB%E8%BD%AF%E4%BB%B6zathura/</guid>
+      <guid>https://rachpt.cn/2018/01/22/linux-pdfreader-zathura/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录 zathura 的常用设置与技巧，vim党的最爱。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -451,10 +451,10 @@
     
     <item>
       <title>Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</title>
-      <link>https://rachpt.cn/2018/01/11/linux-mint-%E5%AE%89%E8%A3%85-materials-studio-8.0-%E4%B8%8E%E4%BD%BF%E7%94%A8-castep/</link>
+      <link>https://rachpt.cn/2018/01/11/install-materials-studio-on-ubuntu/</link>
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/01/11/linux-mint-%E5%AE%89%E8%A3%85-materials-studio-8.0-%E4%B8%8E%E4%BD%BF%E7%94%A8-castep/</guid>
+      <guid>https://rachpt.cn/2018/01/11/install-materials-studio-on-ubuntu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 &lt;a href=&#34;https://www.linuxmint.com/download.php&#34;&gt;mint cinnamon&lt;/a&gt; 版）&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -462,10 +462,10 @@
     
     <item>
       <title>ubuntu 学习笔记</title>
-      <link>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://rachpt.cn/2017/12/18/notes-for-ubuntu/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://rachpt.cn/2017/12/18/notes-for-ubuntu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录一些学习ubuntu要点，力求实用。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -473,10 +473,10 @@
     
     <item>
       <title>Ubuntu 中的 Firefox</title>
-      <link>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</link>
+      <link>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</link>
       <pubDate>Sat, 09 Dec 2017 14:23:45 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</guid>
+      <guid>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录几个 firefox 相关的笔记。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -484,10 +484,10 @@
     
     <item>
       <title>Linux 文件 hash</title>
-      <link>https://rachpt.cn/2017/12/03/linux-%E6%96%87%E4%BB%B6-hash/</link>
+      <link>https://rachpt.cn/2017/12/03/calc-hash-in-linux/</link>
       <pubDate>Sun, 03 Dec 2017 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/03/linux-%E6%96%87%E4%BB%B6-hash/</guid>
+      <guid>https://rachpt.cn/2017/12/03/calc-hash-in-linux/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录如何计算文件哈希的方法。&lt;/p&gt;
 &lt;/blockquote&gt;</description>

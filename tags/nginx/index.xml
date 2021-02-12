@@ -20,10 +20,10 @@
     
     <item>
       <title>compile-nginx-1.14</title>
-      <link>https://rachpt.cn/2018/07/25/compile-nginx-1.14/</link>
+      <link>https://rachpt.cn/2018/07/25/compile-nginx-1-14/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/07/25/compile-nginx-1.14/</guid>
+      <guid>https://rachpt.cn/2018/07/25/compile-nginx-1-14/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;魔改编译安装 nginx。&lt;/p&gt;
 &lt;/blockquote&gt;</description>

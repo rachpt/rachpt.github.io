@@ -42,19 +42,19 @@
     
     <item>
       <title>ubuntu 更新 xz 至 5.2&#43;</title>
-      <link>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</link>
+      <link>https://rachpt.cn/2018/01/13/ubuntu-update-xz-to-5-2/</link>
       <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</guid>
+      <guid>https://rachpt.cn/2018/01/13/ubuntu-update-xz-to-5-2/</guid>
       <description>&lt;p&gt;xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux 免安装程序配置</title>
-      <link>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</link>
+      <link>https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -62,10 +62,10 @@
     
     <item>
       <title>ubuntu 学习笔记</title>
-      <link>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://rachpt.cn/2017/12/18/notes-for-ubuntu/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://rachpt.cn/2017/12/18/notes-for-ubuntu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录一些学习ubuntu要点，力求实用。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -73,10 +73,10 @@
     
     <item>
       <title>Ubuntu 中的 Firefox</title>
-      <link>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</link>
+      <link>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</link>
       <pubDate>Sat, 09 Dec 2017 14:23:45 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</guid>
+      <guid>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;记录几个 firefox 相关的笔记。&lt;/p&gt;
 &lt;/blockquote&gt;</description>

@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 10 Mar 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/ibus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>几个关于 iBus 输入法的记录</title>
-      <link>https://rachpt.cn/2018/03/10/%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8E-ibus-%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+      <link>https://rachpt.cn/2018/03/10/notes-for-solve-ibus-error/</link>
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://rachpt.cn/2018/03/10/%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8E-ibus-%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://rachpt.cn/2018/03/10/notes-for-solve-ibus-error/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Mendely 的标注功能只支持 iBus 的中文输入，被迫从 Fcitx 改成 iBus。遇到一些问题，这里记录备忘。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
