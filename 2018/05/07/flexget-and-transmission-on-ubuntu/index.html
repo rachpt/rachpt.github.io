@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>flexget-and-transmission-on-ubuntu - rachpt&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="rachpt" /><meta name="description" content=" Flexget 进阶。自动下载与删除。
+" /><meta name="keywords" content="rachpt, Hugo, blog" />
+
+
+<meta name="baidu-site-verification" content="CwEgKTipRe" />
+<meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="https://rachpt.cn/2018/05/07/flexget-and-transmission-on-ubuntu/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="flexget-and-transmission-on-ubuntu" />
+<meta property="og:description" content="
+Flexget 进阶。自动下载与删除。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rachpt.cn/2018/05/07/flexget-and-transmission-on-ubuntu/" />
+<meta property="article:published_time" content="2018-05-07T00:30:00+08:00" />
+<meta property="article:modified_time" content="2018-05-07T00:30:00+08:00" />
+<meta itemprop="name" content="flexget-and-transmission-on-ubuntu">
+<meta itemprop="description" content="
+Flexget 进阶。自动下载与删除。
+">
+<meta itemprop="datePublished" content="2018-05-07T00:30:00+08:00" />
+<meta itemprop="dateModified" content="2018-05-07T00:30:00+08:00" />
+<meta itemprop="wordCount" content="1337">
+
+
+
+<meta itemprop="keywords" content="ubuntu,flexget," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="flexget-and-transmission-on-ubuntu"/>
+<meta name="twitter:description" content="
+Flexget 进阶。自动下载与删除。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">rachpt&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">rachpt&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">flexget-and-transmission-on-ubuntu</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-05-07 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 约 1337 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装-flexget">安装 flexget</a></li>
+    <li><a href="#yml-配置文件">yml 配置文件</a></li>
+    <li><a href="#后续">后续</a></li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2018-05-07T00:30:00" title="May 7, 2018">May 7, 2018</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <blockquote>
+<p>Flexget 进阶。自动下载与删除。</p>
+</blockquote>
+<h1 id="安装-flexget">安装 flexget</h1>
+<p>flexget 需要 python2.7, 3.4, 3.5 或者 3.6。（居然支持3.6了  (￣▽￣)／ ）</p>
+<p>命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">sudo pip3 install flexget
+
+flexget -V <span class="c1"># 检查版本</span>
+flexget check <span class="c1"># 检查配置文件</span>
+flexget --test execute <span class="c1"># 测试</span>
+flexget status <span class="c1"># 状态</span>
+flexget --db-cleanup <span class="c1"># 初始化 SQLite数据库</span>
+flexget execute <span class="c1"># 运行</span>
+
+which flexget <span class="c1"># 查看安装路径，用于 crontab 定时任务</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="http://rachpt.me/2018/03/23/notes-for-shell-scripting-bible/">crontab 配置参考</a> 。</p>
+<p>Control daemon:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo status flexget
+sudo stop flexget
+sudo start flexget
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="yml-配置文件">yml 配置文件</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">templates</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">transmission</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l">localhost</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9091</span><span class="w">
+</span><span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">username</span><span class="w">
+</span><span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="nt">free_space</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/srv/ftp/data</span><span class="w">
+</span><span class="w">      </span><span class="nt">space</span><span class="p">:</span><span class="w"> </span><span class="m">10240</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="nt">download</span><span class="p">:</span><span class="w"> </span><span class="l">/home/rc/Downloads</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">  </span><span class="nt">limit_size</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">content_size</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="m">512</span><span class="w">
+</span><span class="w">      </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="m">61440</span><span class="w">
+</span><span class="w">      </span><span class="nt">strict</span><span class="p">:</span><span class="w"> </span><span class="kc">no</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">  </span><span class="nt">clean</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">clean_transmission</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l">localhost</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9091</span><span class="w">
+</span><span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">username</span><span class="w">
+</span><span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span><span class="w">      </span><span class="nt">finished_for</span><span class="p">:</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="l">days</span><span class="w">
+</span><span class="w">      </span><span class="nt">tracker</span><span class="p">:</span><span class="w"> </span><span class="l">xxxxxxx|xxxxx</span><span class="w">
+</span><span class="w">      </span><span class="nt">delete_files</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span><span class="w">    </span><span class="nt">disable</span><span class="p">:</span><span class="w"> </span><span class="l">details</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">  </span><span class="nt">ttg_wiki</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">&#34;&#39;1080p&#39; in title&#34;: </span><span class="l">reject</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">&#34;&#39;720p&#39; + &#39;WiKi&#39; in title&#34;: </span><span class="l">accept</span><span class="w">
+</span><span class="w">    
+</span><span class="w"></span><span class="nt">tasks</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">byr_test</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">rss</span><span class="p">:</span><span class="w"> </span><span class="l">https://xxxxx.xxx</span><span class="w">
+</span><span class="w">    </span><span class="nt">accept_all</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w"> 
+</span><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span><span class="w">      </span><span class="c">#- limit_size</span><span class="w">
+</span><span class="w">    </span><span class="nt">content_size</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="m">52</span><span class="w">
+</span><span class="w">      </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="m">6144</span><span class="w">
+</span><span class="w">      </span><span class="nt">strict</span><span class="p">:</span><span class="w"> </span><span class="kc">no</span><span class="w">
+</span><span class="w">    </span><span class="nt">transmission</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ratio</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/srv/ftp/data</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">  </span><span class="nt">wiki</span><span class="p">:</span><span class="w">   
+</span><span class="w">    </span><span class="nt">rss</span><span class="p">:</span><span class="w"> </span><span class="l">https://xxxxx.xxx</span><span class="w">
+</span><span class="w">    </span><span class="nt">accept_all</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w"> 
+</span><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span><span class="w">      </span>- <span class="l">limit_size</span><span class="w">
+</span><span class="w">      </span>- <span class="l">clean </span><span class="w">
+</span><span class="w">    </span><span class="nt">transmission</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="c">#ratio: 2</span><span class="w">
+</span><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/srv/ftp/data</span><span class="w">
+</span><span class="w"> 
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">  </span><span class="nt">hdsky</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">rss</span><span class="p">:</span><span class="w"> </span><span class="l">https://xxxxx.xxx</span><span class="w">
+</span><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span><span class="w">      </span>- <span class="l">clean</span><span class="w">
+</span><span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">&#34;&#39;Complete&#39; in title&#34;: </span><span class="l">reject</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">&#34;&#39;iPad&#39; in title&#34;: </span><span class="l">accept</span><span class="w">
+</span><span class="w">    </span><span class="nt">content_size</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="m">400</span><span class="w">
+</span><span class="w">      </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="m">10240</span><span class="w">
+</span><span class="w">      </span><span class="nt">strict</span><span class="p">:</span><span class="w"> </span><span class="kc">no</span><span class="w">
+</span><span class="w">    </span><span class="nt">transmission</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ratio</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/srv/ftp/mp4</span><span class="w">
+</span><span class="w">  
+</span><span class="w">  </span><span class="c">##----------------##</span><span class="w">
+</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>#  号注释，yml 需要严格对齐，使用<code>两个空格缩进</code>，形成代码块，yml 文件的语法格式：<code>字段+冒号+空格+内容</code> 。</p>
+<p>templates:  # 模板。</p>
+<p>tasks:  # 任务。</p>
+<p><a href="https://flexget.com/Plugins/transmission">transmission 模块</a>需要安装，另外，transmission-daemon或者 GUI 需要设置 rpc。</p>
+<p>模块transmission password 记得加上引号。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip install transmissionrpc
+</code></pre></td></tr></table>
+</div>
+</div><p>space 单位 M，content_size 一样，用于限制大小。download 放的是torrent文件路径。path 为种子内容下载路径。</p>
+<p>具体可以参考 <a href="https://flexget.com/Configuration">官方文档</a>。</p>
+<p>使用 transmission 模块和使用 watch-dir 相比，更灵活更方便，对不同的 rss ，可以设置不同的分享率 ratio ，以及不同的下载路径 path 。但是添加了的 torrent 文件需要自己写其他脚本删除或者移动。参见<a href="#tr-auto-delete_">其他</a>。</p>
+<h1 id="后续">后续</h1>
+<p>使用 flexget 的自动删种可能效果不是很好，需要使用另外的脚本处理。</p>
+<p>待续……</p>
+<p><a href="https://blog.wangyan.org/bt-shell-transmission-clean/">参考1</a> ，<a href="https://linux.die.net/man/1/transmission-remote">参考2 transmission-remote</a> ，<a href="http://www.kalso.net/archives/781">参考3</a> 。</p>
+<h1 id="其他">其他</h1>
+<p>如果想在种子发布一段时间后猜开始下载，比如越过 新种免费期，可以使用下面的脚本配合 watch-dir 实现。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="c1">#author rachpt@126.com</span>
+<span class="c1">#date 2018-05-07</span>
+<span class="c1">#-----------设置-------------#</span>
+<span class="c1"># flexget torrent 下载路径</span>
+<span class="nv">flexgetPath</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/Downloads/temp/&#34;</span>
+<span class="c1"># transmission watch-dir</span>
+<span class="nv">autoDownloadPath</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/Downloads/ttg/&#34;</span>
+<span class="c1"># 间隔时间，秒</span>
+<span class="nv">intervalsTime</span><span class="o">=</span><span class="m">25200</span>
+<span class="c1">#----------------------------#</span>
+<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find <span class="nv">$flexgetPath</span> -iname <span class="s2">&#34;*.torrent*&#34;</span><span class="k">)</span>
+
+<span class="c1"># 使用换行分割</span>
+<span class="nv">IFS_OLD</span><span class="o">=</span><span class="nv">$IFS</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">$&#39;\n&#39;</span>
+
+<span class="k">for</span> filename in <span class="nv">$filelist</span>
+<span class="k">do</span>  
+	<span class="nv">modifiedTime</span><span class="o">=</span><span class="sb">`</span>stat -c %Y <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span><span class="sb">`</span>
+    <span class="nv">currentTime</span><span class="o">=</span><span class="sb">`</span>date +%s<span class="sb">`</span>
+
+	<span class="k">if</span> <span class="o">[</span>  $<span class="o">[</span><span class="nv">$currentTime</span> - <span class="nv">$modifiedTime</span><span class="o">]</span> -gt <span class="nv">$intervalsTime</span> <span class="o">]</span>
+	<span class="k">then</span>
+		mv -f <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$autoDownloadPath</span><span class="si">${</span><span class="nv">flexgetPath</span><span class="p">##*/</span><span class="si">}</span><span class="s2">&#34;</span>
+	<span class="k">fi</span>
+<span class="k">done</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="nv">$IFS_OLD</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>&lt;span id=&quot;tr-auto-delete&quot;&gt;</code>transmission 完成下载后自动移动种子文件到指定文件夹脚本。</span></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="c1"># author rachpt@126.com</span>
+<span class="c1"># required dumptorrent to find the real name of torrent</span>
+<span class="c1"># get dumptorrent here: https://sourceforge.net/projects/dumptorrent/files/</span>
+<span class="c1">#----------------设置------------------#</span>
+<span class="nv">dumptorrentPath</span><span class="o">=</span><span class="s2">&#34;/usr/local/bin/dumptorrent&#34;</span>
+<span class="nv">flexgetPath</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/Downloads/ttg/&#34;</span>
+<span class="nv">moveTotPath</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/Downloads/finish/&#34;</span>
+<span class="nv">logoPath</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/Downloads/finish/info&#34;</span>
+
+<span class="c1">#----------------日志函数---------------#</span>
+<span class="k">function</span> printLogo <span class="o">{</span>
+	<span class="nb">echo</span> <span class="s2">&#34;=================================&#34;</span> &gt;&gt; <span class="nv">$logoPath</span>
+	<span class="nb">echo</span> <span class="s2">&#34;匹配成功&#34;</span>  &gt;&gt; <span class="nv">$logoPath</span>
+	<span class="nb">echo</span> <span class="s2">&#34;下载到了：&#34;</span><span class="nv">$TR_TORRENT_DIR</span> &gt;&gt; <span class="nv">$logoPath</span>
+	<span class="nb">echo</span> <span class="s2">&#34;种子编号：&#34;</span><span class="nv">$TR_TORRENT_ID</span> &gt;&gt; <span class="nv">$logoPath</span>
+	<span class="nb">echo</span> -e <span class="s2">&#34;于：&#34;</span><span class="nv">$TR_TIME_LOCALTIME</span> <span class="s2">&#34; \c&#34;</span> &gt;&gt; <span class="nv">$logoPath</span>
+	<span class="nb">echo</span> <span class="s2">&#34;完成对：&#34;</span><span class="nv">$TR_TORRENT_NAME</span><span class="s2">&#34; 的移动！&#34;</span> &gt;&gt; <span class="nv">$logoPath</span>
+<span class="o">}</span>
+
+<span class="c1">#----------------处理空格---------------#</span>
+<span class="k">function</span> moveBlank <span class="o">{</span>
+	find <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> -name <span class="s2">&#34;* *&#34;</span> <span class="p">|</span>
+	<span class="k">while</span> <span class="nb">read</span> name
+	<span class="k">do</span>
+		<span class="nv">na</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$name</span> <span class="p">|</span> tr <span class="s1">&#39; &#39;</span> <span class="s1">&#39;.&#39;</span><span class="k">)</span>
+		mv <span class="s2">&#34;</span><span class="nv">$name</span><span class="s2">&#34;</span> <span class="nv">$na</span>
+	<span class="k">done</span>
+<span class="o">}</span>
+<span class="c1">#--------------移动种子文件-------------#</span>
+moveBlank <span class="nv">$flexgetPath</span>
+
+<span class="c1"># 生成点分割文件名</span>
+<span class="k">function</span> createMoveToPath <span class="o">{</span>
+	<span class="nv">dotTrPath</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$newname</span><span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[ ][ ]*/\./g&#39;</span><span class="sb">`</span>
+
+	<span class="k">if</span> <span class="o">[</span> -n <span class="nv">$dotTrPath</span> <span class="o">]</span>
+	<span class="k">then</span>
+		<span class="nv">totalMoveToPath</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$moveTotPath$dotTrPath</span><span class="s2">.torrent&#34;</span>
+	<span class="k">else</span>
+		<span class="nv">totalMoveToPath</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$moveTotPath$newname</span><span class="s2">.torrent&#34;</span>
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find <span class="nv">$flexgetPath</span> -iname <span class="s2">&#34;*.torrent.*&#34;</span><span class="k">)</span>
+<span class="c1"># 使用换行分割</span>
+<span class="nv">IFS_OLD</span><span class="o">=</span><span class="nv">$IFS</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">$&#39;\n&#39;</span>
+
+<span class="k">for</span> filename in <span class="nv">$filelist</span>
+<span class="k">do</span>  
+	<span class="nv">newname</span><span class="o">=</span><span class="sb">`</span><span class="nv">$dumptorrentPath</span> <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span> <span class="p">|</span> gawk <span class="s1">&#39;BEGIN{FS=&#34;:&#34;} /Name/{print $2}&#39;</span><span class="sb">`</span>
+    <span class="nv">newname</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$newname</span><span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/^ [ ]*//g&#39;</span><span class="sb">`</span>
+
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$newname</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$TR_TORRENT_NAME</span><span class="s2">&#34;</span> <span class="o">]</span>
+	<span class="k">then</span>
+		createMoveToPath
+		mv -f <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$totalMoveToPath</span><span class="s2">&#34;</span>  &gt;&gt; <span class="nv">$logoPath</span>
+
+		printLogo
+	<span class="k">fi</span>
+<span class="k">done</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="nv">$IFS_OLD</span>
+<span class="c1">#----------------移动完成---------------#</span>
+
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">rachpt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-05-07
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ubuntu/">ubuntu</a>
+          <a href="/tags/flexget/">flexget</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2018/06/05/install-cajviewer-on-linux/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">install-CAJViewer-on-Linux</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2018/05/07/extra-shell-notes/">
+            <span class="next-text nav-default">extra-shell-notes</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        notify:  true ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:rachpt@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109494468-2', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

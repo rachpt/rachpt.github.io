@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on rachpt&#39;s Blog</title>
+    <link>https://rachpt.cn/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on rachpt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>something-difference-from-manjaro-back-to-ubuntu</title>
+      <link>https://rachpt.cn/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</link>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;qprop无法在软件较新的manjaro上编译运行，matlab实时脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>flexget-and-transmission-on-ubuntu</title>
+      <link>https://rachpt.cn/2018/05/07/flexget-and-transmission-on-ubuntu/</link>
+      <pubDate>Mon, 07 May 2018 00:30:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/05/07/flexget-and-transmission-on-ubuntu/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Flexget 进阶。自动下载与删除。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>upgrade-ubuntu-stepped-pit</title>
+      <link>https://rachpt.cn/2018/05/07/upgrade-ubuntu-stepped-pit/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/05/07/upgrade-ubuntu-stepped-pit/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;日常干活用的 mint，特殊情况换到 ubuntu 上干活，一直很烦 窗口关闭按钮一会儿在左边一会儿在右边，考虑到娱乐用的 windows 也在右边，所以看到 ubuntu 18.04 lts 的关闭按钮在右侧，于是有了将 16.04 lts （unity 好像没法设置按钮）升级的想法。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 更新 xz 至 5.2&#43;</title>
+      <link>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</guid>
+      <description>&lt;p&gt;xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 免安装程序配置</title>
+      <link>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 学习笔记</title>
+      <link>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/12/18/ubuntu-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记录一些学习ubuntu要点，力求实用。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 中的 Firefox</title>
+      <link>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</link>
+      <pubDate>Sat, 09 Dec 2017 14:23:45 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/12/09/ubuntu-%E4%B8%AD%E7%9A%84-firefox/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记录几个 firefox 相关的笔记。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

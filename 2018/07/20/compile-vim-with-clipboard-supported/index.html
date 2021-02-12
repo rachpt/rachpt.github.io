@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>compile-vim-with-clipboard-supported - rachpt&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="rachpt" /><meta name="description" content=" 从源码编译 vim，以支持使用系统粘贴板。
+" /><meta name="keywords" content="rachpt, Hugo, blog" />
+
+
+<meta name="baidu-site-verification" content="CwEgKTipRe" />
+<meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="https://rachpt.cn/2018/07/20/compile-vim-with-clipboard-supported/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="compile-vim-with-clipboard-supported" />
+<meta property="og:description" content="
+从源码编译 vim，以支持使用系统粘贴板。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rachpt.cn/2018/07/20/compile-vim-with-clipboard-supported/" />
+<meta property="article:published_time" content="2018-07-20T00:00:00+08:00" />
+<meta property="article:modified_time" content="2018-07-20T00:00:00+08:00" />
+<meta itemprop="name" content="compile-vim-with-clipboard-supported">
+<meta itemprop="description" content="
+从源码编译 vim，以支持使用系统粘贴板。
+">
+<meta itemprop="datePublished" content="2018-07-20T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2018-07-20T00:00:00+08:00" />
+<meta itemprop="wordCount" content="519">
+
+
+
+<meta itemprop="keywords" content="linux," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="compile-vim-with-clipboard-supported"/>
+<meta name="twitter:description" content="
+从源码编译 vim，以支持使用系统粘贴板。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">rachpt&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">rachpt&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">compile-vim-with-clipboard-supported</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-07-20 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 约 519 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why">why</a></li>
+    <li><a href="#编译">编译</a></li>
+    <li><a href="#验证">验证</a></li>
+    <li><a href="#其他">其他</a></li>
+    <li><a href="#图标">图标</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2018-07-20T00:00:00" title="July 20, 2018">July 20, 2018</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <blockquote>
+<p>从源码编译 vim，以支持使用系统粘贴板。</p>
+</blockquote>
+<h1 id="why">why</h1>
+<p><code>&quot; + Y</code> <code>&quot; + P</code> 这两组组合键可以实现 vim 与系统粘贴板之间的共享数据。重要性可想而知，至少有时还是需要和外部交换粘贴板的。</p>
+<p>如果不自己编译源码，唯一的办法就是额外安装GUI版本的 vim。很蠢，不是吗?</p>
+<h1 id="编译">编译</h1>
+<ol>
+<li>
+<p>下载源代码,
+<a href="https://github.com/vim/vim">https://github.com/vim/vim</a>
+使用 git <code>git clone https://github.com/vim/vim.git</code></p>
+</li>
+<li>
+<p>安装依赖
+<code>sudo apt-get install xorg-dev</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398">参考文档</a>
+<code>sudo apt-get install libncurses5-dev</code>  # <a href="https://blog.csdn.net/jdsjlzx/article/details/12883359">参考文档</a></p>
+</li>
+<li>
+<p>编译
+<code>cd vim</code>
+<code>./configure --with-features=huge</code>  # <a href="https://blog.csdn.net/atomicfox/article/details/7525398">参考文档</a>
+<code>cd src/</code>
+<code>make &amp;&amp; sudo make install</code></p>
+</li>
+</ol>
+<h1 id="验证">验证</h1>
+<p><code> vim --version | grep &quot;clipboard&quot;</code>
+看到 +clipboard  即是成功了。</p>
+<h1 id="其他">其他</h1>
+<p>安装 YouCompleteMe 直接参考官方文档，先安装依赖。
+<a href="http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64">http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64</a></p>
+<p>如果出现下面错误(一定会)：
+<code>YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )</code>
+需要在编译 vim 时加入支持 python 的参数。
+<code>--enable-pythoninterp=yes --enable-python3interp=yes</code> # 前面的时 python2 的后面是3的。
+<a href="https://blog.csdn.net/northeastsqure/article/details/72847259">参考文档1</a> ，<a href="https://blog.csdn.net/u012675539/article/details/51489957">参考文档2</a>。
+使用 <code>checkinstall</code> 构建 deb 包。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">sudo apt install checkinstall
+<span class="nb">cd</span> ~/vim
+sudo checkinstall
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">参考文档</a>。</p>
+<h1 id="图标">图标</h1>
+<p>创建图标添加到右键列表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">vim ~/.local/share/applications/vim.desktop 
+
+<span class="o">[</span>Desktop Entry<span class="o">]</span>
+<span class="nv">Encoding</span><span class="o">=</span>UTF-8
+<span class="nv">Name</span><span class="o">=</span>Vim Text Editor <span class="o">(</span>Console<span class="o">)</span>
+<span class="nv">Comment</span><span class="o">=</span>Edit text files in a console using Vim
+<span class="nv">Exec</span><span class="o">=</span>vim %u
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Icon</span><span class="o">=</span>/usr/share/pixmaps/vim.png <span class="c1"># 此处设置图标路径 </span>
+<span class="c1"># 可以下载这个 http://pixelwhip.github.io/svg-flavors/img/logos/vim.png</span>
+<span class="nv">Categories</span><span class="o">=</span>Application<span class="p">;</span>Utility<span class="p">;</span>TextEditor<span class="p">;</span>
+<span class="nv">StartupNotify</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">MimeType</span><span class="o">=</span>text/plain<span class="p">;</span>
+<span class="nv">NoDisplay</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://askubuntu.com/questions/72535/creating-desktop-files-to-use-on-the-open-with-other-application-tab">参考文档</a>.
+Set vim as your default editor with <code>update-alternatives</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim <span class="m">1</span>
+sudo update-alternatives --set editor /usr/local/bin/vim
+sudo update-alternatives --install /usr/bin/vi vi /usr/local/bin/vim <span class="m">1</span>
+sudo update-alternatives --set vi /usr/local/bin/vim
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="总结">总结</h1>
+<p>vim 编译主要命令：</p>
+<ol>
+<li><code>./configure --with-features=hug --enable-pythoninterp=yes --enable-python3interp=yes --enable-rubyinterp --enable-luainterp --enable-perlinterp --enable-multibyte=true --enable-cscope=true --prefix=/usr</code>,
+<code>--enable-gui=no</code> GUI相关 <code>--enable-gui=gtk2</code>;</li>
+<li><code>cd src</code>;</li>
+<li><code>make &amp;&amp; sudo make install</code>.</li>
+</ol>
+<p>最后关于卸载以及 清理，(在源代码路径下)
+使用 <code>make clean</code> 清理之间编译完成的；
+使用 <code>sudo make uninstall</code> 卸载使用 make 安装的软件。
+实在不行，先 <code>whereis vim</code>，使用 rm -rf 删掉文件即可。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">rachpt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-07-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">linux</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2018/07/21/make-qbittorrent-from-source-code/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">make-qbittorrent-from-source-code</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2018/07/06/adb-linux-and-mi8/">
+            <span class="next-text nav-default">adb-linux-and-mi8</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        notify:  true ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:rachpt@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109494468-2', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

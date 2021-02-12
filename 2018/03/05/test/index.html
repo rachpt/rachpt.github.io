@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>next 主题使用笔记——标签 - rachpt&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="rachpt" /><meta name="description" content=" 记录 hexo-theme-next 一些使用技巧，自用。 版本要求 0.4.5&#43; 。
+" /><meta name="keywords" content="rachpt, Hugo, blog" />
+
+
+<meta name="baidu-site-verification" content="CwEgKTipRe" />
+<meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="https://rachpt.cn/2018/03/05/test/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="next 主题使用笔记——标签" />
+<meta property="og:description" content="
+记录 hexo-theme-next 一些使用技巧，自用。 版本要求 0.4.5&#43; 。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rachpt.cn/2018/03/05/test/" />
+<meta property="article:published_time" content="2018-03-05T00:00:00+08:00" />
+<meta property="article:modified_time" content="2018-03-05T00:00:00+08:00" />
+<meta itemprop="name" content="next 主题使用笔记——标签">
+<meta itemprop="description" content="
+记录 hexo-theme-next 一些使用技巧，自用。 版本要求 0.4.5&#43; 。
+">
+<meta itemprop="datePublished" content="2018-03-05T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2018-03-05T00:00:00+08:00" />
+<meta itemprop="wordCount" content="575">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="next 主题使用笔记——标签"/>
+<meta name="twitter:description" content="
+记录 hexo-theme-next 一些使用技巧，自用。 版本要求 0.4.5&#43; 。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">rachpt&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">rachpt&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">next 主题使用笔记——标签</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-05 </span>
+        
+          <span class="more-meta"> 约 575 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#引用文字居中">引用文字居中</a></li>
+    <li><a href="#大图片">大图片</a></li>
+    <li><a href="#note-标签">note 标签</a></li>
+    <li><a href="#插入视频">插入视频</a></li>
+    <li><a href="#音乐">音乐</a></li>
+    <li><a href="#tabs-标签">Tabs 标签</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2018-03-05T00:00:00" title="March 5, 2018">March 5, 2018</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <blockquote>
+<p>记录 hexo-theme-next 一些使用技巧，自用。 版本要求 <code>0.4.5+</code> 。</p>
+</blockquote>
+<h1 id="引用文字居中">引用文字居中</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{% cq %} 文本居中引用{% endcq %}   #简洁的写法 cq = centerquote
+</code></pre></td></tr></table>
+</div>
+</div><p>{% cq %} 文本居中引用{% endcq %}</p>
+<h1 id="大图片">大图片</h1>
+<blockquote>
+<p>图片将自动扩大 26%。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{% fi /image-url, alt, title %}  # fi = fullimage
+</code></pre></td></tr></table>
+</div>
+</div><p>{% fi <a href="https://gitee.com/rachpt/imgs/raw/master/test-1.jpg,">https://gitee.com/rachpt/imgs/raw/master/test-1.jpg,</a> alt, title %}</p>
+<h1 id="note-标签">note 标签</h1>
+<blockquote>
+<p><a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+</blockquote>
+<p>至next主题配置文件上设置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">note</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l">simple # modern # flat</span><span class="w"> </span><span class="c"># disabled</span><span class="w">
+</span><span class="w">  </span><span class="nt">icons</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">border_radius</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="w">  </span><span class="c"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><span class="w">
+</span><span class="w">  </span><span class="c"># Offset also applied to label tag variables. This option can work with disabled note tag.</span><span class="w">
+</span><span class="w">  </span><span class="nt">light_bg_offset</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{% note class_name %} Content (支持部分 md 格式) {% endnote %}
+
+class_name 使用：
+    default
+    primary
+    success
+    info
+    warning
+    danger
+
+</code></pre></td></tr></table>
+</div>
+</div><p>{% note default %} default 样式 (支持部分 md 格式) {% endnote %}</p>
+<p>{% note primary %} primary 样式 (支持部分 md 格式) {% endnote %}</p>
+<p>{% note success %} success 样式 (支持部分 md 格式) {% endnote %}</p>
+<p>{% note info %} info 样式 (支持部分 md 格式) {% endnote %}</p>
+<p>{% note warning %} warning 样式 (支持部分 md 格式) {% endnote %}</p>
+<p>{% note danger %} danger 样式 (支持部分 md 格式) {% endnote %}</p>
+<h1 id="插入视频">插入视频</h1>
+<p>使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;video src=&#39; &#39; type=&#39;video/mp4&#39; controls=&#39;controls&#39;  width=&#39;100%&#39; height=&#39;100%&#39;&gt;
+&lt;/video&gt;
+</code></pre></td></tr></table>
+</div>
+</div><video src='http://upload.rachpt.top/%E7%B4%AB%E8%8F%98%E5%8D%8A%E5%9C%86%E5%B9%BF%E5%9C%BA%E7%9A%84%E4%B8%80%E5%A4%A9_x264.mp4 ' type='video/mp4' controls='controls'  width='100%' height='100%'>
+</video>
+<h1 id="音乐">音乐</h1>
+<p>使用： <a href="http://saili.science/2017/05/30/music/">http://saili.science/2017/05/30/music/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;audio controls=&#34;controls&#34; playsinline=&#34;&#34; webkit-playsinline=&#34;&#34;&gt;  
+&lt;source src=&#34;http://other.web.nf01.sycdn.kuwo.cn/resource/n2/40/14/3065311430.mp3&#34; type=&#34;audio/mpeg&#34;&gt;  &lt;/audio&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><audio controls="controls" playsinline="" webkit-playsinline="">  <source src="http://other.web.nf01.sycdn.kuwo.cn/resource/n2/40/14/3065311430.mp3" type="audio/mpeg">  </audio></p>
+<h1 id="tabs-标签">Tabs 标签</h1>
+<p>至 next 主题配置中启用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># Tabs tag.</span><span class="w">
+</span><span class="w"></span><span class="nt">tabs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">&gt;</span><span class="sd">
+</span><span class="sd">  transition:
+</span><span class="sd">    tabs: true
+</span><span class="sd">    labels: true
+</span><span class="sd">  border_radius: 0</span><span class="w">  
+</span></code></pre></td></tr></table>
+</div>
+</div><p>使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-md" data-lang="md">{% tabs 选项卡[标题], 2 %}
+<span class="c">&lt;!-- tab --&gt;</span>
+<span class="gs">**这是选项卡 1**</span>
+<span class="c">&lt;!-- endtab --&gt;</span>
+<span class="c">&lt;!-- tab --&gt;</span>
+<span class="gs">**我是选项卡 2**</span>
+<span class="c">&lt;!-- endtab --&gt;</span>
+<span class="c">&lt;!-- tab --&gt;</span>
+<span class="gs">**就是选项卡 3 了**</span>
+<span class="c">&lt;!-- endtab --&gt;</span>
+{% endtabs %}
+</code></pre></td></tr></table>
+</div>
+</div><p><code>, 2 </code> 从第二个开始。</p>
+<p>{% tabs 选项卡[标题], 2 %}</p>
+<!-- tab -->
+<p>**这是选项卡 1 **</p>
+<!-- endtab -->
+<!-- tab -->
+<p>**我是选项卡 2 **</p>
+<!-- endtab -->
+<!-- tab -->
+<p>**就是选项卡 3 了 **</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{% tabs Fifth unique name %}
+&lt;!-- tab @text-width --&gt;
+**This is Tab 1.**
+&lt;!-- endtab --&gt;
+&lt;!-- tab @amazon --&gt;
+**This is Tab 2.**
+&lt;!-- endtab --&gt;
+&lt;!-- tab @bold --&gt;
+**This is Tab 3.**
+&lt;!-- endtab --&gt;
+{% endtabs %}
+</code></pre></td></tr></table>
+</div>
+</div><p>{% tabs Fifth unique name %}</p>
+<!-- tab @text-width -->
+<p><strong>This is Tab 1.</strong></p>
+<!-- endtab -->
+<!-- tab @amazon -->
+<p><strong>This is Tab 2.</strong></p>
+<!-- endtab -->
+<!-- tab @bold -->
+<p><strong>This is Tab 3.</strong></p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<p><a href="https://almostover.ru/2016-01/hexo-theme-next-test/">https://almostover.ru/2016-01/hexo-theme-next-test/</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">rachpt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-03-05
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/2018/03/10/notes-for-solve-ibus-error/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">几个关于 iBus 输入法的记录</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2018/03/05/settings-for-next-theme/">
+            <span class="next-text nav-default">next 主题设置</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        notify:  true ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:rachpt@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109494468-2', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

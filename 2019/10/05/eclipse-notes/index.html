@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>eclipse-notes - rachpt&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="rachpt" /><meta name="description" content=" eclipse 使用笔记。
+" /><meta name="keywords" content="rachpt, Hugo, blog" />
+
+
+<meta name="baidu-site-verification" content="CwEgKTipRe" />
+<meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="https://rachpt.cn/2019/10/05/eclipse-notes/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="eclipse-notes" />
+<meta property="og:description" content="
+eclipse 使用笔记。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rachpt.cn/2019/10/05/eclipse-notes/" />
+<meta property="article:published_time" content="2019-10-05T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-10-05T00:00:00+08:00" />
+<meta itemprop="name" content="eclipse-notes">
+<meta itemprop="description" content="
+eclipse 使用笔记。
+">
+<meta itemprop="datePublished" content="2019-10-05T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2019-10-05T00:00:00+08:00" />
+<meta itemprop="wordCount" content="1195">
+
+
+
+<meta itemprop="keywords" content="eclipse," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="eclipse-notes"/>
+<meta name="twitter:description" content="
+eclipse 使用笔记。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">rachpt&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">rachpt&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">eclipse-notes</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-05 </span>
+        
+          <span class="more-meta"> 约 1195 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装配置">安装配置</a>
+      <ul>
+        <li><a href="#模块">模块</a></li>
+        <li><a href="#卸载模块">卸载模块</a></li>
+      </ul>
+    </li>
+    <li><a href="#快捷键">快捷键</a></li>
+    <li><a href="#go-语言">Go 语言</a>
+      <ul>
+        <li><a href="#配置环境">配置环境</a></li>
+        <li><a href="#安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本8而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本8而报错：</a></li>
+      </ul>
+    </li>
+    <li><a href="#构建">构建</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2019-10-05T00:00:00" title="October 5, 2019">October 5, 2019</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <blockquote>
+<p>eclipse 使用笔记。</p>
+</blockquote>
+<h1 id="安装配置">安装配置</h1>
+<p><a href="https://www.iqiyi.com/v_19rrdgzjfc.html">参考教学视频1</a>。</p>
+<h2 id="模块">模块</h2>
+<p>安装 CDT 以支持 C/C++：
+<code>Help --&gt; Eclipse Marketplace</code>，搜索 CDT，<code>Eclipse C/C++ IDE CDT x.x(xxxx-xx)</code> Install 即可。</p>
+<h2 id="卸载模块">卸载模块</h2>
+<p>普通可以在 marketplace 里面的 Installed 里面卸载。
+中文语言包卸载方法：<code>Help --&gt; About Eclipse IDE --&gt; Installation Details</code>，选中相关的插件 Uninstall 即可。</p>
+<h1 id="快捷键">快捷键</h1>
+<ul>
+<li><code>Alt + /</code> 智能补全，</li>
+<li><code>Ctrl + /</code> 行 注释与取消注释，</li>
+<li><code>Ctrl + Shift + /</code> 块注释选中内容，</li>
+<li><code>Ctrl + Shift + \</code> 取消块注释选中内容，</li>
+<li><code>Ctrl + Shift + F</code> 自动整理代码，</li>
+<li><code>Ctrl + Shift + O</code> 自动导入包，</li>
+<li><code>Alt + 上</code> 当前行上移，</li>
+<li><code>Alt + 下</code> 当前行下移，</li>
+<li><code>Ctrl + Alt + 上</code> 当前行向上复制一行，</li>
+<li><code>Ctrl + Alt + 下</code> 当前行向下复制一行，</li>
+<li><code>Ctrl + D</code> 删除当前行，</li>
+<li><code>Shift + Enter</code> 光标行下面新建一行，并将光标移到那一行，</li>
+<li><code>Ctrl + M</code> 编辑区最大化显示，</li>
+<li><code>Ctrl + Shift + L</code> 显示快捷键列表。</li>
+</ul>
+<p><a href="https://www.iqiyi.com/v_19rrdgznbk.html">参考教学视频2</a>。</p>
+<p>缩放编辑区字体：</p>
+<p>Ctrl + 鼠标滚轮无效，使用通用的 <code>Ctrl + -</code> 缩小，<code>Ctrl + +(shift + =)</code> 放大。</p>
+<h1 id="go-语言">Go 语言</h1>
+<h2 id="配置环境">配置环境</h2>
+<p>打开 <code>preference --&gt; Go</code>，配合 <code>whereis go</code> 填写对应路径即可。</p>
+<p>包括 <code>Go installation Directory</code>，以及 <code>Tools</code>。<a href="https://www.cnblogs.com/xzlq/p/9947982.html">参考文档1</a>。</p>
+<p>其中 gocode、godef、guru 是一些自动工具，比如自动不全、拼写检查等。安装需要使用 go 自行编译。其中需要注意 <code>golang.org</code> 为 google 的网站，需要使用 github 找到相应进行 repo 编译安装，网上有较多教程，折腾几下就可以编译成功。archlinux 系可以使用 AUR 安装 <code>yay -S gocode-git</code>，旧版本会有不兼容现象。</p>
+<p>编译 godef、guru</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 编译godef，以普通用户在家目录运行</span>
+go get -u -v github.com/rogpeppe/godef
+<span class="c1"># 等待完成后，二进制文件构建在 ~/go/bin/godef</span>
+
+<span class="c1"># 编译 guru 比较麻烦，因为 golang.org 被墙，需要自己造特殊文件夹</span>
+
+mkdir -p ~/go/src/golang.org/x/
+<span class="nb">cd</span>  ~/go/src/golang.org/x/
+
+git clone https://github.com/golang/tools.git <span class="p">&amp;</span>
+git clone https://github.com/golang/net.git <span class="p">&amp;</span>
+git clone https://github.com/golang/sync.git <span class="p">&amp;</span>
+git clone https://github.com/golang/xerrors.git <span class="p">&amp;</span>
+
+<span class="c1"># 设置 GOPATH</span>
+<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s1">&#39;~/go&#39;</span>
+<span class="c1"># 等待所有下载完成后，使用按包编译命令</span>
+<span class="nb">cd</span> ~/go/src <span class="c1"># 该条貌似不必要</span>
+<span class="c1"># 包名是相对 GOPATH 的 src 目录的</span>
+go build golang.org/x/tools/cmd/guru/
+<span class="c1"># 二进制文件 就在当前目录下。</span>
+
+<span class="c1"># 移动到系统目录</span>
+<span class="c1"># 使用 sudo cp 可以自动修改相应属性</span>
+
+sudo cp guru ../bin/godef /usr/bin/
+
+<span class="c1"># 最后可以清理不需要的 源代码文件</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上面的方法好像比较傻，更简洁的做法是配置 <code>GOPROXY</code>，然后使用 <code>go get</code> 命令安装。</p>
+<p>可以使用 <code>go env GOROOT</code> 获得 go 的安装路径。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 设置 GO 环境变量</span>
+vim ~/.bashrc
+
+<span class="c1"># GO Settings</span>
+<span class="nb">export</span> <span class="nv">GOROOT</span><span class="o">=</span>/usr/lib/go
+<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/go&#34;</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on
+<span class="c1">#export GOPROXY=https://goproxy.io</span>
+<span class="nb">export</span> <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn
+<span class="c1">#export GOPROXY=https://mirrors.aliyun.com/goproxy/</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>配置好后 source 一下 .bashrc 以生效。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">go get -u -v github.com/nsf/gocode
+go get -u -v github.com/rogpeppe/godef
+go get -u -v golang.org/x/tools/cmd/guru <span class="c1"># 不能用阿里云代理</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>以后直接使用上面三条命令就能升级 <code>gocode</code> <code>godef</code> <code>guru</code>。</p>
+<h2 id="安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本8而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本8而报错：</h2>
+<p><code>&quot;could not start goclipse because java version is 0，requare java 8&quot; </code>。<br>
+解决办法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">whereis eclipse  <span class="c1"># 找到安装路径(使用直接解压版请忽略)</span>
+<span class="c1"># /usr/lib/eclipse</span>
+
+<span class="c1"># 应该有文件 /usr/lib/eclipse/eclipse.ini</span>
+
+sudo vim /usr/lib/eclipse/eclipse.ini
+
+<span class="c1"># 在 -vmargs 上面一行修改 或者添加如下两行</span>
+
+-vm
+/usr/lib/jvm/java-8-openjdk/bin/
+
+<span class="c1"># 需要自行验证 java8 路径，也可能是 java-8-jdk。</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>每次更新升级 eclipse 后都需要改一下(除非只安装了jdk8)，<a href="https://www.cnblogs.com/kumata/p/10064386.html">参考文档2</a>。</p>
+<h1 id="构建">构建</h1>
+<p>第一次运行、以及切换项目、源文件时都需要设置 <code>Run configurations</code>。</p>
+<p><img src="https://gitee.com/rachpt/imgs/raw/master/eclipse-notes-2019-10-7-15-0-29.png" alt="eclipse-notes-2019-10-7-15-0-29.png"></p>
+<p>后面只需单击工具栏 绿圈箭头 即可重新构建并运行，或则使用快捷键 <code>Ctrl + F11</code>。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">rachpt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-05
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/eclipse/">eclipse</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2019/11/04/git-notes/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">git-notes</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2019/09/18/interview-notes/">
+            <span class="next-text nav-default">Interview-notes</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        notify:  true ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:rachpt@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109494468-2', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

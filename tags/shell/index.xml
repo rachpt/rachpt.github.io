@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on rachpt&#39;s Blog</title>
+    <link>https://rachpt.cn/tags/shell/</link>
+    <description>Recent content in shell on rachpt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zip-and-upload-to-baidupcs</title>
+      <link>https://rachpt.cn/2018/07/02/zip-and-upload-to-baidupcs/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/07/02/zip-and-upload-to-baidupcs/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;文件批量使用 zip 打包并上传 百度网盘备份。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>a-simple-script-to-count-ABC</title>
+      <link>https://rachpt.cn/2018/06/21/a-simple-script-to-count-abc/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/06/21/a-simple-script-to-count-abc/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;一份规整的 excel 表格，需要统计每一行所有 ABC 的个数,求和放到最后一行。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>extra-shell-notes</title>
+      <link>https://rachpt.cn/2018/05/07/extra-shell-notes/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/05/07/extra-shell-notes/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;自学收集的一些有用的 shell 奇淫妙技。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>use-linux-format-not-dos</title>
+      <link>https://rachpt.cn/2018/04/01/use-linux-format-not-dos/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/04/01/use-linux-format-not-dos/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;写个 shell 脚本格式化输出数据，出现诡异 bug，郁闷了一天，早上看书之际，dos2unix 出现到脑海中，乌云散去，果然如此。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>a-bash-script-for-pt-signin</title>
+      <link>https://rachpt.cn/2018/03/29/a-bash-script-for-pt-signin/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/03/29/a-bash-script-for-pt-signin/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;写一个脚本，每天 定时自动签到 PT 站。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>notes-for-shell-scripting-bible</title>
+      <link>https://rachpt.cn/2018/03/23/notes-for-shell-scripting-bible/</link>
+      <pubDate>Fri, 23 Mar 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/03/23/notes-for-shell-scripting-bible/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Linux 命令行与 shell 脚本编程大全（第二版）简要阅读笔记。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>几个 shell 脚本</title>
+      <link>https://rachpt.cn/2018/03/19/%E5%87%A0%E4%B8%AA-shell-%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 19 Mar 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/03/19/%E5%87%A0%E4%B8%AA-shell-%E8%84%9A%E6%9C%AC/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记录几个 shell 脚本，高效。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 中快速添加 hexo 文章</title>
+      <link>https://rachpt.cn/2018/03/13/linux-%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0-hexo-%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/03/13/linux-%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0-hexo-%E6%96%87%E7%AB%A0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
