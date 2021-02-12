@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>awk on rachpt&#39;s Blog</title>
+    <link>https://rachpt.cn/tags/awk/</link>
+    <description>Recent content in awk on rachpt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Mar 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/awk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>use-outer-variables-in-awk</title>
+      <link>https://rachpt.cn/2018/03/31/use-outer-variables-in-awk/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/03/31/use-outer-variables-in-awk/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;awk 命令中使用外部定义的变量。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>beamer on rachpt&#39;s Blog</title>
+    <link>https://rachpt.cn/tags/beamer/</link>
+    <description>Recent content in beamer on rachpt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/beamer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>latex-beamer-note</title>
+      <link>https://rachpt.cn/2019/01/16/latex-beamer-note/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2019/01/16/latex-beamer-note/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记录一些使用 LaTeX beamer 的技巧。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

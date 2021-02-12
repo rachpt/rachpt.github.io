@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>实用 on rachpt&#39;s Blog</title>
+    <link>https://rachpt.cn/categories/%E5%AE%9E%E7%94%A8/</link>
+    <description>Recent content in 实用 on rachpt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/categories/%E5%AE%9E%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 使用笔记-01</title>
+      <link>https://rachpt.cn/2018/01/27/windows-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0-01/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/01/27/windows-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0-01/</guid>
+      <description>&lt;p&gt;首先得知道windows这玩意儿是啥。或许很多人已将将windows和PC电脑画等号了，这显然是不对的。windows是巨硬推出的一款带图形界面的操作系统，我们买的电脑或者笔记本大部分钱用于硬件上，几户所有预装系统的笔记本都是最便宜定置性最差的windows家庭版（或则家庭中文版）。于是逻辑上而言，装系统将是使用windows的第一步，对于小白用户，老老实实用你的windows家庭版（或许你都不知道自己的系统是啥，和别人的有啥区别，囧）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 更新 xz 至 5.2&#43;</title>
+      <link>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2018/01/13/ubuntu-%E6%9B%B4%E6%96%B0-xz-%E8%87%B3-5.2-/</guid>
+      <description>&lt;p&gt;xz 是啥，以前觉着7z就已经到顶级了，原来还有更厉害的xz压缩。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 免安装程序配置</title>
+      <link>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/12/31/linux-%E5%85%8D%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>我的安卓我做主</title>
+      <link>https://rachpt.cn/2017/11/14/%E6%88%91%E7%9A%84%E5%AE%89%E5%8D%93%E6%88%91%E5%81%9A%E4%B8%BB/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/11/14/%E6%88%91%E7%9A%84%E5%AE%89%E5%8D%93%E6%88%91%E5%81%9A%E4%B8%BB/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;开放源代码的安卓系统无疑是可玩性、可定制性极强的OS。在几年前我对安卓与IOS等系统还无法真正区分，直到换了新安卓手机，自己琢磨学会了刷机。为什么刷机，刷机可以体验到官方系统完全没有的新功能，有可能解决官方无法修复或者实现的功能但也可能引入其他缺陷（全看适配开发者个人能力），就像换了一台新手机，也可以体验纯正的Google服务（前提是要有相应的适配ROM）。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>搭建一个方便的多平台笔记方案</title>
+      <link>https://rachpt.cn/2017/11/10/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E7%9A%84%E5%A4%9A%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://rachpt.cn/2017/11/10/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E7%9A%84%E5%A4%9A%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
