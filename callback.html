@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>OAuth2 回调</title>
+    <script>
+      function parseJwt(token) {
+        const base64Url = token.split('.')[1]
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/')
+        const jsonPayload = decodeURIComponent(
+          atob(base64)
+            .split('')
+            .map(function (c) {
+              return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+            })
+            .join('')
+        )
+
+        return JSON.parse(jsonPayload)
+      }
+
+      window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.hash.substring(1))
+        const accessToken = urlParams.get('access_token')
+        const idToken = urlParams.get('id_token')
+
+        if (accessToken) {
+          // 使用 localStorage 或 sessionStorage 传递 token 回油猴脚本
+          localStorage.setItem('google_access_token', accessToken)
+          localStorage.setItem('google_id_token', idToken)
+
+          // 可选：关闭当前窗口
+          window.close()
+        } else {
+          console.error('未找到 access token')
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>授权成功，正在处理...</p>
+  </body>
+</html>
