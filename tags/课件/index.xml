@@ -4,26 +4,23 @@
     <title>课件 on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/%E8%AF%BE%E4%BB%B6/</link>
     <description>Recent content in 课件 on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Nov 2017 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/%E8%AF%BE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/%E8%AF%BE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>高等量子力学_打印版笔记</title>
       <link>https://rachpt.cn/2017/11/17/quantum-mechanics-notes/</link>
       <pubDate>Fri, 17 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/17/quantum-mechanics-notes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>高等统计物理_打印版笔记</title>
       <link>https://rachpt.cn/2017/11/16/statistical-physics-notes/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/16/statistical-physics-notes/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

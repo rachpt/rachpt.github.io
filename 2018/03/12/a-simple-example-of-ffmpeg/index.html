@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/03/12/a-simple-example-of-ffmpeg/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="简单使用 FFmpeg 压制视频" />
-<meta property="og:description" content="
-使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/03/12/a-simple-example-of-ffmpeg/" />
-<meta property="article:published_time" content="2018-03-12T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-03-12T00:00:00+08:00" />
-<meta itemprop="name" content="简单使用 FFmpeg 压制视频">
-<meta itemprop="description" content="
-使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。
-">
-<meta itemprop="datePublished" content="2018-03-12T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-03-12T00:00:00+08:00" />
-<meta itemprop="wordCount" content="702">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/03/12/a-simple-example-of-ffmpeg/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="简单使用 FFmpeg 压制视频">
+  <meta property="og:description" content="使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-03-12T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-03-12T00:00:00+08:00">
+    <meta property="article:tag" content="Ffmpeg">
 
-<meta itemprop="keywords" content="ffmpeg," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="简单使用 FFmpeg 压制视频"/>
-<meta name="twitter:description" content="
-使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。
-"/>
+  <meta itemprop="name" content="简单使用 FFmpeg 压制视频">
+  <meta itemprop="description" content="使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。">
+  <meta itemprop="datePublished" content="2018-03-12T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-03-12T00:00:00+08:00">
+  <meta itemprop="wordCount" content="701">
+  <meta itemprop="keywords" content="Ffmpeg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="简单使用 FFmpeg 压制视频">
+  <meta name="twitter:description" content="使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 702 字 </span>
+          <span class="more-meta"> 约 701 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -172,24 +167,23 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。</p>
-</blockquote>
+<p>使用 FFmpeg 2pass 简单改小视频分辨率，降低音视频码率，以用于移动设备观看。</p></blockquote>
 <p>直接上命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null   <span class="c1">#windows 最后使用 NULL，linux 使用 /dev/null。抑制输出。</span>
-<span class="c1"># -s 后面就是视频分辨率， b:v  b:a 后面是相应码率。</span>
-<span class="c1"># &amp;&amp; \ 可以连接两句</span>
-ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 out.mp4
-<span class="c1"># strict -2 参数由ffmpeg版本决定，旧的要，否则报错。</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null   <span class="c1">#windows 最后使用 NULL，linux 使用 /dev/null。抑制输出。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -s 后面就是视频分辨率， b:v  b:a 后面是相应码率。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &amp;&amp; \ 可以连接两句</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i in.mp4 -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 out.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># strict -2 参数由ffmpeg版本决定，旧的要，否则报错。</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>速度选项：</p>
 <p>ultrafast
@@ -203,39 +197,37 @@ slower
 veryslow</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-an   : 不编码音频
--vcodec : 设置视频的编码，我这里使用的是x264
--b   : 这个是码率
--f   : 强制使用格式
--y   : 自动输y确认
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-an   : 不编码音频
+</span></span><span class="line"><span class="cl">-vcodec : 设置视频的编码，我这里使用的是x264
+</span></span><span class="line"><span class="cl">-b   : 这个是码率
+</span></span><span class="line"><span class="cl">-f   : 强制使用格式
+</span></span><span class="line"><span class="cl">-y   : 自动输y确认
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>一条命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">nohup ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 out.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">nohup ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> ffmpeg -i in.mkv -s 854x480 -c:v libx264 -preset slow -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 out.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://gitee.com/rachpt/imgs/raw/master/ffmpeg-htop-1.jpg" alt="ffmpeg-htop-1.jpg"></p>
-<p><a href="https://stackoverflow.com/questions/32931685/the-encoder-aac-is-experimental-but-experimental-codecs-are-not-enabled">参考内容1</a> ， <a href="http://trac.ffmpeg.org/wiki/Encode/H.264">参考内容2</a>  。</p>
+</div><p><img src="https://img.rachpt.cn/imgs/ffmpeg-htop-1.jpg" alt="ffmpeg-htop-1.jpg"></p>
+<p><a href="https://stackoverflow.com/questions/32931685/the-encoder-aac-is-experimental-but-experimental-codecs-are-not-enabled">参考内容 1</a> ， <a href="http://trac.ffmpeg.org/wiki/Encode/H.264">参考内容 2</a> 。</p>
 <p>{% note success %}</p>
 <p>使用脚本批量压制：</p>
 <p>{% endnote %}</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -253,32 +245,32 @@ veryslow</p>
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash 
-</span><span class="cp"></span>
-<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find *.mp4 *.mkv *.avi ! -name <span class="s2">&#34;*_480p.mp4&#34;</span> -a<span class="k">)</span>
-<span class="nv">OLDIFS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$IFS</span><span class="s2">&#34;</span>
-<span class="nv">IFS</span><span class="o">=</span><span class="s2">$&#34;\n&#34;</span>
-<span class="k">for</span> filename in *.mp4 *.mkv *.avi
-
-<span class="k">do</span>
-	nohup ffmpeg -i <span class="nv">$filename</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>	ffmpeg -i <span class="nv">$filename</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 <span class="s2">&#34;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&#34;</span>_480p.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-	
-<span class="k">done</span>
-
-rm ffmpeg2pass*
-
-<span class="nv">IFS</span><span class="o">=</span><span class="nv">$OLDIFS</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find *.mp4 *.mkv *.avi ! -name <span class="s2">&#34;*_480p.mp4&#34;</span> -a<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OLDIFS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$IFS</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IFS</span><span class="o">=</span><span class="s2">$&#34;\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> filename in *.mp4 *.mkv *.avi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	nohup ffmpeg -i <span class="nv">$filename</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>	ffmpeg -i <span class="nv">$filename</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 <span class="s2">&#34;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&#34;</span>_480p.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm ffmpeg2pass*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">IFS</span><span class="o">=</span><span class="nv">$OLDIFS</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p><a href="http://lazybios.com/2013/07/flv-convert-to-mp3-shell-script/">参考文档1</a> ， <a href="http://blog.csdn.net/weiyuefei/article/details/52704920">参考文档2—nohup</a> ，<a href="http://linux.51yip.com/search/find">参考文档—find</a> ，<a href="http://blog.csdn.net/reliveit/article/details/45271415">参考文档—IFS</a> 。</p>
+</div><p><a href="http://lazybios.com/2013/07/flv-convert-to-mp3-shell-script/">参考文档 1</a> ， <a href="http://blog.csdn.net/weiyuefei/article/details/52704920">参考文档 2—nohup</a> ，<a href="http://linux.51yip.com/search/find">参考文档—find</a> ，<a href="http://blog.csdn.net/reliveit/article/details/45271415">参考文档—IFS</a> 。</p>
 <p><code>find </code> 使用有无，具体修改如下。</p>
 <p>{% note success %}</p>
 <p>改进版，可以处理子目录下的所有 <code>mp4 mkv avi wmv </code>格式视频。</p>
 <p>{% endnote %}</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -304,84 +296,84 @@ rm ffmpeg2pass*
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash 
-</span><span class="cp"></span>rm -f nohup.out
-
-<span class="k">if</span> <span class="o">[</span> ! -d finish <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  mkdir -p finish
-<span class="k">fi</span>
-
-<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find  <span class="se">\(</span> -iname <span class="s2">&#34;*.mp4&#34;</span> -o -iname <span class="s2">&#34;*.mkv&#34;</span> -o -iname <span class="s2">&#34;*.avi&#34;</span> -o -iname <span class="s2">&#34;*.wmv&#34;</span> <span class="se">\)</span> -a ! -name <span class="s2">&#34;*_480p.mp4&#34;</span><span class="k">)</span>
-<span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-
-
-<span class="k">for</span> filename in <span class="nv">$filelist</span>
-
-<span class="k">do</span>
-	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*/</span><span class="si">}</span>
-	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">tempname</span><span class="p">%.*</span><span class="si">}</span>
-	nohup ffmpeg -i <span class="nv">$FOLDER</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> ffmpeg -i <span class="nv">$FOLDER</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 finish/<span class="s2">&#34;</span><span class="si">${</span><span class="nv">newfilename</span><span class="si">}</span><span class="s2">&#34;</span>_480p.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-	
-<span class="k">done</span>
-
-
-rm -f ffmpeg2pass*
-
-<span class="nb">exit</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>rm -f nohup.out
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d finish <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  mkdir -p finish
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find  <span class="se">\(</span> -iname <span class="s2">&#34;*.mp4&#34;</span> -o -iname <span class="s2">&#34;*.mkv&#34;</span> -o -iname <span class="s2">&#34;*.avi&#34;</span> -o -iname <span class="s2">&#34;*.wmv&#34;</span> <span class="se">\)</span> -a ! -name <span class="s2">&#34;*_480p.mp4&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> filename in <span class="nv">$filelist</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*/</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">tempname</span><span class="p">%.*</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	nohup ffmpeg -i <span class="nv">$FOLDER</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> ffmpeg -i <span class="nv">$FOLDER</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span> -s 854x480 -c:v libx264 -preset fast -b:v 500k -pass <span class="m">2</span> -c:a aac -b:a 64k -strict -2 finish/<span class="s2">&#34;</span><span class="si">${</span><span class="nv">newfilename</span><span class="si">}</span><span class="s2">&#34;</span>_480p.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm -f ffmpeg2pass*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="裁剪">裁剪</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ffmpeg -ss 00:00:00 -i in.mp4 -to 03:35:55 -vcodec copy -acodec copy -avoid_negative_ts 1 cutout.mp4
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -ss 00:00:00 -i in.mp4 -to 03:35:55 -vcodec copy -acodec copy -avoid_negative_ts 1 cutout.mp4
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>-i</code> 需要在 <code>-to</code> 前面。</p>
-<p><a href="http://blog.csdn.net/matrix_laboratory/article/details/53157383">参考文章1</a>，<a href="http://trac.ffmpeg.org/wiki/Seeking">参考2</a>。</p>
+<p><a href="http://blog.csdn.net/matrix_laboratory/article/details/53157383">参考文章 1</a>，<a href="http://trac.ffmpeg.org/wiki/Seeking">参考 2</a>。</p>
 <h1 id="字幕">字幕</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">ffmpeg -i input.mp4 -i subtitles.srt -c:s mov_text -c:v copy -c:a copy output.mp4
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ffmpeg -i input.mp4 -i subtitles.srt -c:s mov_text -c:v copy -c:a copy output.mp4
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.yaosansi.com/post/ffmpeg-burn-subtitles-into-video/">参考文档</a>。</p>
 <p>附录：</p>
 <p>mpv 几个快捷键</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">键</th>
-<th style="text-align:center">功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">&lt;</td>
-<td style="text-align:center">逐帧 播放，上一帧</td>
-</tr>
-<tr>
-<td style="text-align:center">&gt;</td>
-<td style="text-align:center">逐帧 播放，下一帧</td>
-</tr>
-<tr>
-<td style="text-align:center">M</td>
-<td style="text-align:center">静音</td>
-</tr>
-<tr>
-<td style="text-align:center">shift  +  &lt;&ndash;</td>
-<td style="text-align:center">退一秒</td>
-</tr>
-<tr>
-<td style="text-align:center">shift  +  &ndash;&gt;</td>
-<td style="text-align:center">进一秒</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">键</th>
+          <th style="text-align: center">功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">&lt;</td>
+          <td style="text-align: center">逐帧 播放，上一帧</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&gt;</td>
+          <td style="text-align: center">逐帧 播放，下一帧</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">M</td>
+          <td style="text-align: center">静音</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">shift + &lt;&ndash;</td>
+          <td style="text-align: center">退一秒</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">shift + &ndash;&gt;</td>
+          <td style="text-align: center">进一秒</td>
+      </tr>
+  </tbody>
 </table>
 <p><a href="http://blog.csdn.net/REIONE/article/details/52610581">参考内容</a> 。</p>
     </div>
@@ -410,11 +402,11 @@ rm -f ffmpeg2pass*
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -467,7 +459,7 @@ rm -f ffmpeg2pass*
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -488,8 +480,8 @@ rm -f ffmpeg2pass*
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -500,12 +492,12 @@ rm -f ffmpeg2pass*
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -513,19 +505,8 @@ rm -f ffmpeg2pass*
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

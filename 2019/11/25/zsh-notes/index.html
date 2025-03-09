@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 从bash切换到zsh，记录一些注意点与心得。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2019/11/25/zsh-notes/" />
@@ -35,36 +35,32 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="zsh-notes" />
-<meta property="og:description" content="
-从bash切换到zsh，记录一些注意点与心得。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2019/11/25/zsh-notes/" />
-<meta property="article:published_time" content="2019-11-25T10:14:47+08:00" />
-<meta property="article:modified_time" content="2019-11-25T10:14:47+08:00" />
-<meta itemprop="name" content="zsh-notes">
-<meta itemprop="description" content="
-从bash切换到zsh，记录一些注意点与心得。
-">
-<meta itemprop="datePublished" content="2019-11-25T10:14:47+08:00" />
-<meta itemprop="dateModified" content="2019-11-25T10:14:47+08:00" />
-<meta itemprop="wordCount" content="1647">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2019/11/25/zsh-notes/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="zsh-notes">
+  <meta property="og:description" content="从bash切换到zsh，记录一些注意点与心得。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-11-25T10:14:47+08:00">
+    <meta property="article:modified_time" content="2019-11-25T10:14:47+08:00">
+    <meta property="article:tag" content="Zsh">
+    <meta property="article:tag" content="Bash">
 
-<meta itemprop="keywords" content="zsh,bash," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="zsh-notes"/>
-<meta name="twitter:description" content="
-从bash切换到zsh，记录一些注意点与心得。
-"/>
+  <meta itemprop="name" content="zsh-notes">
+  <meta itemprop="description" content="从bash切换到zsh，记录一些注意点与心得。">
+  <meta itemprop="datePublished" content="2019-11-25T10:14:47+08:00">
+  <meta itemprop="dateModified" content="2019-11-25T10:14:47+08:00">
+  <meta itemprop="wordCount" content="1647">
+  <meta itemprop="keywords" content="Zsh,Bash">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="zsh-notes">
+  <meta name="twitter:description" content="从bash切换到zsh，记录一些注意点与心得。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +86,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +116,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -183,8 +179,7 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>从bash切换到zsh，记录一些注意点与心得。</p>
-</blockquote>
+<p>从bash切换到zsh，记录一些注意点与心得。</p></blockquote>
 <h1 id="why">why?</h1>
 <p>很早就听说 <code>zsh</code> 的强大，期间也尝试过使用 <code>fish</code>，相比 <code>bash</code>，两者确实有太多的优势。在使用<code>bash</code>两年后，对其有了较为深刻的理解后，我决定使用 zsh 来提升日常工作效率。</p>
 <h1 id="安装">安装</h1>
@@ -195,15 +190,15 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
-<span class="c1"># 或则</span>
-sh -c <span class="s2">&#34;</span><span class="k">$(</span>wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 或则</span>
+</span></span><span class="line"><span class="cl">sh -c <span class="s2">&#34;</span><span class="k">$(</span>wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>如果上述链接访问缓慢，可以使用 <code>git clone</code> 或者下载 zip 至 <code>~/.oh-my-zsh</code>，然后 复制其中的 <code>templates/zshrc.zsh-template</code> 至 <code>~/.zshrc</code> 即可手动安装。
@@ -215,13 +210,13 @@ sh -c <span class="s2">&#34;</span><span class="k">$(</span>wget -O- https://raw
 <p>这是一个速度很快的样式很漂亮的主题，相比它的上一代<code>powerlevel9k</code>速度提升明显。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 安装</span>
-git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/romkatv/powerlevel10k.git <span class="nv">$ZSH_CUSTOM</span>/themes/powerlevel10k
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 安装</span>
+</span></span><span class="line"><span class="cl">git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/romkatv/powerlevel10k.git <span class="nv">$ZSH_CUSTOM</span>/themes/powerlevel10k
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中 <code>$ZSH_CUSTOM</code> 值应该是<code>~/.oh-my-zsh/custom</code>，<code>--depth=1</code> 表示只 克隆最近一次commit后的全部代码，而不会下载以前的旧代码，理论上只比下载 zip 大一丢丢，以后还可以 pull 最新的代码升级。
 下载完成后，在<code>zshrc</code> 中修改 <code>ZSH_THEME=&quot;robbyrussell&quot;</code> 为 <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code>即可。新开一个 zsh，会自动执行 <code>p10k configure</code> 配置生成 该主题的配置文件 <code>~/.p10k.zsh</code>，不过在这之前需要先下载推荐的字体，并使用这些字体，才能顺利显示各种有意思的符号(和powerline道理一样)。就是用官方推荐的<code>Meslo Nerd Font</code>字体即可。字体下载：</p>
@@ -237,16 +232,16 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
 地址：https://github.com/zsh-users/zsh-autosuggestions 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">git clone --depth <span class="m">1</span> https://github.com/zsh-users/zsh-autosuggestions <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="si">}</span>/plugins/zsh-autosuggestions
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --depth <span class="m">1</span> https://github.com/zsh-users/zsh-autosuggestions <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="si">}</span>/plugins/zsh-autosuggestions
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>启用：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -255,25 +250,25 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">plugins</span><span class="o">=(</span>
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting  <span class="c1"># 这是后面要提的重插件</span>
-    history-substring-search  <span class="c1"># 这是后面要提的重插件</span>
-    zsh-completions  <span class="c1"># 这是后面要提的重插件</span>
-<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">plugins</span><span class="o">=(</span>
+</span></span><span class="line"><span class="cl">    git
+</span></span><span class="line"><span class="cl">    zsh-autosuggestions
+</span></span><span class="line"><span class="cl">    zsh-syntax-highlighting  <span class="c1"># 这是后面要提的重插件</span>
+</span></span><span class="line"><span class="cl">    history-substring-search  <span class="c1"># 这是后面要提的重插件</span>
+</span></span><span class="line"><span class="cl">    zsh-completions  <span class="c1"># 这是后面要提的重插件</span>
+</span></span><span class="line"><span class="cl"><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="zsh-syntax-highlighting">zsh-syntax-highlighting</h2>
 <p>功能：以不同的颜色标记命令的不同部分，比如，错误命令显示红色，正确命令显示绿色。
 地址：https://github.com/zsh-users/zsh-syntax-highlighting 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">git clone --depth <span class="m">1</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --depth <span class="m">1</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>启用同上。</p>
 <h2 id="zsh-history-substring-search">zsh-history-substring-search</h2>
@@ -312,11 +307,11 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -370,7 +365,7 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -391,8 +386,8 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -403,12 +398,12 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -416,19 +411,8 @@ git clone --depth<span class="o">=</span><span class="m">1</span> https://github
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

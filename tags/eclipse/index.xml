@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>eclipse on rachpt&#39;s Blog</title>
+    <title>Eclipse on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/eclipse/</link>
-    <description>Recent content in eclipse on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Eclipse on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>eclipse-notes</title>
       <link>https://rachpt.cn/2019/10/05/eclipse-notes/</link>
       <pubDate>Sat, 05 Oct 2019 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2019/10/05/eclipse-notes/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;eclipse 使用笔记。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;eclipse 使用笔记。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

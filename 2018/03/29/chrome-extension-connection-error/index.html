@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题 - rachpt&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="rachpt" /><meta name="description" content="Chrome 扩展问题" />
+
+
+<meta name="baidu-site-verification" content="CwEgKTipRe" />
+<meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
+
+
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/2018/03/29/chrome-extension-connection-error/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+<meta property="og:url" content="http://localhost:1313/2018/03/29/chrome-extension-connection-error/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题">
+  <meta property="og:description" content="Chrome 扩展问题">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-03-29T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-03-29T00:00:00+08:00">
+    <meta property="article:tag" content="Chrome">
+    <meta property="article:tag" content="Extension">
+
+  <meta itemprop="name" content="Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题">
+  <meta itemprop="description" content="Chrome 扩展问题">
+  <meta itemprop="datePublished" content="2018-03-29T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-03-29T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1689">
+  <meta itemprop="keywords" content="Chrome,Extension">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题">
+  <meta name="twitter:description" content="Chrome 扩展问题">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">rachpt&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">rachpt&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-29 </span>
+        <div class="post-category">
+            <a href="/categories/web/"> web </a>
+            </div>
+          <span class="more-meta"> 约 1689 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题描述">问题描述</a></li>
+        <li><a href="#问题排查过程">问题排查过程</a>
+          <ul>
+            <li><a href="#1-初步分析">1. 初步分析</a></li>
+            <li><a href="#2-代码排查">2. 代码排查</a></li>
+            <li><a href="#3-错误尝试">3. 错误尝试</a></li>
+          </ul>
+        </li>
+        <li><a href="#解决方案">解决方案</a></li>
+        <li><a href="#技术分析">技术分析</a>
+          <ul>
+            <li><a href="#chrome-扩展消息机制">Chrome 扩展消息机制</a></li>
+            <li><a href="#为什么会出现这个错误">为什么会出现这个错误？</a></li>
+          </ul>
+        </li>
+        <li><a href="#chrome-扩展消息机制深入解析">Chrome 扩展消息机制深入解析</a>
+          <ul>
+            <li><a href="#browserruntimelasterror-的特性">browser.runtime.lastError 的特性</a></li>
+            <li><a href="#runtimesendmessage-的异常处理最佳实践">runtime.sendMessage 的异常处理最佳实践</a></li>
+            <li><a href="#性能考虑">性能考虑</a></li>
+          </ul>
+        </li>
+        <li><a href="#结论">结论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2018-03-29T00:00:00" title="March 29, 2018">March 29, 2018</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <blockquote>
+<p>本文使用 <a href="https://wxt.dev">WXT (Web Extension Tools)</a> 框架开发，browser.XXX 会被动编译转化为 chrome.XXX，特此说明。</p></blockquote>
+<h2 id="问题描述">问题描述</h2>
+<p>在开发 Chrome 扩展时，遇到了一个常见的错误：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Uncaught (in promise) Error: Could not establish connection. Receiving end does not exist.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个错误出现在扩展的 background 脚本中，具体是在 background 服务初始化完成后立即出现：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">[</span><span class="n">wxt</span><span class="p">]</span> <span class="n">Reloading</span> <span class="n">content</span> <span class="n">script</span><span class="p">:</span> <span class="ne">Object</span>  <span class="n">background</span><span class="o">.</span><span class="n">js</span><span class="p">:</span><span class="mi">1747</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">25</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="mi">04</span> <span class="mi">14</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mf">35.375</span><span class="p">]</span> <span class="p">[</span><span class="n">background</span><span class="p">]</span> <span class="n">Background</span> <span class="err">服务初始化完成</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="n">Uncaught</span> <span class="p">(</span><span class="ow">in</span> <span class="n">promise</span><span class="p">)</span> <span class="n">Error</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">establish</span> <span class="n">connection</span><span class="o">.</span> <span class="n">Receiving</span> <span class="n">end</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="o">.</span>  <span class="n">background</span><span class="o">.</span><span class="n">js</span><span class="p">:</span><span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="问题排查过程">问题排查过程</h2>
+<h3 id="1-初步分析">1. 初步分析</h3>
+<p>最初以为这是 WXT（Web Extension Tools）框架的问题，因为在 GitHub 上发现了类似的 <a href="https://github.com/wxt-dev/wxt/issues/854">issue</a>。但进一步分析发现，这其实是 Chrome 扩展架构本身的特性。</p>
+<h3 id="2-代码排查">2. 代码排查</h3>
+<p>通过在代码中添加日志，定位到错误发生在 <code>broadcastBackgroundReady</code> 函数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">broadcastBackgroundReady() {</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;broadcastBackgroundReady  -------- 1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">&#39;Background broadcastBackgroundReady  - 2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="s1">&#39;BACKGROUND_READY&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="s1">&#39;broadcastBackgroundReady  -------- 4&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">response</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">&#39;Background broadcastBackgroundReady  - 2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Logger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Background sendMessage&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-错误尝试">3. 错误尝试</h3>
+<p>最初尝试了几个错误的解决方案：</p>
+<ol>
+<li>修改消息发送时序</li>
+<li>添加额外的错误处理</li>
+<li>尝试在 <code>onInstalled</code> 事件中重新注入 content scripts（这是一个不相关的解决方案）</li>
+</ol>
+<h2 id="解决方案">解决方案</h2>
+<p>最终发现，这个错误是由 Chrome 扩展的消息传递机制导致的。正确的解决方案非常简单：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">broadcastBackgroundReady</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">void</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nx">ExtendedLogMessageType</span><span class="p">.</span><span class="nx">LOG_BACKGROUND_READY</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">void</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span> <span class="c1">// 消费掉可能的异常，防止抛到外侧
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关键点是在消息回调函数中访问 <code>browser.runtime.lastError</code>，这样就能避免错误被抛出。</p>
+<h2 id="技术分析">技术分析</h2>
+<h3 id="chrome-扩展消息机制">Chrome 扩展消息机制</h3>
+<ol>
+<li>
+<p><strong>错误产生原因</strong>：</p>
+<ul>
+<li>当发送消息时，如果接收端不存在，Chrome 会在 <code>browser.runtime.lastError</code> 中设置错误信息</li>
+<li>如果在回调函数中没有检查这个错误，它就会被抛出成为未捕获的异常</li>
+</ul>
+</li>
+<li>
+<p><strong>browser.runtime.lastError 的特殊性</strong>：</p>
+<ul>
+<li>这是 Chrome 扩展 API 的一个特殊设计</li>
+<li>只要在回调函数中访问了 <code>lastError</code>，Chrome 就认为错误被处理了</li>
+<li>不需要实际对错误做任何处理，仅访问这个属性就足够了</li>
+</ul>
+</li>
+<li>
+<p><strong>最佳实践</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">void</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span> <span class="c1">// 最简洁的处理方式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="为什么会出现这个错误">为什么会出现这个错误？</h3>
+<p>在扩展初始化过程中，这个错误是正常的，因为：</p>
+<ol>
+<li>background 脚本初始化完成时，可能其他组件（如 popup、content scripts）还没准备好</li>
+<li>当发送广播消息时，如果没有接收者，就会触发这个错误</li>
+<li>这个错误本身不影响功能，只是需要正确处理以避免出现在控制台中</li>
+</ol>
+<h2 id="chrome-扩展消息机制深入解析">Chrome 扩展消息机制深入解析</h2>
+<h3 id="browserruntimelasterror-的特性">browser.runtime.lastError 的特性</h3>
+<ol>
+<li>
+<p><strong>临时性</strong>：</p>
+<ul>
+<li><code>lastError</code> 只在当前异步操作的回调函数中有效</li>
+<li>一旦离开回调函数作用域，<code>lastError</code> 就会被清除</li>
+<li>不能在回调函数外部访问 <code>lastError</code></li>
+</ul>
+</li>
+<li>
+<p><strong>访问即消费</strong>：</p>
+<ul>
+<li>只要在代码中访问了 <code>lastError</code>，Chrome 就认为错误被处理了</li>
+<li>不需要读取它的值，不需要进行任何处理</li>
+<li>即使是 <code>void browser.runtime.lastError</code> 这样的语句也足够了</li>
+</ul>
+</li>
+<li>
+<p><strong>作用域限制</strong>：</p>
+<ul>
+<li><code>lastError</code> 只在产生它的那个回调函数中有效</li>
+<li>不同的消息回调有自己独立的 <code>lastError</code></li>
+<li>不能跨回调函数共享 <code>lastError</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="runtimesendmessage-的异常处理最佳实践">runtime.sendMessage 的异常处理最佳实践</h3>
+<ol>
+<li>
+<p><strong>基本用法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// 最简单的处理方式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">void</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 如果需要记录错误
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;消息发送失败:&#39;</span><span class="p">,</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Promise 封装</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">sendMessageWithPromise</span><span class="p">(</span><span class="nx">message</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">any</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 即使要reject，也要先访问lastError
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kr">const</span> <span class="nx">error</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">resolve</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>常见错误模式</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// ❌ 错误：在回调外捕获异常
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 这里捕获不到 lastError
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ❌ 错误：异步访问 lastError
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 这里 lastError 已经不存在了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ✅ 正确：在回调函数中立即处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">lastError</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 立即处理错误
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>错误类型</strong>：
+常见的 <code>lastError</code> 消息包括：</p>
+<ul>
+<li>&ldquo;Could not establish connection. Receiving end does not exist.&rdquo;</li>
+<li>&ldquo;The message port closed before a response was received.&rdquo;</li>
+<li>&ldquo;No tab with id {tabId}.&rdquo;</li>
+</ul>
+</li>
+<li>
+<p><strong>处理建议</strong>：</p>
+<ul>
+<li>对于广播类消息（如本例中的 <code>broadcastBackgroundReady</code>），可以忽略错误</li>
+<li>对于需要响应的消息，应该适当处理错误并通知调用者</li>
+<li>在开发环境中可以记录错误日志，生产环境可以静默处理</li>
+<li>避免在错误处理中执行复杂的异步操作</li>
+</ul>
+</li>
+</ol>
+<h3 id="性能考虑">性能考虑</h3>
+<ol>
+<li>
+<p><strong>错误处理开销</strong>：</p>
+<ul>
+<li>访问 <code>lastError</code> 的开销很小</li>
+<li>相比之下，未处理的异常会在控制台产生大量日志，影响调试</li>
+<li>在高频消息传递场景下，建议使用简单的 <code>void browser.runtime.lastError</code> 处理方式</li>
+</ul>
+</li>
+<li>
+<p><strong>调试友好性</strong>：</p>
+<ul>
+<li>开发环境可以记录详细错误信息</li>
+<li>生产环境可以使用条件编译或环境变量控制错误日志</li>
+<li>考虑使用 source map 便于定位问题</li>
+</ul>
+</li>
+</ol>
+<h2 id="结论">结论</h2>
+<p>这个问题展示了 Chrome 扩展开发中的一个常见陷阱。虽然错误信息看起来很严重，但实际上这是一个预期的行为，只需要正确处理 <code>browser.runtime.lastError</code> 就可以了。这也提醒我们在开发 Chrome 扩展时要注意消息传递机制的特殊性。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">rachpt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-03-29
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/chrome/">chrome</a>
+          <a href="/tags/extension/">extension</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2018/03/29/a-bash-script-for-pt-signin/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">a-bash-script-for-pt-signin</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2018/03/28/change-sidebar-width-of-firefox/">
+            <span class="next-text nav-default">change-sidebar-width-of-firefox</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3EGyoixXqlSr2XbW616zVLCC-gzGzoHsz',
+        appKey: 'vi95fo0Sgs7LiKR9VcmKouba',
+        notify:  true ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '留下脚印？ ヾﾉ≧∀≦)o',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:rachpt@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

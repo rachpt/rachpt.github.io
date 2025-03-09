@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 魔改编译安装 nginx。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/07/25/compile-nginx-1-14/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="compile-nginx-1.14" />
-<meta property="og:description" content="
-魔改编译安装 nginx。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/07/25/compile-nginx-1-14/" />
-<meta property="article:published_time" content="2018-07-25T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-07-25T00:00:00+08:00" />
-<meta itemprop="name" content="compile-nginx-1.14">
-<meta itemprop="description" content="
-魔改编译安装 nginx。
-">
-<meta itemprop="datePublished" content="2018-07-25T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-07-25T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1470">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/07/25/compile-nginx-1-14/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="compile-nginx-1.14">
+  <meta property="og:description" content="魔改编译安装 nginx。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-07-25T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-07-25T00:00:00+08:00">
+    <meta property="article:tag" content="Nginx">
 
-<meta itemprop="keywords" content="nginx," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="compile-nginx-1.14"/>
-<meta name="twitter:description" content="
-魔改编译安装 nginx。
-"/>
+  <meta itemprop="name" content="compile-nginx-1.14">
+  <meta itemprop="description" content="魔改编译安装 nginx。">
+  <meta itemprop="datePublished" content="2018-07-25T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-07-25T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1472">
+  <meta itemprop="keywords" content="Nginx">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="compile-nginx-1.14">
+  <meta name="twitter:description" content="魔改编译安装 nginx。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 1470 字 </span>
+          <span class="more-meta"> 约 1472 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -174,18 +169,17 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>魔改编译安装 nginx。</p>
-</blockquote>
+<p>魔改编译安装 nginx。</p></blockquote>
 <h1 id="要做啥">要做啥</h1>
 <p>如图所示：
-<img src="https://gitee.com/rachpt/imgs/raw/master/nginx-404.jpg" alt="nginx-404.jpg"></p>
+<img src="https://img.rachpt.cn/imgs/nginx-404.jpg" alt="nginx-404.jpg"></p>
 <p>希望将 nginx 默认的 错误页面自定义加入一个 返回的超链接。</p>
 <h1 id="改源码">改源码</h1>
 <ol>
 <li>
 <p>下载源码，
 <a href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a>
-选择 Stable version，	nginx-1.14.0。</p>
+选择 Stable version， nginx-1.14.0。</p>
 </li>
 <li>
 <p>修改源码：</p>
@@ -193,7 +187,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -226,44 +220,44 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">vim nginx-1.14.0/src/http/ngx_http_special_response.c
-
-<span class="c1"># 大约 109 行开始</span>
-
-static char ngx_http_error_401_page<span class="o">[]</span> <span class="o">=</span>
-<span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;401 Authorization Required&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h1&gt;401 Authorization Required&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
-<span class="p">;</span>
-
-
-static char ngx_http_error_402_page<span class="o">[]</span> <span class="o">=</span>
-<span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;402 Payment Required&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h1&gt;402 Payment Required&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
-<span class="p">;</span>
-
-
-static char ngx_http_error_403_page<span class="o">[]</span> <span class="o">=</span>
-<span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
-<span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
-.
-.
-.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vim nginx-1.14.0/src/http/ngx_http_special_response.c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 大约 109 行开始</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">static char ngx_http_error_401_page<span class="o">[]</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;401 Authorization Required&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h1&gt;401 Authorization Required&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">static char ngx_http_error_402_page<span class="o">[]</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;402 Payment Required&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h1&gt;402 Payment Required&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">static char ngx_http_error_403_page<span class="o">[]</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;html&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;head&gt;&lt;meta http-equiv=\&#34;Content-Type\&#34; content=\&#34;text/html; charset=utf-8\&#34;&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;body bgcolor=\&#34;white\&#34;&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&lt;center&gt;&lt;h2&gt;&lt;a href=\&#34;/index.html\&#34;&gt;返回首页&lt;/a&gt;&lt;/h2&gt;&lt;/center&gt;&#34;</span> CRLF
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>按自己需求修改，其中，包含中文不要指定 utf-8 编码。</p>
 <h1 id="编译">编译</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -287,43 +281,41 @@ static char ngx_http_error_403_page<span class="o">[]</span> <span class="o">=</
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> nginx-1.14.0
-
-./configure --with-select_module --with-poll_module <span class="se">\
-</span><span class="se"></span>--with-threads --with-file-aio --with-http_ssl_module <span class="se">\
-</span><span class="se"></span>--with-http_v2_module --with-http_realip_module <span class="se">\
-</span><span class="se"></span>--with-http_addition_module --with-http_xslt_module <span class="se">\
-</span><span class="se"></span>--with-http_xslt_module --with-http_image_filter_module <span class="se">\
-</span><span class="se"></span>--with-http_image_filter_module --with-http_geoip_module <span class="se">\
-</span><span class="se"></span>--with-http_geoip_module --with-http_sub_module <span class="se">\
-</span><span class="se"></span>--with-http_dav_module --with-http_flv_module <span class="se">\
-</span><span class="se"></span>--with-http_mp4_module --with-http_gunzip_module <span class="se">\
-</span><span class="se"></span>--with-http_gzip_static_module --with-http_auth_request_module <span class="se">\
-</span><span class="se"></span>--with-http_random_index_module --with-http_secure_link_module <span class="se">\
-</span><span class="se"></span>--with-http_degradation_module --with-http_slice_module <span class="se">\
-</span><span class="se"></span>--with-http_stub_status_module --with-http_perl_module <span class="se">\
-</span><span class="se"></span>--with-mail --with-mail_ssl_module --with-stream --with-stream <span class="se">\
-</span><span class="se"></span>--with-stream_ssl_module --with-google_perftools_module <span class="se">\
-</span><span class="se"></span>--with-cpp_test_module --with-pcre --with-libatomic <span class="se">\
-</span><span class="se"></span>--prefix<span class="o">=</span>/usr/local/nginx --sbin-path<span class="o">=</span>/usr/sbin/nginx <span class="se">\
-</span><span class="se"></span>--conf-path<span class="o">=</span>/etc/nginx/nginx.conf --error-log-path<span class="o">=</span>/var/log/nginx/error.log <span class="se">\
-</span><span class="se"></span>--http-log-path<span class="o">=</span>/var/log/nginx/access.log <span class="se">\
-</span><span class="se"></span>--pid-path<span class="o">=</span>/var/run/nginx/nginx.pid --lock-path<span class="o">=</span>/var/lock/nginx.lock
-
-make <span class="o">&amp;&amp;</span> sudo make install
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> nginx-1.14.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">./configure --with-select_module --with-poll_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-threads --with-file-aio --with-http_ssl_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_v2_module --with-http_realip_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_addition_module --with-http_xslt_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_xslt_module --with-http_image_filter_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_image_filter_module --with-http_geoip_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_geoip_module --with-http_sub_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_dav_module --with-http_flv_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_mp4_module --with-http_gunzip_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_gzip_static_module --with-http_auth_request_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_random_index_module --with-http_secure_link_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_degradation_module --with-http_slice_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-http_stub_status_module --with-http_perl_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-mail --with-mail_ssl_module --with-stream --with-stream <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-stream_ssl_module --with-google_perftools_module <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--with-cpp_test_module --with-pcre --with-libatomic <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--prefix<span class="o">=</span>/usr/local/nginx --sbin-path<span class="o">=</span>/usr/sbin/nginx <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--conf-path<span class="o">=</span>/etc/nginx/nginx.conf --error-log-path<span class="o">=</span>/var/log/nginx/error.log <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--http-log-path<span class="o">=</span>/var/log/nginx/access.log <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--pid-path<span class="o">=</span>/var/run/nginx/nginx.pid --lock-path<span class="o">=</span>/var/lock/nginx.lock
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> sudo make install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>各个模块具体用处，请参看以下文章。</p>
-<p><a href="https://www.cnblogs.com/dtiove/p/5924385.html">参考文档1</a>，<a href="https://blog.csdn.net/likelxl/article/details/789167050">参考文档2</a>。</p>
+<p><a href="https://www.cnblogs.com/dtiove/p/5924385.html">参考文档 1</a>，<a href="https://blog.csdn.net/likelxl/article/details/789167050">参考文档 2</a>。</p>
 <h1 id="添加-service">添加 service</h1>
 <p>系统 mint, 对 ubuntu 应该都有效.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -588,290 +580,290 @@ make <span class="o">&amp;&amp;</span> sudo make install
 </span><span class="lnt">263
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">vim /etc/init.d/nginx
-
-<span class="c1"># 写入脚本</span>
-
-<span class="c1">#! /bin/sh</span>
-
-<span class="c1">### BEGIN INIT INFO</span>
-<span class="c1"># Provides:          nginx</span>
-<span class="c1"># Required-Start:    $remote_fs $syslog</span>
-<span class="c1"># Required-Stop:     $remote_fs $syslog</span>
-<span class="c1"># Default-Start:     2 3 4 5</span>
-<span class="c1"># Default-Stop:      0 1 6</span>
-<span class="c1"># Short-Description: starts the nginx web server</span>
-<span class="c1"># Description:       starts nginx using start-stop-daemon</span>
-<span class="c1">### END INIT INFO</span>
-<span class="c1">#</span>
-<span class="c1">#------------------------------------------------------------------------------</span>
-<span class="c1">#                               Functions</span>
-<span class="c1">#------------------------------------------------------------------------------</span>
-. /lib/lsb/init-functions
-<span class="c1">#------------------------------------------------------------------------------</span>
-<span class="c1">#                               Consts</span>
-<span class="c1">#------------------------------------------------------------------------------</span>
-<span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-<span class="nv">DAEMON</span><span class="o">=</span>/usr/sbin/nginx
-
-<span class="nv">PS</span><span class="o">=</span><span class="s2">&#34;nginx&#34;</span>
-<span class="nv">PIDNAME</span><span class="o">=</span><span class="s2">&#34;nginx&#34;</span>                         <span class="c1">#lets you do $PS-slave</span>
-<span class="nv">PIDFILE</span><span class="o">=</span><span class="nv">$PIDNAME</span>.pid                    <span class="c1">#pid file</span>
-<span class="nv">PIDSPATH</span><span class="o">=</span>/run                           <span class="c1">#pid path</span>
-
-<span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&#34;Nginx Server...&#34;</span>
-
-<span class="nv">RUNAS</span><span class="o">=</span>root                              <span class="c1">#user to run as</span>
-
-<span class="nv">SCRIPT_OK</span><span class="o">=</span><span class="m">0</span>                             <span class="c1">#ala error codes</span>
-<span class="nv">SCRIPT_ERROR</span><span class="o">=</span><span class="m">1</span>                          <span class="c1">#ala error codes</span>
-<span class="nv">TRUE</span><span class="o">=</span><span class="m">1</span>                                  <span class="c1">#boolean</span>
-<span class="nv">FALSE</span><span class="o">=</span><span class="m">0</span>                                 <span class="c1">#boolean</span>
-
-<span class="nv">lockfile</span><span class="o">=</span>/var/lock/subsys/nginx
-<span class="nv">NGINX_CONF_FILE</span><span class="o">=</span><span class="s2">&#34;/etc/nginx/nginx.conf&#34;</span>
-
-<span class="c1">#------------------------------------------------------------------------------</span>
-<span class="c1">#                               Simple Tests</span>
-<span class="c1">#------------------------------------------------------------------------------</span>
-
-<span class="c1">#test if nginx is a file and executable</span>
-<span class="nb">test</span> -x <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">0</span>
-
-<span class="c1"># Include nginx defaults if available</span>
-<span class="k">if</span> <span class="o">[</span> -f /etc/default/nginx <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-        . /etc/default/nginx
-<span class="k">fi</span>
-
-<span class="c1">#------------------------------------------------------------------------------</span>
-<span class="c1">#                               Functions</span>
-<span class="c1">#------------------------------------------------------------------------------</span>
-
-setFilePerms<span class="o">(){</span>
-
-    <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        chmod <span class="m">400</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-configtest<span class="o">()</span> <span class="o">{</span>
-    <span class="nv">$DAEMON</span> -t -c <span class="nv">$NGINX_CONF_FILE</span>
-<span class="o">}</span>
-
-getPSCount<span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="sb">`</span>pgrep -f <span class="nv">$PS</span> <span class="p">|</span> wc -l<span class="sb">`</span>
-<span class="o">}</span>
-
-isRunning<span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        pidof_daemon <span class="nv">$1</span>
-        <span class="nv">PID</span><span class="o">=</span><span class="nv">$?</span>
-
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PID</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="k">return</span> <span class="m">1</span>
-        <span class="k">else</span>
-                <span class="k">return</span> <span class="m">0</span>
-        <span class="k">fi</span>
-    <span class="k">else</span>
-        pidof_daemon
-        <span class="nv">PID</span><span class="o">=</span><span class="nv">$?</span>
-
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PID</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="k">return</span> <span class="m">1</span>
-        <span class="k">else</span>
-                <span class="k">return</span> <span class="m">0</span>
-        <span class="k">fi</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="c1">#courtesy of php-fpm</span>
-wait_for_pid <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">try</span><span class="o">=</span><span class="m">0</span>
-
-    <span class="k">while</span> <span class="nb">test</span> <span class="nv">$try</span> -lt <span class="m">35</span> <span class="p">;</span> <span class="k">do</span>
-        <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
-            <span class="s1">&#39;created&#39;</span><span class="o">)</span>
-            <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                <span class="nv">try</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-                <span class="nb">break</span>
-            <span class="k">fi</span>
-            <span class="p">;;</span>
-
-            <span class="s1">&#39;removed&#39;</span><span class="o">)</span>
-            <span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                <span class="nv">try</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-                <span class="nb">break</span>
-            <span class="k">fi</span>
-            <span class="p">;;</span>
-        <span class="k">esac</span>
-
-        <span class="nv">try</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$try</span> + 1<span class="sb">`</span>
-        sleep <span class="m">1</span>
-    <span class="k">done</span>
-<span class="o">}</span>
-
-status<span class="o">(){</span>
-    isRunning
-    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
-
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$PIDNAME</span><span class="s2"> found running with processes:  `pidof </span><span class="nv">$PS</span><span class="s2">`&#34;</span>
-        <span class="k">else</span>
-            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$PIDNAME</span><span class="s2"> is NOT running.&#34;</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-removePIDFile<span class="o">(){</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                 rm -f <span class="nv">$1</span>
-            <span class="k">fi</span>
-        <span class="k">else</span>
-        <span class="c1">#Do default removal</span>
-        <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                 rm -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
-            <span class="k">fi</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-start<span class="o">()</span> <span class="o">{</span>
-    log_daemon_msg <span class="s2">&#34;Starting </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
-    isRunning
-    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
-
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        log_end_msg <span class="nv">$SCRIPT_ERROR</span>
-    <span class="k">else</span>
-        start-stop-daemon --start --quiet --chuid <span class="nv">$RUNAS</span> --pidfile <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> --exec <span class="nv">$DAEMON</span> <span class="se">\
-</span><span class="se"></span>        -- -c <span class="nv">$NGINX_CONF_FILE</span>
-        setFilePerms
-        log_end_msg <span class="nv">$SCRIPT_OK</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-stop<span class="o">()</span> <span class="o">{</span>
-    log_daemon_msg <span class="s2">&#34;Stopping </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
-
-    isRunning
-    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-         start-stop-daemon --stop --quiet --pidfile <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
-         wait_for_pid <span class="s1">&#39;removed&#39;</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
-         <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$try</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-             log_end_msg <span class="nv">$SCRIPT_ERROR</span>
-         <span class="k">else</span>
-             removePIDFile
-             log_end_msg <span class="nv">$SCRIPT_OK</span>
-         <span class="k">fi</span>
-    <span class="k">else</span>
-         log_end_msg <span class="nv">$SCRIPT_ERROR</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-reload<span class="o">()</span> <span class="o">{</span>
-    configtest <span class="o">||</span> <span class="k">return</span> <span class="nv">$?</span>
-    log_daemon_msg <span class="s2">&#34;Reloading (via HUP) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
-    isRunning
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="sb">`</span>killall -HUP <span class="nv">$PS</span><span class="sb">`</span> <span class="c1">#to be safe</span>
-        log_end_msg <span class="nv">$SCRIPT_OK</span>
-    <span class="k">else</span>
-        log_end_msg <span class="nv">$SCRIPT_ERROR</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-terminate<span class="o">()</span> <span class="o">{</span>
-    log_daemon_msg <span class="s2">&#34;Force terminating (via KILL) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
-
-    <span class="nv">PIDS</span><span class="o">=</span><span class="sb">`</span>pidof <span class="nv">$PS</span><span class="sb">`</span> <span class="o">||</span> <span class="nb">true</span>
-
-    <span class="o">[</span> -e <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nv">PIDS2</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span><span class="sb">`</span>
-
-    <span class="k">for</span> i in <span class="nv">$PIDS</span><span class="p">;</span> <span class="k">do</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$PIDS2</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="nb">kill</span> <span class="nv">$i</span>
-            wait_for_pid <span class="s1">&#39;removed&#39;</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
-            removePIDFile
-        <span class="k">fi</span>
-    <span class="k">done</span>
-    log_end_msg <span class="nv">$SCRIPT_OK</span>
-<span class="o">}</span>
-
-destroy<span class="o">()</span> <span class="o">{</span>
-    log_daemon_msg <span class="s2">&#34;Force terminating and may include self (via KILLALL) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
-    killall <span class="nv">$PS</span> -q &gt;&gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-    log_end_msg <span class="nv">$SCRIPT_OK</span>
-<span class="o">}</span>
-
-pidof_daemon<span class="o">()</span> <span class="o">{</span>
-    <span class="nv">PIDS</span><span class="o">=</span><span class="sb">`</span>pidof <span class="nv">$PS</span><span class="sb">`</span> <span class="o">||</span> <span class="nb">true</span>
-
-    <span class="o">[</span> -e <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nv">PIDS2</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span><span class="sb">`</span>
-
-    <span class="k">for</span> i in <span class="nv">$PIDS</span><span class="p">;</span> <span class="k">do</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$PIDS2</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="k">return</span> <span class="m">1</span>
-        <span class="k">fi</span>
-    <span class="k">done</span>
-    <span class="k">return</span> <span class="m">0</span>
-<span class="o">}</span>
-
-<span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
-    start<span class="o">)</span>
-        start
-        <span class="p">;;</span>
-    stop<span class="o">)</span>
-        stop
-        <span class="p">;;</span>
-    restart<span class="p">|</span>force-reload<span class="o">)</span>
-        stop
-        sleep <span class="m">3</span>
-        start
-        <span class="p">;;</span>
-    reload<span class="o">)</span>
-        <span class="nv">$1</span>
-        <span class="p">;;</span>
-    status<span class="o">)</span>
-        status
-        <span class="p">;;</span>
-    configtest<span class="o">)</span>
-        <span class="nv">$1</span>
-        <span class="p">;;</span>
-    terminate<span class="o">)</span>
-        <span class="nv">$1</span>
-        <span class="p">;;</span>
-    destroy<span class="o">)</span>
-        <span class="nv">$1</span>
-        <span class="p">;;</span>
-    *<span class="o">)</span>
-        <span class="nv">FULLPATH</span><span class="o">=</span>/etc/init.d/<span class="nv">$PS</span>
-        <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$FULLPATH</span><span class="s2"> {start|stop|restart|force-reload|status|configtest|terminate|destroy}&#34;</span>
-        <span class="nb">echo</span> <span class="s2">&#34;       The &#39;destroy&#39; command should only be used as a last resort.&#34;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-        <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="nb">exit</span> <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vim /etc/init.d/nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 写入脚本</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#! /bin/sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### BEGIN INIT INFO</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Provides:          nginx</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Start:    $remote_fs $syslog</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Stop:     $remote_fs $syslog</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Start:     2 3 4 5</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Stop:      0 1 6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Short-Description: starts the nginx web server</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Description:       starts nginx using start-stop-daemon</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### END INIT INFO</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                               Functions</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">. /lib/lsb/init-functions
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                               Consts</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+</span></span><span class="line"><span class="cl"><span class="nv">DAEMON</span><span class="o">=</span>/usr/sbin/nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">PS</span><span class="o">=</span><span class="s2">&#34;nginx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PIDNAME</span><span class="o">=</span><span class="s2">&#34;nginx&#34;</span>                         <span class="c1">#lets you do $PS-slave</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PIDFILE</span><span class="o">=</span><span class="nv">$PIDNAME</span>.pid                    <span class="c1">#pid file</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PIDSPATH</span><span class="o">=</span>/run                           <span class="c1">#pid path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&#34;Nginx Server...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">RUNAS</span><span class="o">=</span>root                              <span class="c1">#user to run as</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">SCRIPT_OK</span><span class="o">=</span><span class="m">0</span>                             <span class="c1">#ala error codes</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SCRIPT_ERROR</span><span class="o">=</span><span class="m">1</span>                          <span class="c1">#ala error codes</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TRUE</span><span class="o">=</span><span class="m">1</span>                                  <span class="c1">#boolean</span>
+</span></span><span class="line"><span class="cl"><span class="nv">FALSE</span><span class="o">=</span><span class="m">0</span>                                 <span class="c1">#boolean</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">lockfile</span><span class="o">=</span>/var/lock/subsys/nginx
+</span></span><span class="line"><span class="cl"><span class="nv">NGINX_CONF_FILE</span><span class="o">=</span><span class="s2">&#34;/etc/nginx/nginx.conf&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                               Simple Tests</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#test if nginx is a file and executable</span>
+</span></span><span class="line"><span class="cl"><span class="nb">test</span> -x <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Include nginx defaults if available</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -f /etc/default/nginx <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        . /etc/default/nginx
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                               Functions</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">setFilePerms<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        chmod <span class="m">400</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">configtest<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$DAEMON</span> -t -c <span class="nv">$NGINX_CONF_FILE</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">getPSCount<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sb">`</span>pgrep -f <span class="nv">$PS</span> <span class="p">|</span> wc -l<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">isRunning<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        pidof_daemon <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">PID</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PID</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        pidof_daemon
+</span></span><span class="line"><span class="cl">        <span class="nv">PID</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PID</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#courtesy of php-fpm</span>
+</span></span><span class="line"><span class="cl">wait_for_pid <span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">try</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="nb">test</span> <span class="nv">$try</span> -lt <span class="m">35</span> <span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;created&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">try</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">break</span>
+</span></span><span class="line"><span class="cl">            <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">            <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;removed&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">try</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">break</span>
+</span></span><span class="line"><span class="cl">            <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">            <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">esac</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">try</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$try</span> + 1<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">status<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    isRunning
+</span></span><span class="line"><span class="cl">    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$PIDNAME</span><span class="s2"> found running with processes:  `pidof </span><span class="nv">$PS</span><span class="s2">`&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$PIDNAME</span><span class="s2"> is NOT running.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">removePIDFile<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                 rm -f <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#Do default removal</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                 rm -f <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
+</span></span><span class="line"><span class="cl">            <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">start<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    log_daemon_msg <span class="s2">&#34;Starting </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    isRunning
+</span></span><span class="line"><span class="cl">    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="nv">$SCRIPT_ERROR</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        start-stop-daemon --start --quiet --chuid <span class="nv">$RUNAS</span> --pidfile <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> --exec <span class="nv">$DAEMON</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        -- -c <span class="nv">$NGINX_CONF_FILE</span>
+</span></span><span class="line"><span class="cl">        setFilePerms
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="nv">$SCRIPT_OK</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">stop<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    log_daemon_msg <span class="s2">&#34;Stopping </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    isRunning
+</span></span><span class="line"><span class="cl">    <span class="nv">isAlive</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">isAlive</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">         start-stop-daemon --stop --quiet --pidfile <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
+</span></span><span class="line"><span class="cl">         wait_for_pid <span class="s1">&#39;removed&#39;</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$try</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">             log_end_msg <span class="nv">$SCRIPT_ERROR</span>
+</span></span><span class="line"><span class="cl">         <span class="k">else</span>
+</span></span><span class="line"><span class="cl">             removePIDFile
+</span></span><span class="line"><span class="cl">             log_end_msg <span class="nv">$SCRIPT_OK</span>
+</span></span><span class="line"><span class="cl">         <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">         log_end_msg <span class="nv">$SCRIPT_ERROR</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">reload<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    configtest <span class="o">||</span> <span class="k">return</span> <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">    log_daemon_msg <span class="s2">&#34;Reloading (via HUP) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    isRunning
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="nv">$TRUE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="sb">`</span>killall -HUP <span class="nv">$PS</span><span class="sb">`</span> <span class="c1">#to be safe</span>
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="nv">$SCRIPT_OK</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="nv">$SCRIPT_ERROR</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">terminate<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    log_daemon_msg <span class="s2">&#34;Force terminating (via KILL) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">PIDS</span><span class="o">=</span><span class="sb">`</span>pidof <span class="nv">$PS</span><span class="sb">`</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">[</span> -e <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nv">PIDS2</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> i in <span class="nv">$PIDS</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$PIDS2</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">kill</span> <span class="nv">$i</span>
+</span></span><span class="line"><span class="cl">            wait_for_pid <span class="s1">&#39;removed&#39;</span> <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span>
+</span></span><span class="line"><span class="cl">            removePIDFile
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">    log_end_msg <span class="nv">$SCRIPT_OK</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">destroy<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    log_daemon_msg <span class="s2">&#34;Force terminating and may include self (via KILLALL) </span><span class="nv">$DESCRIPTION</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    killall <span class="nv">$PS</span> -q &gt;&gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">    log_end_msg <span class="nv">$SCRIPT_OK</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pidof_daemon<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">PIDS</span><span class="o">=</span><span class="sb">`</span>pidof <span class="nv">$PS</span><span class="sb">`</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">[</span> -e <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nv">PIDS2</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDSPATH</span>/<span class="nv">$PIDFILE</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> i in <span class="nv">$PIDS</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$PIDS2</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">    start<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        start
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    stop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        stop
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    restart<span class="p">|</span>force-reload<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        stop
+</span></span><span class="line"><span class="cl">        sleep <span class="m">3</span>
+</span></span><span class="line"><span class="cl">        start
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    reload<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    status<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        status
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    configtest<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    terminate<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    destroy<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">FULLPATH</span><span class="o">=</span>/etc/init.d/<span class="nv">$PS</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$FULLPATH</span><span class="s2"> {start|stop|restart|force-reload|status|configtest|terminate|destroy}&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;       The &#39;destroy&#39; command should only be used as a last resort.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>记得改权限.
 上面的 nginx 路径需要改成自己编译时候写的,或者 <code>which nginx</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo update-rc.d nginx defaults
-
-sudo systemctl daemon-reload
-
-sudo systemctl <span class="nb">enable</span> nginx
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo update-rc.d nginx defaults
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> nginx
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://gitee.com/rachpt/imgs/raw/master/nginx-init-d.jpg" alt="nginx-init-d.jpg"></p>
+</div><p><img src="https://img.rachpt.cn/imgs/nginx-init-d.jpg" alt="nginx-init-d.jpg"></p>
 <p><a href="https://segmentfault.com/q/1010000005987075">参考文档</a>.</p>
     </div>
 
@@ -899,11 +891,11 @@ sudo systemctl <span class="nb">enable</span> nginx
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -956,7 +948,7 @@ sudo systemctl <span class="nb">enable</span> nginx
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -977,8 +969,8 @@ sudo systemctl <span class="nb">enable</span> nginx
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -989,12 +981,12 @@ sudo systemctl <span class="nb">enable</span> nginx
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -1002,19 +994,8 @@ sudo systemctl <span class="nb">enable</span> nginx
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

@@ -16,15 +16,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="rachpt" /><meta name="description" content=" 一些ffmpeg处理视频笔记。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+<meta name="author" content="rachpt" /><meta name="description" content=" 一些 ffmpeg 处理视频笔记。
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2019/06/02/notes-for-ffmpeg/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="notes-for-ffmpeg" />
-<meta property="og:description" content="
-一些ffmpeg处理视频笔记。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2019/06/02/notes-for-ffmpeg/" />
-<meta property="article:published_time" content="2019-06-02T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-06-02T00:00:00+08:00" />
-<meta itemprop="name" content="notes-for-ffmpeg">
-<meta itemprop="description" content="
-一些ffmpeg处理视频笔记。
-">
-<meta itemprop="datePublished" content="2019-06-02T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2019-06-02T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1433">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2019/06/02/notes-for-ffmpeg/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="notes-for-ffmpeg">
+  <meta property="og:description" content="一些 ffmpeg 处理视频笔记。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-06-02T00:00:00+08:00">
+    <meta property="article:modified_time" content="2019-06-02T00:00:00+08:00">
+    <meta property="article:tag" content="Ffmpeg">
 
-<meta itemprop="keywords" content="ffmpeg," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="notes-for-ffmpeg"/>
-<meta name="twitter:description" content="
-一些ffmpeg处理视频笔记。
-"/>
+  <meta itemprop="name" content="notes-for-ffmpeg">
+  <meta itemprop="description" content="一些 ffmpeg 处理视频笔记。">
+  <meta itemprop="datePublished" content="2019-06-02T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2019-06-02T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1408">
+  <meta itemprop="keywords" content="Ffmpeg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="notes-for-ffmpeg">
+  <meta name="twitter:description" content="一些 ffmpeg 处理视频笔记。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 1433 字 </span>
+          <span class="more-meta"> 约 1408 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -188,14 +183,13 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>一些ffmpeg处理视频笔记。</p>
-</blockquote>
+<p>一些 ffmpeg 处理视频笔记。</p></blockquote>
 <h1 id="裁剪黑边">裁剪黑边</h1>
 <p>主要使用 ffmpeg 的 <code>crop</code> 以及 <code>cropdetect</code> 参数。</p>
 <p>视频左上角为坐标(0,0)，单位为像素。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -209,51 +203,47 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">ffmpeg -i input.mp4 -vf <span class="s2">&#34;cropdetect=24:16:0&#34;</span> dummy.mp4
-
-<span class="c1"># 可以得到如下所示信息</span>
-<span class="c1"># [Parsed_cropdetect_0 @ 0x7fab586781c0] x1:36 x2:1883 y1:0 y2:1079 w:1840 h:1072 x:40 y:4 pts:3584 t:0.233333 crop=1840:1072:40:4</span>
-
-<span class="c1"># Ctrl + C 停止，复制 crop=1840:1072:40:4 用于后面步骤</span>
-<span class="c1"># 注意视频黑边 是否会变化，否则需取舍使用哪些参数。</span>
-
-<span class="c1"># 也可以使用 ffplay 预览，不用&#39;压制&#39;即可得到 crop 信息。</span>
-ffplay input.mp4 -vf <span class="nv">cropdetect</span><span class="o">=</span>24:16:0
-
-<span class="c1"># 后面的参数 24 16 0 为默认值，更多请移步 [官方文档](https://www.ffmpeg.org/ffmpeg-filters.html#cropdetect)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ffmpeg -i input.mp4 -vf <span class="s2">&#34;cropdetect=24:16:0&#34;</span> dummy.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 可以得到如下所示信息</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [Parsed_cropdetect_0 @ 0x7fab586781c0] x1:36 x2:1883 y1:0 y2:1079 w:1840 h:1072 x:40 y:4 pts:3584 t:0.233333 crop=1840:1072:40:4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ctrl + C 停止，复制 crop=1840:1072:40:4 用于后面步骤</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意视频黑边 是否会变化，否则需取舍使用哪些参数。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 也可以使用 ffplay 预览，不用&#39;压制&#39;即可得到 crop 信息。</span>
+</span></span><span class="line"><span class="cl">ffplay input.mp4 -vf <span class="nv">cropdetect</span><span class="o">=</span>24:16:0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 后面的参数 24 16 0 为默认值，更多请移步 [官方文档](https://www.ffmpeg.org/ffmpeg-filters.html#cropdetect)</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>关于 crop，第一个 1840 表示裁剪出来的矩形长1840像素，宽1072像素，从(40,0)坐标处开始裁剪。<a href="https://www.ffmpeg.org/ffmpeg-filters.html#crop">crop官方文档</a>。</p>
+</div><p>关于 crop，第一个 1840 表示裁剪出来的矩形长 1840 像素，宽 1072 像素，从(40,0)坐标处开始裁剪。<a href="https://www.ffmpeg.org/ffmpeg-filters.html#crop">crop 官方文档</a>。</p>
 <p>除了使用 ffmpeg 的 cropdetect 参数外，可以截取一张视频图片，使用 GIMP 等图像工具，手动测量得到需要的参数。
-以 GIMP 为例：
-1. 拉出参考线，Ctrl+鼠标滚轮放大，M 移动工具；
-2. Shift + M 换到测量工具，Ctrl 拉出水平垂直测量线。</p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/notes-for-ffmpeg-2019-6-2-18-7-13.png" alt="notes-for-ffmpeg-2019-6-2-18-7-13.png"></p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/notes-for-ffmpeg-2019-6-2-18-7-28.png" alt="notes-for-ffmpeg-2019-6-2-18-7-28.png"></p>
+以 GIMP 为例： 1. 拉出参考线，Ctrl+鼠标滚轮放大，M 移动工具； 2. Shift + M 换到测量工具，Ctrl 拉出水平垂直测量线。</p>
+<p><img src="https://img.rachpt.cn/imgs/notes-for-ffmpeg-2019-6-2-18-7-13.png" alt="notes-for-ffmpeg-2019-6-2-18-7-13.png"></p>
+<p><img src="https://img.rachpt.cn/imgs/notes-for-ffmpeg-2019-6-2-18-7-28.png" alt="notes-for-ffmpeg-2019-6-2-18-7-28.png"></p>
 <h1 id="去水印">去水印</h1>
 <p>和裁剪黑边类似，使用 <code>delogo</code> 命令，<a href="https://www.ffmpeg.org/ffmpeg-filters.html#delogo">官方文档</a>。</p>
 <p>同样需要定位位置，使用上面提到的 GIMP 测量坐标。
-<code>delogo=x=1742:y=992:w=132:h=40</code>，如其意，x y坐标起点(左上角0、0)，w  h宽和高。
+<code>delogo=x=1742:y=992:w=132:h=40</code>，如其意，x y 坐标起点(左上角 0、0)，w h 宽和高。
 一次可以定义多个去水印位置，使用 <code>,</code> 分隔，放置在滤镜参数里面。例子如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">
-ffmpeg -y -i in.mp4 -vf <span class="s2">&#34;delogo=x=1472:y=35:w=408:h=42,delogo=x=1742:y=992:w=132:h=40,crop=1840:1040:40:0&#34;</span> <span class="se">\
-</span><span class="se"></span>-metadata <span class="nv">comment</span><span class="o">=</span><span class="s1">&#39;made by rachpt&#39;</span> -max_muxing_queue_size <span class="m">1024</span> out.mp4
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ffmpeg -y -i in.mp4 -vf <span class="s2">&#34;delogo=x=1472:y=35:w=408:h=42,delogo=x=1742:y=992:w=132:h=40,crop=1840:1040:40:0&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-metadata <span class="nv">comment</span><span class="o">=</span><span class="s1">&#39;made by rachpt&#39;</span> -max_muxing_queue_size <span class="m">1024</span> out.mp4
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>两个水印，加上裁剪黑边。</p>
 <p>效果对比如下：</p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/notes-for-ffmpeg-2019-6-2-18-10-25.png" alt="notes-for-ffmpeg-2019-6-2-18-10-25.png"></p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/notes-for-ffmpeg-2019-6-2-18-10-38.png" alt="notes-for-ffmpeg-2019-6-2-18-10-38.png"></p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/notes-for-ffmpeg-2019-6-2-18-10-54.png" alt="notes-for-ffmpeg-2019-6-2-18-10-54.png"></p>
+<p><img src="https://img.rachpt.cn/imgs/notes-for-ffmpeg-2019-6-2-18-10-25.png" alt="notes-for-ffmpeg-2019-6-2-18-10-25.png"></p>
+<p><img src="https://img.rachpt.cn/imgs/notes-for-ffmpeg-2019-6-2-18-10-38.png" alt="notes-for-ffmpeg-2019-6-2-18-10-38.png"></p>
+<p><img src="https://img.rachpt.cn/imgs/notes-for-ffmpeg-2019-6-2-18-10-54.png" alt="notes-for-ffmpeg-2019-6-2-18-10-54.png"></p>
 <h1 id="倍速">倍速</h1>
 <p>详见：
 <a href="https://github.com/rachpt/shell-scripts/blob/master/speed_up_video.sh">https://github.com/rachpt/shell-scripts/blob/master/speed_up_video.sh</a></p>
@@ -261,23 +251,23 @@ ffmpeg -y -i in.mp4 -vf <span class="s2">&#34;delogo=x=1472:y=35:w=408:h=42,delo
 <p>1.7 倍速：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">ffmpeg -i <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> -r <span class="m">30</span> -c:v libx264 -preset fast <span class="se">\
-</span><span class="se"></span>-filter_complex <span class="s2">&#34;[0:v]setpts=10/17 *PTS[v];[0:a]atempo=1.7[a]&#34;</span> <span class="se">\
-</span><span class="se"></span>-map <span class="s2">&#34;[v]&#34;</span> -map <span class="s2">&#34;[a]&#34;</span> <span class="s2">&#34;../encode/</span><span class="nv">$i</span><span class="s2">&#34;</span> -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ffmpeg -i <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> -r <span class="m">30</span> -c:v libx264 -preset fast <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-filter_complex <span class="s2">&#34;[0:v]setpts=10/17 *PTS[v];[0:a]atempo=1.7[a]&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-map <span class="s2">&#34;[v]&#34;</span> -map <span class="s2">&#34;[a]&#34;</span> <span class="s2">&#34;../encode/</span><span class="nv">$i</span><span class="s2">&#34;</span> -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="音频">音频</h2>
 <p>如上，<code>[0:a]atempo=1.7[a]</code>。</p>
 <h2 id="字幕">字幕</h2>
-<p>使用shell来完成，</p>
+<p>使用 shell 来完成，</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -296,46 +286,46 @@ ffmpeg -y -i in.mp4 -vf <span class="s2">&#34;delogo=x=1472:y=35:w=408:h=42,delo
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">for</span> i in <span class="sb">`</span>grep -Eo <span class="s1">&#39;([0-9]{2}:){2}[0-9]{2},[0-9]{3}&#39;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span><span class="sb">`</span> <span class="p">;</span><span class="k">do</span> 
-  <span class="nv">a</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
-  <span class="nv">b</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">3</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
-  <span class="nv">c</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">6</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
-  <span class="nv">d</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">9</span><span class="p">:</span><span class="nv">3</span><span class="si">}</span><span class="p">;</span>
-  <span class="c1"># 匹配视频 1.7 倍速</span>
-  <span class="nv">total</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="s2">&#34;scale=0;(((</span><span class="nv">$a</span><span class="s2">*60+</span><span class="nv">$b</span><span class="s2">)*60+</span><span class="nv">$c</span><span class="s2">)*1000+</span><span class="nv">$d</span><span class="s2">)/1.7&#34;</span><span class="p">|</span>bc<span class="sb">`</span><span class="p">;</span>
-  <span class="nv">e</span><span class="o">=</span><span class="k">$((</span>total <span class="o">%</span> <span class="m">1000</span><span class="k">))</span><span class="p">;</span><span class="nv">f</span><span class="o">=</span><span class="k">$((</span>total <span class="o">/</span> <span class="m">1000</span><span class="k">))</span><span class="p">;</span>
-  <span class="nv">g</span><span class="o">=</span><span class="k">$((</span>f <span class="o">%</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span>
-  <span class="nv">h</span><span class="o">=</span><span class="k">$((</span>f <span class="o">/</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span><span class="nv">x</span><span class="o">=</span><span class="k">$((</span>h <span class="o">%</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span>
-  <span class="nv">y</span><span class="o">=</span><span class="k">$((</span>h <span class="o">/</span> <span class="m">60</span><span class="k">))</span> <span class="p">;</span>
-  <span class="nv">j</span><span class="o">=</span><span class="sb">`</span><span class="nb">printf</span> <span class="s2">&#34;%02d:%02d:%02d,%03d\n&#34;</span> <span class="nv">$y</span> <span class="nv">$x</span> <span class="nv">$g</span> <span class="nv">$e</span><span class="sb">`</span><span class="p">;</span>
-  sed -i <span class="s2">&#34;s/</span><span class="nv">$i</span><span class="s2">/</span><span class="nv">$j</span><span class="s2">/&#34;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="k">done</span> 
-
-<span class="c1"># 最后封装在一起参数</span>
-ffmpeg -i in.mp4 -i sub.srt -c:s mov_text -c:v copy -c:a copy out.mp4
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="k">for</span> i in <span class="sb">`</span>grep -Eo <span class="s1">&#39;([0-9]{2}:){2}[0-9]{2},[0-9]{3}&#39;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span><span class="sb">`</span> <span class="p">;</span><span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">a</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">b</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">3</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">c</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">6</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">d</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">:</span><span class="nv">9</span><span class="p">:</span><span class="nv">3</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 匹配视频 1.7 倍速</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">total</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="s2">&#34;scale=0;(((</span><span class="nv">$a</span><span class="s2">*60+</span><span class="nv">$b</span><span class="s2">)*60+</span><span class="nv">$c</span><span class="s2">)*1000+</span><span class="nv">$d</span><span class="s2">)/1.7&#34;</span><span class="p">|</span>bc<span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">e</span><span class="o">=</span><span class="k">$((</span>total <span class="o">%</span> <span class="m">1000</span><span class="k">))</span><span class="p">;</span><span class="nv">f</span><span class="o">=</span><span class="k">$((</span>total <span class="o">/</span> <span class="m">1000</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">g</span><span class="o">=</span><span class="k">$((</span>f <span class="o">%</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">h</span><span class="o">=</span><span class="k">$((</span>f <span class="o">/</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span><span class="nv">x</span><span class="o">=</span><span class="k">$((</span>h <span class="o">%</span> <span class="m">60</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">y</span><span class="o">=</span><span class="k">$((</span>h <span class="o">/</span> <span class="m">60</span><span class="k">))</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">j</span><span class="o">=</span><span class="sb">`</span><span class="nb">printf</span> <span class="s2">&#34;%02d:%02d:%02d,%03d\n&#34;</span> <span class="nv">$y</span> <span class="nv">$x</span> <span class="nv">$g</span> <span class="nv">$e</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  sed -i <span class="s2">&#34;s/</span><span class="nv">$i</span><span class="s2">/</span><span class="nv">$j</span><span class="s2">/&#34;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 最后封装在一起参数</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i in.mp4 -i sub.srt -c:s mov_text -c:v copy -c:a copy out.mp4
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="音视频提取与合并">音视频提取与合并</h1>
 <h2 id="提取">提取</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 提取视频</span>
-ffmpeg -i input.mp4 -c:v copy -an video.mp4
-<span class="c1"># 提取音频</span>
-ffmpeg -i input.mp4 -c:a copy -vn audio.m4a
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 提取视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i input.mp4 -c:v copy -an video.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 提取音频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i input.mp4 -c:a copy -vn audio.m4a
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中 v 视频，a 音频。</p>
 <h2 id="合并">合并</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -346,16 +336,16 @@ ffmpeg -i input.mp4 -c:a copy -vn audio.m4a
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 视频 音频 (字幕)分别单文件</span>
-ffmpeg -i input.mp4 -i audio.m4a -i sub.srt -c:v copy -c:a copy -c:s mov_text output.mp4
-<span class="c1"># 视频里面有音轨，需要替换音轨</span>
-ffmpeg -i input.mp4 -i audio.m4a -c:v copy -c:a copy -map 0✌️0 -map 1🅰️0 output.mp4
-<span class="c1"># 追加音轨，再加一个  -map 0🅰️0</span>
-
-<span class="c1"># 封装多字幕</span>
-ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -map 2:0 <span class="se">\
-</span><span class="se"></span>-c:s mov_text -c:s mov_text output.mp4
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 视频 音频 (字幕)分别单文件</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i input.mp4 -i audio.m4a -i sub.srt -c:v copy -c:a copy -c:s mov_text output.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频里面有音轨，需要替换音轨</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i input.mp4 -i audio.m4a -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 output.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 追加音轨，再加一个  -map 0:a:0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 封装多字幕</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -map 2:0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-c:s mov_text -c:s mov_text output.mp4
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>map</code> 参数第一个表示 输出文件，0 第一个，1 第二个，v/a 和上面提到的一样，表示视频 / 音频，最后面的数字表示输入文件里面的第几个视频 / 音频 轨道。通常一个视频 一个视频轨道一个音频轨道，这个需要自己看 <code>mediainfo</code>。</p>
 <h1 id="删除压制信息">删除压制信息</h1>
@@ -363,7 +353,7 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 添加如下参数</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -373,15 +363,15 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># x265</span>
--x265-params no-info<span class="o">=</span><span class="m">1</span>
-
-<span class="c1"># x264 (ffmpeg 4.0+)</span>
--bsf:v <span class="s1">&#39;filter_units=remove_types=6&#39;</span>
-
-<span class="c1"># 删除 General 里面的附加信息</span>
--map_metadata -1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># x265</span>
+</span></span><span class="line"><span class="cl">-x265-params no-info<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># x264 (ffmpeg 4.0+)</span>
+</span></span><span class="line"><span class="cl">-bsf:v <span class="s1">&#39;filter_units=remove_types=6&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除 General 里面的附加信息</span>
+</span></span><span class="line"><span class="cl">-map_metadata -1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>参考<a href="https://superuser.com/a/1218771">文档一</a>，<a href="https://video.stackexchange.com/a/27617">文档二</a>。</p>
 <h1 id="停止播放">停止播放</h1>
@@ -393,11 +383,11 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">Too many packets buffered <span class="k">for</span> output stream 0:1.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Too many packets buffered <span class="k">for</span> output stream 0:1.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>只需要多加一个 <code>-max_muxing_queue_size 1024</code> 参数在其中即可解决，<a href="https://stackoverflow.com/q/49686244/11817844">详见这里</a>。</p>
 <ul>
@@ -409,15 +399,15 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cur_dts is invalid (this is harmless if it occurs once at the start per stream)
-在不同机器上，不同版本 ffmpeg 使用相同的压制命令却不会遇到这个问题。
-另外，换用 libx264 不会遇到此问题。
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cur_dts is invalid (this is harmless if it occurs once at the start per stream)
+</span></span><span class="line"><span class="cl">在不同机器上，不同版本 ffmpeg 使用相同的压制命令却不会遇到这个问题。
+</span></span><span class="line"><span class="cl">另外，换用 libx264 不会遇到此问题。
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>多番查证，可能是原视频某些信息不全所致。
 最终发现是 使用的 缩放 (-s 1280x720 或者 滤镜 - vf scale=-2:720) 参数导致的，去掉缩放，2pass 不会遇到此问题。</p>
@@ -427,11 +417,11 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[swscaler @ 0x558c475f32c0] Warning: data is not aligned! This can lead to a speed loss
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[swscaler @ 0x558c475f32c0] Warning: data is not aligned! This can lead to a speed loss
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>修改 宽度 为 16 的倍数。<a href="https://blog.csdn.net/panda1234lee/article/details/53334254">参考文档</a>。</p>
     </div>
@@ -460,11 +450,11 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -517,7 +507,7 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -538,8 +528,8 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -550,12 +540,12 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -563,19 +553,8 @@ ffmpeg -i input.mp4 -i chs.srt -i eng.srt -c copy -map 0:0 -map 0:1 -map 1:0 -ma
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

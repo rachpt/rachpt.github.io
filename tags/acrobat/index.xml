@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>acrobat on rachpt&#39;s Blog</title>
+    <title>Acrobat on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/acrobat/</link>
-    <description>Recent content in acrobat on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Acrobat on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Nov 2017 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/acrobat/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Nov 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/acrobat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>照片PDF优化成矢量版</title>
       <link>https://rachpt.cn/2017/11/10/make-pdf-file-clear/</link>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/10/make-pdf-file-clear/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;手抄好慢好累，身边又没有扫面仪，嘿嘿，我手机像素好，拍照&amp;ndash;&amp;gt;打印&amp;ndash;&amp;gt;OK。可是……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;乌漆ma黑的，还有不相干的背景图，此处不放图。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;手抄好慢好累，身边又没有扫面仪，嘿嘿，我手机像素好，拍照&amp;ndash;&amp;gt;打印&amp;ndash;&amp;gt;OK。可是……&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;乌漆 ma 黑的，还有不相干的背景图，此处不放图。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

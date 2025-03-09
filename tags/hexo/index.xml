@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hexo on rachpt&#39;s Blog</title>
+    <title>Hexo on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/hexo/</link>
-    <description>Recent content in hexo on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Hexo on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hexo-pit</title>
       <link>https://rachpt.cn/2019/07/21/hexo-pit/</link>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2019/07/21/hexo-pit/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;hexo 中遇到的坑&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;hexo 中遇到的坑&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Linux 中快速添加 hexo 文章</title>
       <link>https://rachpt.cn/2018/03/13/quick-add-a-essay-on-hexosystem/</link>
       <pubDate>Tue, 13 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/13/quick-add-a-essay-on-hexosystem/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;在 hexo 添加新的文章的方式通常使用 new 命令新建一个 post ，然后编辑保存，或者直接使用编辑器新建保存，写了一个 shell 脚本实现便利地写文章。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

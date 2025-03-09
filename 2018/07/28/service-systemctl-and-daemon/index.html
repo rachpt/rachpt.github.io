@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/07/28/service-systemctl-and-daemon/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="service-systemctl-and-daemon" />
-<meta property="og:description" content="
-前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/07/28/service-systemctl-and-daemon/" />
-<meta property="article:published_time" content="2018-07-28T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-07-28T00:00:00+08:00" />
-<meta itemprop="name" content="service-systemctl-and-daemon">
-<meta itemprop="description" content="
-前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。
-">
-<meta itemprop="datePublished" content="2018-07-28T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-07-28T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1800">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/07/28/service-systemctl-and-daemon/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="service-systemctl-and-daemon">
+  <meta property="og:description" content="前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-07-28T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-07-28T00:00:00+08:00">
+    <meta property="article:tag" content="Daemon">
 
-<meta itemprop="keywords" content="daemon," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="service-systemctl-and-daemon"/>
-<meta name="twitter:description" content="
-前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。
-"/>
+  <meta itemprop="name" content="service-systemctl-and-daemon">
+  <meta itemprop="description" content="前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。">
+  <meta itemprop="datePublished" content="2018-07-28T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-07-28T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1803">
+  <meta itemprop="keywords" content="Daemon">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="service-systemctl-and-daemon">
+  <meta name="twitter:description" content="前面说到了使用原码编译 transmission-daemon qbittorrent-nox nginx ，但是需要自己配置启动脚本。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 1800 字 </span>
+          <span class="more-meta"> 约 1803 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -175,13 +170,12 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>前面说到了使用原码编译 <code>transmission-daemon</code> <code>qbittorrent-nox</code> <code>nginx</code> ，但是需要自己配置启动脚本。</p>
-</blockquote>
+<p>前面说到了使用原码编译 <code>transmission-daemon</code> <code>qbittorrent-nox</code> <code>nginx</code> ，但是需要自己配置启动脚本。</p></blockquote>
 <h1 id="transmission-daemon">transmission-daemon</h1>
 <p>之前使用 apt 安装的 tr-d ，虽然很容易可以使用 <code>sudo systemctl enable|start|stop|status transmission-daemon</code>，但是不得不忍受一个很长很傻的运行用户名，而且修改起来特别麻烦，文件权限也是乱的很。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -261,130 +255,128 @@
 </span><span class="lnt">78
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo vim /etc/init.d/transmission-daemon
-
-<span class="c1"># 添加下面的脚本，并给执行权限</span>
-
-<span class="c1">#!/bin/sh -e</span>
-
-<span class="c1">### BEGIN INIT INFO</span>
-<span class="c1"># Provides:          transmission-daemon</span>
-<span class="c1"># Required-Start:    $local_fs $remote_fs $network</span>
-<span class="c1"># Required-Stop:     $local_fs $remote_fs $network</span>
-<span class="c1"># Default-Start:     2 3 4 5</span>
-<span class="c1"># Default-Stop:      0 1 6</span>
-<span class="c1"># Short-Description: Start or stop the transmission-daemon.</span>
-<span class="c1"># Description:       Enable service provided by transmission-daemon.</span>
-<span class="c1">### END INIT INFO</span>
-
-<span class="nv">NAME</span><span class="o">=</span>transmission-daemon
-<span class="nv">DAEMON</span><span class="o">=</span>/usr/bin/<span class="nv">$NAME</span>
-<span class="nv">USER</span><span class="o">=</span>rachpt
-<span class="nv">STOP_TIMEOUT</span><span class="o">=</span><span class="m">30</span>
-
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PATH</span><span class="p">:+</span><span class="nv">$PATH</span><span class="p">:</span><span class="si">}</span><span class="s2">/sbin&#34;</span>
-
-<span class="o">[</span> -x <span class="nv">$DAEMON</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">0</span>
-
-<span class="o">[</span> -e /etc/default/<span class="nv">$NAME</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> . /etc/default/<span class="nv">$NAME</span>
-
-. /lib/lsb/init-functions
-
-start_daemon <span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$ENABLE_DAEMON</span> !<span class="o">=</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        log_progress_msg <span class="s2">&#34;(disabled)&#34;</span>
-		    log_end_msg <span class="m">255</span> <span class="o">||</span> <span class="nb">true</span>
-    <span class="k">else</span>    
-        start-stop-daemon --start <span class="se">\
-</span><span class="se"></span>        --chuid <span class="nv">$USER</span> <span class="se">\
-</span><span class="se"></span>		<span class="nv">$START_STOP_OPTIONS</span> <span class="se">\
-</span><span class="se"></span>        --exec <span class="nv">$DAEMON</span> -- <span class="nv">$OPTIONS</span> <span class="o">||</span> log_end_msg <span class="nv">$?</span>
-		log_end_msg <span class="m">0</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
-    start<span class="o">)</span>
-        log_daemon_msg <span class="s2">&#34;Starting bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
-        start_daemon
-        <span class="p">;;</span>
-    stop<span class="o">)</span>
-        log_daemon_msg <span class="s2">&#34;Stopping bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
-        start-stop-daemon --stop --quiet <span class="se">\
-</span><span class="se"></span>            --exec <span class="nv">$DAEMON</span> --retry <span class="nv">$STOP_TIMEOUT</span> <span class="se">\
-</span><span class="se"></span>            --oknodo <span class="o">||</span> log_end_msg <span class="nv">$?</span>
-        log_end_msg <span class="m">0</span>
-        <span class="p">;;</span>
-    reload<span class="o">)</span>
-        log_daemon_msg <span class="s2">&#34;Reloading bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
-        start-stop-daemon --stop --quiet <span class="se">\
-</span><span class="se"></span>            --exec <span class="nv">$DAEMON</span> <span class="se">\
-</span><span class="se"></span>            --oknodo --signal <span class="m">1</span> <span class="o">||</span> log_end_msg <span class="nv">$?</span>
-        log_end_msg <span class="m">0</span>
-        <span class="p">;;</span>
-    restart<span class="p">|</span>force-reload<span class="o">)</span>
-        log_daemon_msg <span class="s2">&#34;Restarting bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
-        start-stop-daemon --stop --quiet <span class="se">\
-</span><span class="se"></span>            --exec <span class="nv">$DAEMON</span> --retry <span class="nv">$STOP_TIMEOUT</span> <span class="se">\
-</span><span class="se"></span>            --oknodo <span class="o">||</span> log_end_msg <span class="nv">$?</span>
-        start_daemon
-        <span class="p">;;</span>
-    status<span class="o">)</span>
-        status_of_proc <span class="s2">&#34;</span><span class="nv">$DAEMON</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">0</span> <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
-        <span class="p">;;</span>
-    *<span class="o">)</span>
-        log_action_msg <span class="s2">&#34;Usage: /etc/init.d/</span><span class="nv">$NAME</span><span class="s2"> {start|stop|reload|force-reload|restart|status}&#34;</span> <span class="o">||</span> <span class="nb">true</span>
-        <span class="nb">exit</span> <span class="m">2</span>
-        <span class="p">;;</span>
-<span class="k">esac</span>
-
-<span class="nb">exit</span> <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo vim /etc/init.d/transmission-daemon
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加下面的脚本，并给执行权限</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/sh -e</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### BEGIN INIT INFO</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Provides:          transmission-daemon</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Start:    $local_fs $remote_fs $network</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Stop:     $local_fs $remote_fs $network</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Start:     2 3 4 5</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Stop:      0 1 6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Short-Description: Start or stop the transmission-daemon.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Description:       Enable service provided by transmission-daemon.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### END INIT INFO</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">NAME</span><span class="o">=</span>transmission-daemon
+</span></span><span class="line"><span class="cl"><span class="nv">DAEMON</span><span class="o">=</span>/usr/bin/<span class="nv">$NAME</span>
+</span></span><span class="line"><span class="cl"><span class="nv">USER</span><span class="o">=</span>rachpt
+</span></span><span class="line"><span class="cl"><span class="nv">STOP_TIMEOUT</span><span class="o">=</span><span class="m">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PATH</span><span class="p">:+</span><span class="nv">$PATH</span><span class="p">:</span><span class="si">}</span><span class="s2">/sbin&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -x <span class="nv">$DAEMON</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -e /etc/default/<span class="nv">$NAME</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> . /etc/default/<span class="nv">$NAME</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">. /lib/lsb/init-functions
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">start_daemon <span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="nv">$ENABLE_DAEMON</span> !<span class="o">=</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        log_progress_msg <span class="s2">&#34;(disabled)&#34;</span>
+</span></span><span class="line"><span class="cl">		    log_end_msg <span class="m">255</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>    
+</span></span><span class="line"><span class="cl">        start-stop-daemon --start <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        --chuid <span class="nv">$USER</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>		<span class="nv">$START_STOP_OPTIONS</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        --exec <span class="nv">$DAEMON</span> -- <span class="nv">$OPTIONS</span> <span class="o">||</span> log_end_msg <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">		log_end_msg <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">    start<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        log_daemon_msg <span class="s2">&#34;Starting bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        start_daemon
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    stop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        log_daemon_msg <span class="s2">&#34;Stopping bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        start-stop-daemon --stop --quiet <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --exec <span class="nv">$DAEMON</span> --retry <span class="nv">$STOP_TIMEOUT</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --oknodo <span class="o">||</span> log_end_msg <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    reload<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        log_daemon_msg <span class="s2">&#34;Reloading bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        start-stop-daemon --stop --quiet <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --exec <span class="nv">$DAEMON</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --oknodo --signal <span class="m">1</span> <span class="o">||</span> log_end_msg <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">        log_end_msg <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    restart<span class="p">|</span>force-reload<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        log_daemon_msg <span class="s2">&#34;Restarting bittorrent daemon&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        start-stop-daemon --stop --quiet <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --exec <span class="nv">$DAEMON</span> --retry <span class="nv">$STOP_TIMEOUT</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --oknodo <span class="o">||</span> log_end_msg <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">        start_daemon
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    status<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        status_of_proc <span class="s2">&#34;</span><span class="nv">$DAEMON</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$NAME</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">0</span> <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        log_action_msg <span class="s2">&#34;Usage: /etc/init.d/</span><span class="nv">$NAME</span><span class="s2"> {start|stop|reload|force-reload|restart|status}&#34;</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>文件的开头 ### 部分为LSB tags，格式比较固定，可以参考其他的修改，如果没有会有如下类似报错：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">ssh.service is not a native service, redirecting to systemd-sysv-install
-Executing /lib/systemd/systemd-sysv-install <span class="nb">enable</span> ssh
-insserv: warning: script <span class="s1">&#39;ssh&#39;</span> missing LSB tags and overrides
-update-rc.d: error: ssh Default-Start contains no runlevels, aborting.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh.service is not a native service, redirecting to systemd-sysv-install
+</span></span><span class="line"><span class="cl">Executing /lib/systemd/systemd-sysv-install <span class="nb">enable</span> ssh
+</span></span><span class="line"><span class="cl">insserv: warning: script <span class="s1">&#39;ssh&#39;</span> missing LSB tags and overrides
+</span></span><span class="line"><span class="cl">update-rc.d: error: ssh Default-Start contains no runlevels, aborting.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>[参考文档tps://my.oschina.net/apis/blog/1647729?p=1)。</p>
 <p>使用命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">
-sudo update-rc.d transmission-daemon defaults
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo update-rc.d transmission-daemon defaults
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>更新 system 脚本。</p>
 <p>至此不出意外就可以使用</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo service transmission-daemon stop<span class="p">|</span>start<span class="p">|</span>status
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo service transmission-daemon stop<span class="p">|</span>start<span class="p">|</span>status
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="开机启动">开机启动</h1>
 <p>前面的 service 可以一系统服务的方式启动 daemon，而且可以指定运行的用户名，但会不能开机自启动。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -404,48 +396,48 @@ sudo update-rc.d transmission-daemon defaults
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> /etc/systmd/system
-
-vim transmission-daemion.service
-
-<span class="c1"># 填入</span>
-
-<span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>Transmission BitTorrent Daemon
-<span class="nv">After</span><span class="o">=</span>network.target
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">User</span><span class="o">=</span>rachpt
-<span class="nv">Type</span><span class="o">=</span>simple
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/transmission-daemon -f --log-error --logfile /var/log/transmission-daemon.log
-<span class="nv">ExecReload</span><span class="o">=</span>/bin/kill -s HUP <span class="nv">$MAINPID</span>
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/systmd/system
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vim transmission-daemion.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 填入</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Transmission BitTorrent Daemon
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>rachpt
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>simple
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/transmission-daemon -f --log-error --logfile /var/log/transmission-daemon.log
+</span></span><span class="line"><span class="cl"><span class="nv">ExecReload</span><span class="o">=</span>/bin/kill -s HUP <span class="nv">$MAINPID</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在这里卡了半天，无法成功，<code>-f</code> 好像很重要，删除后无法运行，无法设置开机运行。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo systemctl daemon-reload
-
-sudo systemctl <span class="nb">enable</span> transmission-daemon
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> transmission-daemon
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 查考所有服务</span>
-sudo systemctl list-unit-files
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 查考所有服务</span>
+</span></span><span class="line"><span class="cl">sudo systemctl list-unit-files
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>记得备份所有 <code>transmission-daemon</code> 目录下的 resume 和 torrent 等文件目录。</strong> 血的教训。</p>
 <h1 id="nginx">nginx</h1>
@@ -453,7 +445,7 @@ sudo systemctl list-unit-files
 <p>开机启动</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -488,52 +480,50 @@ sudo systemctl list-unit-files
 </span><span class="lnt">33
 </span><span class="lnt">34
 </span><span class="lnt">35
-</span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 直接复制官方的</span>
-
-
-vim /etc/systemd/system/nginx.service
-
-
-<span class="c1"># Stop dance for nginx</span>
-<span class="c1"># =======================</span>
-<span class="c1">#</span>
-<span class="c1"># ExecStop sends SIGSTOP (graceful stop) to the nginx process.</span>
-<span class="c1"># If, after 5s (--retry QUIT/5) nginx is still running, systemd takes control</span>
-<span class="c1"># and sends SIGTERM (fast shutdown) to the main process.</span>
-<span class="c1"># After another 5s (TimeoutStopSec=5), and if nginx is alive, systemd sends</span>
-<span class="c1"># SIGKILL to all the remaining processes in the process group (KillMode=mixed).</span>
-<span class="c1">#</span>
-<span class="c1"># nginx signals reference doc:</span>
-<span class="c1"># http://nginx.org/en/docs/control.html</span>
-<span class="c1">#</span>
-<span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>A high performance web server and a reverse proxy server
-<span class="nv">Documentation</span><span class="o">=</span>man:nginx<span class="o">(</span>8<span class="o">)</span>
-<span class="nv">After</span><span class="o">=</span>network.target
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">Type</span><span class="o">=</span>forking
-<span class="nv">PIDFile</span><span class="o">=</span>/run/nginx.pid
-<span class="nv">ExecStartPre</span><span class="o">=</span>/usr/sbin/nginx -t -q -g <span class="s1">&#39;daemon on; master_process on;&#39;</span>
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/sbin/nginx -g <span class="s1">&#39;daemon on; master_process on;&#39;</span>
-<span class="nv">ExecReload</span><span class="o">=</span>/usr/sbin/nginx -g <span class="s1">&#39;daemon on; master_process on;&#39;</span> -s reload
-<span class="nv">ExecStop</span><span class="o">=</span>-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid
-<span class="nv">TimeoutStopSec</span><span class="o">=</span><span class="m">5</span>
-<span class="nv">KillMode</span><span class="o">=</span>mixed
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 直接复制官方的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vim /etc/systemd/system/nginx.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Stop dance for nginx</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStop sends SIGSTOP (graceful stop) to the nginx process.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If, after 5s (--retry QUIT/5) nginx is still running, systemd takes control</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and sends SIGTERM (fast shutdown) to the main process.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># After another 5s (TimeoutStopSec=5), and if nginx is alive, systemd sends</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SIGKILL to all the remaining processes in the process group (KillMode=mixed).</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># nginx signals reference doc:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># http://nginx.org/en/docs/control.html</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>A high performance web server and a reverse proxy server
+</span></span><span class="line"><span class="cl"><span class="nv">Documentation</span><span class="o">=</span>man:nginx<span class="o">(</span>8<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>forking
+</span></span><span class="line"><span class="cl"><span class="nv">PIDFile</span><span class="o">=</span>/run/nginx.pid
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/sbin/nginx -t -q -g <span class="s1">&#39;daemon on; master_process on;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/sbin/nginx -g <span class="s1">&#39;daemon on; master_process on;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecReload</span><span class="o">=</span>/usr/sbin/nginx -g <span class="s1">&#39;daemon on; master_process on;&#39;</span> -s reload
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid
+</span></span><span class="line"><span class="cl"><span class="nv">TimeoutStopSec</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nv">KillMode</span><span class="o">=</span>mixed
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>注意路径，其他和 transmission-daemon 一样。</p>
 <h1 id="qbittorrent">qbittorrent</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -554,26 +544,26 @@ vim /etc/systemd/system/nginx.service
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">
-vim /etc/systemd/system/qbittorrent.service
-<span class="c1"># 或者 /lib/systemd/system/qbittorrent.service</span>
-
-<span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>qBittorrent Daemon Service
-<span class="nv">After</span><span class="o">=</span>network.target
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">User</span><span class="o">=</span>rachpt
-<span class="nv">Type</span><span class="o">=</span>forking
-<span class="nv">RemainAfterExit</span><span class="o">=</span>yes
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/qbittorrent-nox -d
-<span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/killall -w qbittorrent-nox
-<span class="nv">Restart</span><span class="o">=</span>on-abort
-<span class="nv">Nice</span><span class="o">=</span><span class="m">19</span>
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vim /etc/systemd/system/qbittorrent.service
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者 /lib/systemd/system/qbittorrent.service</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>qBittorrent Daemon Service
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>rachpt
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>forking
+</span></span><span class="line"><span class="cl"><span class="nv">RemainAfterExit</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/qbittorrent-nox -d
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/killall -w qbittorrent-nox
+</span></span><span class="line"><span class="cl"><span class="nv">Restart</span><span class="o">=</span>on-abort
+</span></span><span class="line"><span class="cl"><span class="nv">Nice</span><span class="o">=</span><span class="m">19</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>好像不用 <code>init.d</code>  里面运行脚本。</p>
 <h1 id="flexget">flexget</h1>
@@ -582,7 +572,7 @@ vim /etc/systemd/system/qbittorrent.service
 <p>在此 copy 过来。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -606,34 +596,34 @@ vim /etc/systemd/system/qbittorrent.service
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 新建一个配置文件</span>
-
-sudo vim /etc/default/flexget
-
-<span class="c1"># Configuration for /etc/init.d/flexget</span>
-
-<span class="c1"># User to run flexget as.</span>
-<span class="c1"># Daemon will not start if left empty.</span>
-<span class="nv">FGUSER</span><span class="o">=</span><span class="s2">&#34;rachpt&#34;</span>
-
-<span class="c1"># Full path to the flexget config.yml file to use.</span>
-<span class="c1"># Defaults to FGUSER $HOME/.flexget/config.yml</span>
-<span class="nv">CONFIG</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/.config/flexget/config.yml&#34;</span>
-
-<span class="c1"># Path to the directory where flexget should log. Do not add trailing slash.</span>
-<span class="c1"># Defaults to the FGUSER $HOME/.flexget directory</span>
-<span class="nv">LOG</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/.config/flexget&#34;</span>
-
-<span class="c1"># Log verbosity </span>
-<span class="c1"># Available options : none critical error warning info verbose debug trace</span>
-<span class="c1"># Defaults to info</span>
-<span class="nv">LEVEL</span><span class="o">=</span><span class="s2">&#34;info&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 新建一个配置文件</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo vim /etc/default/flexget
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Configuration for /etc/init.d/flexget</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># User to run flexget as.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Daemon will not start if left empty.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">FGUSER</span><span class="o">=</span><span class="s2">&#34;rachpt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Full path to the flexget config.yml file to use.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Defaults to FGUSER $HOME/.flexget/config.yml</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CONFIG</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/.config/flexget/config.yml&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Path to the directory where flexget should log. Do not add trailing slash.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Defaults to the FGUSER $HOME/.flexget directory</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LOG</span><span class="o">=</span><span class="s2">&#34;/home/rachpt/.config/flexget&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Log verbosity </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Available options : none critical error warning info verbose debug trace</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Defaults to info</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LEVEL</span><span class="o">=</span><span class="s2">&#34;info&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>建运行脚本 <code>/etc/init.d/flexget</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -786,172 +776,172 @@ sudo vim /etc/default/flexget
 </span><span class="lnt">151
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="c1">### BEGIN INIT INFO</span>
-<span class="c1"># Provides:          flexget</span>
-<span class="c1"># Required-Start:    $network $remote_fs</span>
-<span class="c1"># Required-Stop:     $network $remote_fs</span>
-<span class="c1"># Should-Start:      </span>
-<span class="c1"># Should-Stop:       </span>
-<span class="c1"># Default-Start:     2 3 4 5</span>
-<span class="c1"># Default-Stop:      0 1 6</span>
-<span class="c1"># Short-Description: Flexget</span>
-<span class="c1"># Description:       FlexGet is a multipurpose automation tool </span>
-<span class="c1">#                    for content like torrents, nzbs, podcasts,</span>
-<span class="c1">#                    comics, series, movies, etc.</span>
-<span class="c1">### END INIT INFO</span>
-
-<span class="c1"># Author: Antoine Joubert, 19/01/2014</span>
-
-<span class="nv">NAME</span><span class="o">=</span><span class="s2">&#34;flexget&#34;</span>
-<span class="nv">DAEMON</span><span class="o">=</span><span class="s2">&#34;/usr/local/bin/flexget&#34;</span>
-<span class="nv">SETTINGS</span><span class="o">=</span><span class="s2">&#34;/etc/default/</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
-
-<span class="nv">DESC</span><span class="o">=</span><span class="s2">&#34;Flexget&#34;</span>
-<span class="nv">PIDFILE</span><span class="o">=</span><span class="s2">&#34;/var/run/</span><span class="nv">$NAME</span><span class="s2">.pid&#34;</span>
-
-<span class="nb">set</span> -e
-
-. /lib/lsb/init-functions
-
-<span class="nb">unset</span> FGUSER CONFIG LOG LEVEL
-
-<span class="c1"># Exit if flexget not installed</span>
-<span class="k">if</span> <span class="o">[</span> ! -x <span class="s2">&#34;</span><span class="nv">$DAEMON</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Could not find flexget executable. Exiting.&#34;</span>
-        <span class="nb">exit</span> <span class="m">2</span>
-<span class="k">fi</span>
-
-<span class="c1"># Read configuration variables</span>
-<span class="k">if</span> <span class="o">[</span> -r /etc/default/<span class="nv">$NAME</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        . /etc/default/<span class="nv">$NAME</span>
-<span class="k">else</span>
-        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: /etc/default/</span><span class="nv">$NAME</span><span class="s2"> not found. Exiting.&#34;</span>
-        <span class="nb">exit</span> <span class="m">2</span>
-<span class="k">fi</span>
-
-<span class="c1"># Exit if FGUSER has not been set in /etc/default/flexget</span>
-<span class="k">if</span> <span class="o">[</span> -z <span class="nv">$FGUSER</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: FGUSER not set in /etc/default/</span><span class="nv">$NAME</span><span class="s2">. Exiting.&#34;</span>
-        <span class="nb">exit</span> <span class="m">2</span>
-<span class="k">fi</span>
-
-<span class="c1"># Function to verify if flexget is already running</span>
-run_check<span class="o">()</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">[</span> -e <span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-               status_of_proc -p <span class="nv">$PIDFILE</span> <span class="nv">$DAEMON</span> <span class="nv">$NAME</span> &gt; /dev/null <span class="o">&amp;&amp;</span> <span class="nv">RETVAL</span><span class="o">=</span><span class="m">0</span> <span class="o">||</span> <span class="nv">RETVAL</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$?</span><span class="s2">&#34;</span>
-        <span class="k">else</span>
-                <span class="nv">RETVAL</span><span class="o">=</span><span class="s2">&#34;2&#34;</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-end_log<span class="o">()</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                log_end_msg <span class="m">0</span>
-                <span class="k">return</span> <span class="m">0</span>
-        <span class="k">else</span>
-                log_end_msg <span class="m">1</span>
-                <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="c1"># Function to define config file, log file and log level</span>
-conf_check<span class="o">()</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$CONFIG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
-        <span class="k">else</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;-c </span><span class="nv">$CONFIG</span><span class="s2">&#34;</span>
-        <span class="k">fi</span>
-        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$LOG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
-        <span class="k">else</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2"> -l </span><span class="nv">$LOG</span><span class="s2">/flexget.log&#34;</span>
-                <span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$LOG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> 
-                        mkdir -p -m <span class="m">750</span> <span class="nv">$LOG</span>
-                        chown <span class="nv">$FGUSER</span> <span class="nv">$LOG</span>
-                <span class="k">fi</span>
-        <span class="k">fi</span>
-
-        <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$LEVEL</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
-        <span class="k">else</span>
-                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2"> -L </span><span class="nv">$LEVEL</span><span class="s2">&#34;</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-start_flexget<span class="o">()</span> <span class="o">{</span>
-        run_check
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Already running with PID </span><span class="k">$(</span>cat <span class="nv">$PIDFILE</span><span class="k">)</span><span class="s2">. Aborting.&#34;</span>
-                <span class="nb">exit</span> <span class="m">2</span>
-        <span class="k">else</span>
-                conf_check
-                log_daemon_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Starting the daemon.&#34;</span>
-                start-stop-daemon --start --background --quiet --pidfile <span class="nv">$PIDFILE</span> --make-pidfile --chuid <span class="nv">$FGUSER</span> <span class="se">\
-</span><span class="se"></span>                --user <span class="nv">$FGUSER</span> --exec <span class="nv">$DAEMON</span> -- <span class="nv">$OPTIONS</span> daemon start
-                <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
-                end_log
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-stop_flexget<span class="o">()</span> <span class="o">{</span>
-        run_check
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                log_daemon_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Stopping the daemon.&#34;</span>
-                start-stop-daemon --stop --quiet --chuid <span class="s2">&#34;</span><span class="nv">$FGUSER</span><span class="s2">&#34;</span> --pidfile <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span> --retry <span class="m">30</span>
-                <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
-                <span class="o">[</span> -e <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span>
-                end_log
-        <span class="k">else</span>
-                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Not currently running. Aborting.&#34;</span>
-                <span class="nb">exit</span> <span class="m">2</span>
-        <span class="k">fi</span>
-<span class="o">}</span>
-
-status_flexget<span class="o">()</span> <span class="o">{</span>
-        run_check
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Currently running with PID </span><span class="k">$(</span>cat <span class="nv">$PIDFILE</span><span class="k">)</span><span class="s2">.&#34;</span>
-        <span class="k">else</span>
-                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Not currently running.&#34;</span>
-        <span class="k">fi</span>
-        <span class="nb">exit</span> <span class="nv">$RETVAL</span>
-<span class="o">}</span>
-
-<span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
-        start<span class="o">)</span>
-                start_flexget
-        <span class="p">;;</span>
-        stop<span class="o">)</span>
-                stop_flexget
-        <span class="p">;;</span>
-        restart<span class="o">)</span>
-                stop_flexget <span class="o">&amp;&amp;</span> sleep <span class="m">2</span> <span class="o">&amp;&amp;</span> start_flexget
-        <span class="p">;;</span>
-        status<span class="o">)</span>
-                status_flexget
-        <span class="p">;;</span>
-        *<span class="o">)</span>
-                <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> {start|stop|restart|status}&#34;</span>
-<span class="k">esac</span>
-
-<span class="nb">exit</span> <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">### BEGIN INIT INFO</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Provides:          flexget</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Start:    $network $remote_fs</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Stop:     $network $remote_fs</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Should-Start:      </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Should-Stop:       </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Start:     2 3 4 5</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Stop:      0 1 6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Short-Description: Flexget</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Description:       FlexGet is a multipurpose automation tool </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                    for content like torrents, nzbs, podcasts,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                    comics, series, movies, etc.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### END INIT INFO</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Author: Antoine Joubert, 19/01/2014</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">NAME</span><span class="o">=</span><span class="s2">&#34;flexget&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DAEMON</span><span class="o">=</span><span class="s2">&#34;/usr/local/bin/flexget&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SETTINGS</span><span class="o">=</span><span class="s2">&#34;/etc/default/</span><span class="nv">$NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">DESC</span><span class="o">=</span><span class="s2">&#34;Flexget&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PIDFILE</span><span class="o">=</span><span class="s2">&#34;/var/run/</span><span class="nv">$NAME</span><span class="s2">.pid&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">. /lib/lsb/init-functions
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">unset</span> FGUSER CONFIG LOG LEVEL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Exit if flexget not installed</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -x <span class="s2">&#34;</span><span class="nv">$DAEMON</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Could not find flexget executable. Exiting.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Read configuration variables</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -r /etc/default/<span class="nv">$NAME</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        . /etc/default/<span class="nv">$NAME</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: /etc/default/</span><span class="nv">$NAME</span><span class="s2"> not found. Exiting.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Exit if FGUSER has not been set in /etc/default/flexget</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="nv">$FGUSER</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: FGUSER not set in /etc/default/</span><span class="nv">$NAME</span><span class="s2">. Exiting.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Function to verify if flexget is already running</span>
+</span></span><span class="line"><span class="cl">run_check<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -e <span class="nv">$PIDFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">               status_of_proc -p <span class="nv">$PIDFILE</span> <span class="nv">$DAEMON</span> <span class="nv">$NAME</span> &gt; /dev/null <span class="o">&amp;&amp;</span> <span class="nv">RETVAL</span><span class="o">=</span><span class="m">0</span> <span class="o">||</span> <span class="nv">RETVAL</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$?</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">RETVAL</span><span class="o">=</span><span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">end_log<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                log_end_msg <span class="m">0</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                log_end_msg <span class="m">1</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Function to define config file, log file and log level</span>
+</span></span><span class="line"><span class="cl">conf_check<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$CONFIG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;-c </span><span class="nv">$CONFIG</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$LOG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2"> -l </span><span class="nv">$LOG</span><span class="s2">/flexget.log&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$LOG</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> 
+</span></span><span class="line"><span class="cl">                        mkdir -p -m <span class="m">750</span> <span class="nv">$LOG</span>
+</span></span><span class="line"><span class="cl">                        chown <span class="nv">$FGUSER</span> <span class="nv">$LOG</span>
+</span></span><span class="line"><span class="cl">                <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$LEVEL</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OPTIONS</span><span class="s2"> -L </span><span class="nv">$LEVEL</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">start_flexget<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        run_check
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Already running with PID </span><span class="k">$(</span>cat <span class="nv">$PIDFILE</span><span class="k">)</span><span class="s2">. Aborting.&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                conf_check
+</span></span><span class="line"><span class="cl">                log_daemon_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Starting the daemon.&#34;</span>
+</span></span><span class="line"><span class="cl">                start-stop-daemon --start --background --quiet --pidfile <span class="nv">$PIDFILE</span> --make-pidfile --chuid <span class="nv">$FGUSER</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>                --user <span class="nv">$FGUSER</span> --exec <span class="nv">$DAEMON</span> -- <span class="nv">$OPTIONS</span> daemon start
+</span></span><span class="line"><span class="cl">                <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">                end_log
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">stop_flexget<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        run_check
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                log_daemon_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Stopping the daemon.&#34;</span>
+</span></span><span class="line"><span class="cl">                start-stop-daemon --stop --quiet --chuid <span class="s2">&#34;</span><span class="nv">$FGUSER</span><span class="s2">&#34;</span> --pidfile <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span> --retry <span class="m">30</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">                <span class="o">[</span> -e <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&#34;</span><span class="nv">$PIDFILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                end_log
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Not currently running. Aborting.&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">exit</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">status_flexget<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        run_check
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$RETVAL</span> <span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Currently running with PID </span><span class="k">$(</span>cat <span class="nv">$PIDFILE</span><span class="k">)</span><span class="s2">.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                log_action_msg <span class="s2">&#34;</span><span class="nv">$DESC</span><span class="s2">: Not currently running.&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="nv">$RETVAL</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">        start<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                start_flexget
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        stop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                stop_flexget
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        restart<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                stop_flexget <span class="o">&amp;&amp;</span> sleep <span class="m">2</span> <span class="o">&amp;&amp;</span> start_flexget
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        status<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                status_flexget
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> {start|stop|restart|status}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>记得加执行权限。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo update-rc.d flexget defaults
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo update-rc.d flexget defaults
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>建立 <code>flexget.service</code> 文件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -969,23 +959,23 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo vim /etc/systemd/system/flexget.service 
-
-<span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>Flexget Daemon
-<span class="nv">After</span><span class="o">=</span>network.target
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">User</span><span class="o">=</span>rachpt
-<span class="nv">Type</span><span class="o">=</span>simple
-<span class="nv">WorkingDirectory</span><span class="o">=</span>/home/rachpt/.config/flexget
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/local/bin/flexget daemon start
-<span class="nv">ExecStop</span><span class="o">=</span>/usr/local/bin/flexget daemon stop
-<span class="nv">ExecReload</span><span class="o">=</span>/usr/local/bin/flexget daemon reload
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo vim /etc/systemd/system/flexget.service 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Flexget Daemon
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>rachpt
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>simple
+</span></span><span class="line"><span class="cl"><span class="nv">WorkingDirectory</span><span class="o">=</span>/home/rachpt/.config/flexget
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/local/bin/flexget daemon start
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>/usr/local/bin/flexget daemon stop
+</span></span><span class="line"><span class="cl"><span class="nv">ExecReload</span><span class="o">=</span>/usr/local/bin/flexget daemon reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其他和前面一样，不再重复。</p>
 <p>使用 <code>pidtree</code> 可以看到所有进程的父进程。</p>
@@ -1015,11 +1005,11 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -1072,7 +1062,7 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -1093,8 +1083,8 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -1105,12 +1095,12 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -1118,19 +1108,8 @@ status_flexget<span class="o">()</span> <span class="o">{</span>
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

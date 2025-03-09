@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wamp on rachpt&#39;s Blog</title>
+    <title>Wamp on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/wamp/</link>
-    <description>Recent content in wamp on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Wamp on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Dec 2017 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/wamp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/wamp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题</title>
       <link>https://rachpt.cn/2017/12/02/solve-some-problem-about-wamp/</link>
       <pubDate>Sat, 02 Dec 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/12/02/solve-some-problem-about-wamp/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

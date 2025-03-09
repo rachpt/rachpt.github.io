@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 使用awstata分析nginx以及vsftp日志。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2019/03/22/notes-about-awstats/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="notes-about-awstats" />
-<meta property="og:description" content="
-使用awstata分析nginx以及vsftp日志。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2019/03/22/notes-about-awstats/" />
-<meta property="article:published_time" content="2019-03-22T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-03-22T00:00:00+08:00" />
-<meta itemprop="name" content="notes-about-awstats">
-<meta itemprop="description" content="
-使用awstata分析nginx以及vsftp日志。
-">
-<meta itemprop="datePublished" content="2019-03-22T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2019-03-22T00:00:00+08:00" />
-<meta itemprop="wordCount" content="713">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2019/03/22/notes-about-awstats/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="notes-about-awstats">
+  <meta property="og:description" content="使用awstata分析nginx以及vsftp日志。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-03-22T00:00:00+08:00">
+    <meta property="article:modified_time" content="2019-03-22T00:00:00+08:00">
+    <meta property="article:tag" content="Awstats">
 
-<meta itemprop="keywords" content="awstats," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="notes-about-awstats"/>
-<meta name="twitter:description" content="
-使用awstata分析nginx以及vsftp日志。
-"/>
+  <meta itemprop="name" content="notes-about-awstats">
+  <meta itemprop="description" content="使用awstata分析nginx以及vsftp日志。">
+  <meta itemprop="datePublished" content="2019-03-22T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2019-03-22T00:00:00+08:00">
+  <meta itemprop="wordCount" content="710">
+  <meta itemprop="keywords" content="Awstats">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="notes-about-awstats">
+  <meta name="twitter:description" content="使用awstata分析nginx以及vsftp日志。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 713 字 </span>
+          <span class="more-meta"> 约 710 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -174,8 +169,7 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>使用awstata分析nginx以及vsftp日志。</p>
-</blockquote>
+<p>使用awstata分析nginx以及vsftp日志。</p></blockquote>
 <h1 id="安装">安装</h1>
 <p>可以使用相应平台的包管理器安装，也可以直接到<a href="https://awstats.sourceforge.io/#DOWNLOAD">官网</a>下载归档文件，解压其中的 <code>wwwroot</code>放到nginx的根目录，或者在nginx config文件设置alias，可以参考 <a href="https://wiki.archlinux.org/index.php/awstats">https://wiki.archlinux.org/index.php/awstats</a> 或者<code>tools/nginx/awstats-nginx.conf</code>文件。</p>
 <p>另外，需要 perl，这个系统一般都带有。</p>
@@ -184,7 +178,7 @@
 <p>我是用的 <code>pacman</code> 安装的，所以直接复制修改该model文件，将<code>model</code>改成自己的任务名，比如<code>web</code>或则<code>ftp</code>啥的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -202,71 +196,65 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">LogFile=&#34;/var/log/nginx/access.log&#34;
-
-LogType=W # 默认 web模式
-
-LogFormat=1
-
-SiteDomain=&#34;web-server&#34; # 改成你想显示的
-
-AllowToUpdateStatsFromBrowser=0  # 是否可以通过网页更新，具体好坏里面有说明
-
-DirIcons=&#34;/awstatsicons&#34; # 如果你修改了该路径
-
-UseFramesWhenCGI=0  # 是否开启侧边栏，0 不开
-
-ShowFlagLinks=&#34;en cn tw de jp&#34; # 显示语言切换按钮
-
-Logo=&#34;awstats_logo1.png&#34;  # logo 图片
-LogoLink=&#34;/&#34;   # logo 链接
-
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">LogFile</span><span class="o">=</span><span class="s2">&#34;/var/log/nginx/access.log&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LogType</span><span class="o">=</span><span class="n">W</span> <span class="c1"># 默认 web模式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LogFormat</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SiteDomain</span><span class="o">=</span><span class="s2">&#34;web-server&#34;</span> <span class="c1"># 改成你想显示的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">AllowToUpdateStatsFromBrowser</span><span class="o">=</span><span class="mi">0</span>  <span class="c1"># 是否可以通过网页更新，具体好坏里面有说明</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">DirIcons</span><span class="o">=</span><span class="s2">&#34;/awstatsicons&#34;</span> <span class="c1"># 如果你修改了该路径</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">UseFramesWhenCGI</span><span class="o">=</span><span class="mi">0</span>  <span class="c1"># 是否开启侧边栏，0 不开</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ShowFlagLinks</span><span class="o">=</span><span class="s2">&#34;en cn tw de jp&#34;</span> <span class="c1"># 显示语言切换按钮</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Logo</span><span class="o">=</span><span class="s2">&#34;awstats_logo1.png&#34;</span>  <span class="c1"># logo 图片</span>
+</span></span><span class="line"><span class="cl"><span class="n">LogoLink</span><span class="o">=</span><span class="s2">&#34;/&#34;</span>   <span class="c1"># logo 链接</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面是 nginx 日志的，对于 vsftp 只有一点区别，就是需要自己定义 <code>LogFormat</code>，如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">LogFile=&#34;/var/log/vsftpd.log&#34; # vsftp 需要打开对应的日志开关！！！
-
-LogType=F  # ftp 模式
-
-LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %logname %other %code %other %other&#34;  # 这个需要和你的 vsftp log 文件列匹配。
-
-# 其他类似
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">LogFile</span><span class="o">=</span><span class="s2">&#34;/var/log/vsftpd.log&#34;</span> <span class="c1"># vsftp 需要打开对应的日志开关！！！</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LogType</span><span class="o">=</span><span class="n">F</span>  <span class="c1"># ftp 模式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LogFormat</span><span class="o">=</span><span class="s2">&#34;%time3 </span><span class="si">%o</span><span class="s2">ther </span><span class="si">%ho</span><span class="s2">st %bytesd </span><span class="si">%u</span><span class="s2">rl </span><span class="si">%o</span><span class="s2">ther </span><span class="si">%o</span><span class="s2">ther %method </span><span class="si">%o</span><span class="s2">ther </span><span class="si">%lo</span><span class="s2">gname </span><span class="si">%o</span><span class="s2">ther </span><span class="si">%c</span><span class="s2">ode </span><span class="si">%o</span><span class="s2">ther </span><span class="si">%o</span><span class="s2">ther&#34;</span>  <span class="c1"># 这个需要和你的 vsftp log 文件列匹配。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 其他类似</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>需要注意文件权限问题，比如 wwwroot里面的 需要chown http(你的 nginx 运行用户)，log文件需要有读权限，否则你需要使用 root 运行下面家要说的生成命令。</p>
 <h1 id="生成">生成</h1>
 <p>需要使用 crontab (cronie) 定时运行更新命令。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo crontab -e # 创建 root 用户的定时任务
-# 每个 1 小时运行一次
-7 */1 * * * /usr/share/awstats/tools/awstats_updateall.pl now -awstatsprog=/usr/share/webapps/awstats/awstats/awstats.pl &gt; /home/awstatus.log
-# 因为配置文件在 etc 里面，所以上面没有指明路径。
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span> <span class="c1"># 创建 root 用户的定时任务</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 每个 1 小时运行一次</span>
+</span></span><span class="line"><span class="cl"><span class="mi">7</span> <span class="o">*/</span><span class="mi">1</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">awstats</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">awstats_updateall</span><span class="o">.</span><span class="n">pl</span> <span class="n">now</span> <span class="o">-</span><span class="n">awstatsprog</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">webapps</span><span class="o">/</span><span class="n">awstats</span><span class="o">/</span><span class="n">awstats</span><span class="o">/</span><span class="n">awstats</span><span class="o">.</span><span class="n">pl</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">awstatus</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 因为配置文件在 etc 里面，所以上面没有指明路径。</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>因为我是用的是nginx alias 方式，所以 -awstatsprog 路径就是安装默认路径。</p>
 <h1 id="其他">其他</h1>
@@ -300,11 +288,11 @@ LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %lo
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -357,7 +345,7 @@ LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %lo
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -378,8 +366,8 @@ LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %lo
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -390,12 +378,12 @@ LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %lo
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -403,19 +391,8 @@ LogFormat=&#34;%time3 %other %host %bytesd %url %other %other %method %other %lo
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

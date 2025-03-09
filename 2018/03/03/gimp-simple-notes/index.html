@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 记录一些 Gimp 常用操作，力求简洁明了。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/03/03/gimp-simple-notes/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="Gimp 简单使用笔记" />
-<meta property="og:description" content="
-记录一些 Gimp 常用操作，力求简洁明了。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/03/03/gimp-simple-notes/" />
-<meta property="article:published_time" content="2018-03-03T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-03-03T00:00:00+08:00" />
-<meta itemprop="name" content="Gimp 简单使用笔记">
-<meta itemprop="description" content="
-记录一些 Gimp 常用操作，力求简洁明了。
-">
-<meta itemprop="datePublished" content="2018-03-03T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-03-03T00:00:00+08:00" />
-<meta itemprop="wordCount" content="397">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/03/03/gimp-simple-notes/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="Gimp 简单使用笔记">
+  <meta property="og:description" content="记录一些 Gimp 常用操作，力求简洁明了。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-03-03T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-03-03T00:00:00+08:00">
+    <meta property="article:tag" content="Gimp">
 
-<meta itemprop="keywords" content="gimp," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gimp 简单使用笔记"/>
-<meta name="twitter:description" content="
-记录一些 Gimp 常用操作，力求简洁明了。
-"/>
+  <meta itemprop="name" content="Gimp 简单使用笔记">
+  <meta itemprop="description" content="记录一些 Gimp 常用操作，力求简洁明了。">
+  <meta itemprop="datePublished" content="2018-03-03T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-03-03T00:00:00+08:00">
+  <meta itemprop="wordCount" content="397">
+  <meta itemprop="keywords" content="Gimp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Gimp 简单使用笔记">
+  <meta name="twitter:description" content="记录一些 Gimp 常用操作，力求简洁明了。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -175,25 +170,24 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p>
-</blockquote>
+<p>记录一些 <code>Gimp</code> 常用操作，力求简洁明了。</p></blockquote>
 <h1 id="画矩形框">画矩形框</h1>
 <ol>
 <li>选用<code>矩形选择工具 (快捷键R)</code> ，选区。</li>
 <li>编辑 &ndash;&gt; 勾画选区。</li>
 </ol>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/gimp-simple-notes-1.jpg" alt="gimp-simple-notes-1.jpg"></p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/gimp-simple-notes-2.jpg" alt="gimp-simple-notes-2.jpg"></p>
+<p><img src="https://img.rachpt.cn/imgs/gimp-simple-notes-1.jpg" alt="gimp-simple-notes-1.jpg"></p>
+<p><img src="https://img.rachpt.cn/imgs/gimp-simple-notes-2.jpg" alt="gimp-simple-notes-2.jpg"></p>
 <hr>
 <h1 id="画笔工具">画笔工具</h1>
 <p>使用 快捷键 <code>P</code> 进入画笔工具，临时使用拾色器工具 （吸管工具）快捷键 ctrl + 鼠标左键；</p>
-<p>与此对比，PS 使用  <code>b</code> 进入画笔工具，使用 <code>alt</code> 取色。两者 画笔放大缩小 快捷键一致，<code> [  ]</code> 。</p>
+<p>与此对比，PS 使用 <code>b</code> 进入画笔工具，使用 <code>alt</code> 取色。两者 画笔放大缩小 快捷键一致，<code> [  ]</code> 。</p>
 <h1 id="放大缩小">放大缩小</h1>
-<p><code>GIMP</code> 和 <code>PS</code> 一样使用 <code>Z</code> 进入缩放zoom。不同处，</p>
+<p><code>GIMP</code> 和 <code>PS</code> 一样使用 <code>Z</code> 进入缩放 zoom。不同处，</p>
 <p>ps 按住<code>z</code> 键 同时按住鼠标左键左右拖动实现缩放；双击左侧工具栏上的 <code>抓手工具</code> 或者 <code>缩放工具</code> 画面大小自适应。</p>
-<p>而<code>GIMP</code>  不同，任意界面 按住 <code>ctrl</code> 键，使用鼠标滚轮实现缩放。</p>
+<p>而<code>GIMP</code> 不同，任意界面 按住 <code>ctrl</code> 键，使用鼠标滚轮实现缩放。</p>
 <h1 id="选区浮动">选区浮动</h1>
-<p>ps 里面只需选中对象，直接鼠标即可拖动。Gimp里面需要先将选区浮动，然后才能移动，快捷键 <code>ctrl + shift + L</code>，或者<code>右键</code>、<code>选择</code>(直接工具栏点击也行)、<code>浮动</code>。移动玩后需要将浮动选区创建到新图层(不再修改，固定到图层也可以)，才能换其他图层。</p>
+<p>ps 里面只需选中对象，直接鼠标即可拖动。Gimp 里面需要先将选区浮动，然后才能移动，快捷键 <code>ctrl + shift + L</code>，或者<code>右键</code>、<code>选择</code>(直接工具栏点击也行)、<code>浮动</code>。移动玩后需要将浮动选区创建到新图层(不再修改，固定到图层也可以)，才能换其他图层。</p>
 <h1 id="旋转选区">旋转选区</h1>
 <p>快捷键 <code>shift + R</code>，特别地，直接 <code>R</code> 是矩形选择工具，比较常用，<code>M</code> 移动工具，按住空格不放，临时移动。</p>
     </div>
@@ -222,11 +216,11 @@
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -235,9 +229,9 @@
           <a href="/tags/gimp/">gimp</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/2018/03/05/settings-for-next-theme/">
+        <a class="prev" href="/2018/03/05/test/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">next 主题设置</span>
+            <span class="prev-text nav-default">next 主题使用笔记——标签</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/2018/03/03/pycharm-please-specify-a-different-sdk-name/">
@@ -279,7 +273,7 @@
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -300,8 +294,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -312,12 +306,12 @@
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -325,19 +319,8 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

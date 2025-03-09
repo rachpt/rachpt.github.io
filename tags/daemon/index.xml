@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>daemon on rachpt&#39;s Blog</title>
+    <title>Daemon on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/daemon/</link>
-    <description>Recent content in daemon on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Daemon on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 28 Jul 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jul 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>service-systemctl-and-daemon</title>
       <link>https://rachpt.cn/2018/07/28/service-systemctl-and-daemon/</link>
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/07/28/service-systemctl-and-daemon/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;前面说到了使用原码编译 &lt;code&gt;transmission-daemon&lt;/code&gt; &lt;code&gt;qbittorrent-nox&lt;/code&gt; &lt;code&gt;nginx&lt;/code&gt; ，但是需要自己配置启动脚本。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;前面说到了使用原码编译 &lt;code&gt;transmission-daemon&lt;/code&gt; &lt;code&gt;qbittorrent-nox&lt;/code&gt; &lt;code&gt;nginx&lt;/code&gt; ，但是需要自己配置启动脚本。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

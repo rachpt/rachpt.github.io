@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>matlab on rachpt&#39;s Blog</title>
+    <title>Matlab on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/matlab/</link>
-    <description>Recent content in matlab on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Matlab on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>install-matlab-on-archlinux</title>
       <link>https://rachpt.cn/2018/12/31/install-matlab-on-archlinux/</link>
       <pubDate>Mon, 31 Dec 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/12/31/install-matlab-on-archlinux/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;由于archlinux 并不在matlab 官方支持的系统之列，之前使用不完整的matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;由于 archlinux 并不在 matlab 官方支持的系统之列，之前使用不完整的 matlab(无法使用实时脚本，帮助页面显示不正常)，一直觉得理所当然，居然是有解决办法的。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>run-matlab-in-a-terminal</title>
       <link>https://rachpt.cn/2018/07/25/run-matlab-in-a-terminal/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/07/25/run-matlab-in-a-terminal/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;直接在 termianl 中运行 matlab，输入命令，执行脚本。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;直接在 termianl 中运行 matlab，输入命令，执行脚本。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

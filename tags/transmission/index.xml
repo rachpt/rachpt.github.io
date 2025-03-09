@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>transmission on rachpt&#39;s Blog</title>
+    <title>Transmission on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/transmission/</link>
-    <description>Recent content in transmission on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Transmission on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/transmission/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/transmission/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>make-transmission2.94-from-source-code</title>
       <link>https://rachpt.cn/2018/07/24/make-transmission2-94-from-source-code/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/07/24/make-transmission2-94-from-source-code/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;从源代码编译安装 transmission， 以支持跳过校验以及自定义部分 webUI 特性。环境 ubuntu 系。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>transmission-settings</title>
       <link>https://rachpt.cn/2018/03/25/transmission-settings/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/25/transmission-settings/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;之前不会设置 transmission ，习惯了 ut 的点点点，觉得很是不好用，对其 json 的配置文件很不友好的形式感到恶心，不过现在有了更多的 linux 命令行与 shell 脚本知识后，再看 transmission，真心佩服如此灵活的配置。什么 qBittorrent，deluge 什么的，一边去，看我 transmission。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里记录一些 配置心得。&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;之前不会设置 transmission ，习惯了 ut 的点点点，觉得很是不好用，对其 json 的配置文件很不友好的形式感到恶心，不过现在有了更多的 linux 命令行与 shell 脚本知识后，再看 transmission，真心佩服如此灵活的配置。什么 qBittorrent，deluge 什么的，一边去，看我 transmission。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;这里记录一些 配置心得。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

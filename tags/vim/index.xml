@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on rachpt&#39;s Blog</title>
+    <title>Vim on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/vim/</link>
-    <description>Recent content in vim on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Vim on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vim-set-working-directory-to-the-current-file</title>
       <link>https://rachpt.cn/2018/08/22/vim-set-working-directory-to-the-current-file/</link>
       <pubDate>Wed, 22 Aug 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/08/22/vim-set-working-directory-to-the-current-file/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;vim自动进入打开文件所在目录,原谅我无耻地 copy。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;vim 自动进入打开文件所在目录,原谅我无耻地 copy。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

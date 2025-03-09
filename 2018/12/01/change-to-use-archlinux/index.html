@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/12/01/change-to-use-archlinux/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="change-to-use-archlinux" />
-<meta property="og:description" content="
-因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/12/01/change-to-use-archlinux/" />
-<meta property="article:published_time" content="2018-12-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-12-01T00:00:00+08:00" />
-<meta itemprop="name" content="change-to-use-archlinux">
-<meta itemprop="description" content="
-因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。
-">
-<meta itemprop="datePublished" content="2018-12-01T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-12-01T00:00:00+08:00" />
-<meta itemprop="wordCount" content="632">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/12/01/change-to-use-archlinux/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="change-to-use-archlinux">
+  <meta property="og:description" content="因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-12-01T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-12-01T00:00:00+08:00">
+    <meta property="article:tag" content="Linux">
 
-<meta itemprop="keywords" content="linux," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="change-to-use-archlinux"/>
-<meta name="twitter:description" content="
-因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。
-"/>
+  <meta itemprop="name" content="change-to-use-archlinux">
+  <meta itemprop="description" content="因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。">
+  <meta itemprop="datePublished" content="2018-12-01T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-12-01T00:00:00+08:00">
+  <meta itemprop="wordCount" content="632">
+  <meta itemprop="keywords" content="Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="change-to-use-archlinux">
+  <meta name="twitter:description" content="因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -172,8 +167,7 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。</p>
-</blockquote>
+<p>因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。</p></blockquote>
 <h1 id="ked">KED</h1>
 <p>之前习惯了类windows的cinnamon，也想过直接使用manjaro的cinnamon版本，但是考虑到 mint19 上比较容易出现的xwindow卡死，于是决定尝试使用manjaro官方支持的kde版本，之前体验过一小段时间，当时感觉是初始设置反人类，设置麻烦。
 经过一两周的使用，现在基本上能把kde配置成方便自己习惯了。</p>
@@ -190,19 +184,19 @@
 <p>解决办法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># PidFile: Write the PID of the main tinyproxy thread to this file so it</span>
-<span class="c1"># can be used for signalling purposes.</span>
-<span class="c1"># If not specified, no pidfile will be written.</span>
-<span class="c1">#</span>
-<span class="c1">#PidFile &#34;/run/tinyproxy/tinyproxy.pid&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># PidFile: Write the PID of the main tinyproxy thread to this file so it</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># can be used for signalling purposes.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If not specified, no pidfile will be written.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#PidFile &#34;/run/tinyproxy/tinyproxy.pid&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>取消 <code>/etc/tinyproxy/tinyproxy.conf</code> 如上的注释行。
 <a href="https://github.com/StreisandEffect/streisand/issues/1381">参考文档</a>。</p>
@@ -211,33 +205,33 @@
 解决办法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">vim /etc/vsftpd.conf
-<span class="c1"># 添加下面一行</span>
-<span class="nv">seccomp_sandbox</span><span class="o">=</span>NO
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vim /etc/vsftpd.conf
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加下面一行</span>
+</span></span><span class="line"><span class="cl"><span class="nv">seccomp_sandbox</span><span class="o">=</span>NO
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="https://wiki.archlinux.org/index.php/Very_Secure_FTP_Daemon">参考文档</a>。</p>
 <p>例外，vsftpd 不支持使用 ln -s 软连接，使用 mount &ndash;band /old /new 可解。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 在 /etc/fstab 中添加如下行，以便开机自动bind。</span>
-/mnt/data/pub                             /srv/ftp/pub       none  <span class="nb">bind</span>    <span class="m">0</span> <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 在 /etc/fstab 中添加如下行，以便开机自动bind。</span>
+</span></span><span class="line"><span class="cl">/mnt/data/pub                             /srv/ftp/pub       none  <span class="nb">bind</span>    <span class="m">0</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="swapfie">swapfie</h1>
 <p>使用<code>sudo fallocate -l 20G /swapfile</code> 快速创建大体积swapfile 文件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -255,23 +249,23 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo fallocate -l 20G /swapfile
-<span class="c1"># 为了安全</span>
-sudo chown root:root /swapfile
-
-sudo chmod <span class="m">0600</span> /swapfile
-
-sudo mkswap /swapfile
-<span class="c1"># 开</span>
-sudo swapon /swapfile
-<span class="c1"># 关</span>
-sudo swapoff /swapfile
-
-<span class="c1"># 添加开机自动挂载</span>
-vim /etc/fstab
-
-/swapfile      none       swap    sw <span class="m">0</span> <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo fallocate -l 20G /swapfile
+</span></span><span class="line"><span class="cl"><span class="c1"># 为了安全</span>
+</span></span><span class="line"><span class="cl">sudo chown root:root /swapfile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">0600</span> /swapfile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo mkswap /swapfile
+</span></span><span class="line"><span class="cl"><span class="c1"># 开</span>
+</span></span><span class="line"><span class="cl">sudo swapon /swapfile
+</span></span><span class="line"><span class="cl"><span class="c1"># 关</span>
+</span></span><span class="line"><span class="cl">sudo swapoff /swapfile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加开机自动挂载</span>
+</span></span><span class="line"><span class="cl">vim /etc/fstab
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/swapfile      none       swap    sw <span class="m">0</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>/etc/fstab 会在启动的时候执行. 若文件有误那么会启动失败！！！</p>
     </div>
@@ -300,11 +294,11 @@ vim /etc/fstab
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -357,7 +351,7 @@ vim /etc/fstab
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -378,8 +372,8 @@ vim /etc/fstab
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -390,12 +384,12 @@ vim /etc/fstab
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -403,19 +397,8 @@ vim /etc/fstab
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

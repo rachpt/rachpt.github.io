@@ -1,55 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>firefox on rachpt&#39;s Blog</title>
+    <title>Firefox on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/firefox/</link>
-    <description>Recent content in firefox on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Firefox on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Mar 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Mar 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>change-sidebar-width-of-firefox</title>
       <link>https://rachpt.cn/2018/03/28/change-sidebar-width-of-firefox/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/28/change-sidebar-width-of-firefox/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Firefox 的侧边书签很好用，但是在低分辨率屏幕上，最小宽度总是太宽，有办法突破最小值吗，答案是有的。不知道现在侧边栏插件适配了没有。这里记录在 ubuntu 平台使用自定义 css 样式改小侧边栏的最小值。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Ubuntu 中的 Firefox</title>
       <link>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</link>
       <pubDate>Sat, 09 Dec 2017 14:23:45 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/12/09/firefox-in-ubuntu/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;记录几个 firefox 相关的笔记。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;记录几个 firefox 相关的笔记。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Firefox 切换更新通道</title>
       <link>https://rachpt.cn/2017/11/11/firefox-noupgrade/</link>
       <pubDate>Sat, 11 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/11/firefox-noupgrade/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;用过Firefox(火狐浏览器)的童鞋都知道，Firefox可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种User，那么Firefox的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX的更新可能是灾难性的。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;用过 Firefox(火狐浏览器)的童鞋都知道，Firefox 可是个更新狂魔，如果你只是一个浏览器轻度使用者，或者是是别人给你提供啥（预装）就用啥这种 User，那么 Firefox 的高频更新对你可能影响不大。如果是和我一样，在浏览器中装了大量的生产力工具的重度（伪极客）用户，FX 的更新可能是灾难性的。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>顺利过度到 firefox 57</title>
       <link>https://rachpt.cn/2017/11/03/upto-firefox-57/</link>
       <pubDate>Fri, 03 Nov 2017 20:17:56 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/03/upto-firefox-57/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Firefox 57可是说是火狐有史以来最棒的版本（我说的是速度），但是目前受限于&lt;code&gt;webextension&lt;/code&gt;，很多以前实用的插件功能受限或者没有适配版。这里展示几个我遇到的问题与解决办法。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Firefox 57可是说是火狐有史以来最棒的版本（我说的是速度），但是目前受限于&lt;code&gt;webextension&lt;/code&gt;，很多以前实用的插件功能受限或者没有适配版。这里展示几个我遇到的问题与解决办法。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

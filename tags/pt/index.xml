@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pt on rachpt&#39;s Blog</title>
+    <title>Pt on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/pt/</link>
-    <description>Recent content in pt on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Pt on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Mar 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/pt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Mar 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/pt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>a-bash-script-for-pt-signin</title>
       <link>https://rachpt.cn/2018/03/29/a-bash-script-for-pt-signin/</link>
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/29/a-bash-script-for-pt-signin/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;写一个脚本，每天 定时自动签到 PT 站。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;写一个脚本，每天 定时自动签到 PT 站。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>越想越气——福利</title>
       <link>https://rachpt.cn/2017/12/02/welfare-for-pt/</link>
       <pubDate>Sat, 02 Dec 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/12/02/welfare-for-pt/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;好心发个种子被傻X的Dupe规则删掉了，说的就是 HDChina （等）.&lt;/p&gt;
-&lt;p&gt;这里分享一个 PT 吸血方法。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;好心发个种子被傻 X 的 Dupe 规则删掉了，说的就是 HDChina （等）.&lt;/p&gt;&#xA;&lt;p&gt;这里分享一个 PT 吸血方法。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>使用FlexGet订阅下载Torrent</title>
       <link>https://rachpt.cn/2017/11/30/flexget-for-ut/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/30/flexget-for-ut/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;此文目的在于简单的使用FlexGet代替UT自带的订功能，实现特殊需求。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;此文目的在于简单的使用 FlexGet 代替 UT 自带的订功能，实现特殊需求。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

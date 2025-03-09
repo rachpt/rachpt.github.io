@@ -16,15 +16,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="rachpt" /><meta name="description" content=" 给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+<meta name="author" content="rachpt" /><meta name="description" content=" 给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/" />
@@ -35,36 +35,33 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="Linux 免安装程序配置" />
-<meta property="og:description" content="
-给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/" />
-<meta property="article:published_time" content="2017-12-31T00:00:00+08:00" />
-<meta property="article:modified_time" content="2017-12-31T00:00:00+08:00" />
-<meta itemprop="name" content="Linux 免安装程序配置">
-<meta itemprop="description" content="
-给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。
-">
-<meta itemprop="datePublished" content="2017-12-31T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2017-12-31T00:00:00+08:00" />
-<meta itemprop="wordCount" content="624">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="Linux 免安装程序配置">
+  <meta property="og:description" content="给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-12-31T00:00:00+08:00">
+    <meta property="article:modified_time" content="2017-12-31T00:00:00+08:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Mint">
+    <meta property="article:tag" content="Ubuntu">
 
-<meta itemprop="keywords" content="linux,mint,ubuntu," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux 免安装程序配置"/>
-<meta name="twitter:description" content="
-给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。
-"/>
+  <meta itemprop="name" content="Linux 免安装程序配置">
+  <meta itemprop="description" content="给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
+  <meta itemprop="datePublished" content="2017-12-31T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2017-12-31T00:00:00+08:00">
+  <meta itemprop="wordCount" content="599">
+  <meta itemprop="keywords" content="Linux,Mint,Ubuntu">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux 免安装程序配置">
+  <meta name="twitter:description" content="给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +87,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +117,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -149,7 +146,7 @@
             <a href="/categories/%E5%AE%9E%E7%94%A8/"> 实用 </a>
             <a href="/categories/%E6%95%99%E7%A8%8B/"> 教程 </a>
             </div>
-          <span class="more-meta"> 约 624 字 </span>
+          <span class="more-meta"> 约 599 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -177,28 +174,27 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p>
-</blockquote>
+<p>给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。</p></blockquote>
 <h1 id="linux-创建程序图标">Linux 创建程序图标</h1>
-<p>Debian 这类linux的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p>
+<p>Debian 这类 linux 的软件包是 <code>deb</code> 后缀，这是一种类似 windows 下的 exe 安装包文件，除此之外，还有一种一文件夹形式存在的软件包，其中的 <code>xxx.sh</code> 就是软件的可执行文件，类似与 windows 软件安装完成后其目录中的 exe 文件（软件快捷方式就是链接到这类文件的），这就如同 windows 平台的绿色免安装软件。</p>
 <p>linux 用户软件一般放到 <code>/opt/</code> 目录，下面以<code>pycharm-edu</code> 为例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo mv -f pycharm-edu /opt/ <span class="c1"># 使用命令移动文件</span>
-<span class="c1"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span>
-sudo touch /usr/share/applications/pycharm.desktop	 <span class="c1">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span>
-sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中写如如下内容</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo mv -f pycharm-edu /opt/ <span class="c1"># 使用命令移动文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 然后到 /usr/share/applications/ 目录下创建 .desktop 文件</span>
+</span></span><span class="line"><span class="cl">sudo touch /usr/share/applications/pycharm.desktop	 <span class="c1">#创建空文件，当然也可以不创建，下马一步保存时可以创建。</span>
+</span></span><span class="line"><span class="cl">sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中写如如下内容</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -208,39 +204,39 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">[</span>Desktop Entry<span class="o">]</span>
-<span class="nv">Version</span><span class="o">=</span>1.0
-<span class="nv">Name</span><span class="o">=</span>pycharm 	<span class="c1">#显示的名字</span>
-<span class="nv">Exec</span><span class="o">=</span>/opt/pycharm-edu/bin/pycharm.sh 	<span class="c1">#软件路径</span>
-<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
-<span class="nv">Icon</span><span class="o">=</span>/opt/pycharm-edu/bin/pycharm.png 	<span class="c1">#软件图标</span>
-<span class="nv">Type</span><span class="o">=</span>Application
-<span class="nv">Categories</span><span class="o">=</span>Development 	<span class="c1">#软件分类</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Version</span><span class="o">=</span>1.0
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span><span class="o">=</span>pycharm 	<span class="c1">#显示的名字</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span>/opt/pycharm-edu/bin/pycharm.sh 	<span class="c1">#软件路径</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Icon</span><span class="o">=</span>/opt/pycharm-edu/bin/pycharm.png 	<span class="c1">#软件图标</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>Application
+</span></span><span class="line"><span class="cl"><span class="nv">Categories</span><span class="o">=</span>Development 	<span class="c1">#软件分类</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://gitee.com/rachpt/imgs/raw/master/setting-protable-program-on-linux-1.jpg" alt="setting-protable-program-on-linux-1.jpg"></p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/setting-protable-program-on-linux-2.jpg" alt="setting-protable-program-on-linux-2.jpg"></p>
-<p>保存即可，如果需要加入环境变量（直接在terminal中输入软件名字，即可打开软件），需要进行如下操作。</p>
+</div><p><img src="https://img.rachpt.cn/imgs/setting-protable-program-on-linux-1.jpg" alt="setting-protable-program-on-linux-1.jpg"></p>
+<p><img src="https://img.rachpt.cn/imgs/setting-protable-program-on-linux-2.jpg" alt="setting-protable-program-on-linux-2.jpg"></p>
+<p>保存即可，如果需要加入环境变量（直接在 terminal 中输入软件名字，即可打开软件），需要进行如下操作。</p>
 <h1 id="加入环境变量">加入环境变量</h1>
 <p>##方法一</p>
 <p>配置用户主目录下的<code>.profile</code>或<code>.bashrc</code>文件（推荐），</p>
-<p>登录到你的用户（非root），在终端输入：</p>
+<p>登录到你的用户（非 root），在终端输入：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo gedit ~/.profile  <span class="c1">#(or .bashrc)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo gedit ~/.profile  <span class="c1">#(or .bashrc)</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>在文件末尾加入PATH的设置如下：</p>
+</div><p>在文件末尾加入 PATH 的设置如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>”<span class="nv">$PATH</span>:your path1:your path2 ...”
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>”<span class="nv">$PATH</span>:your path1:your path2 ...”
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>保存文件，注销再登录，变量生效。
 该方式添加的变量只对当前用户有效。
@@ -249,16 +245,16 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
 <p>在系统目录，进行类似操作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">/etc/profile
-/etc /environment
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">/etc/profile
+</span></span><span class="line"><span class="cl">/etc /environment
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。</p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/setting-protable-program-on-linux-3.jpg" alt="setting-protable-program-on-linux-3.jpg"></p>
+</div><p>在登录时,操作系统定制用户环境时使用的第一个文件 ,此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。第二个文件, 系统在读取你自己的 profile 前,设置环境文件的环境变量。</p>
+<p><img src="https://img.rachpt.cn/imgs/setting-protable-program-on-linux-3.jpg" alt="setting-protable-program-on-linux-3.jpg"></p>
     </div>
 
     <div class="post-copyright">
@@ -285,11 +281,11 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -344,7 +340,7 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -365,8 +361,8 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -377,12 +373,12 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -390,19 +386,8 @@ sudo gedit /usr/share/applications/pycharm.desktop 	<span class="c1">#在其中�
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

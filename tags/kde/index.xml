@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kde on rachpt&#39;s Blog</title>
+    <title>Kde on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/kde/</link>
-    <description>Recent content in kde on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Kde on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/kde/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>move-actions-out-of-actions-menu-in-dolphin</title>
       <link>https://rachpt.cn/2019/11/26/move-actions-out-of-actions-menu-in-dolphin/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2019/11/26/move-actions-out-of-actions-menu-in-dolphin/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;将KDE文件管理器dolphin右键菜单中的&lt;code&gt;动作(Actions)&lt;/code&gt; 子菜单移到外面。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;将 KDE 文件管理器 dolphin 右键菜单中的&lt;code&gt;动作(Actions)&lt;/code&gt; 子菜单移到外面。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>solve-composting-broken</title>
       <link>https://rachpt.cn/2019/11/09/solve-composting-broken/</link>
       <pubDate>Sat, 09 Nov 2019 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2019/11/09/solve-composting-broken/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;某次重启manjaro KDE后桌面透明效果丢失(无法透明)，刚开始以为是显卡驱动问题，最后发现是 混成器(composting)的问题。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

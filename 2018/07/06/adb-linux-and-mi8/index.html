@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/07/06/adb-linux-and-mi8/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="adb-linux-and-mi8" />
-<meta property="og:description" content="
-记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/07/06/adb-linux-and-mi8/" />
-<meta property="article:published_time" content="2018-07-06T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-07-06T00:00:00+08:00" />
-<meta itemprop="name" content="adb-linux-and-mi8">
-<meta itemprop="description" content="
-记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。
-">
-<meta itemprop="datePublished" content="2018-07-06T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-07-06T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1035">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/07/06/adb-linux-and-mi8/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="adb-linux-and-mi8">
+  <meta property="og:description" content="记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-07-06T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-07-06T00:00:00+08:00">
+    <meta property="article:tag" content="Mi8">
 
-<meta itemprop="keywords" content="mi8," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="adb-linux-and-mi8"/>
-<meta name="twitter:description" content="
-记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。
-"/>
+  <meta itemprop="name" content="adb-linux-and-mi8">
+  <meta itemprop="description" content="记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。">
+  <meta itemprop="datePublished" content="2018-07-06T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-07-06T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1032">
+  <meta itemprop="keywords" content="Mi8">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="adb-linux-and-mi8">
+  <meta name="twitter:description" content="记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 1035 字 </span>
+          <span class="more-meta"> 约 1032 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -176,13 +171,12 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。</p>
-</blockquote>
+<p>记录几个在 Linux 上通过 adb 工具控制 MI8 的操作。以及无电脑卡刷 TWRP。</p></blockquote>
 <h1 id="adb">ADB</h1>
 <p>安装命令（ubuntu系列）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -190,32 +184,30 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo apt-get update
-<span class="c1"># 直接试下面的，不行在加 ppa</span>
-sudo apt-get install android-tools-adb
-
-adb --version <span class="c1"># 检查是否安装</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo add-apt-repository ppa:nilarimogard/webupd8
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl"><span class="c1"># 直接试下面的，不行在加 ppa</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install android-tools-adb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">adb --version <span class="c1"># 检查是否安装</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="fastboot">fastboot</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 安装
-sudo apt-get install android-tools-fastboot
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># 安装</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">android</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">fastboot</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>fastboot 授权： <a href="https://developer.android.com/studio/run/device">https://developer.android.com/studio/run/device</a></p>
 <h1 id="授权">授权</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -225,21 +217,19 @@ sudo apt-get install android-tools-fastboot
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 打开usb 调试，连上 linux，列出所有 usb 设备。</span>
-lsusb
-
-rachpt@pc ~ $ lsusb
-Bus <span class="m">002</span> Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus <span class="m">001</span> Device 004: ID 0b95:1790 ASIX Electronics Corp. AX88179 Gigabit Ethernet
-Bus <span class="m">001</span> Device 002: ID 2109:2812 VIA Labs, Inc. VL812 Hub
-Bus <span class="m">001</span> Device 071: ID 046d:c534 Logitech, Inc. Unifying Receiver
-Bus <span class="m">001</span> Device 088: ID 2717:ff48  
-Bus <span class="m">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 打开usb 调试，连上 linux，列出所有 usb 设备。</span>
+</span></span><span class="line"><span class="cl">lsusb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rachpt@pc ~ $ lsusb
+</span></span><span class="line"><span class="cl">Bus <span class="m">002</span> Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 004: ID 0b95:1790 ASIX Electronics Corp. AX88179 Gigabit Ethernet
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 002: ID 2109:2812 VIA Labs, Inc. VL812 Hub
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 071: ID 046d:c534 Logitech, Inc. Unifying Receiver
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 088: ID 2717:ff48  
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以通过对比连接前后变化得知哪个是手机的 ID 和idProduct 。</p>
 <p><code>Bus 001 Device 088: ID 2717:ff48  </code> 这条即是。新手机有可能带有 Google 字样。</p>
@@ -250,7 +240,7 @@ Bus <span class="m">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 roo
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -263,66 +253,64 @@ Bus <span class="m">001</span> Device 001: ID 1d6b:0002 Linux Foundation 2.0 roo
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 先切换目录</span>
-<span class="nb">cd</span> /etc/udev/rules.d/ <span class="o">&amp;&amp;</span> ls
-<span class="c1"># 新建一个叫 imx-android.rules 的文件。</span>
-<span class="c1"># 也有说是叫 51-android.rules，等等</span>
-sudo vim imx-android.rules
-<span class="c1"># 填入一下内容</span>
-<span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&#34;usb&#34;</span>, ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&#34;填ID号&#34;</span>, ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&#34;填idProduct号&#34;</span>,MODE<span class="o">=</span><span class="s2">&#34;0777&#34;</span>
-<span class="c1"># 后面的 0777 是因为我需要可执行权限。</span>
-
-<span class="c1"># 最后加可执行权限</span>
-sudo chmod +x imx-android.rules
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 先切换目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc/udev/rules.d/ <span class="o">&amp;&amp;</span> ls
+</span></span><span class="line"><span class="cl"><span class="c1"># 新建一个叫 imx-android.rules 的文件。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 也有说是叫 51-android.rules，等等</span>
+</span></span><span class="line"><span class="cl">sudo vim imx-android.rules
+</span></span><span class="line"><span class="cl"><span class="c1"># 填入一下内容</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&#34;usb&#34;</span>, ATTRS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&#34;填ID号&#34;</span>, ATTRS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&#34;填idProduct号&#34;</span>,MODE<span class="o">=</span><span class="s2">&#34;0777&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 后面的 0777 是因为我需要可执行权限。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 最后加可执行权限</span>
+</span></span><span class="line"><span class="cl">sudo chmod +x imx-android.rules
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>第二个文件：</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">mkdir ~/.android
-vim ~/.android/adb_usb.ini
-<span class="c1"># 添加ID号，16进制，0x+ID号</span>
-0x2717
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir ~/.android
+</span></span><span class="line"><span class="cl">vim ~/.android/adb_usb.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加ID号，16进制，0x+ID号</span>
+</span></span><span class="line"><span class="cl">0x2717
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>重启adb。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">adb kill-server
-<span class="c1"># 可能需要 重新插拔一下 usb 线。</span>
-adb start-server
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">adb kill-server
+</span></span><span class="line"><span class="cl"><span class="c1"># 可能需要 重新插拔一下 usb 线。</span>
+</span></span><span class="line"><span class="cl">adb start-server
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="黑域">黑域</h1>
 <p>开启黑域服务：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="miui-广告">MIUI 广告</h1>
 <p>通过 adb 冻结 msa：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -332,15 +320,15 @@ adb start-server
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">adb shell pm disable-user --user <span class="m">0</span> com.miui.systemAdSolution <span class="c1"># 国内版</span>
-
-adb shell pm disable-user --user <span class="m">0</span> com.miui.msa.global <span class="c1"># 国际版</span>
-
-<span class="c1"># disable 换成 enable 可解除冻结，当然也可以直接在手机上解除。</span>
-
-<span class="c1"># 其他命令参考</span>
-adb shell pm
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">adb shell pm disable-user --user <span class="m">0</span> com.miui.systemAdSolution <span class="c1"># 国内版</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">adb shell pm disable-user --user <span class="m">0</span> com.miui.msa.global <span class="c1"># 国际版</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># disable 换成 enable 可解除冻结，当然也可以直接在手机上解除。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 其他命令参考</span>
+</span></span><span class="line"><span class="cl">adb shell pm
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.miui.com/thread-15991867-1-1.html">其他常见广告关闭方法</a> 。</p>
 <h1 id="刷-twrp">刷 TWRP</h1>
@@ -359,7 +347,7 @@ adb shell pm
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -380,26 +368,26 @@ adb shell pm
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">su
-
-cd /dev/block/platform/soc/
-
-ls
-
-# 找一下类似的文件夹，可能不是下面这个。
-cd 1d84000.ufshc/by-name
-
-ls
-# 可以看到 recovery这个链接文件。
-
-# 自己下载第三方 rec 的 img 文件到sd卡根目录
-
-dd if=/sdcard/recovery.img of=recovery
-
-# 成功后，使用 reboot 重启
-
-reboot recovery
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd /dev/block/platform/soc/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 找一下类似的文件夹，可能不是下面这个。
+</span></span><span class="line"><span class="cl">cd 1d84000.ufshc/by-name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl"># 可以看到 recovery这个链接文件。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 自己下载第三方 rec 的 img 文件到sd卡根目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">dd if=/sdcard/recovery.img of=recovery
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 成功后，使用 reboot 重启
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">reboot recovery
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>卡刷 zip
@@ -433,11 +421,11 @@ reboot recovery
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -490,7 +478,7 @@ reboot recovery
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -511,8 +499,8 @@ reboot recovery
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -523,12 +511,12 @@ reboot recovery
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -536,19 +524,8 @@ reboot recovery
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

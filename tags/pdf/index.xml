@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pdf on rachpt&#39;s Blog</title>
+    <title>Pdf on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/pdf/</link>
-    <description>Recent content in pdf on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Pdf on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux下的PDF阅读软件Zathura</title>
       <link>https://rachpt.cn/2018/01/22/linux-pdfreader-zathura/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/01/22/linux-pdfreader-zathura/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;记录 zathura 的常用设置与技巧，vim党的最爱。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;记录 zathura 的常用设置与技巧，vim 党的最爱。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Acrobat 双页全屏显示</title>
       <link>https://rachpt.cn/2017/11/10/acrobat-2pages-display/</link>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/10/acrobat-2pages-display/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;我有一个大显示器，但是阅读pdf时，Acrobat DC (或者reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;我有一个大显示器，但是阅读 pdf 时，Acrobat DC (或者 reader) 使用快捷键 [ Ctrl + L ] ，全屏显示了,可是偌大的显示器只显示了一页，左右两边大大黑边很是浪费。有办法实现全屏双页显示吗？&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>照片PDF优化成矢量版</title>
       <link>https://rachpt.cn/2017/11/10/make-pdf-file-clear/</link>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/11/10/make-pdf-file-clear/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;手抄好慢好累，身边又没有扫面仪，嘿嘿，我手机像素好，拍照&amp;ndash;&amp;gt;打印&amp;ndash;&amp;gt;OK。可是……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;乌漆ma黑的，还有不相干的背景图，此处不放图。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;手抄好慢好累，身边又没有扫面仪，嘿嘿，我手机像素好，拍照&amp;ndash;&amp;gt;打印&amp;ndash;&amp;gt;OK。可是……&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;乌漆 ma 黑的，还有不相干的背景图，此处不放图。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

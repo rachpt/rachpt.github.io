@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ut on rachpt&#39;s Blog</title>
+    <title>Ut on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/ut/</link>
-    <description>Recent content in ut on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ut on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Dec 2017 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/ut/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/ut/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>越想越气——福利</title>
       <link>https://rachpt.cn/2017/12/02/welfare-for-pt/</link>
       <pubDate>Sat, 02 Dec 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/12/02/welfare-for-pt/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;好心发个种子被傻X的Dupe规则删掉了，说的就是 HDChina （等）.&lt;/p&gt;
-&lt;p&gt;这里分享一个 PT 吸血方法。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;好心发个种子被傻 X 的 Dupe 规则删掉了，说的就是 HDChina （等）.&lt;/p&gt;&#xA;&lt;p&gt;这里分享一个 PT 吸血方法。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

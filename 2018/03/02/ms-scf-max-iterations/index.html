@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/03/02/ms-scf-max-iterations/" />
@@ -35,36 +35,32 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="Materials Studio CASTEP 迭代次数设置" />
-<meta property="og:description" content="
-今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/03/02/ms-scf-max-iterations/" />
-<meta property="article:published_time" content="2018-03-02T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-03-02T00:00:00+08:00" />
-<meta itemprop="name" content="Materials Studio CASTEP 迭代次数设置">
-<meta itemprop="description" content="
-今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。
-">
-<meta itemprop="datePublished" content="2018-03-02T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-03-02T00:00:00+08:00" />
-<meta itemprop="wordCount" content="480">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/03/02/ms-scf-max-iterations/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="Materials Studio CASTEP 迭代次数设置">
+  <meta property="og:description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-03-02T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-03-02T00:00:00+08:00">
+    <meta property="article:tag" content="Ms">
+    <meta property="article:tag" content="Castep">
 
-<meta itemprop="keywords" content="ms,castep," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Materials Studio CASTEP 迭代次数设置"/>
-<meta name="twitter:description" content="
-今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。
-"/>
+  <meta itemprop="name" content="Materials Studio CASTEP 迭代次数设置">
+  <meta itemprop="description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
+  <meta itemprop="datePublished" content="2018-03-02T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-03-02T00:00:00+08:00">
+  <meta itemprop="wordCount" content="480">
+  <meta itemprop="keywords" content="Ms,Castep">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Materials Studio CASTEP 迭代次数设置">
+  <meta name="twitter:description" content="今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +86,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +116,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -172,27 +168,26 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。</p>
-</blockquote>
+<p>今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。</p></blockquote>
 <h1 id="错误信息">错误信息</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Error check_elec_ground_state : electronic_minimisation of initial cell failed.
-Current trace stack:
- check_elec_ground_state
- castep
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Error check_elec_ground_state : electronic_minimisation of initial cell failed.
+</span></span><span class="line"><span class="cl">Current trace stack:
+</span></span><span class="line"><span class="cl"> check_elec_ground_state
+</span></span><span class="line"><span class="cl"> castep
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>检查<code>castep</code> 文件发现下面的片段</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -208,27 +203,27 @@ Current trace stack:
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">.
-.
-.
-     99  -2.09594982E+004  6.31070540E-001   3.18129596E-006    4013.01  &lt;-- SCF
-    100  -2.09594980E+004  6.31017470E-001  -2.41328571E-006    4053.95  &lt;-- SCF
------------------------------------------------------------------------- &lt;-- SCF
- *Warning* max. SCF cycles performed but system has not reached the groundstate.
-  
-Current total energy, E     =  -20959.33865776     eV
-Current free energy (E-TS)  =  -20959.49797103     eV
-(energies not corrected for finite basis set)
- .
- .
- .
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">     99  -2.09594982E+004  6.31070540E-001   3.18129596E-006    4013.01  &lt;-- SCF
+</span></span><span class="line"><span class="cl">    100  -2.09594980E+004  6.31017470E-001  -2.41328571E-006    4053.95  &lt;-- SCF
+</span></span><span class="line"><span class="cl">------------------------------------------------------------------------ &lt;-- SCF
+</span></span><span class="line"><span class="cl"> *Warning* max. SCF cycles performed but system has not reached the groundstate.
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Current total energy, E     =  -20959.33865776     eV
+</span></span><span class="line"><span class="cl">Current free energy (E-TS)  =  -20959.49797103     eV
+</span></span><span class="line"><span class="cl">(energies not corrected for finite basis set)
+</span></span><span class="line"><span class="cl"> .
+</span></span><span class="line"><span class="cl"> .
+</span></span><span class="line"><span class="cl"> .
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>意思大概是我设置的 <code>SCF</code> 迭代次数不够，100次后仍然未能找到自恰解。</p>
 <p>回想使用步骤皆是以前的所用的，马上翻看之前成功的<code>castep</code>文件，</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -238,15 +233,15 @@ Current free energy (E-TS)  =  -20959.49797103     eV
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     13  -2.78030685E+004 -1.99686373E+000  -7.49554981E-007     898.41  &lt;-- SCF
-     14  -2.78030685E+004 -1.99941165E+000   4.13854537E-008     943.16  &lt;-- SCF
-     15  -2.78030685E+004 -2.00267847E+000  -2.65786251E-007     988.60  &lt;-- SCF
------------------------------------------------------------------------- &lt;-- SCF
- 
-Final energy, E             =  -27803.06847596     eV
-Final free energy (E-TS)    =  -27803.06847596     eV
-(energies not corrected for finite basis set)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">     13  -2.78030685E+004 -1.99686373E+000  -7.49554981E-007     898.41  &lt;-- SCF
+</span></span><span class="line"><span class="cl">     14  -2.78030685E+004 -1.99941165E+000   4.13854537E-008     943.16  &lt;-- SCF
+</span></span><span class="line"><span class="cl">     15  -2.78030685E+004 -2.00267847E+000  -2.65786251E-007     988.60  &lt;-- SCF
+</span></span><span class="line"><span class="cl">------------------------------------------------------------------------ &lt;-- SCF
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">Final energy, E             =  -27803.06847596     eV
+</span></span><span class="line"><span class="cl">Final free energy (E-TS)    =  -27803.06847596     eV
+</span></span><span class="line"><span class="cl">(energies not corrected for finite basis set)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>几乎都是十几次得到自恰解。</p>
 <p>找到问题所在。</p>
@@ -283,11 +278,11 @@ Final free energy (E-TS)    =  -27803.06847596     eV
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -341,7 +336,7 @@ Final free energy (E-TS)    =  -27803.06847596     eV
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -362,8 +357,8 @@ Final free energy (E-TS)    =  -27803.06847596     eV
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -374,12 +369,12 @@ Final free energy (E-TS)    =  -27803.06847596     eV
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -387,19 +382,8 @@ Final free energy (E-TS)    =  -27803.06847596     eV
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

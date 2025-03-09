@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="rachpt" /><meta name="description" content="" /><meta name="keywords" content="rachpt, Hugo, blog" />
+<meta name="author" content="rachpt" /><meta name="description" content="" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2017/11/10/note-markdown/" />
@@ -34,30 +34,29 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="搭建一个方便的多平台笔记方案" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2017/11/10/note-markdown/" />
-<meta property="article:published_time" content="2017-11-10T00:00:00+08:00" />
-<meta property="article:modified_time" content="2017-11-10T00:00:00+08:00" />
-<meta itemprop="name" content="搭建一个方便的多平台笔记方案">
-<meta itemprop="description" content="">
-<meta itemprop="datePublished" content="2017-11-10T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2017-11-10T00:00:00+08:00" />
-<meta itemprop="wordCount" content="779">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2017/11/10/note-markdown/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="搭建一个方便的多平台笔记方案">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-11-10T00:00:00+08:00">
+    <meta property="article:modified_time" content="2017-11-10T00:00:00+08:00">
+    <meta property="article:tag" content="MarkDown">
+    <meta property="article:tag" content="笔记">
 
-<meta itemprop="keywords" content="MarkDown,笔记," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="搭建一个方便的多平台笔记方案"/>
-<meta name="twitter:description" content=""/>
+  <meta itemprop="name" content="搭建一个方便的多平台笔记方案">
+  <meta itemprop="datePublished" content="2017-11-10T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2017-11-10T00:00:00+08:00">
+  <meta itemprop="wordCount" content="779">
+  <meta itemprop="keywords" content="MarkDown,笔记">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="搭建一个方便的多平台笔记方案">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -83,7 +82,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -113,7 +112,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -162,8 +161,7 @@
       <p>在这里首先简介了一下md格式文件，md就是MarkDown的简称，就如HTML一样是一款标记语言，因其简洁明了兼容性强，<!--more-->语法简单同时又有比纯文本更丰富的样式而被多数的程序员使用。Windows下直接用记事本就可以打开编辑查看，但是标记语言丰富的样式得不到展示，这里我们使用三个平台（软件）实现windows与安卓手机之间的Markdown笔记同步协调工作。</p>
 <blockquote>
 <p>插曲：我之所以不选择一家公司的现成完整方案，是因为：1、无用东西太多，不适合快速笔记，2、广告，非要用我看示广告，我可不干，3、数据难以迁移，只能吊死一颗树上。
-我们要用的有：<code>坚果云、易码（手机APP）、还有 Typora</code>（这篇文章就是就是用这个写的）。</p>
-</blockquote>
+我们要用的有：<code>坚果云、易码（手机APP）、还有 Typora</code>（这篇文章就是就是用这个写的）。</p></blockquote>
 <p>坚果云免费账户每月1G上传流量3G下载流量，对于文档足够了。我们需要打开坚果云的第三方 WebDAV接口给易码，如下图</p>
 <p><img src="http://img.rachpt.top/wx_md_jianguoyun.jpg" alt=""></p>
 <p>易码上使用坚果云账户（邮箱比如），密码是WebDAV应用的（这个是固定的不能改）。选一个文件夹用于存放笔记，可以设置默认保持在坚果云上，文档中的图片会一并同步到坚果云。在PC上下载坚果云的客户端，选择同步易码使用的笔记文件夹，Typora选则坚果云文件夹打开，这样PC手机就能同步协作创作了。</p>
@@ -205,11 +203,11 @@
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -219,13 +217,13 @@
           <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/2017/11/10/so-busy/">
+        <a class="prev" href="/2017/11/10/materials-studio-super/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">我总是很忙</span>
+            <span class="prev-text nav-default">Materials Studio 超算步骤_精简版</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/2017/11/10/make-pdf-file-clear/">
-            <span class="next-text nav-default">照片PDF优化成矢量版</span>
+        <a class="next" href="/2017/11/10/so-busy/">
+            <span class="next-text nav-default">我总是很忙</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -263,7 +261,7 @@
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -284,8 +282,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -296,12 +294,12 @@
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -309,19 +307,8 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

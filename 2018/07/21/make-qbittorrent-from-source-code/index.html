@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/07/21/make-qbittorrent-from-source-code/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="make-qbittorrent-from-source-code" />
-<meta property="og:description" content="
-从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/07/21/make-qbittorrent-from-source-code/" />
-<meta property="article:published_time" content="2018-07-21T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-07-21T00:00:00+08:00" />
-<meta itemprop="name" content="make-qbittorrent-from-source-code">
-<meta itemprop="description" content="
-从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。
-">
-<meta itemprop="datePublished" content="2018-07-21T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-07-21T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1086">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/07/21/make-qbittorrent-from-source-code/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="make-qbittorrent-from-source-code">
+  <meta property="og:description" content="从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-07-21T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-07-21T00:00:00+08:00">
+    <meta property="article:tag" content="Linux">
 
-<meta itemprop="keywords" content="linux," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="make-qbittorrent-from-source-code"/>
-<meta name="twitter:description" content="
-从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。
-"/>
+  <meta itemprop="name" content="make-qbittorrent-from-source-code">
+  <meta itemprop="description" content="从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。">
+  <meta itemprop="datePublished" content="2018-07-21T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-07-21T00:00:00+08:00">
+  <meta itemprop="wordCount" content="950">
+  <meta itemprop="keywords" content="Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="make-qbittorrent-from-source-code">
+  <meta name="twitter:description" content="从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,8 +143,8 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 1086 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 950 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -161,28 +156,28 @@
   <ul>
     <li><a href="#一安装依赖环境">一、安装依赖环境</a>
       <ul>
-        <li><a href="#安装一般依赖包">①安装一般依赖包</a></li>
-        <li><a href="#安装qt5库">②安装Qt5库</a></li>
-        <li><a href="#安装python和geoip数据库">③安装python和GeoIP数据库</a></li>
+        <li><a href="#-安装一般依赖包">① 安装一般依赖包</a></li>
+        <li><a href="#-安装-qt5-库">② 安装 Qt5 库</a></li>
+        <li><a href="#-安装-python-和-geoip-数据库">③ 安装 python 和 GeoIP 数据库</a></li>
       </ul>
     </li>
-    <li><a href="#二安装libtorrent">二、安装Libtorrent</a>
+    <li><a href="#二安装-libtorrent">二、安装 Libtorrent</a>
       <ul>
-        <li><a href="#下载libtorrent包并打开">①下载Libtorrent包并打开</a></li>
-        <li><a href="#选择10分支编译安装">②选择1.0.*分支编译安装</a></li>
+        <li><a href="#-下载-libtorrent-包并打开">① 下载 Libtorrent 包并打开</a></li>
+        <li><a href="#-选择-10分支编译安装">② 选择 1.0.*分支编译安装</a></li>
       </ul>
     </li>
-    <li><a href="#三编辑安装qbittorrent">三、编辑安装qBittorrent</a>
+    <li><a href="#三编辑安装-qbittorrent">三、编辑安装 qBittorrent</a>
       <ul>
-        <li><a href="#从github下载对应版本的qb安装包">①从github下载对应版本的QB安装包</a></li>
-        <li><a href="#编译qbittorrent">②编译qBittorrent</a></li>
+        <li><a href="#-从-github-下载对应版本的-qb-安装包">① 从 github 下载对应版本的 QB 安装包</a></li>
+        <li><a href="#-编译-qbittorrent">② 编译 qBittorrent</a></li>
       </ul>
     </li>
-    <li><a href="#四运行qbittorrent">四、运行qBittorrent</a>
+    <li><a href="#四运行-qbittorrent">四、运行 qBittorrent</a>
       <ul>
-        <li><a href="#初始化qb设置中文">①初始化QB(设置中文)</a></li>
-        <li><a href="#在后台运行qbittorrent">②在后台运行qBittorrent</a></li>
-        <li><a href="#访问qbittorrent的web-ui">③访问qBittorrent的Web-UI</a></li>
+        <li><a href="#-初始化-qb设置中文">① 初始化 QB(设置中文)</a></li>
+        <li><a href="#-在后台运行-qbittorrent">② 在后台运行 qBittorrent</a></li>
+        <li><a href="#-访问-qbittorrent-的-web-ui">③ 访问 qBittorrent 的 Web-UI</a></li>
       </ul>
     </li>
     <li><a href="#其他">其他</a>
@@ -202,8 +197,7 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。</p>
-</blockquote>
+<p>从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。</p></blockquote>
 <p>{% note default %}
 以下内容转载至:
 <a href="https://www.cnblogs.com/shuochen/p/8533712.html">https://www.cnblogs.com/shuochen/p/8533712.html</a> （仅作为备份）。
@@ -211,143 +205,143 @@
 <a href="https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu">https://github.com/qbittorrent/qBittorrent/wiki/Compiling-qBittorrent-on-Debian-and-Ubuntu</a> 。
 {% endnote %}</p>
 <h1 id="一安装依赖环境">一、安装依赖环境</h1>
-<h2 id="安装一般依赖包">①安装一般依赖包</h2>
+<h2 id="-安装一般依赖包">① 安装一般依赖包</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo apt-get install libboost-dev libboost-system-dev build-essential <span class="se">\
-</span><span class="se"></span>     libboost-chrono-dev libboost-random-dev libssl-dev libgeoip-dev <span class="se">\
-</span><span class="se"></span>     git pkg-config automake libtool
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install libboost-dev libboost-system-dev build-essential <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>     libboost-chrono-dev libboost-random-dev libssl-dev libgeoip-dev <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>     git pkg-config automake libtool
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="安装qt5库">②安装Qt5库</h2>
+</div><h2 id="-安装-qt5-库">② 安装 Qt5 库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo apt-get install qtbase5-dev qttools5-dev-tools
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install qtbase5-dev qttools5-dev-tools
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="安装python和geoip数据库">③安装python和GeoIP数据库</h2>
+</div><h2 id="-安装-python-和-geoip-数据库">③ 安装 python 和 GeoIP 数据库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo apt-get install python geoip-database
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install python geoip-database
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="二安装libtorrent">二、安装Libtorrent</h1>
-<h2 id="下载libtorrent包并打开">①下载Libtorrent包并打开</h2>
+</div><h1 id="二安装-libtorrent">二、安装 Libtorrent</h1>
+<h2 id="-下载-libtorrent-包并打开">① 下载 Libtorrent 包并打开</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo git clone https://github.com/arvidn/libtorrent.git
-<span class="nb">cd</span> libtorrent
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo git clone https://github.com/arvidn/libtorrent.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> libtorrent
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="选择10分支编译安装">②选择1.0.*分支编译安装</h2>
+</div><h2 id="-选择-10分支编译安装">② 选择 1.0.*分支编译安装</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">git checkout RC_1_0
-./autotool.sh
-./configure --disable-debug --enable-encryption --prefix<span class="o">=</span>/usr --with-libgeoip<span class="o">=</span>system
-make clean <span class="o">&amp;&amp;</span> make
-sudo make install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout RC_1_0
+</span></span><span class="line"><span class="cl">./autotool.sh
+</span></span><span class="line"><span class="cl">./configure --disable-debug --enable-encryption --prefix<span class="o">=</span>/usr --with-libgeoip<span class="o">=</span>system
+</span></span><span class="line"><span class="cl">make clean <span class="o">&amp;&amp;</span> make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="三编辑安装qbittorrent">三、编辑安装qBittorrent</h1>
-<h2 id="从github下载对应版本的qb安装包">①从github下载对应版本的QB安装包</h2>
-<p>QB历史版本下载：https://github.com/qbittorrent/qBittorrent/releases</p>
-<p>如编译安装3.3.11版本的QB</p>
+</div><h1 id="三编辑安装-qbittorrent">三、编辑安装 qBittorrent</h1>
+<h2 id="-从-github-下载对应版本的-qb-安装包">① 从 github 下载对应版本的 QB 安装包</h2>
+<p>QB 历史版本下载：https://github.com/qbittorrent/qBittorrent/releases</p>
+<p>如编译安装 3.3.11 版本的 QB</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">wget https://github.com/qbittorrent/qBittorrent/archive/release-3.3.11.tar.gz
-tar -xzvf release-3.3.11.tar.gz
-<span class="nb">cd</span> qBittorrent-release-3.3.11
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">wget https://github.com/qbittorrent/qBittorrent/archive/release-3.3.11.tar.gz
+</span></span><span class="line"><span class="cl">tar -xzvf release-3.3.11.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> qBittorrent-release-3.3.11
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="编译qbittorrent">②编译qBittorrent</h2>
-<p>需要GUI则可以取消后面的disable参数。</p>
+</div><h2 id="-编译-qbittorrent">② 编译 qBittorrent</h2>
+<p>需要 GUI 则可以取消后面的 disable 参数。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">./configure --prefix<span class="o">=</span>/usr --disable-gui
-make <span class="o">&amp;&amp;</span> sudo make install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">./configure --prefix<span class="o">=</span>/usr --disable-gui
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> sudo make install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这里编译的时候如果提示错误 缺少 zlib 运行以下命令即可</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo apt-get install zlib1g-dev
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install zlib1g-dev
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="四运行qbittorrent">四、运行qBittorrent</h1>
-<h2 id="初始化qb设置中文">①初始化QB(设置中文)</h2>
+</div><h1 id="四运行-qbittorrent">四、运行 qBittorrent</h1>
+<h2 id="-初始化-qb设置中文">① 初始化 QB(设置中文)</h2>
 <p>运行以下命令</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">qbittorrent-nox  <span class="c1"># 无 GUI</span>
-qbittorrent      <span class="c1"># 有 GUI</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">qbittorrent-nox  <span class="c1"># 无 GUI</span>
+</span></span><span class="line"><span class="cl">qbittorrent      <span class="c1"># 有 GUI</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>运行后会提示输入,输入y，然后回车即可，这时打开第③步中的地址，进入后打开设置，在WEBUI里将语言改成中文，然后Ctrl+C 结束，再次输入命令运行QB，这是刷新网页就是中文了，意思就是设置完需要重启下客户端才能使语言修改生效，其它设置类似。</p>
-<h2 id="在后台运行qbittorrent">②在后台运行qBittorrent</h2>
-<p>因为直接运行QB，退出shell窗口的话就会关闭，所以我们可以用nohup的方式运行QB</p>
+</div><p>运行后会提示输入,输入 y，然后回车即可，这时打开第 ③ 步中的地址，进入后打开设置，在 WEBUI 里将语言改成中文，然后 Ctrl+C 结束，再次输入命令运行 QB，这是刷新网页就是中文了，意思就是设置完需要重启下客户端才能使语言修改生效，其它设置类似。</p>
+<h2 id="-在后台运行-qbittorrent">② 在后台运行 qBittorrent</h2>
+<p>因为直接运行 QB，退出 shell 窗口的话就会关闭，所以我们可以用 nohup 的方式运行 QB</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">nohup qbittorrent-nox <span class="p">&amp;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">nohup qbittorrent-nox <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>这样QB就已经稳定在后台运行了，即使你关闭shell也不会结束的。</p>
-<h2 id="访问qbittorrent的web-ui">③访问qBittorrent的Web-UI</h2>
-<p>默认地址: http://IP地址:8080
+</div><p>这样 QB 就已经稳定在后台运行了，即使你关闭 shell 也不会结束的。</p>
+<h2 id="-访问-qbittorrent-的-web-ui">③ 访问 qBittorrent 的 Web-UI</h2>
+<p>默认地址: http://IP 地址:8080
 默认用户名: admin
 默认密码: adminadmin</p>
 <hr>
 <h1 id="其他">其他</h1>
 <h2 id="魔改">魔改</h2>
 <p>效果如下:
-<img src="https://gitee.com/rachpt/imgs/raw/master/make-qbittorrent-from-source-code-1.jpg" alt="make-qbittorrent-from-source-code-1.jpg"></p>
+<img src="https://img.rachpt.cn/imgs/make-qbittorrent-from-source-code-1.jpg" alt="make-qbittorrent-from-source-code-1.jpg"></p>
 <ol>
 <li>在 web UI 上添加一个返回的超链接 &ldquo;首页&rdquo;.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -361,30 +355,30 @@ qbittorrent      <span class="c1"># 有 GUI</span>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">vim qBittorrent-release-3.3.9/src/webui/www/private/index.html
-
-<span class="c1"># 搜索 help-about ,大约在 79 行</span>
-
-
-                            &lt;li&gt;&lt;a <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;aboutLink&#34;</span>&gt;&lt;img <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;MyMenuIcon&#34;</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;theme/help-about&#34;</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">&#34;QBT_TR(&amp;About)QBT_TR&#34;</span> <span class="nv">width</span><span class="o">=</span><span class="s2">&#34;16&#34;</span> <span class="nv">height</span><span class="o">=</span><span class="s2">&#34;16&#34;</span> <span class="nv">onload</span><span class="o">=</span><span class="s2">&#34;fixPNG(this)&#34;</span>/&gt;QBT_TR<span class="o">(</span><span class="p">&amp;</span>About<span class="o">)</span>QBT_TR&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/li&gt;
-                  + &lt;li&gt;
-                  +     &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;/index.html&#34;</span>&gt;首页&lt;/a&gt;
-                  + &lt;/li&gt;
-                &lt;/ul&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vim qBittorrent-release-3.3.9/src/webui/www/private/index.html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 搜索 help-about ,大约在 79 行</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                            &lt;li&gt;&lt;a <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;aboutLink&#34;</span>&gt;&lt;img <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;MyMenuIcon&#34;</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;theme/help-about&#34;</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">&#34;QBT_TR(&amp;About)QBT_TR&#34;</span> <span class="nv">width</span><span class="o">=</span><span class="s2">&#34;16&#34;</span> <span class="nv">height</span><span class="o">=</span><span class="s2">&#34;16&#34;</span> <span class="nv">onload</span><span class="o">=</span><span class="s2">&#34;fixPNG(this)&#34;</span>/&gt;QBT_TR<span class="o">(</span><span class="p">&amp;</span>About<span class="o">)</span>QBT_TR&lt;/a&gt;&lt;/li&gt;
+</span></span><span class="line"><span class="cl">                        &lt;/ul&gt;
+</span></span><span class="line"><span class="cl">                    &lt;/li&gt;
+</span></span><span class="line"><span class="cl">                  + &lt;li&gt;
+</span></span><span class="line"><span class="cl">                  +     &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;/index.html&#34;</span>&gt;首页&lt;/a&gt;
+</span></span><span class="line"><span class="cl">                  + &lt;/li&gt;
+</span></span><span class="line"><span class="cl">                &lt;/ul&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如上 添加 li 和一个 a 标签即可.</p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/make-qbittorrent-from-source-code-2.jpg" alt="make-qbittorrent-from-source-code-2.jpg"></p>
+<p><img src="https://img.rachpt.cn/imgs/make-qbittorrent-from-source-code-2.jpg" alt="make-qbittorrent-from-source-code-2.jpg"></p>
 <ol start="2">
 <li>登录界面</li>
 </ol>
-<p>1<a href="https://gitee.com/rachpt/imgs/raw/master/make-qbittorrent-from-source-code-3.jpg"></a>
+<p>1<a href="https://img.rachpt.cn/imgs/make-qbittorrent-from-source-code-3.jpg"></a>
 加一个 返回按钮,同时添加一行移动端适配代码.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -400,27 +394,27 @@ qbittorrent      <span class="c1"># 有 GUI</span>
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">vim qBittorrent-release-3.3.9/src/webui/www/private/login.html
-
-<span class="c1"># 添加 移动端适配代码,</span>
-<span class="c1"># 在 head 中添加</span>
-    &lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;Content-Type&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;text/html; charset=UTF-8&#34;</span> /&gt;
-+   &lt;meta <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;viewport&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&#34;</span> /&gt;
-    &lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;X-UA-Compatible&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;IE=8&#34;</span> /&gt;
-
-
-<span class="c1"># 修改末尾 submit 按钮</span>
-
-				&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;row&#34;</span>&gt;&lt;label <span class="k">for</span><span class="o">=</span><span class="s2">&#34;password&#34;</span>&gt;QBT_TR<span class="o">(</span>Password<span class="o">)</span>QBT_TR&lt;/label&gt;&lt;br /&gt;&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> /&gt;&lt;/div&gt;
-+			&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;row&#34;</span>&gt;&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;submit&#34;</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;login&#34;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&#34;QBT_TR(Login)QBT_TR&#34;</span> /&gt;<span class="p">&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;</span>&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;submit&#34;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&#34;返回首页&#34;</span> <span class="nv">onclick</span><span class="o">=</span><span class="s2">&#34;javascript:location.href=&#39;/index.html&#39;&#34;</span> /&gt;&lt;/div&gt;
-			&lt;/form&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vim qBittorrent-release-3.3.9/src/webui/www/private/login.html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加 移动端适配代码,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 在 head 中添加</span>
+</span></span><span class="line"><span class="cl">    &lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;Content-Type&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;text/html; charset=UTF-8&#34;</span> /&gt;
+</span></span><span class="line"><span class="cl">+   &lt;meta <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;viewport&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&#34;</span> /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;X-UA-Compatible&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;IE=8&#34;</span> /&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改末尾 submit 按钮</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;row&#34;</span>&gt;&lt;label <span class="k">for</span><span class="o">=</span><span class="s2">&#34;password&#34;</span>&gt;QBT_TR<span class="o">(</span>Password<span class="o">)</span>QBT_TR&lt;/label&gt;&lt;br /&gt;&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;password&#34;</span> /&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="cl">+			&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;row&#34;</span>&gt;&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;submit&#34;</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;login&#34;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&#34;QBT_TR(Login)QBT_TR&#34;</span> /&gt;<span class="p">&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;&amp;</span>nbsp<span class="p">;</span>&lt;input <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;submit&#34;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&#34;返回首页&#34;</span> <span class="nv">onclick</span><span class="o">=</span><span class="s2">&#34;javascript:location.href=&#39;/index.html&#39;&#34;</span> /&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="cl">			&lt;/form&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="编译">编译</h2>
 <p>推荐使用 &ndash;disable-gui 不要 GUI, 使用 daemon 运行.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -437,26 +431,26 @@ qbittorrent      <span class="c1"># 有 GUI</span>
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo vim /etc/systemd/system/qbittorrent.service
-
-<span class="c1"># 写入一下内容</span>
-
-<span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>qBittorrent Daemon Service
-<span class="nv">After</span><span class="o">=</span>network.target
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">User</span><span class="o">=</span>rachpt
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/qbittorrent-nox
-<span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/killall -w qbittorrent-nox
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo vim /etc/systemd/system/qbittorrent.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 写入一下内容</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>qBittorrent Daemon Service
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>rachpt
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/qbittorrent-nox
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/killall -w qbittorrent-nox
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -467,16 +461,16 @@ qbittorrent      <span class="c1"># 有 GUI</span>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 重载 daemon</span>
-sudo systemctl daemon-reload
-<span class="c1"># 启动</span>
-sudo systemctl start qbittorrent
-<span class="c1"># 状态</span>
-sudo systemctl status qbittorrent
-
-<span class="c1"># 运行开机自启动</span>
-sudo systemctl <span class="nb">enable</span> qbittorrent
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 重载 daemon</span>
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl"><span class="c1"># 启动</span>
+</span></span><span class="line"><span class="cl">sudo systemctl start qbittorrent
+</span></span><span class="line"><span class="cl"><span class="c1"># 状态</span>
+</span></span><span class="line"><span class="cl">sudo systemctl status qbittorrent
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 运行开机自启动</span>
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> qbittorrent
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="https://github.com/qbittorrent/qBittorrent/wiki/Setting-up-qBittorrent-on-Ubuntu-server-as-daemon-with-Web-interface-%2815.04-and-newer%29">参考文档</a>.</p>
     </div>
@@ -505,11 +499,11 @@ sudo systemctl <span class="nb">enable</span> qbittorrent
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -562,7 +556,7 @@ sudo systemctl <span class="nb">enable</span> qbittorrent
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -583,8 +577,8 @@ sudo systemctl <span class="nb">enable</span> qbittorrent
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -595,12 +589,12 @@ sudo systemctl <span class="nb">enable</span> qbittorrent
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -608,19 +602,8 @@ sudo systemctl <span class="nb">enable</span> qbittorrent
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

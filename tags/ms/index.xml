@@ -1,55 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ms on rachpt&#39;s Blog</title>
+    <title>Ms on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/ms/</link>
-    <description>Recent content in ms on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ms on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 31 Mar 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/ms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Mar 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/ms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>the-gateway-of-materials-studio</title>
       <link>https://rachpt.cn/2018/03/31/the-gateway-of-materials-studio/</link>
       <pubDate>Sat, 31 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/31/the-gateway-of-materials-studio/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;关于 Materials studio 的 Remote Gateway。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;关于 Materials studio 的 Remote Gateway。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>几个 MS 错误</title>
       <link>https://rachpt.cn/2018/03/13/some-error-of-ms/</link>
       <pubDate>Tue, 13 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/13/some-error-of-ms/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;记录几个 MS 的错误。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;记录几个 MS 的错误。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Materials Studio CASTEP 迭代次数设置</title>
       <link>https://rachpt.cn/2018/03/02/ms-scf-max-iterations/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/03/02/ms-scf-max-iterations/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;今天遇到 Materials Studio cij 计算失败，提示基态电子最小化失败。检查输出文件，发现蛛丝马迹。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Linux mint 安装 Materials Studio 8.0 与使用 CASTEP</title>
       <link>https://rachpt.cn/2018/01/11/install-materials-studio-on-ubuntu/</link>
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/01/11/install-materials-studio-on-ubuntu/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;linux mint 是基于ubuntu的，所以对ubuntu也应该是有效的。（推荐 desktop 使用 &lt;a href=&#34;https://www.linuxmint.com/download.php&#34;&gt;mint cinnamon&lt;/a&gt; 版）&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;linux mint 是基于 ubuntu 的，所以对 ubuntu 也应该是有效的。（推荐 desktop 使用 &lt;a href=&#34;https://www.linuxmint.com/download.php&#34;&gt;mint cinnamon&lt;/a&gt; 版）&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
+    <item>
+      <title>Materials Studio 超算步骤_精简版</title>
+      <link>https://rachpt.cn/2017/11/10/materials-studio-super/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0800</pubDate>
+      <guid>https://rachpt.cn/2017/11/10/materials-studio-super/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;简化以方便阅读。&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
   </channel>
 </rss>

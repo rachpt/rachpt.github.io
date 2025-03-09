@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extension on rachpt&#39;s Blog</title>
+    <link>http://localhost:1313/categories/extension/</link>
+    <description>Recent content in Extension on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 29 Mar 2018 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/extension/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome 扩展开发：解决 &#34;Could not establish connection&#34; 异常问题</title>
+      <link>http://localhost:1313/2018/03/29/chrome-extension-connection-error/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/2018/03/29/chrome-extension-connection-error/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;本文使用 &lt;a href=&#34;https://wxt.dev&#34;&gt;WXT (Web Extension Tools)&lt;/a&gt; 框架开发，browser.XXX 会被动编译转化为 chrome.XXX，特此说明。&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>

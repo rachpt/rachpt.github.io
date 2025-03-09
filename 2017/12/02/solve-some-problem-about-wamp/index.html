@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2017/12/02/solve-some-problem-about-wamp/" />
@@ -35,36 +35,32 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题" />
-<meta property="og:description" content="
-解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2017/12/02/solve-some-problem-about-wamp/" />
-<meta property="article:published_time" content="2017-12-02T00:00:00+08:00" />
-<meta property="article:modified_time" content="2017-12-02T00:00:00+08:00" />
-<meta itemprop="name" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题">
-<meta itemprop="description" content="
-解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。
-">
-<meta itemprop="datePublished" content="2017-12-02T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2017-12-02T00:00:00+08:00" />
-<meta itemprop="wordCount" content="392">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2017/12/02/solve-some-problem-about-wamp/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题">
+  <meta property="og:description" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-12-02T00:00:00+08:00">
+    <meta property="article:modified_time" content="2017-12-02T00:00:00+08:00">
+    <meta property="article:tag" content="Php">
+    <meta property="article:tag" content="Wamp">
 
-<meta itemprop="keywords" content="php,wamp," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题"/>
-<meta name="twitter:description" content="
-解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。
-"/>
+  <meta itemprop="name" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题">
+  <meta itemprop="description" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。">
+  <meta itemprop="datePublished" content="2017-12-02T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2017-12-02T00:00:00+08:00">
+  <meta itemprop="wordCount" content="392">
+  <meta itemprop="keywords" content="Php,Wamp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题">
+  <meta name="twitter:description" content="解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +86,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +116,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -172,8 +168,7 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。</p>
-</blockquote>
+<p>解决WAMP搭建PHP环境后后局域网其他机器无法访问的问题。</p></blockquote>
 <p>刚安装wamp以后本地访问localhost或者127.0.0.1可以访问，但是如果局域网内其他电脑访问则出现403错误。从网上找了很多，各种说法都有了，却没几个好用的。</p>
 <p>{% note success %}</p>
 <p>解决问题方法如下：</p>
@@ -185,24 +180,24 @@
 <h1 id="第一处">第一处</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Options FollowSymLinks
-AllowOverride None
-Order deny,allow
-Deny from all
-Satisfy all
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Options FollowSymLinks
+</span></span><span class="line"><span class="cl">AllowOverride None
+</span></span><span class="line"><span class="cl">Order deny,allow
+</span></span><span class="line"><span class="cl">Deny from all
+</span></span><span class="line"><span class="cl">Satisfy all
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>修改为：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -213,16 +208,16 @@ Satisfy all
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Options FollowSymLinks
-AllowOverride None
-Order deny,allow
-# Deny from all
-
-Allow from all
-#允许所有访问
-
-Satisfy all
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Options FollowSymLinks
+</span></span><span class="line"><span class="cl">AllowOverride None
+</span></span><span class="line"><span class="cl">Order deny,allow
+</span></span><span class="line"><span class="cl"># Deny from all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Allow from all
+</span></span><span class="line"><span class="cl">#允许所有访问
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Satisfy all
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="第二处">第二处</h1>
 <p>onlineoffline tag - don&rsquo;t remove</p>
@@ -232,32 +227,32 @@ Allow from 127.0.0.1</p>
 <p>修改成：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"> onlineoffline tag - don&#39;t remove
- Order Deny,Allow
- Deny from all
- Allow from 127.0.0.1
- Allow from all
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> onlineoffline tag - don&#39;t remove
+</span></span><span class="line"><span class="cl"> Order Deny,Allow
+</span></span><span class="line"><span class="cl"> Deny from all
+</span></span><span class="line"><span class="cl"> Allow from 127.0.0.1
+</span></span><span class="line"><span class="cl"> Allow from all
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>另外，如果使用DVWA的时候以上设置不起作用，因为htaccess限制了访问。解压DVWA以后放到主目录，将htaccess内规则修改如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">order deny,allow
-deny from none
-allow from all
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">order deny,allow
+</span></span><span class="line"><span class="cl">deny from none
+</span></span><span class="line"><span class="cl">allow from all
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>修改后重启apache，局域网内其他机器即可访问本机搭建的DVWA平台。</p>
     </div>
@@ -286,11 +281,11 @@ allow from all
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -344,7 +339,7 @@ allow from all
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -365,8 +360,8 @@ allow from all
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -377,12 +372,12 @@ allow from all
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -390,19 +385,8 @@ allow from all
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

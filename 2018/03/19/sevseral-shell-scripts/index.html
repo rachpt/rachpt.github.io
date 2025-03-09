@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" 记录几个 shell 脚本，高效。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2018/03/19/sevseral-shell-scripts/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="几个 shell 脚本" />
-<meta property="og:description" content="
-记录几个 shell 脚本，高效。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2018/03/19/sevseral-shell-scripts/" />
-<meta property="article:published_time" content="2018-03-19T00:00:00+08:00" />
-<meta property="article:modified_time" content="2018-03-19T00:00:00+08:00" />
-<meta itemprop="name" content="几个 shell 脚本">
-<meta itemprop="description" content="
-记录几个 shell 脚本，高效。
-">
-<meta itemprop="datePublished" content="2018-03-19T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2018-03-19T00:00:00+08:00" />
-<meta itemprop="wordCount" content="349">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2018/03/19/sevseral-shell-scripts/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="几个 shell 脚本">
+  <meta property="og:description" content="记录几个 shell 脚本，高效。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-03-19T00:00:00+08:00">
+    <meta property="article:modified_time" content="2018-03-19T00:00:00+08:00">
+    <meta property="article:tag" content="Shell">
 
-<meta itemprop="keywords" content="shell," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="几个 shell 脚本"/>
-<meta name="twitter:description" content="
-记录几个 shell 脚本，高效。
-"/>
+  <meta itemprop="name" content="几个 shell 脚本">
+  <meta itemprop="description" content="记录几个 shell 脚本，高效。">
+  <meta itemprop="datePublished" content="2018-03-19T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2018-03-19T00:00:00+08:00">
+  <meta itemprop="wordCount" content="351">
+  <meta itemprop="keywords" content="Shell">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="几个 shell 脚本">
+  <meta name="twitter:description" content="记录几个 shell 脚本，高效。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -148,7 +143,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 349 字 </span>
+          <span class="more-meta"> 约 351 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -173,12 +168,11 @@
   </div>
     <div class="post-content">
       <blockquote>
-<p>记录几个 shell 脚本，高效。</p>
-</blockquote>
+<p>记录几个 shell 脚本，高效。</p></blockquote>
 <h1 id="批量使用下划线替换路径中的空格">批量使用下划线替换路径中的空格</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -188,27 +182,25 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash 
-</span><span class="cp"></span>
-find . -name <span class="s2">&#34;* *&#34;</span><span class="p">|</span>
-<span class="k">while</span> <span class="nb">read</span> name<span class="p">;</span><span class="k">do</span>
-
-        <span class="nv">na</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$name</span> <span class="p">|</span> tr <span class="s1">&#39; &#39;</span> <span class="s1">&#39;_&#39;</span><span class="k">)</span>
-
-        mv <span class="s2">&#34;</span><span class="nv">$name</span><span class="s2">&#34;</span> <span class="nv">$na</span>
-
-<span class="k">done</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">find . -name <span class="s2">&#34;* *&#34;</span><span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nb">read</span> name<span class="p">;</span><span class="k">do</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">na</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$name</span> <span class="p">|</span> tr <span class="s1">&#39; &#39;</span> <span class="s1">&#39;_&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        mv <span class="s2">&#34;</span><span class="nv">$name</span><span class="s2">&#34;</span> <span class="nv">$na</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://crabdave.iteye.com/blog/2315483">参考文章</a>。</p>
 <h1 id="imagemagic-批量缩小图片">Imagemagic 批量缩小图片</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -232,41 +224,39 @@ find . -name <span class="s2">&#34;* *&#34;</span><span class="p">|</span>
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash 
-</span><span class="cp"></span>
-<span class="k">if</span> <span class="o">[</span> ! -d re_size <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  mkdir -p re_size
-<span class="k">fi</span>
-
-<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find  -iname <span class="s2">&#34;*.jpg&#34;</span><span class="k">)</span>
-<span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-
-
-<span class="k">for</span> filename in <span class="nv">$filelist</span>
-
-<span class="k">do</span>  
-	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span>
-	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">FOLDER</span><span class="si">}${</span><span class="nv">tempname</span><span class="si">}</span>
-	
-	
-	<span class="k">if</span> <span class="o">[</span> ! -d re_size<span class="si">${</span><span class="nv">tempname</span><span class="p">%/*</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  		mkdir -p re_size<span class="si">${</span><span class="nv">tempname</span><span class="p">%/*</span><span class="si">}</span>
-	<span class="k">fi</span>
-	
-	convert <span class="nv">$newfilename</span> -resize <span class="m">800</span> -quality <span class="m">60</span> <span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/re_size<span class="si">${</span><span class="nv">tempname</span><span class="si">}</span> 
-
-<span class="k">done</span> 
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d re_size <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  mkdir -p re_size
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find  -iname <span class="s2">&#34;*.jpg&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> filename in <span class="nv">$filelist</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">do</span>  
+</span></span><span class="line"><span class="cl">	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">FOLDER</span><span class="si">}${</span><span class="nv">tempname</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="o">[</span> ! -d re_size<span class="si">${</span><span class="nv">tempname</span><span class="p">%/*</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  		mkdir -p re_size<span class="si">${</span><span class="nv">tempname</span><span class="p">%/*</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">fi</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	convert <span class="nv">$newfilename</span> -resize <span class="m">800</span> -quality <span class="m">60</span> <span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/re_size<span class="si">${</span><span class="nv">tempname</span><span class="si">}</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">done</span> 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.jincon.com/archives/249">参考文章1</a> ，<a href="http://blog.sina.com.cn/s/blog_ba532aea0101bty5.html">参考2</a>  。</p>
 <h1 id="批量压制视频">批量压制视频</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -329,68 +319,68 @@ find . -name <span class="s2">&#34;* *&#34;</span><span class="p">|</span>
 </span><span class="lnt">61
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash 
-</span><span class="cp"></span><span class="c1"># author: rachpt@126.com</span>
-<span class="c1">#------settings--------#</span>
-
-<span class="nv">myfolder</span><span class="o">=</span>finshed
-<span class="c1"># use sd or ipad</span>
-<span class="nv">compatibility</span><span class="o">=</span>sd 
-
-<span class="c1">#-------maincode-------#</span>
-
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$compatibility</span> <span class="o">==</span> <span class="s2">&#34;sd&#34;</span> <span class="o">]</span>
-<span class="k">then</span>
-	<span class="nv">cut</span><span class="o">=</span><span class="s2">&#34;854x480&#34;</span>
-	<span class="nv">videorate</span><span class="o">=</span><span class="s2">&#34;500k&#34;</span>
-	<span class="nv">audiorate</span><span class="o">=</span><span class="s2">&#34;64k&#34;</span>
-	<span class="nv">speed</span><span class="o">=</span><span class="s2">&#34;fast&#34;</span>
-	<span class="nv">profile</span><span class="o">=</span><span class="s2">&#34;-x264-params \&#34;profile=high:level=4.0\&#34;&#34;</span>
-	<span class="nv">out</span><span class="o">=</span><span class="s2">&#34;480p&#34;</span>
-	
-<span class="k">elif</span> <span class="o">[</span> <span class="nv">$compatibility</span> <span class="o">==</span> <span class="s2">&#34;ipad&#34;</span> <span class="o">]</span>
-<span class="k">then</span>
-	<span class="nv">cut</span><span class="o">=</span><span class="s2">&#34;1280x720&#34;</span>
-	<span class="nv">videorate</span><span class="o">=</span><span class="s2">&#34;2200k&#34;</span>
-	<span class="nv">audiorate</span><span class="o">=</span><span class="s2">&#34;128k&#34;</span>
-	<span class="nv">speed</span><span class="o">=</span><span class="s2">&#34;slow&#34;</span>
-	<span class="nv">profile</span><span class="o">=</span><span class="s2">&#34;-x264-params \&#34;profile=high:level=4.2\&#34;&#34;</span>
-	<span class="nv">out</span><span class="o">=</span><span class="s2">&#34;720p&#34;</span>
-<span class="k">else</span>
-        <span class="nb">exit</span>
-	
-<span class="k">fi</span>
-
-
-<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$myfolder</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  mkdir -p <span class="nv">$myfolder</span>
-<span class="k">fi</span>
-
-<span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find <span class="se">\(</span> -iname <span class="s2">&#34;*.mp4&#34;</span> -o -iname <span class="s2">&#34;*.mkv&#34;</span> -o -iname <span class="s2">&#34;*.ts&#34;</span> -o -iname <span class="s2">&#34;*.avi&#34;</span> -o -iname <span class="s2">&#34;*.wmv&#34;</span> <span class="se">\)</span> -a ! -name <span class="s2">&#34;*_</span><span class="nv">$out</span><span class="s2">.mp4&#34;</span><span class="k">)</span>
-<span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-
-<span class="k">for</span> filename in <span class="nv">$filelist</span>
-
-<span class="k">do</span>
-	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*/</span><span class="si">}</span>
-	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">tempname</span><span class="si">}</span>
-	<span class="nv">ffmpegcode</span><span class="o">=</span><span class="s2">&#34;ffmpeg -i </span><span class="nv">$newfilename</span><span class="s2"> -s </span><span class="nv">$cut</span><span class="s2"> -c:v libx264 </span><span class="nv">$profile</span><span class="s2"> -preset </span><span class="nv">$speed</span><span class="s2"> -b:v </span><span class="nv">$videorate</span><span class="s2">&#34;</span>
-	<span class="nv">isempty</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span>
-	<span class="nv">isempty</span><span class="o">=</span><span class="si">${</span><span class="nv">isempty</span><span class="p">%/*</span><span class="si">}</span>
-
-	<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$myfolder$isempty</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-	
-  		mkdir -p <span class="nv">$myfolder$isempty</span>
-	<span class="k">fi</span>
-	
-	nohup <span class="nv">$ffmpegcode</span> -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> <span class="nv">$ffmpegcode</span> -pass <span class="m">2</span> -c:a aac -b:a <span class="nv">$audiorate</span> -strict -2 <span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/<span class="nv">$myfolder</span>/<span class="si">${</span><span class="nv">tempname</span><span class="p">%.*</span><span class="si">}</span>_<span class="nv">$out</span>.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-
-<span class="k">done</span>
-
-rm -f ffmpeg2pass*
-<span class="nb">echo</span> <span class="s2">&#34;finished!&#34;</span>
-<span class="nb">exit</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># author: rachpt@126.com</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#------settings--------#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">myfolder</span><span class="o">=</span>finshed
+</span></span><span class="line"><span class="cl"><span class="c1"># use sd or ipad</span>
+</span></span><span class="line"><span class="cl"><span class="nv">compatibility</span><span class="o">=</span>sd 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#-------maincode-------#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$compatibility</span> <span class="o">==</span> <span class="s2">&#34;sd&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">cut</span><span class="o">=</span><span class="s2">&#34;854x480&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">videorate</span><span class="o">=</span><span class="s2">&#34;500k&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">audiorate</span><span class="o">=</span><span class="s2">&#34;64k&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">speed</span><span class="o">=</span><span class="s2">&#34;fast&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">profile</span><span class="o">=</span><span class="s2">&#34;-x264-params \&#34;profile=high:level=4.0\&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">out</span><span class="o">=</span><span class="s2">&#34;480p&#34;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">[</span> <span class="nv">$compatibility</span> <span class="o">==</span> <span class="s2">&#34;ipad&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">cut</span><span class="o">=</span><span class="s2">&#34;1280x720&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">videorate</span><span class="o">=</span><span class="s2">&#34;2200k&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">audiorate</span><span class="o">=</span><span class="s2">&#34;128k&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">speed</span><span class="o">=</span><span class="s2">&#34;slow&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">profile</span><span class="o">=</span><span class="s2">&#34;-x264-params \&#34;profile=high:level=4.2\&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">out</span><span class="o">=</span><span class="s2">&#34;720p&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$myfolder</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  mkdir -p <span class="nv">$myfolder</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">filelist</span><span class="o">=</span><span class="k">$(</span>find <span class="se">\(</span> -iname <span class="s2">&#34;*.mp4&#34;</span> -o -iname <span class="s2">&#34;*.mkv&#34;</span> -o -iname <span class="s2">&#34;*.ts&#34;</span> -o -iname <span class="s2">&#34;*.avi&#34;</span> -o -iname <span class="s2">&#34;*.wmv&#34;</span> <span class="se">\)</span> -a ! -name <span class="s2">&#34;*_</span><span class="nv">$out</span><span class="s2">.mp4&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">FOLDER</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> filename in <span class="nv">$filelist</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">tempname</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*/</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">newfilename</span><span class="o">=</span><span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">tempname</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">ffmpegcode</span><span class="o">=</span><span class="s2">&#34;ffmpeg -i </span><span class="nv">$newfilename</span><span class="s2"> -s </span><span class="nv">$cut</span><span class="s2"> -c:v libx264 </span><span class="nv">$profile</span><span class="s2"> -preset </span><span class="nv">$speed</span><span class="s2"> -b:v </span><span class="nv">$videorate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">isempty</span><span class="o">=</span><span class="si">${</span><span class="nv">filename</span><span class="p">#*.</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">isempty</span><span class="o">=</span><span class="si">${</span><span class="nv">isempty</span><span class="p">%/*</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$myfolder$isempty</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">  		mkdir -p <span class="nv">$myfolder$isempty</span>
+</span></span><span class="line"><span class="cl">	<span class="k">fi</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	nohup <span class="nv">$ffmpegcode</span> -pass <span class="m">1</span> -an -f mp4 -y /dev/null <span class="o">&amp;&amp;</span> <span class="nv">$ffmpegcode</span> -pass <span class="m">2</span> -c:a aac -b:a <span class="nv">$audiorate</span> -strict -2 <span class="si">${</span><span class="nv">FOLDER</span><span class="si">}</span>/<span class="nv">$myfolder</span>/<span class="si">${</span><span class="nv">tempname</span><span class="p">%.*</span><span class="si">}</span>_<span class="nv">$out</span>.mp4 &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm -f ffmpeg2pass*
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;finished!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -419,11 +409,11 @@ rm -f ffmpeg2pass*
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -476,7 +466,7 @@ rm -f ffmpeg2pass*
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -497,8 +487,8 @@ rm -f ffmpeg2pass*
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -509,12 +499,12 @@ rm -f ffmpeg2pass*
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -522,19 +512,8 @@ rm -f ffmpeg2pass*
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">

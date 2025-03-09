@@ -1,99 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on rachpt&#39;s Blog</title>
+    <title>Linux on rachpt&#39;s Blog</title>
     <link>https://rachpt.cn/tags/linux/</link>
-    <description>Recent content in linux on rachpt&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Linux on rachpt&#39;s Blog</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://rachpt.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://rachpt.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trouble-with-automatic-mouse-copy-function-under-linux</title>
       <link>https://rachpt.cn/2019/02/22/trouble-with-automatic-mouse-copy-function-under-linux/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2019/02/22/trouble-with-automatic-mouse-copy-function-under-linux/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;突然选中文本就自动复制到粘贴板了，怎么回事？&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;突然选中文本就自动复制到粘贴板了，怎么回事？&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>something-difference-from-manjaro-back-to-ubuntu</title>
       <link>https://rachpt.cn/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</link>
       <pubDate>Tue, 18 Dec 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/12/18/something-difference-from-manjaro-back-to-ubuntu/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;qprop无法在软件较新的manjaro上编译运行，matlab实时脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;qprop无法在软件较新的manjaro上编译运行，matlab实时脚本、帮助文档在arch-linux上有问题，mj更新系统很大概率遇到装不上。这三点因素使我做出再次更换系统的决定。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>dual-disk-install-dual-system</title>
       <link>https://rachpt.cn/2018/12/10/dual-disk-install-dual-system/</link>
       <pubDate>Mon, 10 Dec 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/12/10/dual-disk-install-dual-system/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;双 11 花了110元买了块 mstata 固态硬盘，完成多年的愿望。这里记录一下双硬盘独立安装 windows 和 Linux 系统。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;双 11 花了 110 元买了块 mstata 固态硬盘，完成多年的愿望。这里记录一下双硬盘独立安装 windows 和 Linux 系统。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>change-to-use-archlinux</title>
       <link>https://rachpt.cn/2018/12/01/change-to-use-archlinux/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/12/01/change-to-use-archlinux/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;因为python版本的原因，从linuxmint 19 换回mint18.3，最后尝试使用基于archlinux的manjaro。这里记录几个刚开始比较头疼的问题。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>an-error-in-mpv-player</title>
       <link>https://rachpt.cn/2018/10/28/an-error-in-mpv-player/</link>
       <pubDate>Sun, 28 Oct 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/10/28/an-error-in-mpv-player/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;最近 mpv 突然打不开，终端运行提示 libtalloc 版本有问题。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>make-qbittorrent-from-source-code</title>
       <link>https://rachpt.cn/2018/07/21/make-qbittorrent-from-source-code/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/07/21/make-qbittorrent-from-source-code/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;从源码编译安装旧版本 qbittorrent，别问我为什么要安装旧版。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>compile-vim-with-clipboard-supported</title>
       <link>https://rachpt.cn/2018/07/20/compile-vim-with-clipboard-supported/</link>
       <pubDate>Fri, 20 Jul 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2018/07/20/compile-vim-with-clipboard-supported/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;从源码编译 vim，以支持使用系统粘贴板。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;从源码编译 vim，以支持使用系统粘贴板。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Linux 免安装程序配置</title>
       <link>https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0800</pubDate>
-      
       <guid>https://rachpt.cn/2017/12/31/setting-protable-program-on-linux/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;给黑程序上户口。适用于基于debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;给黑程序上户口。适用于基于 debian 的 ubuntu ，以及 linux mint（强烈推荐）。&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

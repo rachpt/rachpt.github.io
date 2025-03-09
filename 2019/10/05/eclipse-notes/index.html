@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="rachpt" /><meta name="description" content=" eclipse 使用笔记。
-" /><meta name="keywords" content="rachpt, Hugo, blog" />
+" />
 
 
 <meta name="baidu-site-verification" content="CwEgKTipRe" />
 <meta name="google-site-verification" content="V0BR2fraZjftoaXJKaddEukNcYdwzASug40EBS7moSQ" />
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.145.0 with theme even" />
 
 
 <link rel="canonical" href="https://rachpt.cn/2019/10/05/eclipse-notes/" />
@@ -35,36 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 
-<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="eclipse-notes" />
-<meta property="og:description" content="
-eclipse 使用笔记。
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rachpt.cn/2019/10/05/eclipse-notes/" />
-<meta property="article:published_time" content="2019-10-05T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-10-05T00:00:00+08:00" />
-<meta itemprop="name" content="eclipse-notes">
-<meta itemprop="description" content="
-eclipse 使用笔记。
-">
-<meta itemprop="datePublished" content="2019-10-05T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2019-10-05T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1195">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
+<meta property="og:url" content="https://rachpt.cn/2019/10/05/eclipse-notes/">
+  <meta property="og:site_name" content="rachpt&#39;s Blog">
+  <meta property="og:title" content="eclipse-notes">
+  <meta property="og:description" content="eclipse 使用笔记。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-10-05T00:00:00+08:00">
+    <meta property="article:modified_time" content="2019-10-05T00:00:00+08:00">
+    <meta property="article:tag" content="Eclipse">
 
-<meta itemprop="keywords" content="eclipse," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="eclipse-notes"/>
-<meta name="twitter:description" content="
-eclipse 使用笔记。
-"/>
+  <meta itemprop="name" content="eclipse-notes">
+  <meta itemprop="description" content="eclipse 使用笔记。">
+  <meta itemprop="datePublished" content="2019-10-05T00:00:00+08:00">
+  <meta itemprop="dateModified" content="2019-10-05T00:00:00+08:00">
+  <meta itemprop="wordCount" content="1195">
+  <meta itemprop="keywords" content="Eclipse">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="eclipse-notes">
+  <meta name="twitter:description" content="eclipse 使用笔记。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -90,7 +85,7 @@ eclipse 使用笔记。
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">主页</li>
+        <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
@@ -120,7 +115,7 @@ eclipse 使用笔记。
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
@@ -167,7 +162,7 @@ eclipse 使用笔记。
     <li><a href="#go-语言">Go 语言</a>
       <ul>
         <li><a href="#配置环境">配置环境</a></li>
-        <li><a href="#安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本8而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本8而报错：</a></li>
+        <li><a href="#安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本-8-而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本 8 而报错：</a></li>
       </ul>
     </li>
     <li><a href="#构建">构建</a></li>
@@ -182,10 +177,9 @@ eclipse 使用笔记。
   </div>
     <div class="post-content">
       <blockquote>
-<p>eclipse 使用笔记。</p>
-</blockquote>
+<p>eclipse 使用笔记。</p></blockquote>
 <h1 id="安装配置">安装配置</h1>
-<p><a href="https://www.iqiyi.com/v_19rrdgzjfc.html">参考教学视频1</a>。</p>
+<p><a href="https://www.iqiyi.com/v_19rrdgzjfc.html">参考教学视频 1</a>。</p>
 <h2 id="模块">模块</h2>
 <p>安装 CDT 以支持 C/C++：
 <code>Help --&gt; Eclipse Marketplace</code>，搜索 CDT，<code>Eclipse C/C++ IDE CDT x.x(xxxx-xx)</code> Install 即可。</p>
@@ -209,18 +203,18 @@ eclipse 使用笔记。
 <li><code>Ctrl + M</code> 编辑区最大化显示，</li>
 <li><code>Ctrl + Shift + L</code> 显示快捷键列表。</li>
 </ul>
-<p><a href="https://www.iqiyi.com/v_19rrdgznbk.html">参考教学视频2</a>。</p>
+<p><a href="https://www.iqiyi.com/v_19rrdgznbk.html">参考教学视频 2</a>。</p>
 <p>缩放编辑区字体：</p>
 <p>Ctrl + 鼠标滚轮无效，使用通用的 <code>Ctrl + -</code> 缩小，<code>Ctrl + +(shift + =)</code> 放大。</p>
 <h1 id="go-语言">Go 语言</h1>
 <h2 id="配置环境">配置环境</h2>
 <p>打开 <code>preference --&gt; Go</code>，配合 <code>whereis go</code> 填写对应路径即可。</p>
-<p>包括 <code>Go installation Directory</code>，以及 <code>Tools</code>。<a href="https://www.cnblogs.com/xzlq/p/9947982.html">参考文档1</a>。</p>
+<p>包括 <code>Go installation Directory</code>，以及 <code>Tools</code>。<a href="https://www.cnblogs.com/xzlq/p/9947982.html">参考文档 1</a>。</p>
 <p>其中 gocode、godef、guru 是一些自动工具，比如自动不全、拼写检查等。安装需要使用 go 自行编译。其中需要注意 <code>golang.org</code> 为 google 的网站，需要使用 github 找到相应进行 repo 编译安装，网上有较多教程，折腾几下就可以编译成功。archlinux 系可以使用 AUR 安装 <code>yay -S gocode-git</code>，旧版本会有不兼容现象。</p>
 <p>编译 godef、guru</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -250,41 +244,41 @@ eclipse 使用笔记。
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 编译godef，以普通用户在家目录运行</span>
-go get -u -v github.com/rogpeppe/godef
-<span class="c1"># 等待完成后，二进制文件构建在 ~/go/bin/godef</span>
-
-<span class="c1"># 编译 guru 比较麻烦，因为 golang.org 被墙，需要自己造特殊文件夹</span>
-
-mkdir -p ~/go/src/golang.org/x/
-<span class="nb">cd</span>  ~/go/src/golang.org/x/
-
-git clone https://github.com/golang/tools.git <span class="p">&amp;</span>
-git clone https://github.com/golang/net.git <span class="p">&amp;</span>
-git clone https://github.com/golang/sync.git <span class="p">&amp;</span>
-git clone https://github.com/golang/xerrors.git <span class="p">&amp;</span>
-
-<span class="c1"># 设置 GOPATH</span>
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s1">&#39;~/go&#39;</span>
-<span class="c1"># 等待所有下载完成后，使用按包编译命令</span>
-<span class="nb">cd</span> ~/go/src <span class="c1"># 该条貌似不必要</span>
-<span class="c1"># 包名是相对 GOPATH 的 src 目录的</span>
-go build golang.org/x/tools/cmd/guru/
-<span class="c1"># 二进制文件 就在当前目录下。</span>
-
-<span class="c1"># 移动到系统目录</span>
-<span class="c1"># 使用 sudo cp 可以自动修改相应属性</span>
-
-sudo cp guru ../bin/godef /usr/bin/
-
-<span class="c1"># 最后可以清理不需要的 源代码文件</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 编译godef，以普通用户在家目录运行</span>
+</span></span><span class="line"><span class="cl">go get -u -v github.com/rogpeppe/godef
+</span></span><span class="line"><span class="cl"><span class="c1"># 等待完成后，二进制文件构建在 ~/go/bin/godef</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 编译 guru 比较麻烦，因为 golang.org 被墙，需要自己造特殊文件夹</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p ~/go/src/golang.org/x/
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span>  ~/go/src/golang.org/x/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git clone https://github.com/golang/tools.git <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/golang/net.git <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/golang/sync.git <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/golang/xerrors.git <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置 GOPATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s1">&#39;~/go&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 等待所有下载完成后，使用按包编译命令</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/go/src <span class="c1"># 该条貌似不必要</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 包名是相对 GOPATH 的 src 目录的</span>
+</span></span><span class="line"><span class="cl">go build golang.org/x/tools/cmd/guru/
+</span></span><span class="line"><span class="cl"><span class="c1"># 二进制文件 就在当前目录下。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 移动到系统目录</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 sudo cp 可以自动修改相应属性</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo cp guru ../bin/godef /usr/bin/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 最后可以清理不需要的 源代码文件</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的方法好像比较傻，更简洁的做法是配置 <code>GOPROXY</code>，然后使用 <code>go get</code> 命令安装。</p>
 <p>可以使用 <code>go env GOROOT</code> 获得 go 的安装路径。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -297,39 +291,39 @@ sudo cp guru ../bin/godef /usr/bin/
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 设置 GO 环境变量</span>
-vim ~/.bashrc
-
-<span class="c1"># GO Settings</span>
-<span class="nb">export</span> <span class="nv">GOROOT</span><span class="o">=</span>/usr/lib/go
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/go&#34;</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
-<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on
-<span class="c1">#export GOPROXY=https://goproxy.io</span>
-<span class="nb">export</span> <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn
-<span class="c1">#export GOPROXY=https://mirrors.aliyun.com/goproxy/</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 设置 GO 环境变量</span>
+</span></span><span class="line"><span class="cl">vim ~/.bashrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># GO Settings</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOROOT</span><span class="o">=</span>/usr/lib/go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/go&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on
+</span></span><span class="line"><span class="cl"><span class="c1">#export GOPROXY=https://goproxy.io</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn
+</span></span><span class="line"><span class="cl"><span class="c1">#export GOPROXY=https://mirrors.aliyun.com/goproxy/</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>配置好后 source 一下 .bashrc 以生效。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">go get -u -v github.com/nsf/gocode
-go get -u -v github.com/rogpeppe/godef
-go get -u -v golang.org/x/tools/cmd/guru <span class="c1"># 不能用阿里云代理</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">go get -u -v github.com/nsf/gocode
+</span></span><span class="line"><span class="cl">go get -u -v github.com/rogpeppe/godef
+</span></span><span class="line"><span class="cl">go get -u -v golang.org/x/tools/cmd/guru <span class="c1"># 不能用阿里云代理</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以后直接使用上面三条命令就能升级 <code>gocode</code> <code>godef</code> <code>guru</code>。</p>
-<h2 id="安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本8而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本8而报错：</h2>
+<h2 id="安装-goclipse-插件支持-go-语言可能会因为-运行-eclipse-的-jvm-不是版本-8-而报错">安装 Goclipse 插件支持 go 语言，可能会因为 运行 eclipse 的 JVM 不是版本 8 而报错：</h2>
 <p><code>&quot;could not start goclipse because java version is 0，requare java 8&quot; </code>。<br>
 解决办法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -344,25 +338,25 @@ go get -u -v golang.org/x/tools/cmd/guru <span class="c1"># 不能用阿里云�
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">whereis eclipse  <span class="c1"># 找到安装路径(使用直接解压版请忽略)</span>
-<span class="c1"># /usr/lib/eclipse</span>
-
-<span class="c1"># 应该有文件 /usr/lib/eclipse/eclipse.ini</span>
-
-sudo vim /usr/lib/eclipse/eclipse.ini
-
-<span class="c1"># 在 -vmargs 上面一行修改 或者添加如下两行</span>
-
--vm
-/usr/lib/jvm/java-8-openjdk/bin/
-
-<span class="c1"># 需要自行验证 java8 路径，也可能是 java-8-jdk。</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis eclipse  <span class="c1"># 找到安装路径(使用直接解压版请忽略)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /usr/lib/eclipse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 应该有文件 /usr/lib/eclipse/eclipse.ini</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo vim /usr/lib/eclipse/eclipse.ini
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 在 -vmargs 上面一行修改 或者添加如下两行</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-vm
+</span></span><span class="line"><span class="cl">/usr/lib/jvm/java-8-openjdk/bin/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要自行验证 java8 路径，也可能是 java-8-jdk。</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>每次更新升级 eclipse 后都需要改一下(除非只安装了jdk8)，<a href="https://www.cnblogs.com/kumata/p/10064386.html">参考文档2</a>。</p>
+</div><p>每次更新升级 eclipse 后都需要改一下(除非只安装了 jdk8)，<a href="https://www.cnblogs.com/kumata/p/10064386.html">参考文档 2</a>。</p>
 <h1 id="构建">构建</h1>
 <p>第一次运行、以及切换项目、源文件时都需要设置 <code>Run configurations</code>。</p>
-<p><img src="https://gitee.com/rachpt/imgs/raw/master/eclipse-notes-2019-10-7-15-0-29.png" alt="eclipse-notes-2019-10-7-15-0-29.png"></p>
+<p><img src="https://img.rachpt.cn/imgs/eclipse-notes-2019-10-7-15-0-29.png" alt="eclipse-notes-2019-10-7-15-0-29.png"></p>
 <p>后面只需单击工具栏 绿圈箭头 即可重新构建并运行，或则使用快捷键 <code>Ctrl + F11</code>。</p>
     </div>
 
@@ -390,11 +384,11 @@ sudo vim /usr/lib/eclipse/eclipse.ini
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/wechatpay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/wechatpay.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://gitee.com/rachpt/imgs/raw/master/alipay.jpg">
+        <img class="image" src="https://img.rachpt.cn/imgs/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -447,7 +441,7 @@ sudo vim /usr/lib/eclipse/eclipse.ini
       <a href="http://github.com/rachpt/" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/rachpt" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/14305408" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://rachpt.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -468,8 +462,8 @@ sudo vim /usr/lib/eclipse/eclipse.ini
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
+     - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>rachpt</span>
   </span>
 </div>
 
@@ -480,12 +474,12 @@ sudo vim /usr/lib/eclipse/eclipse.ini
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    
+  <script>
     var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
@@ -493,19 +487,8 @@ sudo vim /usr/lib/eclipse/eclipse.ini
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-109494468-2', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <script id="baidu_push">
